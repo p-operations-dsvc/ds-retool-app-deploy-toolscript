@@ -1,0 +1,60 @@
+id: dpTaskCPU
+type: widget
+subtype: NumberInputWidget
+template:
+  ordered:
+    - readOnly: false
+    - iconAfter: ''
+    - max: '10240'
+    - preventScroll: false
+    - inputValue: 0
+    - hidden: false
+    - customValidation: ''
+    - showSeparators: false
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - allowNull: false
+    - showClear: false
+    - tooltipText: ''
+    - currency: USD
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '512'
+    - labelCaption: ''
+    - min: '512'
+    - labelWidth: '33'
+    - placeholder: ''
+    - _disclosedFields:
+        array: []
+    - showStepper: true
+    - label: Task CPU
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - format: decimal
+    - iconBefore: ''
+    - textAlign: left
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - decimalPlaces: null
+    - labelWrap: false
+    - padDecimal: false
+    - maintainSpaceWhenHidden: false
+    - required: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpEntryForm
+    row: 5
+    col: 5
+    height: 1
+    width: 4
+createdAt: 2023-02-21T17:55:06.786Z

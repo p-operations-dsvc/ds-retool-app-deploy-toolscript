@@ -1,0 +1,27 @@
+id: historyHeader
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: History of execution id {{searchResult.selectedRow.data.execution_id}}
+    - _disclosedFields:
+        array: []
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: searchResult
+    subcontainer: status
+    height: 0.6
+    width: 12
+createdAt: 2023-02-28T19:16:34.353Z

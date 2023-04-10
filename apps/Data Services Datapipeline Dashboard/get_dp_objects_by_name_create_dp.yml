@@ -1,0 +1,379 @@
+id: get_dp_objects_by_name_create_dp
+type: datasource
+subtype: RESTQuery
+resourceName: 5dce28aa-d15b-4da8-9a5b-cbc4b34e1cf0
+resourceDisplayName: dp_api
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - body: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: true
+    - paginationPaginationField: ''
+    - headers: ''
+    - showFailureToaster: true
+    - paginationEnabled: false
+    - query: >-
+        prd/get_ds_pipeline_objects?datapipeline_name={{dpName3.value}}&env={{dpEnv.value}}
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - cookies: ''
+    - metadata: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: ''
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpObjName
+            - targetId: null
+            - params:
+                ordered:
+                  - value: Need a new name!
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpTimeout
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].datapipeline_timeout_seconds}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpIncUrgency
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{get_dp_objects_by_name_create_dp.data[0].snow_urgency}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpIncImpact
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{get_dp_objects_by_name_create_dp.data[0].snow_impact}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpIncCI
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{get_dp_objects_by_name_create_dp.data[0].snow_ci}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpAutoRestart
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].auto_restart_on_failure}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpMaxNumberofRestarts
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].max_number_of_restarts}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpMaxConcurrentInstances
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].max_concurrent_instances}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpSNSSuccessTopicARN
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].sns_success_topic_arn}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpIncQueue
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].snow_assignment_group}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpSNSFailureTopicARN
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].sns_failure_topic_arn}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpContainerName
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{get_dp_objects_by_name_create_dp.data[0].container_arn}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpContainerARN
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{get_dp_objects_by_name_create_dp.data[0].container_arn}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpScheduleGroup
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].schedule_group}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpOverrides
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{get_dp_objects_by_name_create_dp.data[0].overrides}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpScheduleExpression
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].schedule_expression}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpScheduleState
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].schedule_state}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpScheduleTZ
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{get_dp_objects_by_name_create_dp.data[0].schedule_tz}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpRoleARN
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{get_dp_objects_by_name_create_dp.data[0].task_role_arn}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpTaskMemory
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].container_memory}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpTaskCPU
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{get_dp_objects_by_name_create_dp.data[0].container_cpu}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpTaskStorage
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].container_storage}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpOverridesCommands
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{get_dp_objects_by_name_create_dp.data[0].override_commands}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: dpDocumentationURL
+            - targetId: null
+            - params:
+                ordered:
+                  - value: http://fillmeout.org
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: failure
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: error
+                        - title: Failed to get dp objects
+                        - description: '{{get_dp_objects_by_name_create_dp.error}}'
+                        - duration: '5'
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - type: GET
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - bodyType: json
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-03-08T01:41:46.981Z

@@ -1,0 +1,76 @@
+id: dpEditButton
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: false
+    - text: Edit Datapipeline
+    - showInEditor: false
+    - tooltipText: ''
+    - _disclosedFields:
+        array: []
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: widget
+            - method: setCurrentView
+            - pluginId: mainContainer
+            - targetId: null
+            - params:
+                ordered:
+                  - viewKey: Update an Existing Datapipeline
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: state
+            - method: setValue
+            - pluginId: updateDPName
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{dpAllTable.selectedRow.data.datapipeline_name}} '
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: state
+            - method: setValue
+            - pluginId: updateDPEnv
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{dpNameAllEnv.value}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: widget
+            - method: close
+            - pluginId: dpSettingRowModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpSettingRowModal
+    row: 0.2
+    col: 8
+    height: 0.8
+    width: 3
+createdAt: 2023-03-09T21:43:32.978Z

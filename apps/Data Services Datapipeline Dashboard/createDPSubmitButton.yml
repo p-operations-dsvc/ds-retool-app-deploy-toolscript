@@ -1,0 +1,32 @@
+id: createDPSubmitButton
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: dpEntryForm
+    - hidden: false
+    - text: Confirm
+    - showInEditor: false
+    - tooltipText: ''
+    - _disclosedFields:
+        array: []
+    - submit: true
+    - iconBefore: ''
+    - events:
+        ordered: []
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: createDPModal
+    row: 1.5999999999999999
+    height: 1
+    width: 12
+createdAt: 2023-02-21T01:25:29.065Z

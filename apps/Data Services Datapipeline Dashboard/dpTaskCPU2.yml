@@ -1,0 +1,74 @@
+id: dpTaskCPU2
+type: widget
+subtype: NumberInputWidget
+template:
+  ordered:
+    - readOnly: false
+    - iconAfter: ''
+    - max: '10240'
+    - preventScroll: false
+    - inputValue: 0
+    - hidden: false
+    - customValidation: ''
+    - showSeparators: false
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - allowNull: false
+    - showClear: false
+    - tooltipText: ''
+    - currency: USD
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{get_dp_objects_by_name.data[0].container_cpu}}'
+    - labelCaption: ''
+    - min: '512'
+    - labelWidth: '33'
+    - placeholder: ''
+    - _disclosedFields:
+        array: []
+    - showStepper: true
+    - label: Task CPU
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - format: decimal
+    - iconBefore: ''
+    - textAlign: left
+    - inputTooltip: ''
+    - events:
+        - ordered:
+            - method: showNotification
+            - enabled: '{{ !Number.isInteger(self.value/512)}}'
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: error
+                        - title: Must be a fraction of 512
+            - targetId: null
+            - pluginId: ''
+            - waitType: debounce
+            - event: change
+            - type: util
+            - waitMs: '0'
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - decimalPlaces: null
+    - labelWrap: false
+    - padDecimal: false
+    - maintainSpaceWhenHidden: false
+    - required: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpEntryForm2
+    row: 6
+    col: 5
+    height: 1
+    width: 4
+createdAt: 2023-02-21T21:57:59.036Z

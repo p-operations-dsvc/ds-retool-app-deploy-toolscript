@@ -1,0 +1,27 @@
+id: text1
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: Are you sure that you want update datapipeline {{dpName2.value}}?
+    - _disclosedFields:
+        array: []
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: updateDPModal
+    col: 1
+    height: 0.6
+    width: 10
+createdAt: 2023-03-01T00:25:46.075Z
