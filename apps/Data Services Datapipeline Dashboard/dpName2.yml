@@ -1,0 +1,108 @@
+id: dpName2
+type: widget
+subtype: SelectWidget2
+template:
+  ordered:
+    - imageByIndex: ''
+    - _disabledByIndex: []
+    - showSelectionIndicator: true
+    - _values: []
+    - iconByIndex: ''
+    - values: '{{ item.datapipeline_name }}'
+    - readOnly: false
+    - iconAfter: ''
+    - _iconByIndex: []
+    - overlayMinWidth: null
+    - allowDeselect: false
+    - inputValue: ''
+    - hidden: false
+    - customValidation: ''
+    - data: '{{ get_dp_dropdown.data }}'
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex: ''
+    - textBefore: ''
+    - _fallbackTextByIndex: []
+    - selectedItem: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{updateDPName.value || self.values[0] }} '
+    - hiddenByIndex: ''
+    - labelCaption: ''
+    - labelWidth: '25'
+    - deprecatedLabels:
+        array: []
+    - _hiddenByIndex: []
+    - placeholder: Select an option
+    - _captionByIndex: []
+    - _disclosedFields:
+        array: []
+    - itemAdornmentSize: auto
+    - label: Datapipeline Name
+    - _hasMigratedNestedItems: true
+    - captionByIndex: ''
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - allowCustomValue: false
+    - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex: ''
+    - iconBefore: ''
+    - colorByIndex: ''
+    - selectedLabel: ''
+    - events:
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_objects_by_name
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: change
+            - type: state
+            - method: setValue
+            - pluginId: updateDPName
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{dpName2.value}}'
+            - waitType: debounce
+            - waitMs: '0'
+    - _ids: []
+    - emptyMessage: No options
+    - overlayMaxHeight: 375
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - _labels: []
+    - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex: ''
+    - maintainSpaceWhenHidden: false
+    - _imageByIndex: []
+    - required: false
+    - labels: '{{ item.datapipeline_name }}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpEntryForm2
+    row: 0.8
+    height: 1
+    width: 4
+createdAt: 2023-02-21T22:04:29.049Z

@@ -1,0 +1,32 @@
+id: dpToggleScheduleText
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: >-
+        Are you sure that you want to
+        {{dpAllTable.selectedRow.data.schedule_state == 'ENABLED'? 'disable':
+        'enable'}} schedule for datapipeline
+        {{dpAllTable.selectedRow.data.datapipeline_name}}?
+    - _disclosedFields:
+        array: []
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpScheduleToggleModal
+    row: 0.2
+    col: 1
+    height: 0.6
+    width: 10
+createdAt: 2023-03-02T00:12:02.694Z

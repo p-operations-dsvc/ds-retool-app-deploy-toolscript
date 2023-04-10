@@ -1,0 +1,28 @@
+id: createDPTaskRoleText
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: <b>Paste the role config json document below</b>
+    - _disclosedFields:
+        array: []
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: '01622'
+    col: 4
+    height: 0.6
+    width: 3
+createdAt: 2023-03-14T00:30:00.177Z

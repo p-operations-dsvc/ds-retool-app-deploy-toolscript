@@ -1,0 +1,28 @@
+id: createDPTaskRoleModal
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: true
+    - loading: ''
+    - disabled: ''
+    - buttonText: Create Role
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: '01622'
+    row: 8.8
+    col: 4
+    height: 1
+    width: 3
+createdAt: 2023-03-14T00:31:57.994Z

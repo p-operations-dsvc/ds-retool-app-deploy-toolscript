@@ -1,0 +1,29 @@
+id: addContainerRepoTitle
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: >-
+        Add a new container repo. You can also enter a previously added repo
+        name to reload the container list for.
+    - _disclosedFields:
+        array: []
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: addContainerRepoForm
+    rowGroup: header
+    height: 0.6
+    width: 12
+createdAt: 2023-03-15T23:17:38.070Z

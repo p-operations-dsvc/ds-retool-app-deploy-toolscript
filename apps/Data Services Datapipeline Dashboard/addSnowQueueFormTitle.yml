@@ -1,0 +1,27 @@
+id: addSnowQueueFormTitle
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: Add Service Now Incident Queue
+    - _disclosedFields:
+        array: []
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: addSnowQueueForm
+    rowGroup: header
+    height: 0.6
+    width: 12
+createdAt: 2023-03-15T22:55:35.032Z

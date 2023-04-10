@@ -1,0 +1,101 @@
+id: dpSettingRowKV
+type: widget
+subtype: KeyValueMapWidget
+template:
+  ordered:
+    - rowHeaderNames:
+        ordered: []
+    - rowFormats:
+        ordered: []
+    - valueTitle: Value
+    - data: '{{dpAllTable.selectedRow.data}}'
+    - prevRowMappers:
+        ordered: []
+    - rowMappersRenderAsHTML:
+        ordered: []
+    - rowVisibility:
+        ordered:
+          - schedule_expression: true
+          - a: true
+          - b: true
+          - snow_ci: true
+          - snow_impact: true
+          - c: true
+          - task_name: true
+          - overrides: true
+          - schedule_state: true
+          - snow_assignment_group: true
+          - container_name: true
+          - container_cpu: true
+          - documentation_url: true
+          - sns_success_topic_arn: true
+          - auto_restart_on_failure: true
+          - task_definition_arn: true
+          - snow_urgency: true
+          - override_commands_str: false
+          - task_role_arn: true
+          - schedule_tz: true
+          - datapipeline_timeout_seconds: true
+          - max_number_of_restarts: true
+          - max_concurrent_instances: true
+          - sns_failure_topic_arn: true
+          - schedule_name: true
+          - schedule_group: true
+          - cluster_arn: true
+          - override_commands: true
+          - override_container_name: false
+          - container_storage: true
+          - datapipeline_name: true
+          - container_arn: true
+          - container_memory: true
+    - prevRowFormats:
+        ordered: []
+    - rowMappers:
+        ordered:
+          - container_cpu: '{{self/1024}} vCPU'
+          - container_memory: '{{self/1024}} GB'
+          - container_storage: '{{self===null?0:self}} GB'
+    - rows:
+        - a
+        - b
+        - c
+        - schedule_state
+        - schedule_group
+        - schedule_name
+        - schedule_expression
+        - schedule_tz
+        - cluster_arn
+        - task_definition_arn
+        - task_name
+        - task_role_arn
+        - container_arn
+        - container_name
+        - overrides
+        - override_commands
+        - container_cpu
+        - container_memory
+        - container_storage
+        - datapipeline_timeout_seconds
+        - auto_restart_on_failure
+        - max_number_of_restarts
+        - max_concurrent_instances
+        - snow_assignment_group
+        - snow_ci
+        - snow_urgency
+        - snow_impact
+        - override_commands_str
+        - override_container_name
+        - sns_success_topic_arn
+        - sns_failure_topic_arn
+        - documentation_url
+        - datapipeline_name
+    - keyTitle: Field
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpSettingRowModal
+    row: 1.6
+    height: 9.6
+    width: 12
+createdAt: 2023-03-07T22:33:45.736Z

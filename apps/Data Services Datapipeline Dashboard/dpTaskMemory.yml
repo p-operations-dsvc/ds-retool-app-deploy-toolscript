@@ -1,0 +1,60 @@
+id: dpTaskMemory
+type: widget
+subtype: NumberInputWidget
+template:
+  ordered:
+    - readOnly: false
+    - iconAfter: ''
+    - max: '20480'
+    - preventScroll: false
+    - inputValue: 0
+    - hidden: false
+    - customValidation: ''
+    - showSeparators: false
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - allowNull: false
+    - showClear: false
+    - tooltipText: ''
+    - currency: USD
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '1024'
+    - labelCaption: ''
+    - min: '1024'
+    - labelWidth: '33'
+    - placeholder: '1'
+    - _disclosedFields:
+        array: []
+    - showStepper: true
+    - label: Task Memory
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - format: decimal
+    - iconBefore: ''
+    - textAlign: left
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - decimalPlaces: null
+    - labelWrap: false
+    - padDecimal: false
+    - maintainSpaceWhenHidden: false
+    - required: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpEntryForm
+    row: 6.199999999999999
+    col: 5
+    height: 1
+    width: 4
+createdAt: 2023-02-21T17:55:12.984Z
