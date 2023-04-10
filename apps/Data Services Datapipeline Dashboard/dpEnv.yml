@@ -1,0 +1,110 @@
+id: dpEnv
+type: widget
+subtype: SegmentedControlWidget
+template:
+  ordered:
+    - _disabledByIndex:
+        - ''
+        - ''
+        - false
+    - _values:
+        - dev
+        - uat
+        - prd
+    - iconByIndex:
+        array: []
+    - values:
+        array: []
+    - _iconByIndex:
+        - ''
+        - ''
+        - ''
+    - hidden: false
+    - customValidation: ''
+    - data:
+        array: []
+    - hideValidationMessage: false
+    - selectedItem: null
+    - validationMessage: ''
+    - showInEditor: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{ createDPEnv.value}}'
+    - labelCaption: ''
+    - labelWidth: '33'
+    - deprecatedLabels:
+        array: []
+    - _disclosedFields:
+        array: []
+    - label: Environment
+    - _hasMigratedNestedItems: true
+    - _validate: false
+    - itemMode: static
+    - labelWidthUnit: '%'
+    - invalid: false
+    - selectedIndex: null
+    - selectedLabel: ''
+    - events:
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_env_objects
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: change
+            - type: state
+            - method: setValue
+            - pluginId: createDPEnv
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{dpEnv.value}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_dropdown_create_dp
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - _ids:
+        - b22e2
+        - f3524
+        - 9f330
+    - iconPositionByIndex:
+        array: []
+    - _iconPositionByIndex:
+        - ''
+        - ''
+        - left
+    - disabled: false
+    - labelPosition: left
+    - _labels:
+        - Development
+        - UAT
+        - Production
+    - labelWrap: false
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - required: true
+    - labels:
+        array: []
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpEntryForm
+    height: 0.8
+    width: 4
+createdAt: 2023-02-21T01:28:55.377Z

@@ -1,0 +1,27 @@
+id: createDPSelectDPText
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: Use the follow datapipeline as a template
+    - _disclosedFields:
+        array: []
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: createDPCribModal
+    col: 1
+    height: 0.6
+    width: 10
+createdAt: 2023-03-08T01:38:49.007Z

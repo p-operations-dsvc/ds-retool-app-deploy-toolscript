@@ -1,0 +1,54 @@
+id: dpOverridesCommands2
+type: widget
+subtype: TextAreaWidget
+template:
+  ordered:
+    - spellCheck: false
+    - readOnly: false
+    - autoResize: true
+    - showCharacterCount: false
+    - autoComplete: false
+    - maxLength: null
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - minLines: 2
+    - validationMessage: ''
+    - showInEditor: false
+    - pattern: ''
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{get_dp_objects_by_name.data[0].override_commands_str}}'
+    - labelCaption: ''
+    - labelWidth: '33'
+    - autoFill: ''
+    - placeholder: Enter single space separated commands
+    - _disclosedFields:
+        array: []
+    - label: Override Commands
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - minLength: null
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - autoCapitalize: none
+    - maxLines: null
+    - loading: false
+    - disabled: false
+    - labelPosition: top
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpEntryForm2
+    row: 1
+    col: 10
+    height: 1
+    width: 2
+createdAt: 2023-02-21T21:58:06.013Z

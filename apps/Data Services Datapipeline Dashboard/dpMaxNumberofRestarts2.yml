@@ -1,0 +1,59 @@
+id: dpMaxNumberofRestarts2
+type: widget
+subtype: NumberInputWidget
+template:
+  ordered:
+    - readOnly: false
+    - iconAfter: ''
+    - max: '3'
+    - preventScroll: false
+    - inputValue: 0
+    - hidden: false
+    - customValidation: ''
+    - showSeparators: false
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - allowNull: false
+    - showClear: false
+    - tooltipText: ''
+    - currency: USD
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{get_dp_objects_by_name.data[0].max_number_of_restarts}}'
+    - labelCaption: ''
+    - min: '0'
+    - labelWidth: '33'
+    - placeholder: Enter value
+    - _disclosedFields:
+        array: []
+    - showStepper: true
+    - label: Max Number of Restarts
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - format: decimal
+    - iconBefore: ''
+    - textAlign: left
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - decimalPlaces: null
+    - labelWrap: false
+    - padDecimal: false
+    - maintainSpaceWhenHidden: false
+    - required: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpEntryForm2
+    row: 8
+    height: 1
+    width: 4
+createdAt: 2023-02-21T21:57:49.026Z

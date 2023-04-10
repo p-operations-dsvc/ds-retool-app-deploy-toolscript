@@ -1,0 +1,28 @@
+id: createDPCribModal
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - events: []
+    - modalWidth: ''
+    - closeOnOutsideClick: true
+    - loading: ''
+    - disabled: ''
+    - buttonText: Copy From An Existing Pipeline
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpEntryForm
+    row: 3.8
+    col: 10
+    height: 1
+    width: 2
+createdAt: 2023-03-08T01:35:41.137Z

@@ -1,0 +1,27 @@
+id: dpNameText
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: fixed
+    - horizontalAlign: left
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: <b>Click on the row to manage the datapipeline</b>
+    - _disclosedFields:
+        array: []
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 1b6db
+    height: 0.8
+    width: 3
+createdAt: 2023-03-13T21:44:47.628Z

@@ -1,0 +1,27 @@
+id: addContainerRepoModal
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: true
+    - loading: ''
+    - disabled: ''
+    - buttonText: Add New
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpEntryForm
+    row: 1
+    col: 9
+    height: 1
+    width: 1
+createdAt: 2023-03-15T23:17:36.847Z

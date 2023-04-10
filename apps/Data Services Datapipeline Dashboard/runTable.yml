@@ -1,0 +1,270 @@
+id: runTable
+type: widget
+subtype: TableWidget
+template:
+  ordered:
+    - showCustomButton: false
+    - sortMappedValue:
+        ordered: []
+    - _filteredSortedRenderedDataWithTypes: null
+    - heightType: auto
+    - normalizedData: null
+    - rowHeight: compact
+    - saveChangesDisabled: ''
+    - columnTypeProperties:
+        ordered:
+          - start_time:
+              ordered:
+                - manageTimeZone: true
+                - dateFormat: MMM dd, yyyy
+                - valueTimeZone: '00:00'
+                - displayTimeZone: '00:00'
+                - timeFormat: HH:mm:ss
+          - finish_time:
+              ordered:
+                - manageTimeZone: true
+                - dateFormat: MMM dd, yyyy
+                - valueTimeZone: '00:00'
+                - displayTimeZone: '00:00'
+                - timeFormat: HH:mm:ss
+          - container_log_url:
+              ordered:
+                - openInNewTab: true
+          - timed_out:
+              ordered:
+                - falseDisplayValue: x
+          - exceeded_max_concurrency:
+              ordered:
+                - falseDisplayValue: x
+          - execution_id:
+              ordered: []
+          - task_definition_arn:
+              ordered: []
+          - cluster_arn:
+              ordered: []
+          - cluster_name:
+              ordered: []
+          - task_definition:
+              ordered: []
+          - datapipeline_name:
+              ordered: []
+    - columnWidths:
+        - object:
+            id: start_time
+            value: 186.640625
+    - showSummaryFooter: false
+    - disableRowSelectInteraction: false
+    - columnWidthsMobile: []
+    - hasNextAfterCursor: ''
+    - columnTypeSpecificExtras:
+        ordered: []
+    - onRowAdded: ''
+    - columnHeaderNames:
+        ordered: []
+    - alwaysShowPaginator: false
+    - columnColors:
+        ordered: []
+    - columnFrozenAlignments:
+        ordered: []
+    - allowMultiRowSelect: false
+    - columnFormats:
+        ordered:
+          - start_time: DateTimeDataCell
+          - finish_time: DateTimeDataCell
+          - container_log_url: LinkDataCell
+          - timed_out: CheckboxDataCell
+          - exceeded_max_concurrency: CheckboxDataCell
+          - execution_id: HtmlDataCell
+          - task_definition_arn: TextMultiDataCell
+          - cluster_arn: TextMultiDataCell
+          - cluster_name: TextMultiDataCell
+          - task_definition: TextMultiDataCell
+          - datapipeline_name: TextMultiDataCell
+    - columnRestrictedEditing:
+        ordered: []
+    - showFilterButton: true
+    - _columnVisibility:
+        ordered:
+          - manually_stopped: false
+          - timed_out: false
+          - snow_incident_number_url: false
+          - exceeded_max_concurrency: false
+          - execution_id_full: false
+          - status: false
+          - container_log_url: false
+          - finish_time: false
+          - snow_incident_number: false
+          - been_restarted: false
+    - _columnSummaryTypes:
+        ordered:
+          - start_time: ''
+          - finish_time: ''
+          - container_log_url: ''
+          - timed_out: checkedCount
+          - exceeded_max_concurrency: checkedCount
+          - execution_id: ''
+          - task_definition_arn: ''
+          - cluster_arn: ''
+          - cluster_name: ''
+          - task_definition: ''
+          - datapipeline_name: ''
+    - _columnsWithLegacyBackgroundColor:
+        set: []
+    - showAddRowButton: false
+    - _unfilteredSelectedIndex: null
+    - nextBeforeCursor: ''
+    - columnVisibility:
+        ordered: []
+    - selectedPageIndex: '0'
+    - applyDynamicSettingsToColumnOrder: true
+    - rowColor:
+        array: []
+    - actionButtonColumnName: Actions
+    - resetAfterSave: true
+    - filterStackType: and
+    - downloadRawData: false
+    - showFetchingIndicator: true
+    - serverPaginated: false
+    - data: '{{ get_dp_run_inflight.data }}'
+    - displayedData: null
+    - actionButtons: []
+    - actionButtonSelectsRow: true
+    - selectRowByDefault: true
+    - defaultSortByColumn: start_time
+    - paginationOffset: 0
+    - columnAlignment:
+        ordered:
+          - execution_id: left
+          - timed_out: center
+          - start_time: left
+          - task_definition_arn: left
+          - exceeded_max_concurrency: center
+          - task_definition: left
+          - cluster_name: left
+          - container_log_url: left
+          - cluster_arn: left
+          - finish_time: left
+          - datapipeline_name: left
+    - columnSummaries:
+        object: {}
+    - showBoxShadow: false
+    - sortedDesc: false
+    - customButtonName: Custom Button
+    - columnMappersRenderAsHTML:
+        ordered: []
+    - showRefreshButton: true
+    - pageSize: '20'
+    - useDynamicColumnSettings: false
+    - actionButtonPosition: left
+    - dynamicRowHeights: false
+    - bulkUpdateAction: ''
+    - afterCursor: ''
+    - onCustomButtonPressQueryName: ''
+    - changeSet:
+        object: {}
+    - sortedColumn: ''
+    - _columnSummaryValues:
+        ordered:
+          - start_time: ''
+          - finish_time: ''
+          - container_log_url: ''
+          - timed_out: ''
+          - exceeded_max_concurrency: ''
+          - execution_id: ''
+          - task_definition_arn: ''
+          - cluster_arn: ''
+          - cluster_name: ''
+          - task_definition: ''
+          - datapipeline_name: ''
+    - checkboxRowSelect: true
+    - _compatibilityMode: false
+    - showColumnBorders: true
+    - clearSelectionLabel: Clear selection
+    - _renderedDataWithTypes: null
+    - columnAllowOverflow:
+        ordered: []
+    - beforeCursor: ''
+    - serverPaginationType: limitOffsetBased
+    - onRowSelect: ''
+    - showDownloadButton: true
+    - selectedIndex: null
+    - defaultSortDescending: false
+    - _sortedDisplayedDataIndices: null
+    - dynamicColumnSettings: null
+    - events: []
+    - totalRowCount: ''
+    - recordUpdates:
+        array: []
+    - newRow: null
+    - emptyMessage: No rows found
+    - columnEditable:
+        ordered:
+          - finish_time: false
+    - _viewerColumnSummaryTypes:
+        object: {}
+    - filters:
+        array: []
+    - displayedDataIndices: null
+    - disableSorting:
+        ordered: []
+    - columnMappers:
+        ordered:
+          - execution_id: >-
+              <a href=
+              "https://us-east-1.console.aws.amazon.com/states/home?region=us-east-1#/v2/executions/details/{{currentRow.execution_id_full}}"
+              target="_blank">
+
+              {{self}}
+
+              </a>
+    - showClearSelection: false
+    - doubleClickToEdit: true
+    - overflowType: pagination
+    - _reverseSortedDisplayedDataIndices: null
+    - showTableBorder: false
+    - selectedCell:
+        object:
+          index: null
+          data: null
+          columnName: null
+    - columns: []
+    - defaultSelectedRow: first
+    - freezeActionButtonColumns: false
+    - sort: null
+    - _columns:
+        - datapipeline_name
+        - execution_id
+        - start_time
+        - cluster_name
+        - task_definition
+        - execution_id_full
+        - finish_time
+        - status
+        - snow_incident_number_url
+        - container_log_url
+        - timed_out
+        - exceeded_max_concurrency
+        - been_restarted
+        - snow_incident_number
+        - manually_stopped
+    - sortByRawValue:
+        ordered: []
+    - calculatedColumns: []
+    - selectedRow:
+        object:
+          index: null
+          data: null
+    - showPaginationOnTop: false
+    - _reverseDisplayedDataIndices: null
+    - nextAfterCursor: ''
+    - useCompactMode: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: d9644
+    row: 1.2000000000000002
+    height: 2
+    width: 12
+createdAt: 2023-02-13T23:16:24.173Z

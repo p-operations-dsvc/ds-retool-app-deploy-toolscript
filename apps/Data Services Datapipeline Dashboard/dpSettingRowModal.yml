@@ -1,0 +1,27 @@
+id: dpSettingRowModal
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: auto
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: 60%
+    - closeOnOutsideClick: true
+    - loading: ''
+    - disabled: ''
+    - buttonText: DPR
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    rowGroup: header
+    height: 0.8
+    width: 1
+createdAt: 2023-03-07T22:25:22.627Z
