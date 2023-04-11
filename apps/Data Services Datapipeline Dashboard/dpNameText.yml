@@ -10,7 +10,7 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: <b>Click on the row to manage the datapipeline</b>
+    - value: <b>Click on a row below to manage the datapipeline</b>
     - _disclosedFields:
         array: []
     - disableMarkdown: false
