@@ -1,0 +1,36 @@
+id: editProductGroupModal
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: auto
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - events:
+        - ordered:
+            - event: open
+            - type: datasource
+            - method: trigger
+            - pluginId: get_product_groups_details
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - modalWidth: 80%
+    - closeOnOutsideClick: true
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open Modal
+style:
+  ordered: []
+position2:
+  position2:
+    height: 0.8
+    width: 1
+createdAt: 2023-03-17T22:17:58.521Z

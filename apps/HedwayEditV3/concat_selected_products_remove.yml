@@ -1,0 +1,11 @@
+id: concat_selected_products_remove
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        return {{
+        formatDataAsObject(productsToEdit.selectedRow.data).PRODUCT_KEY
+        }}.join(',')
+    - value: ''
+createdAt: 2023-03-22T23:13:31.400Z

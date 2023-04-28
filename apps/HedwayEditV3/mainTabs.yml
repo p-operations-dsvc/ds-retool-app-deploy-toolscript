@@ -1,0 +1,88 @@
+id: mainTabs
+type: widget
+subtype: TabsWidget2
+template:
+  ordered:
+    - _disabledByIndex:
+        - ''
+        - ''
+        - ''
+    - _values:
+        - Tab 1
+        - Tab 2
+        - Tab 3
+    - iconByIndex:
+        array: []
+    - values:
+        array: []
+    - alignment: center
+    - _iconByIndex:
+        - ''
+        - ''
+        - ''
+    - hidden: false
+    - data:
+        array: []
+    - targetContainerId: tabbedContainer1
+    - selectedItem: null
+    - showInEditor: false
+    - navigateContainer: true
+    - value: '{{ self.values[0] }}'
+    - style:
+        ordered:
+          - selectedBackground: rgba(203, 194, 175, 1)
+    - hiddenByIndex:
+        array: []
+    - _hiddenByIndex:
+        - ''
+        - ''
+        - ''
+    - _disclosedFields:
+        array: []
+    - _hasMigratedNestedItems: true
+    - itemMode: static
+    - selectedIndex: null
+    - _tooltipByIndex:
+        - ''
+        - ''
+        - ''
+    - tooltipByIndex:
+        array: []
+    - selectedLabel: ''
+    - events: []
+    - _ids:
+        - 8d1b1
+        - d92af
+        - 96ec9
+    - iconPositionByIndex:
+        array: []
+    - _iconPositionByIndex:
+        - ''
+        - ''
+        - ''
+    - disabled: false
+    - linePosition: bottom
+    - _labels:
+        - ''
+        - ''
+        - ''
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - labels:
+        array: []
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    rowGroup: header
+    height: 0.8
+    width: 12
+mobilePosition2:
+  position2:
+    container: tabbedContainer1
+    rowGroup: header
+    height: 0.8
+    width: 12
+createdAt: 2023-03-17T17:23:29.797Z

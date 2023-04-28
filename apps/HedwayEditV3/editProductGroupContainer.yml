@@ -1,0 +1,69 @@
+id: editProductGroupContainer
+type: widget
+subtype: ContainerWidget2
+template:
+  ordered:
+    - _disabledByIndex:
+        - ''
+    - heightType: auto
+    - currentViewKey: null
+    - iconByIndex:
+        array: []
+    - clickable: false
+    - _iconByIndex:
+        - ''
+    - hidden: false
+    - showHeader: false
+    - hoistFetching: true
+    - views:
+        array: []
+    - showInEditor: false
+    - tooltipText: ''
+    - hiddenByIndex:
+        array: []
+    - _hiddenByIndex:
+        - ''
+    - _disclosedFields:
+        array: []
+    - currentViewIndex: null
+    - _hasMigratedNestedItems: true
+    - transition: none
+    - itemMode: static
+    - _tooltipByIndex:
+        - ''
+    - tooltipByIndex:
+        array: []
+    - showFooter: false
+    - _viewKeys:
+        - View 1
+    - events:
+        ordered: []
+    - _ids:
+        - 0096a
+    - viewKeys:
+        array: []
+    - iconPositionByIndex:
+        array: []
+    - _iconPositionByIndex:
+        - ''
+    - hovered: false
+    - loading: false
+    - overflowType: scroll
+    - disabled: false
+    - _labels:
+        - ''
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - showBody: true
+    - labels:
+        array: []
+style:
+  ordered: []
+position2:
+  position2:
+    container: editProductGroupForm
+    row: 5
+    height: 0.4
+    width: 9
+createdAt: 2023-03-21T17:16:09.831Z

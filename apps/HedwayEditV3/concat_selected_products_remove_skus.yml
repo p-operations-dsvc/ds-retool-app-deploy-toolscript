@@ -1,0 +1,10 @@
+id: concat_selected_products_remove_skus
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        return {{ formatDataAsObject(productsToEdit.selectedRow.data).SKU
+        }}.join(',')
+    - value: ''
+createdAt: 2023-03-31T22:19:47.740Z
