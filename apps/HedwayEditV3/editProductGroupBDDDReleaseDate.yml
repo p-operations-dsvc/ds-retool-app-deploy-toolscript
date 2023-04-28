@@ -1,0 +1,55 @@
+id: editProductGroupBDDDReleaseDate
+type: widget
+subtype: DateWidget
+template:
+  ordered:
+    - minDate: ''
+    - readOnly: false
+    - iconAfter: ''
+    - datePlaceholder: '{{ self.dateFormat.toUpperCase() }}'
+    - dateFormat: yyyy-MM-dd
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: >-
+        {{get_product_groups_details.data.BDD_RELEASE_DT[0] ||new
+        Date().toISOString().split('T')[0]}}
+    - labelCaption: ''
+    - maxDate: ''
+    - labelWidth: '33'
+    - _disclosedFields:
+        array: []
+    - label: ''
+    - formattedValue: ''
+    - _validate: false
+    - labelWidthUnit: '%'
+    - firstDayOfWeek: 0
+    - invalid: false
+    - iconBefore: bold/interface-calendar
+    - events:
+        ordered: []
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: editProductGroupContainer
+    subcontainer: 0096a
+    row: 1
+    col: 6
+    height: 1
+    width: 3
+createdAt: 2023-03-21T17:20:12.922Z

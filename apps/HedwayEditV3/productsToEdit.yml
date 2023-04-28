@@ -1,0 +1,168 @@
+id: productsToEdit
+type: widget
+subtype: TableWidget
+template:
+  ordered:
+    - showCustomButton: false
+    - sortMappedValue:
+        ordered: []
+    - _filteredSortedRenderedDataWithTypes: null
+    - heightType: auto
+    - normalizedData: null
+    - rowHeight: standard
+    - saveChangesDisabled: ''
+    - columnTypeProperties:
+        ordered:
+          - PRODUCT_NAME:
+              ordered: []
+          - SKU:
+              ordered: []
+    - columnWidths: []
+    - showSummaryFooter: false
+    - disableRowSelectInteraction: false
+    - columnWidthsMobile: []
+    - hasNextAfterCursor: ''
+    - columnTypeSpecificExtras:
+        ordered: []
+    - onRowAdded: ''
+    - columnHeaderNames:
+        ordered:
+          - PRODUCT_NAME: SKU Name
+    - alwaysShowPaginator: false
+    - columnColors:
+        ordered: []
+    - columnFrozenAlignments:
+        ordered: []
+    - allowMultiRowSelect: true
+    - columnFormats:
+        ordered:
+          - PRODUCT_NAME: TextMultiDataCell
+          - SKU: TextDataCell
+    - columnRestrictedEditing:
+        ordered: []
+    - showFilterButton: true
+    - _columnVisibility:
+        ordered:
+          - PRODUCT_KEY: false
+          - DUMMY_CHAR: false
+    - _columnSummaryTypes:
+        ordered:
+          - PRODUCT_NAME: ''
+          - SKU: ''
+    - _columnsWithLegacyBackgroundColor:
+        set: []
+    - showAddRowButton: false
+    - _unfilteredSelectedIndex: null
+    - nextBeforeCursor: ''
+    - columnVisibility:
+        ordered: []
+    - selectedPageIndex: '0'
+    - applyDynamicSettingsToColumnOrder: true
+    - rowColor:
+        array: []
+    - actionButtonColumnName: Actions
+    - resetAfterSave: true
+    - filterStackType: and
+    - downloadRawData: false
+    - showFetchingIndicator: true
+    - serverPaginated: false
+    - data: '{{ get_products_group_search.data }}'
+    - displayedData: null
+    - actionButtons: []
+    - actionButtonSelectsRow: true
+    - selectRowByDefault: true
+    - defaultSortByColumn: ''
+    - paginationOffset: 0
+    - columnAlignment:
+        ordered:
+          - PRODUCT_NAME: left
+          - SKU: left
+    - columnSummaries:
+        object: {}
+    - showBoxShadow: false
+    - sortedDesc: false
+    - customButtonName: Custom Button
+    - columnMappersRenderAsHTML:
+        ordered: []
+    - showRefreshButton: true
+    - pageSize: '20'
+    - useDynamicColumnSettings: false
+    - actionButtonPosition: right
+    - dynamicRowHeights: false
+    - bulkUpdateAction: ''
+    - afterCursor: ''
+    - onCustomButtonPressQueryName: ''
+    - changeSet:
+        object: {}
+    - sortedColumn: ''
+    - _columnSummaryValues:
+        ordered:
+          - PRODUCT_NAME: ''
+          - SKU: ''
+    - checkboxRowSelect: true
+    - _compatibilityMode: false
+    - showColumnBorders: false
+    - clearSelectionLabel: Clear selection
+    - _renderedDataWithTypes: null
+    - columnAllowOverflow:
+        ordered: []
+    - beforeCursor: ''
+    - serverPaginationType: limitOffsetBased
+    - onRowSelect: ''
+    - showDownloadButton: true
+    - selectedIndex: null
+    - defaultSortDescending: false
+    - _sortedDisplayedDataIndices: null
+    - dynamicColumnSettings: null
+    - totalRowCount: ''
+    - recordUpdates:
+        array: []
+    - newRow: null
+    - emptyMessage: No rows found
+    - columnEditable:
+        ordered: []
+    - _viewerColumnSummaryTypes:
+        object: {}
+    - filters:
+        array: []
+    - displayedDataIndices: null
+    - disableSorting:
+        ordered: []
+    - columnMappers:
+        ordered: []
+    - showClearSelection: false
+    - doubleClickToEdit: true
+    - overflowType: pagination
+    - _reverseSortedDisplayedDataIndices: null
+    - showTableBorder: true
+    - selectedCell:
+        object:
+          index: null
+          data: null
+          columnName: null
+    - columns: []
+    - defaultSelectedRow: first
+    - freezeActionButtonColumns: false
+    - sort: null
+    - _columns: []
+    - sortByRawValue:
+        ordered: []
+    - calculatedColumns: []
+    - selectedRow:
+        object:
+          index: null
+          data: null
+    - showPaginationOnTop: false
+    - _reverseDisplayedDataIndices: null
+    - nextAfterCursor: ''
+    - useCompactMode: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: d7cec
+    row: 1.4
+    height: 2
+    width: 12
+createdAt: 2023-03-21T23:32:57.728Z
