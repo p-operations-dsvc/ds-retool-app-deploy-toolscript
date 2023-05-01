@@ -1,4 +1,4 @@
-id: gotoManageProductsGroupButton
+id: goToManageProductsGroupButton
 type: widget
 subtype: ButtonWidget2
 template:

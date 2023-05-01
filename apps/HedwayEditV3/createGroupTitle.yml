@@ -1,16 +1,16 @@
-id: text1
+id: createGroupTitle
 type: widget
 subtype: TextWidget2
 template:
   ordered:
     - heightType: auto
-    - horizontalAlign: left
+    - horizontalAlign: center
     - hidden: false
     - imageWidth: fit
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: ''
+    - value: HEDWay - Create a New Group
     - _disclosedFields:
         array: []
     - disableMarkdown: false
@@ -20,8 +20,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: editProductGroupModal
-    row: 0.2
+    container: createGroupForm
+    rowGroup: header
     height: 0.6
-    width: 10
-createdAt: 2023-03-17T22:26:37.639Z
+    width: 12
+createdAt: 2023-03-17T17:27:33.892Z

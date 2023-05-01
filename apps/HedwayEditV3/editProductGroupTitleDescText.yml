@@ -1,4 +1,4 @@
-id: editProductGroupTitleDesc
+id: editProductGroupTitleDescText
 type: widget
 subtype: TextInputWidget2
 template:

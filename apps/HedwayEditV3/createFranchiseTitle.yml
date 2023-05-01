@@ -1,4 +1,4 @@
-id: editProductGroupTitle
+id: createFranchiseTitle
 type: widget
 subtype: TextWidget2
 template:
@@ -10,10 +10,7 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: >-
-        Edit group
-        '{{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_DESC_EDITED}}'
-        details
+    - value: HEDWay - Create New Franchise
     - _disclosedFields:
         array: []
     - disableMarkdown: false
@@ -23,8 +20,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: editProductGroupForm
+    container: createFranchiseForm
     rowGroup: header
     height: 0.6
     width: 12
-createdAt: 2023-03-17T22:27:12.344Z
+createdAt: 2023-03-17T23:06:09.068Z

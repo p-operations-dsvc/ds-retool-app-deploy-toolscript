@@ -1,4 +1,4 @@
-id: editProductGroupFranchise
+id: editProductGroupOwnerText
 type: widget
 subtype: SelectWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - _values: []
     - iconByIndex:
         array: []
-    - values: '{{ item.FRANCHISE_ID }}'
+    - values: '{{ item.OWNERSHIP_KEY}}'
     - readOnly: false
     - iconAfter: ''
     - _iconByIndex: []
@@ -19,7 +19,7 @@ template:
     - inputValue: ''
     - hidden: false
     - customValidation: ''
-    - data: '{{ get_franchise.data }}'
+    - data: '{{ get_owner.data }}'
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:
@@ -36,7 +36,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{get_product_groups_details.data.FRANCHISE_CD[''0'']}}'
+    - value: '{{get_product_groups_details.data.OWNERSHIP_DESCRIPTION[''0'']}}'
     - hiddenByIndex:
         array: []
     - labelCaption: ''
@@ -44,12 +44,12 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select an option
+    - placeholder: ''
     - _captionByIndex: []
     - _disclosedFields:
         array: []
     - itemAdornmentSize: auto
-    - label: Franchise
+    - label: Owner
     - _hasMigratedNestedItems: true
     - captionByIndex:
         array: []
@@ -84,13 +84,13 @@ template:
     - maintainSpaceWhenHidden: false
     - _imageByIndex: []
     - required: false
-    - labels: '{{ item.FRANCHISE_CD }}'
+    - labels: '{{ item.OWNERSHIP_DESCRIPTION }}'
 style:
   ordered: []
 position2:
   position2:
     container: editProductGroupForm
-    row: 4
+    row: 3
     height: 1
     width: 12
-createdAt: 2023-03-17T23:02:43.275Z
+createdAt: 2023-03-17T22:39:40.823Z
