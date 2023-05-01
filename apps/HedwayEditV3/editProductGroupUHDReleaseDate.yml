@@ -19,9 +19,8 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: >-
-        {{get_product_groups_details.data.UHD_RELEASE_DT[0]||new
-        Date().toISOString().split('T')[0]}}
+    - value: |
+        {{get_product_groups_details.data.UHD_RELEASE_DT[0]}}
     - labelCaption: ''
     - maxDate: ''
     - labelWidth: '33'

@@ -4,7 +4,8 @@ subtype: Function
 template:
   ordered:
     - funcBody: >-
-        return {{ formatDataAsObject(productsToEdit.selectedRow.data).SKU
-        }}.join(',')
+        return {{
+        Object.keys(productsToEdit.selectedRow.data).length===0?null:formatDataAsObject(productsToEdit.selectedRow.data).SKU.join(',')
+        }}
     - value: ''
 createdAt: 2023-03-31T22:19:47.740Z
