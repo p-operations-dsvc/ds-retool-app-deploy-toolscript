@@ -21,9 +21,9 @@ template:
     - query: >-
         CALL
         edwv.hedwayedit_SET_GROUP_DETAILS({{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_ID}},
-        {{editProductGroupTitleDesc.value}}, 
-                                             {{editProductGroupGenre.value||0}},
-        {{editProductGroupOwner.value}}, 
+        {{editProductGroupTitleDescText.value}}, 
+                                             {{editProductGroupGenreText.value||0}},
+        {{editProductGroupOwnerText.value}}, 
 
         {{editProductGroupDVDReleaseDate.value.substring(0,10)}}, {{
         editProductGroupBDDDReleaseDate.value.substring(0,10)}},
@@ -35,14 +35,14 @@ template:
 
         {{current_user.fullName}}, 
 
-        {{editProductGroupFranchise.value}},
-        {{editProductGroupOrigination.value}},
+        {{editProductGroupFranchiseText.value}},
+        {{editProductGroupOriginationText.value}},
 
-        {{editProductGroupGenre.selectedItem.TITLE_GENRE_NAME}},
-        {{editProductGroupOwner.selectedItem.OWNERSHIP_DESCRIPTION}},
+        {{editProductGroupGenreText.selectedItem.TITLE_GENRE_NAME}},
+        {{editProductGroupOwnerText.selectedItem.OWNERSHIP_DESCRIPTION}},
 
-        {{editProductGroupFranchise.selectedItem.FRANCHISE_CD}},
-        {{editProductGroupOrigination.selectedItem.ORIGINATION_CD}}                      
+        {{editProductGroupFranchiseText.selectedItem.FRANCHISE_CD}},
+        {{editProductGroupOriginationText.selectedItem.ORIGINATION_CD}}                      
                                               )
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
@@ -113,8 +113,8 @@ template:
                       ordered:
                         - notificationType: success
                         - title: >-
-                            Group '{{editProductGroupTitleDesc.value}}' updated
-                            succesfully
+                            Group '{{editProductGroupTitleDescText.value}}'
+                            updated succesfully
                         - description: ''
             - waitType: debounce
             - waitMs: '0'

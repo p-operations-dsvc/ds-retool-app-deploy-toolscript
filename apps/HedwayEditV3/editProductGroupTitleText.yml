@@ -1,4 +1,4 @@
-id: formTitle1
+id: editProductGroupTitleText
 type: widget
 subtype: TextWidget2
 template:
@@ -10,7 +10,10 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: HEDWay - Create a New Group
+    - value: >-
+        Edit group
+        '{{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_DESC_EDITED}}'
+        details
     - _disclosedFields:
         array: []
     - disableMarkdown: false
@@ -20,8 +23,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: createGroupForm
+    container: editProductGroupForm
     rowGroup: header
     height: 0.6
     width: 12
-createdAt: 2023-03-17T17:27:33.892Z
+createdAt: 2023-03-17T22:27:12.344Z

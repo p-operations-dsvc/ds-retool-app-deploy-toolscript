@@ -24,6 +24,10 @@ template:
           - UHD_RELEASE_DT:
               ordered:
                 - dateFormat: MM/dd/yyyy
+          - CNT_SKUS:
+              ordered:
+                - showSeparators: true
+                - padDecimal: true
     - columnWidths: []
     - showSummaryFooter: false
     - disableRowSelectInteraction: false
@@ -53,6 +57,7 @@ template:
           - DVD_RELEASE_DT: DateDataCell
           - BDD_RELEASE_DT: DateDataCell
           - UHD_RELEASE_DT: DateDataCell
+          - CNT_SKUS: NumberDataCell
     - columnRestrictedEditing:
         ordered: []
     - showFilterButton: true
@@ -66,6 +71,7 @@ template:
           - DVD_RELEASE_DT: ''
           - BDD_RELEASE_DT: ''
           - UHD_RELEASE_DT: ''
+          - CNT_SKUS: sum
     - _columnsWithLegacyBackgroundColor:
         set: []
     - showAddRowButton: false
@@ -80,6 +86,7 @@ template:
     - actionButtonColumnName: Actions
     - resetAfterSave: true
     - filterStackType: and
+    - hidden: ''
     - downloadRawData: false
     - showFetchingIndicator: true
     - serverPaginated: false
@@ -96,6 +103,7 @@ template:
           - DVD_RELEASE_DT: left
           - BDD_RELEASE_DT: left
           - UHD_RELEASE_DT: left
+          - CNT_SKUS: right
     - columnSummaries:
         object: {}
     - showBoxShadow: false
@@ -120,6 +128,7 @@ template:
           - DVD_RELEASE_DT: ''
           - BDD_RELEASE_DT: ''
           - UHD_RELEASE_DT: ''
+          - CNT_SKUS: ''
     - checkboxRowSelect: true
     - _compatibilityMode: false
     - showColumnBorders: false
