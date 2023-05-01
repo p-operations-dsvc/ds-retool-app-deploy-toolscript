@@ -19,8 +19,8 @@ template:
     - runWhenModelUpdates: false
     - showFailureToaster: true
     - query: >-
-        CALL edwv.hedwayedit_MOVE_PROD_INTO_GROUP_BULK  ( {{
-        concat_selected_prods_add_group.value}},
+        CALL edwv.hedwayedit_MOVE_PROD_INTO_GROUP_BULK  (
+        {{concat_selected_prods_add_group.value}},
         {{selectProductGroup.selectedItem.ITEM_GROUP_ID}},
         {{current_user.fullName}},
         {{concat_selected_prods_add_group_skus.value}}, 0)
