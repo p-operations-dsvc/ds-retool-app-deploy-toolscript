@@ -22,7 +22,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        prd/toggle_ds_datapipeline_schedule?schedule_name={{dpAllTable.selectedRow.data.schedule_name}}&env={{dpNameAllEnv.value}}&schedule_group={{dpAllTable.selectedRow.data.schedule_group}}&datapipeline_name={{dpAllTable.selectedRow.data.datapipeline_name}}
+        toggle_ds_datapipeline_schedule?schedule_name={{dpAllTable.selectedRow.data.schedule_name}}&env={{dpNameAllEnv.value}}&schedule_group={{dpAllTable.selectedRow.data.schedule_group}}&datapipeline_name={{dpAllTable.selectedRow.data.datapipeline_name}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

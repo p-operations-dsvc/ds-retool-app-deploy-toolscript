@@ -22,7 +22,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        prd/stop_ds_datapipeline?execution_id={{runTable.selectedRow.data.execution_id_full}}&user_name={{current_user.firstName}}
+        stop_ds_datapipeline?execution_id={{runTable.selectedRow.data.execution_id_full}}&user_name={{current_user.firstName}}
         {{current_user.lastName}}&env={{runEnvInFlight.value}}&cluster_arn=arn:aws:ecs:us-east-1:122060337775:cluster/{{runTable.selectedRow.data.cluster_name}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null

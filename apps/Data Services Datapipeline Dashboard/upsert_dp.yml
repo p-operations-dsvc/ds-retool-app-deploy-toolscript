@@ -22,7 +22,7 @@ template:
     - headers: ''
     - showFailureToaster: true
     - paginationEnabled: false
-    - query: prd/create_datapipeline_objects
+    - query: create_datapipeline_objects
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -86,6 +86,16 @@ template:
             - type: widget
             - method: close
             - pluginId: updateDPModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_objects_all
             - targetId: null
             - params:
                 ordered: []

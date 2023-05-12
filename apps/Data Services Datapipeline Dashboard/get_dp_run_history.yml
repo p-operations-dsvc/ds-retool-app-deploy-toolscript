@@ -22,7 +22,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        prd/get_ds_pipeline_run_history?env={{runEnvHistory.value}}&execution_id={{searchResult.selectedRow.data.execution_id_full}}
+        get_ds_pipeline_run_history?env={{runEnvHistory.value}}&execution_id={{searchResult.selectedRow.data.execution_id_full}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -94,7 +94,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - bodyType: json
+    - bodyType: none
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false

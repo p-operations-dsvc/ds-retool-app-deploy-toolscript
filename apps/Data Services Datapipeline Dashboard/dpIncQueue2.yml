@@ -1,56 +1,129 @@
 id: dpIncQueue2
 type: widget
-subtype: TextInputWidget2
+subtype: SelectWidget2
 template:
   ordered:
-    - spellCheck: false
+    - imageByIndex:
+        array: []
+    - _disabledByIndex:
+        - ''
+        - ''
+        - ''
+    - showSelectionIndicator: true
+    - _values:
+        - Option 1
+        - Option 2
+        - Option 3
+    - iconByIndex:
+        array: []
+    - values: '{{ item.id }}'
     - readOnly: false
     - iconAfter: ''
-    - showCharacterCount: false
-    - autoComplete: false
-    - maxLength: null
+    - _iconByIndex:
+        - ''
+        - ''
+        - ''
+    - overlayMinWidth: null
+    - allowDeselect: false
+    - inputValue: ''
     - hidden: false
     - customValidation: ''
-    - patternType: ''
+    - data: '{{ get_dp_env_objects_snowgroups.data }}'
+    - searchMode: fuzzy
     - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
     - textBefore: ''
+    - _fallbackTextByIndex:
+        - ''
+        - ''
+        - ''
+    - selectedItem: null
     - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
     - textAfter: ''
     - showInEditor: false
     - showClear: false
-    - pattern: ''
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
     - value: '{{get_dp_objects_by_name.data[0].snow_assignment_group}}'
+    - hiddenByIndex:
+        array: []
     - labelCaption: ''
     - labelWidth: '33'
-    - autoFill: ''
+    - deprecatedLabels:
+        array: []
+    - _hiddenByIndex:
+        - ''
+        - ''
+        - ''
     - placeholder: ''
+    - _captionByIndex:
+        - ''
+        - ''
+        - ''
     - _disclosedFields:
         array: []
+    - itemAdornmentSize: auto
     - label: Incident Queue
+    - _hasMigratedNestedItems: true
+    - captionByIndex: ''
     - _validate: false
+    - itemMode: dynamic
     - labelWidthUnit: '%'
+    - allowCustomValue: false
     - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex:
+        - ''
+        - ''
+        - ''
+    - _colorByIndex:
+        - ''
+        - ''
+        - ''
+    - tooltipByIndex:
+        array: []
     - iconBefore: ''
-    - minLength: null
-    - inputTooltip: ''
+    - colorByIndex:
+        array: []
+    - selectedLabel: ''
     - events:
         ordered: []
-    - autoCapitalize: none
+    - _ids:
+        - bcd4d
+        - 9f353
+        - 0b569
+    - emptyMessage: No options
+    - overlayMaxHeight: 375
     - loading: false
     - disabled: false
     - labelPosition: left
+    - _labels:
+        - ''
+        - ''
+        - ''
     - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
     - maintainSpaceWhenHidden: false
+    - _imageByIndex:
+        - ''
+        - ''
+        - ''
     - required: false
+    - labels:
+        array: []
 style:
   ordered: []
 position2:
   position2:
     container: dpEntryForm2
-    row: 5
+    row: 5.2
     height: 1
     width: 4
-createdAt: 2023-02-21T22:40:27.255Z
+createdAt: 2023-05-12T16:43:23.080Z

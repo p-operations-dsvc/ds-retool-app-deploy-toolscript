@@ -22,7 +22,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        prd/update_ds_pipeline_repo_lookups?env={{dpEnv.value}}&object_name=container_repos&new_value={{addContainerRepoName.value}}
+        update_ds_pipeline_repo_lookups?env={{dpEnv.value}}&object_name=container_repos&new_value={{addContainerRepoName.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

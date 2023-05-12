@@ -22,7 +22,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        prd/get_ds_pipeline_objects?datapipeline_name={{dpName2.value}}&env={{dpEnv2.value}}
+        get_ds_pipeline_objects?datapipeline_name={{dpName2.value}}&env={{dpEnv2.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -116,7 +116,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - bodyType: json
+    - bodyType: none
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false

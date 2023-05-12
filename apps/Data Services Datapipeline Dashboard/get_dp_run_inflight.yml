@@ -22,7 +22,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        prd/get_ds_pipeline_run?env={{runEnvInFlight.value}}&start={{startDateRangeInFlight.startPlaceholder}}&end={{startDateRangeInFlight.endPlaceholder}}&status=Start&datapipeline_name=Any
+        get_ds_pipeline_run?env={{runEnvInFlight.value}}&start={{startDateRangeInFlight.startPlaceholder}}&end={{startDateRangeInFlight.endPlaceholder}}&status=Start&datapipeline_name=Any
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -94,7 +94,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - bodyType: json
+    - bodyType: none
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
