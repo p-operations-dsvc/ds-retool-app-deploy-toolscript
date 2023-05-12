@@ -22,7 +22,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        prd/restart_ds_datapipeline?datapipeline_name={{dpAllTable.selectedRow.data.datapipeline_name}}&user_name={{current_user.firstName}}
+        restart_ds_datapipeline?datapipeline_name={{dpAllTable.selectedRow.data.datapipeline_name}}&user_name={{current_user.firstName}}
         {{current_user.lastName}}&env={{dpNameAllEnv.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null

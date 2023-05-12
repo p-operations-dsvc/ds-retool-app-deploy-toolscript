@@ -21,8 +21,7 @@ template:
     - headers: ''
     - showFailureToaster: true
     - paginationEnabled: false
-    - query: >-
-        prd/get_ds_pipeline_env_details?object_name=containers&env={{dpEnv.value}}
+    - query: get_ds_pipeline_env_details?object_name=containers&env={{dpEnv.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -94,7 +93,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - bodyType: json
+    - bodyType: none
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false

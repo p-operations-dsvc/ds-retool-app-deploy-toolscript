@@ -21,7 +21,7 @@ template:
     - headers: ''
     - showFailureToaster: true
     - paginationEnabled: false
-    - query: prd/create_ds_pipeline_role
+    - query: create_ds_pipeline_role
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

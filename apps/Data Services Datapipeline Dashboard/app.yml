@@ -7,6 +7,6 @@ appTemplate:
   appMaxWidth: 100%
   queryStatusVisibility: false
   rootScreen: null
-  version: 2.113.3
+  version: 2.115.7
   responsiveLayoutDisabled: true
   markdownLinkBehavior: always

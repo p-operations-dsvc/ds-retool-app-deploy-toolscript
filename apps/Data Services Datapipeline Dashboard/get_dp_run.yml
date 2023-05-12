@@ -22,7 +22,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        prd/get_ds_pipeline_run?datapipeline_name={{dpNameHistory.value}}&env={{runEnvHistory.value}}&start={{startDateRangeHistory.startPlaceholder}}&end={{startDateRangeHistory.endPlaceholder}}&status={{runStatusHistory.value}}
+        get_ds_pipeline_run?datapipeline_name={{dpNameHistory.value}}&env={{runEnvHistory.value}}&start={{startDateRangeHistory.startPlaceholder}}&end={{startDateRangeHistory.endPlaceholder}}&status={{runStatusHistory.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -94,7 +94,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - bodyType: json
+    - bodyType: none
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
