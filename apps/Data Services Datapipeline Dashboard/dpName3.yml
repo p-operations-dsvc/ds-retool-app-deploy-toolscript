@@ -33,7 +33,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{updateDPName.value || self.values[0] }} '
+    - value: ''
     - hiddenByIndex: ''
     - labelCaption: ''
     - labelWidth: '25'
@@ -71,6 +71,7 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+            - enabled: '{{!self.value===""}}'
         - ordered:
             - event: change
             - type: state
@@ -82,6 +83,7 @@ template:
                   - value: '{{dpName3.value}}'
             - waitType: debounce
             - waitMs: '0'
+            - enabled: '{{!self.value===""}}'
     - _ids: []
     - emptyMessage: No options
     - overlayMaxHeight: 375

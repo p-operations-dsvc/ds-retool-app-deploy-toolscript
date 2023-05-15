@@ -16,7 +16,7 @@ template:
     - queryDisabled: ''
     - playgroundQuerySaveId: latest
     - resourceNameOverride: ''
-    - runWhenModelUpdates: true
+    - runWhenModelUpdates: false
     - paginationPaginationField: ''
     - headers: ''
     - showFailureToaster: true
@@ -32,7 +32,7 @@ template:
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: true
+    - showSuccessToaster: false
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
     - cookies: ''
@@ -200,15 +200,16 @@ template:
             - waitType: debounce
             - waitMs: '0'
         - ordered:
-            - event: success
-            - type: widget
             - method: setValue
-            - pluginId: dpContainerName
-            - targetId: null
+            - enabled: ''
             - params:
                 ordered:
                   - value: '{{get_dp_objects_by_name_create_dp.data[0].container_arn}}'
+            - targetId: null
+            - pluginId: dpContainerName
             - waitType: debounce
+            - event: success
+            - type: widget
             - waitMs: '0'
         - ordered:
             - event: success
@@ -269,15 +270,16 @@ template:
             - waitType: debounce
             - waitMs: '0'
         - ordered:
-            - event: success
-            - type: widget
             - method: setValue
-            - pluginId: dpScheduleTZ
-            - targetId: null
+            - enabled: '{{!get_dp_objects_by_name_create_dp.data[0].schedule_tz===null}}'
             - params:
                 ordered:
                   - value: '{{get_dp_objects_by_name_create_dp.data[0].schedule_tz}}'
+            - targetId: null
+            - pluginId: dpScheduleTZ
             - waitType: debounce
+            - event: success
+            - type: widget
             - waitMs: '0'
         - ordered:
             - event: success
@@ -326,16 +328,17 @@ template:
             - waitType: debounce
             - waitMs: '0'
         - ordered:
-            - event: success
-            - type: widget
             - method: setValue
-            - pluginId: dpOverridesCommands
-            - targetId: null
+            - enabled: ''
             - params:
                 ordered:
                   - value: >-
-                      {{get_dp_objects_by_name_create_dp.data[0].override_commands}}
+                      {{get_dp_objects_by_name_create_dp.data[0].override_commands_str}}
+            - targetId: null
+            - pluginId: dpOverridesCommands
             - waitType: debounce
+            - event: success
+            - type: widget
             - waitMs: '0'
         - ordered:
             - event: success
