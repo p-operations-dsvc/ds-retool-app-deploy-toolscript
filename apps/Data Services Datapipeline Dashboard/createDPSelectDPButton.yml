@@ -27,6 +27,17 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - method: trigger
+            - enabled: ''
+            - params:
+                ordered: []
+            - targetId: null
+            - pluginId: get_dp_objects_by_name_create_dp
+            - waitType: debounce
+            - event: click
+            - type: datasource
+            - waitMs: '0'
     - loading: false
     - loaderPosition: auto
     - disabled: false

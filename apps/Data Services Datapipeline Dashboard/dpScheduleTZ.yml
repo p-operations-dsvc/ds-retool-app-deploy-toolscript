@@ -565,7 +565,8 @@ template:
         {"id": "US/Pacific-New"}, 
         {"id": "US/Samoa"}, 
         {"id": "W-SU"}, 
-        {"id": "WET"} ]
+        {"id": "WET"},
+        {"id": "UTC"}]
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:
