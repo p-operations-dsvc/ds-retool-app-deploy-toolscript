@@ -32,7 +32,7 @@ template:
                LEFT OUTER JOIN edwppc.ppc_md_material AS p
                             ON x.material_seq = p.material_seq
         WHERE  pg.item_group_desc_edited LIKE
-        '%'||{{findProductGroupsText.value}}||'%'
+        {{findProductGroupsFuzzyCheckbox.value===true?'%'+findProductGroupsText.value+'%':findProductGroupsText.value}}
 
         GROUP  BY 
                pg.item_group_id,
