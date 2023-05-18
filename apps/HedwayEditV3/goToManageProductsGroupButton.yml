@@ -60,6 +60,29 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: widget
+            - method: scrollIntoView
+            - pluginId: selectProductGroupButton
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - block: nearest
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: get_products_group_search
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - loading: false
     - loaderPosition: auto
     - disabled: false

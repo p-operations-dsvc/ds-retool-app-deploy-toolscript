@@ -1,0 +1,38 @@
+id: findProductGroupsFuzzyCheckbox
+type: widget
+subtype: CheckboxWidget2
+template:
+  ordered:
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - validationMessage: ''
+    - showInEditor: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: 'true'
+    - labelCaption: ''
+    - _disclosedFields:
+        array: []
+    - label: 'Fuzzy search: '
+    - _validate: false
+    - invalid: false
+    - events:
+        ordered: []
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 305c0
+    row: 0.2
+    col: 10
+    height: 0.6
+    width: 1
+createdAt: 2023-05-16T16:49:46.996Z

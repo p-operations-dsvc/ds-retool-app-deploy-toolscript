@@ -1,4 +1,4 @@
-id: productsToEdit
+id: productsToEditTable
 type: widget
 subtype: TableWidget
 template:

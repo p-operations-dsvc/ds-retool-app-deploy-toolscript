@@ -8,7 +8,7 @@ template:
     - iconAfter: ''
     - submitTargetId: null
     - hidden: false
-    - text: Find
+    - text: Find SKUs
     - showInEditor: false
     - tooltipText: ''
     - _disclosedFields:
@@ -25,6 +25,17 @@ template:
             - targetId: null
             - params:
                 ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: widget
+            - method: selectPage
+            - pluginId: productsToEditTable
+            - targetId: null
+            - params:
+                ordered:
+                  - selectedPageIndex: '0'
             - waitType: debounce
             - waitMs: '0'
     - loading: false

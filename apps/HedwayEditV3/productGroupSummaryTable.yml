@@ -9,7 +9,7 @@ template:
     - _filteredSortedRenderedDataWithTypes: null
     - heightType: auto
     - normalizedData: null
-    - rowHeight: compact
+    - rowHeight: dense
     - saveChangesDisabled: ''
     - columnTypeProperties:
         ordered:
