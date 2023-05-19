@@ -7,7 +7,7 @@ template:
     - clickable: false
     - iconAfter: ''
     - submitTargetId: createGroupForm
-    - hidden: false
+    - hidden: ''
     - text: Submit
     - showInEditor: false
     - tooltipText: ''
@@ -20,7 +20,7 @@ template:
     - loading: false
     - loaderPosition: auto
     - disabled: false
-    - maintainSpaceWhenHidden: false
+    - maintainSpaceWhenHidden: true
 style:
   ordered: []
 position2:

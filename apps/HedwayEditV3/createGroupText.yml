@@ -37,7 +37,16 @@ template:
     - minLength: null
     - inputTooltip: ''
     - events:
-        ordered: []
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: create_new_product_group
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - autoCapitalize: none
     - loading: false
     - disabled: false

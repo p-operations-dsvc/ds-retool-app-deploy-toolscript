@@ -32,7 +32,7 @@ position2:
     container: tabbedContainer1
     subcontainer: 305c0
     row: 0.2
-    col: 10
+    col: 5
     height: 0.6
     width: 1
 createdAt: 2023-05-16T16:49:46.996Z

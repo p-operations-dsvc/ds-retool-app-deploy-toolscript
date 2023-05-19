@@ -20,7 +20,7 @@ template:
     - hidden: false
     - customValidation: ''
     - data: '{{ get_products_groups_dropdown.data }}'
-    - searchMode: fuzzy
+    - searchMode: caseInsensitive
     - hideValidationMessage: false
     - fallbackTextByIndex:
         array: []

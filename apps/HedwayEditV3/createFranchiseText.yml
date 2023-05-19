@@ -1,4 +1,4 @@
-id: createFranchiseName
+id: createFranchiseText
 type: widget
 subtype: TextInputWidget2
 template:
