@@ -61,8 +61,7 @@ template:
         - Manage SKUs in Group
         - Map SKUs to Group
         - Audit Trail
-    - events:
-        ordered: []
+    - events: []
     - _ids:
         - 3ae22
         - b5160

@@ -33,10 +33,10 @@ template:
                edw.item_group_matl_xref x
         WHERE  x.material_seq = p.material_seq
                AND x.item_group_id = g.item_group_id
-               AND ( p.sap_sku_num LIKE '%'
+               AND ( p.sap_sku_num ILIKE '%'
                                         || {{findProductsText.value}}
                                         || '%'
-                      OR p.description LIKE '%'
+                      OR p.description ILIKE '%'
                                             || {{findProductsText.value}}
                                             || '%' ) and p.material_group_seq in (474, 475, 476, 479)
         ORDER  BY  p.description  

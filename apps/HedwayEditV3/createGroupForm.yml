@@ -3,7 +3,10 @@ type: widget
 subtype: FormWidget2
 template:
   ordered:
-    - disableSubmit: false
+    - disableSubmit: >-
+        {{get_products_groups_dropdown.data.ITEM_GROUP_DESC_EDITED.map(function(x){
+        return x.toUpperCase(); }).indexOf
+        (createGroupText.value.toUpperCase())!==-1}}
     - heightType: auto
     - resetAfterSubmit: false
     - submitting: false

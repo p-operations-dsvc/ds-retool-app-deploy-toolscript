@@ -20,7 +20,7 @@ template:
     - showFailureToaster: true
     - query: >-
         CALL edwv.HEDWAYEDIT_CREATE_NEW_FRANCHISE
-        ({{createFranchiseName.value}}, {{current_user.fullName}})
+        ({{createFranchiseText.value}}, {{current_user.fullName}})
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -90,7 +90,7 @@ template:
                       ordered:
                         - notificationType: success
                         - title: >-
-                            Franchise '{{createFranchiseName.value}}' created
+                            Franchise '{{createFranchiseText.value}}' created
                             succesfully
                         - description: ''
             - waitType: debounce
