@@ -20,8 +20,8 @@ template:
     - formDataKey: '{{ self.id }}'
     - value:
         ordered:
-          - start: '{{ moment().add(-365*3, ''days'') }}'
-          - end: '{{ moment().add(180, ''days'') }}'
+          - start: ''
+          - end: ''
     - startPlaceholder: '{{self.value.start}}'
     - labelCaption: ''
     - maxDate: ''

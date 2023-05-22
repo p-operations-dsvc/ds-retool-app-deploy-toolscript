@@ -35,8 +35,10 @@ template:
         {{findProductGroupsFuzzyCheckbox.value===true?'%'+findProductGroupsText.value+'%':findProductGroupsText.value}}
 
         and pg.dvd_release_dt between
-        {{findProductGroupsDateRange.value.start.split ('T').at(0)}} and
-        {{findProductGroupsDateRange.value.end.split ('T').at(0)}} 
+        {{findProductGroupsDateRange.value.start===""?'1900-01-01':findProductGroupsDateRange.value.start.split
+        ('T').at(0)}} and
+        {{findProductGroupsDateRange.value.end===""?'2999-01-01':findProductGroupsDateRange.value.end.split
+        ('T').at(0)}} 
 
         GROUP  BY 
                pg.item_group_id,
