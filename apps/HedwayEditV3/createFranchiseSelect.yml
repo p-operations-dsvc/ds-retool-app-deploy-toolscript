@@ -1,31 +1,43 @@
-id: editProductGroupGenreText
+id: createFranchiseSelect
 type: widget
 subtype: SelectWidget2
 template:
   ordered:
     - imageByIndex:
         array: []
-    - _disabledByIndex: []
+    - _disabledByIndex:
+        - ''
+        - ''
+        - ''
     - showSelectionIndicator: true
-    - _values: []
+    - _values:
+        - Option 1
+        - Option 2
+        - Option 3
     - iconByIndex:
         array: []
-    - values: '{{ item.TITLE_GENRE_ID }}'
+    - values: '{{ item.FRANCHISE_ID }}'
     - readOnly: false
     - iconAfter: ''
-    - _iconByIndex: []
+    - _iconByIndex:
+        - ''
+        - ''
+        - ''
     - overlayMinWidth: null
     - allowDeselect: false
     - inputValue: ''
-    - hidden: false
+    - hidden: 'true'
     - customValidation: ''
-    - data: '{{ get_genre.data }}'
+    - data: '{{ get_franchise.data }}'
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:
         array: []
     - textBefore: ''
-    - _fallbackTextByIndex: []
+    - _fallbackTextByIndex:
+        - ''
+        - ''
+        - ''
     - selectedItem: null
     - validationMessage: ''
     - automaticItemColors: false
@@ -36,20 +48,26 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{get_product_groups_details.data.TITLE_GENRE_NAME[''0'']}}'
+    - value: null
     - hiddenByIndex:
         array: []
     - labelCaption: ''
     - labelWidth: '33'
     - deprecatedLabels:
         array: []
-    - _hiddenByIndex: []
+    - _hiddenByIndex:
+        - ''
+        - ''
+        - ''
     - placeholder: Select an option
-    - _captionByIndex: []
+    - _captionByIndex:
+        - ''
+        - ''
+        - ''
     - _disclosedFields:
         array: []
     - itemAdornmentSize: auto
-    - label: Genre
+    - label: Edit Franchise Name
     - _hasMigratedNestedItems: true
     - captionByIndex:
         array: []
@@ -59,38 +77,52 @@ template:
     - allowCustomValue: false
     - invalid: false
     - selectedIndex: null
-    - _tooltipByIndex: []
-    - _colorByIndex: []
+    - _tooltipByIndex:
+        - ''
+        - ''
+        - ''
+    - _colorByIndex:
+        - ''
+        - ''
+        - ''
     - tooltipByIndex:
         array: []
     - iconBefore: ''
     - colorByIndex:
         array: []
     - selectedLabel: ''
-    - events:
-        ordered: []
-    - _ids: []
+    - events: []
+    - _ids:
+        - '08409'
+        - 3fed4
+        - de82a
     - emptyMessage: No options
     - overlayMaxHeight: 375
     - loading: false
     - disabled: false
     - labelPosition: left
-    - _labels: []
+    - _labels:
+        - ''
+        - ''
+        - ''
     - labelWrap: false
     - disabledValues:
         array: []
     - disabledByIndex:
         array: []
     - maintainSpaceWhenHidden: false
-    - _imageByIndex: []
+    - _imageByIndex:
+        - ''
+        - ''
+        - ''
     - required: false
-    - labels: '{{ item.TITLE_GENRE_NAME }}'
+    - labels: '{{ item.FRANCHISE_CD }}'
 style:
   ordered: []
 position2:
   position2:
-    container: editProductGroupForm
-    row: 2
+    container: createFranchiseForm
+    col: 8
     height: 1
-    width: 12
-createdAt: 2023-03-17T22:31:07.254Z
+    width: 4
+createdAt: 2023-05-19T20:15:45.919Z

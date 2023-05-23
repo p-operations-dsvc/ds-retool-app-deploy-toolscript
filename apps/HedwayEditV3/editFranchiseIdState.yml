@@ -1,0 +1,11 @@
+id: editFranchiseIdState
+type: state
+subtype: State
+template:
+  ordered:
+    - _persistedValueGetter: null
+    - _persistedValueSetter: null
+    - persistValue: false
+    - persistedValueKey: ''
+    - value: null
+createdAt: 2023-05-23T19:33:15.834Z

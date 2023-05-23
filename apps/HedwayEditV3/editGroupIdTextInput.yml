@@ -1,4 +1,4 @@
-id: editProductGroupTitleDescText
+id: editGroupIdTextInput
 type: widget
 subtype: TextInputWidget2
 template:
@@ -22,14 +22,14 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_DESC_EDITED}}'
+    - value: ''
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
+    - placeholder: '{{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_ID}}'
     - _disclosedFields:
         array: []
-    - label: Description
+    - label: Group Id
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false
@@ -40,7 +40,7 @@ template:
         ordered: []
     - autoCapitalize: none
     - loading: false
-    - disabled: false
+    - disabled: 'true'
     - labelPosition: left
     - labelWrap: false
     - maintainSpaceWhenHidden: false
@@ -50,7 +50,6 @@ style:
 position2:
   position2:
     container: editProductGroupForm
-    row: 1
     height: 1
     width: 12
-createdAt: 2023-03-17T22:30:09.493Z
+createdAt: 2023-05-23T16:17:04.341Z
