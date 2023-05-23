@@ -1,4 +1,4 @@
-id: get_product_groups_default
+id: update_franchise
 type: datasource
 subtype: SqlQueryUnified
 resourceName: c0da1b1d-e343-405a-859c-aca829715d9d
@@ -19,34 +19,9 @@ template:
     - runWhenModelUpdates: false
     - showFailureToaster: true
     - query: >-
-        SELECT pg.item_group_id,
-               pg.item_group_desc_edited,
-               pg.dvd_release_dt,
-               pg.bdd_release_dt,
-               pg.uhd_release_dt,
-               Count(p.material_seq) as cnt_skus
-               
-        FROM   edw.item_group pg
-               LEFT OUTER JOIN edw.item_group_matl_xref AS x
-                            ON x.item_group_id = pg.item_group_id
-               LEFT OUTER JOIN edwppc.ppc_md_material AS p
-                            ON x.material_seq = p.material_seq
-        WHERE  pg.item_group_desc_edited ILIKE
-        {{findProductGroupsFuzzyCheckbox.value===true?'%'+findProductGroupsText.value+'%':findProductGroupsText.value}}
-
-        and pg.dvd_release_dt between
-        {{findProductGroupsDateRange.value.start===""?'1900-01-01':findProductGroupsDateRange.value.start.split
-        ('T').at(0)}} and
-        {{findProductGroupsDateRange.value.end===""?'2999-01-01':findProductGroupsDateRange.value.end.split
-        ('T').at(0)}} 
-
-        GROUP  BY 
-               pg.item_group_id,
-               pg.item_group_desc_edited,
-               pg.dvd_release_dt,
-               pg.bdd_release_dt,
-               pg.uhd_release_dt
-        ORDER  BY pg.item_group_desc_edited ASC 
+        CALL edwv.HEDWAYEDIT_UPDATE_FRANCHISE
+        ({{editFranchiseNameSelect.value}}, {{editFranchiseNameText.value}},
+        {{current_user.fullName}})
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -103,7 +78,34 @@ template:
         20)
 
         return data
-    - events: []
+    - events:
+        - ordered:
+            - event: success
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: success
+                        - title: >-
+                            Franchise '{{editFranchiseNameText.value}}' edited
+                            succesfully
+                        - description: ''
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_franchise
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - tableName: ''
     - queryTimeout: '10001'
     - requireConfirmation: false
@@ -118,4 +120,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-03-17T22:06:01.785Z
+createdAt: 2023-05-23T17:18:56.970Z

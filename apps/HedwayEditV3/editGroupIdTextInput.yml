@@ -1,46 +1,46 @@
-id: findProductGroupsDateRange
+id: editGroupIdTextInput
 type: widget
-subtype: DateRangeWidget
+subtype: TextInputWidget2
 template:
   ordered:
-    - minDate: ''
+    - spellCheck: false
     - readOnly: false
     - iconAfter: ''
-    - dateFormat: yyyy-MM-dd
+    - showCharacterCount: false
+    - autoComplete: false
+    - maxLength: null
     - hidden: false
     - customValidation: ''
+    - patternType: ''
     - hideValidationMessage: false
     - textBefore: ''
     - validationMessage: ''
     - textAfter: ''
     - showInEditor: false
     - showClear: false
+    - pattern: ''
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value:
-        ordered:
-          - start: ''
-          - end: ''
-    - startPlaceholder: '{{self.value.start}}'
+    - value: ''
     - labelCaption: ''
-    - maxDate: ''
     - labelWidth: '33'
+    - autoFill: ''
+    - placeholder: '{{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_ID}}'
     - _disclosedFields:
         array: []
-    - label: DVD Release Date
-    - formattedValue: ''
+    - label: Group Id
     - _validate: false
     - labelWidthUnit: '%'
-    - firstDayOfWeek: 1
     - invalid: false
-    - iconBefore: bold/interface-calendar-remove
-    - endPlaceholder: '{{self.value.end}}'
+    - iconBefore: ''
+    - minLength: null
+    - inputTooltip: ''
     - events:
         ordered: []
-    - textBetween: '-'
+    - autoCapitalize: none
     - loading: false
-    - disabled: false
+    - disabled: 'true'
     - labelPosition: left
     - labelWrap: false
     - maintainSpaceWhenHidden: false
@@ -49,9 +49,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
-    subcontainer: 305c0
-    col: 7
+    container: editProductGroupForm
     height: 1
-    width: 3
-createdAt: 2023-05-19T21:46:41.506Z
+    width: 12
+createdAt: 2023-05-23T16:17:04.341Z

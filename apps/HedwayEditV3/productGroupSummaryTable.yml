@@ -28,6 +28,8 @@ template:
               ordered:
                 - showSeparators: true
                 - padDecimal: true
+          - ITEM_GROUP_ID:
+              ordered: []
     - columnWidths: []
     - showSummaryFooter: false
     - disableRowSelectInteraction: false
@@ -45,6 +47,7 @@ template:
           - CNT_SKUS: SKU Count
           - BDD_RELEASE_DT: BDD Release Date
           - UHD_RELEASE_DT: UHD Release Date
+          - ITEM_GROUP_ID: Group Id
     - alwaysShowPaginator: false
     - columnColors:
         ordered: []
@@ -58,12 +61,13 @@ template:
           - BDD_RELEASE_DT: DateDataCell
           - UHD_RELEASE_DT: DateDataCell
           - CNT_SKUS: NumberDataCell
+          - ITEM_GROUP_ID: TextDataCell
     - columnRestrictedEditing:
         ordered: []
     - showFilterButton: true
     - _columnVisibility:
         ordered:
-          - ITEM_GROUP_ID: false
+          - ITEM_GROUP_ID: true
           - MATERIAL_SEQ: true
     - _columnSummaryTypes:
         ordered:
@@ -72,6 +76,7 @@ template:
           - BDD_RELEASE_DT: ''
           - UHD_RELEASE_DT: ''
           - CNT_SKUS: sum
+          - ITEM_GROUP_ID: ''
     - _columnsWithLegacyBackgroundColor:
         set: []
     - showAddRowButton: false
@@ -104,6 +109,7 @@ template:
           - BDD_RELEASE_DT: left
           - UHD_RELEASE_DT: left
           - CNT_SKUS: right
+          - ITEM_GROUP_ID: center
     - columnSummaries:
         object: {}
     - showBoxShadow: false
@@ -129,6 +135,7 @@ template:
           - BDD_RELEASE_DT: ''
           - UHD_RELEASE_DT: ''
           - CNT_SKUS: ''
+          - ITEM_GROUP_ID: ''
     - checkboxRowSelect: true
     - _compatibilityMode: false
     - showColumnBorders: false
@@ -210,7 +217,13 @@ template:
     - defaultSelectedRow: first
     - freezeActionButtonColumns: false
     - sort: null
-    - _columns: []
+    - _columns:
+        - ITEM_GROUP_DESC_EDITED
+        - ITEM_GROUP_ID
+        - DVD_RELEASE_DT
+        - BDD_RELEASE_DT
+        - UHD_RELEASE_DT
+        - CNT_SKUS
     - sortByRawValue:
         ordered:
           - MATERIAL_SEQ: false

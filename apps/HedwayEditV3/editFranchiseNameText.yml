@@ -1,4 +1,4 @@
-id: editProductGroupTitleDescText
+id: editFranchiseNameText
 type: widget
 subtype: TextInputWidget2
 template:
@@ -22,14 +22,18 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_DESC_EDITED}}'
+    - value: >-
+        {{editFranchiseNameSelect.data[editFranchiseNameSelect.selectedIndex].FRANCHISE_CD}}
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
+    - placeholder: >-
+        {{editFranchiseNameSelect.data[editFranchiseNameSelect.selectedIndex].FRANCHISE_CD}}
     - _disclosedFields:
         array: []
-    - label: Description
+    - label: >-
+        New Franchise Name (ID
+        {{editFranchiseNameSelect.data[editFranchiseNameSelect.selectedIndex].FRANCHISE_ID}})
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false
@@ -49,8 +53,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: editProductGroupForm
-    row: 1
+    container: editFranchiseForm
+    col: 5
     height: 1
-    width: 12
-createdAt: 2023-03-17T22:30:09.493Z
+    width: 7
+createdAt: 2023-05-23T17:55:02.596Z

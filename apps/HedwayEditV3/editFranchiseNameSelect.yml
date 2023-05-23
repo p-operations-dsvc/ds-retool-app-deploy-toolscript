@@ -1,32 +1,23 @@
-id: createFranchiseSelectHidden
+id: editFranchiseNameSelect
 type: widget
 subtype: SelectWidget2
 template:
   ordered:
     - imageByIndex:
         array: []
-    - _disabledByIndex:
-        - ''
-        - ''
-        - ''
+    - _disabledByIndex: []
     - showSelectionIndicator: true
-    - _values:
-        - Option 1
-        - Option 2
-        - Option 3
+    - _values: []
     - iconByIndex:
         array: []
     - values: '{{ item.FRANCHISE_ID }}'
     - readOnly: false
     - iconAfter: ''
-    - _iconByIndex:
-        - ''
-        - ''
-        - ''
+    - _iconByIndex: []
     - overlayMinWidth: null
     - allowDeselect: false
     - inputValue: ''
-    - hidden: 'true'
+    - hidden: false
     - customValidation: ''
     - data: '{{ get_franchise.data }}'
     - searchMode: fuzzy
@@ -34,10 +25,7 @@ template:
     - fallbackTextByIndex:
         array: []
     - textBefore: ''
-    - _fallbackTextByIndex:
-        - ''
-        - ''
-        - ''
+    - _fallbackTextByIndex: []
     - selectedItem: null
     - validationMessage: ''
     - automaticItemColors: false
@@ -48,26 +36,20 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: null
+    - value: '{{editFranchiseIdState.value||0}}'
     - hiddenByIndex:
         array: []
     - labelCaption: ''
     - labelWidth: '33'
     - deprecatedLabels:
         array: []
-    - _hiddenByIndex:
-        - ''
-        - ''
-        - ''
-    - placeholder: Select an option
-    - _captionByIndex:
-        - ''
-        - ''
-        - ''
+    - _hiddenByIndex: []
+    - placeholder: ''
+    - _captionByIndex: []
     - _disclosedFields:
         array: []
     - itemAdornmentSize: auto
-    - label: Label
+    - label: Select Franchise Name
     - _hasMigratedNestedItems: true
     - captionByIndex:
         array: []
@@ -77,14 +59,8 @@ template:
     - allowCustomValue: false
     - invalid: false
     - selectedIndex: null
-    - _tooltipByIndex:
-        - ''
-        - ''
-        - ''
-    - _colorByIndex:
-        - ''
-        - ''
-        - ''
+    - _tooltipByIndex: []
+    - _colorByIndex: []
     - tooltipByIndex:
         array: []
     - iconBefore: ''
@@ -92,39 +68,50 @@ template:
         array: []
     - selectedLabel: ''
     - events:
-        ordered: []
-    - _ids:
-        - '08409'
-        - 3fed4
-        - de82a
+        - ordered:
+            - event: change
+            - type: widget
+            - method: setValue
+            - pluginId: editFranchiseNameText
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{editFranchiseNameSelect.data[editFranchiseNameSelect.selectedIndex].FRANCHISE_CD}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: change
+            - type: state
+            - method: setValue
+            - pluginId: editFranchiseIdState
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{self.value}}'
+            - waitType: debounce
+            - waitMs: '0'
+    - _ids: []
     - emptyMessage: No options
     - overlayMaxHeight: 375
     - loading: false
     - disabled: false
     - labelPosition: left
-    - _labels:
-        - ''
-        - ''
-        - ''
+    - _labels: []
     - labelWrap: false
     - disabledValues:
         array: []
     - disabledByIndex:
         array: []
     - maintainSpaceWhenHidden: false
-    - _imageByIndex:
-        - ''
-        - ''
-        - ''
+    - _imageByIndex: []
     - required: false
     - labels: '{{ item.FRANCHISE_CD }}'
 style:
   ordered: []
 position2:
   position2:
-    container: createFranchiseForm
-    rowGroup: footer
-    col: 9
+    container: editFranchiseForm
     height: 1
-    width: 3
-createdAt: 2023-05-19T20:15:45.919Z
+    width: 4
+createdAt: 2023-05-23T17:53:00.358Z
