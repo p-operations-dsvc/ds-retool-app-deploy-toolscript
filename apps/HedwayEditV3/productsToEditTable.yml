@@ -17,7 +17,10 @@ template:
               ordered: []
           - SKU:
               ordered: []
-    - columnWidths: []
+    - columnWidths:
+        - object:
+            id: SKU
+            value: 242
     - showSummaryFooter: false
     - disableRowSelectInteraction: false
     - columnWidthsMobile: []
@@ -86,7 +89,7 @@ template:
         ordered: []
     - showRefreshButton: true
     - pageSize: '20'
-    - useDynamicColumnSettings: false
+    - useDynamicColumnSettings: true
     - actionButtonPosition: right
     - dynamicRowHeights: false
     - bulkUpdateAction: ''

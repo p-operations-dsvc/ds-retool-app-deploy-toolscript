@@ -23,7 +23,16 @@ template:
               ordered: []
           - ITEM_SKU_NUM:
               ordered: []
-    - columnWidths: []
+    - columnWidths:
+        - object:
+            id: ITEM_NAME
+            value: 561.171875
+        - object:
+            id: STATUS
+            value: 73.171875
+        - object:
+            id: ITEM_SKU_NUM
+            value: 162.5
     - showSummaryFooter: false
     - disableRowSelectInteraction: false
     - columnWidthsMobile: []
@@ -106,7 +115,7 @@ template:
         ordered: []
     - showRefreshButton: true
     - pageSize: '20'
-    - useDynamicColumnSettings: false
+    - useDynamicColumnSettings: true
     - actionButtonPosition: left
     - dynamicRowHeights: false
     - bulkUpdateAction: ''
@@ -167,7 +176,13 @@ template:
     - defaultSelectedRow: none
     - freezeActionButtonColumns: false
     - sort: null
-    - _columns: []
+    - _columns:
+        - ITEM_SKU_NUM
+        - ITEM_NAME
+        - ITEM_GROUP_DESC_EDITED
+        - STATUS
+        - ITEM_GROUP_ID
+        - ITEM_ID
     - sortByRawValue:
         ordered: []
     - calculatedColumns: []

@@ -33,7 +33,19 @@ template:
               ordered: []
           - PREVIOUS_GROUP:
               ordered: []
-    - columnWidths: []
+    - columnWidths:
+        - object:
+            id: CHANGE_NOTE
+            value: 345.53125
+        - object:
+            id: HEDWAYEDIT_USER_ID
+            value: 163.859375
+        - object:
+            id: CHANGE_TIMESTAMP
+            value: 179.71875
+        - object:
+            id: CHANGE_TYPE
+            value: 234.71875
     - showSummaryFooter: false
     - disableRowSelectInteraction: false
     - columnWidthsMobile: []
@@ -125,7 +137,7 @@ template:
         ordered: []
     - showRefreshButton: true
     - pageSize: '20'
-    - useDynamicColumnSettings: false
+    - useDynamicColumnSettings: true
     - actionButtonPosition: left
     - dynamicRowHeights: false
     - bulkUpdateAction: ''
