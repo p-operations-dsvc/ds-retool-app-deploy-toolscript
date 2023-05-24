@@ -30,7 +30,22 @@ template:
                 - padDecimal: true
           - ITEM_GROUP_ID:
               ordered: []
-    - columnWidths: []
+    - columnWidths:
+        - object:
+            id: ITEM_GROUP_ID
+            value: 88.328125
+        - object:
+            id: DVD_RELEASE_DT
+            value: 127.59375
+        - object:
+            id: BDD_RELEASE_DT
+            value: 142.25
+        - object:
+            id: UHD_RELEASE_DT
+            value: 145.25
+        - object:
+            id: ITEM_GROUP_DESC_EDITED
+            value: 833.328125
     - showSummaryFooter: false
     - disableRowSelectInteraction: false
     - columnWidthsMobile: []
@@ -92,7 +107,7 @@ template:
     - resetAfterSave: true
     - filterStackType: and
     - hidden: ''
-    - downloadRawData: false
+    - downloadRawData: true
     - showFetchingIndicator: true
     - serverPaginated: false
     - data: '{{ get_product_groups_default.data }}'
@@ -105,10 +120,10 @@ template:
     - columnAlignment:
         ordered:
           - ITEM_GROUP_DESC_EDITED: left
-          - DVD_RELEASE_DT: left
-          - BDD_RELEASE_DT: left
-          - UHD_RELEASE_DT: left
-          - CNT_SKUS: right
+          - DVD_RELEASE_DT: center
+          - BDD_RELEASE_DT: center
+          - UHD_RELEASE_DT: center
+          - CNT_SKUS: center
           - ITEM_GROUP_ID: center
     - columnSummaries:
         object: {}
@@ -119,7 +134,7 @@ template:
         ordered: []
     - showRefreshButton: true
     - pageSize: '20'
-    - useDynamicColumnSettings: false
+    - useDynamicColumnSettings: true
     - actionButtonPosition: left
     - dynamicRowHeights: false
     - bulkUpdateAction: ''
@@ -214,12 +229,12 @@ template:
           data: null
           columnName: null
     - columns: []
-    - defaultSelectedRow: first
+    - defaultSelectedRow: none
     - freezeActionButtonColumns: false
     - sort: null
     - _columns:
-        - ITEM_GROUP_DESC_EDITED
         - ITEM_GROUP_ID
+        - ITEM_GROUP_DESC_EDITED
         - DVD_RELEASE_DT
         - BDD_RELEASE_DT
         - UHD_RELEASE_DT
