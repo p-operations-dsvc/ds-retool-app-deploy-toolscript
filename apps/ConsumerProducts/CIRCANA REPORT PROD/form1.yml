@@ -1,0 +1,49 @@
+id: form1
+type: widget
+subtype: FormWidget2
+template:
+  ordered:
+    - disableSubmit: false
+    - heightType: auto
+    - resetAfterSubmit: true
+    - submitting: false
+    - hidden: false
+    - data:
+        object: {}
+    - showHeader: true
+    - hoistFetching: true
+    - scroll: true
+    - initialData: null
+    - showInEditor: false
+    - tooltipText: ''
+    - _disclosedFields:
+        array:
+          - tooltipText
+    - invalid: false
+    - showFooter: true
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: Insertion
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - overflowType: scroll
+    - disabled: false
+    - requireValidation: true
+    - maintainSpaceWhenHidden: false
+    - showBody: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: container1
+    subcontainer: c4979
+    height: 0.2
+    width: 6
+createdAt: 2023-06-01T19:36:01.686Z

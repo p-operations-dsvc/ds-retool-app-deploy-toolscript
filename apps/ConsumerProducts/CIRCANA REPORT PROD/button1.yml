@@ -1,0 +1,48 @@
+id: button1
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: false
+    - text: Delete
+    - showInEditor: false
+    - tooltipText: ''
+    - style:
+        ordered:
+          - background: warning
+    - _disclosedFields:
+        array:
+          - background
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: Delete
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: container1
+    subcontainer: c4979
+    row: 23.2
+    col: 9
+    height: 1
+    width: 3
+createdAt: 2023-06-01T19:44:21.770Z

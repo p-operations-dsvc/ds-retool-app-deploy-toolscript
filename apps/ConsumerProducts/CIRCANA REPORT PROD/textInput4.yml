@@ -1,0 +1,59 @@
+id: textInput4
+type: widget
+subtype: NumberInputWidget
+template:
+  ordered:
+    - readOnly: false
+    - iconAfter: ''
+    - max: null
+    - preventScroll: false
+    - inputValue: 0
+    - hidden: false
+    - customValidation: ''
+    - showSeparators: false
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - allowNull: false
+    - showClear: false
+    - tooltipText: ''
+    - currency: USD
+    - labelAlign: left
+    - formDataKey: UPC_12_DIGIT
+    - value: 0
+    - labelCaption: ''
+    - min: null
+    - labelWidth: '33'
+    - placeholder: Enter value
+    - _disclosedFields:
+        array:
+          - required
+    - showStepper: true
+    - label: Upc 12 digit
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - format: decimal
+    - iconBefore: ''
+    - textAlign: left
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - loading: false
+    - disabled: 'true'
+    - labelPosition: left
+    - decimalPlaces: null
+    - labelWrap: false
+    - padDecimal: false
+    - maintainSpaceWhenHidden: false
+    - required: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: form2
+    height: 1
+    width: 12
+createdAt: 2023-06-02T03:08:14.382Z
