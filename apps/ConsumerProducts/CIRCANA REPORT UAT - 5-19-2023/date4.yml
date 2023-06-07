@@ -1,0 +1,51 @@
+id: date4
+type: widget
+subtype: DateWidget
+template:
+  ordered:
+    - minDate: ''
+    - readOnly: false
+    - iconAfter: ''
+    - datePlaceholder: '{{ self.dateFormat.toUpperCase() }}'
+    - dateFormat: MMM d, yyyy
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: LAUNCH_DATE
+    - value: ''
+    - labelCaption: ''
+    - maxDate: ''
+    - labelWidth: '33'
+    - _disclosedFields:
+        array: []
+    - label: Launch date
+    - formattedValue: ''
+    - _validate: false
+    - labelWidthUnit: '%'
+    - firstDayOfWeek: 0
+    - invalid: false
+    - iconBefore: bold/interface-calendar
+    - events:
+        ordered: []
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: form4
+    row: 9
+    height: 1
+    width: 12
+createdAt: 2023-05-04T19:23:43.052Z

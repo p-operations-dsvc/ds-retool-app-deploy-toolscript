@@ -1,0 +1,105 @@
+id: GetTableData
+type: datasource
+subtype: SqlQueryUnified
+resourceName: 6c96bab8-573b-4a71-9a4e-e66e803823e6
+resourceDisplayName: CP_DATA_UAT
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - records: '{{table1.data}}'
+    - lastReceivedFromResourceAt: null
+    - databasePasswordOverride: ''
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: true
+    - showFailureToaster: true
+    - query: >-
+        SELECT UPC_12_DIGIT, CATEGORY, SUBCATEGORY, SUB_SUBCATEGORY,
+        NVCP_DESCRIPTION, FRANCHISE, FRANCHISE_ROLLUP, PARTNER, SOURCE
+
+        , LAUNCH_DATE, DELETE_DATE, DENSE_RANK() OVER (ORDER BY  UPC_12_DIGIT,
+        NVCP_DESCRIPTION, LAUNCH_DATE) AS ROWID
+          FROM CP_DATA_UAT.RETAIL_ANALYTICS.MASTER_CPG_ATTRIBUTION
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - warningCodes: []
+    - data: null
+    - recordId: ''
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: true
+    - dataArray: []
+    - cacheKeyTtl: ''
+    - filterBy: ''
+    - requestSentTimestamp: null
+    - databaseHostOverride: ''
+    - metadata: null
+    - editorMode: sql
+    - queryRunTime: null
+    - actionType: INSERT
+    - changesetObject: '{{ table1.data }}'
+    - shouldUseLegacySql: false
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - databaseNameOverride: ''
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: >-
+        [{"key":"SAP_ID","value":"{{table1.data['0']['SAP
+        ID']}}"},{"key":"AGENT","value":"{{table1.data['0']['AGENT']}}"},{"key":"COMPLIANCE_OWNER","value":"{{table1.data['0']['Compliance
+        Owner']}}"}]
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: ''
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - enableBulkUpdates: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - isTableFieldRawInput: true
+    - bulkUpdatePrimaryKey: ''
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events: []
+    - tableName: DW.COGNOS
+    - queryTimeout: '10001'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: true
+    - enableCaching: false
+    - allowedGroups: []
+    - databaseUsernameOverride: ''
+    - shouldEnableBatchQuerying: false
+    - doNotThrowOnNoOp: false
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-03-22T02:35:36.040Z

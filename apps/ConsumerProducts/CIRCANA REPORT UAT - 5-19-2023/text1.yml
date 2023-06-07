@@ -1,0 +1,32 @@
+id: text1
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: '#### Table Master CPG Attribution'
+    - style:
+        ordered:
+          - color: rgba(10, 22, 48, 1)
+          - background: canvas
+    - _disclosedFields:
+        array:
+          - color
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    row: 15.4
+    col: 2
+    height: 0.6
+    width: 8
+createdAt: 2023-04-12T19:18:10.035Z

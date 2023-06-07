@@ -1,0 +1,21 @@
+version: 43.0.9
+pageUuid: a3273862-f605-11ed-b336-87eabe01d126
+appTemplate:
+  mobileAppSettings:
+    object:
+      mobileOfflineModeEnabled: false
+      mobileOfflineModeDelaySync: false
+      displaySetting:
+        object:
+          landscapeMode: false
+          tabletMode: false
+  queryStatusVisibility: false
+  experimentalPerfFeatures:
+    object:
+      serverDepGraphEnabled: false
+      useRuntimeV2: true
+      runtimeV2OptOut: false
+  rootScreen: null
+  version: 2.119.7
+  markdownLinkBehavior: auto
+  experimentalDataTabEnabled: true
