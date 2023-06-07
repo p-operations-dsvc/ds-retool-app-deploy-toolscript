@@ -1,0 +1,56 @@
+id: form4
+type: widget
+subtype: FormWidget2
+template:
+  ordered:
+    - disableSubmit: >-
+        {{form4.data.UPC_12_DIGIT === 0 || form4.data.CATEGORY === '' ||
+        form4.data.SUBCATEGORY === '' || form4.data.SUB_SUBCATEGORY === '' ||
+        form4.data.NVCP_DESCRIPTION === '' || form4.data.FRANCHISE === '' ||
+        form4.data.FRANCHISE_ROLLUP === '' || form4.data.PARTNER === '' ||
+        form4.data.SOURCE === '' ? true:false}}
+    - heightType: auto
+    - resetAfterSubmit: true
+    - submitting: false
+    - hidden: false
+    - data:
+        object: {}
+    - showHeader: true
+    - hoistFetching: true
+    - scroll: true
+    - initialData: ''
+    - showInEditor: false
+    - tooltipText: ''
+    - style:
+        ordered:
+          - background: canvas
+          - headerBackground: rgb(84, 79, 79)
+    - _disclosedFields:
+        array: []
+    - invalid: false
+    - showFooter: true
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: InsertFromDropDown
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - overflowType: scroll
+    - disabled: false
+    - requireValidation: true
+    - maintainSpaceWhenHidden: false
+    - showBody: true
+style:
+  ordered: []
+position2:
+  position2:
+    row: 1.1999999999999962
+    height: 0.2
+    width: 6
+createdAt: 2023-05-04T19:19:43.177Z

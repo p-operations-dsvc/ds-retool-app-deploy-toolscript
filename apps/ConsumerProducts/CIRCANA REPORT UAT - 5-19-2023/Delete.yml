@@ -1,0 +1,119 @@
+id: Delete
+type: datasource
+subtype: SqlQueryUnified
+resourceName: 3a7a3025-8f96-4ee7-96ed-2c1ff4031c4b
+resourceDisplayName: SF_DEV
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - records: ''
+    - lastReceivedFromResourceAt: null
+    - databasePasswordOverride: ''
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - query: >-
+        DELETE FROM CP_DATA_UAT.RETAIL_ANALYTICS.MASTER_CPG_ATTRIBUTION WHERE
+        UPC_12_DIGIT = {{table1.selectedRow.data.UPC_12_DIGIT}}  AND
+        NVCP_DESCRIPTION = {{table1.selectedRow.data.NVCP_DESCRIPTION}} AND
+        IFNULL(LAUNCH_DATE,'01/01/1900') IN (SELECT
+        IFNULL(T2.LAUNCH_DATE,'01/01/1900') FROM
+         (
+         SELECT LAUNCH_DATE, ROWID FROM
+         (
+         SELECT UPC_12_DIGIT, CATEGORY, SUBCATEGORY, SUB_SUBCATEGORY, NVCP_DESCRIPTION, FRANCHISE, FRANCHISE_ROLLUP, PARTNER, SOURCE
+        , LAUNCH_DATE, DELETE_DATE, DENSE_RANK() OVER (ORDER BY  UPC_12_DIGIT,
+        NVCP_DESCRIPTION, LAUNCH_DATE, DELETE_DATE) AS ROWID
+          FROM CP_DATA_DEV.RETAIL_ANALYTICS.MASTER_CPG_ATTRIBUTION 
+          )T1 WHERE ROWID = {{table1.selectedRow.data.ROWID}}
+          )T2)
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - warningCodes: []
+    - data: null
+    - recordId: ''
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: true
+    - dataArray: []
+    - cacheKeyTtl: 300
+    - filterBy: '[]'
+    - requestSentTimestamp: null
+    - databaseHostOverride: ''
+    - metadata: null
+    - editorMode: sql
+    - queryRunTime: null
+    - actionType: DELETE_BY
+    - changesetObject: ''
+    - shouldUseLegacySql: false
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - databaseNameOverride: ''
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - enableBulkUpdates: true
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - bulkUpdatePrimaryKey: ''
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: GetTableData
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - tableName: RETAIL_ANALYTICS.MASTER_CPG_ATTRIBUTION
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: true
+    - allowedGroups: []
+    - databaseUsernameOverride: ''
+    - shouldEnableBatchQuerying: false
+    - doNotThrowOnNoOp: false
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-04-11T17:59:54.563Z

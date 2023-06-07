@@ -1,0 +1,10 @@
+id: transformer1
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        const data = {{GetCategoryValues.data}}
+        return data.map(x => x + 1)
+    - value: ''
+createdAt: 2023-05-18T21:43:59.621Z

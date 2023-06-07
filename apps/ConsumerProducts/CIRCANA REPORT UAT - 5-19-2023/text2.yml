@@ -1,0 +1,27 @@
+id: text2
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: '#### Circana Master CPG data maintenance'
+    - _disclosedFields:
+        array: []
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    row: 0.20000000000000018
+    col: 4
+    height: 0.6
+    width: 4
+createdAt: 2023-05-22T13:40:45.196Z
