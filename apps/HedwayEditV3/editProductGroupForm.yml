@@ -3,7 +3,7 @@ type: widget
 subtype: FormWidget2
 template:
   ordered:
-    - disableSubmit: false
+    - disableSubmit: ''
     - heightType: auto
     - resetAfterSubmit: true
     - submitting: false

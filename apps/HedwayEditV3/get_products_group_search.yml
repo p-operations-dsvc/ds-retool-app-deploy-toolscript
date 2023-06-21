@@ -15,6 +15,7 @@ template:
     - successMessage: ''
     - queryDisabled: ''
     - playgroundQuerySaveId: latest
+    - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
     - showFailureToaster: true
@@ -87,6 +88,7 @@ template:
     - events: []
     - tableName: ''
     - queryTimeout: '10001'
+    - workflowId: null
     - requireConfirmation: false
     - queryFailureConditions: ''
     - changesetIsObject: false

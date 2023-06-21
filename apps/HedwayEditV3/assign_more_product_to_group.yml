@@ -15,6 +15,7 @@ template:
     - successMessage: ''
     - queryDisabled: ''
     - playgroundQuerySaveId: latest
+    - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
     - showFailureToaster: true
@@ -23,7 +24,7 @@ template:
         {{concat_selected_prods_add_group.value}},
         {{selectProductGroup.selectedItem.ITEM_GROUP_ID}},
         {{current_user.fullName}},
-        {{concat_selected_prods_add_group_skus.value}}, 0)
+        {{concat_selected_prods_add_group_skus.value}}, 191001)
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -130,6 +131,7 @@ template:
             - waitMs: '0'
     - tableName: ''
     - queryTimeout: '10001'
+    - workflowId: null
     - requireConfirmation: false
     - queryFailureConditions: ''
     - changesetIsObject: false

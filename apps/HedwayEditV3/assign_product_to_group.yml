@@ -15,6 +15,7 @@ template:
     - successMessage: ''
     - queryDisabled: ''
     - playgroundQuerySaveId: latest
+    - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
     - showFailureToaster: true
@@ -22,7 +23,7 @@ template:
         CALL edwv.hedwayedit_MOVE_PROD_INTO_GROUP_BULK ( {{
         concat_selected_products_add.value}},
         {{selectProductGroupAssign.value}}, {{current_user.fullName}},
-        {{concat_selected_products_add_skus.value}}, 0)
+        {{concat_selected_products_add_skus.value}}, 191001)
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -119,6 +120,7 @@ template:
             - waitMs: '0'
     - tableName: ''
     - queryTimeout: '10001'
+    - workflowId: null
     - requireConfirmation: false
     - queryFailureConditions: ''
     - changesetIsObject: false
