@@ -65,7 +65,13 @@ template:
           - ITEM_GROUP_ID: Group Id
     - alwaysShowPaginator: false
     - columnColors:
-        ordered: []
+        ordered:
+          - ITEM_GROUP_ID: ''
+          - ITEM_GROUP_DESC_EDITED: ''
+          - DVD_RELEASE_DT: ''
+          - BDD_RELEASE_DT: ''
+          - UHD_RELEASE_DT: ''
+          - CNT_SKUS: ''
     - columnFrozenAlignments:
         ordered: []
     - allowMultiRowSelect: false

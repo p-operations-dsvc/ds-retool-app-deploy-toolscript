@@ -40,7 +40,7 @@ template:
     - hiddenByIndex:
         array: []
     - labelCaption: ''
-    - labelWidth: '33'
+    - labelWidth: '15'
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
@@ -93,5 +93,5 @@ position2:
     subcontainer: c394a
     col: 5
     height: 1
-    width: 4
+    width: 5
 createdAt: 2023-03-22T21:47:54.816Z

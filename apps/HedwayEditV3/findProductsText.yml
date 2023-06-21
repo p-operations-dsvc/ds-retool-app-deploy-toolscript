@@ -24,12 +24,12 @@ template:
     - formDataKey: '{{ self.id }}'
     - value: ''
     - labelCaption: ''
-    - labelWidth: '33'
+    - labelWidth: '22'
     - autoFill: ''
     - placeholder: Enter value
     - _disclosedFields:
         array: []
-    - label: 'Enter product name:'
+    - label: 'Enter SKU name:'
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false

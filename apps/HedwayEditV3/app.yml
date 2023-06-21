@@ -6,5 +6,5 @@ appTemplate:
       mobileOfflineModeEnabled: false
   queryStatusVisibility: false
   rootScreen: null
-  version: 2.115.7
+  version: 2.119.7
   markdownLinkBehavior: auto
