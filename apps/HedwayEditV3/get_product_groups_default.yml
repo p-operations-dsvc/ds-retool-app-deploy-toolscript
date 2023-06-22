@@ -32,8 +32,11 @@ template:
                             ON x.item_group_id = pg.item_group_id
                LEFT OUTER JOIN edwppc.ppc_md_material AS p
                             ON x.material_seq = p.material_seq
-        WHERE  pg.item_group_desc_edited ILIKE
+        WHERE  (pg.item_group_desc_edited ILIKE
         {{findProductGroupsFuzzyCheckbox.value===true?'%'+findProductGroupsText.value+'%':findProductGroupsText.value}}
+
+        or pg.item_group_id =
+        {{Number.isNaN(Number.parseInt(findProductGroupsText.value))===true?99999999:Number.parseInt(findProductGroupsText.value)}})
 
         and pg.dvd_release_dt between
         {{findProductGroupsDateRange.value.start===""?'1900-01-01':findProductGroupsDateRange.value.start.split
