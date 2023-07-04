@@ -1,0 +1,100 @@
+id: query2
+type: datasource
+subtype: S3Query
+resourceName: 434d3ec9-7a77-4d27-bd06-16a0c3c643ff
+resourceDisplayName: S3_Resource
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - fileKey: '{{table1.selectedRow.data.Key}}'
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - delimiter: ''
+    - query: ''
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - tagSet: ''
+    - uploadFileName: export.csv
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - uploadData: ''
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - queryRunTime: null
+    - actionType: delete
+    - copySource: ''
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - prefix: '{{table1.selectedRow.data.Key}}'
+    - changeset: ''
+    - rawData: null
+    - signedOperationOptions: ''
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - bucketName: cp-data-paramount
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - signedOperationName: ''
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - uploadFileType: csv
+    - maxKeys: ''
+    - useRawUploadFileType: false
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: query1
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-05-24T16:34:43.080Z
