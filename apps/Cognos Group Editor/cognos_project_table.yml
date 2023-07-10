@@ -1,0 +1,269 @@
+id: cognos_project_table
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - d6cef: ''
+          - 79c74: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 79c74
+        - d6cef
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - d6cef:
+              ordered: []
+          - 79c74:
+              ordered:
+                - showStepper: true
+    - _toolbarPosition: bottom
+    - _groupByColumns:
+        ordered: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+          - 2a8c1: Add
+          - 46a58: Delete
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+          - 2a8c1: bold/interface-add-1
+          - 46a58: bold/interface-remove-2
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+          - 2a8c1: custom
+          - 46a58: custom
+    - _columnOptionList:
+        ordered:
+          - d6cef:
+              ordered: []
+          - 79c74:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - d6cef: ''
+          - 79c74: ''
+    - _showBorder: true
+    - _templatePageSize: '20'
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - d6cef: project_name
+          - 79c74: project_id
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 4d
+        - 2a8c1
+        - 46a58
+        - 3c
+    - data: '{{ get_cognos_projects.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - d6cef: ''
+          - 79c74: ''
+    - _columnFormat:
+        ordered:
+          - d6cef: string
+          - 79c74: decimal
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: 79c74
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - d6cef: center
+          - 79c74: right
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - d6cef: ''
+          - 79c74: ''
+    - _columnIcon:
+        ordered:
+          - d6cef: ''
+          - 79c74: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _columnSortDisabled:
+        ordered:
+          - d6cef: false
+          - 79c74: false
+    - undefined: null
+    - filterStack: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - d6cef: ''
+          - 79c74: ''
+    - _rowSelection: multiple
+    - _columnCaption:
+        ordered:
+          - d6cef: ''
+          - 79c74: ''
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - d6cef:
+              ordered: []
+          - 79c74:
+              ordered:
+                - showSeparators: true
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _showColumnBorders: false
+    - _columnSize:
+        ordered:
+          - d6cef: 93.890625
+          - 79c74: 72.203125
+    - _serverPaginationType: limitOffsetBased
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - event: save
+            - type: datasource
+            - method: trigger
+            - pluginId: update_cognos_projects
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickToolbar
+            - type: widget
+            - method: open
+            - pluginId: deleteProjectsModal
+            - targetId: 46a58
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickToolbar
+            - type: widget
+            - method: open
+            - pluginId: addNewProjectModal
+            - targetId: 2a8c1
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: cognos_project_table
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: cognos_project_table
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - d6cef: true
+          - '': false
+          - 79c74: 'false'
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: pagination
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _columnPosition:
+        ordered:
+          - d6cef: center
+          - 79c74: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - d6cef: Enter value
+          - 79c74: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - d6cef: ''
+          - 79c74: 'false'
+    - _columnLabel:
+        ordered:
+          - d6cef: Project Name
+          - 79c74: Project ID
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: e1e1d
+    row: 1
+    height: 8
+    width: 12
+createdAt: 2023-07-06T21:58:49.804Z
