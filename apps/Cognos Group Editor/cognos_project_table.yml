@@ -170,7 +170,7 @@ template:
             - event: save
             - type: datasource
             - method: trigger
-            - pluginId: update_cognos_projects
+            - pluginId: update_cognos_projects_bulk
             - targetId: null
             - params:
                 ordered: []

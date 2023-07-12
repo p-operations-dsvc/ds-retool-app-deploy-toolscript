@@ -214,6 +214,16 @@ template:
         ordered: []
     - events:
         - ordered:
+            - event: save
+            - type: datasource
+            - method: trigger
+            - pluginId: update_cognos_groups_bulk
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
             - event: clickToolbar
             - type: datasource
             - method: trigger
@@ -239,16 +249,6 @@ template:
             - method: open
             - pluginId: addNewGroupModal
             - targetId: 30f8e
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: save
-            - type: datasource
-            - method: trigger
-            - pluginId: update_cognos_groups
-            - targetId: null
             - params:
                 ordered: []
             - waitType: debounce

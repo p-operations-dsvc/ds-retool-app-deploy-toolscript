@@ -1,4 +1,4 @@
-id: update_cognos_project_groups
+id: update_cognos_groups_bulk
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -6,7 +6,7 @@ resourceDisplayName: cognos_retool_repo
 template:
   ordered:
     - queryRefreshTime: ''
-    - records: '{{cognos_project_table.changeSet}}'
+    - records: '{{cognos_groups_table.changesetArray}}'
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
     - queryDisabledMessage: ''
@@ -19,16 +19,13 @@ template:
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
     - showFailureToaster: true
-    - query: >-
-        SELECT vmn_data.update_project_groups (
-        {{cognos_project_group_table.changesetObject}} );
+    - query: ''
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
-    - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
@@ -37,14 +34,13 @@ template:
     - showSuccessToaster: false
     - dataArray: []
     - cacheKeyTtl: ''
-    - filterBy: >-
-        [{"key":"project_name","value":"{{cognos_project_table.selectedRow.data.project_name}}","operation":"="}]
+    - filterBy: ''
     - requestSentTimestamp: null
     - databaseHostOverride: ''
     - metadata: null
-    - editorMode: sql
+    - editorMode: gui
     - queryRunTime: null
-    - actionType: UPDATE_BY
+    - actionType: BULK_UPDATE_BY_KEY
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -58,7 +54,7 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: '[{"key":"project_name","value":"{{cognos_project_table.changeSet}}"}]'
+    - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
@@ -71,7 +67,7 @@ template:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
-    - bulkUpdatePrimaryKey: project_name
+    - bulkUpdatePrimaryKey: group_id
     - runWhenPageLoads: false
     - transformer: >-
         // type your code here
@@ -85,23 +81,13 @@ template:
             - event: success
             - type: datasource
             - method: trigger
-            - pluginId: get_project_groups
+            - pluginId: get_cognos_groups
             - targetId: null
             - params:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: widget
-            - method: clearChangeset
-            - pluginId: cognos_project_group_table
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-    - tableName: vmn_data.cognos_project
+    - tableName: vmn_data.cognos_group
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -111,9 +97,9 @@ template:
     - allowedGroups: []
     - databaseUsernameOverride: ''
     - shouldEnableBatchQuerying: false
-    - doNotThrowOnNoOp: true
+    - doNotThrowOnNoOp: false
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-07-07T00:23:28.809Z
+createdAt: 2023-07-12T18:24:00.188Z

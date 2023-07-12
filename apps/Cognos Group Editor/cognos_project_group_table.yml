@@ -216,6 +216,16 @@ template:
         ordered: []
     - events:
         - ordered:
+            - event: save
+            - type: datasource
+            - method: trigger
+            - pluginId: update_cognos_project_groups_bulk
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
             - event: clickToolbar
             - type: widget
             - method: open
@@ -231,16 +241,6 @@ template:
             - method: open
             - pluginId: deleteProjectGroupsModal
             - targetId: e15c8
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: save
-            - type: datasource
-            - method: trigger
-            - pluginId: update_cognos_project_groups
-            - targetId: null
             - params:
                 ordered: []
             - waitType: debounce
