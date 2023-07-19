@@ -18,6 +18,7 @@ template:
     - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
+    - workflowRunId: null
     - showFailureToaster: true
     - query: >-
         CALL edwv.hedwayedit_MOVE_PROD_INTO_GROUP_BULK  (
@@ -28,6 +29,7 @@ template:
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
+    - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
     - warningCodes: []
@@ -43,6 +45,7 @@ template:
     - requestSentTimestamp: null
     - databaseHostOverride: ''
     - metadata: null
+    - workflowActionType: null
     - editorMode: sql
     - queryRunTime: null
     - actionType: ''
@@ -100,13 +103,12 @@ template:
             - waitMs: '0'
         - ordered:
             - event: success
-            - type: script
-            - method: run
-            - pluginId: ''
+            - type: widget
+            - method: clearSelection
+            - pluginId: table1
             - targetId: null
             - params:
-                ordered:
-                  - src: addProductsTable.selectRow(null)
+                ordered: []
             - waitType: debounce
             - waitMs: '0'
         - ordered:
@@ -137,6 +139,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - shouldEnableBatchQuerying: false
     - doNotThrowOnNoOp: false

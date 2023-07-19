@@ -1,180 +1,274 @@
 id: productGroupSummaryTable
 type: widget
-subtype: TableWidget
+subtype: TableWidget2
 template:
   ordered:
-    - showCustomButton: false
-    - sortMappedValue:
-        ordered: []
-    - _filteredSortedRenderedDataWithTypes: null
-    - heightType: auto
-    - normalizedData: null
-    - rowHeight: dense
-    - saveChangesDisabled: ''
-    - columnTypeProperties:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
         ordered:
-          - ITEM_GROUP_DESC_EDITED:
+          - '85638': ''
+          - 400f4: ''
+          - eb5a0: ''
+          - 14ef7: ''
+          - b6cd9: ''
+          - 3f5a3: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - '85638'
+        - 400f4
+        - eb5a0
+        - 14ef7
+        - b6cd9
+        - 3f5a3
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - '85638':
+              ordered:
+                - showStepper: true
+          - 400f4:
               ordered: []
-          - DVD_RELEASE_DT:
+          - eb5a0:
+              ordered: []
+          - 14ef7:
+              ordered: []
+          - b6cd9:
+              ordered: []
+          - 3f5a3:
               ordered:
-                - dateFormat: MM/dd/yyyy
-          - BDD_RELEASE_DT:
-              ordered:
-                - dateFormat: MM/dd/yyyy
-          - UHD_RELEASE_DT:
-              ordered:
-                - dateFormat: MM/dd/yyyy
-          - CNT_SKUS:
+                - showStepper: true
+    - _toolbarPosition: bottom
+    - _groupByColumns:
+        ordered: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+          - a3967: Add
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+          - a3967: bold/interface-add-2
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+          - a3967: custom
+    - _columnStatusIndicator:
+        ordered: []
+    - _columnOptionList:
+        ordered:
+          - '85638':
+              ordered: []
+          - 400f4:
+              ordered: []
+          - eb5a0:
+              ordered: []
+          - 14ef7:
+              ordered: []
+          - b6cd9:
+              ordered: []
+          - 3f5a3:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - '85638': ''
+          - 400f4: ''
+          - eb5a0: ''
+          - 14ef7: ''
+          - b6cd9: ''
+          - 3f5a3: ''
+    - _showBorder: true
+    - _templatePageSize: '100'
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - '85638': ITEM_GROUP_ID
+          - 400f4: ITEM_GROUP_DESC_EDITED
+          - eb5a0: DVD_RELEASE_DT
+          - 14ef7: BDD_RELEASE_DT
+          - b6cd9: UHD_RELEASE_DT
+          - 3f5a3: CNT_SKUS
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+        - a3967
+    - data: '{{ get_product_groups_default.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - '85638': ''
+          - 400f4: ''
+          - eb5a0: ''
+          - 14ef7: ''
+          - b6cd9: ''
+          - 3f5a3: ''
+    - _columnFormat:
+        ordered:
+          - '85638': string
+          - 400f4: string
+          - eb5a0: date
+          - 14ef7: date
+          - b6cd9: date
+          - 3f5a3: decimal
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: '85638'
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - '85638': left
+          - 400f4: left
+          - eb5a0: center
+          - 14ef7: center
+          - b6cd9: center
+          - 3f5a3: right
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - '85638': ''
+          - 400f4: ''
+          - eb5a0: ''
+          - 14ef7: ''
+          - b6cd9: ''
+          - 3f5a3: ''
+    - _columnIcon:
+        ordered:
+          - '85638': ''
+          - 400f4: ''
+          - eb5a0: ''
+          - 14ef7: ''
+          - b6cd9: ''
+          - 3f5a3: ''
+    - _columnCellTooltipMode:
+        ordered: []
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _columnSortDisabled:
+        ordered:
+          - '85638': false
+          - 400f4: false
+          - eb5a0: false
+          - 14ef7: false
+          - b6cd9: false
+          - 3f5a3: false
+    - undefined: null
+    - filterStack: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - '85638': ''
+          - 400f4: ''
+          - eb5a0: ''
+          - 14ef7: ''
+          - b6cd9: ''
+          - 3f5a3: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - '85638': ''
+          - 400f4: ''
+          - eb5a0: ''
+          - 14ef7: ''
+          - b6cd9: ''
+          - 3f5a3: ''
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - '85638':
               ordered:
                 - showSeparators: true
-                - padDecimal: true
-          - ITEM_GROUP_ID:
+          - 400f4:
               ordered: []
-    - columnWidths:
-        - object:
-            id: ITEM_GROUP_ID
-            value: 88.328125
-        - object:
-            id: DVD_RELEASE_DT
-            value: 127.59375
-        - object:
-            id: BDD_RELEASE_DT
-            value: 142.25
-        - object:
-            id: UHD_RELEASE_DT
-            value: 145.25
-        - object:
-            id: ITEM_GROUP_DESC_EDITED
-            value: 833.328125
-    - showSummaryFooter: false
-    - disableRowSelectInteraction: false
-    - columnWidthsMobile: []
-    - hasNextAfterCursor: ''
-    - columnTypeSpecificExtras:
-        ordered: []
-    - onRowAdded: ''
-    - columnHeaderNames:
-        ordered:
-          - MATERIAL_SEQ: SKUs
-          - DVD_RELEASE_DT: DVD Release Date
-          - EDIT_REQUIRED_IND: "\tStatus"
-          - ITEM_GROUP_DESC_EDITED: Group Name
-          - CNT_SKUS: SKU Count
-          - BDD_RELEASE_DT: BDD Release Date
-          - UHD_RELEASE_DT: UHD Release Date
-          - ITEM_GROUP_ID: Group Id
-    - alwaysShowPaginator: false
-    - columnColors:
-        ordered:
-          - ITEM_GROUP_ID: ''
-          - ITEM_GROUP_DESC_EDITED: ''
-          - DVD_RELEASE_DT: ''
-          - BDD_RELEASE_DT: ''
-          - UHD_RELEASE_DT: ''
-          - CNT_SKUS: ''
-    - columnFrozenAlignments:
-        ordered: []
-    - allowMultiRowSelect: false
-    - columnFormats:
-        ordered:
-          - ITEM_GROUP_DESC_EDITED: TextMultiDataCell
-          - DVD_RELEASE_DT: DateDataCell
-          - BDD_RELEASE_DT: DateDataCell
-          - UHD_RELEASE_DT: DateDataCell
-          - CNT_SKUS: NumberDataCell
-          - ITEM_GROUP_ID: TextDataCell
-    - columnRestrictedEditing:
-        ordered: []
-    - showFilterButton: true
-    - _columnVisibility:
-        ordered:
-          - ITEM_GROUP_ID: true
-          - MATERIAL_SEQ: true
-    - _columnSummaryTypes:
-        ordered:
-          - ITEM_GROUP_DESC_EDITED: ''
-          - DVD_RELEASE_DT: ''
-          - BDD_RELEASE_DT: ''
-          - UHD_RELEASE_DT: ''
-          - CNT_SKUS: sum
-          - ITEM_GROUP_ID: ''
-    - _columnsWithLegacyBackgroundColor:
-        set: []
-    - showAddRowButton: false
-    - _unfilteredSelectedIndex: null
-    - nextBeforeCursor: ''
-    - columnVisibility:
-        ordered: []
-    - selectedPageIndex: '0'
-    - applyDynamicSettingsToColumnOrder: true
-    - rowColor:
+          - eb5a0:
+              ordered:
+                - dateFormat: MM/dd/yyyy
+          - 14ef7:
+              ordered:
+                - dateFormat: MM/dd/yyyy
+          - b6cd9:
+              ordered:
+                - dateFormat: MM/dd/yyyy
+          - 3f5a3:
+              ordered:
+                - showSeparators: true
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
         array: []
-    - actionButtonColumnName: Actions
-    - resetAfterSave: true
-    - filterStackType: and
-    - hidden: ''
-    - downloadRawData: true
-    - showFetchingIndicator: true
-    - serverPaginated: false
-    - data: '{{ get_product_groups_default.data }}'
-    - displayedData: null
-    - actionButtons: []
-    - actionButtonSelectsRow: true
-    - selectRowByDefault: true
-    - defaultSortByColumn: ''
-    - paginationOffset: 0
-    - columnAlignment:
-        ordered:
-          - ITEM_GROUP_DESC_EDITED: left
-          - DVD_RELEASE_DT: center
-          - BDD_RELEASE_DT: center
-          - UHD_RELEASE_DT: center
-          - CNT_SKUS: center
-          - ITEM_GROUP_ID: center
-    - columnSummaries:
-        object: {}
-    - showBoxShadow: false
-    - sortedDesc: false
-    - customButtonName: Custom Button
-    - columnMappersRenderAsHTML:
+    - _beforeCursor: ''
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
         ordered: []
-    - showRefreshButton: true
-    - pageSize: '20'
-    - useDynamicColumnSettings: true
-    - actionButtonPosition: left
-    - dynamicRowHeights: false
-    - bulkUpdateAction: ''
-    - afterCursor: ''
-    - onCustomButtonPressQueryName: ''
-    - changeSet:
-        object: {}
-    - sortedColumn: ''
-    - _columnSummaryValues:
+    - _columnSize:
         ordered:
-          - ITEM_GROUP_DESC_EDITED: ''
-          - DVD_RELEASE_DT: ''
-          - BDD_RELEASE_DT: ''
-          - UHD_RELEASE_DT: ''
-          - CNT_SKUS: ''
-          - ITEM_GROUP_ID: ''
-    - checkboxRowSelect: true
-    - _compatibilityMode: false
-    - showColumnBorders: false
-    - clearSelectionLabel: Clear selection
-    - _renderedDataWithTypes: null
-    - columnAllowOverflow:
+          - '85638': 92.40625
+          - 400f4: 481.40625
+          - eb5a0: 204.46875
+          - 14ef7: 169.53125
+          - b6cd9: 242.25
+          - 3f5a3: 67.09375
+    - _serverPaginationType: limitOffsetBased
+    - _showFooter: true
+    - _groupedColumnConfig:
         ordered: []
-    - beforeCursor: ''
-    - serverPaginationType: limitOffsetBased
-    - onRowSelect: ''
-    - showDownloadButton: true
-    - selectedIndex: null
-    - defaultSortDescending: false
-    - _sortedDisplayedDataIndices: null
-    - dynamicColumnSettings: null
+    - _virtualizeStartIndex: 0
+    - _defaultFilters:
+        ordered: []
     - events:
         - ordered:
-            - event: rowClick
+            - event: clickToolbar
+            - type: widget
+            - method: setValue
+            - pluginId: mainTabs
+            - targetId: a3967
+            - params:
+                ordered:
+                  - value: Create Group
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: selectRow
             - type: widget
             - method: open
             - pluginId: editProductGroupModal
@@ -184,93 +278,136 @@ template:
             - waitType: debounce
             - waitMs: '0'
         - ordered:
-            - event: rowClick
+            - event: selectRow
             - type: widget
             - method: setValue
             - pluginId: selectProductGroup
             - targetId: null
             - params:
                 ordered:
-                  - value: >-
-                      {{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_ID}}
+                  - value: '{{productGroupSummaryTable.selectedRow.ITEM_GROUP_ID}}'
             - waitType: debounce
             - waitMs: '0'
         - ordered:
-            - event: rowClick
+            - event: selectRow
             - type: widget
             - method: setValue
             - pluginId: selectProductGroupAssign
             - targetId: null
             - params:
                 ordered:
-                  - value: >-
-                      {{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_ID}}
+                  - value: '{{productGroupSummaryTable.selectedRow.ITEM_GROUP_ID}}'
             - waitType: debounce
             - waitMs: '0'
-    - totalRowCount: ''
-    - recordUpdates:
-        array: []
-    - newRow: null
-    - emptyMessage: No rows found
-    - columnEditable:
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: open
+            - pluginId: editProductGroupModal
+            - targetId: 74e2c
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: setValue
+            - pluginId: selectProductGroup
+            - targetId: 74e2c
+            - params:
+                ordered:
+                  - value: '{{productGroupSummaryTable.selectedRow.currentRow}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: productGroupSummaryTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: productGroupSummaryTable
+            - targetId: 4d
+    - _columnEditable:
         ordered:
-          - ITEM_GROUP_DESC_EDITED: false
-    - _viewerColumnSummaryTypes:
-        object: {}
-    - filters:
+          - '85638': 'false'
+          - 400f4: ''
+          - eb5a0: ''
+          - 14ef7: ''
+          - b6cd9: ''
+          - 3f5a3: ''
+    - pagination: null
+    - selectedDataIndexes:
         array: []
-    - displayedDataIndices: null
-    - disableSorting:
-        ordered: []
-    - columnMappers:
-        ordered: []
-    - showClearSelection: false
-    - doubleClickToEdit: true
+    - sortArray:
+        array: []
+    - _selectedCell: null
     - overflowType: pagination
-    - _reverseSortedDisplayedDataIndices: null
-    - showTableBorder: true
-    - selectedCell:
-        object:
-          index: null
-          data: null
-          columnName: null
-    - columns: []
-    - defaultSelectedRow: none
-    - freezeActionButtonColumns: false
-    - sort: null
-    - _columns:
-        - ITEM_GROUP_ID
-        - ITEM_GROUP_DESC_EDITED
-        - DVD_RELEASE_DT
-        - BDD_RELEASE_DT
-        - UHD_RELEASE_DT
-        - CNT_SKUS
-    - sortByRawValue:
+    - selectedCell: null
+    - _defaultSelectedRow:
         ordered:
-          - MATERIAL_SEQ: false
-    - calculatedColumns: []
-    - selectedRow:
-        object:
-          index: null
-          data: null
-    - showPaginationOnTop: false
-    - _reverseDisplayedDataIndices: null
-    - nextAfterCursor: ''
-    - useCompactMode: false
+          - mode: none
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - '85638': center
+          - 400f4: center
+          - eb5a0: center
+          - 14ef7: center
+          - b6cd9: center
+          - 3f5a3: center
+    - _enableSaveActions: false
+    - _columnPlaceholder:
+        ordered:
+          - '85638': Enter value
+          - 400f4: Enter value
+          - eb5a0: Enter value
+          - 14ef7: Enter value
+          - b6cd9: Enter value
+          - 3f5a3: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - '85638': ''
+          - 400f4: ''
+          - eb5a0: ''
+          - 14ef7: ''
+          - b6cd9: ''
+          - 3f5a3: ''
+    - _columnLabel:
+        ordered:
+          - '85638': Group Id
+          - 400f4: Group Name
+          - eb5a0: DVD Release Date
+          - 14ef7: BDD Release Date
+          - b6cd9: UHD Release Date
+          - 3f5a3: SKU Count
+    - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
     container: tabbedContainer1
     subcontainer: 305c0
-    row: 1.6
-    height: 2
-    width: 12
-mobilePosition2:
-  position2:
-    container: tabbedContainer1
-    subcontainer: 305c0
-    row: 1.2
+    row: 1
     height: 8
     width: 12
-createdAt: 2023-03-17T22:04:06.882Z
+createdAt: 2023-07-14T18:25:33.365Z

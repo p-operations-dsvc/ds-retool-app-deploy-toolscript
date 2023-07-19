@@ -1,232 +1,396 @@
 id: selectGroupToAuditTable
 type: widget
-subtype: TableWidget
+subtype: TableWidget2
 template:
   ordered:
-    - showCustomButton: false
-    - sortMappedValue:
-        ordered: []
-    - _filteredSortedRenderedDataWithTypes: null
-    - heightType: auto
-    - normalizedData: null
-    - rowHeight: standard
-    - saveChangesDisabled: ''
-    - columnTypeProperties:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
         ordered:
-          - CHANGE_NOTE:
+          - 39f60: ''
+          - e4567: ''
+          - 3ddd5: ''
+          - 1cea1: ''
+          - 79cdd: ''
+          - '79506': ''
+          - f1e91: ''
+          - 027d7: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: auto
+    - disableEdits: false
+    - _rowHeight: medium
+    - _columnIds:
+        - 027d7
+        - 3ddd5
+        - e4567
+        - '79506'
+        - f1e91
+        - 1cea1
+        - 39f60
+        - 79cdd
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - 39f60:
               ordered: []
-          - CHANGE_TIMESTAMP:
+          - e4567:
+              ordered: []
+          - 3ddd5:
+              ordered: []
+          - 1cea1:
+              ordered: []
+          - 79cdd:
+              ordered: []
+          - '79506':
+              ordered: []
+          - f1e91:
+              ordered: []
+          - 027d7:
               ordered:
-                - manageTimeZone: true
+                - showStepper: true
+    - _toolbarPosition: bottom
+    - _groupByColumns:
+        ordered: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnStatusIndicator:
+        ordered:
+          - 1cea1:
+              ordered: []
+    - _columnOptionList:
+        ordered:
+          - 39f60:
+              ordered: []
+          - e4567:
+              ordered: []
+          - 3ddd5:
+              ordered: []
+          - 1cea1:
+              ordered: []
+          - 79cdd:
+              ordered: []
+          - '79506':
+              ordered: []
+          - f1e91:
+              ordered: []
+          - 027d7:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - 39f60: ''
+          - e4567: ''
+          - 3ddd5: ''
+          - 1cea1: '{{ item.replace (/,(?=[^\s])/g, ", ") }}'
+          - 79cdd: ''
+          - '79506': ''
+          - f1e91: ''
+          - 027d7: ''
+    - _showBorder: true
+    - _templatePageSize: '100'
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - 39f60: HEDWAYEDIT_USER_ID
+          - e4567: CHANGE_TYPE
+          - 3ddd5: CHANGE_TIMESTAMP
+          - 1cea1: CHANGE_NOTE
+          - 79cdd: IP
+          - '79506': NEW_GROUP
+          - f1e91: PREVIOUS_GROUP
+          - 027d7: AUDIT_RECORD_ID
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ audit_trail.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - 39f60: ''
+          - e4567: ''
+          - 3ddd5: ''
+          - 1cea1: ''
+          - 79cdd: ''
+          - '79506': ''
+          - f1e91: ''
+          - 027d7: ''
+    - _columnFormat:
+        ordered:
+          - 39f60: string
+          - e4567: string
+          - 3ddd5: datetime
+          - 1cea1: multilineString
+          - 79cdd: string
+          - '79506': string
+          - f1e91: string
+          - 027d7: decimal
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: 027d7
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - 39f60: left
+          - e4567: left
+          - 3ddd5: left
+          - 1cea1: left
+          - 79cdd: left
+          - '79506': left
+          - f1e91: left
+          - 027d7: right
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - 39f60: ''
+          - e4567: ''
+          - 3ddd5: ''
+          - 1cea1: ''
+          - 79cdd: ''
+          - '79506': ''
+          - f1e91: ''
+          - 027d7: ''
+    - _columnIcon:
+        ordered:
+          - 39f60: ''
+          - e4567: ''
+          - 3ddd5: ''
+          - 1cea1: ''
+          - 79cdd: ''
+          - '79506': ''
+          - f1e91: ''
+          - 027d7: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - 1cea1: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _columnSortDisabled:
+        ordered:
+          - 39f60: false
+          - e4567: false
+          - 3ddd5: false
+          - 1cea1: false
+          - 79cdd: false
+          - '79506': false
+          - f1e91: false
+          - 027d7: false
+    - filterStack: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - 39f60: ''
+          - e4567: ''
+          - 3ddd5: ''
+          - 1cea1: ''
+          - 79cdd: ''
+          - '79506': ''
+          - f1e91: ''
+          - 027d7: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - 39f60: ''
+          - e4567: ''
+          - 3ddd5: ''
+          - 1cea1: ''
+          - 79cdd: ''
+          - '79506': ''
+          - f1e91: ''
+          - 027d7: ''
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - 39f60:
+              ordered: []
+          - e4567:
+              ordered: []
+          - 3ddd5:
+              ordered:
                 - dateFormat: MMM d, yyyy
+                - manageTimeZone: true
                 - valueTimeZone: '00:00'
                 - displayTimeZone: '00:00'
-          - CHANGE_TYPE:
+          - 1cea1:
               ordered: []
-          - HEDWAYEDIT_USER_ID:
+          - 79cdd:
               ordered: []
-          - IP:
+          - '79506':
               ordered: []
-          - ITEM_GROUP_DESC_EDITED:
+          - f1e91:
               ordered: []
-          - NEW_GROUP:
-              ordered: []
-          - PREVIOUS_GROUP:
-              ordered: []
-    - columnWidths:
-        - object:
-            id: CHANGE_NOTE
-            value: 345.53125
-        - object:
-            id: HEDWAYEDIT_USER_ID
-            value: 163.859375
-        - object:
-            id: CHANGE_TIMESTAMP
-            value: 179.71875
-        - object:
-            id: CHANGE_TYPE
-            value: 234.71875
-    - showSummaryFooter: false
-    - disableRowSelectInteraction: false
-    - columnWidthsMobile: []
-    - hasNextAfterCursor: ''
-    - columnTypeSpecificExtras:
-        ordered: []
-    - onRowAdded: ''
-    - columnHeaderNames:
-        ordered:
-          - HEDWAYEDIT_USER_ID: Editor
-          - CHANGE_TYPE: Type
-          - CHANGE_TIMESTAMP: Timestamp
-          - CHANGE_NOTE: Notes
-          - ITEM_GROUP_DESC_EDITED: Previous Group
-          - IP: IP of the editor
-          - NEW_GROUP: New Group
-          - PREVIOUS_GROUP: Previous Group
-    - alwaysShowPaginator: false
-    - columnColors:
-        ordered: []
-    - columnFrozenAlignments:
-        ordered: []
-    - allowMultiRowSelect: false
-    - columnFormats:
-        ordered:
-          - CHANGE_NOTE: TextMultiDataCell
-          - CHANGE_TIMESTAMP: DateTimeDataCell
-          - CHANGE_TYPE: TextDataCell
-          - HEDWAYEDIT_USER_ID: TextDataCell
-          - IP: TextDataCell
-          - ITEM_GROUP_DESC_EDITED: TextMultiDataCell
-          - NEW_GROUP: TextMultiDataCell
-          - PREVIOUS_GROUP: TextMultiDataCell
-    - columnRestrictedEditing:
-        ordered: []
-    - showFilterButton: true
-    - _columnVisibility:
-        ordered: []
-    - _columnSummaryTypes:
-        ordered:
-          - CHANGE_NOTE: ''
-          - CHANGE_TIMESTAMP: ''
-          - CHANGE_TYPE: ''
-          - HEDWAYEDIT_USER_ID: ''
-          - IP: ''
-          - ITEM_GROUP_DESC_EDITED: ''
-          - NEW_GROUP: ''
-          - PREVIOUS_GROUP: ''
-    - _columnsWithLegacyBackgroundColor:
-        set: []
-    - showAddRowButton: false
-    - _unfilteredSelectedIndex: null
-    - nextBeforeCursor: ''
-    - columnVisibility:
-        ordered: []
-    - selectedPageIndex: '0'
-    - applyDynamicSettingsToColumnOrder: true
-    - rowColor:
+          - 027d7:
+              ordered:
+                - showSeparators: true
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
         array: []
-    - actionButtonColumnName: Actions
-    - resetAfterSave: true
-    - filterStackType: and
-    - downloadRawData: false
-    - showFetchingIndicator: true
-    - serverPaginated: false
-    - data: '{{ audit_trail.data }}'
-    - displayedData: null
-    - actionButtons: []
-    - actionButtonSelectsRow: true
-    - selectRowByDefault: true
-    - defaultSortByColumn: ''
-    - paginationOffset: 0
-    - columnAlignment:
-        ordered:
-          - CHANGE_NOTE: left
-          - CHANGE_TIMESTAMP: left
-          - CHANGE_TYPE: left
-          - HEDWAYEDIT_USER_ID: left
-          - IP: left
-          - ITEM_GROUP_DESC_EDITED: left
-          - NEW_GROUP: left
-          - PREVIOUS_GROUP: left
-    - columnSummaries:
-        object: {}
-    - showBoxShadow: false
-    - sortedDesc: false
-    - customButtonName: Custom Button
-    - columnMappersRenderAsHTML:
-        ordered: []
-    - showRefreshButton: true
-    - pageSize: '20'
-    - useDynamicColumnSettings: true
-    - actionButtonPosition: left
-    - dynamicRowHeights: false
-    - bulkUpdateAction: ''
-    - afterCursor: ''
-    - onCustomButtonPressQueryName: ''
-    - changeSet:
-        object: {}
-    - sortedColumn: ''
-    - _columnSummaryValues:
-        ordered:
-          - CHANGE_NOTE: ''
-          - CHANGE_TIMESTAMP: ''
-          - CHANGE_TYPE: ''
-          - HEDWAYEDIT_USER_ID: ''
-          - IP: ''
-          - ITEM_GROUP_DESC_EDITED: ''
-          - NEW_GROUP: ''
-          - PREVIOUS_GROUP: ''
-    - checkboxRowSelect: true
-    - _compatibilityMode: false
-    - showColumnBorders: false
-    - clearSelectionLabel: Clear selection
-    - _renderedDataWithTypes: null
-    - columnAllowOverflow:
-        ordered: []
-    - beforeCursor: ''
-    - serverPaginationType: limitOffsetBased
-    - onRowSelect: ''
-    - showDownloadButton: true
-    - selectedIndex: null
-    - defaultSortDescending: false
-    - _sortedDisplayedDataIndices: null
-    - dynamicColumnSettings: null
-    - totalRowCount: ''
-    - recordUpdates:
+    - _beforeCursor: ''
+    - searchTerm: ''
+    - selectedRows:
         array: []
-    - newRow: null
-    - emptyMessage: No rows found
-    - columnEditable:
+    - _disabledVirtualization: false
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - 1cea1:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - '79506': 278.34375
+          - 027d7: 100
+          - 3ddd5: 170.46875
+          - e4567: 196.71875
+          - f1e91: 254
+          - 1cea1: 248
+          - 39f60: 127.78125
+          - 79cdd: 103.65625
+    - _serverPaginationType: limitOffsetBased
+    - _showFooter: true
+    - _groupedColumnConfig:
         ordered: []
-    - _viewerColumnSummaryTypes:
-        object: {}
-    - filters:
+    - _virtualizeStartIndex: 0
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: selectGroupToAuditTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: selectGroupToAuditTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - 39f60: ''
+          - e4567: ''
+          - 3ddd5: 'false'
+          - 1cea1: ''
+          - 79cdd: ''
+          - '79506': ''
+          - f1e91: ''
+          - 027d7: 'false'
+    - pagination: null
+    - selectedDataIndexes:
         array: []
-    - displayedDataIndices: null
-    - disableSorting:
-        ordered: []
-    - columnMappers:
-        ordered: []
-    - showClearSelection: false
-    - doubleClickToEdit: true
+    - sortArray:
+        array: []
+    - _selectedCell: null
     - overflowType: pagination
-    - _reverseSortedDisplayedDataIndices: null
-    - showTableBorder: true
-    - selectedCell:
-        object:
-          index: null
-          data: null
-          columnName: null
-    - columns: []
-    - defaultSelectedRow: first
-    - freezeActionButtonColumns: false
-    - sort: null
-    - _columns:
-        - CHANGE_TIMESTAMP
-        - CHANGE_TYPE
-        - NEW_GROUP
-        - PREVIOUS_GROUP
-        - CHANGE_NOTE
-        - HEDWAYEDIT_USER_ID
-        - IP
-    - sortByRawValue:
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - 39f60: center
+          - e4567: center
+          - 3ddd5: center
+          - 1cea1: center
+          - 79cdd: center
+          - '79506': center
+          - f1e91: center
+          - 027d7: center
+    - _enableSaveActions: false
+    - _columnPlaceholder:
+        ordered:
+          - 39f60: Enter value
+          - e4567: Enter value
+          - 3ddd5: Enter value
+          - 1cea1: Enter value
+          - 79cdd: Enter value
+          - '79506': Enter value
+          - f1e91: Enter value
+          - 027d7: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
         ordered: []
-    - calculatedColumns: []
-    - selectedRow:
-        object:
-          index: null
-          data: null
-    - showPaginationOnTop: false
-    - _reverseDisplayedDataIndices: null
-    - nextAfterCursor: ''
-    - useCompactMode: false
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - 39f60: ''
+          - e4567: ''
+          - 3ddd5: ''
+          - 1cea1: ''
+          - 79cdd: ''
+          - '79506': ''
+          - f1e91: ''
+          - 027d7: 'true'
+    - _columnLabel:
+        ordered:
+          - 39f60: Editor
+          - e4567: Type
+          - 3ddd5: Timestamp
+          - 1cea1: Note
+          - 79cdd: IP address
+          - '79506': New Group
+          - f1e91: Previous Group
+          - 027d7: Audit record id
+    - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
     container: tabbedContainer1
     subcontainer: dc08f
-    row: 1.2
-    height: 2
+    row: 1.4000000000000004
+    height: 1.0000000000000018
     width: 12
-createdAt: 2023-03-31T23:03:53.893Z
+createdAt: 2023-07-14T19:29:58.616Z
