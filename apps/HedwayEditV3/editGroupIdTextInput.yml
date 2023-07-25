@@ -26,7 +26,7 @@ template:
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: '{{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_ID}}'
+    - placeholder: '{{productGroupSummaryTable.selectedRow.ITEM_GROUP_ID}}'
     - _disclosedFields:
         array: []
     - label: Group Id

@@ -22,7 +22,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_DESC_EDITED}}'
+    - value: '{{productGroupSummaryTable.selectedRow.ITEM_GROUP_DESC_EDITED}}'
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''

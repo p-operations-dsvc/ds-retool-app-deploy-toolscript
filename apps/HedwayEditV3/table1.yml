@@ -1,4 +1,4 @@
-id: findProductsTable
+id: table1
 type: widget
 subtype: TableWidget2
 template:
@@ -7,24 +7,24 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - cdecf: ''
-          - 54f59: ''
-          - ad467: ''
-          - 9870d: ''
-          - 7b6dd: ''
-          - c3cb0: ''
+          - da7bb: ''
+          - a71d7: ''
+          - ac3cd: ''
+          - 5d3d7: ''
+          - 93acb: ''
+          - ca66b: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
-    - heightType: fixed
+    - heightType: auto
     - disableEdits: false
     - _rowHeight: medium
     - _columnIds:
-        - cdecf
-        - 54f59
-        - 9870d
-        - 7b6dd
-        - ad467
-        - c3cb0
+        - da7bb
+        - a71d7
+        - ac3cd
+        - 5d3d7
+        - 93acb
+        - ca66b
     - _isSaving: false
     - _actionIds: []
     - _clearChangeset: false
@@ -35,18 +35,18 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - cdecf:
+          - da7bb:
               ordered: []
-          - 54f59:
+          - a71d7:
               ordered: []
-          - ad467:
+          - ac3cd:
               ordered: []
-          - 9870d:
+          - 5d3d7:
               ordered:
                 - showStepper: true
-          - 7b6dd:
+          - 93acb:
               ordered: []
-          - c3cb0:
+          - ca66b:
               ordered:
                 - showStepper: true
     - _toolbarPosition: bottom
@@ -73,40 +73,40 @@ template:
           - 4d: custom
     - _columnStatusIndicator:
         ordered:
-          - cdecf:
+          - da7bb:
               ordered: []
-          - 54f59:
+          - a71d7:
               ordered: []
-          - ad467:
+          - ac3cd:
               ordered: []
-          - 9870d:
+          - 5d3d7:
               ordered: []
-          - 7b6dd:
+          - 93acb:
               ordered: []
-          - c3cb0:
+          - ca66b:
               ordered: []
     - _columnOptionList:
         ordered:
-          - cdecf:
+          - da7bb:
               ordered: []
-          - 54f59:
+          - a71d7:
               ordered: []
-          - ad467:
+          - ac3cd:
               ordered: []
-          - 9870d:
+          - 5d3d7:
               ordered: []
-          - 7b6dd:
+          - 93acb:
               ordered: []
-          - c3cb0:
+          - ca66b:
               ordered: []
     - _columnValueOverride:
         ordered:
-          - cdecf: ''
-          - 54f59: ''
-          - ad467: '{{ _.startCase(item) }}'
-          - 9870d: ''
-          - 7b6dd: '{{ _.startCase(item) }}'
-          - c3cb0: ''
+          - da7bb: ''
+          - a71d7: ''
+          - ac3cd: '{{ _.startCase(item) }}'
+          - 5d3d7: ''
+          - 93acb: ''
+          - ca66b: ''
     - _showBorder: true
     - _templatePageSize: '100'
     - _dynamicColumnProperties:
@@ -115,129 +115,128 @@ template:
     - _currentPage: 0
     - _columnKey:
         ordered:
-          - cdecf: ITEM_SKU_NUM
-          - 54f59: ITEM_NAME
-          - ad467: STATUS
-          - 9870d: ITEM_GROUP_ID
-          - 7b6dd: ITEM_GROUP_DESC_EDITED
-          - c3cb0: ITEM_ID
+          - da7bb: ITEM_SKU_NUM
+          - a71d7: ITEM_NAME
+          - ac3cd: STATUS
+          - 5d3d7: ITEM_GROUP_ID
+          - 93acb: ITEM_GROUP_DESC_EDITED
+          - ca66b: ITEM_ID
     - hidden: false
     - _toolbarButtonIds:
         - 1a
         - 3c
         - 4d
-    - data: '{{ get_products_default.data }}'
+    - data: '{{ find_new_products_to_add.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - cdecf: ''
-          - 54f59: ''
-          - ad467: ''
-          - 9870d: ''
-          - 7b6dd: ''
-          - c3cb0: ''
+          - da7bb: ''
+          - a71d7: ''
+          - ac3cd: ''
+          - 5d3d7: ''
+          - 93acb: ''
+          - ca66b: ''
     - _columnFormat:
         ordered:
-          - cdecf: string
-          - 54f59: string
-          - ad467: tag
-          - 9870d: decimal
-          - 7b6dd: string
-          - c3cb0: decimal
+          - da7bb: string
+          - a71d7: multilineString
+          - ac3cd: tag
+          - 5d3d7: decimal
+          - 93acb: multilineString
+          - ca66b: decimal
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: c3cb0
+    - _primaryKeyColumnId: ca66b
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - cdecf: left
-          - 54f59: left
-          - ad467: left
-          - 9870d: right
-          - 7b6dd: left
-          - c3cb0: right
+          - da7bb: left
+          - a71d7: left
+          - ac3cd: left
+          - 5d3d7: right
+          - 93acb: left
+          - ca66b: right
     - _actionIcon:
         ordered: []
     - _columnTooltip:
         ordered:
-          - cdecf: ''
-          - 54f59: ''
-          - ad467: ''
-          - 9870d: ''
-          - 7b6dd: ''
-          - c3cb0: ''
+          - da7bb: ''
+          - a71d7: ''
+          - ac3cd: ''
+          - 5d3d7: ''
+          - 93acb: ''
+          - ca66b: ''
     - _columnIcon:
         ordered:
-          - cdecf: ''
-          - 54f59: ''
-          - ad467: ''
-          - 9870d: ''
-          - 7b6dd: ''
-          - c3cb0: ''
+          - da7bb: ''
+          - a71d7: ''
+          - ac3cd: ''
+          - 5d3d7: ''
+          - 93acb: ''
+          - ca66b: ''
     - _columnCellTooltipMode:
         ordered:
-          - cdecf: ''
-          - 54f59: ''
-          - ad467: ''
-          - 9870d: ''
-          - 7b6dd: ''
-          - c3cb0: ''
+          - da7bb: ''
+          - a71d7: ''
+          - ac3cd: ''
+          - 5d3d7: ''
+          - 93acb: ''
+          - ca66b: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
         array: []
     - _columnSortDisabled:
         ordered:
-          - cdecf: false
-          - 54f59: false
-          - ad467: false
-          - 9870d: false
-          - 7b6dd: false
-          - c3cb0: false
+          - da7bb: false
+          - a71d7: false
+          - ac3cd: false
+          - 5d3d7: false
+          - 93acb: false
+          - ca66b: false
     - filterStack: null
     - changesetObject: null
     - _actionDisabled:
         ordered: []
     - _columnReferenceId:
         ordered:
-          - cdecf: ''
-          - 54f59: ''
-          - ad467: ''
-          - 9870d: ''
-          - 7b6dd: ''
-          - c3cb0: ''
+          - da7bb: ''
+          - a71d7: ''
+          - ac3cd: ''
+          - 5d3d7: ''
+          - 93acb: ''
+          - ca66b: ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: multiple
     - _columnCaption:
         ordered:
-          - cdecf: ''
-          - 54f59: ''
-          - ad467: ''
-          - 9870d: ''
-          - 7b6dd: ''
-          - c3cb0: ''
+          - da7bb: ''
+          - a71d7: ''
+          - ac3cd: ''
+          - 5d3d7: ''
+          - 93acb: ''
+          - ca66b: ''
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - cdecf:
+          - da7bb:
               ordered: []
-          - 54f59:
+          - a71d7:
               ordered: []
-          - ad467:
+          - ac3cd:
               ordered:
                 - automaticColors: true
-          - 9870d:
+          - 5d3d7:
               ordered:
                 - showSeparators: true
-          - 7b6dd:
-              ordered:
-                - automaticColors: true
-          - c3cb0:
+          - 93acb:
+              ordered: []
+          - ca66b:
               ordered:
                 - showSeparators: true
     - _changeset: null
@@ -252,26 +251,26 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - cdecf:
+          - da7bb:
               ordered: []
-          - 54f59:
+          - a71d7:
               ordered: []
-          - ad467:
+          - ac3cd:
               ordered: []
-          - 9870d:
+          - 5d3d7:
               ordered: []
-          - 7b6dd:
+          - 93acb:
               ordered: []
-          - c3cb0:
+          - ca66b:
               ordered: []
     - _columnSize:
         ordered:
-          - cdecf: 155.921875
-          - 54f59: 429.515625
-          - 9870d: 92.40625
-          - 7b6dd: 658.390625
-          - ad467: 57.90625
-          - c3cb0: 77.03125
+          - da7bb: 114.390625
+          - a71d7: 408.203125
+          - ac3cd: 84.90625
+          - 5d3d7: 92.40625
+          - 93acb: 406.421875
+          - ca66b: 65.953125
     - _serverPaginationType: limitOffsetBased
     - _showFooter: true
     - _groupedColumnConfig:
@@ -286,7 +285,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: findProductsTable
+            - pluginId: table1
             - targetId: 3c
         - ordered:
             - type: widget
@@ -294,16 +293,16 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: findProductsTable
+            - pluginId: table1
             - targetId: 4d
     - _columnEditable:
         ordered:
-          - cdecf: ''
-          - 54f59: ''
-          - ad467: ''
-          - 9870d: ''
-          - 7b6dd: ''
-          - c3cb0: 'false'
+          - da7bb: ''
+          - a71d7: ''
+          - ac3cd: ''
+          - 5d3d7: ''
+          - 93acb: ''
+          - ca66b: 'false'
     - pagination: null
     - selectedDataIndexes:
         array: []
@@ -321,21 +320,21 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - cdecf: center
-          - 54f59: center
-          - ad467: center
-          - 9870d: center
-          - 7b6dd: center
-          - c3cb0: center
+          - da7bb: center
+          - a71d7: center
+          - ac3cd: center
+          - 5d3d7: center
+          - 93acb: center
+          - ca66b: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - cdecf: Enter value
-          - 54f59: Enter value
-          - ad467: Select option
-          - 9870d: Enter value
-          - 7b6dd: Enter value
-          - c3cb0: Enter value
+          - da7bb: Enter value
+          - a71d7: Enter value
+          - ac3cd: Select option
+          - 5d3d7: Enter value
+          - 93acb: Enter value
+          - ca66b: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -346,28 +345,27 @@ template:
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - cdecf: ''
-          - 54f59: ''
-          - ad467: ''
-          - 9870d: 'true'
-          - 7b6dd: ''
-          - c3cb0: 'true'
+          - da7bb: ''
+          - a71d7: ''
+          - ac3cd: ''
+          - 5d3d7: 'true'
+          - 93acb: ''
+          - ca66b: 'true'
     - _columnLabel:
         ordered:
-          - cdecf: SKU
-          - 54f59: SKU Name
-          - ad467: Status
-          - 9870d: Item group id
-          - 7b6dd: Group Name
-          - c3cb0: Item id
+          - da7bb: SKU
+          - a71d7: SKU Name
+          - ac3cd: Status
+          - 5d3d7: Item group id
+          - 93acb: Group Name
+          - ca66b: Item id
     - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
-    subcontainer: c394a
-    row: 1
-    height: 8
+    container: addProductToGroupModal
+    row: 2.2
+    height: 1
     width: 12
-createdAt: 2023-07-18T23:11:47.843Z
+createdAt: 2023-07-19T19:21:05.997Z

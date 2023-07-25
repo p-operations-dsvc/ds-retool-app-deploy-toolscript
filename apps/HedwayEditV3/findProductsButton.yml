@@ -30,7 +30,7 @@ template:
         - ordered:
             - event: click
             - type: widget
-            - method: selectPage
+            - method: clearChangeset
             - pluginId: findProductsTable
             - targetId: null
             - params:

@@ -30,12 +30,12 @@ template:
         - ordered:
             - event: click
             - type: widget
-            - method: selectPage
+            - method: setPage
             - pluginId: productsToEditTable
             - targetId: null
             - params:
                 ordered:
-                  - selectedPageIndex: '0'
+                  - page: '0'
             - waitType: debounce
             - waitMs: '0'
     - loading: false

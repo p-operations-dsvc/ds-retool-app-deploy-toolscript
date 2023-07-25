@@ -4,7 +4,7 @@ appTemplate:
   mobileAppSettings:
     object:
       mobileOfflineModeEnabled: false
-  queryStatusVisibility: false
-  rootScreen: null
-  version: 2.119.7
-  markdownLinkBehavior: auto
+  experimentalFeatures:
+    object:
+      sourceControlTemplateDehydration: false
+  version: 3.2.2

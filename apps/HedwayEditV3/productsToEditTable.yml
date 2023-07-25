@@ -1,171 +1,286 @@
 id: productsToEditTable
 type: widget
-subtype: TableWidget
+subtype: TableWidget2
 template:
   ordered:
-    - showCustomButton: false
-    - sortMappedValue:
-        ordered: []
-    - _filteredSortedRenderedDataWithTypes: null
-    - heightType: auto
-    - normalizedData: null
-    - rowHeight: standard
-    - saveChangesDisabled: ''
-    - columnTypeProperties:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
         ordered:
-          - PRODUCT_NAME:
+          - 9bd19: ''
+          - d30d9: ''
+          - ef98d: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 9bd19
+        - d30d9
+        - ef98d
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - 9bd19:
+              ordered:
+                - showStepper: true
+          - d30d9:
               ordered: []
-          - SKU:
-              ordered: []
-    - columnWidths:
-        - object:
-            id: SKU
-            value: 242
-    - showSummaryFooter: false
-    - disableRowSelectInteraction: false
-    - columnWidthsMobile: []
-    - hasNextAfterCursor: ''
-    - columnTypeSpecificExtras:
+          - ef98d:
+              ordered:
+                - showStepper: true
+    - _toolbarPosition: bottom
+    - _groupByColumns:
         ordered: []
-    - onRowAdded: ''
-    - columnHeaderNames:
+    - _toolbarButtonLabel:
         ordered:
-          - PRODUCT_NAME: SKU Name
-    - alwaysShowPaginator: false
-    - columnColors:
-        ordered: []
-    - columnFrozenAlignments:
-        ordered: []
-    - allowMultiRowSelect: true
-    - columnFormats:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
         ordered:
-          - PRODUCT_NAME: TextMultiDataCell
-          - SKU: TextDataCell
-    - columnRestrictedEditing:
-        ordered: []
-    - showFilterButton: true
-    - _columnVisibility:
-        ordered:
-          - PRODUCT_KEY: false
-          - DUMMY_CHAR: false
-    - _columnSummaryTypes:
-        ordered:
-          - PRODUCT_NAME: ''
-          - SKU: ''
-    - _columnsWithLegacyBackgroundColor:
-        set: []
-    - showAddRowButton: false
-    - _unfilteredSelectedIndex: null
-    - nextBeforeCursor: ''
-    - columnVisibility:
-        ordered: []
-    - selectedPageIndex: '0'
-    - applyDynamicSettingsToColumnOrder: true
-    - rowColor:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
         array: []
-    - actionButtonColumnName: Actions
-    - resetAfterSave: true
-    - filterStackType: and
-    - downloadRawData: false
-    - showFetchingIndicator: true
-    - serverPaginated: false
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnStatusIndicator:
+        ordered:
+          - 9bd19:
+              ordered: []
+          - d30d9:
+              ordered: []
+          - ef98d:
+              ordered: []
+    - _columnOptionList:
+        ordered:
+          - 9bd19:
+              ordered: []
+          - d30d9:
+              ordered: []
+          - ef98d:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - 9bd19: ''
+          - d30d9: ''
+          - ef98d: ''
+    - _showBorder: true
+    - _templatePageSize: '100'
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - 9bd19: SKU
+          - d30d9: PRODUCT_NAME
+          - ef98d: PRODUCT_KEY
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
     - data: '{{ get_products_group_search.data }}'
-    - displayedData: null
-    - actionButtons: []
-    - actionButtonSelectsRow: true
-    - selectRowByDefault: true
-    - defaultSortByColumn: ''
-    - paginationOffset: 0
-    - columnAlignment:
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
         ordered:
-          - PRODUCT_NAME: left
-          - SKU: left
-    - columnSummaries:
-        object: {}
-    - showBoxShadow: false
-    - sortedDesc: false
-    - customButtonName: Custom Button
-    - columnMappersRenderAsHTML:
-        ordered: []
-    - showRefreshButton: true
-    - pageSize: '20'
-    - useDynamicColumnSettings: true
-    - actionButtonPosition: right
-    - dynamicRowHeights: false
-    - bulkUpdateAction: ''
-    - afterCursor: ''
-    - onCustomButtonPressQueryName: ''
-    - changeSet:
-        object: {}
-    - sortedColumn: ''
-    - _columnSummaryValues:
+          - 9bd19: ''
+          - d30d9: ''
+          - ef98d: ''
+    - _columnFormat:
         ordered:
-          - PRODUCT_NAME: ''
-          - SKU: ''
-    - checkboxRowSelect: true
-    - _compatibilityMode: false
-    - showColumnBorders: false
-    - clearSelectionLabel: Clear selection
-    - _renderedDataWithTypes: null
-    - columnAllowOverflow:
-        ordered: []
-    - beforeCursor: ''
-    - serverPaginationType: limitOffsetBased
-    - onRowSelect: ''
-    - showDownloadButton: true
-    - selectedIndex: null
-    - defaultSortDescending: false
-    - _sortedDisplayedDataIndices: null
-    - dynamicColumnSettings: null
-    - totalRowCount: ''
-    - recordUpdates:
-        array: []
-    - newRow: null
-    - emptyMessage: No rows found
-    - columnEditable:
-        ordered: []
-    - _viewerColumnSummaryTypes:
+          - 9bd19: string
+          - d30d9: string
+          - ef98d: decimal
+    - _cursorCache:
         object: {}
-    - filters:
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: ef98d
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - 9bd19: left
+          - d30d9: left
+          - ef98d: right
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - 9bd19: ''
+          - d30d9: ''
+          - ef98d: ''
+    - _columnIcon:
+        ordered:
+          - 9bd19: ''
+          - d30d9: ''
+          - ef98d: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - 9bd19: ''
+          - d30d9: ''
+          - ef98d: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
         array: []
-    - displayedDataIndices: null
-    - disableSorting:
+    - _columnSortDisabled:
+        ordered:
+          - 9bd19: false
+          - d30d9: false
+          - ef98d: false
+    - filterStack: null
+    - changesetObject: null
+    - _actionDisabled:
         ordered: []
-    - columnMappers:
+    - _columnReferenceId:
+        ordered:
+          - 9bd19: ''
+          - d30d9: ''
+          - ef98d: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: multiple
+    - _columnCaption:
+        ordered:
+          - 9bd19: ''
+          - d30d9: ''
+          - ef98d: ''
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - 9bd19:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+          - d30d9:
+              ordered: []
+          - ef98d:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - 9bd19:
+              ordered: []
+          - d30d9:
+              ordered: []
+          - ef98d:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - 9bd19: 233.421875
+          - d30d9: 301.15625
+          - ef98d: 85.234375
+    - _serverPaginationType: limitOffsetBased
+    - _showFooter: true
+    - _groupedColumnConfig:
         ordered: []
-    - showClearSelection: false
-    - doubleClickToEdit: true
+    - _virtualizeStartIndex: 0
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: productsToEditTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: productsToEditTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - 9bd19: ''
+          - d30d9: ''
+          - ef98d: 'false'
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - sortArray:
+        array: []
+    - _selectedCell: null
     - overflowType: pagination
-    - _reverseSortedDisplayedDataIndices: null
-    - showTableBorder: true
-    - selectedCell:
-        object:
-          index: null
-          data: null
-          columnName: null
-    - columns: []
-    - defaultSelectedRow: none
-    - freezeActionButtonColumns: false
-    - sort: null
-    - _columns: []
-    - sortByRawValue:
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: none
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - 9bd19: center
+          - d30d9: center
+          - ef98d: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - 9bd19: Enter value
+          - d30d9: Enter value
+          - ef98d: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
         ordered: []
-    - calculatedColumns: []
-    - selectedRow:
-        object:
-          index: null
-          data: null
-    - showPaginationOnTop: false
-    - _reverseDisplayedDataIndices: null
-    - nextAfterCursor: ''
-    - useCompactMode: false
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - 9bd19: ''
+          - d30d9: ''
+          - ef98d: 'true'
+    - _columnLabel:
+        ordered:
+          - 9bd19: SKU
+          - d30d9: SKU Name
+          - ef98d: Product key
+    - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
     container: tabbedContainer1
     subcontainer: d7cec
-    row: 1.4
-    height: 2
+    row: 1
+    height: 8
     width: 12
-createdAt: 2023-03-21T23:32:57.728Z
+createdAt: 2023-07-18T23:32:31.619Z

@@ -22,7 +22,6 @@ position2:
   position2:
     container: editProductGroupContainer
     subcontainer: 0096a
-    row: 0.7999999999999999
+    row: 1.2
     height: 0.6
-    width: 3
 createdAt: 2023-03-21T18:33:18.826Z
