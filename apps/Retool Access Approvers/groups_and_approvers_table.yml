@@ -12,6 +12,7 @@ template:
           - '36156': ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
+    - heightType: fixed
     - disableEdits: false
     - _rowHeight: small
     - _columnIds:
@@ -21,8 +22,10 @@ template:
     - _isSaving: false
     - _actionIds: []
     - _clearChangeset: false
+    - caseSensitiveFiltering: false
     - _limitOffsetRowCount: null
     - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
     - disableSave: false
     - _columnEditableOptions:
         ordered:
@@ -33,10 +36,20 @@ template:
           - '36156':
               ordered:
                 - showStepper: true
+    - _toolbarPosition: top
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered: []
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered: []
     - changesetArray:
         array: []
+    - _toolbarButtonType:
+        ordered: []
+    - _columnStatusIndicator:
+        ordered: []
     - _columnOptionList:
         ordered:
           - ff02f:
@@ -59,6 +72,8 @@ template:
           - '36156': ''
     - _showBorder: true
     - _templatePageSize: 20
+    - _dynamicColumnProperties:
+        ordered: []
     - _showHeader: true
     - _currentPage: 0
     - _columnKey:
@@ -67,10 +82,14 @@ template:
           - 6be87: approvers
           - '36156': id
     - hidden: false
+    - _toolbarButtonIds: []
     - data: '{{ get_approvers_and_groups.data }}'
     - _cellSelection: none
     - _serverPaginated: false
+    - _linkedFilterId: null
     - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered: []
     - _columnFormat:
         ordered:
           - ff02f: string
@@ -98,6 +117,8 @@ template:
           - ff02f: ''
           - 6be87: ''
           - '36156': ''
+    - _columnCellTooltipMode:
+        ordered: []
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -111,11 +132,19 @@ template:
     - changesetObject: null
     - _actionDisabled:
         ordered: []
+    - style:
+        ordered:
+          - borderRadius: 6px
+          - background: canvas
+          - cellText: ''
+          - border: primary
     - _columnReferenceId:
         ordered:
           - ff02f: ''
           - 6be87: ''
           - '36156': ''
+    - _dynamicColumnSource:
+        array: []
     - _rowSelection: single
     - _columnCaption:
         ordered:
@@ -133,6 +162,7 @@ template:
           - '36156':
               ordered:
                 - showSeparators: true
+    - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
         array: []
@@ -142,6 +172,8 @@ template:
         array: []
     - _disabledVirtualization: false
     - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered: []
     - _columnSize:
         ordered:
           - '36156': 100
@@ -149,7 +181,11 @@ template:
           - 6be87: 100
     - _serverPaginationType: limitOffsetBased
     - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
     - _virtualizeStartIndex: 0
+    - _defaultFilters:
+        ordered: []
     - events:
         - ordered:
             - event: save
@@ -180,6 +216,7 @@ template:
           - indexType: display
           - index: 0
     - _hasNextPage: false
+    - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
           - ff02f: center
@@ -191,6 +228,7 @@ template:
           - ff02f: Enter value
           - 6be87: Select options
           - '36156': Enter value
+    - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
     - _virtualizeEndIndex: 0
@@ -208,6 +246,7 @@ template:
           - ff02f: Group Name
           - 6be87: Approvers
           - '36156': ID
+    - _showToolbar: false
 style:
   ordered: []
 position2:

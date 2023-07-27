@@ -1,4 +1,4 @@
-id: containerTitle1
+id: mainContainerTitle
 type: widget
 subtype: TextWidget2
 template:
@@ -10,7 +10,10 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: Retool Group Access Approvers
+    - value: Retool Group Access Approvers In Service Now
+    - style:
+        ordered:
+          - background: highlight
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
