@@ -18,8 +18,9 @@ template:
     - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: true
+    - workflowRunId: null
     - showFailureToaster: true
-    - query: "\nSELECT  project_id, project_name \n\tFROM vmn_data.cognos_project"
+    - query: "\nSELECT  project_id, project_name, approver\n\tFROM vmn_data.cognos_project"
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -39,6 +40,7 @@ template:
     - requestSentTimestamp: null
     - databaseHostOverride: ''
     - metadata: null
+    - workflowActionType: null
     - editorMode: sql
     - queryRunTime: null
     - actionType: ''
@@ -86,6 +88,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - shouldEnableBatchQuerying: false
     - doNotThrowOnNoOp: false

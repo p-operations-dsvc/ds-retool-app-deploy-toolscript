@@ -18,6 +18,7 @@ template:
     - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: true
+    - workflowRunId: null
     - showFailureToaster: true
     - query: "SELECT group_id, group_ad_name, a.domain_id, b.domain_name||'\\'||a.group_ad_name as group_full_name\n\tFROM vmn_data.cognos_group a, vmn_data.cognos_domain b \n  where a.domain_id=b.domain_id "
     - playgroundQueryUuid: ''
@@ -39,6 +40,7 @@ template:
     - requestSentTimestamp: null
     - databaseHostOverride: ''
     - metadata: null
+    - workflowActionType: null
     - editorMode: sql
     - queryRunTime: null
     - actionType: ''
@@ -86,6 +88,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - shouldEnableBatchQuerying: false
     - doNotThrowOnNoOp: false
