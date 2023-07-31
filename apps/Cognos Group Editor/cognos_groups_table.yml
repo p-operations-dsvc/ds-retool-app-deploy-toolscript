@@ -13,6 +13,7 @@ template:
           - cecfb: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
+    - heightType: fixed
     - disableEdits: false
     - _rowHeight: small
     - _columnIds:
@@ -26,6 +27,7 @@ template:
     - caseSensitiveFiltering: false
     - _limitOffsetRowCount: null
     - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
     - disableSave: false
     - _columnEditableOptions:
         ordered:
@@ -69,6 +71,8 @@ template:
           - 30f8e: custom
           - a1e84: custom
           - 6b80b: custom
+    - _columnStatusIndicator:
+        ordered: []
     - _columnOptionList:
         ordered:
           - 0f999:
@@ -91,6 +95,8 @@ template:
           - cecfb: ''
     - _showBorder: true
     - _templatePageSize: '20'
+    - _dynamicColumnProperties:
+        ordered: []
     - _showHeader: true
     - _currentPage: 0
     - _columnKey:
@@ -149,6 +155,8 @@ template:
           - 7fc32: ''
           - 6e57f: ''
           - cecfb: ''
+    - _columnCellTooltipMode:
+        ordered: []
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -170,6 +178,8 @@ template:
           - 7fc32: ''
           - 6e57f: ''
           - cecfb: ''
+    - _dynamicColumnSource:
+        array: []
     - _rowSelection: multiple
     - _columnCaption:
         ordered:
@@ -190,6 +200,7 @@ template:
                 - showSeparators: true
           - cecfb:
               ordered: []
+    - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
         array: []
@@ -199,6 +210,8 @@ template:
         array: []
     - _disabledVirtualization: false
     - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered: []
     - _columnSize:
         ordered:
           - cecfb: 537.78125
@@ -300,6 +313,7 @@ template:
           - indexType: display
           - index: 0
     - _hasNextPage: false
+    - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
           - 0f999: center

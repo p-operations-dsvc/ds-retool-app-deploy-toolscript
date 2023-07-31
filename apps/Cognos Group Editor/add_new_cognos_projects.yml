@@ -18,6 +18,7 @@ template:
     - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
+    - workflowRunId: null
     - showFailureToaster: true
     - query: ''
     - playgroundQueryUuid: ''
@@ -39,6 +40,7 @@ template:
     - requestSentTimestamp: null
     - databaseHostOverride: ''
     - metadata: null
+    - workflowActionType: null
     - editorMode: gui
     - queryRunTime: null
     - actionType: INSERT
@@ -55,7 +57,8 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: '[{"key":"project_name","value":"{{addNewProjectNameText.value}}"}]'
+    - changeset: >-
+        [{"key":"project_name","value":"{{addNewProjectNameText.value}}"},{"key":"approver","value":"{{addNewProjectApproverText.value}}"}]
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
@@ -106,6 +109,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - shouldEnableBatchQuerying: false
     - doNotThrowOnNoOp: true

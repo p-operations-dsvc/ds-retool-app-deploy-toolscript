@@ -13,6 +13,7 @@ template:
           - c4ed4: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
+    - heightType: fixed
     - disableEdits: false
     - _rowHeight: small
     - _columnIds:
@@ -26,6 +27,7 @@ template:
     - caseSensitiveFiltering: false
     - _limitOffsetRowCount: null
     - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
     - disableSave: false
     - _columnEditableOptions:
         ordered:
@@ -67,6 +69,8 @@ template:
           - 4d: custom
           - 9f39d: custom
           - e15c8: custom
+    - _columnStatusIndicator:
+        ordered: []
     - _columnOptionList:
         ordered:
           - 064ae:
@@ -93,6 +97,8 @@ template:
           - c4ed4: ''
     - _showBorder: true
     - _templatePageSize: '20'
+    - _dynamicColumnProperties:
+        ordered: []
     - _showHeader: true
     - _currentPage: 0
     - _columnKey:
@@ -150,6 +156,8 @@ template:
           - '77049': ''
           - dc5ac: ''
           - c4ed4: ''
+    - _columnCellTooltipMode:
+        ordered: []
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -171,6 +179,8 @@ template:
           - '77049': ''
           - dc5ac: ''
           - c4ed4: ''
+    - _dynamicColumnSource:
+        array: []
     - _rowSelection: multiple
     - _columnCaption:
         ordered:
@@ -192,6 +202,7 @@ template:
           - c4ed4:
               ordered:
                 - automaticColors: true
+    - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
         array: []
@@ -201,6 +212,8 @@ template:
         array: []
     - _disabledVirtualization: false
     - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered: []
     - _columnSize:
         ordered:
           - '77049': 109.265625
@@ -281,6 +294,7 @@ template:
           - indexType: display
           - index: 0
     - _hasNextPage: false
+    - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
           - 064ae: center
