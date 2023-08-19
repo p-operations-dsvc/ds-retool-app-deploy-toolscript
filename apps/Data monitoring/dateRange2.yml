@@ -1,0 +1,55 @@
+id: dateRange2
+type: widget
+subtype: DateRangeWidget
+template:
+  ordered:
+    - minDate: ''
+    - readOnly: false
+    - iconAfter: ''
+    - dateFormat: yyyy-MM-dd
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value:
+        ordered:
+          - start: '{{ moment().add(-7, ''days'') }}'
+          - end: '{{ moment(dateRange2.value.start).add(7,''days'')}}'
+    - startPlaceholder: '{{self.value.start}}'
+    - labelCaption: ''
+    - maxDate: ''
+    - labelWidth: '33'
+    - label: Date Range
+    - formattedValue: ''
+    - _validate: false
+    - labelWidthUnit: '%'
+    - firstDayOfWeek: 1
+    - invalid: false
+    - iconBefore: bold/interface-calendar-remove
+    - endPlaceholder: '{{self.value.end}}'
+    - events: []
+    - textBetween: '-'
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 03ca4
+    row: 0.20000000000000007
+    col: 8
+    height: 1
+    width: 4
+createdAt: 2023-07-24T11:13:39.368Z
