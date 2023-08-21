@@ -1,0 +1,30 @@
+databaseName: VMN_DOMESTIC_DATA_LAKE_DEV
+databasePassword: ''
+databaseUsername: VMN_SVOD_RETOOL_APP_USER
+description: null
+dynamicallyQueryable: false
+editPrivilege: false
+environment: production
+host: viacom.us-east-1
+options:
+  authenticator: snowflake
+  databaseSchema: VMN_SVOD_RPT
+  oauth2_access_token_url: ''
+  oauth2_auth_url: ''
+  oauth2_callback_url: '{{ env.BASE_DOMAIN }}/oauth/user/oauthcallback'
+  oauth2_client_id: ''
+  oauth2_client_secret: ''
+  oauth2_scope: refresh_token
+  queryEditorModes:
+    allowGuiMode: true
+    allowSqlMode: true
+  role: VMN_DOMESTIC_DATA_LAKE
+  version: SqlQueryUnified
+  warehouse: VMN_SVOD_ETL_L
+outboundRegion: null
+port: ''
+ssl: false
+type: snowflake
+uuid: 48b96ef3-89f5-4b9e-b6c6-5a3d78c2b57e
+version: 1.0.0
+whitelabeled: null
