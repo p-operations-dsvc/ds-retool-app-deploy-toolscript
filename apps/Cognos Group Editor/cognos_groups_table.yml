@@ -22,7 +22,8 @@ template:
         - 0f999
         - 7fc32
     - _isSaving: false
-    - _actionIds: []
+    - _actionIds:
+        - 58b03
     - _clearChangeset: false
     - caseSensitiveFiltering: false
     - _limitOffsetRowCount: null
@@ -142,7 +143,8 @@ template:
           - 6e57f: right
           - cecfb: left
     - _actionIcon:
-        ordered: []
+        ordered:
+          - 58b03: bold/interface-user-multiple
     - _columnTooltip:
         ordered:
           - 0f999: ''
@@ -171,7 +173,8 @@ template:
     - filterStack: null
     - changesetObject: null
     - _actionDisabled:
-        ordered: []
+        ordered:
+          - 58b03: ''
     - _columnReferenceId:
         ordered:
           - 0f999: ''
@@ -226,6 +229,28 @@ template:
     - _defaultFilters:
         ordered: []
     - events:
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: setValue
+            - pluginId: group_members_select
+            - targetId: 58b03
+            - params:
+                ordered:
+                  - value: '{{ currentRow.group_id }}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: setValue
+            - pluginId: MainTabs
+            - targetId: 58b03
+            - params:
+                ordered:
+                  - value: Group Members
+            - waitType: debounce
+            - waitMs: '0'
         - ordered:
             - event: save
             - type: datasource
@@ -329,11 +354,13 @@ template:
           - cecfb: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
-        ordered: []
+        ordered:
+          - 58b03: Get Members
     - _virtualizeEndIndex: 0
     - selectedRow: null
     - _actionHidden:
-        ordered: []
+        ordered:
+          - 58b03: ''
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
