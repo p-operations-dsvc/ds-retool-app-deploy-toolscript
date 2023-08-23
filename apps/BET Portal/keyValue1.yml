@@ -1,0 +1,69 @@
+id: keyValue1
+type: widget
+subtype: KeyValueMapWidget
+template:
+  ordered:
+    - rowHeaderNames:
+        ordered: []
+    - rowFormats:
+        ordered: []
+    - valueTitle: Value
+    - data: |-
+        {
+          "Title": 1,
+          "Platform": 2,
+          "Desc": 3,
+          "Genre": 4,
+          "Run time": 5,
+          "Distributor": 6,
+          "License Period": 7
+        }
+    - prevRowMappers:
+        ordered: []
+    - rowMappersRenderAsHTML:
+        ordered: []
+    - rowVisibility:
+        ordered:
+          - License Period: true
+          - a: true
+          - b: true
+          - Run time: true
+          - c: true
+          - Genre: true
+          - Distributor: true
+          - Desc: true
+          - Platform: true
+          - Title: true
+    - prevRowFormats:
+        ordered: []
+    - rowMappers:
+        ordered:
+          - Title: '{{ table1.selectedRow.TITLE }}'
+          - Platform: '{{ table1.selectedRow.PLATFORM }}'
+          - Desc: '{{ table1.selectedRow.LOG_LINE }}'
+          - Genre: '{{ table1.selectedRow.GENRE1 }}'
+          - Run time: '{{ table1.selectedRow.RUN_TIME }}'
+          - Distributor: '{{ table1.selectedRow.DISTRIBUTOR }}'
+          - License Period: >-
+              {{table1.selectedRow.LICENSE_START}} to
+              {{table1.selectedRow.LICENSE_END}}
+    - rows:
+        - a
+        - b
+        - c
+        - Title
+        - Platform
+        - Desc
+        - Genre
+        - Run time
+        - Distributor
+        - License Period
+    - keyTitle: Key
+style:
+  ordered: []
+position2:
+  position2:
+    container: modal1
+    height: 9
+    width: 12
+createdAt: 2023-08-23T10:17:17.909Z

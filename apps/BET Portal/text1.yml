@@ -1,0 +1,47 @@
+id: text1
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - hidden: 'false'
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: >-
+        ### {{ table1.selectedRow.TITLE }}
+
+        ---
+
+        {{table1.selectedRow.LOG_LINE}}
+
+
+
+        **Platform:**  {{table1.selectedRow.PLATFORM}}
+
+
+        **Genre:** {{table1.selectedRow.genre2}}
+
+
+        **Run Time:** {{table1.selectedRow.RUN_TIME}}
+
+
+        **Distributor:** {{table1.selectedRow.DISTRIBUTOR}}
+
+
+        **License Period :** {{table1.selectedRow.LICENSE_START}} ***to*** 
+        {{table1.selectedRow.LICENSE_END}}
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    row: 1.6000000000000036
+    col: 7
+    height: 0.6
+    width: 4
+createdAt: 2023-08-22T11:41:24.129Z
