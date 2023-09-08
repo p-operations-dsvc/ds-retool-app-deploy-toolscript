@@ -1,4 +1,4 @@
-id: get_product_groups_details
+id: update_brands
 type: datasource
 subtype: SqlQueryUnified
 resourceName: c0da1b1d-e343-405a-859c-aca829715d9d
@@ -6,7 +6,7 @@ resourceDisplayName: Snowflake HedwayEdit
 template:
   ordered:
     - queryRefreshTime: ''
-    - records: ''
+    - records: '{{manageBrandsTable.changesetArray}}'
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
     - queryDisabledMessage: ''
@@ -20,38 +20,19 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >-
-        SELECT pg.item_group_desc        AS ITEM_GROUP_DESC,
-               pg.item_group_desc_edited AS ITEM_GROUP_DESC_EDITED,
-               pg.title_genre_id           AS TITLE_GENRE_NAME, 
-               pg.title_owner_party_id       AS ownership_description,
-               dvd_release_dt,
-               bdd_release_dt,
-               uhd_release_dt,
-               pg.dvd_rental_units_threshold,
-               pg.bdd_rental_units_threshold,
-               pg.uhd_rental_units_threshold,
-               pg.item_group_id,
-               pg.spf_franchise_id            AS FRANCHISE_CD,
-               pg.spf_origination_id      AS ORIGINATION_CD,
-               pg.brand_id
-        FROM   edw.item_group AS pg 
-
-        WHERE  pg.item_group_id =
-        {{productGroupSummaryTable.selectedRow.ITEM_GROUP_ID}}
+    - query: ''
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
-    - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - dataArray: []
     - cacheKeyTtl: ''
     - filterBy: ''
@@ -59,9 +40,9 @@ template:
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: sql
+    - editorMode: gui
     - queryRunTime: null
-    - actionType: ''
+    - actionType: BULK_UPDATE_BY_KEY
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -88,18 +69,24 @@ template:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
-    - bulkUpdatePrimaryKey: ''
+    - bulkUpdatePrimaryKey: BRAND_ID
     - runWhenPageLoads: false
-    - transformer: >-
-        // type your code here
-
-        // example: return formatDataAsArray(data).filter(row => row.quantity >
-        20)
-
-        return data
-    - events: []
-    - tableName: ''
-    - queryTimeout: '10001'
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return formatDataAsArray(data)
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_brand
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - tableName: EDW.ITEM_GROUP_BRAND
+    - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
     - queryFailureConditions: ''
@@ -114,4 +101,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-03-17T22:24:00.696Z
+createdAt: 2023-09-08T01:19:40.168Z

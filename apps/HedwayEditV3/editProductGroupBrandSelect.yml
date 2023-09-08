@@ -1,4 +1,4 @@
-id: editProductGroupFranchiseText
+id: editProductGroupBrandSelect
 type: widget
 subtype: SelectWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - _values: []
     - iconByIndex:
         array: []
-    - values: '{{ item.FRANCHISE_ID }}'
+    - values: '{{ item.BRAND_ID}}'
     - readOnly: false
     - iconAfter: ''
     - _iconByIndex: []
@@ -19,7 +19,7 @@ template:
     - inputValue: ''
     - hidden: false
     - customValidation: ''
-    - data: '{{ get_franchise.data }}'
+    - data: '{{ get_brand.data }}'
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:
@@ -36,7 +36,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{get_product_groups_details.data.FRANCHISE_CD[''0'']}}'
+    - value: '{{get_product_groups_details.data.BRAND_ID[''0'']}}'
     - hiddenByIndex:
         array: []
     - labelCaption: ''
@@ -46,10 +46,8 @@ template:
     - _hiddenByIndex: []
     - placeholder: Select an option
     - _captionByIndex: []
-    - _disclosedFields:
-        array: []
     - itemAdornmentSize: auto
-    - label: Franchise
+    - label: Brand
     - _hasMigratedNestedItems: true
     - captionByIndex:
         array: []
@@ -84,13 +82,13 @@ template:
     - maintainSpaceWhenHidden: false
     - _imageByIndex: []
     - required: false
-    - labels: '{{ item.FRANCHISE_CD }}'
+    - labels: '{{ item.BRAND_DESC }}'
 style:
   ordered: []
 position2:
   position2:
     container: editProductGroupForm
-    row: 6
+    row: 5
     height: 1
     width: 12
-createdAt: 2023-03-17T23:02:43.275Z
+createdAt: 2023-09-07T23:24:09.705Z

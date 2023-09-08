@@ -44,7 +44,8 @@ template:
         {{editProductGroupOwnerText.selectedItem.OWNERSHIP_DESCRIPTION}},
 
         {{editProductGroupFranchiseText.selectedItem.FRANCHISE_CD}},
-        {{editProductGroupOriginationText.selectedItem.ORIGINATION_CD}}                      
+        {{editProductGroupOriginationText.selectedItem.ORIGINATION_CD}} ,
+                                               {{editProductGroupBrandSelect.value}},  {{editProductGroupBrandSelect.selectedItem.BRAND_DESC}}
                                               )
     - playgroundQueryUuid: ''
     - playgroundQueryId: null

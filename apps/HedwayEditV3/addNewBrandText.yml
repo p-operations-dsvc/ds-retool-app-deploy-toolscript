@@ -1,0 +1,26 @@
+id: addNewBrandText
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: Enter new Brand Name
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: addBrandModal
+    row: 0.6
+    col: 1
+    height: 0.6
+    width: 10
+createdAt: 2023-09-08T01:26:37.584Z
