@@ -1,0 +1,43 @@
+id: addNewBrandButton
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: false
+    - text: Add
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: insert_brand
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: >-
+        {{get_brand.data.BRAND_DESC.map(function(x){ return x.toUpperCase();
+        }).indexOf (addBrandInput.value.toUpperCase())!==-1}}
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: addBrandModal
+    row: 4.4
+    col: 1
+    height: 1
+    width: 10
+createdAt: 2023-09-08T01:27:19.535Z

@@ -1,0 +1,278 @@
+id: manageBrandsTable
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - 52fba: ''
+          - 40d4e: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 52fba
+        - 40d4e
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - 52fba:
+              ordered:
+                - showStepper: true
+          - 40d4e:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+          - d1168: Add
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+          - d1168: bold/interface-add-1
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+          - d1168: custom
+    - _columnStatusIndicator:
+        ordered:
+          - 52fba:
+              ordered: []
+          - 40d4e:
+              ordered: []
+    - _columnOptionList:
+        ordered:
+          - 52fba:
+              ordered: []
+          - 40d4e:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - 52fba: ''
+          - 40d4e: ''
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - 52fba: BRAND_ID
+          - 40d4e: BRAND_DESC
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+        - d1168
+    - data: '{{ get_brand.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - 52fba: ''
+          - 40d4e: ''
+    - _columnFormat:
+        ordered:
+          - 52fba: decimal
+          - 40d4e: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: 52fba
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - 52fba: right
+          - 40d4e: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - 52fba: ''
+          - 40d4e: ''
+    - _columnIcon:
+        ordered:
+          - 52fba: ''
+          - 40d4e: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - 52fba: ''
+          - 40d4e: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _columnSortDisabled:
+        ordered:
+          - 52fba: false
+          - 40d4e: false
+    - undefined: null
+    - filterStack: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - 52fba: ''
+          - 40d4e: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: none
+    - _columnCaption:
+        ordered:
+          - 52fba: ''
+          - 40d4e: ''
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - 52fba:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+          - 40d4e:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - 52fba:
+              ordered: []
+          - 40d4e:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - 52fba: 188.984375
+          - 40d4e: 81.484375
+    - _serverPaginationType: limitOffsetBased
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - event: clickToolbar
+            - type: widget
+            - method: open
+            - pluginId: addBrandModal
+            - targetId: d1168
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: save
+            - type: datasource
+            - method: trigger
+            - pluginId: update_brands
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: manageBrandsTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: manageBrandsTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - 52fba: 'false'
+          - 40d4e: true
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - 52fba: center
+          - 40d4e: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - 52fba: Enter value
+          - 40d4e: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - 52fba: ''
+          - 40d4e: ''
+    - _columnLabel:
+        ordered:
+          - 52fba: Brand ID
+          - 40d4e: Description
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 563ea
+    row: 1
+    height: 8
+    width: 12
+createdAt: 2023-09-08T01:17:23.809Z

@@ -1,4 +1,4 @@
-id: get_product_groups_details
+id: get_brand
 type: datasource
 subtype: SqlQueryUnified
 resourceName: c0da1b1d-e343-405a-859c-aca829715d9d
@@ -17,28 +17,13 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: false
+    - runWhenModelUpdates: true
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >-
-        SELECT pg.item_group_desc        AS ITEM_GROUP_DESC,
-               pg.item_group_desc_edited AS ITEM_GROUP_DESC_EDITED,
-               pg.title_genre_id           AS TITLE_GENRE_NAME, 
-               pg.title_owner_party_id       AS ownership_description,
-               dvd_release_dt,
-               bdd_release_dt,
-               uhd_release_dt,
-               pg.dvd_rental_units_threshold,
-               pg.bdd_rental_units_threshold,
-               pg.uhd_rental_units_threshold,
-               pg.item_group_id,
-               pg.spf_franchise_id            AS FRANCHISE_CD,
-               pg.spf_origination_id      AS ORIGINATION_CD,
-               pg.brand_id
-        FROM   edw.item_group AS pg 
-
-        WHERE  pg.item_group_id =
-        {{productGroupSummaryTable.selectedRow.ITEM_GROUP_ID}}
+    - query: |-
+        SELECT brand_id, brand_desc
+        FROM   edw.item_group_brand
+        ORDER  BY case when brand_id=0 then 'AAAAAAA' else brand_desc end ASC 
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -51,7 +36,7 @@ template:
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - dataArray: []
     - cacheKeyTtl: ''
     - filterBy: ''
@@ -114,4 +99,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-03-17T22:24:00.696Z
+createdAt: 2023-09-07T23:19:29.873Z
