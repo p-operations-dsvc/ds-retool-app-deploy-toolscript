@@ -8,12 +8,14 @@ template:
         - ''
         - false
         - false
+        - false
     - heightType: auto
     - currentViewKey: '{{ self.viewKeys[0] }}'
     - iconByIndex:
         array: []
     - clickable: false
     - _iconByIndex:
+        - ''
         - ''
         - ''
         - ''
@@ -32,11 +34,13 @@ template:
         - ''
         - false
         - false
+        - false
     - currentViewIndex: null
     - _hasMigratedNestedItems: true
     - transition: none
     - itemMode: static
     - _tooltipByIndex:
+        - ''
         - ''
         - ''
         - ''
@@ -49,12 +53,15 @@ template:
         - Projects
         - View 4
         - Group Members
+        - |
+          Group Permissions
     - events: []
     - _ids:
         - '92695'
         - e1e1d
         - 75d64
         - 07dbe
+        - b6d4f
     - viewKeys:
         array: []
     - iconPositionByIndex:
@@ -62,6 +69,7 @@ template:
     - _iconPositionByIndex:
         - ''
         - ''
+        - left
         - left
         - left
     - hovered: false
@@ -72,6 +80,7 @@ template:
         - ''
         - ''
         - Groups
+        - ''
         - ''
     - disabledByIndex:
         array: []
