@@ -1,0 +1,43 @@
+id: addNewProjectGroupForm
+type: widget
+subtype: FormWidget2
+template:
+  ordered:
+    - disableSubmit: false
+    - heightType: auto
+    - resetAfterSubmit: true
+    - submitting: false
+    - hidden: false
+    - data:
+        object: {}
+    - showHeader: true
+    - hoistFetching: false
+    - initialData: '{{ cognos_project_group_table.selectedRow }}'
+    - showInEditor: false
+    - tooltipText: ''
+    - invalid: false
+    - showFooter: true
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: add_new_cognos_project_group
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - overflowType: scroll
+    - disabled: false
+    - requireValidation: true
+    - maintainSpaceWhenHidden: false
+    - showBody: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: addNewProjectGroupModal
+    width: 12
+createdAt: 2023-07-06T23:51:10.750Z

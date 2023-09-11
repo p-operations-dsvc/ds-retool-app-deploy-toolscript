@@ -1,0 +1,94 @@
+id: newCognosGroupDomainSelect
+type: widget
+subtype: SelectWidget2
+template:
+  ordered:
+    - imageByIndex:
+        array: []
+    - _disabledByIndex: []
+    - showSelectionIndicator: true
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item.domain_id }}'
+    - readOnly: false
+    - iconAfter: ''
+    - _iconByIndex: []
+    - overlayMinWidth: null
+    - allowDeselect: false
+    - inputValue: ''
+    - hidden: false
+    - customValidation: ''
+    - data: '{{ get_cognos_domain.data }}'
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
+    - textBefore: ''
+    - _fallbackTextByIndex: []
+    - selectedItem: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: domain_name
+    - value: null
+    - hiddenByIndex:
+        array: []
+    - labelCaption: ''
+    - labelWidth: '33'
+    - deprecatedLabels:
+        array: []
+    - _hiddenByIndex: []
+    - placeholder: Select an option
+    - _captionByIndex: []
+    - itemAdornmentSize: auto
+    - label: Domain Name
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - allowCustomValue: false
+    - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex:
+        array: []
+    - iconBefore: ''
+    - colorByIndex:
+        array: []
+    - selectedLabel: ''
+    - events:
+        ordered: []
+    - _ids: []
+    - emptyMessage: No options
+    - overlayMaxHeight: 375
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - _labels: []
+    - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - _imageByIndex: []
+    - required: true
+    - labels: '{{ item.domain_name }}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: addNewCognosGroupForm
+    row: 1
+    height: 1
+    width: 12
+createdAt: 2023-07-06T21:19:14.239Z
