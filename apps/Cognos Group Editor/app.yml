@@ -1,0 +1,8 @@
+version: 43.0.9
+pageUuid: 4ea5f466-1f56-11ee-b0b9-734d8a647254
+appTemplate:
+  experimentalFeatures:
+    object:
+      sourceControlTemplateDehydration: false
+  version: 3.2.2
+  experimentalDataTabEnabled: true
