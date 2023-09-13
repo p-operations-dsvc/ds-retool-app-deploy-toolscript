@@ -1,4 +1,4 @@
-id: get_cognos_projects
+id: update_cognos_project_approvers
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -6,7 +6,7 @@ resourceDisplayName: cognos_retool_repo
 template:
   ordered:
     - queryRefreshTime: ''
-    - records: ''
+    - records: '{{cognos_project_approvers_table.changesetArray}}'
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
     - queryDisabledMessage: ''
@@ -17,23 +17,22 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: true
+    - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: "\nSELECT  project_id, project_name, approvers\n\tFROM vmn_data.cognos_project"
+    - query: ''
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
-    - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: true
+    - showSuccessToaster: false
     - dataArray: []
     - cacheKeyTtl: ''
     - filterBy: ''
@@ -41,9 +40,9 @@ template:
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: sql
+    - editorMode: gui
     - queryRunTime: null
-    - actionType: ''
+    - actionType: BULK_UPDATE_BY_KEY
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -70,7 +69,7 @@ template:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
-    - bulkUpdatePrimaryKey: ''
+    - bulkUpdatePrimaryKey: approver_id
     - runWhenPageLoads: false
     - transformer: >-
         // type your code here
@@ -79,8 +78,28 @@ template:
         20)
 
         return data
-    - events: []
-    - tableName: ''
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_project_approvers
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: clearChangeset
+            - pluginId: cognos_project_approvers_table
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - tableName: vmn_data.cognos_project_approver
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -96,4 +115,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-07-03T18:19:42.108Z
+createdAt: 2023-09-13T21:54:48.868Z

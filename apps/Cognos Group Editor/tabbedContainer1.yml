@@ -9,12 +9,14 @@ template:
         - false
         - false
         - false
+        - false
     - heightType: auto
     - currentViewKey: '{{ self.viewKeys[0] }}'
     - iconByIndex:
         array: []
     - clickable: false
     - _iconByIndex:
+        - ''
         - ''
         - ''
         - ''
@@ -35,11 +37,13 @@ template:
         - false
         - false
         - false
+        - false
     - currentViewIndex: null
     - _hasMigratedNestedItems: true
     - transition: none
     - itemMode: static
     - _tooltipByIndex:
+        - ''
         - ''
         - ''
         - ''
@@ -51,6 +55,7 @@ template:
     - _viewKeys:
         - Project Groups
         - Projects
+        - Approvers
         - View 4
         - Group Members
         - |
@@ -59,6 +64,7 @@ template:
     - _ids:
         - '92695'
         - e1e1d
+        - 7bc89
         - 75d64
         - 07dbe
         - b6d4f
@@ -72,11 +78,13 @@ template:
         - left
         - left
         - left
+        - left
     - hovered: false
     - loading: false
     - overflowType: scroll
     - disabled: false
     - _labels:
+        - ''
         - ''
         - ''
         - Groups
