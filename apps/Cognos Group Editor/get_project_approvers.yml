@@ -1,4 +1,4 @@
-id: get_cognos_projects
+id: get_project_approvers
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -20,7 +20,7 @@ template:
     - runWhenModelUpdates: true
     - workflowRunId: null
     - showFailureToaster: true
-    - query: "\nSELECT  project_id, project_name, approvers\n\tFROM vmn_data.cognos_project"
+    - query: "SELECT approver_id, user_principal_name \n\tFROM vmn_data.cognos_project_approver\nGO\n"
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -72,13 +72,9 @@ template:
     - showUpdateSetValueDynamicallyToggle: true
     - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
-    - transformer: >-
-        // type your code here
-
-        // example: return formatDataAsArray(data).filter(row => row.quantity >
-        20)
-
-        return data
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return formatDataAsArray(data)
     - events: []
     - tableName: ''
     - queryTimeout: '10000'
@@ -96,4 +92,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-07-03T18:19:42.108Z
+createdAt: 2023-09-13T21:38:43.376Z

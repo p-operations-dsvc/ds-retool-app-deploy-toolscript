@@ -58,7 +58,7 @@ template:
     - confirmationMessage: null
     - isFetching: false
     - changeset: >-
-        [{"key":"project_name","value":"{{addNewProjectNameText.value}}"},{"key":"approver","value":"{{addNewProjectApproverText.value}}"}]
+        [{"key":"project_name","value":"{{addNewProjectNameText.value}}"},{"key":"approvers","value":"{{new_project_approvers_transform.value}}"}]
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
