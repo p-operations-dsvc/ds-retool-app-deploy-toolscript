@@ -7,7 +7,7 @@ template:
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
-    - hidden: false
+    - hidden: ''
     - text: Button
     - showInEditor: false
     - tooltipText: ''
@@ -27,7 +27,10 @@ template:
             - waitMs: '0'
     - loading: false
     - loaderPosition: auto
-    - disabled: false
+    - disabled: >-
+        {{get_project_approvers.data.user_principal_name.map(function(x){ return
+        x.toUpperCase(); }).indexOf
+        (addNewApproverTextInput.value.toUpperCase())!==-1}}
     - maintainSpaceWhenHidden: false
 style:
   ordered: []

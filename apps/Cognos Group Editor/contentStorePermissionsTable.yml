@@ -773,6 +773,6 @@ position2:
   position2:
     container: tabbedContainer1
     subcontainer: b6d4f
-    height: 8
-    width: 11
+    height: 20
+    width: 12
 createdAt: 2023-09-11T16:48:23.920Z

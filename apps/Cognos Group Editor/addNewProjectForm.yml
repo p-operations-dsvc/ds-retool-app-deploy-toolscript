@@ -3,7 +3,10 @@ type: widget
 subtype: FormWidget2
 template:
   ordered:
-    - disableSubmit: false
+    - disableSubmit: >-
+        {{get_cognos_projects.data.project_name.map(function(x){ return
+        x.toUpperCase(); }).indexOf
+        (addNewProjectNameText.value.toUpperCase())!==-1}}
     - heightType: auto
     - resetAfterSubmit: true
     - submitting: false
