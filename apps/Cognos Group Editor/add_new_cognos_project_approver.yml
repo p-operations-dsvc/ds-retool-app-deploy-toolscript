@@ -60,7 +60,8 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: '[{"key":"user_principal_name","value":"{{textInput1.value}}"}]'
+    - changeset: >-
+        [{"key":"user_principal_name","value":"{{addNewApproverTextInput.value}}"}]
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
