@@ -1,0 +1,14 @@
+id: selected_cognos_project_to_dict
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        var selected_projects = {{cognos_project_table.selectedDataIndexes}}; 
+        let dict = {};
+                for (let i=0; i< selected_projects.length; i++ ) {
+                        dict[i.toString()] = {"project_id":{{ cognos_project_table.data}}[selected_projects[i]].project_id};
+                }
+        return dict
+    - value: ''
+createdAt: 2023-07-06T23:06:52.569Z

@@ -1,0 +1,13 @@
+id: newCognosGroupFullName
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        let domain_name=
+        {{newCognosGroupDomainSelect.selectedItem.domain_name}}; 
+
+
+        return domain_name+"\\"+{{newCognosGroupADNameText.value}}
+    - value: ''
+createdAt: 2023-09-22T20:58:27.983Z

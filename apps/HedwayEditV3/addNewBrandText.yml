@@ -1,4 +1,4 @@
-id: containerTitle1
+id: addNewBrandText
 type: widget
 subtype: TextWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: Retool Group Access Approvers
+    - value: Enter new Brand Name
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
@@ -18,9 +18,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: main_container
-    rowGroup: header
-    row: 1
+    container: addBrandModal
+    row: 0.6
+    col: 1
     height: 0.6
-    width: 12
-createdAt: 2023-06-07T18:19:27.188Z
+    width: 10
+createdAt: 2023-09-08T01:26:37.584Z

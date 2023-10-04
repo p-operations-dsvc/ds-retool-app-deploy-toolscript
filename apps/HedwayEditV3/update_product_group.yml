@@ -18,10 +18,11 @@ template:
     - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
+    - workflowRunId: null
     - showFailureToaster: true
     - query: >-
         CALL
-        edwv.hedwayedit_SET_GROUP_DETAILS({{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_ID}},
+        edwv.hedwayedit_SET_GROUP_DETAILS({{productGroupSummaryTable.selectedRow.ITEM_GROUP_ID}},
         {{editProductGroupTitleDescText.value}}, 
                                              {{editProductGroupGenreText.value||0}},
         {{editProductGroupOwnerText.value}}, 
@@ -43,11 +44,13 @@ template:
         {{editProductGroupOwnerText.selectedItem.OWNERSHIP_DESCRIPTION}},
 
         {{editProductGroupFranchiseText.selectedItem.FRANCHISE_CD}},
-        {{editProductGroupOriginationText.selectedItem.ORIGINATION_CD}}                      
+        {{editProductGroupOriginationText.selectedItem.ORIGINATION_CD}} ,
+                                               {{editProductGroupBrandSelect.value}},  {{editProductGroupBrandSelect.selectedItem.BRAND_DESC}}
                                               )
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
+    - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
     - warningCodes: []
@@ -63,6 +66,7 @@ template:
     - requestSentTimestamp: null
     - databaseHostOverride: ''
     - metadata: null
+    - workflowActionType: null
     - editorMode: sql
     - queryRunTime: null
     - actionType: ''
@@ -172,6 +176,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - shouldEnableBatchQuerying: false
     - doNotThrowOnNoOp: false

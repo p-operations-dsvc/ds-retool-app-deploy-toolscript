@@ -20,12 +20,14 @@ template:
     - runWhenModelUpdates: true
     - paginationPaginationField: ''
     - headers: ''
+    - workflowRunId: null
     - showFailureToaster: true
     - paginationEnabled: false
     - query: get-groups-and-approvers
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
+    - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
     - data: null
@@ -37,6 +39,7 @@ template:
     - requestSentTimestamp: null
     - cookies: ''
     - metadata: null
+    - workflowActionType: null
     - queryRunTime: null
     - changesetObject: ''
     - errorTransformer: >-
@@ -79,6 +82,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - bodyType: none
     - offlineQueryType: None
     - queryThrottleTime: '750'

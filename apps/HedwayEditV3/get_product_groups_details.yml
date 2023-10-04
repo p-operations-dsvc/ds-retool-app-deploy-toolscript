@@ -18,6 +18,7 @@ template:
     - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
+    - workflowRunId: null
     - showFailureToaster: true
     - query: >-
         SELECT pg.item_group_desc        AS ITEM_GROUP_DESC,
@@ -32,14 +33,16 @@ template:
                pg.uhd_rental_units_threshold,
                pg.item_group_id,
                pg.spf_franchise_id            AS FRANCHISE_CD,
-               pg.spf_origination_id      AS ORIGINATION_CD
+               pg.spf_origination_id      AS ORIGINATION_CD,
+               pg.brand_id
         FROM   edw.item_group AS pg 
 
         WHERE  pg.item_group_id =
-        {{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_ID}}
+        {{productGroupSummaryTable.selectedRow.ITEM_GROUP_ID}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
+    - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
     - warningCodes: []
@@ -55,6 +58,7 @@ template:
     - requestSentTimestamp: null
     - databaseHostOverride: ''
     - metadata: null
+    - workflowActionType: null
     - editorMode: sql
     - queryRunTime: null
     - actionType: ''
@@ -102,6 +106,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - shouldEnableBatchQuerying: false
     - doNotThrowOnNoOp: false

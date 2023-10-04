@@ -1,0 +1,49 @@
+id: addNewCognosGroupForm
+type: widget
+subtype: FormWidget2
+template:
+  ordered:
+    - disableSubmit: >-
+        {{get_cognos_groups.data.group_full_name.map(function(x){ return
+        x.toUpperCase(); }).indexOf
+        (newCognosGroupFullName.value.toUpperCase())!==-1}}
+    - heightType: auto
+    - resetAfterSubmit: true
+    - submitting: false
+    - hidden: false
+    - data:
+        object: {}
+    - showHeader: true
+    - hoistFetching: false
+    - scroll: true
+    - initialData: '{{ cognos_groups_table.selectedRow }}'
+    - showInEditor: false
+    - tooltipText: ''
+    - invalid: false
+    - showFooter: true
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: add_new_cognos_groups
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - overflowType: scroll
+    - disabled: false
+    - requireValidation: true
+    - maintainSpaceWhenHidden: false
+    - showBody: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: addNewGroupModal
+    row: 1.2
+    height: 0.2
+    width: 12
+createdAt: 2023-07-06T21:18:55.662Z

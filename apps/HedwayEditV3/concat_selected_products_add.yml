@@ -5,7 +5,7 @@ template:
   ordered:
     - funcBody: >-
         return {{
-        Object.keys(findProductsTable.selectedRow.data).length===0?null:formatDataAsObject(findProductsTable.selectedRow.data).ITEM_ID.join(',')
+        Object.keys(findProductsTable.selectedRows).length===0?null:formatDataAsObject(findProductsTable.selectedRows).ITEM_ID.join(',')
         }}
     - value: ''
 createdAt: 2023-03-22T22:20:31.414Z

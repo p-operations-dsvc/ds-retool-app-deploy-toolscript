@@ -29,7 +29,7 @@ template:
             - waitMs: '0'
     - loading: false
     - loaderPosition: auto
-    - disabled: '{{Object.keys(addProductsTable.selectedRow.data).length===0}}'
+    - disabled: '{{Object.keys(table1.selectedRows).length===0}}'
     - maintainSpaceWhenHidden: false
 style:
   ordered: []

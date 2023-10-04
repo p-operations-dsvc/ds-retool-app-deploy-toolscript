@@ -1,0 +1,778 @@
+id: contentStorePermissionsTable
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - b8479: ''
+          - 663b2: ''
+          - 100d6: ''
+          - 882d6: ''
+          - c0dd3: ''
+          - 489b6: ''
+          - bba6b: ''
+          - ec8d8: ''
+          - e1c90: ''
+          - 17e2c: ''
+          - a00c2: ''
+          - b5b68: ''
+          - '41111': ''
+          - 487ac: ''
+          - c586e: ''
+          - c003f: ''
+          - '44877': ''
+          - 7c6a0: ''
+          - 8e4b5: ''
+          - 12f70: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 487ac
+        - 663b2
+        - ec8d8
+        - b8479
+        - 12f70
+        - a00c2
+        - '41111'
+        - 8e4b5
+        - 100d6
+        - c003f
+        - 489b6
+        - 7c6a0
+        - b5b68
+        - c0dd3
+        - c586e
+        - 882d6
+        - e1c90
+        - 17e2c
+        - bba6b
+        - '44877'
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - b8479:
+              ordered: []
+          - 663b2:
+              ordered: []
+          - 100d6:
+              ordered: []
+          - 882d6:
+              ordered: []
+          - c0dd3:
+              ordered: []
+          - 489b6:
+              ordered: []
+          - bba6b:
+              ordered: []
+          - ec8d8:
+              ordered: []
+          - e1c90:
+              ordered: []
+          - 17e2c:
+              ordered: []
+          - a00c2:
+              ordered: []
+          - b5b68:
+              ordered:
+                - showStepper: true
+          - '41111':
+              ordered: []
+          - 487ac:
+              ordered: []
+          - c586e:
+              ordered: []
+          - c003f:
+              ordered: []
+          - '44877':
+              ordered: []
+          - 7c6a0:
+              ordered: []
+          - 8e4b5:
+              ordered: []
+          - 12f70:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnStatusIndicator:
+        ordered:
+          - b8479:
+              ordered: []
+          - 663b2:
+              ordered: []
+          - 100d6:
+              ordered: []
+          - 882d6:
+              ordered: []
+          - c0dd3:
+              ordered: []
+          - 489b6:
+              ordered: []
+          - bba6b:
+              ordered: []
+          - ec8d8:
+              ordered: []
+          - e1c90:
+              ordered: []
+          - 17e2c:
+              ordered: []
+          - a00c2:
+              ordered: []
+          - b5b68:
+              ordered: []
+          - '41111':
+              ordered: []
+          - 487ac:
+              ordered: []
+          - c586e:
+              ordered: []
+          - c003f:
+              ordered: []
+          - '44877':
+              ordered: []
+          - 7c6a0:
+              ordered: []
+          - 8e4b5:
+              ordered: []
+          - 12f70:
+              ordered: []
+    - _columnOptionList:
+        ordered:
+          - b8479:
+              ordered: []
+          - 663b2:
+              ordered: []
+          - 100d6:
+              ordered: []
+          - 882d6:
+              ordered: []
+          - c0dd3:
+              ordered: []
+          - 489b6:
+              ordered: []
+          - bba6b:
+              ordered: []
+          - ec8d8:
+              ordered: []
+          - e1c90:
+              ordered: []
+          - 17e2c:
+              ordered: []
+          - a00c2:
+              ordered: []
+          - b5b68:
+              ordered: []
+          - '41111':
+              ordered: []
+          - 487ac:
+              ordered: []
+          - c586e:
+              ordered: []
+          - c003f:
+              ordered: []
+          - '44877':
+              ordered: []
+          - 7c6a0:
+              ordered: []
+          - 8e4b5:
+              ordered: []
+          - 12f70:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - b8479: ''
+          - 663b2: ''
+          - 100d6: ''
+          - 882d6: ''
+          - c0dd3: ''
+          - 489b6: '{{ _.startCase(item) }}'
+          - bba6b: '{{ _.startCase(item) }}'
+          - ec8d8: ''
+          - e1c90: '{{ _.startCase(item) }}'
+          - 17e2c: '{{ _.startCase(item) }}'
+          - a00c2: ''
+          - b5b68: ''
+          - '41111': ''
+          - 487ac: ''
+          - c586e: ''
+          - c003f: ''
+          - '44877': ''
+          - 7c6a0: '{{ _.startCase(item) }}'
+          - 8e4b5: ''
+          - 12f70: ''
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - b8479: location_path
+          - 663b2: as_of_datetime
+          - 100d6: modification_time
+          - 882d6: owner_search_paths
+          - c0dd3: has_children
+          - 489b6: hidden
+          - bba6b: permissions
+          - ec8d8: folder_default_name
+          - e1c90: policies
+          - 17e2c: membership
+          - a00c2: package_location
+          - b5b68: version_id
+          - '41111': default_description
+          - 487ac: source_name
+          - c586e: owner_name
+          - c003f: store_id
+          - '44877': upload_timestamp
+          - 7c6a0: disabled
+          - 8e4b5: creation_time
+          - 12f70: search_path
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_cognos_group_permissions.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - b8479: ''
+          - 663b2: ''
+          - 100d6: ''
+          - 882d6: ''
+          - c0dd3: ''
+          - 489b6: ''
+          - bba6b: ''
+          - ec8d8: ''
+          - e1c90: ''
+          - 17e2c: ''
+          - a00c2: ''
+          - b5b68: ''
+          - '41111': ''
+          - 487ac: ''
+          - c586e: ''
+          - c003f: ''
+          - '44877': ''
+          - 7c6a0: ''
+          - 8e4b5: ''
+          - 12f70: ''
+    - _columnFormat:
+        ordered:
+          - b8479: string
+          - 663b2: string
+          - 100d6: string
+          - 882d6: string
+          - c0dd3: string
+          - 489b6: tag
+          - bba6b: tag
+          - ec8d8: string
+          - e1c90: tag
+          - 17e2c: tag
+          - a00c2: string
+          - b5b68: decimal
+          - '41111': string
+          - 487ac: string
+          - c586e: string
+          - c003f: string
+          - '44877': datetime
+          - 7c6a0: tag
+          - 8e4b5: string
+          - 12f70: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: ''
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - b8479: left
+          - 663b2: left
+          - 100d6: left
+          - 882d6: left
+          - c0dd3: left
+          - 489b6: left
+          - bba6b: left
+          - ec8d8: left
+          - e1c90: left
+          - 17e2c: left
+          - a00c2: left
+          - b5b68: right
+          - '41111': left
+          - 487ac: left
+          - c586e: left
+          - c003f: left
+          - '44877': left
+          - 7c6a0: left
+          - 8e4b5: left
+          - 12f70: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - b8479: ''
+          - 663b2: ''
+          - 100d6: ''
+          - 882d6: ''
+          - c0dd3: ''
+          - 489b6: ''
+          - bba6b: ''
+          - ec8d8: ''
+          - e1c90: ''
+          - 17e2c: ''
+          - a00c2: ''
+          - b5b68: ''
+          - '41111': ''
+          - 487ac: ''
+          - c586e: ''
+          - c003f: ''
+          - '44877': ''
+          - 7c6a0: ''
+          - 8e4b5: ''
+          - 12f70: ''
+    - _columnIcon:
+        ordered:
+          - b8479: ''
+          - 663b2: ''
+          - 100d6: ''
+          - 882d6: ''
+          - c0dd3: ''
+          - 489b6: ''
+          - bba6b: ''
+          - ec8d8: ''
+          - e1c90: ''
+          - 17e2c: ''
+          - a00c2: ''
+          - b5b68: ''
+          - '41111': ''
+          - 487ac: ''
+          - c586e: ''
+          - c003f: ''
+          - '44877': ''
+          - 7c6a0: ''
+          - 8e4b5: ''
+          - 12f70: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - b8479: ''
+          - 663b2: ''
+          - 100d6: ''
+          - 882d6: ''
+          - c0dd3: ''
+          - 489b6: ''
+          - bba6b: ''
+          - ec8d8: ''
+          - e1c90: ''
+          - 17e2c: ''
+          - a00c2: ''
+          - b5b68: ''
+          - '41111': ''
+          - 487ac: ''
+          - c586e: ''
+          - c003f: ''
+          - '44877': ''
+          - 7c6a0: ''
+          - 8e4b5: ''
+          - 12f70: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _columnSortDisabled:
+        ordered:
+          - b8479: false
+          - 663b2: false
+          - 100d6: false
+          - 882d6: false
+          - c0dd3: false
+          - 489b6: false
+          - bba6b: false
+          - ec8d8: false
+          - e1c90: false
+          - 17e2c: false
+          - a00c2: false
+          - b5b68: false
+          - '41111': false
+          - 487ac: false
+          - c586e: false
+          - c003f: false
+          - '44877': false
+          - 7c6a0: false
+          - 8e4b5: false
+          - 12f70: false
+    - filterStack: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - b8479: ''
+          - 663b2: ''
+          - 100d6: ''
+          - 882d6: ''
+          - c0dd3: ''
+          - 489b6: ''
+          - bba6b: ''
+          - ec8d8: ''
+          - e1c90: ''
+          - 17e2c: ''
+          - a00c2: ''
+          - b5b68: ''
+          - '41111': ''
+          - 487ac: ''
+          - c586e: ''
+          - c003f: ''
+          - '44877': ''
+          - 7c6a0: ''
+          - 8e4b5: ''
+          - 12f70: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - b8479: ''
+          - 663b2: ''
+          - 100d6: ''
+          - 882d6: ''
+          - c0dd3: ''
+          - 489b6: ''
+          - bba6b: ''
+          - ec8d8: ''
+          - e1c90: ''
+          - 17e2c: ''
+          - a00c2: ''
+          - b5b68: ''
+          - '41111': ''
+          - 487ac: ''
+          - c586e: ''
+          - c003f: ''
+          - '44877': ''
+          - 7c6a0: ''
+          - 8e4b5: ''
+          - 12f70: ''
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - b8479:
+              ordered: []
+          - 663b2:
+              ordered: []
+          - 100d6:
+              ordered: []
+          - 882d6:
+              ordered: []
+          - c0dd3:
+              ordered: []
+          - 489b6:
+              ordered:
+                - automaticColors: true
+          - bba6b:
+              ordered:
+                - automaticColors: true
+          - ec8d8:
+              ordered: []
+          - e1c90:
+              ordered:
+                - automaticColors: true
+          - 17e2c:
+              ordered:
+                - automaticColors: true
+          - a00c2:
+              ordered: []
+          - b5b68:
+              ordered:
+                - showSeparators: true
+          - '41111':
+              ordered: []
+          - 487ac:
+              ordered: []
+          - c586e:
+              ordered: []
+          - c003f:
+              ordered: []
+          - '44877':
+              ordered: []
+          - 7c6a0:
+              ordered:
+                - automaticColors: true
+          - 8e4b5:
+              ordered: []
+          - 12f70:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - b8479:
+              ordered: []
+          - 663b2:
+              ordered: []
+          - 100d6:
+              ordered: []
+          - 882d6:
+              ordered: []
+          - c0dd3:
+              ordered: []
+          - 489b6:
+              ordered: []
+          - bba6b:
+              ordered: []
+          - ec8d8:
+              ordered: []
+          - e1c90:
+              ordered: []
+          - 17e2c:
+              ordered: []
+          - a00c2:
+              ordered: []
+          - b5b68:
+              ordered: []
+          - '41111':
+              ordered: []
+          - 487ac:
+              ordered: []
+          - c586e:
+              ordered: []
+          - c003f:
+              ordered: []
+          - '44877':
+              ordered: []
+          - 7c6a0:
+              ordered: []
+          - 8e4b5:
+              ordered: []
+          - 12f70:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - b8479: 439.75
+          - 663b2: 101.203125
+          - 100d6: 117.203125
+          - 882d6: 132.890625
+          - c0dd3: 88.421875
+          - 489b6: 68.078125
+          - bba6b: 87.671875
+          - ec8d8: 267
+          - e1c90: 205.21875
+          - 17e2c: 172.140625
+          - a00c2: 115.296875
+          - b5b68: 75.15625
+          - '41111': 126.859375
+          - 487ac: 350.078125
+          - c586e: 89.625
+          - c003f: 271.5625
+          - '44877': 146.3125
+          - 7c6a0: 68.078125
+          - 8e4b5: 116.75
+          - 12f70: 612.359375
+    - _serverPaginationType: limitOffsetBased
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: contentStorePermissionsTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: contentStorePermissionsTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - b8479: ''
+          - 663b2: ''
+          - 100d6: ''
+          - 882d6: ''
+          - c0dd3: ''
+          - 489b6: ''
+          - bba6b: ''
+          - ec8d8: ''
+          - e1c90: ''
+          - 17e2c: ''
+          - a00c2: ''
+          - b5b68: ''
+          - '41111': ''
+          - 487ac: ''
+          - c586e: ''
+          - c003f: ''
+          - '44877': ''
+          - 7c6a0: ''
+          - 8e4b5: ''
+          - 12f70: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - b8479: center
+          - 663b2: center
+          - 100d6: center
+          - 882d6: center
+          - c0dd3: center
+          - 489b6: center
+          - bba6b: center
+          - ec8d8: center
+          - e1c90: center
+          - 17e2c: center
+          - a00c2: center
+          - b5b68: center
+          - '41111': center
+          - 487ac: center
+          - c586e: center
+          - c003f: center
+          - '44877': center
+          - 7c6a0: center
+          - 8e4b5: center
+          - 12f70: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - b8479: Enter value
+          - 663b2: Enter value
+          - 100d6: Enter value
+          - 882d6: Enter value
+          - c0dd3: Enter value
+          - 489b6: Select option
+          - bba6b: Select option
+          - ec8d8: Enter value
+          - e1c90: Select option
+          - 17e2c: Select option
+          - a00c2: Enter value
+          - b5b68: Enter value
+          - '41111': Enter value
+          - 487ac: Enter value
+          - c586e: Enter value
+          - c003f: Enter value
+          - '44877': Enter value
+          - 7c6a0: Select option
+          - 8e4b5: Enter value
+          - 12f70: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - b8479: ''
+          - 663b2: ''
+          - 100d6: ''
+          - 882d6: ''
+          - c0dd3: ''
+          - 489b6: ''
+          - bba6b: ''
+          - ec8d8: ''
+          - e1c90: ''
+          - 17e2c: ''
+          - a00c2: ''
+          - b5b68: ''
+          - '41111': ''
+          - 487ac: ''
+          - c586e: ''
+          - c003f: ''
+          - '44877': ''
+          - 7c6a0: ''
+          - 8e4b5: ''
+          - 12f70: ''
+    - _columnLabel:
+        ordered:
+          - b8479: Location path
+          - 663b2: As of datetime
+          - 100d6: Modification time
+          - 882d6: Owner search paths
+          - c0dd3: Has children
+          - 489b6: Hidden
+          - bba6b: Permissions
+          - ec8d8: Folder default name
+          - e1c90: Policies
+          - 17e2c: Membership
+          - a00c2: Package location
+          - b5b68: Version ID
+          - '41111': Default description
+          - 487ac: Source name
+          - c586e: Owner name
+          - c003f: Store ID
+          - '44877': Upload timestamp
+          - 7c6a0: Disabled
+          - 8e4b5: Creation time
+          - 12f70: Search path
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: b6d4f
+    height: 20
+    width: 12
+createdAt: 2023-09-11T16:48:23.920Z

@@ -12,7 +12,7 @@ template:
     - tooltipText: ''
     - value: >-
         Edit group
-        '{{productGroupSummaryTable.selectedRow.data.ITEM_GROUP_DESC_EDITED}}'
+        '{{productGroupSummaryTable.selectedRow.ITEM_GROUP_DESC_EDITED}}'
         details
     - _disclosedFields:
         array: []

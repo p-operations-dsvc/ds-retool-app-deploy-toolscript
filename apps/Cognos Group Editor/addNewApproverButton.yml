@@ -1,0 +1,44 @@
+id: addNewApproverButton
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: ''
+    - text: Button
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: add_new_cognos_project_approver
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: >-
+        {{get_project_approvers.data.user_principal_name.map(function(x){ return
+        x.toUpperCase(); }).indexOf
+        (addNewApproverTextInput.value.toUpperCase())!==-1}}
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: addNewApproverModal
+    row: 2.8
+    col: 1
+    height: 1
+    width: 10
+createdAt: 2023-09-13T22:03:40.232Z

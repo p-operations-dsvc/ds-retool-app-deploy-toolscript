@@ -11,12 +11,14 @@ template:
         - false
         - false
         - false
+        - false
     - heightType: auto
     - currentViewKey: '{{ self.viewKeys[0] }}'
     - iconByIndex:
         array: []
     - clickable: false
     - _iconByIndex:
+        - ''
         - ''
         - ''
         - ''
@@ -41,6 +43,7 @@ template:
         - false
         - false
         - false
+        - false
     - _disclosedFields:
         array: []
     - currentViewIndex: null
@@ -48,6 +51,7 @@ template:
     - transition: none
     - itemMode: static
     - _tooltipByIndex:
+        - ''
         - ''
         - ''
         - ''
@@ -63,6 +67,7 @@ template:
         - Create Franchise
         - Manage Groups
         - Manage Franchises
+        - Manage Brands
         - Manage SKUs in Group
         - Map SKUs to Group
         - Audit Trail
@@ -72,6 +77,7 @@ template:
         - b5160
         - 305c0
         - ef15f
+        - 563ea
         - d7cec
         - c394a
         - dc08f
@@ -87,11 +93,13 @@ template:
         - left
         - left
         - left
+        - left
     - hovered: false
     - loading: false
     - overflowType: scroll
     - disabled: false
     - _labels:
+        - ''
         - ''
         - ''
         - ''

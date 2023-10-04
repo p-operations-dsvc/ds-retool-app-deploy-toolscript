@@ -1,206 +1,373 @@
 id: findProductsTable
 type: widget
-subtype: TableWidget
+subtype: TableWidget2
 template:
   ordered:
-    - showCustomButton: false
-    - sortMappedValue:
-        ordered: []
-    - _filteredSortedRenderedDataWithTypes: null
-    - heightType: auto
-    - normalizedData: null
-    - rowHeight: standard
-    - saveChangesDisabled: ''
-    - columnTypeProperties:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
         ordered:
-          - SAP_SKU_NUM:
-              ordered: []
-          - ITEM_NAME:
-              ordered: []
-          - STATUS:
-              ordered: []
-          - ITEM_GROUP_DESC_EDITED:
-              ordered: []
-          - ITEM_SKU_NUM:
-              ordered: []
-    - columnWidths:
-        - object:
-            id: ITEM_NAME
-            value: 561.171875
-        - object:
-            id: STATUS
-            value: 73.171875
-        - object:
-            id: ITEM_SKU_NUM
-            value: 162.5
-    - showSummaryFooter: false
-    - disableRowSelectInteraction: false
-    - columnWidthsMobile: []
-    - hasNextAfterCursor: ''
-    - columnTypeSpecificExtras:
-        ordered: []
-    - onRowAdded: ''
-    - columnHeaderNames:
+          - cdecf: ''
+          - 54f59: ''
+          - ad467: ''
+          - 9870d: ''
+          - 7b6dd: ''
+          - c3cb0: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: medium
+    - _columnIds:
+        - cdecf
+        - 54f59
+        - 9870d
+        - 7b6dd
+        - ad467
+        - c3cb0
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
         ordered:
-          - SAP_SKU_NUM: SKU
-          - ITEM_NAME: SKU Name
-          - STATUS: Status
-          - ITEM_GROUP_DESC_EDITED: Group Name
-          - ITEM_SKU_NUM: SKU
-    - alwaysShowPaginator: false
-    - columnColors:
+          - cdecf:
+              ordered: []
+          - 54f59:
+              ordered: []
+          - ad467:
+              ordered: []
+          - 9870d:
+              ordered:
+                - showStepper: true
+          - 7b6dd:
+              ordered: []
+          - c3cb0:
+              ordered:
+                - showStepper: true
+    - _toolbarPosition: bottom
+    - _groupByColumns:
         ordered: []
-    - columnFrozenAlignments:
-        ordered: []
-    - allowMultiRowSelect: true
-    - columnFormats:
+    - _toolbarButtonLabel:
         ordered:
-          - SAP_SKU_NUM: TextDataCell
-          - ITEM_NAME: TextMultiDataCell
-          - STATUS: TextDataCell
-          - ITEM_GROUP_DESC_EDITED: TextMultiDataCell
-          - ITEM_SKU_NUM: TextDataCell
-    - columnRestrictedEditing:
-        ordered: []
-    - showFilterButton: true
-    - _columnVisibility:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
         ordered:
-          - ITEM_GROUP_ID: false
-          - ITEM_ID: false
-          - DUMMY_CHAR: false
-    - _columnSummaryTypes:
-        ordered:
-          - SAP_SKU_NUM: ''
-          - ITEM_NAME: ''
-          - STATUS: ''
-          - ITEM_GROUP_DESC_EDITED: ''
-          - ITEM_SKU_NUM: ''
-    - _columnsWithLegacyBackgroundColor:
-        set: []
-    - showAddRowButton: false
-    - _unfilteredSelectedIndex: null
-    - nextBeforeCursor: ''
-    - columnVisibility:
-        ordered: []
-    - selectedPageIndex: '0'
-    - applyDynamicSettingsToColumnOrder: true
-    - rowColor:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
         array: []
-    - actionButtonColumnName: Actions
-    - resetAfterSave: true
-    - filterStackType: and
-    - downloadRawData: false
-    - showFetchingIndicator: true
-    - serverPaginated: false
-    - data: '{{get_products_default.data}}'
-    - displayedData: null
-    - actionButtons: []
-    - actionButtonSelectsRow: true
-    - selectRowByDefault: true
-    - defaultSortByColumn: ''
-    - paginationOffset: 0
-    - columnAlignment:
+    - _toolbarButtonType:
         ordered:
-          - SAP_SKU_NUM: left
-          - ITEM_NAME: left
-          - STATUS: left
-          - ITEM_GROUP_DESC_EDITED: left
-          - ITEM_SKU_NUM: left
-    - columnSummaries:
-        object: {}
-    - showBoxShadow: false
-    - sortedDesc: false
-    - customButtonName: Custom Button
-    - columnMappersRenderAsHTML:
-        ordered: []
-    - showRefreshButton: true
-    - pageSize: '20'
-    - useDynamicColumnSettings: true
-    - actionButtonPosition: left
-    - dynamicRowHeights: false
-    - bulkUpdateAction: ''
-    - afterCursor: ''
-    - onCustomButtonPressQueryName: ''
-    - changeSet:
-        object: {}
-    - sortedColumn: ''
-    - _columnSummaryValues:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnStatusIndicator:
         ordered:
-          - SAP_SKU_NUM: ''
-          - ITEM_NAME: ''
-          - STATUS: ''
-          - ITEM_GROUP_DESC_EDITED: ''
-          - ITEM_SKU_NUM: ''
-    - checkboxRowSelect: true
-    - _compatibilityMode: false
-    - showColumnBorders: false
-    - clearSelectionLabel: Clear selection
-    - _renderedDataWithTypes: null
-    - columnAllowOverflow:
+          - cdecf:
+              ordered: []
+          - 54f59:
+              ordered: []
+          - ad467:
+              ordered: []
+          - 9870d:
+              ordered: []
+          - 7b6dd:
+              ordered: []
+          - c3cb0:
+              ordered: []
+    - _columnOptionList:
+        ordered:
+          - cdecf:
+              ordered: []
+          - 54f59:
+              ordered: []
+          - ad467:
+              ordered: []
+          - 9870d:
+              ordered: []
+          - 7b6dd:
+              ordered: []
+          - c3cb0:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - cdecf: ''
+          - 54f59: ''
+          - ad467: '{{ _.startCase(item) }}'
+          - 9870d: ''
+          - 7b6dd: '{{ _.startCase(item) }}'
+          - c3cb0: ''
+    - _showBorder: true
+    - _templatePageSize: '100'
+    - _dynamicColumnProperties:
         ordered: []
-    - beforeCursor: ''
-    - serverPaginationType: limitOffsetBased
-    - onRowSelect: ''
-    - showDownloadButton: true
-    - selectedIndex: null
-    - defaultSortDescending: false
-    - _sortedDisplayedDataIndices: null
-    - dynamicColumnSettings: null
-    - totalRowCount: ''
-    - recordUpdates:
-        array: []
-    - newRow: null
-    - emptyMessage: No rows found
-    - columnEditable:
-        ordered: []
-    - _viewerColumnSummaryTypes:
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - cdecf: ITEM_SKU_NUM
+          - 54f59: ITEM_NAME
+          - ad467: STATUS
+          - 9870d: ITEM_GROUP_ID
+          - 7b6dd: ITEM_GROUP_DESC_EDITED
+          - c3cb0: ITEM_ID
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_products_default.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - cdecf: ''
+          - 54f59: ''
+          - ad467: ''
+          - 9870d: ''
+          - 7b6dd: ''
+          - c3cb0: ''
+    - _columnFormat:
+        ordered:
+          - cdecf: string
+          - 54f59: string
+          - ad467: tag
+          - 9870d: decimal
+          - 7b6dd: string
+          - c3cb0: decimal
+    - _cursorCache:
         object: {}
-    - filters:
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: c3cb0
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - cdecf: left
+          - 54f59: left
+          - ad467: left
+          - 9870d: right
+          - 7b6dd: left
+          - c3cb0: right
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - cdecf: ''
+          - 54f59: ''
+          - ad467: ''
+          - 9870d: ''
+          - 7b6dd: ''
+          - c3cb0: ''
+    - _columnIcon:
+        ordered:
+          - cdecf: ''
+          - 54f59: ''
+          - ad467: ''
+          - 9870d: ''
+          - 7b6dd: ''
+          - c3cb0: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - cdecf: ''
+          - 54f59: ''
+          - ad467: ''
+          - 9870d: ''
+          - 7b6dd: ''
+          - c3cb0: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
         array: []
-    - displayedDataIndices: null
-    - disableSorting:
+    - _columnSortDisabled:
+        ordered:
+          - cdecf: false
+          - 54f59: false
+          - ad467: false
+          - 9870d: false
+          - 7b6dd: false
+          - c3cb0: false
+    - filterStack: null
+    - changesetObject: null
+    - _actionDisabled:
         ordered: []
-    - columnMappers:
+    - _columnReferenceId:
+        ordered:
+          - cdecf: ''
+          - 54f59: ''
+          - ad467: ''
+          - 9870d: ''
+          - 7b6dd: ''
+          - c3cb0: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: multiple
+    - _columnCaption:
+        ordered:
+          - cdecf: ''
+          - 54f59: ''
+          - ad467: ''
+          - 9870d: ''
+          - 7b6dd: ''
+          - c3cb0: ''
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - cdecf:
+              ordered: []
+          - 54f59:
+              ordered: []
+          - ad467:
+              ordered:
+                - automaticColors: true
+          - 9870d:
+              ordered:
+                - showSeparators: true
+          - 7b6dd:
+              ordered:
+                - automaticColors: true
+          - c3cb0:
+              ordered:
+                - showSeparators: true
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - cdecf:
+              ordered: []
+          - 54f59:
+              ordered: []
+          - ad467:
+              ordered: []
+          - 9870d:
+              ordered: []
+          - 7b6dd:
+              ordered: []
+          - c3cb0:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - cdecf: 155.921875
+          - 54f59: 429.515625
+          - 9870d: 92.40625
+          - 7b6dd: 658.390625
+          - ad467: 57.90625
+          - c3cb0: 77.03125
+    - _serverPaginationType: limitOffsetBased
+    - _showFooter: true
+    - _groupedColumnConfig:
         ordered: []
-    - showClearSelection: false
-    - doubleClickToEdit: true
+    - _virtualizeStartIndex: 0
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: findProductsTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: findProductsTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - cdecf: ''
+          - 54f59: ''
+          - ad467: ''
+          - 9870d: ''
+          - 7b6dd: ''
+          - c3cb0: 'false'
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - sortArray:
+        array: []
+    - _selectedCell: null
     - overflowType: pagination
-    - _reverseSortedDisplayedDataIndices: null
-    - showTableBorder: true
-    - selectedCell:
-        object:
-          index: null
-          data: null
-          columnName: null
-    - columns: []
-    - defaultSelectedRow: none
-    - freezeActionButtonColumns: false
-    - sort: null
-    - _columns:
-        - ITEM_SKU_NUM
-        - ITEM_NAME
-        - ITEM_GROUP_DESC_EDITED
-        - STATUS
-        - ITEM_GROUP_ID
-        - ITEM_ID
-    - sortByRawValue:
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: none
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - cdecf: center
+          - 54f59: center
+          - ad467: center
+          - 9870d: center
+          - 7b6dd: center
+          - c3cb0: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - cdecf: Enter value
+          - 54f59: Enter value
+          - ad467: Select option
+          - 9870d: Enter value
+          - 7b6dd: Enter value
+          - c3cb0: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
         ordered: []
-    - calculatedColumns: []
-    - selectedRow:
-        object:
-          index: null
-          data: null
-    - showPaginationOnTop: false
-    - _reverseDisplayedDataIndices: null
-    - nextAfterCursor: ''
-    - useCompactMode: false
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - cdecf: ''
+          - 54f59: ''
+          - ad467: ''
+          - 9870d: 'true'
+          - 7b6dd: ''
+          - c3cb0: 'true'
+    - _columnLabel:
+        ordered:
+          - cdecf: SKU
+          - 54f59: SKU Name
+          - ad467: Status
+          - 9870d: Item group id
+          - 7b6dd: Group Name
+          - c3cb0: Item id
+    - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
     container: tabbedContainer1
     subcontainer: c394a
-    row: 1.2
-    height: 2
+    row: 1
+    height: 8
     width: 12
-createdAt: 2023-03-22T21:43:52.488Z
+createdAt: 2023-07-18T23:11:47.843Z

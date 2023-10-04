@@ -1,0 +1,387 @@
+id: cognos_groups_table
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - 0f999: ''
+          - 7fc32: ''
+          - 6e57f: ''
+          - cecfb: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 6e57f
+        - cecfb
+        - 0f999
+        - 7fc32
+    - _isSaving: false
+    - _actionIds:
+        - 58b03
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - 0f999:
+              ordered: []
+          - 7fc32:
+              ordered: []
+          - 6e57f:
+              ordered:
+                - showStepper: true
+          - cecfb:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns:
+        ordered: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+          - 30f8e: Add
+          - a1e84: Delete
+          - 6b80b: Domains
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+          - 30f8e: bold/interface-add-1
+          - a1e84: bold/interface-remove-2
+          - 6b80b: bold/interface-lock-shield
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+          - 30f8e: custom
+          - a1e84: custom
+          - 6b80b: custom
+    - _columnStatusIndicator:
+        ordered: []
+    - _columnOptionList:
+        ordered:
+          - 0f999:
+              ordered: []
+          - 7fc32:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_cognos_domain.data }}'
+                - valueByIndex: '{{ item.domain_id }}'
+                - labelByIndex: '{{ item.domain_name }}'
+          - 6e57f:
+              ordered: []
+          - cecfb:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - 0f999: ''
+          - 7fc32: ''
+          - 6e57f: ''
+          - cecfb: ''
+    - _showBorder: true
+    - _templatePageSize: '20'
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - 0f999: group_ad_name
+          - 7fc32: domain_id
+          - 6e57f: group_id
+          - cecfb: group_full_name
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 4d
+        - 30f8e
+        - a1e84
+        - 3c
+        - 6b80b
+    - data: '{{ get_cognos_groups.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - 0f999: ''
+          - 7fc32: ''
+          - 6e57f: ''
+          - cecfb: ''
+    - _columnFormat:
+        ordered:
+          - 0f999: string
+          - 7fc32: tag
+          - 6e57f: decimal
+          - cecfb: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: 6e57f
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - 0f999: center
+          - 7fc32: center
+          - 6e57f: right
+          - cecfb: left
+    - _actionIcon:
+        ordered:
+          - 58b03: bold/interface-user-multiple
+    - _columnTooltip:
+        ordered:
+          - 0f999: ''
+          - 7fc32: ''
+          - 6e57f: ''
+          - cecfb: ''
+    - _columnIcon:
+        ordered:
+          - 0f999: ''
+          - 7fc32: ''
+          - 6e57f: ''
+          - cecfb: ''
+    - _columnCellTooltipMode:
+        ordered: []
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _columnSortDisabled:
+        ordered:
+          - 0f999: false
+          - 7fc32: false
+          - 6e57f: false
+          - cecfb: false
+    - undefined: null
+    - filterStack: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered:
+          - 58b03: ''
+    - _columnReferenceId:
+        ordered:
+          - 0f999: ''
+          - 7fc32: ''
+          - 6e57f: ''
+          - cecfb: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: multiple
+    - _columnCaption:
+        ordered:
+          - 0f999: ''
+          - 7fc32: ''
+          - 6e57f: ''
+          - cecfb: ''
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - 0f999:
+              ordered: []
+          - 7fc32:
+              ordered:
+                - automaticColors: true
+          - 6e57f:
+              ordered:
+                - showSeparators: true
+          - cecfb:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered: []
+    - _columnSize:
+        ordered:
+          - cecfb: 537.78125
+          - 0f999: 547.03125
+          - 7fc32: 249.078125
+          - 6e57f: 66.609375
+    - _serverPaginationType: limitOffsetBased
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: setValue
+            - pluginId: group_members_select
+            - targetId: 58b03
+            - params:
+                ordered:
+                  - value: '{{ currentRow.group_id }}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: setValue
+            - pluginId: MainTabs
+            - targetId: 58b03
+            - params:
+                ordered:
+                  - value: Group Members
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: save
+            - type: datasource
+            - method: trigger
+            - pluginId: update_cognos_groups_bulk
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickToolbar
+            - type: datasource
+            - method: trigger
+            - pluginId: get_cognos_domain
+            - targetId: 6b80b
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickToolbar
+            - type: widget
+            - method: open
+            - pluginId: deleteGroupsModal
+            - targetId: a1e84
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickToolbar
+            - type: widget
+            - method: open
+            - pluginId: addNewGroupModal
+            - targetId: 30f8e
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickCell
+            - type: util
+            - method: openUrl
+            - pluginId: ''
+            - targetId: 8d4ef
+            - params:
+                ordered:
+                  - url: '{{ item }}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: cognos_groups_table
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: cognos_groups_table
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - 0f999: true
+          - 7fc32: 'true'
+          - 6e57f: false
+          - cecfb: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: pagination
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - 0f999: center
+          - 7fc32: center
+          - 6e57f: center
+          - cecfb: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - 0f999: Enter value
+          - 7fc32: Select option
+          - 6e57f: Enter value
+          - cecfb: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered:
+          - 58b03: Get Members
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered:
+          - 58b03: ''
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - 0f999: ''
+          - 7fc32: ''
+          - 6e57f: 'false'
+          - cecfb: ''
+    - _columnLabel:
+        ordered:
+          - 0f999: AD Name
+          - 7fc32: Domain
+          - 6e57f: Group ID
+          - cecfb: Full Name
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 75d64
+    row: 1
+    height: 20
+    width: 12
+createdAt: 2023-07-06T15:52:26.544Z

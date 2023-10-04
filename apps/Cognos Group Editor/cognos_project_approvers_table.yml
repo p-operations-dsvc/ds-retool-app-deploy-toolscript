@@ -1,0 +1,279 @@
+id: cognos_project_approvers_table
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - aaea9: ''
+          - '20057': ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - aaea9
+        - '20057'
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - aaea9:
+              ordered:
+                - showStepper: true
+          - '20057':
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+          - c0153: Add
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+          - c0153: bold/interface-add-1
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+          - c0153: custom
+    - _columnStatusIndicator:
+        ordered:
+          - aaea9:
+              ordered: []
+          - '20057':
+              ordered: []
+    - _columnOptionList:
+        ordered:
+          - aaea9:
+              ordered: []
+          - '20057':
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - aaea9: ''
+          - '20057': ''
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - aaea9: approver_id
+          - '20057': user_principal_name
+    - hidden: false
+    - _toolbarButtonIds:
+        - c0153
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_project_approvers.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - aaea9: ''
+          - '20057': ''
+    - _columnFormat:
+        ordered:
+          - aaea9: decimal
+          - '20057': string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: aaea9
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - aaea9: right
+          - '20057': left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - aaea9: ''
+          - '20057': ''
+    - _columnIcon:
+        ordered:
+          - aaea9: ''
+          - '20057': ''
+    - _columnCellTooltipMode:
+        ordered:
+          - aaea9: ''
+          - '20057': ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _columnSortDisabled:
+        ordered:
+          - aaea9: false
+          - '20057': false
+    - undefined: null
+    - filterStack: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - aaea9: ''
+          - '20057': ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - aaea9: ''
+          - '20057': ''
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - aaea9:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+          - '20057':
+              ordered:
+                - showUnderline: hover
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - aaea9:
+              ordered: []
+          - '20057':
+              ordered: []
+    - _columnSize:
+        ordered:
+          - '20057': 198.75
+          - aaea9: 204.765625
+    - _serverPaginationType: limitOffsetBased
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - event: clickToolbar
+            - type: widget
+            - method: open
+            - pluginId: addNewApproverModal
+            - targetId: c0153
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: save
+            - type: datasource
+            - method: trigger
+            - pluginId: update_cognos_project_approvers
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: cognos_project_approvers_table
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: cognos_project_approvers_table
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - aaea9: false
+          - '20057': 'true'
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - aaea9: center
+          - '20057': center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - aaea9: Enter value
+          - '20057': Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - aaea9: ''
+          - '20057': ''
+    - _columnLabel:
+        ordered:
+          - aaea9: Approver ID
+          - '20057': Approver Name
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 7bc89
+    row: 1
+    height: 20
+    width: 12
+createdAt: 2023-09-13T20:52:01.461Z

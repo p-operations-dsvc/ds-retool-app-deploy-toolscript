@@ -1,0 +1,49 @@
+id: selectContentStorePermissions
+type: widget
+subtype: FileButtonWidget
+template:
+  ordered:
+    - parsedValue:
+        array: []
+    - iconAfter: ''
+    - parseFiles: true
+    - maxSize: ''
+    - appendNewSelection: false
+    - selectionType: single
+    - accept: '["CSV"]'
+    - hidden: false
+    - customValidation: ''
+    - maxCount: null
+    - hideValidationMessage: false
+    - text: Browse
+    - validationMessage: ''
+    - showInEditor: false
+    - parsing: false
+    - tooltipText: ''
+    - formDataKey: '{{ self.id }}'
+    - value:
+        array: []
+    - minSize: ''
+    - styleVariant: outline
+    - _validate: false
+    - invalid: false
+    - files:
+        array: []
+    - iconBefore: bold/programming-browser-search
+    - events: []
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - minCount: null
+    - maintainSpaceWhenHidden: false
+    - required: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: b6d4f
+    row: 20
+    col: 2
+    height: 1
+createdAt: 2023-09-11T16:43:50.001Z
