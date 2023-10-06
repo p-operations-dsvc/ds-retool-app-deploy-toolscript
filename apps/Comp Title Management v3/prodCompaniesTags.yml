@@ -1,0 +1,29 @@
+id: prodCompaniesTags
+uuid: 158b9142-11b8-4c1a-b69c-6a95ec426981
+type: widget
+subtype: TagsWidget
+template:
+  ordered:
+    - horizontalAlign: left
+    - marginType: normal
+    - hidden: false
+    - showInEditor: false
+    - colors: '{{ theme.automatic }}'
+    - tooltipText: ''
+    - value: '{{prodCompanyTagsVariable.value}}'
+    - style:
+        ordered:
+          - defaultBackground: automatic
+    - allowWrap: true
+    - hashColors: true
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 9.000000000000002
+    col: 6
+    height: 0.8
+    width: 6
+createdAt: 2023-10-03T19:11:41.777Z

@@ -1,0 +1,105 @@
+id: addNewGoldenTitleLanguagesSelect
+uuid: c6b7e80d-74ef-4564-9391-0644767fa369
+type: widget
+subtype: MultiselectWidget2
+template:
+  ordered:
+    - imageByIndex:
+        array: []
+    - _disabledByIndex: []
+    - showSelectionIndicator: true
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item.ID }}'
+    - readOnly: false
+    - iconAfter: ''
+    - _iconByIndex: []
+    - wrapTags: true
+    - overlayMinWidth: null
+    - selectedIndexes:
+        array: []
+    - selectedItems:
+        array: []
+    - inputValue: ''
+    - marginType: normal
+    - persistSearchTerm: false
+    - hidden: false
+    - customValidation: ''
+    - data: '{{ get_ctm_language.data }}'
+    - maxCount: null
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
+    - textBefore: ''
+    - _fallbackTextByIndex: []
+    - minLines: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: true
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: >-
+        {{table21.data[0].LANGUAGES===null?[]:table21.data[0].LANGUAGES.split('~')}}
+    - hiddenByIndex:
+        array: []
+    - labelCaption: ''
+    - labelWidth: '33'
+    - deprecatedLabels:
+        array: []
+    - _hiddenByIndex: []
+    - placeholder: Select options
+    - _captionByIndex: []
+    - itemAdornmentSize: auto
+    - label: Languages
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - allowCustomValue: false
+    - invalid: false
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex:
+        array: []
+    - iconBefore: ''
+    - colorByIndex:
+        array: []
+    - events:
+        ordered: []
+    - _ids: []
+    - emptyMessage: No options
+    - selectedLabels:
+        array: []
+    - overlayMaxHeight: 375
+    - maxLines: null
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - minCount: null
+    - _labels: []
+    - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - _imageByIndex: []
+    - required: false
+    - labels: '{{ item.NAME }}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: addNewGoldenTitle
+    row: 8
+    height: 1
+    width: 12
+createdAt: 2023-10-05T20:09:01.464Z

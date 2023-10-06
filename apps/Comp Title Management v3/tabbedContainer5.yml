@@ -1,0 +1,132 @@
+id: tabbedContainer5
+uuid: d8113bb9-e06a-43a7-893a-62b82a16594e
+type: widget
+subtype: ContainerWidget2
+template:
+  ordered:
+    - _disabledByIndex:
+        - ''
+        - ''
+        - ''
+        - false
+        - false
+        - false
+        - false
+        - false
+    - heightType: auto
+    - currentViewKey: '{{ self.viewKeys[0] }}'
+    - iconByIndex:
+        array: []
+    - clickable: false
+    - _iconByIndex:
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+    - showFooterBorder: true
+    - marginType: normal
+    - enableFullBleed: false
+    - showBorder: true
+    - hidden: false
+    - showHeader: true
+    - hoistFetching: false
+    - paddingType: normal
+    - views:
+        array: []
+    - showInEditor: false
+    - footerPaddingType: normal
+    - tooltipText: ''
+    - hiddenByIndex:
+        array: []
+    - _hiddenByIndex:
+        - ''
+        - ''
+        - ''
+        - false
+        - false
+        - false
+        - false
+        - false
+    - currentViewIndex: null
+    - _hasMigratedNestedItems: true
+    - transition: slide
+    - showHeaderBorder: true
+    - itemMode: static
+    - _tooltipByIndex:
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+    - tooltipByIndex:
+        array: []
+    - showFooter: false
+    - _viewKeys:
+        - Distribution Company
+        - Genre
+        - Language
+        - Production Status
+        - Source System
+        - Title Relationship Type
+        - Title Type
+        - Vote Count Magnitude
+    - events:
+        ordered: []
+    - _ids:
+        - 443b9
+        - 4153c
+        - 6c9ea
+        - c7966
+        - fb90a
+        - 7cf52
+        - e8297
+        - eca66
+    - viewKeys:
+        array: []
+    - iconPositionByIndex:
+        array: []
+    - _iconPositionByIndex:
+        - ''
+        - ''
+        - ''
+        - left
+        - left
+        - left
+        - left
+        - left
+    - hovered: false
+    - loading: false
+    - overflowType: scroll
+    - disabled: false
+    - _labels:
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+    - headerPaddingType: normal
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - showBody: true
+    - labels:
+        array: []
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 6c9ea
+    height: 0.2
+    width: 12
+createdAt: 2023-09-29T16:53:23.364Z

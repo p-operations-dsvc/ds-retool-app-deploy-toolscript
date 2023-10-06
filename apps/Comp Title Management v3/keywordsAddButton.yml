@@ -1,0 +1,46 @@
+id: keywordsAddButton
+uuid: c39a163f-89de-4488-81cb-e69280df8ea0
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: center
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: +
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: >
+                      keywordsTagsVariable.setValue
+                      (keywordsTagsVariable.value.concat(goldenTitleKeywordsTextInput.value))
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 19.6
+    col: 4
+    height: 1
+    width: 1
+createdAt: 2023-10-03T19:31:41.584Z

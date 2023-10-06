@@ -1,0 +1,134 @@
+id: update_golden_title
+type: datasource
+subtype: SqlQueryUnified
+resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
+resourceDisplayName: Snowflake CTMv3
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - streamResponse: false
+    - records: ''
+    - lastReceivedFromResourceAt: null
+    - databasePasswordOverride: ''
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: >
+        update EDWCTM.GOLDEN_TITLE a
+
+        set a.RELEASE_YEAR={{goldenTitleReleaseYearInput.value}},
+
+        a.TITLE_TYPE={{goldenTitleTypeDropdownSelect.value}},
+
+        a.KEYWORDS={{keywordsTagsVariable.value.join('~')}},
+
+        a.PRIMARY_GENRE={{goldenTitleGenreSelect.value}},
+
+        a.PRODUCTION_COMAPANIES={{prodCompanyTagsVariable.value.join('~')}},
+
+        a.LANGUAGES={{goldenTitleLanguagesSelect.value.join('~')}},
+
+        a.VOTE_COUNT_MAGNITUDE_RANGE={{
+        goldenTitleVoteCountMagnitudeSelect.value}},
+
+        a.DISTRIBUTION_COMPANIES={{goldenTitleDistCompaniesSelect.value.join('~')}},
+
+        a.ALTERNATE_NAMES={{altNamesTagsVariable.value.join('~')}},
+
+        a.PRODUCTION_STATUS={{goldenTitleProdStatusSelect.value}},
+
+        a.SEASON_NUM={{seasonTextInput.value}},
+
+        a.EPISODE_NUM={{goldenTitleEpisodeInput.value}}
+
+        where a.GOLDEN_TITLE_ID={{goldenTitleIdText.value}}
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - warningCodes: []
+    - data: null
+    - recordId: ''
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: true
+    - dataArray: []
+    - cacheKeyTtl: ''
+    - filterBy: ''
+    - requestSentTimestamp: null
+    - databaseHostOverride: ''
+    - metadata: null
+    - workflowActionType: null
+    - editorMode: sql
+    - queryRunTime: null
+    - actionType: ''
+    - changesetObject: ''
+    - shouldUseLegacySql: false
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - databaseNameOverride: ''
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: ''
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - enableBulkUpdates: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - bulkUpdatePrimaryKey: ''
+    - runWhenPageLoads: false
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return formatDataAsArray(data)
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title_details
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - tableName: ''
+    - queryTimeout: '10001'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - workflowBlockPluginId: null
+    - databaseUsernameOverride: ''
+    - shouldEnableBatchQuerying: false
+    - doNotThrowOnNoOp: false
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-10-03T21:32:03.574Z

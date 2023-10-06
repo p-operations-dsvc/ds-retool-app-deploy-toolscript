@@ -1,0 +1,29 @@
+id: keywordsTags
+uuid: 61fa58f2-6bfd-4216-9873-045fc190f364
+type: widget
+subtype: TagsWidget
+template:
+  ordered:
+    - horizontalAlign: left
+    - marginType: none
+    - hidden: false
+    - showInEditor: false
+    - colors: '{{ theme.automatic }}'
+    - tooltipText: ''
+    - value: '{{keywordsTagsVariable.value}}'
+    - style:
+        ordered:
+          - defaultBackground: automatic
+    - allowWrap: true
+    - hashColors: true
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 19.599999999999998
+    col: 6
+    height: 0.8
+    width: 6
+createdAt: 2023-10-03T19:31:32.043Z

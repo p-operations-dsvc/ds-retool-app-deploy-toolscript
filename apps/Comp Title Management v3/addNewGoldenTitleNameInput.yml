@@ -1,0 +1,55 @@
+id: addNewGoldenTitleNameInput
+uuid: b18dd57b-022e-4ea5-97e4-e9cffabc7a12
+type: widget
+subtype: TextInputWidget2
+template:
+  ordered:
+    - spellCheck: false
+    - readOnly: false
+    - iconAfter: ''
+    - showCharacterCount: false
+    - autoComplete: false
+    - marginType: normal
+    - maxLength: null
+    - hidden: false
+    - customValidation: ''
+    - patternType: ''
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: true
+    - pattern: ''
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: TITLE_NAME
+    - value: '{{table21.data[0].TITLE_NAME}}'
+    - labelCaption: ''
+    - labelWidth: '33'
+    - autoFill: ''
+    - placeholder: Enter value
+    - label: Title name
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - iconBefore: ''
+    - minLength: null
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - autoCapitalize: none
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: addNewGoldenTitle
+    height: 1
+    width: 12
+createdAt: 2023-10-05T19:50:33.085Z

@@ -1,0 +1,29 @@
+id: altNamesTags
+uuid: a6765c40-2528-49f5-ad21-914777d0a824
+type: widget
+subtype: TagsWidget
+template:
+  ordered:
+    - horizontalAlign: center
+    - marginType: none
+    - hidden: false
+    - showInEditor: false
+    - colors: '{{ theme.automatic }}'
+    - tooltipText: ''
+    - value: '{{altNamesTagsVariable.value}}'
+    - style:
+        ordered:
+          - defaultBackground: automatic
+    - allowWrap: true
+    - hashColors: true
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 14.999999999999998
+    col: 6
+    height: 0.8
+    width: 5
+createdAt: 2023-10-03T19:31:11.510Z

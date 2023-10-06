@@ -1,0 +1,50 @@
+id: mapOtherTitlesModal
+uuid: 8cb1f2f4-f048-4c45-908a-07a877795e97
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: 1000px
+    - onModalOpen: ''
+    - events:
+        - ordered:
+            - event: close
+            - type: datasource
+            - method: trigger
+            - pluginId: get_other_title
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: open
+            - type: widget
+            - method: clearSelection
+            - pluginId: otherTitleTable
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - modalWidth: 80%
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Map Title
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 4153c
+    col: 10
+    height: 1
+    width: 1
+createdAt: 2023-10-04T22:20:17.695Z

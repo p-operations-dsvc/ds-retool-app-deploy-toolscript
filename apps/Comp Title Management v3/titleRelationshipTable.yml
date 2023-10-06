@@ -1,0 +1,267 @@
+id: titleRelationshipTable
+uuid: e3107acd-2139-4b7c-b42e-8c6e5eab2d00
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - c31f7: ''
+          - 46ebb: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - c31f7
+        - 46ebb
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - c31f7:
+              ordered: []
+          - 46ebb:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - c31f7:
+              ordered: []
+          - 46ebb:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - c31f7: ''
+          - 46ebb: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - c31f7: ID
+          - 46ebb: NAME
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_ctm_title_relationship_type.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - c31f7: ''
+          - 46ebb: ''
+    - _columnFormat:
+        ordered:
+          - c31f7: string
+          - 46ebb: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: c31f7
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - c31f7: left
+          - 46ebb: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - c31f7: ''
+          - 46ebb: ''
+    - _columnIcon:
+        ordered:
+          - c31f7: ''
+          - 46ebb: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - c31f7: ''
+          - 46ebb: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - c31f7: false
+          - 46ebb: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - c31f7: ''
+          - 46ebb: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - c31f7: ''
+          - 46ebb: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - c31f7:
+              ordered: []
+          - 46ebb:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - c31f7: none
+          - 46ebb: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - c31f7:
+              ordered: []
+          - 46ebb:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - c31f7: 273.421875
+          - 46ebb: 189.53125
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: titleRelationshipTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: titleRelationshipTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - c31f7: 'false'
+          - 46ebb: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - c31f7: none
+          - 46ebb: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - c31f7: center
+          - 46ebb: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - c31f7: Enter value
+          - 46ebb: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - c31f7: ''
+          - 46ebb: ''
+    - _columnLabel:
+        ordered:
+          - c31f7: ID
+          - 46ebb: Name
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer5
+    subcontainer: 7cf52
+    height: 8
+    width: 12
+createdAt: 2023-09-29T16:53:24.735Z

@@ -1,0 +1,44 @@
+id: keywordsRemoveButton
+uuid: 54673d29-c9dc-4854-9dcd-ba40d3e92f05
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: center
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: '-'
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: widget
+            - method: open
+            - pluginId: keywordsTagsModal
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{keywordsTagsVariable.value.toString()}}'
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 19.6
+    col: 5
+    height: 1
+    width: 1
+createdAt: 2023-10-03T21:07:23.048Z

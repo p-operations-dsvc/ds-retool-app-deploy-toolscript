@@ -1,0 +1,15 @@
+version: 43.0.9
+pageUuid: cdeb4f96-5d63-11ee-9750-5b4600728c15
+appTemplate:
+  appMaxWidth: 1560px
+  experimentalFeatures:
+    object:
+      sourceControlTemplateDehydration: false
+      multiplayerEditingEnabled: false
+  experimentalPerfFeatures:
+    object:
+      serverDepGraphEnabled: false
+      useRuntimeV2: true
+      runtimeV2OptOut: false
+  version: 3.12.1
+  experimentalDataTabEnabled: true

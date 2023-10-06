@@ -1,0 +1,11 @@
+id: currentRowGoldenTitleIMDBId
+type: state
+subtype: State
+template:
+  ordered:
+    - _persistedValueGetter: null
+    - _persistedValueSetter: null
+    - persistValue: false
+    - persistedValueKey: ''
+    - value: null
+createdAt: 2023-09-28T23:00:47.340Z

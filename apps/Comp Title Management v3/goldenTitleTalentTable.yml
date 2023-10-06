@@ -1,0 +1,329 @@
+id: goldenTitleTalentTable
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - a5ea1: ''
+          - 562a4: ''
+          - 88d22: ''
+          - '18478': ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - '18478'
+        - a5ea1
+        - 562a4
+        - 88d22
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - a5ea1:
+              ordered: []
+          - 562a4:
+              ordered: []
+          - 88d22:
+              ordered:
+                - showStepper: true
+          - '18478':
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnStatusIndicator:
+        ordered:
+          - 4893b:
+              ordered: []
+          - a5ea1:
+              ordered: []
+          - 562a4:
+              ordered: []
+          - 88d22:
+              ordered: []
+          - '18478':
+              ordered: []
+    - _columnOptionList:
+        ordered:
+          - a5ea1:
+              ordered: []
+          - 562a4:
+              ordered: []
+          - 88d22:
+              ordered: []
+          - '18478':
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - a5ea1: ''
+          - 562a4: ''
+          - 88d22: ''
+          - '18478': ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - a5ea1: TALENT_TYPE
+          - 562a4: ROLES
+          - 88d22: BILLING
+          - '18478': TALENT_NAME
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_golden_title_talent.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - a5ea1: ''
+          - 562a4: ''
+          - 88d22: ''
+          - '18478': ''
+    - _columnFormat:
+        ordered:
+          - a5ea1: string
+          - 562a4: string
+          - 88d22: decimal
+          - '18478': string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: ''
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - a5ea1: left
+          - 562a4: left
+          - 88d22: right
+          - '18478': left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - a5ea1: ''
+          - 562a4: ''
+          - 88d22: ''
+          - '18478': ''
+    - _columnIcon:
+        ordered:
+          - a5ea1: ''
+          - 562a4: ''
+          - 88d22: ''
+          - '18478': ''
+    - _columnCellTooltipMode:
+        ordered:
+          - a5ea1: ''
+          - 562a4: ''
+          - 88d22: ''
+          - '18478': ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - a5ea1: false
+          - 562a4: false
+          - 88d22: false
+          - '18478': false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - a5ea1: ''
+          - 562a4: ''
+          - 88d22: ''
+          - '18478': ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - a5ea1: ''
+          - 562a4: ''
+          - 88d22: ''
+          - '18478': ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - a5ea1:
+              ordered: []
+          - 562a4:
+              ordered: []
+          - 88d22:
+              ordered:
+                - showSeparators: true
+          - '18478':
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - a5ea1: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - a5ea1:
+              ordered: []
+          - 562a4:
+              ordered: []
+          - 88d22:
+              ordered: []
+          - '18478':
+              ordered: []
+    - _columnSize:
+        ordered:
+          - '18478': 204
+          - a5ea1: 154
+          - 562a4: 173
+          - 88d22: 100
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered: []
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: goldenTitleTalentTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: goldenTitleTalentTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - a5ea1: ''
+          - 562a4: ''
+          - 88d22: ''
+          - '18478': ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - a5ea1: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - a5ea1: center
+          - 562a4: center
+          - 88d22: center
+          - '18478': center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - a5ea1: Enter value
+          - 562a4: Enter value
+          - 88d22: Enter value
+          - '18478': Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - a5ea1: ''
+          - 562a4: ''
+          - 88d22: ''
+          - '18478': ''
+    - _columnLabel:
+        ordered:
+          - a5ea1: Type
+          - 562a4: Roles
+          - 88d22: Billing
+          - '18478': Name
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer4
+    subcontainer: dc989
+    height: 8
+    width: 12
+createdAt: 2023-09-28T23:33:44.989Z

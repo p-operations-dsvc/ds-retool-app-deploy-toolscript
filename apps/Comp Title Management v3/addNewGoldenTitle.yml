@@ -1,0 +1,55 @@
+id: addNewGoldenTitle
+uuid: 980019ad-9b9b-46ff-8028-588ce9d32876
+type: widget
+subtype: FormWidget2
+template:
+  ordered:
+    - disableSubmit: false
+    - heightType: auto
+    - showFooterBorder: true
+    - resetAfterSubmit: true
+    - submitting: false
+    - marginType: normal
+    - enableFullBleed: false
+    - showBorder: true
+    - hidden: false
+    - data:
+        object: {}
+    - showHeader: true
+    - hoistFetching: false
+    - paddingType: normal
+    - scroll: true
+    - initialData: '{{ table21.selectedRow }}'
+    - showInEditor: false
+    - footerPaddingType: normal
+    - tooltipText: ''
+    - showHeaderBorder: true
+    - invalid: false
+    - showFooter: true
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: create_golden_title
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - overflowType: scroll
+    - disabled: false
+    - headerPaddingType: normal
+    - requireValidation: true
+    - maintainSpaceWhenHidden: false
+    - showBody: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleCopyModal
+    row: 0.8
+    height: 0.2
+    width: 12
+createdAt: 2023-10-05T19:48:23.178Z

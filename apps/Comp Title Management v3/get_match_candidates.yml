@@ -1,0 +1,135 @@
+id: get_match_candidates
+type: datasource
+subtype: SqlQueryUnified
+resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
+resourceDisplayName: Snowflake CTMv3
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - streamResponse: false
+    - records: ''
+    - lastReceivedFromResourceAt: null
+    - databasePasswordOverride: ''
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: >-
+        select scored.* from (
+
+        select  gt.title_name as golden_title_name, gt.release_year  as
+        golden_title_release, gt.golden_title_id,vcm.description
+        vote_magnitude_range,
+
+        JAROWINKLER_SIMILARITY(UPPER(REGEXP_REPLACE(REGEXP_REPLACE(
+              REGEXP_REPLACE(ot.name_from_source,'\\(\\d.*\\)$','',1,0,'i'), 
+              '(^The\\s|\\bThe$|\\bThe\\s$)|(^A\\s|\\bA$|\\bA\\s$)|(^An\\s|\\bAn$|\\bAn\\s$)'
+              ,'',1,0,'i'),'[^a-zA-Z0-9]','',1,0,'i')),UPPER(REGEXP_REPLACE(
+              REGEXP_REPLACE(REGEXP_REPLACE(gt.title_name,'\\(\\d.*\\)$','',1,0,'i'), 
+              '(^The\\s|\\bThe$|\\bThe\\s$)|(^A\\s|\\bA$|\\bA\\s$)|(^An\\s|\\bAn$|\\bAn\\s$)'
+              ,'',1,0,'i'),'[^a-zA-Z0-9]','',1,0,'i'))) JARO_SCORE,
+                    RANK() OVER (ORDER BY
+                JARO_SCORE DESC,
+                vcm.description DESC) ROW_RANK 
+        from EDWCTM.other_title ot,
+
+        EDWCTM.GOLDEN_TITLE gt,
+
+        EDWCTM.IMDB_VOTE_COUNT_MAGNITUDE vcm
+
+        where 
+         COALESCE(release_year_from_source,-99) BETWEEN COALESCE(RELEASE_YEAR,-99) -1 AND COALESCE(RELEASE_YEAR,-99) +1
+         and gt.TITLE_TYPE IN ('tvMovie',
+                  'movie',
+                  'tvSpecial',
+                  'video',
+                  'tvShort') 
+        AND gt.INACTIVE_INDICATOR='false'
+
+        and gt.VOTE_COUNT_MAGNITUDE_RANGE=vcm.DESCRIPTION 
+
+        and ot.source_system_title_id={{titleToMapSelect.selectedItem.id.split
+        ('~')[0]}} and source_system={{titleToMapSelect.selectedItem.id.split
+        ('~')[1]}}) scored where  ROW_RANK<6
+
+        order by ROW_RANK asc
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - warningCodes: []
+    - data: null
+    - recordId: ''
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: false
+    - dataArray: []
+    - cacheKeyTtl: ''
+    - filterBy: ''
+    - requestSentTimestamp: null
+    - databaseHostOverride: ''
+    - metadata: null
+    - workflowActionType: null
+    - editorMode: sql
+    - queryRunTime: null
+    - actionType: ''
+    - changesetObject: ''
+    - shouldUseLegacySql: false
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - databaseNameOverride: ''
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: ''
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - enableBulkUpdates: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - bulkUpdatePrimaryKey: ''
+    - runWhenPageLoads: false
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return formatDataAsArray(data)
+    - events: []
+    - isMultiplayerEdited: false
+    - tableName: ''
+    - queryTimeout: '10001'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - workflowBlockPluginId: null
+    - databaseUsernameOverride: ''
+    - shouldEnableBatchQuerying: false
+    - doNotThrowOnNoOp: false
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-10-04T23:44:55.676Z
