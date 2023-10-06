@@ -46,7 +46,7 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: ''
+    - placeholder: Select
     - _captionByIndex: []
     - itemAdornmentSize: auto
     - label: Title Type
