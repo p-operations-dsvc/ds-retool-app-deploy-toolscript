@@ -10,7 +10,9 @@ template:
     - autoComplete: false
     - marginType: normal
     - maxLength: null
-    - hidden: false
+    - hidden: >-
+        {{goldenTitleTypeDropdownSelect.value=='tvEpisode' ||
+        goldenTitleTypeDropdownSelect.value=='tvSeries'?false:true}}
     - customValidation: ''
     - patternType: ''
     - hideValidationMessage: false

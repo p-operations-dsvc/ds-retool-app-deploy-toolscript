@@ -302,7 +302,7 @@ template:
                 - notation: standard
           - 4ff29:
               ordered:
-                - showSeparators: true
+                - showSeparators: false
                 - notation: standard
           - 3391d:
               ordered: []
@@ -311,7 +311,7 @@ template:
                 - automaticColors: true
           - f7eac:
               ordered:
-                - showSeparators: true
+                - showSeparators: false
                 - notation: standard
           - cb20e:
               ordered:
@@ -545,18 +545,18 @@ template:
           - cb20e: ''
           - 4141e: ''
           - 0ea75: ''
-          - a5229: ''
-          - ec5e1: ''
+          - a5229: 'true'
+          - ec5e1: 'true'
     - _columnLabel:
         ordered:
           - 962dd: Golden Title ID
-          - 4ff29: Imdb tt cd
-          - 3391d: Title name
-          - 0d8c2: Title type
-          - f7eac: Release year
-          - cb20e: Season num
-          - 4141e: Episode num
-          - 0ea75: Primary genre
+          - 4ff29: IMDB TT Code
+          - 3391d: Name
+          - 0d8c2: Type
+          - f7eac: Release Year
+          - cb20e: Season
+          - 4141e: Episode
+          - 0ea75: Genre
           - a5229: Imdb url
           - ec5e1: Parent golden title id
     - _showToolbar: true

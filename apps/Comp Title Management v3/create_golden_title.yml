@@ -33,8 +33,8 @@ template:
                {{addNewGoldenTitleNameInput.value}},
               {{addNewGoldenTitleTypeSelect.value}},
                 {{addNewGoldenTitleReleaseYearInput.value}},
-                {{addNewGoldenTitleSeasonInput.value}},
-                {{addNewGoldenTitleEpisodeInput.value}},
+                {{addNewGoldenTitleSeasonInput.value==''?-1:addNewGoldenTitleSeasonInput.value}},
+                {{addNewGoldenTitleEpisodeInput.value==''?-1:addNewGoldenTitleEpisodeInput.value}},
                 {{addNewGoldenTitleGenreSelect.value}},        {{addNewGoldenTitleDistCompaniesSelect.value.join('~')}},
                 {{addNewGoldenTitleProdStatusSelect.value}},        {{addNewGoldenTitleLanguagesSelect.value.join('~')}},
               {{addNewGoldenTitlePlotInput.value}}
