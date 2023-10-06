@@ -10,7 +10,9 @@ template:
     - preventScroll: false
     - inputValue: 0
     - marginType: normal
-    - hidden: false
+    - hidden: >-
+        {{addNewGoldenTitleTypeSelect.value=='tvEpisode' ||
+        addNewGoldenTitleTypeSelect.value=='tvSeries'?false:true}}
     - customValidation: ''
     - showSeparators: true
     - hideValidationMessage: false

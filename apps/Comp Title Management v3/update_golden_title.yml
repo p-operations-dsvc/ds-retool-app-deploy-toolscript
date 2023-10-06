@@ -45,9 +45,9 @@ template:
 
         a.PRODUCTION_STATUS={{goldenTitleProdStatusSelect.value}},
 
-        a.SEASON_NUM={{seasonTextInput.value}},
+        a.SEASON_NUM={{seasonTextInput.value==''?-1:seasonTextInput.value}},
 
-        a.EPISODE_NUM={{goldenTitleEpisodeInput.value}}
+        a.EPISODE_NUM={{goldenTitleEpisodeInput.value==''?-1:goldenTitleEpisodeInput.value}}
 
         where a.GOLDEN_TITLE_ID={{goldenTitleIdText.value}}
     - playgroundQueryUuid: ''
