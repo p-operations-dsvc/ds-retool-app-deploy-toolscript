@@ -46,7 +46,7 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select an option
+    - placeholder: Select
     - _captionByIndex: []
     - itemAdornmentSize: auto
     - label: Production Status

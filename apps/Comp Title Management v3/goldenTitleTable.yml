@@ -430,6 +430,27 @@ template:
             - waitMs: '0'
         - ordered:
             - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title_details
+            - targetId: ba822
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: currentRowGoldenTitleId
+            - targetId: ba822
+            - params:
+                ordered:
+                  - value: '{{ currentRow.GOLDEN_TITLE_ID }}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
             - type: widget
             - method: open
             - pluginId: goldenTitleModal

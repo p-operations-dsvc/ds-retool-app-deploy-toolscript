@@ -53,7 +53,7 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select options
+    - placeholder: Select
     - _captionByIndex: []
     - itemAdornmentSize: auto
     - label: Distribution Companies
