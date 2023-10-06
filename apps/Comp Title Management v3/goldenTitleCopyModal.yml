@@ -1,0 +1,31 @@
+id: goldenTitleCopyModal
+uuid: 309b7cf7-af5a-4581-90d8-136e863cf225
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: 900px
+    - onModalOpen: ''
+    - modalWidth: |
+        70%
+    - closeOnOutsideClick: true
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open Modal
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 443b9
+    row: 0.2
+    col: 10
+    height: 1
+    width: 2
+createdAt: 2023-10-05T19:43:08.029Z

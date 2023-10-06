@@ -1,0 +1,12 @@
+id: prodCompanyTagsVariable
+type: state
+subtype: State
+template:
+  ordered:
+    - _persistedValueGetter: null
+    - _persistedValueSetter: null
+    - persistValue: false
+    - persistedValueKey: ''
+    - value: >-
+        {{get_golden_title_details.data.PRODUCTION_COMAPANIES[0]===null?[]:get_golden_title_details.data.PRODUCTION_COMAPANIES[0].split('~')}}
+createdAt: 2023-09-30T22:51:08.645Z

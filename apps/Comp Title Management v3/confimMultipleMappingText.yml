@@ -1,0 +1,27 @@
+id: confimMultipleMappingText
+uuid: e43ec2fa-5c46-4421-9b5e-92932682f4b1
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: '**Proceed to map multiple titles?**'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: confimMultipleMappingModal
+    col: 1
+    height: 0.6
+    width: 9
+createdAt: 2023-10-05T17:29:11.820Z

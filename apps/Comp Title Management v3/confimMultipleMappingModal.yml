@@ -1,0 +1,28 @@
+id: confimMultipleMappingModal
+uuid: 8a6ee13d-0c6d-4e70-8b10-921f392365e0
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: MM
+style:
+  ordered: []
+position2:
+  position2:
+    container: mapOtherTitlesModal
+    col: 8
+    height: 1
+    width: 1
+createdAt: 2023-10-05T00:06:55.137Z

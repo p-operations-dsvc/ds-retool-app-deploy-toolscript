@@ -1,0 +1,267 @@
+id: sourceSystemTable
+uuid: 590aa89b-43ec-4dfa-a043-f31bc52e2a34
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - 885ff: ''
+          - 7776e: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 885ff
+        - 7776e
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - 885ff:
+              ordered: []
+          - 7776e:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - 885ff:
+              ordered: []
+          - 7776e:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - 885ff: ''
+          - 7776e: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - 885ff: ID
+          - 7776e: NAME
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_ctm_source_system.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - 885ff: ''
+          - 7776e: ''
+    - _columnFormat:
+        ordered:
+          - 885ff: string
+          - 7776e: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: 885ff
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - 885ff: left
+          - 7776e: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - 885ff: ''
+          - 7776e: ''
+    - _columnIcon:
+        ordered:
+          - 885ff: ''
+          - 7776e: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - 885ff: ''
+          - 7776e: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - 885ff: false
+          - 7776e: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - 885ff: ''
+          - 7776e: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - 885ff: ''
+          - 7776e: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - 885ff:
+              ordered: []
+          - 7776e:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - 885ff: none
+          - 7776e: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - 885ff:
+              ordered: []
+          - 7776e:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - 885ff: 234.9375
+          - 7776e: 71.9375
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: sourceSystemTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: sourceSystemTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - 885ff: 'false'
+          - 7776e: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - 885ff: none
+          - 7776e: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - 885ff: center
+          - 7776e: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - 885ff: Enter value
+          - 7776e: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - 885ff: ''
+          - 7776e: ''
+    - _columnLabel:
+        ordered:
+          - 885ff: ID
+          - 7776e: Name
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer5
+    subcontainer: fb90a
+    height: 8
+    width: 12
+createdAt: 2023-09-29T16:53:24.536Z

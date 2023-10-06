@@ -1,0 +1,283 @@
+id: genreTable
+uuid: e950960a-880e-4e98-a131-1d9523eaddc4
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - e3415: ''
+          - fcbed: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - e3415
+        - fcbed
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - e3415:
+              ordered: []
+          - fcbed:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnStatusIndicator:
+        ordered:
+          - d2a39:
+              ordered: []
+          - 843f4:
+              ordered: []
+          - 7d96a:
+              ordered: []
+          - 9b1eb:
+              ordered: []
+          - ca31c:
+              ordered: []
+          - 8a3a4:
+              ordered: []
+          - f94c8:
+              ordered: []
+          - ed21c:
+              ordered: []
+    - _columnOptionList:
+        ordered:
+          - e3415:
+              ordered: []
+          - fcbed:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - e3415: ''
+          - fcbed: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - e3415: ID
+          - fcbed: NAME
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_ctm_genre.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - e3415: ''
+          - fcbed: ''
+    - _columnFormat:
+        ordered:
+          - e3415: string
+          - fcbed: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: e3415
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - e3415: left
+          - fcbed: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - e3415: ''
+          - fcbed: ''
+    - _columnIcon:
+        ordered:
+          - e3415: ''
+          - fcbed: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - e3415: ''
+          - fcbed: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - e3415: false
+          - fcbed: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - e3415: ''
+          - fcbed: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - e3415: ''
+          - fcbed: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - e3415:
+              ordered: []
+          - fcbed:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - e3415: none
+          - fcbed: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - e3415:
+              ordered: []
+          - fcbed:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - e3415: 405.953125
+          - fcbed: 92.390625
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered: []
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: genreTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: genreTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - e3415: 'false'
+          - fcbed: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - e3415: none
+          - fcbed: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - e3415: center
+          - fcbed: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - e3415: Enter value
+          - fcbed: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - e3415: ''
+          - fcbed: ''
+    - _columnLabel:
+        ordered:
+          - e3415: ID
+          - fcbed: Name
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer5
+    subcontainer: 4153c
+    row: 0.2
+    height: 8
+    width: 12
+createdAt: 2023-09-29T16:53:23.865Z

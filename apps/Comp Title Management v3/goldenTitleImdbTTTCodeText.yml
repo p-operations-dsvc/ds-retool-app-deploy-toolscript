@@ -1,0 +1,52 @@
+id: goldenTitleImdbTTTCodeText
+type: widget
+subtype: TextAreaWidget
+template:
+  ordered:
+    - spellCheck: false
+    - readOnly: false
+    - autoResize: true
+    - showCharacterCount: false
+    - autoComplete: false
+    - marginType: normal
+    - maxLength: null
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - minLines: 2
+    - validationMessage: ''
+    - showInEditor: false
+    - pattern: ''
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: IMDB_TT_CD
+    - value: '{{get_golden_title_details.data.IMDB_TT_CD[0]}}'
+    - labelCaption: ''
+    - labelWidth: '33'
+    - autoFill: ''
+    - placeholder: '{{get_golden_title_details.data.IMDB_TT_CD[0]}}'
+    - label: IMDB TT Code
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - minLength: null
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - autoCapitalize: none
+    - maxLines: null
+    - loading: false
+    - disabled: 'true'
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 1
+    height: 1
+    width: 12
+createdAt: 2023-09-28T23:42:29.758Z

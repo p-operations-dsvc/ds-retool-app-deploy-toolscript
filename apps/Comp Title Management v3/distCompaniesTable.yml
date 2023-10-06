@@ -1,0 +1,283 @@
+id: distCompaniesTable
+uuid: 278bcb1d-b138-4efc-ba7d-a5ddcc88332b
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - dee49: ''
+          - 26d8b: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - dee49
+        - 26d8b
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - dee49:
+              ordered: []
+          - 26d8b:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnStatusIndicator:
+        ordered:
+          - '29947':
+              ordered: []
+          - 836f9:
+              ordered: []
+          - eb829:
+              ordered: []
+          - '29860':
+              ordered: []
+          - 4464e:
+              ordered: []
+          - '96113':
+              ordered: []
+          - 8c3e7:
+              ordered: []
+          - a408f:
+              ordered: []
+    - _columnOptionList:
+        ordered:
+          - dee49:
+              ordered: []
+          - 26d8b:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - dee49: ''
+          - 26d8b: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - dee49: ID
+          - 26d8b: NAME
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_ctm_distribution_company.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - dee49: ''
+          - 26d8b: ''
+    - _columnFormat:
+        ordered:
+          - dee49: string
+          - 26d8b: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: dee49
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - dee49: left
+          - 26d8b: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - dee49: ''
+          - 26d8b: ''
+    - _columnIcon:
+        ordered:
+          - dee49: ''
+          - 26d8b: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - dee49: ''
+          - 26d8b: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - dee49: false
+          - 26d8b: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - dee49: ''
+          - 26d8b: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - dee49: ''
+          - 26d8b: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - dee49:
+              ordered: []
+          - 26d8b:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - dee49: none
+          - 26d8b: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - dee49:
+              ordered: []
+          - 26d8b:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - dee49: 320.578125
+          - 26d8b: 77.578125
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered: []
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: distCompaniesTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: distCompaniesTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - dee49: 'false'
+          - 26d8b: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - dee49: none
+          - 26d8b: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - dee49: center
+          - 26d8b: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - dee49: Enter value
+          - 26d8b: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - dee49: ''
+          - 26d8b: ''
+    - _columnLabel:
+        ordered:
+          - dee49: ID
+          - 26d8b: Name
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer5
+    subcontainer: 443b9
+    row: 0.4
+    height: 8
+    width: 12
+createdAt: 2023-09-29T16:53:23.665Z

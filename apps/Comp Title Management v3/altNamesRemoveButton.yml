@@ -1,0 +1,44 @@
+id: altNamesRemoveButton
+uuid: 796bf758-52fa-460f-a5d1-f62d379b3a59
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: center
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: '-'
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: widget
+            - method: open
+            - pluginId: altNamesTagsModal
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{altNamesTagsVariable.value.toString()}}'
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 14.799999999999999
+    col: 5
+    height: 1
+    width: 1
+createdAt: 2023-10-03T21:06:03.639Z

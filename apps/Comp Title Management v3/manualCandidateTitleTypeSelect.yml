@@ -1,0 +1,97 @@
+id: manualCandidateTitleTypeSelect
+uuid: 6f29814b-5355-47b4-b951-d001d6354d1e
+type: widget
+subtype: SelectWidget2
+template:
+  ordered:
+    - imageByIndex:
+        array: []
+    - _disabledByIndex: []
+    - showSelectionIndicator: true
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item.ID }}'
+    - readOnly: false
+    - iconAfter: ''
+    - _iconByIndex: []
+    - overlayMinWidth: null
+    - allowDeselect: false
+    - inputValue: ''
+    - marginType: normal
+    - hidden: false
+    - customValidation: ''
+    - data: '{{ get_ctm_title_type_dropdown.data }}'
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
+    - textBefore: ''
+    - _fallbackTextByIndex: []
+    - selectedItem: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: any
+    - hiddenByIndex:
+        array: []
+    - labelCaption: ''
+    - labelWidth: '33'
+    - deprecatedLabels:
+        array: []
+    - _hiddenByIndex: []
+    - placeholder: any
+    - _captionByIndex: []
+    - itemAdornmentSize: auto
+    - label: Type
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - allowCustomValue: false
+    - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex:
+        array: []
+    - iconBefore: ''
+    - colorByIndex:
+        array: []
+    - selectedLabel: ''
+    - events:
+        ordered: []
+    - _ids: []
+    - emptyMessage: No options
+    - overlayMaxHeight: 375
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - _labels: []
+    - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - _imageByIndex: []
+    - required: false
+    - labels: '{{ item.NAME }}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: mapOtherTitlesModal
+    row: 13.6
+    col: 8
+    height: 1
+    width: 2
+createdAt: 2023-10-05T01:22:09.567Z

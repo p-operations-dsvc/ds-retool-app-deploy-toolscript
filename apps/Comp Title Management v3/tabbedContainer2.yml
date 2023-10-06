@@ -1,0 +1,100 @@
+id: tabbedContainer2
+type: widget
+subtype: ContainerWidget2
+template:
+  ordered:
+    - _disabledByIndex:
+        - false
+        - ''
+        - ''
+        - ''
+    - heightType: auto
+    - currentViewKey: '{{ self.viewKeys[0] }}'
+    - iconByIndex:
+        array: []
+    - clickable: false
+    - _iconByIndex:
+        - ''
+        - ''
+        - ''
+        - ''
+    - showFooterBorder: true
+    - marginType: normal
+    - enableFullBleed: false
+    - showBorder: true
+    - hidden: false
+    - showHeader: true
+    - hoistFetching: false
+    - paddingType: normal
+    - views:
+        array: []
+    - showInEditor: false
+    - footerPaddingType: normal
+    - tooltipText: ''
+    - hiddenByIndex:
+        array: []
+    - _hiddenByIndex:
+        - false
+        - ''
+        - ''
+        - ''
+    - currentViewIndex: null
+    - _hasMigratedNestedItems: true
+    - transition: none
+    - showHeaderBorder: true
+    - itemMode: static
+    - _tooltipByIndex:
+        - ''
+        - ''
+        - ''
+        - ''
+    - tooltipByIndex:
+        array: []
+    - showFooter: false
+    - _viewKeys:
+        - Title
+        - Title Talent
+        - Related Titles
+        - Alt Titles
+    - events:
+        ordered: []
+    - _ids:
+        - eae7c
+        - 443b9
+        - 4153c
+        - 6c9ea
+    - viewKeys:
+        array: []
+    - iconPositionByIndex:
+        array: []
+    - _iconPositionByIndex:
+        - left
+        - ''
+        - ''
+        - ''
+    - hovered: false
+    - loading: false
+    - overflowType: scroll
+    - disabled: false
+    - _labels:
+        - ''
+        - ''
+        - ''
+        - ''
+    - headerPaddingType: normal
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - showBody: true
+    - labels:
+        array: []
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 443b9
+    row: 2.000000000000001
+    height: 4
+    width: 12
+createdAt: 2023-09-27T18:33:24.675Z

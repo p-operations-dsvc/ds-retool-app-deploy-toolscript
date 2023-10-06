@@ -1,0 +1,56 @@
+id: addNewGoldenTitlePlotInput
+uuid: ea75b897-6afb-4b0f-9a60-3ce89f382ff7
+type: widget
+subtype: TextInputWidget2
+template:
+  ordered:
+    - spellCheck: false
+    - readOnly: false
+    - iconAfter: ''
+    - showCharacterCount: false
+    - autoComplete: false
+    - marginType: normal
+    - maxLength: null
+    - hidden: false
+    - customValidation: ''
+    - patternType: ''
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: true
+    - pattern: ''
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: PLOT
+    - value: '{{table21.data[0].PLOT}}'
+    - labelCaption: ''
+    - labelWidth: '33'
+    - autoFill: ''
+    - placeholder: Enter value
+    - label: Plot
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - iconBefore: ''
+    - minLength: null
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - autoCapitalize: none
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: addNewGoldenTitle
+    row: 9
+    height: 1
+    width: 12
+createdAt: 2023-10-05T19:50:34.649Z

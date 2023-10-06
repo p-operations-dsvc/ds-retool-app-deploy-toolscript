@@ -1,0 +1,54 @@
+id: otherTitleMapButton
+uuid: 1bbae31f-a022-4449-9798-bc4b16b8724b
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: Map
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: bold/travel-map-alternate
+    - events:
+        - ordered:
+            - event: click
+            - type: widget
+            - method: open
+            - pluginId: mapOtherTitlesModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: state
+            - method: setValue
+            - pluginId: otherTitleToMapVariable
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{otherTitleToMap.value}}'
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: '{{securityGroupCheck.value}}'
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 4153c
+    col: 11
+    height: 1
+    width: 1
+createdAt: 2023-10-04T18:05:50.709Z

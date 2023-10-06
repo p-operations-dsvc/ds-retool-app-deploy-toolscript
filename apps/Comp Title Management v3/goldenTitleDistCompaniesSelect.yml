@@ -1,0 +1,105 @@
+id: goldenTitleDistCompaniesSelect
+type: widget
+subtype: MultiselectWidget2
+template:
+  ordered:
+    - imageByIndex:
+        array: []
+    - _disabledByIndex: []
+    - showSelectionIndicator: true
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item.ID }}'
+    - readOnly: false
+    - iconAfter: ''
+    - _iconByIndex: []
+    - wrapTags: true
+    - overlayMinWidth: null
+    - selectedIndexes:
+        array: []
+    - selectedItems:
+        array: []
+    - inputValue: ''
+    - marginType: normal
+    - persistSearchTerm: false
+    - hidden: false
+    - customValidation: ''
+    - data: '{{ get_ctm_distribution_company.data }}'
+    - maxCount: null
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
+    - textBefore: ''
+    - _fallbackTextByIndex: []
+    - minLines: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: DISTRIBUTION_COMPANIES
+    - value: >-
+        {{get_golden_title_details.data.DISTRIBUTION_COMPANIES[0]===null?null:get_golden_title_details.data.DISTRIBUTION_COMPANIES[0].split('~')}}
+    - hiddenByIndex:
+        array: []
+    - labelCaption: ''
+    - labelWidth: '33'
+    - deprecatedLabels:
+        array: []
+    - _hiddenByIndex: []
+    - placeholder: >-
+        {{get_golden_title_details.data.DISTRIBUTION_COMPANIES[0]===null?null:get_golden_title_details.data.DISTRIBUTION_COMPANIES[0].split('~')}}
+    - _captionByIndex: []
+    - itemAdornmentSize: auto
+    - label: Distribution Companies
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - allowCustomValue: false
+    - invalid: false
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex:
+        array: []
+    - iconBefore: ''
+    - colorByIndex:
+        array: []
+    - events:
+        ordered: []
+    - _ids: []
+    - emptyMessage: No options
+    - selectedLabels:
+        array: []
+    - overlayMaxHeight: 375
+    - maxLines: null
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - minCount: null
+    - _labels: []
+    - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - _imageByIndex: []
+    - required: false
+    - labels: '{{ item.NAME }}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 8
+    height: 1
+    width: 12
+createdAt: 2023-09-28T23:42:32.670Z

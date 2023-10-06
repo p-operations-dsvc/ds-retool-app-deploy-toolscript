@@ -1,0 +1,27 @@
+id: formTitle1
+uuid: f770e2b4-c146-4686-800c-982baf837e96
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: '#### New Golden Title values'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: addNewGoldenTitle
+    rowGroup: header
+    height: 0.6
+    width: 12
+createdAt: 2023-10-05T19:48:23.398Z
