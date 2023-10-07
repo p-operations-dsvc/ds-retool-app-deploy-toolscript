@@ -1,16 +1,16 @@
-id: altNamesAddButton
-uuid: 6a027536-43f1-4a43-9274-434a0f233278
+id: unmapOtherTitleCancelButto
+uuid: 92922b1e-cc70-4023-96bf-74fef05687db
 type: widget
 subtype: ButtonWidget2
 template:
   ordered:
-    - horizontalAlign: center
+    - horizontalAlign: stretch
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: +
+    - text: Cancel
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -19,15 +19,12 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: script
-            - method: run
-            - pluginId: ''
+            - type: widget
+            - method: close
+            - pluginId: unmapOtherTitleModal
             - targetId: null
             - params:
-                ordered:
-                  - src: >
-                      altNamesTagsVariable.setValue
-                      (altNamesTagsVariable.value.concat(goldenTitleAltNamesTextInput.value))
+                ordered: []
             - waitType: debounce
             - waitMs: '0'
     - loading: false
@@ -38,9 +35,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: goldenTitleForm
-    row: 12.999999999999998
-    col: 4
+    container: unmapOtherTitleModal
+    row: 3.2
+    col: 2
     height: 1
-    width: 1
-createdAt: 2023-10-03T19:30:51.474Z
+    width: 9
+createdAt: 2023-10-06T23:54:12.479Z

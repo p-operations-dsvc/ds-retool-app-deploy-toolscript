@@ -82,7 +82,7 @@ template:
         array: []
     - maintainSpaceWhenHidden: false
     - _imageByIndex: []
-    - required: true
+    - required: false
     - labels: '{{ item.NAME }}'
 style:
   ordered: []

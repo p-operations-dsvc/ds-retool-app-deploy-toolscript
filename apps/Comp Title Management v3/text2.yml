@@ -1,5 +1,5 @@
-id: text1
-uuid: 531cd631-c4c3-4cda-b0a9-62593616e2ad
+id: text2
+uuid: 71a29e80-d885-43cc-907e-3d6ad0184086
 type: widget
 subtype: TextWidget2
 template:
@@ -12,7 +12,7 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: <b>Related Titles</b>
+    - value: <b>Related By Titles</b>
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
@@ -22,6 +22,7 @@ position2:
   position2:
     container: tabbedContainer4
     subcontainer: '04808'
+    row: 9.2
     col: 4
     height: 0.6
-createdAt: 2023-10-06T23:13:33.261Z
+createdAt: 2023-10-06T23:14:40.367Z

@@ -17,10 +17,10 @@ template:
     - disableEdits: false
     - _rowHeight: small
     - _columnIds:
+        - 88d22
         - '18478'
         - a5ea1
         - 562a4
-        - 88d22
     - _isSaving: false
     - _actionIds: []
     - _clearChangeset: false

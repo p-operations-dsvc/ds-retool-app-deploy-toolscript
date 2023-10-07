@@ -38,7 +38,8 @@ template:
         - a1b8e
         - a4f72
     - _isSaving: false
-    - _actionIds: []
+    - _actionIds:
+        - 1b4cf
     - _clearChangeset: false
     - caseSensitiveFiltering: false
     - _limitOffsetRowCount: null
@@ -240,7 +241,8 @@ template:
           - a1b8e: left
           - a4f72: left
     - _actionIcon:
-        ordered: []
+        ordered:
+          - 1b4cf: bold/travel-map-location-target-off
     - _columnTooltip:
         ordered:
           - 4ed6e: ''
@@ -308,7 +310,8 @@ template:
     - _expandedRows: null
     - changesetObject: null
     - _actionDisabled:
-        ordered: []
+        ordered:
+          - 1b4cf: ''
     - _columnReferenceId:
         ordered:
           - 4ed6e: ''
@@ -444,6 +447,28 @@ template:
         ordered: []
     - events:
         - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: unmapOtherTitle
+            - targetId: 1b4cf
+            - params:
+                ordered:
+                  - value: >-
+                      {{currentRow.SOURCE_SYSTEM_TITLE_ID}}~{{currentRow.SOURCE_SYSTEM}}
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: open
+            - pluginId: unmapOtherTitleModal
+            - targetId: 1b4cf
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
             - event: selectRow
             - type: datasource
             - method: trigger
@@ -533,11 +558,13 @@ template:
           - a4f72: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
-        ordered: []
+        ordered:
+          - 1b4cf: Unmap
     - _virtualizeEndIndex: 0
     - selectedRow: null
     - _actionHidden:
-        ordered: []
+        ordered:
+          - 1b4cf: ''
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
@@ -574,7 +601,7 @@ position2:
   position2:
     container: tabbedContainer1
     subcontainer: 4153c
-    row: 1
+    row: 3.4
     height: 22.6
     width: 12
 createdAt: 2023-09-27T18:35:58.567Z

@@ -1,5 +1,5 @@
-id: titleRelationshipTable
-uuid: e3107acd-2139-4b7c-b42e-8c6e5eab2d00
+id: remappedFromGoldenTitleTable
+uuid: 60520f48-9003-48be-88aa-314dcb8677d9
 type: widget
 subtype: TableWidget2
 template:
@@ -8,16 +8,18 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
     - disableEdits: false
     - _rowHeight: small
     - _columnIds:
-        - c31f7
-        - 46ebb
+        - 66ecf
+        - aa737
+        - 785dc
     - _isSaving: false
     - _actionIds: []
     - _clearChangeset: false
@@ -28,9 +30,11 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - c31f7:
+          - 66ecf:
               ordered: []
-          - 46ebb:
+          - aa737:
+              ordered: []
+          - 785dc:
               ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns: []
@@ -55,14 +59,17 @@ template:
           - 4d: custom
     - _columnOptionList:
         ordered:
-          - c31f7:
+          - 66ecf:
               ordered: []
-          - 46ebb:
+          - aa737:
+              ordered: []
+          - 785dc:
               ordered: []
     - _columnValueOverride:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
@@ -72,49 +79,56 @@ template:
     - _currentPage: 0
     - _columnKey:
         ordered:
-          - c31f7: ID
-          - 46ebb: NAME
+          - 66ecf: TITLE_NAME
+          - aa737: SOURCE_SYSTEM_TITLE_ID
+          - 785dc: REMAPPED_TO_TITLE
     - hidden: false
     - _toolbarButtonIds:
         - 1a
         - 3c
         - 4d
-    - data: '{{ get_ctm_title_relationship_type.data }}'
+    - data: '{{ get_remapped_from_golden_title_details.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
     - _columnFormat:
         ordered:
-          - c31f7: string
-          - 46ebb: string
+          - 66ecf: string
+          - aa737: string
+          - 785dc: string
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: c31f7
+    - _primaryKeyColumnId: ''
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - c31f7: left
-          - 46ebb: left
+          - 66ecf: left
+          - aa737: left
+          - 785dc: left
     - _actionIcon:
         ordered: []
     - _columnTooltip:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
     - _columnIcon:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
     - _columnCellTooltipMode:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -123,8 +137,9 @@ template:
     - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
-          - c31f7: false
-          - 46ebb: false
+          - 66ecf: false
+          - aa737: false
+          - 785dc: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -133,23 +148,27 @@ template:
         ordered: []
     - _columnReferenceId:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: single
     - _columnCaption:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - c31f7:
+          - 66ecf:
               ordered: []
-          - 46ebb:
+          - aa737:
+              ordered: []
+          - 785dc:
               ordered: []
     - _changeset: null
     - _afterCursor: ''
@@ -158,8 +177,9 @@ template:
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
         ordered:
-          - c31f7: none
-          - 46ebb: none
+          - 66ecf: none
+          - aa737: none
+          - 785dc: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -169,14 +189,17 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - c31f7:
+          - 66ecf:
               ordered: []
-          - 46ebb:
+          - aa737:
+              ordered: []
+          - 785dc:
               ordered: []
     - _columnSize:
         ordered:
-          - c31f7: 273.421875
-          - 46ebb: 189.53125
+          - 66ecf: 755.359375
+          - aa737: 168.640625
+          - 785dc: 118.53125
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -192,22 +215,12 @@ template:
         ordered: []
     - events:
         - ordered:
-            - event: save
-            - type: datasource
-            - method: trigger
-            - pluginId: update_unmap_other_title
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
             - type: widget
             - waitMs: '0'
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: titleRelationshipTable
+            - pluginId: remappedFromGoldenTitleTable
             - targetId: 3c
         - ordered:
             - type: widget
@@ -215,19 +228,21 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: titleRelationshipTable
+            - pluginId: remappedFromGoldenTitleTable
             - targetId: 4d
     - _columnEditable:
         ordered:
-          - c31f7: 'false'
-          - 46ebb: false
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
     - pagination: null
     - selectedDataIndexes:
         array: []
     - _columnGroupAggregationMode:
         ordered:
-          - c31f7: none
-          - 46ebb: none
+          - 66ecf: none
+          - aa737: none
+          - 785dc: none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -242,13 +257,15 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - c31f7: center
-          - 46ebb: center
-    - _enableSaveActions: false
+          - 66ecf: center
+          - aa737: center
+          - 785dc: center
+    - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - c31f7: Enter value
-          - 46ebb: Enter value
+          - 66ecf: Enter value
+          - aa737: Enter value
+          - 785dc: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -259,19 +276,22 @@ template:
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
     - _columnLabel:
         ordered:
-          - c31f7: ID
-          - 46ebb: Name
+          - 66ecf: Title Name
+          - aa737: Source System Title ID
+          - 785dc: Remapped toTitle
     - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer5
-    subcontainer: 7cf52
+    container: tabbedContainer4
+    subcontainer: '04808'
+    row: 19
     height: 8
     width: 12
-createdAt: 2023-09-29T16:53:24.735Z
+createdAt: 2023-10-06T23:23:35.635Z

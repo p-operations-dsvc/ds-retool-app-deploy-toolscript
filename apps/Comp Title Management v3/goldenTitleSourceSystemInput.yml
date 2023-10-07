@@ -13,7 +13,7 @@ template:
     - hidden: false
     - customValidation: ''
     - hideValidationMessage: false
-    - minLines: 2
+    - minLines: '1'
     - validationMessage: ''
     - showInEditor: false
     - pattern: ''
@@ -46,7 +46,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 24.399999999999995
+    row: 22.599999999999994
     height: 1
     width: 12
 createdAt: 2023-09-28T23:42:37.412Z

@@ -21,12 +21,19 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: |-
-        select  a.RELATED_TITLE_TYPE, b.TT_CODE, b.TITLE_NAME
+    - query: >-
+        select a.RELATED_TITLE_TYPE, b.TT_CODE, b.TITLE_NAME, b.release_year,
+        b.title_type
+
         from EDWCTM.IMDB_RELATED_TITLE a,
-        EDWCTM.IMDB_TITLE b
-        where a.title_id={{currentRowGoldenTitleIMDBId.value}}
+
+        EDWCTM.IMDB_TITLE b 
+
+        where a.TITLE_ID={{currentRowGoldenTitleIMDBId.value}}
+
         and a.RELATED_TITLE_ID=b.TT_CODE
+
+        order by a.RELATED_TITLE_TYPE, b.title_type
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
