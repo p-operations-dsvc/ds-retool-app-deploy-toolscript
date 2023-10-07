@@ -23,8 +23,11 @@ template:
     - showFailureToaster: true
     - query: >-
         select GOLDEN_TITLE_ID, IMDB_TT_CD, TITLE_NAME, TITLE_TYPE,
-        RELEASE_YEAR, SEASON_NUM, EPISODE_NUM,  PRIMARY_GENRE,  IMDB_URL,
-        parent_golden_title_id
+        RELEASE_YEAR, case when SEASON_NUM=-1 then null else SEASON_NUM end as
+        SEASON_NUM, 
+
+        case when EPISODE_NUM = -1 then null else EPISODE_NUM end as
+        EPISODE_NUM,  PRIMARY_GENRE,  IMDB_URL, parent_golden_title_id
 
         from EDWCTM.GOLDEN_TITLE where release_year between
         {{createdDateRange.value.start.split ('T')[0].split('-')[0]}} and

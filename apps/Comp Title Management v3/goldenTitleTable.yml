@@ -123,7 +123,11 @@ template:
           - 609f8:
               ordered: []
           - a6e74:
-              ordered: []
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_title_type.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
           - 3d10e:
               ordered: []
           - 22dd9:
@@ -140,7 +144,7 @@ template:
           - 1bf70: ''
           - f4b5d: ''
           - 609f8: ''
-          - a6e74: '{{ _.startCase(item) }}'
+          - a6e74: '{{ item }}'
           - 3d10e: ''
           - 22dd9: ''
           - 8cf18: '{{ _.startCase(item) }}'
@@ -400,13 +404,13 @@ template:
           - 8cf18: 102.859375
           - aab45: 136.15625
           - f4b5d: 570.515625
-          - a6e74: 94.890625
+          - a6e74: 109.890625
           - 1bf70: 86.921875
           - 609f8: 47.09375
-          - 3d10e: 87.375
+          - 3d10e: 70.375
           - '50025': 250.890625
           - ddd1f: 70.421875
-          - 22dd9: 90.84375
+          - 22dd9: 73.84375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
