@@ -21,15 +21,20 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >-
-        select  a.golden_title_id, a.TITLE_NAME, a.RELEASE_YEAR,
-        a.SOURCE_SYSTEM_NAME, a.IMDB_TT_CD, a.TITLE_TYPE
+    - query: >
+        select   a.TITLE_ID, a.SOURCE_SYSTEM_TITLE_ID, a.NAME_FROM_SOURCE,
+        a.RELEASE_YEAR_FROM_SOURCE as RELEASE_YEAR, a.SOURCE_SYSTEM as
+        SOURCE_SYSTEM_NAME,  a.TITLE_TYPE
 
         from 
 
-        EDWCTM.GOLDEN_TITLE a
+        EDWCTM.other_TITLE a
 
-        where a.parent_golden_title_id={{currentRowGoldenTitleParentId.value}} 
+        where a.golden_title_id=
+
+        {{currentRowGoldenTitleId.value}}
+
+         
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

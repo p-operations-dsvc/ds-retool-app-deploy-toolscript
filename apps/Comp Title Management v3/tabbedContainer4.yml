@@ -40,7 +40,7 @@ template:
     - _hiddenByIndex:
         - ''
         - ''
-        - ''
+        - '{{get_golden_title_details.data.TITLE_TYPE[0]==''tvSeries''?false:true}}'
         - false
         - false
         - false

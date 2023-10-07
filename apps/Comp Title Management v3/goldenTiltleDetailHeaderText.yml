@@ -1,5 +1,4 @@
-id: text1
-uuid: 531cd631-c4c3-4cda-b0a9-62593616e2ad
+id: goldenTiltleDetailHeaderText
 type: widget
 subtype: TextWidget2
 template:
@@ -12,7 +11,8 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: <b>Related Titles</b>
+    - value: |
+        ### Viewing '{{get_golden_title_details.data.TITLE_NAME[0]}}' 
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
@@ -20,8 +20,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer4
-    subcontainer: '04808'
-    col: 4
+    container: goldenTitleModal
+    row: 0.6
+    col: 1
     height: 0.6
-createdAt: 2023-10-06T23:13:33.261Z
+    width: 10
+createdAt: 2023-09-28T22:44:50.846Z

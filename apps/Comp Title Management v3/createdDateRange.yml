@@ -27,7 +27,7 @@ template:
     - labelCaption: ''
     - maxDate: ''
     - labelWidth: '33'
-    - label: Created Date
+    - label: Release Year
     - formattedValue: ''
     - _validate: false
     - labelWidthUnit: '%'

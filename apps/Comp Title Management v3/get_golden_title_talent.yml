@@ -28,6 +28,7 @@ template:
         b.TALENT_NAME
           FROM edwctm.IMDB_TITLE_TALENT a join edwctm.IMDB_TALENT b on a.TALENT_CODE=b.TALENT_CODE 
           where TITLE_ID = {{currentRowGoldenTitleIMDBId.value}}
+          order by BILLING asc
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

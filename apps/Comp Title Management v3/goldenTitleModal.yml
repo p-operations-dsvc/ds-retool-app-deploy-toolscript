@@ -22,7 +22,7 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-    - modalWidth: 70%
+    - modalWidth: 90%
     - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''

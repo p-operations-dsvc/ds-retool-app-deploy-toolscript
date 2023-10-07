@@ -1,5 +1,5 @@
-id: goldenTitleAltNamesTextInput
-uuid: 0a333e5a-d41c-4132-9598-c20c3e0f1f21
+id: goldenTitleInactiveIndText
+uuid: e188f7d3-e110-4642-b3d5-e69b73d4f3e9
 type: widget
 subtype: TextInputWidget2
 template:
@@ -19,17 +19,17 @@ template:
     - validationMessage: ''
     - textAfter: ''
     - showInEditor: false
-    - showClear: true
+    - showClear: false
     - pattern: ''
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: ''
+    - value: '{{get_golden_title_details.data.INACTIVE_INDICATOR[0]}}'
     - labelCaption: ''
-    - labelWidth: '50'
+    - labelWidth: '33'
     - autoFill: ''
-    - placeholder: ''
-    - label: Alternate Names
+    - placeholder: Enter value
+    - label: Inactive Indicator
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false
@@ -40,7 +40,7 @@ template:
         ordered: []
     - autoCapitalize: none
     - loading: false
-    - disabled: false
+    - disabled: 'true'
     - labelPosition: left
     - labelWrap: false
     - maintainSpaceWhenHidden: false
@@ -50,7 +50,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 12.999999999999998
+    row: 20.599999999999998
     height: 1
-    width: 4
-createdAt: 2023-10-03T19:30:39.933Z
+    width: 12
+createdAt: 2023-10-06T21:53:57.699Z

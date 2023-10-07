@@ -50,10 +50,10 @@ template:
         - 71fa4
         - 3e3be
         - 18e9b
-        - 877fd
         - 126d5
         - b60e8
         - d190e
+        - 877fd
         - 4dd51
         - 66cb6
     - _isSaving: false
@@ -160,15 +160,27 @@ template:
           - 9b9bb:
               ordered: []
           - cd387:
-              ordered: []
+              ordered:
+                - mode: manual
+                - mappedData: '{{ get_ctm_genre.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
           - 5e1a3:
               ordered: []
           - 33c3c:
               ordered: []
           - b462b:
-              ordered: []
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_production_status.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
           - 0618b:
-              ordered: []
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_title_type.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
           - 877fd:
               ordered: []
           - 66cb6:
@@ -176,15 +188,22 @@ template:
           - a8004:
               ordered: []
           - 71fa4:
-              ordered: []
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_language.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
     - _columnValueOverride:
         ordered:
           - 5008c: ''
           - d190e: ''
-          - c5423: ''
-          - 3e3be: ''
-          - 126d5: ''
-          - 18e9b: ''
+          - c5423: '{{ item.split(''~'') }}'
+          - 3e3be: '{{ item.split(''~'') }}'
+          - 126d5: |-
+              <a href= "{{item}}" target="_blank">
+              IMDB Link
+              </a>
+          - 18e9b: '{{ item.split(''~'') }}'
           - 07b4a: ''
           - 8d457: ''
           - cebf4: ''
@@ -193,13 +212,13 @@ template:
           - 9b9bb: ''
           - cd387: ''
           - 5e1a3: ''
-          - 33c3c: ''
+          - 33c3c: '{{ item.split(''~'') }}'
           - b462b: ''
           - 0618b: ''
           - 877fd: ''
           - 66cb6: ''
           - a8004: ''
-          - 71fa4: ''
+          - 71fa4: '{{ item.split(''~'') }}'
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
@@ -267,25 +286,25 @@ template:
         ordered:
           - 5008c: string
           - d190e: string
-          - c5423: string
-          - 3e3be: string
-          - 126d5: link
-          - 18e9b: string
+          - c5423: tags
+          - 3e3be: tags
+          - 126d5: html
+          - 18e9b: tags
           - 07b4a: decimal
           - 8d457: decimal
           - cebf4: decimal
           - b60e8: string
           - 4dd51: datetime
           - 9b9bb: decimal
-          - cd387: string
+          - cd387: tag
           - 5e1a3: string
-          - 33c3c: string
-          - b462b: string
-          - 0618b: string
-          - 877fd: string
+          - 33c3c: tags
+          - b462b: tag
+          - 0618b: tag
+          - 877fd: multilineString
           - 66cb6: datetime
           - a8004: string
-          - 71fa4: string
+          - 71fa4: tags
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
@@ -479,14 +498,17 @@ template:
           - d190e:
               ordered: []
           - c5423:
-              ordered: []
+              ordered:
+                - automaticColors: true
           - 3e3be:
-              ordered: []
+              ordered:
+                - automaticColors: true
           - 126d5:
               ordered:
                 - showUnderline: hover
           - 18e9b:
-              ordered: []
+              ordered:
+                - automaticColors: true
           - 07b4a:
               ordered:
                 - showSeparators: false
@@ -508,15 +530,19 @@ template:
                 - showSeparators: false
                 - notation: standard
           - cd387:
-              ordered: []
+              ordered:
+                - automaticColors: true
           - 5e1a3:
               ordered: []
           - 33c3c:
-              ordered: []
+              ordered:
+                - automaticColors: true
           - b462b:
-              ordered: []
+              ordered:
+                - automaticColors: true
           - 0618b:
-              ordered: []
+              ordered:
+                - automaticColors: true
           - 877fd:
               ordered: []
           - 66cb6:
@@ -524,7 +550,8 @@ template:
           - a8004:
               ordered: []
           - 71fa4:
-              ordered: []
+              ordered:
+                - automaticColors: true
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -610,8 +637,8 @@ template:
           - d190e: 116.421875
           - c5423: 153.015625
           - 3e3be: 111.65625
-          - 126d5: 243.125
-          - 18e9b: 73.28125
+          - 126d5: 84.125
+          - 18e9b: 246.28125
           - 07b4a: 90.09375
           - 8d457: 87.375
           - cebf4: 96.75
@@ -724,7 +751,7 @@ template:
     - selectedCell: null
     - _defaultSelectedRow:
         ordered:
-          - mode: index
+          - mode: none
           - indexType: display
           - index: 0
     - _hasNextPage: false
@@ -757,25 +784,25 @@ template:
         ordered:
           - 5008c: Enter value
           - d190e: Enter value
-          - c5423: Enter value
-          - 3e3be: Enter value
+          - c5423: Select options
+          - 3e3be: Select options
           - 126d5: ''
-          - 18e9b: Enter value
+          - 18e9b: Select options
           - 07b4a: Enter value
           - 8d457: Enter value
           - cebf4: Enter value
           - b60e8: Enter value
           - 4dd51: Enter value
           - 9b9bb: Enter value
-          - cd387: Enter value
+          - cd387: Select option
           - 5e1a3: Enter value
-          - 33c3c: Enter value
-          - b462b: Enter value
-          - 0618b: Enter value
+          - 33c3c: Select options
+          - b462b: Select option
+          - 0618b: Select option
           - 877fd: Enter value
           - 66cb6: Enter value
           - a8004: Enter value
-          - 71fa4: Enter value
+          - 71fa4: Select options
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -793,24 +820,26 @@ template:
           - 126d5: ''
           - 18e9b: ''
           - 07b4a: ''
-          - 8d457: ''
+          - 8d457: >-
+              {{get_golden_title_details.data.TITLE_TYPE=='tvEpisode'?false:true}}
           - cebf4: 'true'
           - b60e8: ''
-          - 4dd51: ''
-          - 9b9bb: ''
+          - 4dd51: 'true'
+          - 9b9bb: >-
+              {{get_golden_title_details.data.TITLE_TYPE=='tvEpisode'?false:true}}
           - cd387: ''
           - 5e1a3: ''
           - 33c3c: ''
           - b462b: ''
           - 0618b: ''
           - 877fd: ''
-          - 66cb6: ''
+          - 66cb6: 'true'
           - a8004: ''
           - 71fa4: ''
     - _columnLabel:
         ordered:
           - 5008c: IMDB TT Code
-          - d190e: Inactive Ind
+          - d190e: Inactive
           - c5423: Production Companies
           - 3e3be: Alt Names
           - 126d5: URL
@@ -837,6 +866,6 @@ position2:
   position2:
     container: tabbedContainer4
     subcontainer: '90040'
-    height: 8
+    height: 3.2
     width: 12
 createdAt: 2023-10-03T23:12:29.889Z

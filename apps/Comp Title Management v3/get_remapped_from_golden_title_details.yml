@@ -1,4 +1,4 @@
-id: get_golden_title
+id: get_remapped_from_golden_title_details
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
@@ -18,26 +18,18 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: true
+    - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >-
-        select GOLDEN_TITLE_ID, IMDB_TT_CD, TITLE_NAME, TITLE_TYPE,
-        RELEASE_YEAR, SEASON_NUM, EPISODE_NUM,  PRIMARY_GENRE,  IMDB_URL,
-        parent_golden_title_id
-
-        from EDWCTM.GOLDEN_TITLE where release_year between
-        {{createdDateRange.value.start.split ('T')[0].split('-')[0]}} and
-        {{createdDateRange.value.end.split ('T')[0].split('-')[0]}}  and
-        title_type like '%'||case when {{titleTypeSelect.value}}='any' then ''
-        else {{titleTypeSelect.value}} end||'%' 
-
-        and title_name ilike '%'||{{ titleNameInput.value}}||'%'
-
-        and INACTIVE_INDICATOR='false'
-
-        order by GOLDEN_TITLE_ID limit {{ goldenTitleTable.pagination.pageSize
-        }} offset  {{ goldenTitleTable.pagination.offset }}
+    - query: |-
+        select
+        a.SOURCE_SYSTEM_TITLE_ID,
+        a.REMAPPED_TO_TITLE,
+        a.TITLE_NAME
+        from EDWCTM.IMDB_TITLE a
+        where   REMAPPED_TO_TITLE is not null
+        and a.SOURCE_SYSTEM_TITLE_ID={{currentRowGoldenTitleIMDBId.value}}
+        or a.SOURCE_SYSTEM_TITLE_ID='tt1748269'
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -50,7 +42,7 @@ template:
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: true
+    - showSuccessToaster: false
     - dataArray: []
     - cacheKeyTtl: ''
     - filterBy: ''
@@ -93,7 +85,6 @@ template:
         // Query results are available as the `data` variable
         return formatDataAsArray(data)
     - events: []
-    - isMultiplayerEdited: false
     - tableName: ''
     - queryTimeout: '10001'
     - workflowId: null
@@ -110,4 +101,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-09-27T22:19:26.548Z
+createdAt: 2023-10-06T23:23:49.390Z

@@ -1,5 +1,5 @@
-id: text1
-uuid: 531cd631-c4c3-4cda-b0a9-62593616e2ad
+id: unmapOtherTitleText
+uuid: ccdc2c34-2b48-4c20-9e97-f2566a1a3b87
 type: widget
 subtype: TextWidget2
 template:
@@ -12,7 +12,7 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: <b>Related Titles</b>
+    - value: <b>Are you sure that you want to proceed?</b>
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
@@ -20,8 +20,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer4
-    subcontainer: '04808'
-    col: 4
+    container: unmapOtherTitleModal
+    row: 0.2
+    col: 2
     height: 0.6
-createdAt: 2023-10-06T23:13:33.261Z
+    width: 9
+createdAt: 2023-10-06T23:54:04.841Z

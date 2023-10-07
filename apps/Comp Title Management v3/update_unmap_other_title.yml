@@ -1,4 +1,4 @@
-id: get_golden_title
+id: update_unmap_other_title
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
@@ -18,26 +18,18 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: true
+    - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >-
-        select GOLDEN_TITLE_ID, IMDB_TT_CD, TITLE_NAME, TITLE_TYPE,
-        RELEASE_YEAR, SEASON_NUM, EPISODE_NUM,  PRIMARY_GENRE,  IMDB_URL,
-        parent_golden_title_id
+    - query: >
+        update EDWCTM.OTHER_TITLE a
 
-        from EDWCTM.GOLDEN_TITLE where release_year between
-        {{createdDateRange.value.start.split ('T')[0].split('-')[0]}} and
-        {{createdDateRange.value.end.split ('T')[0].split('-')[0]}}  and
-        title_type like '%'||case when {{titleTypeSelect.value}}='any' then ''
-        else {{titleTypeSelect.value}} end||'%' 
+        set a.golden_title_id=null,
 
-        and title_name ilike '%'||{{ titleNameInput.value}}||'%'
+        a.MAPPED_STATE=false
 
-        and INACTIVE_INDICATOR='false'
-
-        order by GOLDEN_TITLE_ID limit {{ goldenTitleTable.pagination.pageSize
-        }} offset  {{ goldenTitleTable.pagination.offset }}
+        where a.source_system_title_id={{unmapOtherTitle.value.split ('~')[0]}}
+        and a.source_system={{unmapOtherTitle.value.split ('~')[1]}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -50,7 +42,7 @@ template:
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: true
+    - showSuccessToaster: false
     - dataArray: []
     - cacheKeyTtl: ''
     - filterBy: ''
@@ -92,7 +84,41 @@ template:
     - transformer: |-
         // Query results are available as the `data` variable
         return formatDataAsArray(data)
-    - events: []
+    - events:
+        - ordered:
+            - event: success
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: info
+                        - title: Unmapped successfully!
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: close
+            - pluginId: unmapOtherTitleModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_other_title
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - isMultiplayerEdited: false
     - tableName: ''
     - queryTimeout: '10001'
@@ -110,4 +136,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-09-27T22:19:26.548Z
+createdAt: 2023-10-06T23:47:01.601Z
