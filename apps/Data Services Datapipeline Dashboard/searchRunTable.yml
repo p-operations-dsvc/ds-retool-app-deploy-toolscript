@@ -85,7 +85,8 @@ template:
           - ff15c:
               ordered: []
     - _toolbarPosition: bottom
-    - _groupByColumns: []
+    - _groupByColumns:
+        ordered: []
     - _toolbarButtonLabel:
         ordered:
           - 1a: Filter
@@ -169,7 +170,7 @@ template:
               </a>
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: null
+    - _templatePageSize: '25'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true
@@ -428,22 +429,7 @@ template:
         array: []
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
-        ordered:
-          - c9777: none
-          - '242e6': none
-          - 3ced3: none
-          - 4d973: none
-          - 09d9e: none
-          - 4a038: none
-          - c4aeb: none
-          - '96e18': none
-          - 95c8a: none
-          - 3d40b: none
-          - 90bf1: none
-          - 218ca: none
-          - 5cc27: none
-          - '21516': none
-          - ff15c: none
+        ordered: []
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -591,7 +577,7 @@ template:
     - sortArray:
         array: []
     - _selectedCell: null
-    - overflowType: scroll
+    - overflowType: pagination
     - selectedCell: null
     - _defaultSelectedRow:
         ordered:
@@ -685,6 +671,6 @@ position2:
     container: mainContainer
     subcontainer: df36c
     row: 1.2
-    height: 8.8
+    height: 23.400000000000002
     width: 12
 createdAt: 2023-10-09T20:56:50.640Z

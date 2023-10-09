@@ -85,7 +85,8 @@ template:
           - 19a38:
               ordered: []
     - _toolbarPosition: bottom
-    - _groupByColumns: []
+    - _groupByColumns:
+        ordered: []
     - _toolbarButtonLabel:
         ordered:
           - 1a: Filter
@@ -163,7 +164,7 @@ template:
           - 19a38: '{{ _.startCase(item) }}'
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: null
+    - _templatePageSize: '25'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true
@@ -418,22 +419,7 @@ template:
         array: []
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
-        ordered:
-          - 37c78: none
-          - 9986d: none
-          - e1335: none
-          - 63b48: none
-          - 6c338: none
-          - d0658: none
-          - 39ed4: none
-          - 4ec76: none
-          - 1e22e: none
-          - 01fc1: none
-          - e3f43: none
-          - ea6ba: none
-          - '75008': none
-          - 22db9: none
-          - 19a38: none
+        ordered: []
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -566,7 +552,7 @@ template:
     - sortArray:
         array: []
     - _selectedCell: null
-    - overflowType: scroll
+    - overflowType: pagination
     - selectedCell: null
     - _defaultSelectedRow:
         ordered:
@@ -592,7 +578,7 @@ template:
           - '75008': center
           - 22db9: center
           - 19a38: center
-    - _enableSaveActions: true
+    - _enableSaveActions: false
     - _columnPlaceholder:
         ordered:
           - 37c78: Enter value
@@ -659,7 +645,8 @@ position2:
   position2:
     container: mainContainer
     subcontainer: d9644
-    row: 1.200000000000001
-    height: 11.4
-    width: 12
+    row: 1.600000000000001
+    col: 2
+    height: 20
+    width: 9
 createdAt: 2023-10-09T20:13:09.093Z
