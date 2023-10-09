@@ -1,0 +1,680 @@
+id: recentlyFailedTableV2
+uuid: 87556da0-4f56-40b9-90ae-56f00f7b3df4
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - b3e3c: ''
+          - 424b1: ''
+          - '469e4': ''
+          - e4cd6: ''
+          - 9950b: ''
+          - 64d38: ''
+          - 09f7e: ''
+          - 4c07b: ''
+          - ab199: ''
+          - dcdd3: ''
+          - f86a2: ''
+          - 8f4c6: ''
+          - d9266: ''
+          - 916aa: ''
+          - '70535': ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 09f7e
+        - 8f4c6
+        - f86a2
+        - 64d38
+        - 9950b
+        - b3e3c
+        - 916aa
+        - d9266
+        - '70535'
+        - 424b1
+        - ab199
+        - e4cd6
+        - 4c07b
+        - '469e4'
+        - dcdd3
+    - _isSaving: false
+    - _actionIds:
+        - 3ff74
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - b3e3c:
+              ordered: []
+          - 424b1:
+              ordered: []
+          - '469e4':
+              ordered: []
+          - e4cd6:
+              ordered: []
+          - 9950b:
+              ordered: []
+          - 64d38:
+              ordered: []
+          - 09f7e:
+              ordered: []
+          - 4c07b:
+              ordered: []
+          - ab199:
+              ordered: []
+          - dcdd3:
+              ordered: []
+          - f86a2:
+              ordered: []
+          - 8f4c6:
+              ordered: []
+          - d9266:
+              ordered: []
+          - 916aa:
+              ordered: []
+          - '70535':
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns:
+        ordered: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - b3e3c:
+              ordered: []
+          - 424b1:
+              ordered: []
+          - '469e4':
+              ordered: []
+          - e4cd6:
+              ordered: []
+          - 9950b:
+              ordered: []
+          - 64d38:
+              ordered: []
+          - 09f7e:
+              ordered: []
+          - 4c07b:
+              ordered: []
+          - ab199:
+              ordered: []
+          - dcdd3:
+              ordered: []
+          - f86a2:
+              ordered: []
+          - 8f4c6:
+              ordered: []
+          - d9266:
+              ordered: []
+          - 916aa:
+              ordered: []
+          - '70535':
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - b3e3c: ''
+          - 424b1: '{{ item }}'
+          - '469e4': ''
+          - e4cd6: '{{item?''Yes'':''No''}}'
+          - 9950b: ''
+          - 64d38: ''
+          - 09f7e: >-
+              <a href=
+              "https://us-east-1.console.aws.amazon.com/states/home?region=us-east-1#/v2/executions/details/{{currentSourceRow.execution_id_full}}"
+              target="_blank">
+
+              {{item}}
+
+              </a>
+          - 4c07b: '{{item?''Yes'':''No''}}'
+          - ab199: '{{item?''Yes'':''No''}}'
+          - dcdd3: '{{item?''Yes'':''No''}}'
+          - f86a2: ''
+          - 8f4c6: ''
+          - d9266: |-
+              <a href= "{{item}}" target="_blank">
+              {{currentSourceRow.snow_incident_number}}
+              </a>
+          - 916aa: '{{ _.startCase(item) }}'
+          - '70535': ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: '25'
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - b3e3c: task_definition
+          - 424b1: cluster_name
+          - '469e4': snow_incident_number
+          - e4cd6: exceeded_max_concurrency
+          - 9950b: datapipeline_name
+          - 64d38: finish_time
+          - 09f7e: execution_id
+          - 4c07b: been_restarted
+          - ab199: timed_out
+          - dcdd3: manually_stopped
+          - f86a2: start_time
+          - 8f4c6: execution_id_full
+          - d9266: snow_incident_number_url
+          - 916aa: status
+          - '70535': container_log_url
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_dp_run_failed.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - b3e3c: ''
+          - 424b1: ''
+          - '469e4': ''
+          - e4cd6: ''
+          - 9950b: ''
+          - 64d38: ''
+          - 09f7e: ''
+          - 4c07b: ''
+          - ab199: ''
+          - dcdd3: ''
+          - f86a2: ''
+          - 8f4c6: ''
+          - d9266: ''
+          - 916aa: ''
+          - '70535': ''
+    - _columnFormat:
+        ordered:
+          - b3e3c: string
+          - 424b1: tag
+          - '469e4': string
+          - e4cd6: string
+          - 9950b: string
+          - 64d38: datetime
+          - 09f7e: html
+          - 4c07b: string
+          - ab199: string
+          - dcdd3: string
+          - f86a2: datetime
+          - 8f4c6: string
+          - d9266: html
+          - 916aa: tag
+          - '70535': string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: 09f7e
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - b3e3c: left
+          - 424b1: left
+          - '469e4': left
+          - e4cd6: center
+          - 9950b: left
+          - 64d38: left
+          - 09f7e: left
+          - 4c07b: center
+          - ab199: center
+          - dcdd3: center
+          - f86a2: left
+          - 8f4c6: left
+          - d9266: left
+          - 916aa: left
+          - '70535': left
+    - _actionIcon:
+        ordered:
+          - 3ff74: bold/shopping-business-startup
+    - _columnTooltip:
+        ordered:
+          - b3e3c: ''
+          - 424b1: ''
+          - '469e4': ''
+          - e4cd6: ''
+          - 9950b: ''
+          - 64d38: ''
+          - 09f7e: ''
+          - 4c07b: ''
+          - ab199: ''
+          - dcdd3: ''
+          - f86a2: ''
+          - 8f4c6: ''
+          - d9266: ''
+          - 916aa: ''
+          - '70535': ''
+    - _columnIcon:
+        ordered:
+          - b3e3c: ''
+          - 424b1: ''
+          - '469e4': ''
+          - e4cd6: ''
+          - 9950b: ''
+          - 64d38: ''
+          - 09f7e: ''
+          - 4c07b: ''
+          - ab199: ''
+          - dcdd3: ''
+          - f86a2: ''
+          - 8f4c6: ''
+          - d9266: ''
+          - 916aa: ''
+          - '70535': ''
+    - _columnCellTooltipMode:
+        ordered:
+          - b3e3c: ''
+          - 424b1: ''
+          - '469e4': ''
+          - e4cd6: ''
+          - 9950b: ''
+          - 64d38: ''
+          - 09f7e: ''
+          - 4c07b: ''
+          - ab199: ''
+          - dcdd3: ''
+          - f86a2: ''
+          - 8f4c6: ''
+          - d9266: ''
+          - 916aa: ''
+          - '70535': ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - b3e3c: false
+          - 424b1: false
+          - '469e4': false
+          - e4cd6: false
+          - 9950b: false
+          - 64d38: false
+          - 09f7e: false
+          - 4c07b: false
+          - ab199: false
+          - dcdd3: false
+          - f86a2: false
+          - 8f4c6: false
+          - d9266: false
+          - 916aa: false
+          - '70535': false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered:
+          - 3ff74: '{{currentRow.been_restarted}}'
+    - _columnReferenceId:
+        ordered:
+          - b3e3c: ''
+          - 424b1: ''
+          - '469e4': ''
+          - e4cd6: ''
+          - 9950b: ''
+          - 64d38: ''
+          - 09f7e: ''
+          - 4c07b: ''
+          - ab199: ''
+          - dcdd3: ''
+          - f86a2: ''
+          - 8f4c6: ''
+          - d9266: ''
+          - 916aa: ''
+          - '70535': ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - b3e3c: ''
+          - 424b1: ''
+          - '469e4': ''
+          - e4cd6: ''
+          - 9950b: ''
+          - 64d38: ''
+          - 09f7e: ''
+          - 4c07b: ''
+          - ab199: ''
+          - dcdd3: ''
+          - f86a2: ''
+          - 8f4c6: ''
+          - d9266: ''
+          - 916aa: ''
+          - '70535': ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - b3e3c:
+              ordered: []
+          - 424b1:
+              ordered:
+                - automaticColors: true
+          - '469e4':
+              ordered: []
+          - e4cd6:
+              ordered: []
+          - 9950b:
+              ordered: []
+          - 64d38:
+              ordered:
+                - timeFormat: HH:mm:ss
+          - 09f7e:
+              ordered: []
+          - 4c07b:
+              ordered: []
+          - ab199:
+              ordered: []
+          - dcdd3:
+              ordered: []
+          - f86a2:
+              ordered:
+                - timeFormat: HH:mm:ss
+                - manageTimeZone: false
+                - valueTimeZone: '00:00'
+                - displayTimeZone: local
+          - 8f4c6:
+              ordered: []
+          - d9266:
+              ordered:
+                - showUnderline: hover
+          - 916aa:
+              ordered:
+                - automaticColors: true
+          - '70535':
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - 09f7e: none
+          - ab199: none
+          - e4cd6: none
+          - 4c07b: none
+          - dcdd3: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - b3e3c:
+              ordered: []
+          - 424b1:
+              ordered: []
+          - '469e4':
+              ordered: []
+          - e4cd6:
+              ordered: []
+          - 9950b:
+              ordered: []
+          - 64d38:
+              ordered: []
+          - 09f7e:
+              ordered: []
+          - 4c07b:
+              ordered: []
+          - ab199:
+              ordered: []
+          - dcdd3:
+              ordered: []
+          - f86a2:
+              ordered: []
+          - 8f4c6:
+              ordered: []
+          - d9266:
+              ordered: []
+          - 916aa:
+              ordered: []
+          - '70535':
+              ordered: []
+    - _columnSize:
+        ordered:
+          - b3e3c: 441.125
+          - 424b1: 180.4375
+          - '469e4': 146.109375
+          - e4cd6: 176.859375
+          - 9950b: 264.953125
+          - 64d38: 162.796875
+          - 09f7e: 282.421875
+          - 4c07b: 102.34375
+          - ab199: 96.640625
+          - dcdd3: 119.484375
+          - f86a2: 156.796875
+          - 8f4c6: 865.140625
+          - d9266: 160.34375
+          - 916aa: 70.375
+          - '70535': 1295
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: open
+            - pluginId: restartDPModal
+            - targetId: 3ff74
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: recentlyFailedTableV2
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: recentlyFailedTableV2
+            - targetId: 4d
+        - ordered:
+            - event: clickCell
+            - type: util
+            - method: openUrl
+            - pluginId: ''
+            - targetId: d9266
+            - params:
+                ordered:
+                  - url: '{{ item }}'
+            - waitType: debounce
+            - waitMs: '0'
+    - _columnEditable:
+        ordered:
+          - b3e3c: ''
+          - 424b1: ''
+          - '469e4': ''
+          - e4cd6: ''
+          - 9950b: ''
+          - 64d38: ''
+          - 09f7e: 'false'
+          - 4c07b: ''
+          - ab199: ''
+          - dcdd3: ''
+          - f86a2: ''
+          - 8f4c6: ''
+          - d9266: ''
+          - 916aa: ''
+          - '70535': ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - b3e3c: none
+          - 424b1: none
+          - '469e4': none
+          - e4cd6: none
+          - 9950b: none
+          - 64d38: none
+          - 09f7e: none
+          - 4c07b: none
+          - ab199: none
+          - dcdd3: none
+          - f86a2: none
+          - 8f4c6: none
+          - d9266: none
+          - 916aa: none
+          - '70535': none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: pagination
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - b3e3c: center
+          - 424b1: center
+          - '469e4': center
+          - e4cd6: center
+          - 9950b: center
+          - 64d38: center
+          - 09f7e: center
+          - 4c07b: center
+          - ab199: center
+          - dcdd3: center
+          - f86a2: center
+          - 8f4c6: center
+          - d9266: center
+          - 916aa: center
+          - '70535': center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - b3e3c: Enter value
+          - 424b1: Select option
+          - '469e4': Enter value
+          - e4cd6: Enter value
+          - 9950b: Enter value
+          - 64d38: Enter value
+          - 09f7e: Enter value
+          - 4c07b: Enter value
+          - ab199: Enter value
+          - dcdd3: Enter value
+          - f86a2: Enter value
+          - 8f4c6: Enter value
+          - d9266: ''
+          - 916aa: Select option
+          - '70535': Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered:
+          - 3ff74: Restart DP
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered:
+          - 3ff74: ''
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - b3e3c: 'true'
+          - 424b1: ''
+          - '469e4': 'true'
+          - e4cd6: ''
+          - 9950b: ''
+          - 64d38: ''
+          - 09f7e: ''
+          - 4c07b: ''
+          - ab199: ''
+          - dcdd3: ''
+          - f86a2: ''
+          - 8f4c6: 'true'
+          - d9266: ''
+          - 916aa: 'true'
+          - '70535': 'true'
+    - _columnLabel:
+        ordered:
+          - b3e3c: Task definition
+          - 424b1: Cluster
+          - '469e4': Snow incident number
+          - e4cd6: Exceeded Max Concurrency
+          - 9950b: Datapipeline Name
+          - 64d38: Finish Time
+          - 09f7e: Execution ID
+          - 4c07b: Restarted
+          - ab199: Timed Out
+          - dcdd3: Manually Stopped
+          - f86a2: Start Time
+          - 8f4c6: Execution ID full
+          - d9266: Incident
+          - 916aa: Status
+          - '70535': Container log URL
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 70d66
+    row: 1.2000000000000002
+    height: 8.4
+    width: 12
+createdAt: 2023-10-09T20:33:25.126Z

@@ -1,4 +1,5 @@
 id: dpToggleScheduleCancel
+uuid: 1f8443aa-56bd-4cdf-ac64-a6093725f68b
 type: widget
 subtype: ButtonWidget2
 template:
@@ -7,12 +8,11 @@ template:
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
+    - marginType: normal
     - hidden: false
     - text: Cancel
     - showInEditor: false
     - tooltipText: ''
-    - _disclosedFields:
-        array: []
     - styleVariant: solid
     - submit: false
     - iconBefore: ''
@@ -39,5 +39,5 @@ position2:
     row: 4
     col: 1
     height: 1
-    width: 10
-createdAt: 2023-03-02T00:11:36.548Z
+    width: 9
+createdAt: 2023-10-09T23:22:47.251Z

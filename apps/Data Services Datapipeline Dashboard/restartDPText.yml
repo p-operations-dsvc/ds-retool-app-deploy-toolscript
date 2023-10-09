@@ -1,10 +1,12 @@
-id: restartDPModelText
+id: restartDPText
+uuid: 8e695a51-a8f6-41f2-a247-abbaf863ed2e
 type: widget
 subtype: TextWidget2
 template:
   ordered:
     - heightType: auto
-    - horizontalAlign: left
+    - horizontalAlign: center
+    - marginType: normal
     - hidden: false
     - imageWidth: fit
     - showInEditor: false
@@ -12,9 +14,7 @@ template:
     - tooltipText: ''
     - value: >-
         Do you really want to restart datapipeline
-        {{recentlyFailedTable.selectedRow.data.datapipeline_name}}?
-    - _disclosedFields:
-        array: []
+        {{recentlyFailedTableV2.selectedRow.datapipeline_name}}?
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
@@ -23,7 +23,8 @@ style:
 position2:
   position2:
     container: restartDPModal
-    col: 1
+    row: 0.4
+    col: 2
     height: 0.6
-    width: 10
-createdAt: 2023-02-28T21:17:38.277Z
+    width: 9
+createdAt: 2023-10-09T22:19:34.164Z

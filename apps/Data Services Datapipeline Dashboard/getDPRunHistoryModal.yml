@@ -15,7 +15,7 @@ template:
     - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''
-    - buttonText: hr
+    - buttonText: ''
 style:
   ordered: []
 position2:

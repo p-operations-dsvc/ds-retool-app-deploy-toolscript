@@ -4,13 +4,48 @@ subtype: KeyValueMapWidget
 template:
   ordered:
     - rowHeaderNames:
-        ordered: []
+        ordered:
+          - schedule_expression: Schedule Expression
+          - snow_ci: Service Now CI
+          - snow_impact: Service Now Incident Impact
+          - task_name: Task Name
+          - overrides: Overrides
+          - schedule_state: Schedule State
+          - snow_assignment_group: Service Now Queue
+          - container_name: Container Name
+          - container_cpu: Container CPU
+          - documentation_url: Documentation
+          - sns_success_topic_arn: SNS Success Topic ARN
+          - auto_restart_on_failure: Auto Restart On Failure
+          - task_definition_arn: Task Definition ARN
+          - snow_urgency: Service Now Incident Urgency
+          - task_role_arn: Task Role ARN
+          - schedule_tz: Schedule Timezone
+          - datapipeline_timeout_seconds: Timeout (sec)
+          - max_number_of_restarts: Max Restarts
+          - max_concurrent_instances: Max Concurrent Instances
+          - sns_failure_topic_arn: SNS Failure Topic ARN
+          - schedule_name: Schedule Name
+          - schedule_group: Schedule Group
+          - cluster_arn: Cluster ARN
+          - override_commands: Override Commands
+          - container_storage: Container Storage
+          - datapipeline_name: Datapipeline Name
+          - container_arn: Container ARN
+          - container_memory: Container Memory
     - rowFormats:
-        ordered: []
+        ordered:
+          - max_concurrent_instances: integer
+          - max_number_of_restarts: integer
+          - datapipeline_timeout_seconds: integer
+          - documentation_url: link
     - valueTitle: Value
-    - data: '{{dpAllTable.selectedRow.data}}'
+    - data: '{{dpAllTableV2.selectedRow}}'
     - prevRowMappers:
-        ordered: []
+        ordered:
+          - container_cpu: '{{self/1024}} vCPU'
+          - container_memory: '{{self/1024}} GB'
+          - container_storage: '{{self===null?0:self}} GB'
     - rowMappersRenderAsHTML:
         ordered: []
     - rowVisibility:
@@ -22,7 +57,7 @@ template:
           - snow_impact: true
           - c: true
           - task_name: true
-          - overrides: true
+          - overrides: false
           - schedule_state: true
           - snow_assignment_group: true
           - container_name: true
@@ -55,6 +90,7 @@ template:
           - container_cpu: '{{self/1024}} vCPU'
           - container_memory: '{{self/1024}} GB'
           - container_storage: '{{self===null?0:self}} GB'
+          - overrides: ''
     - rows:
         - a
         - b
