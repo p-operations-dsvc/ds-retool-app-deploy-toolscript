@@ -6,7 +6,7 @@ template:
   ordered:
     - opened: false
     - modalOverflowType: scroll
-    - hidden: 'true'
+    - hidden: '{{recentlyFailedTableV2.selectedRow.been_restarted==''Yes''}}'
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''
@@ -16,13 +16,14 @@ template:
     - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''
-    - buttonText: restart
+    - buttonText: Restart Data Pipeline
 style:
   ordered: []
 position2:
   position2:
     container: mainContainer
-    rowGroup: header
-    col: 3
+    subcontainer: 70d66
+    col: 9
     height: 1
+    width: 1
 createdAt: 2023-10-09T22:19:05.402Z
