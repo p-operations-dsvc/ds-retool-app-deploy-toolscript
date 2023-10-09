@@ -1,5 +1,5 @@
-id: goldenTitleImbdURLText
-uuid: 445a9500-c8fa-4b39-af22-f577e87756f0
+id: goldenTitleParentTitleText
+uuid: dbfbaf8a-59d0-49ac-8f2c-f33034f44bac
 type: widget
 subtype: TextInputWidget2
 template:
@@ -13,7 +13,7 @@ template:
     - maxLength: null
     - hidden: false
     - customValidation: ''
-    - patternType: url
+    - patternType: ''
     - hideValidationMessage: false
     - textBefore: ''
     - validationMessage: ''
@@ -24,12 +24,12 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{get_golden_title_details.data.IMDB_URL[0]}}'
+    - value: '{{get_golden_title_details.data.PARENT_TITLE_NAME[0]}}'
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: '{{get_golden_title_details.data.IMDB_URL[0]}}'
-    - label: IMDB URL
+    - placeholder: Enter value
+    - label: Parent Title
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false
@@ -40,8 +40,7 @@ template:
         ordered: []
     - autoCapitalize: none
     - loading: false
-    - disabled: |
-        true
+    - disabled: 'true'
     - labelPosition: left
     - labelWrap: false
     - maintainSpaceWhenHidden: false
@@ -51,7 +50,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 26.6
+    row: 6
     height: 1
     width: 12
-createdAt: 2023-10-03T20:54:35.393Z
+createdAt: 2023-10-08T23:45:08.140Z
