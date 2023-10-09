@@ -45,8 +45,7 @@ template:
         - dcdd3
         - '469e4'
     - _isSaving: false
-    - _actionIds:
-        - 3ff74
+    - _actionIds: []
     - _clearChangeset: false
     - caseSensitiveFiltering: false
     - _limitOffsetRowCount: null
@@ -257,8 +256,7 @@ template:
           - 916aa: left
           - '70535': left
     - _actionIcon:
-        ordered:
-          - 3ff74: bold/shopping-business-startup
+        ordered: []
     - _columnTooltip:
         ordered:
           - b3e3c: ''
@@ -338,8 +336,7 @@ template:
     - _expandedRows: null
     - changesetObject: null
     - _actionDisabled:
-        ordered:
-          - 3ff74: '{{currentRow.been_restarted==''No''}}'
+        ordered: []
     - _columnReferenceId:
         ordered:
           - b3e3c: ''
@@ -583,7 +580,7 @@ template:
     - selectedCell: null
     - _defaultSelectedRow:
         ordered:
-          - mode: index
+          - mode: none
           - indexType: display
           - index: 0
     - _hasNextPage: false
@@ -625,13 +622,11 @@ template:
           - '70535': Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
-        ordered:
-          - 3ff74: Restart DP
+        ordered: []
     - _virtualizeEndIndex: 0
     - selectedRow: null
     - _actionHidden:
-        ordered:
-          - 3ff74: ''
+        ordered: []
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
