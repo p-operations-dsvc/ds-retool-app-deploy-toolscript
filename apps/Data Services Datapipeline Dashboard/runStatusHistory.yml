@@ -30,6 +30,7 @@ template:
     - overlayMinWidth: null
     - allowDeselect: false
     - inputValue: ''
+    - marginType: normal
     - hidden: false
     - customValidation: ''
     - data:
@@ -101,7 +102,7 @@ template:
             - event: change
             - type: widget
             - method: refresh
-            - pluginId: searchResult
+            - pluginId: searchRunTable
             - targetId: null
             - params:
                 ordered: []
@@ -143,5 +144,4 @@ position2:
     subcontainer: df36c
     col: 9
     height: 2.4
-    width: 3
 createdAt: 2023-02-14T00:25:20.023Z

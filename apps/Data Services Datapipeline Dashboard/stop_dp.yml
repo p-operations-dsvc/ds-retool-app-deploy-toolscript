@@ -7,6 +7,7 @@ template:
   ordered:
     - queryRefreshTime: ''
     - paginationLimit: ''
+    - streamResponse: false
     - body: ''
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''
@@ -15,18 +16,21 @@ template:
     - successMessage: ''
     - queryDisabled: ''
     - playgroundQuerySaveId: latest
+    - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
     - paginationPaginationField: ''
-    - headers: ''
+    - headers: '[{"key":"","value":""},{"key":"","value":""}]'
+    - workflowRunId: null
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        stop_ds_datapipeline?execution_id={{runTable.selectedRow.data.execution_id_full}}&user_name={{current_user.firstName}}
-        {{current_user.lastName}}&env={{runEnvInFlight.value}}&cluster_arn=arn:aws:ecs:us-east-1:122060337775:cluster/{{runTable.selectedRow.data.cluster_name}}
+        stop_ds_datapipeline?execution_id={{runTableV2.selectedRow.execution_id_full}}&user_name={{current_user.firstName}}
+        {{current_user.lastName}}&env={{runEnvInFlight.value}}&cluster_arn=arn:aws:ecs:us-east-1:122060337775:cluster/{{runTableV2.selectedRow.cluster_name}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
+    - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
     - data: null
@@ -38,6 +42,7 @@ template:
     - requestSentTimestamp: null
     - cookies: ''
     - metadata: null
+    - workflowActionType: null
     - queryRunTime: null
     - changesetObject: ''
     - errorTransformer: >-
@@ -105,18 +110,20 @@ template:
                         - notificationType: error
                         - title: >-
                             Failed to stop datapipeline
-                            {{runTable.selectedRow.data.datapipeline_name}}
+                            {{runTableV2.selectedRow.datapipeline_name}}
                         - description: '{{stop_dp.error}}'
                         - duration: '5'
             - waitType: debounce
             - waitMs: '0'
     - queryTimeout: '10000'
+    - workflowId: null
     - requireConfirmation: false
     - type: POST
     - queryFailureConditions: ''
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - bodyType: json
     - offlineQueryType: None
     - queryThrottleTime: '750'

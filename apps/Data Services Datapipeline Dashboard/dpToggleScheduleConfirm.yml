@@ -1,4 +1,5 @@
 id: dpToggleScheduleConfirm
+uuid: 971ec290-6d19-42ce-8e3e-5b59b9491129
 type: widget
 subtype: ButtonWidget2
 template:
@@ -7,12 +8,11 @@ template:
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
+    - marginType: normal
     - hidden: false
     - text: Confirm
     - showInEditor: false
     - tooltipText: ''
-    - _disclosedFields:
-        array: []
     - styleVariant: solid
     - submit: false
     - iconBefore: ''
@@ -36,8 +36,8 @@ style:
 position2:
   position2:
     container: dpScheduleToggleModal
-    row: 2.4
+    row: 2.2
     col: 1
     height: 1
-    width: 10
-createdAt: 2023-03-02T00:11:32.252Z
+    width: 9
+createdAt: 2023-10-09T23:22:53.207Z

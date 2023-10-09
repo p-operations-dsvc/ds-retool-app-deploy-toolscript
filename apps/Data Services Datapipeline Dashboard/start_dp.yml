@@ -7,6 +7,7 @@ template:
   ordered:
     - queryRefreshTime: ''
     - paginationLimit: ''
+    - streamResponse: false
     - body: ''
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''
@@ -15,18 +16,21 @@ template:
     - successMessage: ''
     - queryDisabled: ''
     - playgroundQuerySaveId: latest
+    - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
     - paginationPaginationField: ''
     - headers: ''
+    - workflowRunId: null
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        restart_ds_datapipeline?datapipeline_name={{dpAllTable.selectedRow.data.datapipeline_name}}&user_name={{current_user.firstName}}
+        restart_ds_datapipeline?datapipeline_name={{dpAllTableV2.selectedRow.datapipeline_name}}&user_name={{current_user.firstName}}
         {{current_user.lastName}}&env={{dpNameAllEnv.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
+    - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
     - data: null
@@ -38,6 +42,7 @@ template:
     - requestSentTimestamp: null
     - cookies: ''
     - metadata: null
+    - workflowActionType: null
     - queryRunTime: null
     - changesetObject: ''
     - errorTransformer: >-
@@ -105,18 +110,21 @@ template:
                         - notificationType: error
                         - title: >-
                             Failed to start datapipeline
-                            {{dpAllTable.selectedRow.data.datapipeline_name}}
+                            {{dpAllTableV2.selectedRow.datapipeline_name}}
                         - description: '{{start_dp.error}}'
                         - duration: '5'
             - waitType: debounce
             - waitMs: '0'
+    - isMultiplayerEdited: false
     - queryTimeout: '10000'
+    - workflowId: null
     - requireConfirmation: false
     - type: POST
     - queryFailureConditions: ''
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - bodyType: json
     - offlineQueryType: None
     - queryThrottleTime: '750'
