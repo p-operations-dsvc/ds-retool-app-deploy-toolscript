@@ -34,7 +34,7 @@ template:
     - _disclosedFields:
         array: []
     - label: |
-        Select Start Date
+        Select Start/End Dates
     - formattedValue: ''
     - _validate: false
     - labelWidthUnit: '%'
@@ -66,6 +66,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: d9644
-    col: 4
+    row: 0.2
+    col: 5
     height: 1
 createdAt: 2023-02-13T22:40:46.411Z

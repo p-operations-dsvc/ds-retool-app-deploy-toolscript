@@ -272,7 +272,7 @@ template:
           - b5497: ''
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: '50'
+    - _templatePageSize: '25'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true
@@ -1100,6 +1100,6 @@ position2:
     container: mainContainer
     subcontainer: 1b6db
     row: 1
-    height: 22.4
+    height: 23.799999999999997
     width: 12
 createdAt: 2023-10-09T22:40:19.388Z
