@@ -42,8 +42,8 @@ template:
         - ab199
         - e4cd6
         - 4c07b
-        - '469e4'
         - dcdd3
+        - '469e4'
     - _isSaving: false
     - _actionIds:
         - 3ff74
@@ -339,7 +339,7 @@ template:
     - changesetObject: null
     - _actionDisabled:
         ordered:
-          - 3ff74: '{{currentRow.been_restarted}}'
+          - 3ff74: '{{currentRow.been_restarted==''No''}}'
     - _columnReferenceId:
         ordered:
           - b3e3c: ''
@@ -476,7 +476,7 @@ template:
           - b3e3c: 441.125
           - 424b1: 180.4375
           - '469e4': 146.109375
-          - e4cd6: 176.859375
+          - e4cd6: 258.859375
           - 9950b: 264.953125
           - 64d38: 162.796875
           - 09f7e: 282.421875
