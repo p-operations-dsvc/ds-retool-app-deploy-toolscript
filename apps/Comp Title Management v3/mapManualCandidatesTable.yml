@@ -176,7 +176,7 @@ template:
     - _columnFormat:
         ordered:
           - 962dd: decimal
-          - 4ff29: decimal
+          - 4ff29: string
           - 3391d: string
           - 0d8c2: tag
           - f7eac: decimal
@@ -193,7 +193,7 @@ template:
     - _columnAlignment:
         ordered:
           - 962dd: right
-          - 4ff29: right
+          - 4ff29: left
           - 3391d: left
           - 0d8c2: left
           - f7eac: right
@@ -282,7 +282,7 @@ template:
           - ec5e1: ''
     - _dynamicColumnSource:
         array: []
-    - _rowSelection: none
+    - _rowSelection: single
     - _columnCaption:
         ordered:
           - 962dd: ''
@@ -390,7 +390,7 @@ template:
           - 0d8c2: 126.890625
           - 962dd: 101.40625
           - f7eac: 90.09375
-          - 4ff29: 77.03125
+          - 4ff29: 121.03125
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -571,7 +571,7 @@ style:
 position2:
   position2:
     container: mapOtherTitlesModal
-    row: 13.200000000000001
+    row: 13.600000000000001
     height: 8
     width: 12
 createdAt: 2023-10-05T01:21:33.118Z
