@@ -22,9 +22,9 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >
-        select   a.TITLE_ID, a.SOURCE_SYSTEM_TITLE_ID, a.NAME_FROM_SOURCE,
-        a.RELEASE_YEAR_FROM_SOURCE as RELEASE_YEAR, a.SOURCE_SYSTEM as
-        SOURCE_SYSTEM_NAME,  a.TITLE_TYPE
+        select   a.OTHER_TITLE_ID as title_id, a.SOURCE_SYSTEM_TITLE_ID,
+        a.NAME_FROM_SOURCE, a.RELEASE_YEAR_FROM_SOURCE as RELEASE_YEAR,
+        a.SOURCE_SYSTEM as SOURCE_SYSTEM_NAME,  a.TITLE_TYPE
 
         from 
 

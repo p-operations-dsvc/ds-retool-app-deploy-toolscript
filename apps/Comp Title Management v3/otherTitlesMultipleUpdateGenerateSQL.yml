@@ -9,8 +9,7 @@ template:
         rows = {{otherTitleToMapVariable.value}}
 
         for (const key in rows) {
-          array.push ("(source_system_title_id='"+rows[key]['id'].split ('~')[0]+"' and source_system='"+
-         rows[key]['id'].split ('~')[1]+"')"     )
+          array.push ("other_title_id="+rows[key]['id']    )
         }
 
 

@@ -7,7 +7,7 @@ template:
         let array = []
         rows = {{otherTitleTable.selectedRows}}
         for (const key in rows) {
-          array.push ({'id': rows[key]['SOURCE_SYSTEM_TITLE_ID']+"~"+ rows[key]['SOURCE_SYSTEM'], 'name': "Title ID " + rows[key]['SOURCE_SYSTEM_TITLE_ID']+" from "+rows[key]['SOURCE_SYSTEM']+": '"+rows[key]['NAME_FROM_SOURCE']+"'"})
+          array.push ({'id': rows[key]['TITLE_ID'], 'name': "Title ID " + rows[key]['SOURCE_SYSTEM_TITLE_ID']+" from "+rows[key]['SOURCE_SYSTEM']+": '"+rows[key]['NAME_FROM_SOURCE']+"'"})
         }
 
         return array

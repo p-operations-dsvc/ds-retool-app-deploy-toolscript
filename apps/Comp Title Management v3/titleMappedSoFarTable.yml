@@ -1,0 +1,253 @@
+id: titleMappedSoFarTable
+uuid: ca462522-7d13-4475-91fb-dd7f73199627
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - f8b18: ''
+          - fa4e7: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - f8b18
+        - fa4e7
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - f8b18:
+              ordered:
+                - showStepper: true
+          - fa4e7:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - f8b18:
+              ordered: []
+          - fa4e7:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - f8b18: ''
+          - fa4e7: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - f8b18: id
+          - fa4e7: name
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{otherTitlesMappedSoFarVariable.value}}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - f8b18: ''
+          - fa4e7: ''
+    - _columnFormat:
+        ordered:
+          - f8b18: decimal
+          - fa4e7: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: f8b18
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - f8b18: right
+          - fa4e7: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - f8b18: ''
+          - fa4e7: ''
+    - _columnIcon:
+        ordered:
+          - f8b18: ''
+          - fa4e7: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - f8b18: ''
+          - fa4e7: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - f8b18: false
+          - fa4e7: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - f8b18: ''
+          - fa4e7: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: none
+    - _columnCaption:
+        ordered:
+          - f8b18: ''
+          - fa4e7: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - f8b18:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+          - fa4e7:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered: []
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - f8b18:
+              ordered: []
+          - fa4e7:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - f8b18: 28
+          - fa4e7: 355.125
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: false
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events: []
+    - _columnEditable:
+        ordered:
+          - f8b18: ''
+          - fa4e7: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - f8b18: sum
+          - fa4e7: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - f8b18: center
+          - fa4e7: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - f8b18: Enter value
+          - fa4e7: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - f8b18: 'true'
+          - fa4e7: ''
+    - _columnLabel:
+        ordered:
+          - f8b18: ID
+          - fa4e7: Titles Mapped So Far
+    - _showToolbar: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mapOtherTitlesModal
+    row: 2.799999999999997
+    col: 7
+    height: 8
+    width: 5
+createdAt: 2023-10-10T23:41:13.403Z

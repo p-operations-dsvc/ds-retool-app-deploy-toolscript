@@ -21,16 +21,11 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >
+    - query: |
         update EDWCTM.OTHER_TITLE a
-
         set a.golden_title_id={{goldenTitleIdToMapTo.value}},
-
         a.MAPPED_STATE=true
-
-        where a.source_system_title_id={{titleToMapSelect.selectedItem.id.split
-        ('~')[0]}} and a.source_system={{titleToMapSelect.selectedItem.id.split
-        ('~')[1]}}
+        where a.other_title_id={{titleToMapSelect.selectedItem.id}} 
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -110,6 +105,18 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: state
+            - method: setValue
+            - pluginId: otherTitlesMappedSoFarVariable
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{otherTitlesMappedSoFar.value}}'
+            - waitType: debounce
+            - waitMs: '0'
+    - isMultiplayerEdited: false
     - tableName: ''
     - queryTimeout: '10001'
     - workflowId: null

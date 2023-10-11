@@ -388,6 +388,8 @@ template:
     - _columnSummaryAggregationMode:
         ordered:
           - a4f72: none
+          - 8351e: none
+          - c59d0: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -454,8 +456,7 @@ template:
             - targetId: 1b4cf
             - params:
                 ordered:
-                  - value: >-
-                      {{currentRow.SOURCE_SYSTEM_TITLE_ID}}~{{currentRow.SOURCE_SYSTEM}}
+                  - value: '{{currentRow.TITLE_ID}}'
             - waitType: debounce
             - waitMs: '0'
         - ordered:
@@ -464,16 +465,6 @@ template:
             - method: open
             - pluginId: unmapOtherTitleModal
             - targetId: 1b4cf
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: selectRow
-            - type: datasource
-            - method: trigger
-            - pluginId: get_manual_candidate_golden_title
-            - targetId: null
             - params:
                 ordered: []
             - waitType: debounce
@@ -515,6 +506,8 @@ template:
         ordered:
           - 751f9: none
           - a4f72: none
+          - 8351e: none
+          - c59d0: none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -572,8 +565,12 @@ template:
           - 751f9: ''
           - '3e516': ''
           - 582eb: ''
-          - 8351e: ''
-          - c59d0: ''
+          - 8351e: >-
+              {{otherTitleTypeSelect.value=='tvEpisode' ||
+              otherTitleTypeSelect.value=='any' ?false:true}}
+          - c59d0: >-
+              {{otherTitleTypeSelect.value=='tvEpisode' ||
+              otherTitleTypeSelect.value=='any' ?false:true}}
           - bc576: ''
           - 49aa8: ''
           - '391e2': ''
@@ -601,7 +598,7 @@ position2:
   position2:
     container: tabbedContainer1
     subcontainer: 4153c
-    row: 3.4
+    row: 2.4
     height: 22.6
     width: 12
 createdAt: 2023-09-27T18:35:58.567Z
