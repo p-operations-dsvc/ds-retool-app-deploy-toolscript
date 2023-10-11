@@ -25,7 +25,7 @@ template:
         update EDWCTM.OTHER_TITLE a
         set a.golden_title_id=null,
         a.MAPPED_STATE=false
-        where a.other_title_id={{unmapOtherTitle.value}}
+        where a.other_title_id={{unmapOtherTitleIdVariable.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

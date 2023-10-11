@@ -452,7 +452,7 @@ template:
             - event: clickAction
             - type: state
             - method: setValue
-            - pluginId: unmapOtherTitle
+            - pluginId: unmapOtherTitleIdVariable
             - targetId: 1b4cf
             - params:
                 ordered:
@@ -467,6 +467,17 @@ template:
             - targetId: 1b4cf
             - params:
                 ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: unmapOtherTitleNameVariable
+            - targetId: 1b4cf
+            - params:
+                ordered:
+                  - value: '{{currentRow.NAME_FROM_SOURCE}}'
             - waitType: debounce
             - waitMs: '0'
         - ordered:
