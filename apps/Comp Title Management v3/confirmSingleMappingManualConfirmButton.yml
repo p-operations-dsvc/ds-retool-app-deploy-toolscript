@@ -1,5 +1,5 @@
-id: confirmSingleMappingConfirmButton
-uuid: 924dbc82-e382-4df7-a326-60be14b06a0e
+id: confirmSingleMappingManualConfirmButton
+uuid: 86277cba-bd82-4e60-b8ef-59a8621feffa
 type: widget
 subtype: ButtonWidget2
 template:
@@ -35,9 +35,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: confirmSingleMappingModal
-    row: 0.9999999999999999
+    container: confirmSingleMappingManualModal
+    row: 1
     col: 1
     height: 1
     width: 9
-createdAt: 2023-10-05T00:11:34.261Z
+createdAt: 2023-10-11T21:57:31.736Z

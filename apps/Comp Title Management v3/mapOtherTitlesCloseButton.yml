@@ -1,5 +1,5 @@
-id: confirmSingleMappingConfirmButton
-uuid: 924dbc82-e382-4df7-a326-60be14b06a0e
+id: mapOtherTitlesCloseButton
+uuid: 22e9153c-3372-4e29-b841-933afa81345c
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: Confirm
+    - text: Close
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -19,9 +19,9 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: datasource
-            - method: trigger
-            - pluginId: update_other_title
+            - type: widget
+            - method: close
+            - pluginId: mapOtherTitlesModal
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +35,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: confirmSingleMappingModal
-    row: 0.9999999999999999
-    col: 1
+    container: mapOtherTitlesModal
+    row: 22.2
+    col: 4
     height: 1
-    width: 9
-createdAt: 2023-10-05T00:11:34.261Z
+    width: 4
+createdAt: 2023-10-11T22:02:53.011Z

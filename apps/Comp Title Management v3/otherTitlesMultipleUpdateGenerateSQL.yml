@@ -14,9 +14,9 @@ template:
 
 
         return "update EDWCTM.OTHER_TITLE set mapped_state=true,
-        golden_title_id='" + {{goldenTitleIdToMapTo.value}} +
+        golden_title_id=" + {{goldenTitleIdToMapTo.value}} +
 
-        "' where "+array.join (" or ")
+        " where "+array.join (" or ")
 
 
          
