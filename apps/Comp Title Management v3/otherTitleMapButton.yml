@@ -38,6 +38,27 @@ template:
                   - value: '{{otherTitleToMap.value}}'
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: widget
+            - method: clearSelection
+            - pluginId: otherTitleTable
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: state
+            - method: setValue
+            - pluginId: otherTitlesMappedSoFarVariable
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '[]'
+            - waitType: debounce
+            - waitMs: '0'
     - loading: false
     - loaderPosition: auto
     - disabled: '{{securityGroupCheck.value}}'

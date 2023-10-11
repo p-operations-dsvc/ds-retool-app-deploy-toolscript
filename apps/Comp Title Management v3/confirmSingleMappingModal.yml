@@ -12,6 +12,7 @@ template:
     - tooltipText: ''
     - modalHeight: ''
     - onModalOpen: ''
+    - events: []
     - modalWidth: ''
     - closeOnOutsideClick: false
     - loading: ''

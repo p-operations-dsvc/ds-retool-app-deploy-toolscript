@@ -17,7 +17,16 @@ template:
     - submit: false
     - iconBefore: ''
     - events:
-        ordered: []
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: get_manual_candidate_golden_title
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - loading: false
     - loaderPosition: auto
     - disabled: false
@@ -27,7 +36,7 @@ style:
 position2:
   position2:
     container: mapOtherTitlesModal
-    row: 13.6
+    row: 11.600000000000001
     col: 11
     height: 1
     width: 1

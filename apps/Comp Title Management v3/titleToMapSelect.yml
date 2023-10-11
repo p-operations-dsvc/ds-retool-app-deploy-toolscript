@@ -50,11 +50,11 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: null
+    - value: ''
     - hiddenByIndex:
         array: []
     - labelCaption: ''
-    - labelWidth: '33'
+    - labelWidth: '10'
     - deprecatedLabels:
         array: []
     - _hiddenByIndex:
@@ -91,8 +91,7 @@ template:
     - colorByIndex:
         array: []
     - selectedLabel: ''
-    - events:
-        ordered: []
+    - events: []
     - _ids:
         - b2c9e
         - 2ecda
@@ -123,8 +122,7 @@ style:
 position2:
   position2:
     container: mapOtherTitlesModal
-    row: 1.5999999999999992
-    col: 3
+    row: 0.5999999999999992
     height: 1
-    width: 5
+    width: 6
 createdAt: 2023-10-05T16:28:11.330Z

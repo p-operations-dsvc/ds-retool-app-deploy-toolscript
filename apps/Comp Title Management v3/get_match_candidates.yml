@@ -37,7 +37,8 @@ template:
               ,'',1,0,'i'),'[^a-zA-Z0-9]','',1,0,'i'))) JARO_SCORE,
                     RANK() OVER (ORDER BY
                 JARO_SCORE DESC,
-                vcm.description DESC) ROW_RANK 
+                vcm.description DESC) ROW_RANK,
+          gt.TITLE_TYPE
         from EDWCTM.other_title ot,
 
         EDWCTM.GOLDEN_TITLE gt,
@@ -55,9 +56,8 @@ template:
 
         and gt.VOTE_COUNT_MAGNITUDE_RANGE=vcm.DESCRIPTION 
 
-        and ot.source_system_title_id={{titleToMapSelect.selectedItem.id.split
-        ('~')[0]}} and source_system={{titleToMapSelect.selectedItem.id.split
-        ('~')[1]}}) scored where  ROW_RANK<6
+        and ot.other_title_id={{titleToMapSelect.selectedItem.id}} ) scored
+        where  ROW_RANK<6
 
         order by ROW_RANK asc
     - playgroundQueryUuid: ''
