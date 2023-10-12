@@ -1,0 +1,43 @@
+id: unlockOtherTitleCancelButton
+uuid: e6417a1d-0b0d-4aa8-abb1-305c44740779
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: Cancel
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: widget
+            - method: close
+            - pluginId: unlockOtherTitleModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: unlockOtherTitleModal
+    row: 3.8000000000000003
+    col: 1
+    height: 1
+    width: 9
+createdAt: 2023-10-12T23:25:50.496Z
