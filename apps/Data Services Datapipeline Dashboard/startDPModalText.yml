@@ -5,6 +5,7 @@ template:
   ordered:
     - heightType: auto
     - horizontalAlign: center
+    - marginType: normal
     - hidden: false
     - imageWidth: fit
     - showInEditor: false
@@ -12,7 +13,7 @@ template:
     - tooltipText: ''
     - value: >-
         Do you really want to start datapipeline
-        {{dpAllTable.selectedRow.data.datapipeline_name}}?
+        {{dpAllTableV2.selectedRow.datapipeline_name}}?
     - _disclosedFields:
         array: []
     - disableMarkdown: false

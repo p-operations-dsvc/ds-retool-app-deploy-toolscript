@@ -25,7 +25,11 @@ template:
         ordered: []
     - alwaysShowPaginator: false
     - columnColors:
-        ordered: []
+        ordered:
+          - execution_id: ''
+          - step_type: ''
+          - step_timestamp: ''
+          - step_details: ''
     - columnFrozenAlignments:
         ordered: []
     - allowMultiRowSelect: false
