@@ -46,6 +46,7 @@ template:
           - container_cpu: '{{self/1024}} vCPU'
           - container_memory: '{{self/1024}} GB'
           - container_storage: '{{self===null?0:self}} GB'
+          - overrides: ''
     - rowMappersRenderAsHTML:
         ordered: []
     - rowVisibility:
@@ -62,7 +63,7 @@ template:
           - snow_assignment_group: true
           - container_name: true
           - container_cpu: true
-          - documentation_url: true
+          - documentation_url: false
           - sns_success_topic_arn: true
           - auto_restart_on_failure: true
           - task_definition_arn: true
@@ -84,7 +85,11 @@ template:
           - container_arn: true
           - container_memory: true
     - prevRowFormats:
-        ordered: []
+        ordered:
+          - max_concurrent_instances: integer
+          - max_number_of_restarts: integer
+          - datapipeline_timeout_seconds: integer
+          - documentation_url: link
     - rowMappers:
         ordered:
           - container_cpu: '{{self/1024}} vCPU'
@@ -95,6 +100,7 @@ template:
         - a
         - b
         - c
+        - datapipeline_name
         - schedule_state
         - schedule_group
         - schedule_name
@@ -124,7 +130,6 @@ template:
         - sns_success_topic_arn
         - sns_failure_topic_arn
         - documentation_url
-        - datapipeline_name
     - keyTitle: Field
 style:
   ordered: []
