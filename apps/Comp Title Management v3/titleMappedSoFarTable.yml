@@ -101,7 +101,7 @@ template:
     - _columnAlignment:
         ordered:
           - f8b18: right
-          - fa4e7: left
+          - fa4e7: center
     - _actionIcon:
         ordered: []
     - _columnTooltip:
@@ -160,7 +160,8 @@ template:
         array: []
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
-        ordered: []
+        ordered:
+          - fa4e7: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -247,7 +248,7 @@ position2:
   position2:
     container: mapOtherTitlesModal
     row: 2.9999999999999973
-    col: 7
+    col: 8
     height: 8
-    width: 5
+    width: 4
 createdAt: 2023-10-10T23:41:13.403Z
