@@ -27,6 +27,7 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+            - enabled: '{{otherTitleTable.selectedRows.length>0}}'
         - ordered:
             - event: click
             - type: state
@@ -61,7 +62,7 @@ template:
             - waitMs: '0'
     - loading: false
     - loaderPosition: auto
-    - disabled: '{{securityGroupCheck.value}}'
+    - disabled: '{{securityGroupCheck.value}} '
     - maintainSpaceWhenHidden: false
 style:
   ordered: []

@@ -23,6 +23,7 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+            - enabled: '{{otherTitlesMappedSoFarVariable.value.length>0}}'
     - modalWidth: 80%
     - closeOnOutsideClick: false
     - loading: ''
