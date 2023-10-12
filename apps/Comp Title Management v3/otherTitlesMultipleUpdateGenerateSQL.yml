@@ -13,7 +13,7 @@ template:
         }
 
 
-        return "update EDWCTM.OTHER_TITLE set mapped_state=true,
+        return "update EDWCTM.OTHER_TITLE set mapped_state=true, locked=true,
         golden_title_id=" + {{goldenTitleIdToMapTo.value}} +
 
         " where "+array.join (" or ")

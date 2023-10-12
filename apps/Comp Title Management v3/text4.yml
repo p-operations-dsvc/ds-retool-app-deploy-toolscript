@@ -1,5 +1,5 @@
-id: confirmSingleMappingText
-uuid: c3cdb848-137f-4590-b61c-caa4f4c9c30d
+id: text4
+uuid: f4d9173e-c274-4d8d-90f5-18f5fefdbf83
 type: widget
 subtype: TextWidget2
 template:
@@ -12,7 +12,9 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: ' **Proceed to map "{{titleToMapSelect.selectedItem.name}}" to Golden Title "{{mapCandidatesTable.selectedRow.GOLDEN_TITLE_NAME}}"?**'
+    - value: >-
+        Are you sure that you want to unlock title
+        "{{unlockOtherTitleNameVariable.value}}"?
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
@@ -20,9 +22,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: confirmSingleMappingModal
-    row: 0.4
+    container: unlockOtherTitleModal
     col: 1
     height: 0.6
     width: 9
-createdAt: 2023-10-05T17:25:56.527Z
+createdAt: 2023-10-12T23:25:55.888Z
