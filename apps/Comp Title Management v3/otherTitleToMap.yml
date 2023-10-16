@@ -1,0 +1,15 @@
+id: otherTitleToMap
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        let array = []
+        rows = {{otherTitleTable.selectedRows}}
+        for (const key in rows) {
+          array.push ({'id': rows[key]['TITLE_ID'], 'name': "Title ID " + rows[key]['SOURCE_SYSTEM_TITLE_ID']+" from "+rows[key]['SOURCE_SYSTEM']+": '"+rows[key]['NAME_FROM_SOURCE']+"'"})
+        }
+
+        return array
+    - value: ''
+createdAt: 2023-10-04T22:17:19.199Z

@@ -1,0 +1,61 @@
+id: addNewGoldenTitleEpisodeInput
+uuid: 60d05997-f46c-4bf4-9b5b-6327e3cc4f9a
+type: widget
+subtype: NumberInputWidget
+template:
+  ordered:
+    - readOnly: false
+    - iconAfter: ''
+    - max: null
+    - preventScroll: false
+    - inputValue: 0
+    - marginType: normal
+    - hidden: >-
+        {{addNewGoldenTitleTypeSelect.value=='tvEpisode' ||
+        addNewGoldenTitleTypeSelect.value=='tvSeries'?false:true}}
+    - customValidation: ''
+    - showSeparators: true
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - allowNull: false
+    - showClear: false
+    - tooltipText: ''
+    - currency: USD
+    - labelAlign: left
+    - formDataKey: EPISODE_NUM
+    - value: 0
+    - labelCaption: ''
+    - min: null
+    - labelWidth: '33'
+    - placeholder: Enter value
+    - showStepper: true
+    - label: Episode
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - format: decimal
+    - iconBefore: ''
+    - textAlign: left
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - decimalPlaces: null
+    - labelWrap: false
+    - padDecimal: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: addNewGoldenTitle
+    row: 4
+    height: 1
+    width: 12
+createdAt: 2023-10-05T19:50:33.729Z

@@ -1,0 +1,29 @@
+id: unmapOtherTitleModal
+uuid: b60fe3af-74ab-4400-a2f4-597de0526ea4
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: true
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open Modal
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 4153c
+    row: 0.9999999999999999
+    col: 5
+    height: 1
+createdAt: 2023-10-06T23:53:06.615Z

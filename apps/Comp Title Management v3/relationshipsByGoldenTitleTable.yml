@@ -1,0 +1,364 @@
+id: relationshipsByGoldenTitleTable
+uuid: 8f73a7ef-c84a-4f85-b266-2a7b919a7e67
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - '03752': ''
+          - ed6f6: ''
+          - 9c1ac: ''
+          - 0929a: ''
+          - 63ef1: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 9c1ac
+        - '03752'
+        - ed6f6
+        - 0929a
+        - 63ef1
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - '03752':
+              ordered: []
+          - ed6f6:
+              ordered: []
+          - 9c1ac:
+              ordered: []
+          - 0929a:
+              ordered:
+                - showStepper: true
+          - 63ef1:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - '03752':
+              ordered: []
+          - ed6f6:
+              ordered: []
+          - 9c1ac:
+              ordered: []
+          - 0929a:
+              ordered: []
+          - 63ef1:
+              ordered:
+                - mode: manual
+                - mappedData: '{{ get_ctm_title_type.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
+    - _columnValueOverride:
+        ordered:
+          - '03752': '{{ _.startCase(item) }}'
+          - ed6f6: ''
+          - 9c1ac: ''
+          - 0929a: ''
+          - 63ef1: '{{ item}}'
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - '03752': RELATED_TITLE_TYPE
+          - ed6f6: TT_CODE
+          - 9c1ac: TITLE_NAME
+          - 0929a: RELEASE_YEAR
+          - 63ef1: TITLE_TYPE
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_related_by_golden_title_details.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - '03752': ''
+          - ed6f6: ''
+          - 9c1ac: ''
+          - 0929a: ''
+          - 63ef1: ''
+    - _columnFormat:
+        ordered:
+          - '03752': tag
+          - ed6f6: string
+          - 9c1ac: string
+          - 0929a: decimal
+          - 63ef1: tag
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: ''
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - '03752': left
+          - ed6f6: left
+          - 9c1ac: left
+          - 0929a: right
+          - 63ef1: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - '03752': ''
+          - ed6f6: ''
+          - 9c1ac: ''
+          - 0929a: ''
+          - 63ef1: ''
+    - _columnIcon:
+        ordered:
+          - '03752': ''
+          - ed6f6: ''
+          - 9c1ac: ''
+          - 0929a: ''
+          - 63ef1: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - '03752': ''
+          - ed6f6: ''
+          - 9c1ac: ''
+          - 0929a: ''
+          - 63ef1: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - '03752': false
+          - ed6f6: false
+          - 9c1ac: false
+          - 0929a: false
+          - 63ef1: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - '03752': ''
+          - ed6f6: ''
+          - 9c1ac: ''
+          - 0929a: ''
+          - 63ef1: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - '03752': ''
+          - ed6f6: ''
+          - 9c1ac: ''
+          - 0929a: ''
+          - 63ef1: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - '03752':
+              ordered:
+                - automaticColors: true
+          - ed6f6:
+              ordered: []
+          - 9c1ac:
+              ordered: []
+          - 0929a:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - 63ef1:
+              ordered:
+                - automaticColors: true
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - '03752': none
+          - ed6f6: none
+          - 9c1ac: none
+          - 0929a: none
+          - 63ef1: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - '03752':
+              ordered: []
+          - ed6f6:
+              ordered: []
+          - 9c1ac:
+              ordered: []
+          - 0929a:
+              ordered: []
+          - 63ef1:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - 9c1ac: 769.40625
+          - '03752': 114.6875
+          - ed6f6: 79.140625
+          - 0929a: 90.09375
+          - 63ef1: 83.640625
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: relationshipsByGoldenTitleTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: relationshipsByGoldenTitleTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - '03752': ''
+          - ed6f6: ''
+          - 9c1ac: ''
+          - 0929a: ''
+          - 63ef1: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - '03752': none
+          - ed6f6: none
+          - 9c1ac: none
+          - 0929a: sum
+          - 63ef1: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - '03752': center
+          - ed6f6: center
+          - 9c1ac: center
+          - 0929a: center
+          - 63ef1: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - '03752': Select option
+          - ed6f6: Enter value
+          - 9c1ac: Enter value
+          - 0929a: Enter value
+          - 63ef1: Select option
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - '03752': ''
+          - ed6f6: ''
+          - 9c1ac: ''
+          - 0929a: ''
+          - 63ef1: ''
+    - _columnLabel:
+        ordered:
+          - '03752': Related Type
+          - ed6f6: TT Code
+          - 9c1ac: Name
+          - 0929a: Release Year
+          - 63ef1: Title Type
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer4
+    subcontainer: '04808'
+    row: 10.4
+    height: 8
+    width: 12
+createdAt: 2023-10-06T23:15:33.274Z

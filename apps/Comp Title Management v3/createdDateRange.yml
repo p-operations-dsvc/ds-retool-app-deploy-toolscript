@@ -1,0 +1,63 @@
+id: createdDateRange
+type: widget
+subtype: DateRangeWidget
+template:
+  ordered:
+    - minDate: ''
+    - readOnly: false
+    - iconAfter: ''
+    - dateFormat: yyyy-MM-dd
+    - marginType: normal
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value:
+        ordered:
+          - start: '{{ moment().add(-900, ''days'') }}'
+          - end: '{{ moment().add(1, ''days'') }}'
+    - startPlaceholder: '{{self.value.start}}'
+    - labelCaption: ''
+    - maxDate: ''
+    - labelWidth: '33'
+    - label: Release Year
+    - formattedValue: ''
+    - _validate: false
+    - labelWidthUnit: '%'
+    - firstDayOfWeek: 1
+    - invalid: false
+    - iconBefore: bold/interface-calendar-remove
+    - endPlaceholder: '{{self.value.end}}'
+    - events:
+        - ordered:
+            - event: submit
+            - type: widget
+            - method: refresh
+            - pluginId: goldenTitleTable
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - textBetween: '-'
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 443b9
+    height: 1
+createdAt: 2023-09-28T17:19:22.588Z

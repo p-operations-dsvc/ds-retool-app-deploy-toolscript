@@ -1,0 +1,27 @@
+id: text1
+uuid: 531cd631-c4c3-4cda-b0a9-62593616e2ad
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: <b>Related Titles</b>
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer4
+    subcontainer: '04808'
+    col: 4
+    height: 0.6
+createdAt: 2023-10-06T23:13:33.261Z

@@ -1,0 +1,28 @@
+id: text3
+uuid: 8d121731-aa3c-411f-b44e-73f52d0cc49a
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: <b>Remapped from Titles</b>
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer4
+    subcontainer: '04808'
+    row: 18.4
+    col: 4
+    height: 0.6
+createdAt: 2023-10-06T23:23:13.181Z

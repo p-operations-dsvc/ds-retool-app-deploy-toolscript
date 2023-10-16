@@ -1,0 +1,44 @@
+id: prodCompaniesRemoveButton
+uuid: 0d064ad6-113a-4c2f-aae2-2c47ac62f120
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: center
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: '-'
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: widget
+            - method: open
+            - pluginId: prodCompaniesTagsModal
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{prodCompanyTagsVariable.value.toString()}}'
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 15.999999999999996
+    col: 5
+    height: 1
+    width: 1
+createdAt: 2023-10-03T21:02:29.221Z

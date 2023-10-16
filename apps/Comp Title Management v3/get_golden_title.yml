@@ -1,0 +1,116 @@
+id: get_golden_title
+type: datasource
+subtype: SqlQueryUnified
+resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
+resourceDisplayName: Snowflake CTMv3
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - streamResponse: false
+    - records: ''
+    - lastReceivedFromResourceAt: null
+    - databasePasswordOverride: ''
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: true
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: >-
+        select GOLDEN_TITLE_ID, IMDB_TT_CD, TITLE_NAME, TITLE_TYPE,
+        RELEASE_YEAR, case when SEASON_NUM=-1 then null else SEASON_NUM end as
+        SEASON_NUM, 
+
+        case when EPISODE_NUM = -1 then null else EPISODE_NUM end as
+        EPISODE_NUM,  PRIMARY_GENRE,  IMDB_URL, parent_golden_title_id
+
+        from EDWCTM.GOLDEN_TITLE where release_year between
+        {{createdDateRange.value.start.split ('T')[0].split('-')[0]}} and
+        {{createdDateRange.value.end.split ('T')[0].split('-')[0]}}  and
+        title_type like '%'||case when {{titleTypeSelect.value}}='any' then ''
+        else {{titleTypeSelect.value}} end||'%' 
+
+        and title_name ilike '%'||{{ titleNameInput.value}}||'%'
+
+        and INACTIVE_INDICATOR='false'
+
+        order by GOLDEN_TITLE_ID limit {{ goldenTitleTable.pagination.pageSize
+        }} offset  {{ goldenTitleTable.pagination.offset }}
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - warningCodes: []
+    - data: null
+    - recordId: ''
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: true
+    - dataArray: []
+    - cacheKeyTtl: ''
+    - filterBy: ''
+    - requestSentTimestamp: null
+    - databaseHostOverride: ''
+    - metadata: null
+    - workflowActionType: null
+    - editorMode: sql
+    - queryRunTime: null
+    - actionType: ''
+    - changesetObject: ''
+    - shouldUseLegacySql: false
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - databaseNameOverride: ''
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: ''
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - enableBulkUpdates: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - bulkUpdatePrimaryKey: ''
+    - runWhenPageLoads: false
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return formatDataAsArray(data)
+    - events: []
+    - isMultiplayerEdited: false
+    - tableName: ''
+    - queryTimeout: '10001'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - workflowBlockPluginId: null
+    - databaseUsernameOverride: ''
+    - shouldEnableBatchQuerying: false
+    - doNotThrowOnNoOp: false
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-09-27T22:19:26.548Z

@@ -1,0 +1,56 @@
+id: goldenTitleSeasonFromSourceText
+uuid: 342b4b8a-5520-4452-aa44-f66220d4c9ea
+type: widget
+subtype: TextInputWidget2
+template:
+  ordered:
+    - spellCheck: false
+    - readOnly: false
+    - iconAfter: ''
+    - showCharacterCount: false
+    - autoComplete: false
+    - marginType: normal
+    - maxLength: null
+    - hidden: '{{get_golden_title_details.data.TITLE_TYPE==''tvEpisode''?false:true}}'
+    - customValidation: ''
+    - patternType: ''
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - pattern: ''
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{get_golden_title_details.data.SEASON_FROM_SOURCE[0]}}'
+    - labelCaption: ''
+    - labelWidth: '33'
+    - autoFill: ''
+    - placeholder: Enter value
+    - label: Season from {{get_golden_title_details.data.SOURCE_SYSTEM_NAME[0]}}
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - iconBefore: ''
+    - minLength: null
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - autoCapitalize: none
+    - loading: false
+    - disabled: 'true'
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 6.999999999999999
+    height: 1
+    width: 12
+createdAt: 2023-10-08T23:45:51.225Z

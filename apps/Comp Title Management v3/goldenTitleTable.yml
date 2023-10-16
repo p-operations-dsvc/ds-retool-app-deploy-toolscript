@@ -1,0 +1,705 @@
+id: goldenTitleTable
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - ddd1f: ''
+          - 1bf70: ''
+          - f4b5d: ''
+          - 609f8: ''
+          - a6e74: ''
+          - 3d10e: ''
+          - 22dd9: ''
+          - 8cf18: ''
+          - '50025': ''
+          - aab45: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - ddd1f
+        - 1bf70
+        - f4b5d
+        - 609f8
+        - a6e74
+        - 3d10e
+        - 22dd9
+        - 8cf18
+        - '50025'
+        - aab45
+    - _isSaving: false
+    - _actionIds:
+        - b53a9
+        - ba822
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: ''
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - ddd1f:
+              ordered:
+                - showStepper: true
+          - 1bf70:
+              ordered: []
+          - f4b5d:
+              ordered: []
+          - 609f8:
+              ordered:
+                - showStepper: true
+          - a6e74:
+              ordered: []
+          - 3d10e:
+              ordered:
+                - showStepper: true
+          - 22dd9:
+              ordered:
+                - showStepper: true
+          - 8cf18:
+              ordered: []
+          - '50025':
+              ordered: []
+          - aab45:
+              ordered:
+                - showStepper: true
+    - _toolbarPosition: bottom
+    - _groupByColumns:
+        ordered: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnStatusIndicator:
+        ordered:
+          - ddd1f:
+              ordered: []
+          - 7b00d:
+              ordered: []
+          - 1bf70:
+              ordered: []
+          - f4b5d:
+              ordered: []
+          - 609f8:
+              ordered: []
+          - ea94b:
+              ordered: []
+          - a269e:
+              ordered: []
+          - 6eb60:
+              ordered: []
+          - c587c:
+              ordered: []
+    - _columnOptionList:
+        ordered:
+          - ddd1f:
+              ordered: []
+          - 1bf70:
+              ordered: []
+          - f4b5d:
+              ordered: []
+          - 609f8:
+              ordered: []
+          - a6e74:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_title_type.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
+          - 3d10e:
+              ordered: []
+          - 22dd9:
+              ordered: []
+          - 8cf18:
+              ordered: []
+          - '50025':
+              ordered: []
+          - aab45:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - ddd1f: ''
+          - 1bf70: ''
+          - f4b5d: ''
+          - 609f8: ''
+          - a6e74: '{{ item }}'
+          - 3d10e: ''
+          - 22dd9: ''
+          - 8cf18: '{{ _.startCase(item) }}'
+          - '50025': |-
+              <a href= "{{item}}" target="_blank">
+              IMDB Link
+              </a>
+          - aab45: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: '500'
+    - _dynamicColumnProperties:
+        ordered:
+          - formatByIndex: multilineString
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - ddd1f: GOLDEN_TITLE_ID
+          - 1bf70: IMDB_TT_CD
+          - f4b5d: TITLE_NAME
+          - 609f8: RELEASE_YEAR
+          - a6e74: TITLE_TYPE
+          - 3d10e: SEASON_NUM
+          - 22dd9: EPISODE_NUM
+          - 8cf18: PRIMARY_GENRE
+          - '50025': IMDB_URL
+          - aab45: PARENT_GOLDEN_TITLE_ID
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_golden_title.data }}'
+    - _cellSelection: none
+    - _serverPaginated: true
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - ddd1f: ''
+          - 1bf70: ''
+          - f4b5d: ''
+          - 609f8: ''
+          - a6e74: ''
+          - 3d10e: ''
+          - 22dd9: ''
+          - 8cf18: ''
+          - '50025': ''
+          - aab45: ''
+    - _columnFormat:
+        ordered:
+          - ddd1f: decimal
+          - 1bf70: string
+          - f4b5d: multilineString
+          - 609f8: decimal
+          - a6e74: tag
+          - 3d10e: decimal
+          - 22dd9: decimal
+          - 8cf18: tag
+          - '50025': html
+          - aab45: decimal
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: ddd1f
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - ddd1f: center
+          - 1bf70: left
+          - f4b5d: left
+          - 609f8: right
+          - a6e74: left
+          - 3d10e: right
+          - 22dd9: right
+          - 8cf18: left
+          - '50025': left
+          - aab45: right
+    - _actionIcon:
+        ordered:
+          - b53a9: bold/interface-edit-view
+          - ba822: bold/interface-edit-copy
+    - _columnTooltip:
+        ordered:
+          - ddd1f: ''
+          - 1bf70: ''
+          - f4b5d: ''
+          - 609f8: ''
+          - a6e74: ''
+          - 3d10e: ''
+          - 22dd9: ''
+          - 8cf18: ''
+          - '50025': ''
+          - aab45: ''
+    - _columnIcon:
+        ordered:
+          - ddd1f: ''
+          - 1bf70: ''
+          - f4b5d: ''
+          - 609f8: ''
+          - a6e74: ''
+          - 3d10e: ''
+          - 22dd9: ''
+          - 8cf18: ''
+          - '50025': ''
+          - aab45: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - ddd1f: ''
+          - 1bf70: ''
+          - f4b5d: ''
+          - 609f8: ''
+          - a6e74: ''
+          - 3d10e: ''
+          - 22dd9: ''
+          - 8cf18: ''
+          - '50025': ''
+          - aab45: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - ddd1f: false
+          - 1bf70: false
+          - f4b5d: false
+          - 609f8: false
+          - a6e74: false
+          - 3d10e: false
+          - 22dd9: false
+          - 8cf18: false
+          - '50025': false
+          - aab45: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered:
+          - b53a9: ''
+          - ba822: ''
+    - _columnReferenceId:
+        ordered:
+          - ddd1f: ''
+          - 1bf70: ''
+          - f4b5d: ''
+          - 609f8: ''
+          - a6e74: ''
+          - 3d10e: ''
+          - 22dd9: ''
+          - 8cf18: ''
+          - '50025': ''
+          - aab45: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: multiple
+    - _columnCaption:
+        ordered:
+          - ddd1f: ''
+          - 1bf70: ''
+          - f4b5d: ''
+          - 609f8: ''
+          - a6e74: ''
+          - 3d10e: ''
+          - 22dd9: ''
+          - 8cf18: ''
+          - '50025': ''
+          - aab45: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - ddd1f:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - 1bf70:
+              ordered: []
+          - f4b5d:
+              ordered: []
+          - 609f8:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - a6e74:
+              ordered:
+                - automaticColors: true
+          - 3d10e:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - 22dd9:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+          - 8cf18:
+              ordered:
+                - automaticColors: true
+          - '50025':
+              ordered:
+                - showUnderline: hover
+          - aab45:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - f4b5d: none
+          - ddd1f: none
+          - a6e74: none
+          - 3d10e: none
+          - 22dd9: none
+          - 8cf18: none
+          - '50025': none
+          - aab45: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - ddd1f:
+              ordered: []
+          - 1bf70:
+              ordered: []
+          - f4b5d:
+              ordered: []
+          - 609f8:
+              ordered: []
+          - a6e74:
+              ordered: []
+          - 3d10e:
+              ordered: []
+          - 22dd9:
+              ordered: []
+          - 8cf18:
+              ordered: []
+          - '50025':
+              ordered: []
+          - aab45:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - 8cf18: 102.859375
+          - aab45: 136.15625
+          - f4b5d: 570.515625
+          - a6e74: 109.890625
+          - 1bf70: 86.921875
+          - 609f8: 47.09375
+          - 3d10e: 70.375
+          - '50025': 250.890625
+          - ddd1f: 70.421875
+          - 22dd9: 73.84375
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered: []
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: open
+            - pluginId: goldenTitleCopyModal
+            - targetId: ba822
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title_details
+            - targetId: ba822
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: currentRowGoldenTitleId
+            - targetId: ba822
+            - params:
+                ordered:
+                  - value: '{{ currentRow.GOLDEN_TITLE_ID }}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: open
+            - pluginId: goldenTitleModal
+            - targetId: b53a9
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: currentRowGoldenTitleId
+            - targetId: b53a9
+            - params:
+                ordered:
+                  - value: '{{ currentRow.GOLDEN_TITLE_ID }}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: currentRowGoldenTitleIMDBId
+            - targetId: b53a9
+            - params:
+                ordered:
+                  - value: '{{currentRow.IMDB_TT_CD}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title_details
+            - targetId: b53a9
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_related_golden_title_details
+            - targetId: b53a9
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_child_golden_title_details
+            - targetId: b53a9
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title_talent
+            - targetId: b53a9
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: currentRowGoldenTitleParentId
+            - targetId: b53a9
+            - params:
+                ordered:
+                  - value: '{{ currentRow.PARENT_GOLDEN_TITLE_ID}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_group_golden_title_details
+            - targetId: b53a9
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickCell
+            - type: util
+            - method: openUrl
+            - pluginId: ''
+            - targetId: c587c
+            - params:
+                ordered:
+                  - url: '{{ item }}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: goldenTitleTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: goldenTitleTable
+            - targetId: 4d
+        - ordered:
+            - event: clickCell
+            - type: util
+            - method: openUrl
+            - pluginId: ''
+            - targetId: bba20
+            - params:
+                ordered:
+                  - url: '{{ item }}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickCell
+            - type: util
+            - method: openUrl
+            - pluginId: ''
+            - targetId: '50025'
+            - params:
+                ordered:
+                  - url: '{{ item }}'
+            - waitType: debounce
+            - waitMs: '0'
+    - _columnEditable:
+        ordered:
+          - ddd1f: false
+          - 1bf70: ''
+          - f4b5d: ''
+          - 609f8: ''
+          - a6e74: ''
+          - 3d10e: ''
+          - 22dd9: ''
+          - 8cf18: ''
+          - '50025': ''
+          - aab45: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - f4b5d: none
+          - ddd1f: none
+          - a6e74: none
+          - 3d10e: sum
+          - 22dd9: sum
+          - 8cf18: none
+          - '50025': none
+          - aab45: sum
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: pagination
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: none
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - ddd1f: center
+          - 1bf70: center
+          - f4b5d: center
+          - 609f8: center
+          - a6e74: center
+          - 3d10e: center
+          - 22dd9: center
+          - 8cf18: center
+          - '50025': center
+          - aab45: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - ddd1f: Enter value
+          - 1bf70: Enter value
+          - f4b5d: Enter value
+          - 609f8: Enter value
+          - a6e74: Select option
+          - 3d10e: Enter value
+          - 22dd9: Enter value
+          - 8cf18: Select option
+          - '50025': ''
+          - aab45: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered:
+          - b53a9: View
+          - ba822: Copy
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered:
+          - b53a9: ''
+          - ba822: ''
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - ddd1f: ''
+          - 1bf70: ''
+          - f4b5d: ''
+          - 609f8: ''
+          - a6e74: ''
+          - 3d10e: ''
+          - 22dd9: ''
+          - 8cf18: ''
+          - '50025': ''
+          - aab45: 'true'
+    - _columnLabel:
+        ordered:
+          - ddd1f: ID
+          - 1bf70: TT Code
+          - f4b5d: Name
+          - 609f8: Year
+          - a6e74: Type
+          - 3d10e: Season
+          - 22dd9: Episode
+          - 8cf18: Genre
+          - '50025': IMDB URL
+          - aab45: Parent golden title id
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer2
+    rowGroup: header
+    height: 32.6
+    width: 12
+createdAt: 2023-09-27T22:19:06.281Z

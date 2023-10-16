@@ -1,0 +1,297 @@
+id: remappedFromGoldenTitleTable
+uuid: 60520f48-9003-48be-88aa-314dcb8677d9
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 66ecf
+        - aa737
+        - 785dc
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - 66ecf:
+              ordered: []
+          - aa737:
+              ordered: []
+          - 785dc:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - 66ecf:
+              ordered: []
+          - aa737:
+              ordered: []
+          - 785dc:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - 66ecf: TITLE_NAME
+          - aa737: SOURCE_SYSTEM_TITLE_ID
+          - 785dc: REMAPPED_TO_TITLE
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_remapped_from_golden_title_details.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
+    - _columnFormat:
+        ordered:
+          - 66ecf: string
+          - aa737: string
+          - 785dc: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: ''
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - 66ecf: left
+          - aa737: left
+          - 785dc: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
+    - _columnIcon:
+        ordered:
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - 66ecf: false
+          - aa737: false
+          - 785dc: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - 66ecf:
+              ordered: []
+          - aa737:
+              ordered: []
+          - 785dc:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - 66ecf: none
+          - aa737: none
+          - 785dc: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - 66ecf:
+              ordered: []
+          - aa737:
+              ordered: []
+          - 785dc:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - 66ecf: 755.359375
+          - aa737: 168.640625
+          - 785dc: 118.53125
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: remappedFromGoldenTitleTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: remappedFromGoldenTitleTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - 66ecf: none
+          - aa737: none
+          - 785dc: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - 66ecf: center
+          - aa737: center
+          - 785dc: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - 66ecf: Enter value
+          - aa737: Enter value
+          - 785dc: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - 66ecf: ''
+          - aa737: ''
+          - 785dc: ''
+    - _columnLabel:
+        ordered:
+          - 66ecf: Title Name
+          - aa737: Source System Title ID
+          - 785dc: Remapped toTitle
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer4
+    subcontainer: '04808'
+    row: 19
+    height: 8
+    width: 12
+createdAt: 2023-10-06T23:23:35.635Z

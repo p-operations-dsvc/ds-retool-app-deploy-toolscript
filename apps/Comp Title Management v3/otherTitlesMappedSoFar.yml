@@ -1,0 +1,27 @@
+id: otherTitlesMappedSoFar
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        // Reference external variables with curly brackets or using JS
+        variables
+
+        let arr = {{otherTitlesMappedSoFarVariable.value }}
+
+        if (arr) {
+
+        arr.push ( {'id': {{titleToMapSelect.selectedItem.id}},
+                    'name': {{titleToMapSelect.selectedItem.name}}
+                   })
+        }
+
+        else {
+          arr = [{'id': {{titleToMapSelect.selectedItem.id}},
+                    'name': {{titleToMapSelect.selectedItem.name}}
+                   }]
+        }
+
+        return arr
+    - value: ''
+createdAt: 2023-10-11T02:33:05.735Z

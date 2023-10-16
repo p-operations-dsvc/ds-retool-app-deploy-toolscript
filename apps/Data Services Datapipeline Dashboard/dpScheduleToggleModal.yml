@@ -1,10 +1,12 @@
 id: dpScheduleToggleModal
+uuid: 368e6bb2-3be0-4ada-8c95-d8c275bf27cd
 type: widget
 subtype: ModalWidget
 template:
   ordered:
     - opened: false
     - modalOverflowType: scroll
+    - hidden: '{{dpAllTableV2.selectedRow.schedule_state == null}}'
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''
@@ -13,17 +15,16 @@ template:
     - modalWidth: ''
     - closeOnOutsideClick: true
     - loading: ''
-    - disabled: '{{dpAllTable.selectedRow.data.schedule_name === ''na''}}'
+    - disabled: ''
     - buttonText: >-
-        {{dpAllTable.selectedRow.data.schedule_state == 'ENABLED'? 'Disable':
+        {{dpAllTableV2.selectedRow.schedule_state == 'ENABLED'? 'Disable':
         'Enable'}} Schedule
 style:
   ordered: []
 position2:
   position2:
     container: dpSettingRowModal
-    row: 0.19999999999999996
+    row: 0.2
     col: 4
     height: 0.8
-    width: 3
-createdAt: 2023-03-02T00:11:02.412Z
+createdAt: 2023-10-09T23:21:46.472Z

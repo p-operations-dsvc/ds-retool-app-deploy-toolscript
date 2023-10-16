@@ -1,0 +1,128 @@
+id: titleToMapSelect
+uuid: 05519f94-1350-4b45-b0ba-03e87cf52d09
+type: widget
+subtype: SelectWidget2
+template:
+  ordered:
+    - imageByIndex:
+        array: []
+    - _disabledByIndex:
+        - ''
+        - ''
+        - ''
+    - showSelectionIndicator: true
+    - _values:
+        - Option 1
+        - Option 2
+        - Option 3
+    - iconByIndex:
+        array: []
+    - values: '{{item.id}}'
+    - readOnly: false
+    - iconAfter: ''
+    - _iconByIndex:
+        - ''
+        - ''
+        - ''
+    - overlayMinWidth: null
+    - allowDeselect: false
+    - inputValue: ''
+    - marginType: normal
+    - hidden: false
+    - customValidation: ''
+    - data: '{{otherTitleToMapVariable.value}}'
+    - searchMode: fuzzy
+    - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
+    - textBefore: ''
+    - _fallbackTextByIndex:
+        - ''
+        - ''
+        - ''
+    - selectedItem: null
+    - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: ''
+    - hiddenByIndex:
+        array: []
+    - labelCaption: ''
+    - labelWidth: '10'
+    - deprecatedLabels:
+        array: []
+    - _hiddenByIndex:
+        - ''
+        - ''
+        - ''
+    - placeholder: Select an option
+    - _captionByIndex:
+        - ''
+        - ''
+        - ''
+    - itemAdornmentSize: auto
+    - label: Select Title
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
+    - _validate: false
+    - itemMode: dynamic
+    - labelWidthUnit: '%'
+    - allowCustomValue: false
+    - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex:
+        - ''
+        - ''
+        - ''
+    - _colorByIndex:
+        - ''
+        - ''
+        - ''
+    - tooltipByIndex:
+        array: []
+    - iconBefore: ''
+    - colorByIndex:
+        array: []
+    - selectedLabel: ''
+    - events: []
+    - _ids:
+        - b2c9e
+        - 2ecda
+        - 7bfca
+    - emptyMessage: No options
+    - overlayMaxHeight: 375
+    - loading: false
+    - disabled: false
+    - labelPosition: left
+    - _labels:
+        - ''
+        - ''
+        - ''
+    - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - _imageByIndex:
+        - ''
+        - ''
+        - ''
+    - required: false
+    - labels: '{{item.name}}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: mapOtherTitlesModal
+    row: 1.9999999999999991
+    height: 1
+    width: 6
+createdAt: 2023-10-05T16:28:11.330Z

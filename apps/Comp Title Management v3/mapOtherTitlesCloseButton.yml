@@ -1,0 +1,43 @@
+id: mapOtherTitlesCloseButton
+uuid: 22e9153c-3372-4e29-b841-933afa81345c
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: Close
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: widget
+            - method: close
+            - pluginId: mapOtherTitlesModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mapOtherTitlesModal
+    row: 22.2
+    col: 4
+    height: 1
+    width: 4
+createdAt: 2023-10-11T22:02:53.011Z

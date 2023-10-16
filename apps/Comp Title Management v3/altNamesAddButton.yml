@@ -1,0 +1,46 @@
+id: altNamesAddButton
+uuid: 6a027536-43f1-4a43-9274-434a0f233278
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: center
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: +
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: >
+                      altNamesTagsVariable.setValue
+                      (altNamesTagsVariable.value.concat(goldenTitleAltNamesTextInput.value))
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 22.6
+    col: 4
+    height: 1
+    width: 1
+createdAt: 2023-10-03T19:30:51.474Z

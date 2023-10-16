@@ -1,0 +1,16 @@
+id: securityGroupCheck
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        groups = {{current_user.groups}}
+        let editor_groups = ['CTM Editors', 'admin']
+        for (const key in groups) {
+          if (editor_groups.includes (groups[key]['name'])) {
+             return false
+          }
+        }
+        return true
+    - value: ''
+createdAt: 2023-10-04T21:54:02.809Z

@@ -1,0 +1,28 @@
+id: confirmSingleMappingText
+uuid: c3cdb848-137f-4590-b61c-caa4f4c9c30d
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: ' **Proceed to map "{{titleToMapSelect.selectedItem.name}}" to Golden Title "{{mapCandidatesTable.selectedRow.GOLDEN_TITLE_NAME}}"?**'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: confirmSingleMappingModal
+    row: 0.4
+    col: 1
+    height: 0.6
+    width: 9
+createdAt: 2023-10-05T17:25:56.527Z

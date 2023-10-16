@@ -7,6 +7,7 @@ template:
   ordered:
     - queryRefreshTime: ''
     - paginationLimit: ''
+    - streamResponse: false
     - body: >-
         [{"key":"env","value":"{{dpEnv.value}}"},{"key":"datapipeline_name","value":"{{dpObjName.value}}"},{"key":"datapipeline_timeout_seconds","value":"{{dpTimeout.value}}"},{"key":"snow_assignment_group","value":"{{dpIncQueue.value}}"},{"key":"snow_ci","value":"{{dpIncCI.value}}"},{"key":"snow_urgency","value":"{{dpIncUrgency.value}}"},{"key":"snow_impact","value":"{{dpIncImpact.value}}"},{"key":"auto_restart_on_failure","value":"{{dpAutoRestart.value}}"},{"key":"max_number_of_restarts","value":"{{dpMaxNumberofRestarts.value}}"},{"key":"max_concurrent_instances","value":"{{dpMaxConcurrentInstances.value}}"},{"key":"cluster_arn","value":"{{dpCluster.value}}"},{"key":"container_name","value":"{{dpContainerName.value.split(':')[1]}}"},{"key":"container_arn","value":"{{dpContainerARN.value}}"},{"key":"sns_success_topic_arn","value":"{{dpSNSSuccessTopicARN.value}}"},{"key":"sns_failure_topic_arn","value":"{{dpSNSFailureTopicARN.value}}"},{"key":"task_name","value":"{{dpTaskName.value}}"},{"key":"task_storage","value":"{{dpTaskStorage.value}}"},{"key":"task_cpu","value":"\"{{dpTaskCPU.value}}\""},{"key":"task_memory","value":"\"{{dpTaskMemory.value}}\""},{"key":"task_role_arn","value":"{{dpRoleARN.value}}"},{"key":"schedule_name","value":"{{dpScheduleName.value}}"},{"key":"schedule_cron_expression","value":"{{dpScheduleExpression.value}}"},{"key":"documentation_url","value":"{{dpDocumentationURL.value}}"},{"key":"overrides","value":"{{dpOverrides.value}}"},{"key":"override_commands","value":"{{dpOverridesCommands.value}}"},{"key":"schedule_tz","value":"{{dpScheduleTZ.value}}"},{"key":"schedule_state","value":"{{dpScheduleState.value}}"},{"key":"schedule_group","value":"{{dpScheduleGroup.value}}"}]
     - lastReceivedFromResourceAt: null
@@ -16,16 +17,19 @@ template:
     - successMessage: ''
     - queryDisabled: ''
     - playgroundQuerySaveId: latest
+    - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
     - paginationPaginationField: ''
     - headers: ''
+    - workflowRunId: null
     - showFailureToaster: true
     - paginationEnabled: false
     - query: create_datapipeline_objects
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
+    - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
     - data: null
@@ -37,6 +41,7 @@ template:
     - requestSentTimestamp: null
     - cookies: ''
     - metadata: null
+    - workflowActionType: null
     - queryRunTime: null
     - changesetObject: ''
     - errorTransformer: >-
@@ -108,12 +113,14 @@ template:
             - waitType: debounce
             - waitMs: '0'
     - queryTimeout: '10000'
+    - workflowId: null
     - requireConfirmation: false
     - type: POST
     - queryFailureConditions: ''
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - bodyType: json
     - offlineQueryType: None
     - queryThrottleTime: '750'

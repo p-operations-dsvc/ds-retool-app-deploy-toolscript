@@ -4,9 +4,11 @@ appTemplate:
   mobileAppSettings:
     object:
       mobileOfflineModeEnabled: false
-  appMaxWidth: 100%
-  queryStatusVisibility: false
-  rootScreen: null
-  version: 2.115.7
+  experimentalPerfFeatures:
+    object:
+      serverDepGraphEnabled: false
+      useRuntimeV2: false
+      runtimeV2OptOut: false
+  version: 3.12.1
   responsiveLayoutDisabled: true
   markdownLinkBehavior: always

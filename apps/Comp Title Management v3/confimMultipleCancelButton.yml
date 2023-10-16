@@ -1,0 +1,43 @@
+id: confimMultipleCancelButton
+uuid: da300b2a-9357-4810-adfc-cba2470afbfe
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: Cancel
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: widget
+            - method: close
+            - pluginId: confimMultipleMappingModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: confimMultipleMappingModal
+    row: 3
+    col: 1
+    height: 1
+    width: 9
+createdAt: 2023-10-05T00:58:15.581Z

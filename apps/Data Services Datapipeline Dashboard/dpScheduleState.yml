@@ -16,6 +16,7 @@ template:
     - _iconByIndex:
         - ''
         - ''
+    - marginType: normal
     - hidden: '{{dpCreateHideSchedFields.value===true}}'
     - customValidation: ''
     - data:

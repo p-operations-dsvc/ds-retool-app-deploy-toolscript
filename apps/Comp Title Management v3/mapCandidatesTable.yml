@@ -1,0 +1,548 @@
+id: mapCandidatesTable
+uuid: dfc26e56-7313-48fa-aafa-fa823e3c9dd5
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - 90d28: ''
+          - 5c264: ''
+          - 962dd: ''
+          - 8b56d: ''
+          - de3ee: ''
+          - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - e3c42
+        - de3ee
+        - 368fc
+        - 90d28
+        - 5c264
+        - 7a4c7
+        - 8b56d
+        - 962dd
+    - _isSaving: false
+    - _actionIds:
+        - 34a54
+        - 3b081
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - 90d28:
+              ordered: []
+          - 5c264:
+              ordered:
+                - showStepper: true
+          - 962dd:
+              ordered:
+                - showStepper: true
+          - 8b56d:
+              ordered: []
+          - de3ee:
+              ordered:
+                - showStepper: true
+          - e3c42:
+              ordered:
+                - showStepper: true
+          - 7a4c7:
+              ordered: []
+          - ee24f:
+              ordered:
+                - showStepper: true
+          - 368fc:
+              ordered:
+                - showStepper: true
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - 90d28:
+              ordered: []
+          - 5c264:
+              ordered: []
+          - 962dd:
+              ordered: []
+          - 8b56d:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_vote_magnitude.data }}'
+                - valueByIndex: '{{ item.NAME }}'
+                - labelByIndex: '{{ item.NAME }}'
+          - de3ee:
+              ordered: []
+          - e3c42:
+              ordered: []
+          - 7a4c7:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_title_type.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
+          - ee24f:
+              ordered: []
+          - 368fc:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - 90d28: ''
+          - 5c264: ''
+          - 962dd: ''
+          - 8b56d: '{{ item }}'
+          - de3ee: ''
+          - e3c42: ''
+          - 7a4c7: '{{ item }}'
+          - ee24f: ''
+          - 368fc: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - 90d28: GOLDEN_TITLE_NAME
+          - 5c264: GOLDEN_TITLE_RELEASE
+          - 962dd: GOLDEN_TITLE_ID
+          - 8b56d: VOTE_MAGNITUDE_RANGE
+          - de3ee: JARO_SCORE
+          - e3c42: ROW_RANK
+          - 7a4c7: TITLE_TYPE
+          - ee24f: RELEASE_YEAR
+          - 368fc: EDIT_DISTANCE
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_match_candidates.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - 90d28: ''
+          - 5c264: ''
+          - 962dd: ''
+          - 8b56d: ''
+          - de3ee: ''
+          - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
+    - _columnFormat:
+        ordered:
+          - 90d28: string
+          - 5c264: decimal
+          - 962dd: decimal
+          - 8b56d: tag
+          - de3ee: decimal
+          - e3c42: decimal
+          - 7a4c7: tag
+          - ee24f: decimal
+          - 368fc: decimal
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: 962dd
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - 90d28: left
+          - 5c264: right
+          - 962dd: center
+          - 8b56d: left
+          - de3ee: center
+          - e3c42: right
+          - 7a4c7: left
+          - ee24f: center
+          - 368fc: center
+    - _actionIcon:
+        ordered:
+          - 34a54: bold/travel-map-alternate
+          - 3b081: bold/travel-map-earth-1
+    - _columnTooltip:
+        ordered:
+          - 90d28: ''
+          - 5c264: ''
+          - 962dd: ''
+          - 8b56d: ''
+          - de3ee: ''
+          - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
+    - _columnIcon:
+        ordered:
+          - 90d28: ''
+          - 5c264: ''
+          - 962dd: ''
+          - 8b56d: ''
+          - de3ee: ''
+          - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - 90d28: ''
+          - 5c264: ''
+          - 962dd: ''
+          - 8b56d: ''
+          - de3ee: ''
+          - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - 90d28: false
+          - 5c264: false
+          - 962dd: false
+          - 8b56d: false
+          - de3ee: false
+          - e3c42: false
+          - 7a4c7: false
+          - ee24f: false
+          - 368fc: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered:
+          - 34a54: ''
+          - 3b081: ''
+    - _columnReferenceId:
+        ordered:
+          - 90d28: ''
+          - 5c264: ''
+          - 962dd: ''
+          - 8b56d: ''
+          - de3ee: ''
+          - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - 90d28: ''
+          - 5c264: ''
+          - 962dd: ''
+          - 8b56d: ''
+          - de3ee: ''
+          - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - 90d28:
+              ordered: []
+          - 5c264:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - 962dd:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - 8b56d:
+              ordered:
+                - automaticColors: true
+          - de3ee:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+          - e3c42:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+          - 7a4c7:
+              ordered:
+                - automaticColors: true
+          - ee24f:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - 368fc:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - 90d28: none
+          - 5c264: none
+          - 962dd: none
+          - 8b56d: none
+          - de3ee: none
+          - e3c42: none
+          - 7a4c7: none
+          - ee24f: none
+          - 368fc: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - 90d28:
+              ordered: []
+          - 5c264:
+              ordered: []
+          - 962dd:
+              ordered: []
+          - 8b56d:
+              ordered: []
+          - de3ee:
+              ordered: []
+          - e3c42:
+              ordered: []
+          - 7a4c7:
+              ordered: []
+          - ee24f:
+              ordered: []
+          - 368fc:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - e3c42: 44.859375
+          - de3ee: 71.40625
+          - 90d28: 157.859375
+          - 5c264: 47.09375
+          - 7a4c7: 73.65625
+          - 8b56d: 102.671875
+          - 962dd: 101.40625
+          - 368fc: 91.625
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: goldenTitleIdToMapTo
+            - targetId: 3b081
+            - params:
+                ordered:
+                  - value: '{{currentRow.GOLDEN_TITLE_ID}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: open
+            - pluginId: confimMultipleMappingModal
+            - targetId: 3b081
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: goldenTitleIdToMapTo
+            - targetId: 34a54
+            - params:
+                ordered:
+                  - value: '{{currentRow.GOLDEN_TITLE_ID}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: open
+            - pluginId: confirmSingleMappingModal
+            - targetId: 34a54
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: mapCandidatesTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: mapCandidatesTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - 90d28: ''
+          - 5c264: ''
+          - 962dd: false
+          - 8b56d: ''
+          - de3ee: ''
+          - e3c42: false
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - 90d28: none
+          - 5c264: sum
+          - 962dd: sum
+          - 8b56d: none
+          - de3ee: sum
+          - e3c42: sum
+          - 7a4c7: none
+          - ee24f: sum
+          - 368fc: sum
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: none
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - 90d28: center
+          - 5c264: center
+          - 962dd: center
+          - 8b56d: center
+          - de3ee: center
+          - e3c42: center
+          - 7a4c7: center
+          - ee24f: center
+          - 368fc: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - 90d28: Enter value
+          - 5c264: Enter value
+          - 962dd: Enter value
+          - 8b56d: Select option
+          - de3ee: Enter value
+          - e3c42: Enter value
+          - 7a4c7: Select option
+          - ee24f: Enter value
+          - 368fc: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered:
+          - 34a54: Pick
+          - 3b081: Pick For All
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered:
+          - 34a54: ''
+          - 3b081: ''
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - 90d28: ''
+          - 5c264: ''
+          - 962dd: 'true'
+          - 8b56d: ''
+          - de3ee: ''
+          - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
+    - _columnLabel:
+        ordered:
+          - 90d28: Golden Title Name
+          - 5c264: Year
+          - 962dd: Golden Title ID
+          - 8b56d: Votes
+          - de3ee: JW Score
+          - e3c42: Rank
+          - 7a4c7: Title Type
+          - ee24f: Release Year
+          - 368fc: Edit Distance
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: mapOtherTitlesModal
+    row: 3
+    height: 8
+    width: 8
+createdAt: 2023-10-04T22:54:35.621Z

@@ -1,0 +1,43 @@
+id: confirmSingleMappingCancelButton
+uuid: 63a33fc0-c8a4-4b51-a307-db2ff6d8dfd3
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: Cancel
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: widget
+            - method: close
+            - pluginId: confirmSingleMappingModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: confirmSingleMappingModal
+    row: 2
+    col: 1
+    height: 1
+    width: 9
+createdAt: 2023-10-05T00:11:37.444Z

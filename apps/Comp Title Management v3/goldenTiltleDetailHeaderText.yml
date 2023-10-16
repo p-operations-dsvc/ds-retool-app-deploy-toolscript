@@ -1,0 +1,28 @@
+id: goldenTiltleDetailHeaderText
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: |
+        ### Viewing '{{get_golden_title_details.data.TITLE_NAME[0]}}' 
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleModal
+    row: 0.6
+    col: 1
+    height: 0.6
+    width: 10
+createdAt: 2023-09-28T22:44:50.846Z

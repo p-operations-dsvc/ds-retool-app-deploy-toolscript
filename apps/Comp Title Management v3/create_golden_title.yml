@@ -1,0 +1,148 @@
+id: create_golden_title
+type: datasource
+subtype: SqlQueryUnified
+resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
+resourceDisplayName: Snowflake CTMv3
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - streamResponse: false
+    - records: ''
+    - lastReceivedFromResourceAt: null
+    - databasePasswordOverride: ''
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: >+
+        insert into EDWCTM.GOLDEN_TITLE 
+
+        (golden_title_id, title_name, TITLE_TYPE, RELEASE_YEAR,
+
+        season_num, episode_num, PRIMARY_GENRE, DISTRIBUTION_COMPANIES,
+        PRODUCTION_STATUS,LANGUAGES, plot)
+
+        values (golden_title_id_seq.nextval,
+               {{addNewGoldenTitleNameInput.value}},
+              {{addNewGoldenTitleTypeSelect.value}},
+                {{addNewGoldenTitleReleaseYearInput.value}},
+                {{addNewGoldenTitleSeasonInput.value==''?-1:addNewGoldenTitleSeasonInput.value}},
+                {{addNewGoldenTitleEpisodeInput.value==''?-1:addNewGoldenTitleEpisodeInput.value}},
+                {{addNewGoldenTitleGenreSelect.value}},        {{addNewGoldenTitleDistCompaniesSelect.value.join('~')}},
+                {{addNewGoldenTitleProdStatusSelect.value}},        {{addNewGoldenTitleLanguagesSelect.value.join('~')}},
+              {{addNewGoldenTitlePlotInput.value}}
+               )
+
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - warningCodes: []
+    - data: null
+    - recordId: ''
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: false
+    - dataArray: []
+    - cacheKeyTtl: ''
+    - filterBy: ''
+    - requestSentTimestamp: null
+    - databaseHostOverride: ''
+    - metadata: null
+    - workflowActionType: null
+    - editorMode: sql
+    - queryRunTime: null
+    - actionType: ''
+    - changesetObject: ''
+    - shouldUseLegacySql: false
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - databaseNameOverride: ''
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: ''
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - enableBulkUpdates: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - bulkUpdatePrimaryKey: ''
+    - runWhenPageLoads: false
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return formatDataAsArray(data)
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: success
+                        - title: Inserted successfully!
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: close
+            - pluginId: goldenTitleCopyModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - tableName: ''
+    - queryTimeout: '10001'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - workflowBlockPluginId: null
+    - databaseUsernameOverride: ''
+    - shouldEnableBatchQuerying: false
+    - doNotThrowOnNoOp: false
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-10-05T20:19:10.919Z

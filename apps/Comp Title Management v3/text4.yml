@@ -1,0 +1,29 @@
+id: text4
+uuid: f4d9173e-c274-4d8d-90f5-18f5fefdbf83
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: >-
+        Are you sure that you want to unlock title
+        "{{unlockOtherTitleNameVariable.value}}"?
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: unlockOtherTitleModal
+    col: 1
+    height: 0.6
+    width: 9
+createdAt: 2023-10-12T23:25:55.888Z

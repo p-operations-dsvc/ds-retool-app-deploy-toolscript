@@ -1,0 +1,871 @@
+id: childGoldenTitleTable
+uuid: 22d2d1fb-7db3-40fc-9456-79b43210af1d
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - 5008c: ''
+          - d190e: ''
+          - c5423: ''
+          - 3e3be: ''
+          - 126d5: ''
+          - 18e9b: ''
+          - 07b4a: ''
+          - 8d457: ''
+          - cebf4: ''
+          - b60e8: ''
+          - 4dd51: ''
+          - 9b9bb: ''
+          - cd387: ''
+          - 5e1a3: ''
+          - 33c3c: ''
+          - b462b: ''
+          - 0618b: ''
+          - 877fd: ''
+          - 66cb6: ''
+          - a8004: ''
+          - 71fa4: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - cebf4
+        - 5008c
+        - a8004
+        - 0618b
+        - 07b4a
+        - 8d457
+        - 9b9bb
+        - cd387
+        - 33c3c
+        - c5423
+        - b462b
+        - 5e1a3
+        - 71fa4
+        - 3e3be
+        - 18e9b
+        - 126d5
+        - b60e8
+        - d190e
+        - 877fd
+        - 4dd51
+        - 66cb6
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - 5008c:
+              ordered: []
+          - d190e:
+              ordered: []
+          - c5423:
+              ordered: []
+          - 3e3be:
+              ordered: []
+          - 126d5:
+              ordered: []
+          - 18e9b:
+              ordered: []
+          - 07b4a:
+              ordered:
+                - showStepper: true
+          - 8d457:
+              ordered:
+                - showStepper: true
+          - cebf4:
+              ordered:
+                - showStepper: true
+          - b60e8:
+              ordered: []
+          - 4dd51:
+              ordered: []
+          - 9b9bb:
+              ordered:
+                - showStepper: true
+          - cd387:
+              ordered: []
+          - 5e1a3:
+              ordered: []
+          - 33c3c:
+              ordered: []
+          - b462b:
+              ordered: []
+          - 0618b:
+              ordered: []
+          - 877fd:
+              ordered: []
+          - 66cb6:
+              ordered: []
+          - a8004:
+              ordered: []
+          - 71fa4:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - 5008c:
+              ordered: []
+          - d190e:
+              ordered: []
+          - c5423:
+              ordered: []
+          - 3e3be:
+              ordered: []
+          - 126d5:
+              ordered: []
+          - 18e9b:
+              ordered: []
+          - 07b4a:
+              ordered: []
+          - 8d457:
+              ordered: []
+          - cebf4:
+              ordered: []
+          - b60e8:
+              ordered: []
+          - 4dd51:
+              ordered: []
+          - 9b9bb:
+              ordered: []
+          - cd387:
+              ordered:
+                - mode: manual
+                - mappedData: '{{ get_ctm_genre.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
+          - 5e1a3:
+              ordered: []
+          - 33c3c:
+              ordered: []
+          - b462b:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_production_status.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
+          - 0618b:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_title_type.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
+          - 877fd:
+              ordered: []
+          - 66cb6:
+              ordered: []
+          - a8004:
+              ordered: []
+          - 71fa4:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_language.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
+    - _columnValueOverride:
+        ordered:
+          - 5008c: ''
+          - d190e: ''
+          - c5423: '{{ item.split(''~'') }}'
+          - 3e3be: '{{ item.split(''~'') }}'
+          - 126d5: |-
+              <a href= "{{item}}" target="_blank">
+              IMDB Link
+              </a>
+          - 18e9b: '{{ item.split(''~'') }}'
+          - 07b4a: ''
+          - 8d457: ''
+          - cebf4: ''
+          - b60e8: ''
+          - 4dd51: ''
+          - 9b9bb: ''
+          - cd387: ''
+          - 5e1a3: ''
+          - 33c3c: '{{ item.split(''~'') }}'
+          - b462b: ''
+          - 0618b: ''
+          - 877fd: ''
+          - 66cb6: ''
+          - a8004: ''
+          - 71fa4: '{{ item.split(''~'') }}'
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - 5008c: IMDB_TT_CD
+          - d190e: INACTIVE_INDICATOR
+          - c5423: PRODUCTION_COMAPANIES
+          - 3e3be: ALTERNATE_NAMES
+          - 126d5: IMDB_URL
+          - 18e9b: KEYWORDS
+          - 07b4a: RELEASE_YEAR
+          - 8d457: SEASON_NUM
+          - cebf4: GOLDEN_TITLE_ID
+          - b60e8: SOURCE_SYSTEM_NAME
+          - 4dd51: CREATE_DATETIME
+          - 9b9bb: EPISODE_NUM
+          - cd387: PRIMARY_GENRE
+          - 5e1a3: VOTE_COUNT_MAGNITUDE_RANGE
+          - 33c3c: DISTRIBUTION_COMPANIES
+          - b462b: PRODUCTION_STATUS
+          - 0618b: TITLE_TYPE
+          - 877fd: PLOT
+          - 66cb6: UPDATE_DATETIME
+          - a8004: TITLE_NAME
+          - 71fa4: LANGUAGES
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_child_golden_title_details.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - 5008c: ''
+          - d190e: ''
+          - c5423: ''
+          - 3e3be: ''
+          - 126d5: ''
+          - 18e9b: ''
+          - 07b4a: ''
+          - 8d457: ''
+          - cebf4: ''
+          - b60e8: ''
+          - 4dd51: ''
+          - 9b9bb: ''
+          - cd387: ''
+          - 5e1a3: ''
+          - 33c3c: ''
+          - b462b: ''
+          - 0618b: ''
+          - 877fd: ''
+          - 66cb6: ''
+          - a8004: ''
+          - 71fa4: ''
+    - _columnFormat:
+        ordered:
+          - 5008c: string
+          - d190e: string
+          - c5423: tags
+          - 3e3be: tags
+          - 126d5: html
+          - 18e9b: tags
+          - 07b4a: decimal
+          - 8d457: decimal
+          - cebf4: decimal
+          - b60e8: string
+          - 4dd51: datetime
+          - 9b9bb: decimal
+          - cd387: tag
+          - 5e1a3: string
+          - 33c3c: tags
+          - b462b: tag
+          - 0618b: tag
+          - 877fd: multilineString
+          - 66cb6: datetime
+          - a8004: string
+          - 71fa4: tags
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: cebf4
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - 5008c: left
+          - d190e: left
+          - c5423: left
+          - 3e3be: left
+          - 126d5: left
+          - 18e9b: left
+          - 07b4a: right
+          - 8d457: right
+          - cebf4: right
+          - b60e8: left
+          - 4dd51: left
+          - 9b9bb: right
+          - cd387: left
+          - 5e1a3: left
+          - 33c3c: left
+          - b462b: left
+          - 0618b: left
+          - 877fd: left
+          - 66cb6: left
+          - a8004: left
+          - 71fa4: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - 5008c: ''
+          - d190e: ''
+          - c5423: ''
+          - 3e3be: ''
+          - 126d5: ''
+          - 18e9b: ''
+          - 07b4a: ''
+          - 8d457: ''
+          - cebf4: ''
+          - b60e8: ''
+          - 4dd51: ''
+          - 9b9bb: ''
+          - cd387: ''
+          - 5e1a3: ''
+          - 33c3c: ''
+          - b462b: ''
+          - 0618b: ''
+          - 877fd: ''
+          - 66cb6: ''
+          - a8004: ''
+          - 71fa4: ''
+    - _columnIcon:
+        ordered:
+          - 5008c: ''
+          - d190e: ''
+          - c5423: ''
+          - 3e3be: ''
+          - 126d5: ''
+          - 18e9b: ''
+          - 07b4a: ''
+          - 8d457: ''
+          - cebf4: ''
+          - b60e8: ''
+          - 4dd51: ''
+          - 9b9bb: ''
+          - cd387: ''
+          - 5e1a3: ''
+          - 33c3c: ''
+          - b462b: ''
+          - 0618b: ''
+          - 877fd: ''
+          - 66cb6: ''
+          - a8004: ''
+          - 71fa4: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - 5008c: ''
+          - d190e: ''
+          - c5423: ''
+          - 3e3be: ''
+          - 126d5: ''
+          - 18e9b: ''
+          - 07b4a: ''
+          - 8d457: ''
+          - cebf4: ''
+          - b60e8: ''
+          - 4dd51: ''
+          - 9b9bb: ''
+          - cd387: ''
+          - 5e1a3: ''
+          - 33c3c: ''
+          - b462b: ''
+          - 0618b: ''
+          - 877fd: ''
+          - 66cb6: ''
+          - a8004: ''
+          - 71fa4: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - 5008c: false
+          - d190e: false
+          - c5423: false
+          - 3e3be: false
+          - 126d5: false
+          - 18e9b: false
+          - 07b4a: false
+          - 8d457: false
+          - cebf4: false
+          - b60e8: false
+          - 4dd51: false
+          - 9b9bb: false
+          - cd387: false
+          - 5e1a3: false
+          - 33c3c: false
+          - b462b: false
+          - 0618b: false
+          - 877fd: false
+          - 66cb6: false
+          - a8004: false
+          - 71fa4: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - 5008c: ''
+          - d190e: ''
+          - c5423: ''
+          - 3e3be: ''
+          - 126d5: ''
+          - 18e9b: ''
+          - 07b4a: ''
+          - 8d457: ''
+          - cebf4: ''
+          - b60e8: ''
+          - 4dd51: ''
+          - 9b9bb: ''
+          - cd387: ''
+          - 5e1a3: ''
+          - 33c3c: ''
+          - b462b: ''
+          - 0618b: ''
+          - 877fd: ''
+          - 66cb6: ''
+          - a8004: ''
+          - 71fa4: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - 5008c: ''
+          - d190e: ''
+          - c5423: ''
+          - 3e3be: ''
+          - 126d5: ''
+          - 18e9b: ''
+          - 07b4a: ''
+          - 8d457: ''
+          - cebf4: ''
+          - b60e8: ''
+          - 4dd51: ''
+          - 9b9bb: ''
+          - cd387: ''
+          - 5e1a3: ''
+          - 33c3c: ''
+          - b462b: ''
+          - 0618b: ''
+          - 877fd: ''
+          - 66cb6: ''
+          - a8004: ''
+          - 71fa4: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - 5008c:
+              ordered: []
+          - d190e:
+              ordered: []
+          - c5423:
+              ordered:
+                - automaticColors: true
+          - 3e3be:
+              ordered:
+                - automaticColors: true
+          - 126d5:
+              ordered:
+                - showUnderline: hover
+          - 18e9b:
+              ordered:
+                - automaticColors: true
+          - 07b4a:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - 8d457:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - cebf4:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+          - b60e8:
+              ordered: []
+          - 4dd51:
+              ordered: []
+          - 9b9bb:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - cd387:
+              ordered:
+                - automaticColors: true
+          - 5e1a3:
+              ordered: []
+          - 33c3c:
+              ordered:
+                - automaticColors: true
+          - b462b:
+              ordered:
+                - automaticColors: true
+          - 0618b:
+              ordered:
+                - automaticColors: true
+          - 877fd:
+              ordered: []
+          - 66cb6:
+              ordered: []
+          - a8004:
+              ordered: []
+          - 71fa4:
+              ordered:
+                - automaticColors: true
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - 5008c: none
+          - d190e: none
+          - c5423: none
+          - 3e3be: none
+          - 126d5: none
+          - 18e9b: none
+          - 07b4a: none
+          - 8d457: none
+          - cebf4: none
+          - b60e8: none
+          - 4dd51: none
+          - 9b9bb: none
+          - cd387: none
+          - 5e1a3: none
+          - 33c3c: none
+          - b462b: none
+          - 0618b: none
+          - 877fd: none
+          - 66cb6: none
+          - a8004: none
+          - 71fa4: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - 5008c:
+              ordered: []
+          - d190e:
+              ordered: []
+          - c5423:
+              ordered: []
+          - 3e3be:
+              ordered: []
+          - 126d5:
+              ordered: []
+          - 18e9b:
+              ordered: []
+          - 07b4a:
+              ordered: []
+          - 8d457:
+              ordered: []
+          - cebf4:
+              ordered: []
+          - b60e8:
+              ordered: []
+          - 4dd51:
+              ordered: []
+          - 9b9bb:
+              ordered: []
+          - cd387:
+              ordered: []
+          - 5e1a3:
+              ordered: []
+          - 33c3c:
+              ordered: []
+          - b462b:
+              ordered: []
+          - 0618b:
+              ordered: []
+          - 877fd:
+              ordered: []
+          - 66cb6:
+              ordered: []
+          - a8004:
+              ordered: []
+          - 71fa4:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - 5008c: 79.140625
+          - d190e: 116.421875
+          - c5423: 153.015625
+          - 3e3be: 111.65625
+          - 126d5: 84.125
+          - 18e9b: 246.28125
+          - 07b4a: 90.09375
+          - 8d457: 87.375
+          - cebf4: 96.75
+          - b60e8: 137.4375
+          - 4dd51: 136.796875
+          - 9b9bb: 90.84375
+          - cd387: 97.671875
+          - 5e1a3: 180.84375
+          - 33c3c: 150.53125
+          - b462b: 119.078125
+          - 0618b: 72.25
+          - 877fd: 903
+          - 66cb6: 136.796875
+          - a8004: 208.71875
+          - 71fa4: 79.921875
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: childGoldenTitleTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: childGoldenTitleTable
+            - targetId: 4d
+        - ordered:
+            - event: clickCell
+            - type: util
+            - method: openUrl
+            - pluginId: ''
+            - targetId: 126d5
+            - params:
+                ordered:
+                  - url: '{{ item }}'
+            - waitType: debounce
+            - waitMs: '0'
+    - _columnEditable:
+        ordered:
+          - 5008c: ''
+          - d190e: ''
+          - c5423: ''
+          - 3e3be: ''
+          - 126d5: ''
+          - 18e9b: ''
+          - 07b4a: ''
+          - 8d457: ''
+          - cebf4: 'false'
+          - b60e8: ''
+          - 4dd51: ''
+          - 9b9bb: ''
+          - cd387: ''
+          - 5e1a3: ''
+          - 33c3c: ''
+          - b462b: ''
+          - 0618b: ''
+          - 877fd: ''
+          - 66cb6: ''
+          - a8004: ''
+          - 71fa4: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - 5008c: none
+          - d190e: none
+          - c5423: none
+          - 3e3be: none
+          - 126d5: none
+          - 18e9b: none
+          - 07b4a: sum
+          - 8d457: sum
+          - cebf4: sum
+          - b60e8: none
+          - 4dd51: none
+          - 9b9bb: sum
+          - cd387: none
+          - 5e1a3: none
+          - 33c3c: none
+          - b462b: none
+          - 0618b: none
+          - 877fd: none
+          - 66cb6: none
+          - a8004: none
+          - 71fa4: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: none
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - 5008c: center
+          - d190e: center
+          - c5423: center
+          - 3e3be: center
+          - 126d5: center
+          - 18e9b: center
+          - 07b4a: center
+          - 8d457: center
+          - cebf4: center
+          - b60e8: center
+          - 4dd51: center
+          - 9b9bb: center
+          - cd387: center
+          - 5e1a3: center
+          - 33c3c: center
+          - b462b: center
+          - 0618b: center
+          - 877fd: center
+          - 66cb6: center
+          - a8004: center
+          - 71fa4: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - 5008c: Enter value
+          - d190e: Enter value
+          - c5423: Select options
+          - 3e3be: Select options
+          - 126d5: ''
+          - 18e9b: Select options
+          - 07b4a: Enter value
+          - 8d457: Enter value
+          - cebf4: Enter value
+          - b60e8: Enter value
+          - 4dd51: Enter value
+          - 9b9bb: Enter value
+          - cd387: Select option
+          - 5e1a3: Enter value
+          - 33c3c: Select options
+          - b462b: Select option
+          - 0618b: Select option
+          - 877fd: Enter value
+          - 66cb6: Enter value
+          - a8004: Enter value
+          - 71fa4: Select options
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - 5008c: ''
+          - d190e: ''
+          - c5423: ''
+          - 3e3be: ''
+          - 126d5: ''
+          - 18e9b: ''
+          - 07b4a: ''
+          - 8d457: >-
+              {{get_golden_title_details.data.TITLE_TYPE=='tvEpisode'?false:true}}
+          - cebf4: 'true'
+          - b60e8: ''
+          - 4dd51: 'true'
+          - 9b9bb: >-
+              {{get_golden_title_details.data.TITLE_TYPE=='tvEpisode'?false:true}}
+          - cd387: ''
+          - 5e1a3: ''
+          - 33c3c: ''
+          - b462b: ''
+          - 0618b: ''
+          - 877fd: ''
+          - 66cb6: 'true'
+          - a8004: ''
+          - 71fa4: ''
+    - _columnLabel:
+        ordered:
+          - 5008c: IMDB TT Code
+          - d190e: Inactive
+          - c5423: Production Companies
+          - 3e3be: Alt Names
+          - 126d5: URL
+          - 18e9b: Keywords
+          - 07b4a: Year
+          - 8d457: Season
+          - cebf4: Golden title id
+          - b60e8: Source System
+          - 4dd51: Created
+          - 9b9bb: Episode
+          - cd387: Genre
+          - 5e1a3: Vote Count Magnitude
+          - 33c3c: Distribution Companies
+          - b462b: Production Status
+          - 0618b: Type
+          - 877fd: Plot
+          - 66cb6: Updated
+          - a8004: Name
+          - 71fa4: Languages
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer4
+    subcontainer: '90040'
+    height: 3.2
+    width: 12
+createdAt: 2023-10-03T23:12:29.889Z

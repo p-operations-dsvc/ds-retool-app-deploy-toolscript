@@ -1,0 +1,12 @@
+id: otherTitlesAllMappedVariable
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+
+        const already_mapped = {{otherTitlesMappedSoFarVariable.value.length }}
+        const to_map = {{otherTitleToMapVariable.value.length}}
+        return already_mapped==to_map
+    - value: ''
+createdAt: 2023-10-11T15:29:15.599Z
