@@ -46,11 +46,11 @@ template:
     - _rowHeight: small
     - _columnIds:
         - 9bb52
-        - 14cf5
-        - '006e2'
-        - 9bba0
         - ae35b
+        - 9bba0
         - b5497
+        - '006e2'
+        - 14cf5
         - 1b0ef
         - a6d61
         - 30f6e
@@ -848,7 +848,7 @@ template:
           - 04d94: 541.3125
           - ae35b: 104.125
           - cf3c1: 416.484375
-          - b5497: 417.90625
+          - b5497: 212.90625
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -1129,7 +1129,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 1b6db
-    row: 1.6
-    height: 23.799999999999997
+    row: 8.881784197001252e-16
+    height: 29.599999999999998
     width: 12
 createdAt: 2023-10-09T22:40:19.388Z

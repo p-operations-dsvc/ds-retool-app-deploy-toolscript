@@ -7,11 +7,11 @@ template:
     - modalOverflowType: scroll
     - hidden: 'true'
     - onModalClose: ''
-    - modalHeightType: auto
+    - modalHeightType: fixed
     - tooltipText: ''
-    - modalHeight: ''
+    - modalHeight: 500px
     - onModalOpen: ''
-    - modalWidth: 60%
+    - modalWidth: 40%
     - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''

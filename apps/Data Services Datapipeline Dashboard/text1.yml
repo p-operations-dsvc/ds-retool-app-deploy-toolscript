@@ -1,19 +1,18 @@
-id: dpNameText
+id: text1
+uuid: 3d44b743-8ec8-4481-ae0b-d8a67bb834c8
 type: widget
 subtype: TextWidget2
 template:
   ordered:
-    - heightType: fixed
-    - horizontalAlign: left
+    - heightType: auto
+    - horizontalAlign: center
     - marginType: normal
     - hidden: false
     - imageWidth: fit
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: <b>Click on a row below to manage the datapipeline</b>
-    - _disclosedFields:
-        array: []
+    - value: ' **Datapipeline "{{ dpAllTableV2.selectedRow.datapipeline_name }}" actions**'
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
@@ -21,8 +20,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: mainContainer
-    rowGroup: header
-    row: 2.5999999999999996
-    height: 0.8
-createdAt: 2023-03-13T21:44:47.628Z
+    container: dpSettingRowModal
+    col: 1
+    height: 0.6
+    width: 11
+createdAt: 2023-10-17T21:55:34.100Z
