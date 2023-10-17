@@ -1,5 +1,5 @@
-id: dpToggleScheduleCancel
-uuid: 1f8443aa-56bd-4cdf-ac64-a6093725f68b
+id: addTagButton
+uuid: e9885c69-2ae6-4575-8831-07712a409aa7
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: Cancel
+    - text: +
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -19,9 +19,22 @@ template:
     - events:
         - ordered:
             - event: click
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: >-
+                      dpTagsVariable.setValue
+                      (dpTagsVariable.value.concat(addNewTagText.value))
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
             - type: widget
-            - method: close
-            - pluginId: dpScheduleToggleModal
+            - method: clearValue
+            - pluginId: addNewTagText
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +48,10 @@ style:
   ordered: []
 position2:
   position2:
-    container: dpScheduleToggleModal
-    row: 3.6
-    col: 1
+    container: mainContainer
+    subcontainer: dc084
+    row: 1.6
+    col: 4
     height: 1
-    width: 9
-createdAt: 2023-10-09T23:22:47.251Z
+    width: 1
+createdAt: 2023-10-17T15:39:25.670Z

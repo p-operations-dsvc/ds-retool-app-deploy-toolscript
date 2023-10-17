@@ -1,5 +1,5 @@
-id: dpToggleScheduleCancel
-uuid: 1f8443aa-56bd-4cdf-ac64-a6093725f68b
+id: tagsEditButton
+uuid: 8c5941fe-9624-4347-b842-9d4d68cac25c
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: Cancel
+    - text: Submit
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -19,9 +19,20 @@ template:
     - events:
         - ordered:
             - event: click
+            - type: state
+            - method: setValue
+            - pluginId: dpTagsVariable
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{tagsMultiselectListbox.value}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
             - type: widget
             - method: close
-            - pluginId: dpScheduleToggleModal
+            - pluginId: editTagsModal
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +46,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: dpScheduleToggleModal
-    row: 3.6
-    col: 1
+    container: editTagsModal
+    row: 6
+    col: 2
     height: 1
     width: 9
-createdAt: 2023-10-09T23:22:47.251Z
+createdAt: 2023-10-17T17:30:36.486Z

@@ -28,6 +28,7 @@ template:
           - schedule_name: Schedule Name
           - schedule_group: Schedule Group
           - cluster_arn: Cluster ARN
+          - tags: Tags
           - override_commands: Override Commands
           - container_storage: Container Storage
           - datapipeline_name: Datapipeline Name
@@ -39,6 +40,7 @@ template:
           - max_number_of_restarts: integer
           - datapipeline_timeout_seconds: integer
           - documentation_url: link
+          - tags: string
     - valueTitle: Value
     - data: '{{dpAllTableV2.selectedRow}}'
     - prevRowMappers:
@@ -46,6 +48,8 @@ template:
           - container_cpu: '{{self/1024}} vCPU'
           - container_memory: '{{self/1024}} GB'
           - container_storage: '{{self===null?0:self}} GB'
+          - overrides: ''
+          - tags: '{{dp'
     - rowMappersRenderAsHTML:
         ordered: []
     - rowVisibility:
@@ -77,6 +81,7 @@ template:
           - schedule_name: true
           - schedule_group: true
           - cluster_arn: true
+          - tags: true
           - override_commands: true
           - override_container_name: false
           - container_storage: true
@@ -84,13 +89,19 @@ template:
           - container_arn: true
           - container_memory: true
     - prevRowFormats:
-        ordered: []
+        ordered:
+          - max_concurrent_instances: integer
+          - max_number_of_restarts: integer
+          - datapipeline_timeout_seconds: integer
+          - documentation_url: link
+          - tags: string
     - rowMappers:
         ordered:
           - container_cpu: '{{self/1024}} vCPU'
           - container_memory: '{{self/1024}} GB'
           - container_storage: '{{self===null?0:self}} GB'
           - overrides: ''
+          - tags: '{{dpAllTableV2.selectedRow.tags.join('', '')}}'
     - rows:
         - a
         - b
@@ -125,6 +136,7 @@ template:
         - sns_failure_topic_arn
         - documentation_url
         - datapipeline_name
+        - tags
     - keyTitle: Field
 style:
   ordered: []
