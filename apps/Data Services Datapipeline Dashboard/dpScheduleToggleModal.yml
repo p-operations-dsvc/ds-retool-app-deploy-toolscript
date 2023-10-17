@@ -24,7 +24,8 @@ style:
 position2:
   position2:
     container: dpSettingRowModal
-    row: 0.2
-    col: 4
-    height: 0.8
+    row: 4
+    col: 3
+    height: 1.6
+    width: 6
 createdAt: 2023-10-09T23:21:46.472Z

@@ -70,7 +70,8 @@ style:
 position2:
   position2:
     container: dpSettingRowModal
-    row: 0.2
-    col: 8
-    height: 0.8
+    row: 6.4
+    col: 3
+    height: 1.6
+    width: 6
 createdAt: 2023-03-09T21:43:32.978Z
