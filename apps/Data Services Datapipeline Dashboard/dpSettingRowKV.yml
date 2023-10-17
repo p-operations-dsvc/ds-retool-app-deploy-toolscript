@@ -49,7 +49,7 @@ template:
           - container_memory: '{{self/1024}} GB'
           - container_storage: '{{self===null?0:self}} GB'
           - overrides: ''
-          - tags: '{{dp'
+          - tags: '{{dpAllTableV2.selectedRow.tags.join('', '')}}'
     - rowMappersRenderAsHTML:
         ordered: []
     - rowVisibility:
@@ -101,7 +101,7 @@ template:
           - container_memory: '{{self/1024}} GB'
           - container_storage: '{{self===null?0:self}} GB'
           - overrides: ''
-          - tags: '{{dpAllTableV2.selectedRow.tags.join('', '')}}'
+          - tags: ''
     - rows:
         - a
         - b
