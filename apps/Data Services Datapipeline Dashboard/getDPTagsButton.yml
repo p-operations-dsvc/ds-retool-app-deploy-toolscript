@@ -1,5 +1,5 @@
-id: dpToggleScheduleCancel
-uuid: 1f8443aa-56bd-4cdf-ac64-a6093725f68b
+id: getDPTagsButton
+uuid: 6a4da85c-8b4f-4944-ad4d-bcf262917cfc
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: Cancel
+    - text: Get Tags
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -19,9 +19,9 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: widget
-            - method: close
-            - pluginId: dpScheduleToggleModal
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_tags
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +35,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: dpScheduleToggleModal
-    row: 3.6
-    col: 1
+    container: mainContainer
+    subcontainer: dc084
+    col: 10
     height: 1
-    width: 9
-createdAt: 2023-10-09T23:22:47.251Z
+    width: 2
+createdAt: 2023-10-17T17:14:16.387Z

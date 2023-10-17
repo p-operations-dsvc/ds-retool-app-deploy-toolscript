@@ -10,7 +10,7 @@ template:
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''
-    - modalHeight: ''
+    - modalHeight: '280'
     - onModalOpen: ''
     - modalWidth: ''
     - closeOnOutsideClick: true

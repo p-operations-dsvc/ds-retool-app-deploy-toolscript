@@ -38,6 +38,7 @@ template:
           - ae35b: ''
           - cf3c1: ''
           - b5497: ''
+          - 14cf5: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
@@ -45,6 +46,7 @@ template:
     - _rowHeight: small
     - _columnIds:
         - 9bb52
+        - 14cf5
         - '006e2'
         - 9bba0
         - ae35b
@@ -152,6 +154,8 @@ template:
               ordered: []
           - b5497:
               ordered: []
+          - 14cf5:
+              ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns:
         ordered: []
@@ -236,6 +240,8 @@ template:
               ordered: []
           - b5497:
               ordered: []
+          - 14cf5:
+              ordered: []
     - _columnValueOverride:
         ordered:
           - 1b0ef: '{{ item }}'
@@ -270,6 +276,7 @@ template:
           - ae35b: '{{ _.startCase(item) }}'
           - cf3c1: ''
           - b5497: ''
+          - 14cf5: '{{item}}'
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: '25'
@@ -309,6 +316,7 @@ template:
           - ae35b: schedule_state
           - cf3c1: sns_success_topic_arn
           - b5497: schedule_expression
+          - 14cf5: tags
     - hidden: false
     - _toolbarButtonIds:
         - 1a
@@ -351,6 +359,7 @@ template:
           - ae35b: ''
           - cf3c1: ''
           - b5497: ''
+          - 14cf5: ''
     - _columnFormat:
         ordered:
           - 1b0ef: tag
@@ -383,6 +392,7 @@ template:
           - ae35b: tag
           - cf3c1: string
           - b5497: string
+          - 14cf5: tags
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
@@ -420,6 +430,7 @@ template:
           - ae35b: left
           - cf3c1: left
           - b5497: left
+          - 14cf5: center
     - _actionIcon:
         ordered: []
     - _columnTooltip:
@@ -454,6 +465,7 @@ template:
           - ae35b: ''
           - cf3c1: ''
           - b5497: ''
+          - 14cf5: ''
     - _columnIcon:
         ordered:
           - 1b0ef: ''
@@ -486,6 +498,7 @@ template:
           - ae35b: ''
           - cf3c1: ''
           - b5497: ''
+          - 14cf5: ''
     - _columnCellTooltipMode:
         ordered:
           - 1b0ef: ''
@@ -518,6 +531,7 @@ template:
           - ae35b: ''
           - cf3c1: ''
           - b5497: ''
+          - 14cf5: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -556,6 +570,7 @@ template:
           - ae35b: false
           - cf3c1: false
           - b5497: false
+          - 14cf5: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -594,6 +609,7 @@ template:
           - ae35b: ''
           - cf3c1: ''
           - b5497: ''
+          - 14cf5: ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: single
@@ -629,6 +645,7 @@ template:
           - ae35b: ''
           - cf3c1: ''
           - b5497: ''
+          - 14cf5: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
@@ -716,6 +733,9 @@ template:
               ordered: []
           - b5497:
               ordered: []
+          - 14cf5:
+              ordered:
+                - automaticColors: true
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -724,6 +744,7 @@ template:
     - _columnSummaryAggregationMode:
         ordered:
           - '54398': none
+          - 14cf5: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -793,38 +814,41 @@ template:
               ordered: []
           - b5497:
               ordered: []
+          - 14cf5:
+              ordered: []
     - _columnSize:
         ordered:
-          - 1b0ef: 131.96875
+          - 1b0ef: 155.234375
           - 8cf16: 143
-          - 1f742: 254.234375
-          - 2244b: 1387.8125
-          - '4e741': 465.5625
-          - '006e2': 254.234375
+          - 1f742: 216.796875
+          - 2244b: 1173
+          - '4e741': 416.484375
+          - '006e2': 197.71875
           - 5259e: 91.03125
           - 023b7: 98.8125
           - 1de0f: 73.015625
-          - 9bba0: 388.09375
+          - 9bba0: 364.6875
           - '9e544': 166.921875
           - '08750': 120.8125
-          - a6d61: 196.078125
+          - a6d61: 84.515625
           - cd7a5: 151.921875
           - aa6a6: 124.125
-          - bc8c7: 492.3125
-          - e4a84: 235
-          - '43581': 744.6875
+          - bc8c7: 480.546875
+          - e4a84: 111.03125
+          - '43581': 865.484375
+          - 14cf5: 276.546875
           - 58e8f: 152.578125
-          - e557d: 436.546875
-          - 2d7d2: 1315.703125
-          - '54398': 189.046875
-          - 631de: 525.09375
+          - e557d: 438.4375
+          - 2d7d2: 1107.328125
+          - '54398': 97.140625
+          - 631de: 673.421875
           - 5d2a4: 98.015625
-          - 9bb52: 330.953125
-          - 30f6e: 285
-          - 04d94: 210
-          - ae35b: 102.921875
-          - cf3c1: 460.34375
-          - b5497: 178.453125
+          - 9bb52: 377.8125
+          - 30f6e: 273.109375
+          - 04d94: 541.3125
+          - ae35b: 104.125
+          - cf3c1: 416.484375
+          - b5497: 417.90625
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -908,6 +932,7 @@ template:
           - ae35b: ''
           - cf3c1: ''
           - b5497: ''
+          - 14cf5: ''
     - pagination: null
     - selectedDataIndexes:
         array: []
@@ -943,6 +968,7 @@ template:
           - ae35b: none
           - cf3c1: none
           - b5497: none
+          - 14cf5: none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -987,6 +1013,7 @@ template:
           - ae35b: center
           - cf3c1: center
           - b5497: center
+          - 14cf5: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
@@ -1020,6 +1047,7 @@ template:
           - ae35b: Select option
           - cf3c1: Enter value
           - b5497: Enter value
+          - 14cf5: Select options
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -1060,6 +1088,7 @@ template:
           - ae35b: ''
           - cf3c1: 'true'
           - b5497: ''
+          - 14cf5: ''
     - _columnLabel:
         ordered:
           - 1b0ef: Schedule Group
@@ -1086,12 +1115,13 @@ template:
           - '54398': Timeout (sec)
           - 631de: Documentation URL
           - 5d2a4: Container cpu
-          - 9bb52: Datapipeline Mame
+          - 9bb52: Datapipeline Name
           - 30f6e: SN CI
           - 04d94: Task Name
           - ae35b: Schedule State
           - cf3c1: Sns success topic arn
           - b5497: Cron
+          - 14cf5: Tags
     - _showToolbar: true
 style:
   ordered: []
@@ -1099,7 +1129,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 1b6db
-    row: 1
+    row: 1.6
     height: 23.799999999999997
     width: 12
 createdAt: 2023-10-09T22:40:19.388Z

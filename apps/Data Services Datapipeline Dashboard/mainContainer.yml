@@ -11,19 +11,21 @@ template:
         - false
         - false
         - false
+        - false
     - heightType: auto
     - currentViewKey: '{{ self.viewKeys[0] }}'
     - iconByIndex:
         array: []
     - clickable: false
     - _iconByIndex:
-        - ''
-        - ''
-        - ''
-        - ''
-        - ''
-        - ''
-        - ''
+        - bold/travel-airport-plane-boarding-pass-alternate
+        - bold/interface-arrows-synchronize-warning
+        - bold/interface-search
+        - bold/interface-align-layers-2-alternate
+        - bold/interface-add-2
+        - bold/interface-edit-write-2
+        - bold/interface-add-circle-alternate
+        - bold/interface-bookmark-tag-alternate
     - showFooterBorder: true
     - marginType: normal
     - enableFullBleed: false
@@ -47,6 +49,7 @@ template:
         - false
         - false
         - false
+        - false
     - _disclosedFields:
         array: []
     - currentViewIndex: null
@@ -55,6 +58,7 @@ template:
     - showHeaderBorder: true
     - itemMode: static
     - _tooltipByIndex:
+        - ''
         - ''
         - ''
         - ''
@@ -74,6 +78,7 @@ template:
         - Create a New Datapipeline
         - Update an Existing Datapipeline
         - Create IAM Role
+        - Manage Tags
     - events: []
     - _ids:
         - d9644
@@ -83,14 +88,16 @@ template:
         - 5fd5e
         - '54333'
         - '01622'
+        - dc084
     - viewKeys:
         array: []
     - iconPositionByIndex:
         array: []
     - _iconPositionByIndex:
-        - ''
-        - ''
-        - ''
+        - left
+        - left
+        - left
+        - left
         - left
         - left
         - left
@@ -100,6 +107,7 @@ template:
     - overflowType: scroll
     - disabled: false
     - _labels:
+        - ''
         - ''
         - ''
         - ''

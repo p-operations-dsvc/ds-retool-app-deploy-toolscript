@@ -1,5 +1,5 @@
-id: dpToggleScheduleCancel
-uuid: 1f8443aa-56bd-4cdf-ac64-a6093725f68b
+id: removeTagButton
+uuid: 4fbbd8de-e2a6-40fe-9dc9-82e8624b2f5a
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: Cancel
+    - text: '-'
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -20,8 +20,8 @@ template:
         - ordered:
             - event: click
             - type: widget
-            - method: close
-            - pluginId: dpScheduleToggleModal
+            - method: open
+            - pluginId: editTagsModal
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +35,10 @@ style:
   ordered: []
 position2:
   position2:
-    container: dpScheduleToggleModal
-    row: 3.6
-    col: 1
+    container: mainContainer
+    subcontainer: dc084
+    row: 1.6
+    col: 5
     height: 1
-    width: 9
-createdAt: 2023-10-09T23:22:47.251Z
+    width: 1
+createdAt: 2023-10-17T15:39:35.065Z
