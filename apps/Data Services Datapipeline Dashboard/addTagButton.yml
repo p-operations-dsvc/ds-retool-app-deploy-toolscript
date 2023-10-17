@@ -30,16 +30,6 @@ template:
                       (dpTagsVariable.value.concat(addNewTagText.value))
             - waitType: debounce
             - waitMs: '0'
-        - ordered:
-            - event: click
-            - type: widget
-            - method: clearValue
-            - pluginId: addNewTagText
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
     - loading: false
     - loaderPosition: auto
     - disabled: false
