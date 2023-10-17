@@ -23,7 +23,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: ds_data_pipelines_{{dpEnv2.value}}
+    - value: ds_datapipelines_{{dpEnv2.value}}
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
