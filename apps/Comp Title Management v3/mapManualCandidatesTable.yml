@@ -103,7 +103,11 @@ template:
           - 3391d:
               ordered: []
           - 0d8c2:
-              ordered: []
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_title_type.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
           - f7eac:
               ordered: []
           - cb20e:
@@ -121,7 +125,7 @@ template:
           - 962dd: ''
           - 4ff29: ''
           - 3391d: ''
-          - 0d8c2: '{{ _.startCase(item) }}'
+          - 0d8c2: '{{ item}}'
           - f7eac: ''
           - cb20e: ''
           - 4141e: ''
@@ -172,7 +176,7 @@ template:
     - _columnFormat:
         ordered:
           - 962dd: decimal
-          - 4ff29: decimal
+          - 4ff29: string
           - 3391d: string
           - 0d8c2: tag
           - f7eac: decimal
@@ -189,7 +193,7 @@ template:
     - _columnAlignment:
         ordered:
           - 962dd: right
-          - 4ff29: right
+          - 4ff29: left
           - 3391d: left
           - 0d8c2: left
           - f7eac: right
@@ -278,7 +282,7 @@ template:
           - ec5e1: ''
     - _dynamicColumnSource:
         array: []
-    - _rowSelection: multiple
+    - _rowSelection: single
     - _columnCaption:
         ordered:
           - 962dd: ''
@@ -383,10 +387,10 @@ template:
           - 0ea75: 102.859375
           - 4141e: 90.84375
           - 3391d: 259.234375
-          - 0d8c2: 94.890625
+          - 0d8c2: 126.890625
           - 962dd: 101.40625
           - f7eac: 90.09375
-          - 4ff29: 77.03125
+          - 4ff29: 121.03125
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -542,8 +546,10 @@ template:
           - 3391d: ''
           - 0d8c2: ''
           - f7eac: ''
-          - cb20e: ''
-          - 4141e: ''
+          - cb20e: >-
+              {{manualCandidateTitleTypeSelect.value=='tvEpisode'||manualCandidateTitleTypeSelect.value=='any'?false:true}}
+          - 4141e: >-
+              {{manualCandidateTitleTypeSelect.value=='tvEpisode'||manualCandidateTitleTypeSelect.value=='any'?false:true}}
           - 0ea75: ''
           - a5229: 'true'
           - ec5e1: 'true'
@@ -553,7 +559,7 @@ template:
           - 4ff29: IMDB TT Code
           - 3391d: Name
           - 0d8c2: Type
-          - f7eac: Release Year
+          - f7eac: Year
           - cb20e: Season
           - 4141e: Episode
           - 0ea75: Genre
@@ -565,7 +571,7 @@ style:
 position2:
   position2:
     container: mapOtherTitlesModal
-    row: 14.6
+    row: 13.600000000000001
     height: 8
     width: 12
 createdAt: 2023-10-05T01:21:33.118Z

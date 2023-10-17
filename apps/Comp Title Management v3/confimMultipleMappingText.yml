@@ -12,7 +12,9 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: '**Proceed to map multiple titles?**'
+    - value: >-
+        **Proceed to map multiple titles to Golden Title
+        "{{mapCandidatesTable.selectedRow.GOLDEN_TITLE_NAME}}"?**
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false

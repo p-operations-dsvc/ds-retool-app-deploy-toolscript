@@ -66,7 +66,7 @@ template:
           - snow_assignment_group: true
           - container_name: true
           - container_cpu: true
-          - documentation_url: true
+          - documentation_url: false
           - sns_success_topic_arn: true
           - auto_restart_on_failure: true
           - task_definition_arn: true
@@ -106,6 +106,7 @@ template:
         - a
         - b
         - c
+        - datapipeline_name
         - schedule_state
         - schedule_group
         - schedule_name

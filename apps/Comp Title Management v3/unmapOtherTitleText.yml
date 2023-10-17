@@ -12,7 +12,9 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: <b>Are you sure that you want to proceed?</b>
+    - value: >-
+        <b>Are you sure that you want to unmap
+        "{{unmapOtherTitleNameVariable.value}}"?</b>
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false

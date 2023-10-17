@@ -22,27 +22,40 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        select scored.* from (
+        select scored.golden_title_name,
+
+        scored.golden_title_release,
+
+        scored.golden_title_id,
+
+        scored.vote_magnitude_range,
+
+        scored.JARO_SCORE,
+
+        scored.ROW_RANK,
+
+        scored.TITLE_TYPE,
+
+        EDITDISTANCE (scored.ot_title_name_for_matching,
+        scored.gt_title_name_for_matching) as edit_distance
+
+        from (
 
         select  gt.title_name as golden_title_name, gt.release_year  as
-        golden_title_release, gt.golden_title_id,vcm.description
-        vote_magnitude_range,
+        golden_title_release, gt.golden_title_id, gt.VOTE_COUNT_MAGNITUDE_RANGE
+        as vote_magnitude_range,
 
-        JAROWINKLER_SIMILARITY(UPPER(REGEXP_REPLACE(REGEXP_REPLACE(
-              REGEXP_REPLACE(ot.name_from_source,'\\(\\d.*\\)$','',1,0,'i'), 
-              '(^The\\s|\\bThe$|\\bThe\\s$)|(^A\\s|\\bA$|\\bA\\s$)|(^An\\s|\\bAn$|\\bAn\\s$)'
-              ,'',1,0,'i'),'[^a-zA-Z0-9]','',1,0,'i')),UPPER(REGEXP_REPLACE(
-              REGEXP_REPLACE(REGEXP_REPLACE(gt.title_name,'\\(\\d.*\\)$','',1,0,'i'), 
-              '(^The\\s|\\bThe$|\\bThe\\s$)|(^A\\s|\\bA$|\\bA\\s$)|(^An\\s|\\bAn$|\\bAn\\s$)'
-              ,'',1,0,'i'),'[^a-zA-Z0-9]','',1,0,'i'))) JARO_SCORE,
-                    RANK() OVER (ORDER BY
+        JAROWINKLER_SIMILARITY(ot.title_name_for_matching,gt.title_name_for_matching)
+        JARO_SCORE,
+                    ROW_NUMBER() OVER (ORDER BY
                 JARO_SCORE DESC,
-                vcm.description DESC) ROW_RANK 
+                gt.VOTE_COUNT_MAGNITUDE_RANGE DESC) ROW_RANK,
+          gt.TITLE_TYPE,
+          gt.title_name_for_matching as gt_title_name_for_matching,
+          ot.title_name_for_matching as ot_title_name_for_matching
         from EDWCTM.other_title ot,
 
-        EDWCTM.GOLDEN_TITLE gt,
-
-        EDWCTM.IMDB_VOTE_COUNT_MAGNITUDE vcm
+        EDWCTM.GOLDEN_TITLE gt 
 
         where 
          COALESCE(release_year_from_source,-99) BETWEEN COALESCE(RELEASE_YEAR,-99) -1 AND COALESCE(RELEASE_YEAR,-99) +1
@@ -51,13 +64,10 @@ template:
                   'tvSpecial',
                   'video',
                   'tvShort') 
-        AND gt.INACTIVE_INDICATOR='false'
+        AND gt.INACTIVE_INDICATOR='false' 
 
-        and gt.VOTE_COUNT_MAGNITUDE_RANGE=vcm.DESCRIPTION 
-
-        and ot.source_system_title_id={{titleToMapSelect.selectedItem.id.split
-        ('~')[0]}} and source_system={{titleToMapSelect.selectedItem.id.split
-        ('~')[1]}}) scored where  ROW_RANK<6
+        and ot.other_title_id={{titleToMapSelect.selectedItem.id}} ) scored
+        where  ROW_RANK<6
 
         order by ROW_RANK asc
     - playgroundQueryUuid: ''

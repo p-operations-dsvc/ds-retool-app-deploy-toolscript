@@ -1,5 +1,5 @@
-id: confirmSingleMappingConfirmButton
-uuid: 924dbc82-e382-4df7-a326-60be14b06a0e
+id: unlockOtherTitleConfirmButton
+uuid: 8f578b48-f475-49ff-891b-143fa1e96706
 type: widget
 subtype: ButtonWidget2
 template:
@@ -21,7 +21,7 @@ template:
             - event: click
             - type: datasource
             - method: trigger
-            - pluginId: update_other_title
+            - pluginId: update_unlocked_other_title
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +35,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: confirmSingleMappingModal
-    row: 0.9999999999999999
+    container: unlockOtherTitleModal
+    row: 2.1999999999999997
     col: 1
     height: 1
     width: 9
-createdAt: 2023-10-05T00:11:34.261Z
+createdAt: 2023-10-12T23:25:52.079Z

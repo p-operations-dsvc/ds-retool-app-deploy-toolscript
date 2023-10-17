@@ -1,4 +1,4 @@
-id: update_other_title
+id: update_unlocked_other_title
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
@@ -23,10 +23,8 @@ template:
     - showFailureToaster: true
     - query: |
         update EDWCTM.OTHER_TITLE a
-        set a.golden_title_id={{goldenTitleIdToMapTo.value}},
-        a.MAPPED_STATE = TRUE,
-        a.locked = TRUE
-        where a.other_title_id={{titleToMapSelect.selectedItem.id}} 
+        set   a.locked = false
+        where a.other_title_id={{unlockOtherTitleIdVariable.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -93,14 +91,14 @@ template:
                   - options:
                       ordered:
                         - notificationType: info
-                        - title: Updated successfully!
+                        - title: Unlocked successfully!
             - waitType: debounce
             - waitMs: '0'
         - ordered:
             - event: success
             - type: widget
             - method: close
-            - pluginId: confirmSingleMappingModal
+            - pluginId: unlockOtherTitleModal
             - targetId: null
             - params:
                 ordered: []
@@ -108,13 +106,12 @@ template:
             - waitMs: '0'
         - ordered:
             - event: success
-            - type: state
-            - method: setValue
-            - pluginId: otherTitlesMappedSoFarVariable
+            - type: datasource
+            - method: trigger
+            - pluginId: get_other_title
             - targetId: null
             - params:
-                ordered:
-                  - value: '{{otherTitlesMappedSoFar.value}}'
+                ordered: []
             - waitType: debounce
             - waitMs: '0'
     - isMultiplayerEdited: false
@@ -134,4 +131,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-10-05T00:01:42.974Z
+createdAt: 2023-10-12T23:24:55.821Z

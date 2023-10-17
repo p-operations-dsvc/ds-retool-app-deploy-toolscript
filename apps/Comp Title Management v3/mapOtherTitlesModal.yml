@@ -23,16 +23,7 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-        - ordered:
-            - event: open
-            - type: widget
-            - method: clearSelection
-            - pluginId: otherTitleTable
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
+            - enabled: '{{otherTitlesMappedSoFarVariable.value.length>0}}'
     - modalWidth: 80%
     - closeOnOutsideClick: false
     - loading: ''

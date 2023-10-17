@@ -1,5 +1,5 @@
-id: confirmSingleMappingModal
-uuid: 4d690a1c-783e-425a-a572-e9b0b3a8319c
+id: confirmSingleMappingManualModal
+uuid: 11dab807-9920-4e37-8121-067bcecaf36b
 type: widget
 subtype: ModalWidget
 template:
@@ -34,7 +34,7 @@ style:
 position2:
   position2:
     container: mapOtherTitlesModal
-    col: 6
+    col: 4
     height: 1
     width: 1
-createdAt: 2023-10-05T00:05:50.638Z
+createdAt: 2023-10-11T21:57:31.272Z

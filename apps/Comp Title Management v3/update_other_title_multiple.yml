@@ -103,6 +103,27 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: close
+            - pluginId: mapOtherTitlesModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: state
+            - method: setValue
+            - pluginId: otherTitlesMappedSoFarVariable
+            - targetId: null
+            - params:
+                ordered:
+                  - value: '{{otherTitlesMappedSoFar.value}}'
+            - waitType: debounce
+            - waitMs: '0'
     - isMultiplayerEdited: false
     - tableName: ''
     - queryTimeout: '10001'

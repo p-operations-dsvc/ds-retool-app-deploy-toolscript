@@ -1,5 +1,5 @@
-id: confirmSingleMappingText
-uuid: c3cdb848-137f-4590-b61c-caa4f4c9c30d
+id: confirmSingleMappingText2
+uuid: 53921f0c-91bd-4848-a6ef-68818c3e32a3
 type: widget
 subtype: TextWidget2
 template:
@@ -20,9 +20,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: confirmSingleMappingModal
+    container: confirmSingleMappingManualModal
     row: 0.4
     col: 1
     height: 0.6
     width: 9
-createdAt: 2023-10-05T17:25:56.527Z
+createdAt: 2023-10-11T21:57:32.242Z

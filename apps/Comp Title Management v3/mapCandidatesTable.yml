@@ -14,6 +14,9 @@ template:
           - 8b56d: ''
           - de3ee: ''
           - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
@@ -22,10 +25,12 @@ template:
     - _columnIds:
         - e3c42
         - de3ee
+        - 368fc
+        - 90d28
+        - 5c264
+        - 7a4c7
         - 8b56d
         - 962dd
-        - 5c264
-        - 90d28
     - _isSaving: false
     - _actionIds:
         - 34a54
@@ -52,6 +57,14 @@ template:
               ordered:
                 - showStepper: true
           - e3c42:
+              ordered:
+                - showStepper: true
+          - 7a4c7:
+              ordered: []
+          - ee24f:
+              ordered:
+                - showStepper: true
+          - 368fc:
               ordered:
                 - showStepper: true
     - _toolbarPosition: bottom
@@ -84,19 +97,36 @@ template:
           - 962dd:
               ordered: []
           - 8b56d:
-              ordered: []
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_vote_magnitude.data }}'
+                - valueByIndex: '{{ item.NAME }}'
+                - labelByIndex: '{{ item.NAME }}'
           - de3ee:
               ordered: []
           - e3c42:
+              ordered: []
+          - 7a4c7:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_title_type.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
+          - ee24f:
+              ordered: []
+          - 368fc:
               ordered: []
     - _columnValueOverride:
         ordered:
           - 90d28: ''
           - 5c264: ''
           - 962dd: ''
-          - 8b56d: '{{ _.startCase(item) }}'
+          - 8b56d: '{{ item }}'
           - de3ee: ''
           - e3c42: ''
+          - 7a4c7: '{{ item }}'
+          - ee24f: ''
+          - 368fc: ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
@@ -112,6 +142,9 @@ template:
           - 8b56d: VOTE_MAGNITUDE_RANGE
           - de3ee: JARO_SCORE
           - e3c42: ROW_RANK
+          - 7a4c7: TITLE_TYPE
+          - ee24f: RELEASE_YEAR
+          - 368fc: EDIT_DISTANCE
     - hidden: false
     - _toolbarButtonIds:
         - 1a
@@ -130,6 +163,9 @@ template:
           - 8b56d: ''
           - de3ee: ''
           - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
     - _columnFormat:
         ordered:
           - 90d28: string
@@ -138,19 +174,25 @@ template:
           - 8b56d: tag
           - de3ee: decimal
           - e3c42: decimal
+          - 7a4c7: tag
+          - ee24f: decimal
+          - 368fc: decimal
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: e3c42
+    - _primaryKeyColumnId: 962dd
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
           - 90d28: left
           - 5c264: right
-          - 962dd: right
+          - 962dd: center
           - 8b56d: left
-          - de3ee: right
+          - de3ee: center
           - e3c42: right
+          - 7a4c7: left
+          - ee24f: center
+          - 368fc: center
     - _actionIcon:
         ordered:
           - 34a54: bold/travel-map-alternate
@@ -163,6 +205,9 @@ template:
           - 8b56d: ''
           - de3ee: ''
           - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
     - _columnIcon:
         ordered:
           - 90d28: ''
@@ -171,6 +216,9 @@ template:
           - 8b56d: ''
           - de3ee: ''
           - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
     - _columnCellTooltipMode:
         ordered:
           - 90d28: ''
@@ -179,6 +227,9 @@ template:
           - 8b56d: ''
           - de3ee: ''
           - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -193,6 +244,9 @@ template:
           - 8b56d: false
           - de3ee: false
           - e3c42: false
+          - 7a4c7: false
+          - ee24f: false
+          - 368fc: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -209,9 +263,12 @@ template:
           - 8b56d: ''
           - de3ee: ''
           - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
     - _dynamicColumnSource:
         array: []
-    - _rowSelection: multiple
+    - _rowSelection: single
     - _columnCaption:
         ordered:
           - 90d28: ''
@@ -220,6 +277,9 @@ template:
           - 8b56d: ''
           - de3ee: ''
           - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
@@ -246,6 +306,17 @@ template:
               ordered:
                 - showSeparators: true
                 - notation: standard
+          - 7a4c7:
+              ordered:
+                - automaticColors: true
+          - ee24f:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - 368fc:
+              ordered:
+                - showSeparators: true
+                - notation: standard
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -259,6 +330,9 @@ template:
           - 8b56d: none
           - de3ee: none
           - e3c42: none
+          - 7a4c7: none
+          - ee24f: none
+          - 368fc: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -280,14 +354,22 @@ template:
               ordered: []
           - e3c42:
               ordered: []
+          - 7a4c7:
+              ordered: []
+          - ee24f:
+              ordered: []
+          - 368fc:
+              ordered: []
     - _columnSize:
         ordered:
-          - e3c42: 69.53125
-          - de3ee: 76.796875
-          - 8b56d: 144.46875
-          - 962dd: 104.75
-          - 90d28: 469.15625
-          - 5c264: 128.5
+          - e3c42: 44.859375
+          - de3ee: 71.40625
+          - 90d28: 157.859375
+          - 5c264: 47.09375
+          - 7a4c7: 73.65625
+          - 8b56d: 102.671875
+          - 962dd: 101.40625
+          - 368fc: 91.625
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -364,10 +446,13 @@ template:
         ordered:
           - 90d28: ''
           - 5c264: ''
-          - 962dd: ''
+          - 962dd: false
           - 8b56d: ''
           - de3ee: ''
           - e3c42: false
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
     - pagination: null
     - selectedDataIndexes:
         array: []
@@ -379,6 +464,9 @@ template:
           - 8b56d: none
           - de3ee: sum
           - e3c42: sum
+          - 7a4c7: none
+          - ee24f: sum
+          - 368fc: sum
     - sortArray:
         array: []
     - _selectedCell: null
@@ -399,6 +487,9 @@ template:
           - 8b56d: center
           - de3ee: center
           - e3c42: center
+          - 7a4c7: center
+          - ee24f: center
+          - 368fc: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
@@ -408,6 +499,9 @@ template:
           - 8b56d: Select option
           - de3ee: Enter value
           - e3c42: Enter value
+          - 7a4c7: Select option
+          - ee24f: Enter value
+          - 368fc: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered:
@@ -424,25 +518,31 @@ template:
         ordered:
           - 90d28: ''
           - 5c264: ''
-          - 962dd: ''
+          - 962dd: 'true'
           - 8b56d: ''
           - de3ee: ''
           - e3c42: ''
+          - 7a4c7: ''
+          - ee24f: ''
+          - 368fc: ''
     - _columnLabel:
         ordered:
           - 90d28: Golden Title Name
-          - 5c264: Release Year
+          - 5c264: Year
           - 962dd: Golden Title ID
-          - 8b56d: Vote Magnitude Range
+          - 8b56d: Votes
           - de3ee: JW Score
           - e3c42: Rank
+          - 7a4c7: Title Type
+          - ee24f: Release Year
+          - 368fc: Edit Distance
     - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
     container: mapOtherTitlesModal
-    row: 2.8
+    row: 3
     height: 8
-    width: 12
+    width: 8
 createdAt: 2023-10-04T22:54:35.621Z

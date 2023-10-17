@@ -1,5 +1,5 @@
-id: confirmSingleMappingConfirmButton
-uuid: 924dbc82-e382-4df7-a326-60be14b06a0e
+id: unlockOtherTitleCancelButton
+uuid: e6417a1d-0b0d-4aa8-abb1-305c44740779
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: Confirm
+    - text: Cancel
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -19,9 +19,9 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: datasource
-            - method: trigger
-            - pluginId: update_other_title
+            - type: widget
+            - method: close
+            - pluginId: unlockOtherTitleModal
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +35,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: confirmSingleMappingModal
-    row: 0.9999999999999999
+    container: unlockOtherTitleModal
+    row: 3.8000000000000003
     col: 1
     height: 1
     width: 9
-createdAt: 2023-10-05T00:11:34.261Z
+createdAt: 2023-10-12T23:25:50.496Z
