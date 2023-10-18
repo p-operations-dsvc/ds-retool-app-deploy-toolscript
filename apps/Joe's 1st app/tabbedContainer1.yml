@@ -15,8 +15,8 @@ template:
     - clickable: false
     - _iconByIndex:
         - bold/interface-add-square
-        - ''
-        - ''
+        - bold/interface-alert-information-circle
+        - bold/interface-arrows-bend-down-left-2
     - showFooterBorder: true
     - marginType: normal
     - enableFullBleed: false
@@ -50,8 +50,8 @@ template:
     - showFooter: false
     - _viewKeys:
         - Tab 1
-        - View 2
-        - View 3
+        - Tab 2
+        - Tab 3
     - events:
         ordered: []
     - _ids:
@@ -64,8 +64,8 @@ template:
         array: []
     - _iconPositionByIndex:
         - left
-        - ''
-        - ''
+        - left
+        - left
     - hovered: false
     - loading: false
     - overflowType: scroll
