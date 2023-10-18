@@ -1,0 +1,91 @@
+id: tabbedContainer1
+uuid: 7bc59005-b8c4-4d48-8df9-fbbc9eca10bc
+type: widget
+subtype: ContainerWidget2
+template:
+  ordered:
+    - _disabledByIndex:
+        - ''
+        - ''
+        - ''
+    - heightType: auto
+    - currentViewKey: '{{ self.viewKeys[0] }}'
+    - iconByIndex:
+        array: []
+    - clickable: false
+    - _iconByIndex:
+        - bold/interface-add-square
+        - ''
+        - ''
+    - showFooterBorder: true
+    - marginType: normal
+    - enableFullBleed: false
+    - showBorder: true
+    - hidden: false
+    - showHeader: true
+    - hoistFetching: false
+    - paddingType: normal
+    - views:
+        array: []
+    - showInEditor: false
+    - footerPaddingType: normal
+    - tooltipText: ''
+    - hiddenByIndex:
+        array: []
+    - _hiddenByIndex:
+        - ''
+        - ''
+        - ''
+    - currentViewIndex: null
+    - _hasMigratedNestedItems: true
+    - transition: none
+    - showHeaderBorder: true
+    - itemMode: static
+    - _tooltipByIndex:
+        - ''
+        - ''
+        - ''
+    - tooltipByIndex:
+        array: []
+    - showFooter: false
+    - _viewKeys:
+        - Tab 1
+        - View 2
+        - View 3
+    - events:
+        ordered: []
+    - _ids:
+        - b96db
+        - d3b0f
+        - 1fc9a
+    - viewKeys:
+        array: []
+    - iconPositionByIndex:
+        array: []
+    - _iconPositionByIndex:
+        - left
+        - ''
+        - ''
+    - hovered: false
+    - loading: false
+    - overflowType: scroll
+    - disabled: false
+    - _labels:
+        - ''
+        - ''
+        - ''
+    - headerPaddingType: normal
+    - disabledByIndex:
+        array: []
+    - maintainSpaceWhenHidden: false
+    - showBody: true
+    - labels:
+        array: []
+style:
+  ordered: []
+position2:
+  position2:
+    row: 3
+    height: 0.2
+    width: 12
+createdAt: 2023-10-18T22:03:34.758Z
