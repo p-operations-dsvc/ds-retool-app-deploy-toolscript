@@ -1,5 +1,5 @@
 id: tagsMultiselectListbox
-uuid: 53fa63dc-b8c0-4253-9764-9872db50ec97
+uuid: 1333fc46-3ea5-4dfd-9fe2-b0780d0108f5
 type: widget
 subtype: MultiselectListboxWidget
 template:
@@ -10,9 +10,9 @@ template:
     - showActions: false
     - showSelectionIndicator: true
     - _values: []
-    - iconByIndex:
+    - iconByIndex: bold/interface-bookmark-tag-alternate
+    - values:
         array: []
-    - values: '{{item}}'
     - _iconByIndex: []
     - selectedIndexes:
         array: []
@@ -46,7 +46,7 @@ template:
     - _captionByIndex: []
     - itemAdornmentSize: auto
     - searchTerm: ''
-    - label: 'Select tags to keep:'
+    - label: Tags
     - _hasMigratedNestedItems: true
     - captionByIndex:
         array: []
@@ -56,12 +56,10 @@ template:
     - invalid: false
     - _tooltipByIndex: []
     - _colorByIndex: []
-    - tooltipByIndex:
-        array: []
+    - tooltipByIndex: Uncheck any tags you do not want to keep
     - colorByIndex:
         array: []
-    - events:
-        ordered: []
+    - events: []
     - _ids: []
     - emptyMessage: No options
     - selectedLabels:
@@ -84,9 +82,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: editTagsModal
-    row: 0.8
-    col: 2
-    height: 4
-    width: 9
-createdAt: 2023-10-17T17:26:09.444Z
+    container: mainContainer
+    subcontainer: dc084
+    row: 1.4
+    col: 6
+    height: 4.6
+createdAt: 2023-10-18T02:16:58.382Z
