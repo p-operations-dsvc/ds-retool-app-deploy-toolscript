@@ -89,6 +89,18 @@ template:
             - waitType: debounce
             - waitMs: '0'
         - ordered:
+            - event: success
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: >-
+                      tagsMultiselectListbox.setValue(tagsMultiselectListbox.values)
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
             - event: failure
             - type: util
             - method: showNotification

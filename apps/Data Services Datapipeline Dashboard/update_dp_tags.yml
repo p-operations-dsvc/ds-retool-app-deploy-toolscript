@@ -9,7 +9,7 @@ template:
     - paginationLimit: ''
     - streamResponse: false
     - body: >-
-        [{"key":"env","value":"{{manageTagsEnv.value}}"},{"key":"datapipeline_name","value":"{{manageTagsDPSelect.value}}"},{"key":"tags","value":"{{dpTags.value}}"},{"key":"","value":""}]
+        [{"key":"env","value":"{{manageTagsEnv.value}}"},{"key":"datapipeline_name","value":"{{manageTagsDPSelect.value}}"},{"key":"tags","value":"{{tagsMultiselectListbox.value}}"}]
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''
     - servedFromCache: false

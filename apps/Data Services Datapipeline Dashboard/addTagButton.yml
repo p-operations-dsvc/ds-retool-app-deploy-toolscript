@@ -30,6 +30,28 @@ template:
                       (dpTagsVariable.value.concat(addNewTagText.value))
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: >-
+                      tagsMultiselectListbox.setValue(tagsMultiselectListbox.values)
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: widget
+            - method: clearValue
+            - pluginId: addNewTagText
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - loading: false
     - loaderPosition: auto
     - disabled: false
@@ -40,7 +62,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: dc084
-    row: 1.6
+    row: 1.8
     col: 4
     height: 1
     width: 1
