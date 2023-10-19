@@ -36,7 +36,7 @@ style:
 position2:
   position2:
     container: dpScheduleToggleModal
-    row: 1.8000000000000003
+    row: 0.8000000000000003
     col: 1
     height: 1
     width: 9

@@ -97,6 +97,16 @@ template:
             - waitType: debounce
             - waitMs: '0'
         - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_objects_all
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
             - event: failure
             - type: util
             - method: showNotification
