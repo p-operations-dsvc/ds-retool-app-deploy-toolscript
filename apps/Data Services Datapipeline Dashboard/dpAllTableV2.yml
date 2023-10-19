@@ -77,7 +77,8 @@ template:
         - 58e8f
         - 631de
     - _isSaving: false
-    - _actionIds: []
+    - _actionIds:
+        - 8c2f1
     - _clearChangeset: false
     - caseSensitiveFiltering: false
     - _limitOffsetRowCount: null
@@ -432,7 +433,8 @@ template:
           - b5497: left
           - 14cf5: center
     - _actionIcon:
-        ordered: []
+        ordered:
+          - 8c2f1: bold/travel-map-flag-alternate
     - _columnTooltip:
         ordered:
           - 1b0ef: ''
@@ -576,7 +578,8 @@ template:
     - _expandedRows: null
     - changesetObject: null
     - _actionDisabled:
-        ordered: []
+        ordered:
+          - 8c2f1: ''
     - _columnReferenceId:
         ordered:
           - 1b0ef: ''
@@ -836,7 +839,7 @@ template:
           - bc8c7: 480.546875
           - e4a84: 111.03125
           - '43581': 865.484375
-          - 14cf5: 276.546875
+          - 14cf5: 454.546875
           - 58e8f: 152.578125
           - e557d: 438.4375
           - 2d7d2: 1107.328125
@@ -864,11 +867,11 @@ template:
         ordered: []
     - events:
         - ordered:
-            - event: clickRow
+            - event: clickAction
             - type: widget
             - method: open
             - pluginId: dpSettingRowModal
-            - targetId: null
+            - targetId: 8c2f1
             - params:
                 ordered: []
             - waitType: debounce
@@ -1050,11 +1053,13 @@ template:
           - 14cf5: Select options
     - _defaultFilterOperator: and
     - _actionLabel:
-        ordered: []
+        ordered:
+          - 8c2f1: Actions
     - _virtualizeEndIndex: 0
     - selectedRow: null
     - _actionHidden:
-        ordered: []
+        ordered:
+          - 8c2f1: ''
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
