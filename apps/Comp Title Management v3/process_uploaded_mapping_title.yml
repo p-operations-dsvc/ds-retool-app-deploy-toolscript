@@ -1,4 +1,4 @@
-id: get_manual_candidate_golden_title
+id: process_uploaded_mapping_title
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
@@ -22,25 +22,8 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        select GOLDEN_TITLE_ID, IMDB_TT_CD, TITLE_NAME, TITLE_TYPE,
-        RELEASE_YEAR, SEASON_NUM, EPISODE_NUM,  PRIMARY_GENRE,  IMDB_URL,
-        parent_golden_title_id from EDWCTM.GOLDEN_TITLE_V3 where title_type like
-        '%'||case when {{manualCandidateTitleTypeSelect.value}}='any' then ''
-        else {{manualCandidateTitleTypeSelect.value}} end||'%' 
-
-        and title_name ilike '%'||{{ manualCandidateTitleText.value}}||'%'
-
-        and release_year between
-        {{manualCandidateTitleReleaseDateRange.value.start.split
-        ('T')[0].split('-')[0]}} and
-        {{manualCandidateTitleReleaseDateRange.value.end.split
-        ('T')[0].split('-')[0]}} 
-
-        and INACTIVE_INDICATOR='false'
-
-        order by GOLDEN_TITLE_ID limit {{
-        mapManualCandidatesTable.pagination.pageSize }} offset  {{
-        mapManualCandidatesTable.pagination.offset }}
+        call edwctm.map_other_title
+        (array_construct({{otherTitleMappingTransform.value}}))
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -94,11 +77,45 @@ template:
     - runWhenPageLoads: false
     - transformer: |-
         // Query results are available as the `data` variable
-        return formatDataAsArray(data)
-    - events: []
-    - isMultiplayerEdited: false
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_other_title
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: close
+            - pluginId: uploadMappingFileModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: success
+                        - title: >-
+                            {{process_uploaded_mapping_title.data['MAP_OTHER_TITLE']}}
+            - waitType: debounce
+            - waitMs: '0'
     - tableName: ''
-    - queryTimeout: '10001'
+    - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
     - queryFailureConditions: ''
@@ -113,4 +130,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-10-05T01:27:16.013Z
+createdAt: 2023-10-19T22:47:43.674Z

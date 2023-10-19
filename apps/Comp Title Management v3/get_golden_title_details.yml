@@ -21,72 +21,37 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >-
+    - query: |-
         select   a.GOLDEN_TITLE_ID
-
         , a.IMDB_TT_CD
-
         , a.TITLE_NAME
-
         , a.TITLE_TYPE
-
         , a.RELEASE_YEAR
-
         , a.SEASON_NUM
-
         , a.EPISODE_NUM
-
         , a.PARENT_GOLDEN_TITLE_ID
-
         , a.PRIMARY_GENRE
-
         , a.DISTRIBUTION_COMPANIES
-
         , a.PRODUCTION_COMAPANIES
-
         , a.PRODUCTION_STATUS
-
         , a.VOTE_COUNT_MAGNITUDE_RANGE
-
         , a.LANGUAGES
-
         , a.ALTERNATE_NAMES
-
         , a.KEYWORDS
-
         , a.PLOT
-
         , a.IMDB_URL
-
         , a.SOURCE_SYSTEM_NAME
-
         , a.INACTIVE_INDICATOR
-
-        , b.RELEASE_YEAR as release_year_from_source
-
-        , b.SEASON_NUMBER as Season_From_Source
-
-        , b.EPISODE_NUMBER as EPISODE_NUMBER_from_source
-
-        , b.GENRES as genres_from_source
-
-        , b.DISTRIBUTION_COMPANIES as DISTRIBUTION_COMPANIES_from_source
-
-        , b.PRODUCTION_COMPANIES as PRODUCTION_COMPANIES_from_source
-
-        , b.ALTERNATE_NAMES_AKA as ALTERNATE_NAMES_AKA_from_source
-
-        , b.KEYWORDS_FROM_SOURCE
-
-        , c.TITLE_NAME as parent_title_name
-
-        from EDWCTM.GOLDEN_TITLE a
-
-        left outer join EDWCTM.IMDB_TITLE b on a.IMDB_TT_CD=b.TT_CODE
-
-        left outer join EDWCTM.GOLDEN_TITLE c on
-        a.PARENT_GOLDEN_TITLE_ID=c.GOLDEN_TITLE_ID
-
+        , a.release_year_from_source
+        , a.Season_From_Source
+        , a.EPISODE_NUMBER_from_source
+        , a.genres_from_source
+        , a.DISTRIBUTION_COMPANIES_from_source
+        , a.PRODUCTION_COMPANIES_from_source
+        , a.ALTERNATE_NAMES_AKA_from_source
+        , a.KEYWORDS_FROM_SOURCE
+        , a.parent_title_name
+        from EDWCTM.GOLDEN_TITLE_V3 a 
         where a.golden_title_id={{currentRowGoldenTitleId.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null

@@ -1,16 +1,16 @@
-id: prodCompaniesRemoveButton
-uuid: 0d064ad6-113a-4c2f-aae2-2c47ac62f120
+id: uploadMappingFileProcessButton
+uuid: 1d98de5f-6b24-4bf0-ba24-81cfbd85d7e0
 type: widget
 subtype: ButtonWidget2
 template:
   ordered:
-    - horizontalAlign: center
+    - horizontalAlign: stretch
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: '-'
+    - text: Upload
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -19,9 +19,9 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: widget
-            - method: open
-            - pluginId: prodCompaniesTagsModal
+            - type: datasource
+            - method: trigger
+            - pluginId: process_uploaded_mapping_title
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +35,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: goldenTitleForm
-    row: 15.999999999999996
-    col: 5
+    container: uploadMappingFileModal
+    row: 5.4
+    col: 1
     height: 1
-    width: 1
-createdAt: 2023-10-03T21:02:29.221Z
+    width: 9
+createdAt: 2023-10-19T22:04:03.243Z

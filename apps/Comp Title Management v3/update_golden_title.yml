@@ -22,7 +22,7 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >
-        update EDWCTM.GOLDEN_TITLE a
+        update EDWCTM.GOLDEN_TITLE_V3 a
 
         set a.RELEASE_YEAR={{goldenTitleReleaseYearInput.value}},
 

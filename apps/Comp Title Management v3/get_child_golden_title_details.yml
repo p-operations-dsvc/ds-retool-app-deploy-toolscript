@@ -29,7 +29,7 @@ template:
         ALTERNATE_NAMES, KEYWORDS, PLOT, IMDB_URL, SOURCE_SYSTEM_NAME,
         INACTIVE_INDICATOR, CREATE_DATETIME, UPDATE_DATETIME 
 
-        from EDWCTM.GOLDEN_TITLE where
+        from EDWCTM.GOLDEN_TITLE_V3 where
         golden_title_id={{currentRowGoldenTitleId.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null

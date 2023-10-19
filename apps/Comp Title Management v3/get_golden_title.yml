@@ -29,7 +29,7 @@ template:
         case when EPISODE_NUM = -1 then null else EPISODE_NUM end as
         EPISODE_NUM,  PRIMARY_GENRE,  IMDB_URL, parent_golden_title_id
 
-        from EDWCTM.GOLDEN_TITLE where release_year between
+        from EDWCTM.GOLDEN_TITLE_V3 where release_year between
         {{createdDateRange.value.start.split ('T')[0].split('-')[0]}} and
         {{createdDateRange.value.end.split ('T')[0].split('-')[0]}}  and
         title_type like '%'||case when {{titleTypeSelect.value}}='any' then ''
@@ -37,7 +37,7 @@ template:
 
         and title_name ilike '%'||{{ titleNameInput.value}}||'%'
 
-        and INACTIVE_INDICATOR='false'
+        and INACTIVE_INDICATOR=false
 
         order by GOLDEN_TITLE_ID limit {{ goldenTitleTable.pagination.pageSize
         }} offset  {{ goldenTitleTable.pagination.offset }}

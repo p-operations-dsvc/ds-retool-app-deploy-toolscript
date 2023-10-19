@@ -22,7 +22,7 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >+
-        insert into EDWCTM.GOLDEN_TITLE 
+        insert into EDWCTM.GOLDEN_TITLE_V3 
 
         (golden_title_id, title_name, TITLE_TYPE, RELEASE_YEAR,
 

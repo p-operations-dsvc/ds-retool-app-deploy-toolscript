@@ -17,6 +17,7 @@ template:
           - 7a4c7: ''
           - ee24f: ''
           - 368fc: ''
+          - 85b7c: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
@@ -27,6 +28,7 @@ template:
         - de3ee
         - 368fc
         - 90d28
+        - 85b7c
         - 5c264
         - 7a4c7
         - 8b56d
@@ -67,6 +69,8 @@ template:
           - 368fc:
               ordered:
                 - showStepper: true
+          - 85b7c:
+              ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns: []
     - _toolbarButtonLabel:
@@ -116,6 +120,8 @@ template:
               ordered: []
           - 368fc:
               ordered: []
+          - 85b7c:
+              ordered: []
     - _columnValueOverride:
         ordered:
           - 90d28: ''
@@ -127,6 +133,7 @@ template:
           - 7a4c7: '{{ item }}'
           - ee24f: ''
           - 368fc: ''
+          - 85b7c: ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
@@ -145,6 +152,7 @@ template:
           - 7a4c7: TITLE_TYPE
           - ee24f: RELEASE_YEAR
           - 368fc: EDIT_DISTANCE
+          - 85b7c: IMDB_TT_CD
     - hidden: false
     - _toolbarButtonIds:
         - 1a
@@ -166,6 +174,7 @@ template:
           - 7a4c7: ''
           - ee24f: ''
           - 368fc: ''
+          - 85b7c: ''
     - _columnFormat:
         ordered:
           - 90d28: string
@@ -177,10 +186,11 @@ template:
           - 7a4c7: tag
           - ee24f: decimal
           - 368fc: decimal
+          - 85b7c: string
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: 962dd
+    - _primaryKeyColumnId: e3c42
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
@@ -193,6 +203,7 @@ template:
           - 7a4c7: left
           - ee24f: center
           - 368fc: center
+          - 85b7c: left
     - _actionIcon:
         ordered:
           - 34a54: bold/travel-map-alternate
@@ -208,6 +219,7 @@ template:
           - 7a4c7: ''
           - ee24f: ''
           - 368fc: ''
+          - 85b7c: ''
     - _columnIcon:
         ordered:
           - 90d28: ''
@@ -219,6 +231,7 @@ template:
           - 7a4c7: ''
           - ee24f: ''
           - 368fc: ''
+          - 85b7c: ''
     - _columnCellTooltipMode:
         ordered:
           - 90d28: ''
@@ -230,6 +243,7 @@ template:
           - 7a4c7: ''
           - ee24f: ''
           - 368fc: ''
+          - 85b7c: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -247,6 +261,7 @@ template:
           - 7a4c7: false
           - ee24f: false
           - 368fc: false
+          - 85b7c: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -266,6 +281,7 @@ template:
           - 7a4c7: ''
           - ee24f: ''
           - 368fc: ''
+          - 85b7c: ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: single
@@ -280,6 +296,7 @@ template:
           - 7a4c7: ''
           - ee24f: ''
           - 368fc: ''
+          - 85b7c: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
@@ -317,6 +334,8 @@ template:
               ordered:
                 - showSeparators: true
                 - notation: standard
+          - 85b7c:
+              ordered: []
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -333,6 +352,7 @@ template:
           - 7a4c7: none
           - ee24f: none
           - 368fc: none
+          - 85b7c: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -360,16 +380,19 @@ template:
               ordered: []
           - 368fc:
               ordered: []
+          - 85b7c:
+              ordered: []
     - _columnSize:
         ordered:
-          - e3c42: 44.859375
-          - de3ee: 71.40625
-          - 90d28: 157.859375
           - 5c264: 47.09375
-          - 7a4c7: 73.65625
-          - 8b56d: 102.671875
+          - 85b7c: 111.921875
+          - 368fc: 92.75
+          - de3ee: 71.40625
+          - e3c42: 44.859375
+          - 90d28: 123.09375
           - 962dd: 101.40625
-          - 368fc: 91.625
+          - 8b56d: 50.421875
+          - 7a4c7: 73.65625
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -453,6 +476,7 @@ template:
           - 7a4c7: ''
           - ee24f: ''
           - 368fc: ''
+          - 85b7c: ''
     - pagination: null
     - selectedDataIndexes:
         array: []
@@ -467,6 +491,7 @@ template:
           - 7a4c7: none
           - ee24f: sum
           - 368fc: sum
+          - 85b7c: none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -490,6 +515,7 @@ template:
           - 7a4c7: center
           - ee24f: center
           - 368fc: center
+          - 85b7c: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
@@ -502,6 +528,7 @@ template:
           - 7a4c7: Select option
           - ee24f: Enter value
           - 368fc: Enter value
+          - 85b7c: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered:
@@ -525,6 +552,7 @@ template:
           - 7a4c7: ''
           - ee24f: ''
           - 368fc: ''
+          - 85b7c: ''
     - _columnLabel:
         ordered:
           - 90d28: Golden Title Name
@@ -536,6 +564,7 @@ template:
           - 7a4c7: Title Type
           - ee24f: Release Year
           - 368fc: Edit Distance
+          - 85b7c: IMDB TT Code
     - _showToolbar: true
 style:
   ordered: []
