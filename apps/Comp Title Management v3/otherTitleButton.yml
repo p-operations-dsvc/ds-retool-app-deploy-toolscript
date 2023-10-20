@@ -15,7 +15,7 @@ template:
     - tooltipText: ''
     - styleVariant: solid
     - submit: false
-    - iconBefore: ''
+    - iconBefore: bold/interface-search
     - events:
         - ordered:
             - event: click

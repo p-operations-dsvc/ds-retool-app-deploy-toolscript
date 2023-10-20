@@ -1,4 +1,4 @@
-id: get_remapped_from_golden_title_details
+id: process_uploaded_mapping_title
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
@@ -21,15 +21,9 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: |-
-        select
-        a.SOURCE_SYSTEM_TITLE_ID,
-        a.REMAPPED_TO_TITLE,
-        a.TITLE_NAME
-        from EDWCTM.IMDB_TITLE a
-        where   REMAPPED_TO_TITLE is not null
-        and a.SOURCE_SYSTEM_TITLE_ID={{currentRowGoldenTitleIMDBId.value}}
-        or a.SOURCE_SYSTEM_TITLE_ID='tt1748269'
+    - query: >-
+        call edwctm.map_other_title_bulk
+        (array_construct({{otherTitleMappingTransform.value}}))
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -84,10 +78,55 @@ template:
     - runWhenPageLoads: false
     - transformer: |-
         // Query results are available as the `data` variable
-        return formatDataAsArray(data)
-    - events: []
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_other_title
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: close
+            - pluginId: uploadMappingFileModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: success
+                        - title: Mapping updated successfully!
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: clearValue
+            - pluginId: uploadMappingFileSelectButton
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - isMultiplayerEdited: false
     - tableName: ''
-    - queryTimeout: '10001'
+    - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
     - queryFailureConditions: ''
@@ -102,4 +141,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-10-06T23:23:49.390Z
+createdAt: 2023-10-19T22:47:43.674Z

@@ -292,6 +292,8 @@ template:
           - 9c1ac: ''
           - 0929a: ''
           - 63ef1: ''
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []

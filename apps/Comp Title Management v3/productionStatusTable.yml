@@ -211,6 +211,8 @@ template:
         ordered:
           - ac4c5: 'false'
           - ff160: ''
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []

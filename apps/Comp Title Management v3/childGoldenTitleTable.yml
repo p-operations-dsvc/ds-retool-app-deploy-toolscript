@@ -718,6 +718,8 @@ template:
           - 66cb6: ''
           - a8004: ''
           - 71fa4: ''
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []

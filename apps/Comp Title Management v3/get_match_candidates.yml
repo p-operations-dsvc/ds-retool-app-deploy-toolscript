@@ -36,6 +36,8 @@ template:
 
         scored.TITLE_TYPE,
 
+        scored.IMDB_TT_CD,
+
         EDITDISTANCE (scored.ot_title_name_for_matching,
         scored.gt_title_name_for_matching) as edit_distance
 
@@ -52,13 +54,14 @@ template:
                 gt.VOTE_COUNT_MAGNITUDE_RANGE DESC) ROW_RANK,
           gt.TITLE_TYPE,
           gt.title_name_for_matching as gt_title_name_for_matching,
-          ot.title_name_for_matching as ot_title_name_for_matching
+          ot.title_name_for_matching as ot_title_name_for_matching,
+          gt.IMDB_TT_CD
         from EDWCTM.other_title ot,
 
-        EDWCTM.GOLDEN_TITLE gt 
+        EDWCTM.GOLDEN_TITLE_V3 gt 
 
         where 
-         COALESCE(release_year_from_source,-99) BETWEEN COALESCE(RELEASE_YEAR,-99) -1 AND COALESCE(RELEASE_YEAR,-99) +1
+         COALESCE(ot.release_year_from_source,-99) BETWEEN COALESCE(RELEASE_YEAR,-99) -1 AND COALESCE(RELEASE_YEAR,-99) +1
          and gt.TITLE_TYPE IN ('tvMovie',
                   'movie',
                   'tvSpecial',
@@ -119,6 +122,7 @@ template:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
     - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
     - transformer: |-

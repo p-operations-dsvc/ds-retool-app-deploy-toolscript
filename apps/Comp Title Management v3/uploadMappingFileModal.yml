@@ -1,15 +1,14 @@
-id: unlockOtherTitleModal
-uuid: 0e4a45df-8b25-4ce1-bd6c-0d3c1d6f2729
+id: uploadMappingFileModal
+uuid: 5931de54-5675-41d7-952b-6e212ef15680
 type: widget
 subtype: ModalWidget
 template:
   ordered:
     - opened: false
     - modalOverflowType: scroll
-    - hidden: 'true'
     - onModalClose: ''
     - modalHeightType: fixed
-    - tooltipText: ''
+    - tooltipText: Upload mapping file
     - modalHeight: ''
     - onModalOpen: ''
     - events: []
@@ -17,15 +16,14 @@ template:
     - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''
-    - buttonText: Open Modal
+    - buttonText: Upload
 style:
   ordered: []
 position2:
   position2:
     container: tabbedContainer1
     subcontainer: 4153c
-    row: 1.2
-    col: 2
+    col: 11
     height: 1
     width: 1
-createdAt: 2023-10-12T23:23:58.186Z
+createdAt: 2023-10-19T22:03:01.340Z

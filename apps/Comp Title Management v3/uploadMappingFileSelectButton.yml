@@ -1,0 +1,67 @@
+id: uploadMappingFileSelectButton
+uuid: 1df8d395-2a72-427f-8091-59d89898a3bf
+type: widget
+subtype: FileButtonWidget
+template:
+  ordered:
+    - parsedValue:
+        array: []
+    - iconAfter: ''
+    - parseFiles: true
+    - maxSize: ''
+    - appendNewSelection: false
+    - selectionType: single
+    - accept: '["CSV"]'
+    - marginType: normal
+    - hidden: false
+    - customValidation: ''
+    - maxCount: null
+    - hideValidationMessage: false
+    - text: Select File
+    - validationMessage: ''
+    - showInEditor: false
+    - parsing: false
+    - tooltipText: ''
+    - formDataKey: '{{ self.id }}'
+    - value:
+        array: []
+    - _isUpgraded: false
+    - minSize: ''
+    - styleVariant: outline
+    - uploadToRetoolStorage: false
+    - _validate: false
+    - invalid: false
+    - files:
+        array: []
+    - iconBefore: bold/programming-browser-search
+    - events:
+        - ordered:
+            - event: parse
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: success
+                        - title: Parsed
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - minCount: null
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: uploadMappingFileModal
+    row: 0.8000000000000002
+    col: 3
+    height: 1
+    width: 6
+createdAt: 2023-10-19T22:03:56.851Z

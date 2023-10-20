@@ -197,6 +197,8 @@ template:
         ordered:
           - f8b18: ''
           - fa4e7: ''
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []

@@ -24,7 +24,7 @@ template:
     - query: >-
         select GOLDEN_TITLE_ID, IMDB_TT_CD, TITLE_NAME, TITLE_TYPE,
         RELEASE_YEAR, SEASON_NUM, EPISODE_NUM,  PRIMARY_GENRE,  IMDB_URL,
-        parent_golden_title_id from EDWCTM.GOLDEN_TITLE where title_type like
+        parent_golden_title_id from EDWCTM.GOLDEN_TITLE_V3 where title_type like
         '%'||case when {{manualCandidateTitleTypeSelect.value}}='any' then ''
         else {{manualCandidateTitleTypeSelect.value}} end||'%' 
 
@@ -35,6 +35,8 @@ template:
         ('T')[0].split('-')[0]}} and
         {{manualCandidateTitleReleaseDateRange.value.end.split
         ('T')[0].split('-')[0]}} 
+
+        and INACTIVE_INDICATOR='false'
 
         order by GOLDEN_TITLE_ID limit {{
         mapManualCandidatesTable.pagination.pageSize }} offset  {{
@@ -88,6 +90,7 @@ template:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
     - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
     - transformer: |-
