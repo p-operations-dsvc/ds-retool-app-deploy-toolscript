@@ -13,7 +13,7 @@ template:
     - onModalOpen: ''
     - events: []
     - modalWidth: ''
-    - closeOnOutsideClick: false
+    - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''
     - buttonText: Upload

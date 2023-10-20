@@ -543,6 +543,8 @@ template:
           - 727ec: 'false'
           - 6c433: ''
           - 918a6: ''
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []

@@ -25,6 +25,7 @@ template:
     - formDataKey: '{{ self.id }}'
     - value:
         array: []
+    - _isUpgraded: false
     - minSize: ''
     - styleVariant: outline
     - uploadToRetoolStorage: false
@@ -59,8 +60,8 @@ style:
 position2:
   position2:
     container: uploadMappingFileModal
-    row: 1.8
-    col: 1
+    row: 0.8000000000000002
+    col: 3
     height: 1
-    width: 9
+    width: 6
 createdAt: 2023-10-19T22:03:56.851Z

@@ -1,5 +1,5 @@
-id: titleRelationshipTable
-uuid: e3107acd-2139-4b7c-b42e-8c6e5eab2d00
+id: updloadFileTable
+uuid: da4aa5b8-231f-467c-a574-d5fce809f799
 type: widget
 subtype: TableWidget2
 template:
@@ -8,16 +8,18 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 074d2: ''
+          - ce6d2: ''
+          - 739b1: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
     - disableEdits: false
     - _rowHeight: small
     - _columnIds:
-        - c31f7
-        - 46ebb
+        - ce6d2
+        - 739b1
+        - 074d2
     - _isSaving: false
     - _actionIds: []
     - _clearChangeset: false
@@ -28,10 +30,14 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - c31f7:
+          - 074d2:
+              ordered:
+                - showStepper: true
+          - ce6d2:
               ordered: []
-          - 46ebb:
-              ordered: []
+          - 739b1:
+              ordered:
+                - showStepper: true
     - _toolbarPosition: bottom
     - _groupByColumns: []
     - _toolbarButtonLabel:
@@ -55,14 +61,21 @@ template:
           - 4d: custom
     - _columnOptionList:
         ordered:
-          - c31f7:
+          - 074d2:
               ordered: []
-          - 46ebb:
+          - ce6d2:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_source_system.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
+          - 739b1:
               ordered: []
     - _columnValueOverride:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 074d2: ''
+          - ce6d2: '{{ item }}'
+          - 739b1: ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
@@ -72,49 +85,56 @@ template:
     - _currentPage: 0
     - _columnKey:
         ordered:
-          - c31f7: ID
-          - 46ebb: NAME
-    - hidden: false
+          - 074d2: GOLDEN_TITLE_ID
+          - ce6d2: SOURCE_SYSTEM
+          - 739b1: SOURCE_SYSTEM_TITLE_ID
+    - hidden: ''
     - _toolbarButtonIds:
         - 1a
         - 3c
         - 4d
-    - data: '{{ get_ctm_title_relationship_type.data }}'
+    - data: '{{uploadMappingFileSelectButton.parsedValue[0]}}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 074d2: ''
+          - ce6d2: ''
+          - 739b1: ''
     - _columnFormat:
         ordered:
-          - c31f7: string
-          - 46ebb: string
+          - 074d2: decimal
+          - ce6d2: tag
+          - 739b1: string
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: c31f7
+    - _primaryKeyColumnId: ''
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - c31f7: left
-          - 46ebb: left
+          - 074d2: right
+          - ce6d2: left
+          - 739b1: left
     - _actionIcon:
         ordered: []
     - _columnTooltip:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 074d2: ''
+          - ce6d2: ''
+          - 739b1: ''
     - _columnIcon:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 074d2: ''
+          - ce6d2: ''
+          - 739b1: ''
     - _columnCellTooltipMode:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 074d2: ''
+          - ce6d2: ''
+          - 739b1: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -123,8 +143,9 @@ template:
     - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
-          - c31f7: false
-          - 46ebb: false
+          - 074d2: false
+          - ce6d2: false
+          - 739b1: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -133,24 +154,33 @@ template:
         ordered: []
     - _columnReferenceId:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 074d2: ''
+          - ce6d2: ''
+          - 739b1: ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: single
     - _columnCaption:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 074d2: ''
+          - ce6d2: ''
+          - 739b1: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - c31f7:
-              ordered: []
-          - 46ebb:
-              ordered: []
+          - 074d2:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - ce6d2:
+              ordered:
+                - automaticColors: true
+          - 739b1:
+              ordered:
+                - showSeparators: true
+                - notation: standard
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -158,8 +188,9 @@ template:
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
         ordered:
-          - c31f7: none
-          - 46ebb: none
+          - 074d2: none
+          - ce6d2: none
+          - 739b1: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -169,14 +200,17 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - c31f7:
+          - 074d2:
               ordered: []
-          - 46ebb:
+          - ce6d2:
+              ordered: []
+          - 739b1:
               ordered: []
     - _columnSize:
         ordered:
-          - c31f7: 273.421875
-          - 46ebb: 189.53125
+          - ce6d2: 100
+          - 739b1: 156
+          - 074d2: 100
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -192,22 +226,12 @@ template:
         ordered: []
     - events:
         - ordered:
-            - event: save
-            - type: datasource
-            - method: trigger
-            - pluginId: update_unmap_other_title
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
             - type: widget
             - waitMs: '0'
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: titleRelationshipTable
+            - pluginId: updloadFileTable
             - targetId: 3c
         - ordered:
             - type: widget
@@ -215,12 +239,13 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: titleRelationshipTable
+            - pluginId: updloadFileTable
             - targetId: 4d
     - _columnEditable:
         ordered:
-          - c31f7: 'false'
-          - 46ebb: false
+          - 074d2: ''
+          - ce6d2: ''
+          - 739b1: ''
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -228,8 +253,9 @@ template:
         array: []
     - _columnGroupAggregationMode:
         ordered:
-          - c31f7: none
-          - 46ebb: none
+          - 074d2: sum
+          - ce6d2: none
+          - 739b1: sum
     - sortArray:
         array: []
     - _selectedCell: null
@@ -244,13 +270,15 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - c31f7: center
-          - 46ebb: center
-    - _enableSaveActions: false
+          - 074d2: center
+          - ce6d2: center
+          - 739b1: center
+    - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - c31f7: Enter value
-          - 46ebb: Enter value
+          - 074d2: Enter value
+          - ce6d2: Select option
+          - 739b1: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -261,19 +289,21 @@ template:
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - c31f7: ''
-          - 46ebb: ''
+          - 074d2: ''
+          - ce6d2: ''
+          - 739b1: ''
     - _columnLabel:
         ordered:
-          - c31f7: ID
-          - 46ebb: Name
+          - 074d2: Golden Title ID
+          - ce6d2: Source system
+          - 739b1: Source System Title ID
     - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer5
-    subcontainer: 7cf52
+    container: uploadMappingFileModal
+    row: 4.4
     height: 8
     width: 12
-createdAt: 2023-09-29T16:53:24.735Z
+createdAt: 2023-10-20T04:22:54.397Z

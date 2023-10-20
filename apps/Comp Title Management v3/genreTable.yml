@@ -226,6 +226,8 @@ template:
         ordered:
           - e3415: 'false'
           - fcbed: ''
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []

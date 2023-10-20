@@ -718,6 +718,8 @@ template:
           - 2ef08: ''
           - ddb40: ''
           - '5e196': ''
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []

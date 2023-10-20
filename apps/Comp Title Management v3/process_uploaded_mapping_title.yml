@@ -22,7 +22,7 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        call edwctm.map_other_title
+        call edwctm.map_other_title_bulk
         (array_construct({{otherTitleMappingTransform.value}}))
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
@@ -73,6 +73,7 @@ template:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
     - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
     - transformer: |-
@@ -110,10 +111,20 @@ template:
                   - options:
                       ordered:
                         - notificationType: success
-                        - title: >-
-                            {{process_uploaded_mapping_title.data['MAP_OTHER_TITLE']}}
+                        - title: Mapping updated successfully!
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: clearValue
+            - pluginId: uploadMappingFileSelectButton
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - isMultiplayerEdited: false
     - tableName: ''
     - queryTimeout: '10000'
     - workflowId: null

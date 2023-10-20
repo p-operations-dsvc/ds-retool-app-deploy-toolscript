@@ -226,6 +226,8 @@ template:
         ordered:
           - c5c96: false
           - dbab6: ''
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []

@@ -607,6 +607,8 @@ template:
           - 8cf18: ''
           - '50025': ''
           - aab45: ''
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []
