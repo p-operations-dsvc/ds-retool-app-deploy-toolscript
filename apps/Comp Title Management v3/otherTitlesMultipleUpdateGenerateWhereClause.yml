@@ -1,0 +1,18 @@
+id: otherTitlesMultipleUpdateGenerateWhereClause
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        let array = []
+        rows = {{otherTitleToMapVariable.value}}
+        for (const key in rows) {
+          array.push (rows[key]['id'])
+        }
+
+        return  array.join ("|")
+
+
+         
+    - value: ''
+createdAt: 2023-10-05T00:50:10.299Z

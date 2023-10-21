@@ -22,8 +22,10 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        call
-        edwctm.execute_immediate_ctm({{otherTitlesMultipleUpdateGenerateSQL.value}})
+        call edwctm.map_other_titles(                          
+        {{otherTitlesMultipleUpdateGenerateWhereClause.value}},
+                                     {{goldenTitleIdToMapTo.value}}
+                                    )
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
