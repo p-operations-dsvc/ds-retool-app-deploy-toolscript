@@ -12,23 +12,12 @@ template:
     - tooltipText: ''
     - modalHeight: ''
     - onModalOpen: ''
-    - events:
-        - ordered:
-            - method: close
-            - enabled: '{{otherTitlesAllMappedVariable.value}}'
-            - params:
-                ordered: []
-            - targetId: null
-            - pluginId: mapOtherTitlesModal
-            - waitType: debounce
-            - event: close
-            - type: widget
-            - waitMs: '0'
+    - events: []
     - modalWidth: ''
-    - closeOnOutsideClick: false
+    - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''
-    - buttonText: 1M
+    - buttonText: 1M M
 style:
   ordered: []
 position2:

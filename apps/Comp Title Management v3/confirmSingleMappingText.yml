@@ -12,7 +12,8 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: ' **Proceed to map "{{titleToMapSelect.selectedItem.name}}" to Golden Title "{{mapManualCandidatesTable.selectedRow.TITLE_NAME}}"?**'
+    - value: |2
+         **Proceed to map "{{titleToMapSelect.selectedItem.name}}" to Golden Title "{{mapCandidatesTable.selectedRow.GOLDEN_TITLE_NAME}}"?**
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
