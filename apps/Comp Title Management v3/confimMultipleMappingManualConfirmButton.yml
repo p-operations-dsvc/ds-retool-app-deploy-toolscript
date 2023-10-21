@@ -1,5 +1,5 @@
-id: confimMultipleConfirmButton
-uuid: ed422fd5-2c7e-4f61-81a3-de41312ea5e0
+id: confimMultipleMappingManualConfirmButton
+uuid: a499c927-db20-473a-bd87-fb36f48626a2
 type: widget
 subtype: ButtonWidget2
 template:
@@ -31,7 +31,7 @@ template:
             - event: click
             - type: widget
             - method: close
-            - pluginId: confimMultipleMappingModal
+            - pluginId: confimMultipleMappingManualModal
             - targetId: null
             - params:
                 ordered: []
@@ -45,9 +45,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: confimMultipleMappingModal
-    row: 2.6
-    col: 1
+    container: confimMultipleMappingManualModal
+    row: 2.2
+    col: 2
     height: 1
-    width: 9
-createdAt: 2023-10-05T00:58:12.766Z
+    width: 10
+createdAt: 2023-10-21T21:13:13.938Z

@@ -1,18 +1,18 @@
-id: confimMultipleMappingText
-uuid: e43ec2fa-5c46-4421-9b5e-92932682f4b1
+id: confimMultipleMappingManualText
+uuid: 4b80166f-ff76-49fb-8e52-f5238ca483a5
 type: widget
 subtype: TextWidget2
 template:
   ordered:
     - heightType: auto
-    - horizontalAlign: center
+    - horizontalAlign: left
     - marginType: normal
     - hidden: false
     - imageWidth: fit
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: ' **Proceed to map multiple Titles to Golden Title "{{mapCandidatesTable.selectedRow.GOLDEN_TITLE_NAME}}"?**'
+    - value: ' **Proceed to map multiple titles to Golden Title "{{mapManualCandidatesTable.selectedRow.TITLE_NAME}}"?**'
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
@@ -20,8 +20,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: confimMultipleMappingModal
-    col: 1
+    container: confimMultipleMappingManualModal
+    col: 2
     height: 0.6
-    width: 9
-createdAt: 2023-10-05T17:29:11.820Z
+    width: 10
+createdAt: 2023-10-21T21:13:11.526Z

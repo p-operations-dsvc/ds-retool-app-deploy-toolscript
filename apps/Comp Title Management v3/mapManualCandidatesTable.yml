@@ -420,7 +420,7 @@ template:
             - event: clickAction
             - type: widget
             - method: open
-            - pluginId: confimMultipleMappingModal
+            - pluginId: confimMultipleMappingManualModal
             - targetId: 3b081
             - params:
                 ordered: []
@@ -441,7 +441,7 @@ template:
             - event: clickAction
             - type: widget
             - method: open
-            - pluginId: confirmSingleMappingModal
+            - pluginId: confirmSingleMappingManualModal
             - targetId: 34a54
             - params:
                 ordered: []
