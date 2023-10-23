@@ -46,7 +46,7 @@ template:
         - false
     - currentViewIndex: null
     - _hasMigratedNestedItems: true
-    - transition: none
+    - transition: slide
     - showHeaderBorder: true
     - itemMode: static
     - _tooltipByIndex:
@@ -66,8 +66,7 @@ template:
         - Relationships
         - Alt Title IDs
         - Group
-    - events:
-        ordered: []
+    - events: []
     - _ids:
         - f654f
         - dc989

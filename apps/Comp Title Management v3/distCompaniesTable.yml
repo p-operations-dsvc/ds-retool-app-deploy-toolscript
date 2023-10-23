@@ -193,7 +193,7 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - dee49: 320.578125
+          - dee49: 595.578125
           - 26d8b: 77.578125
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
@@ -279,7 +279,7 @@ position2:
   position2:
     container: tabbedContainer5
     subcontainer: 443b9
-    row: 0.4
+    row: 0.6000000000000001
     height: 8
     width: 12
 createdAt: 2023-09-29T16:53:23.665Z
