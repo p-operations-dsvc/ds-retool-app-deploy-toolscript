@@ -22,13 +22,13 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: |-
-        SELECT a.TITLE_ID, TALENT_TYPE,
-        ROLES, 
-        BILLING, 
-        b.TALENT_NAME
-          FROM edwctm.IMDB_TITLE_TALENT a join edwctm.IMDB_TALENT b on a.TALENT_CODE=b.TALENT_CODE 
-          where TITLE_ID = {{currentRowGoldenTitleIMDBId.value}}
-          order by BILLING asc
+        SELECT a.TITLE_ID, a.TALENT_TYPE,
+        a.ROLES, 
+        a.BILLING, 
+        a.TALENT_NAME
+          FROM edwctm.IMDB_TITLE_TALENT_ctmv3 a 
+          where a.TITLE_ID = {{currentRowGoldenTitleIMDBId.value}}
+          order by a.BILLING asc
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

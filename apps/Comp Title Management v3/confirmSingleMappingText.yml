@@ -13,7 +13,7 @@ template:
     - verticalAlign: center
     - tooltipText: ''
     - value: |2
-         **Proceed to map "{{titleToMapSelect.selectedItem.name}}" to Golden Title "{{mapCandidatesTable.selectedRow.GOLDEN_TITLE_NAME}}"?**
+         **Proceed to map "{{titleToMapSelect.selectedItem.name}}" to Golden Title "{{mapCandidatesTable.selectedRow.GOLDEN_TITLE_NAME}}"?** 
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
