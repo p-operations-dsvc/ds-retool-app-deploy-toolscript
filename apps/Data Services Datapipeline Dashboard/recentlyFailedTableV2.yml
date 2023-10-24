@@ -553,6 +553,8 @@ template:
           - d9266: ''
           - 916aa: ''
           - '70535': ''
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []
