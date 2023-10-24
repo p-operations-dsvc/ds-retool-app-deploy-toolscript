@@ -554,6 +554,8 @@ template:
           - 5cc27: ''
           - '21516': ''
           - ff15c: 'false'
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []

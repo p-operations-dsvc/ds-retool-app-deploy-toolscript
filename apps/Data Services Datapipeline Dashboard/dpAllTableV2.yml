@@ -936,6 +936,8 @@ template:
           - cf3c1: ''
           - b5497: ''
           - 14cf5: ''
+    - _rowBackgroundColor:
+        array: []
     - pagination: null
     - selectedDataIndexes:
         array: []

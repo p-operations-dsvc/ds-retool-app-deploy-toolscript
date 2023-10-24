@@ -67,6 +67,8 @@ template:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
+    - version: 1
+    - overrideOrgCacheForUserCache: false
     - runWhenPageLoads: false
     - transformer: >-
         // type your code here
