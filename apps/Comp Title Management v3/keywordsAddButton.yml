@@ -19,15 +19,12 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: script
-            - method: run
-            - pluginId: ''
+            - type: datasource
+            - method: trigger
+            - pluginId: queryAddGoldenTitleKeyword
             - targetId: null
             - params:
-                ordered:
-                  - src: >
-                      keywordsTagsVariable.setValue
-                      (keywordsTagsVariable.value.concat(goldenTitleKeywordsTextInput.value))
+                ordered: []
             - waitType: debounce
             - waitMs: '0'
     - loading: false
@@ -39,7 +36,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 24.6
+    row: 37.00000000000001
     col: 4
     height: 1
     width: 1

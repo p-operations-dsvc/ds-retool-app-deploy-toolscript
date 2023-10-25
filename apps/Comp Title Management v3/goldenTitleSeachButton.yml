@@ -1,16 +1,16 @@
-id: prodCompaniesRemoveButton
-uuid: 0d064ad6-113a-4c2f-aae2-2c47ac62f120
+id: goldenTitleSeachButton
+uuid: 9d07a27d-be2b-4f9c-afcd-c7efd8c4a01a
 type: widget
 subtype: ButtonWidget2
 template:
   ordered:
-    - horizontalAlign: center
+    - horizontalAlign: stretch
     - clickable: false
     - iconAfter: ''
-    - submitTargetId: null
+    - submitTargetId: ''
     - marginType: normal
     - hidden: false
-    - text: '-'
+    - text: Search
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -19,9 +19,9 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: widget
-            - method: open
-            - pluginId: prodCompaniesTagsModal
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +35,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: goldenTitleForm
-    row: 15.999999999999996
-    col: 5
+    container: tabbedContainer1
+    subcontainer: 443b9
+    col: 11
     height: 1
     width: 1
-createdAt: 2023-10-03T21:02:29.221Z
+createdAt: 2023-10-25T22:45:01.241Z

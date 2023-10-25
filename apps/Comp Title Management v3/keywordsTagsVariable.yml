@@ -8,5 +8,6 @@ template:
     - persistValue: false
     - persistedValueKey: ''
     - value: >-
-        {{get_golden_title_details.data.KEYWORDS[0]===null?[]:get_golden_title_details.data.KEYWORDS[0].split('~')}}
+        {'ID':{{get_golden_title_details.data.KEYWORDS[0]===null?[]:get_golden_title_details.data.KEYWORDS[0].split('~')}}
+        }
 createdAt: 2023-10-03T20:44:33.109Z

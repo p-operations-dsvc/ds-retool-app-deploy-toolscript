@@ -1,0 +1,253 @@
+id: goldenTitleAltNamesTable
+uuid: 4c8e6ff7-6efa-4c4c-a5b3-596e5b0c39e4
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - dcd07: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: medium
+    - _columnIds:
+        - dcd07
+    - _isSaving: false
+    - _actionIds:
+        - bc70d
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - dcd07:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - dcd07:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - dcd07: ''
+    - marginType: normal
+    - _showBorder: false
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: false
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - dcd07: ID
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{altNamesTagsVariable.value}}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - dcd07: ''
+    - _columnFormat:
+        ordered:
+          - dcd07: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: dcd07
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - dcd07: left
+    - _actionIcon:
+        ordered:
+          - bc70d: bold/interface-remove-2
+    - _columnTooltip:
+        ordered:
+          - dcd07: ''
+    - _columnIcon:
+        ordered:
+          - dcd07: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - dcd07: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - dcd07: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered:
+          - bc70d: ''
+    - _columnReferenceId:
+        ordered:
+          - dcd07: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - dcd07: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - dcd07:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - dcd07: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - dcd07:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - dcd07: 193.328125
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: false
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - event: doubleClickRow
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: >-
+                      goldenTitleAltNamesTextInput.setValue
+                      (goldenTitleAltNamesTable.selectedRow.ID)
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: queryDeleteGoldenTitleAltName
+            - targetId: bc70d
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - _columnEditable:
+        ordered:
+          - dcd07: false
+    - _rowBackgroundColor:
+        array: []
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - dcd07: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - dcd07: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - dcd07: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered:
+          - bc70d: Delete
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered:
+          - bc70d: ''
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - dcd07: ''
+    - _columnLabel:
+        ordered:
+          - dcd07: Id
+    - _showToolbar: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 28
+    col: 5
+    height: 8
+    width: 7
+createdAt: 2023-10-25T22:12:06.080Z

@@ -26,7 +26,7 @@ template:
     - formDataKey: '{{ self.id }}'
     - value: ''
     - labelCaption: ''
-    - labelWidth: '50'
+    - labelWidth: '39'
     - autoFill: ''
     - placeholder: ''
     - label: Production Companies
@@ -36,8 +36,7 @@ template:
     - iconBefore: ''
     - minLength: null
     - inputTooltip: ''
-    - events:
-        ordered: []
+    - events: []
     - autoCapitalize: none
     - loading: false
     - disabled: false
@@ -50,7 +49,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 16
+    row: 17.4
     height: 1
     width: 4
 createdAt: 2023-09-30T22:48:15.135Z
