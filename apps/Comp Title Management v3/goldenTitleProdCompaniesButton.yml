@@ -1,5 +1,5 @@
-id: altNamesRemoveButton
-uuid: 796bf758-52fa-460f-a5d1-f62d379b3a59
+id: goldenTitleProdCompaniesButton
+uuid: acedf630-5a17-4a51-9463-9a19bfb2015c
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: '-'
+    - text: +
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -19,13 +19,12 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: widget
-            - method: open
-            - pluginId: altNamesTagsModal
+            - type: datasource
+            - method: trigger
+            - pluginId: queryAddGoldenTitleProdCompany
             - targetId: null
             - params:
-                ordered:
-                  - value: '{{altNamesTagsVariable.value.toString()}}'
+                ordered: []
             - waitType: debounce
             - waitMs: '0'
     - loading: false
@@ -37,8 +36,8 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 22.6
-    col: 5
+    row: 17.400000000000002
+    col: 4
     height: 1
     width: 1
-createdAt: 2023-10-03T21:06:03.639Z
+createdAt: 2023-10-25T22:00:24.683Z

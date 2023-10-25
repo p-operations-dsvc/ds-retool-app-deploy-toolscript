@@ -70,18 +70,6 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-        - ordered:
-            - method: setValue
-            - enabled: '{{otherTitleTable.selectedRows.length>0}}'
-            - params:
-                ordered:
-                  - value: '{{otherTitleTable.selectedRows[0].TITLE_ID}}'
-            - targetId: null
-            - pluginId: titleToMapSelect
-            - waitType: debounce
-            - event: click
-            - type: widget
-            - waitMs: '0'
     - loading: false
     - loaderPosition: auto
     - disabled: '{{securityGroupCheck.value}} '

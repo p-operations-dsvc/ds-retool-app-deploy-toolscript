@@ -5,9 +5,12 @@ template:
   ordered:
     - funcBody: |-
         let array = []
-        rows = {{otherTitleTable.selectedRows}}
+        let rows = {{otherTitleTable.selectedRows}}
+        if (rows.length==0){
+          return array
+        }
         for (const key in rows) {
-          array.push ({'id': rows[key]['TITLE_ID'], 'name': "Title ID " + rows[key]['SOURCE_SYSTEM_TITLE_ID']+" from "+rows[key]['SOURCE_SYSTEM']+": '"+rows[key]['NAME_FROM_SOURCE']+"'"})
+          array.push ({'id': rows[key].TITLE_ID, 'name': "Title ID " + rows[key].SOURCE_SYSTEM_TITLE_ID +" from "+rows[key].SOURCE_SYSTEM+": '"+rows[key].NAME_FROM_SOURCE+"'"})
         }
 
         return array

@@ -1,0 +1,269 @@
+id: goldenTitleProdCompaniesTable
+uuid: ddf476aa-1dc1-4fb1-b7f0-ac33dadcbd72
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - 6fcac: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 6fcac
+    - _isSaving: false
+    - _actionIds:
+        - ab722
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - 6fcac:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - 6fcac:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - 6fcac: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: false
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - 6fcac: ID
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{prodCompanyTagsVariable.value}}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - 6fcac: ''
+    - _columnFormat:
+        ordered:
+          - 6fcac: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: 6fcac
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - 6fcac: left
+    - _actionIcon:
+        ordered:
+          - ab722: bold/interface-remove-2
+    - _columnTooltip:
+        ordered:
+          - 6fcac: ''
+    - _columnIcon:
+        ordered:
+          - 6fcac: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - 6fcac: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - 6fcac: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered:
+          - ab722: ''
+    - _columnReferenceId:
+        ordered:
+          - 6fcac: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - 6fcac: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - 6fcac:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - 6fcac: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - 6fcac:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - 6fcac: 100
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: false
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - event: doubleClickRow
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: >-
+                      goldenTitleProdCompaniesTextInput.setValue
+                      (goldenTitleProdCompaniesTable.selectedRow.ID)
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: queryDeleteGoldenTitleProdCompany
+            - targetId: ab722
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: goldenTitleProdCompaniesTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: goldenTitleProdCompaniesTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - 6fcac: false
+    - _rowBackgroundColor:
+        array: []
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - 6fcac: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - 6fcac: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - 6fcac: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered:
+          - ab722: Delete
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered:
+          - ab722: ''
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - 6fcac: ''
+    - _columnLabel:
+        ordered:
+          - 6fcac: Id
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 17.4
+    col: 5
+    height: 5.8
+    width: 7
+createdAt: 2023-10-25T21:48:29.652Z

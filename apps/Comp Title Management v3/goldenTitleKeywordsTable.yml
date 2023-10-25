@@ -1,0 +1,253 @@
+id: goldenTitleKeywordsTable
+uuid: 8a0ad927-c806-4d2b-9f10-d8d0d0fb8e60
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - d85de: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: medium
+    - _columnIds:
+        - d85de
+    - _isSaving: false
+    - _actionIds:
+        - 2ba91
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - d85de:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - d85de:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - d85de: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: false
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - d85de: ID
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{keywordsTagsVariable.value}}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - d85de: ''
+    - _columnFormat:
+        ordered:
+          - d85de: string
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: d85de
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - d85de: left
+    - _actionIcon:
+        ordered:
+          - 2ba91: bold/interface-remove-2
+    - _columnTooltip:
+        ordered:
+          - d85de: ''
+    - _columnIcon:
+        ordered:
+          - d85de: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - d85de: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - d85de: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered:
+          - 2ba91: ''
+    - _columnReferenceId:
+        ordered:
+          - d85de: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - d85de: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - d85de:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - d85de: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - d85de:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - d85de: 155.9375
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: false
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: queryDeleteGoldenTitleKeyword
+            - targetId: 2ba91
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: doubleClickRow
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: >-
+                      goldenTitleKeywordsTextInput.setValue
+                      (goldenTitleKeywordsTable.selectedRow.ID)
+            - waitType: debounce
+            - waitMs: '0'
+    - _columnEditable:
+        ordered:
+          - d85de: false
+    - _rowBackgroundColor:
+        array: []
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - d85de: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - d85de: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - d85de: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered:
+          - 2ba91: Delete
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered:
+          - 2ba91: ''
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - d85de: ''
+    - _columnLabel:
+        ordered:
+          - d85de: Id
+    - _showToolbar: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: goldenTitleForm
+    row: 37
+    col: 5
+    height: 8
+    width: 7
+createdAt: 2023-10-25T22:28:11.719Z

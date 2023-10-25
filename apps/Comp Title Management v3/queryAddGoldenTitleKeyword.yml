@@ -1,15 +1,12 @@
-id: update_golden_title
+id: queryAddGoldenTitleKeyword
 type: datasource
-subtype: SqlQueryUnified
-resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
-resourceDisplayName: Snowflake CTMv3
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
 template:
   ordered:
     - queryRefreshTime: ''
     - streamResponse: false
-    - records: ''
     - lastReceivedFromResourceAt: null
-    - databasePasswordOverride: ''
     - queryDisabledMessage: ''
     - servedFromCache: false
     - offlineUserQueryInputs: ''
@@ -21,60 +18,29 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >
-        update EDWCTM.GOLDEN_TITLE_V3 a
-
-        set a.RELEASE_YEAR={{goldenTitleReleaseYearInput.value}},
-
-        a.TITLE_TYPE={{goldenTitleTypeDropdownSelect.value}},
-
-        a.KEYWORDS={{keywordsTagsVariable.value.ID.join('~')}},
-
-        a.PRIMARY_GENRE={{goldenTitleGenreSelect.value}},
-
-        a.PRODUCTION_COMAPANIES={{prodCompanyTagsVariable.value.ID.join('~')}},
-
-        a.LANGUAGES={{goldenTitleLanguagesSelect.value.join('~')}},
-
-        a.VOTE_COUNT_MAGNITUDE_RANGE={{
-        goldenTitleVoteCountMagnitudeSelect.value}},
-
-        a.DISTRIBUTION_COMPANIES={{goldenTitleDistCompaniesSelect.value.join('~')}},
-
-        a.ALTERNATE_NAMES={{altNamesTagsVariable.value.ID.join('~')}},
-
-        a.PRODUCTION_STATUS={{goldenTitleProdStatusSelect.value}},
-
-        a.SEASON_NUM={{seasonTextInput.value==''?-1:seasonTextInput.value}},
-
-        a.EPISODE_NUM={{goldenTitleEpisodeInput.value==''?-1:goldenTitleEpisodeInput.value}}
-
-        where a.GOLDEN_TITLE_ID={{goldenTitleIdText.value}}
+    - query: |-
+        let arr = keywordsTagsVariable.value.ID;
+        arr.unshift (goldenTitleKeywordsTextInput.value)
+        let dict = {'ID': arr}
+        keywordsTagsVariable.setValue (dict); 
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
-    - warningCodes: []
     - data: null
-    - recordId: ''
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: true
-    - dataArray: []
+    - showSuccessToaster: false
     - cacheKeyTtl: ''
-    - filterBy: ''
     - requestSentTimestamp: null
-    - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: sql
     - queryRunTime: null
-    - actionType: ''
     - changesetObject: ''
-    - shouldUseLegacySql: false
     - errorTransformer: >-
         // The variable 'data' allows you to reference the request's data in the
         transformer. 
@@ -83,16 +49,14 @@ template:
 
         return data.error
     - finished: null
-    - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
     - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
-    - resourceTypeOverride: ''
+    - resourceTypeOverride: null
     - watchedParams: []
     - enableErrorTransformer: false
-    - enableBulkUpdates: false
     - showLatestVersionUpdatedWarning: false
     - timestamp: 0
     - importedQueryDefaults:
@@ -100,25 +64,23 @@ template:
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
     - overrideOrgCacheForUserCache: false
-    - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
     - transformer: |-
         // Query results are available as the `data` variable
-        return formatDataAsArray(data)
+        return data
     - events:
         - ordered:
             - event: success
-            - type: datasource
-            - method: trigger
-            - pluginId: get_golden_title_details
+            - type: widget
+            - method: refresh
+            - pluginId: test_table1
             - targetId: null
             - params:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
     - isMultiplayerEdited: false
-    - tableName: ''
-    - queryTimeout: '10001'
+    - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
     - queryFailureConditions: ''
@@ -126,11 +88,8 @@ template:
     - enableCaching: false
     - allowedGroups: []
     - workflowBlockPluginId: null
-    - databaseUsernameOverride: ''
-    - shouldEnableBatchQuerying: false
-    - doNotThrowOnNoOp: false
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-10-03T21:32:03.574Z
+createdAt: 2023-10-25T22:30:39.758Z
