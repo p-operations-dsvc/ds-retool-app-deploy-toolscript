@@ -24,6 +24,38 @@ template:
             - waitType: debounce
             - waitMs: '0'
             - enabled: '{{otherTitlesMappedSoFarVariable.value.length>0}}'
+        - ordered:
+            - event: close
+            - type: widget
+            - method: clearSelection
+            - pluginId: otherTitleTable
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: open
+            - type: widget
+            - method: refresh
+            - pluginId: mapCandidatesTable
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: open
+            - type: state
+            - method: setValue
+            - pluginId: titleToMapSelectDefaultValueVariable
+            - targetId: null
+            - params:
+                ordered:
+                  - value: >-
+                      {{otherTitleTable.selectedRows.length==0?"":otherTitleTable.selectedRow.TITLE_ID}}
+            - waitType: debounce
+            - waitMs: '0'
     - modalWidth: 80%
     - closeOnOutsideClick: false
     - loading: ''
