@@ -50,7 +50,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: ''
+    - value: '{{titleToMapSelectDefaultValueVariable.value}}'
     - hiddenByIndex:
         array: []
     - labelCaption: ''
