@@ -1,0 +1,39 @@
+id: s3Uploader1
+type: widget
+subtype: S3UploaderWidget
+template:
+  ordered:
+    - onUpload: ''
+    - fileExtension: ''
+    - s3FileName: ''
+    - s3ACL: private
+    - s3Resource: null
+    - s3ContentType: ''
+    - generateNames: false
+    - label: Upload to Circana S3 CP_PROD/Retail_Analytics
+    - s3BucketName: cp-data-paramount
+    - events:
+        - ordered:
+            - event: upload
+            - type: datasource
+            - method: trigger
+            - pluginId: query1
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - s3ResourceName: 434d3ec9-7a77-4d27-bd06-16a0c3c643ff
+    - s3FolderName: CP_PROD/Retail_Analytics
+    - disabled: ''
+    - lastUploadedFileUrl: ''
+    - lastUploadedFileName: ''
+    - s3ResourceDisplayName: S3_Resource
+style:
+  ordered: []
+position2:
+  position2:
+    row: 0.40000000000000036
+    col: 4
+    height: 1
+createdAt: 2023-04-26T15:15:48.880Z
