@@ -1,19 +1,23 @@
-id: tabbedContainer2
+id: goldeTitleContainer
 type: widget
 subtype: ContainerWidget2
 template:
   ordered:
     - _disabledByIndex:
+        - ''
+        - ''
+        - ''
         - false
-        - ''
-        - ''
-        - ''
+        - false
+        - false
     - heightType: auto
     - currentViewKey: '{{ self.viewKeys[0] }}'
     - iconByIndex:
         array: []
     - clickable: false
     - _iconByIndex:
+        - ''
+        - ''
         - ''
         - ''
         - ''
@@ -34,16 +38,20 @@ template:
     - hiddenByIndex:
         array: []
     - _hiddenByIndex:
+        - ''
+        - ''
+        - '{{get_golden_title_details.data.TITLE_TYPE[0]==''tvSeries''?false:true}}'
         - false
-        - ''
-        - ''
-        - ''
+        - false
+        - false
     - currentViewIndex: null
     - _hasMigratedNestedItems: true
-    - transition: none
+    - transition: slide
     - showHeaderBorder: true
     - itemMode: static
     - _tooltipByIndex:
+        - ''
+        - ''
         - ''
         - ''
         - ''
@@ -52,31 +60,38 @@ template:
         array: []
     - showFooter: false
     - _viewKeys:
-        - Title
+        - Main
         - Title Talent
-        - Related Titles
-        - Alt Titles
-    - events:
-        ordered: []
+        - Child Titles
+        - Relationships
+        - Alt Title IDs
+        - Group
+    - events: []
     - _ids:
-        - eae7c
-        - 443b9
-        - 4153c
-        - 6c9ea
+        - f654f
+        - dc989
+        - '90040'
+        - '04808'
+        - '99178'
+        - '10e32'
     - viewKeys:
         array: []
     - iconPositionByIndex:
         array: []
     - _iconPositionByIndex:
+        - ''
+        - ''
+        - ''
         - left
-        - ''
-        - ''
-        - ''
+        - left
+        - left
     - hovered: false
     - loading: false
     - overflowType: scroll
     - disabled: false
     - _labels:
+        - ''
+        - ''
         - ''
         - ''
         - ''
@@ -92,9 +107,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
-    subcontainer: 443b9
-    row: 2.000000000000001
+    container: goldenTitleModal
+    row: 2
     height: 4
     width: 12
-createdAt: 2023-09-27T18:33:24.675Z
+createdAt: 2023-09-28T21:52:22.425Z

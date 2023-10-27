@@ -24,7 +24,7 @@ template:
     - hidden: false
     - data:
         array: []
-    - targetContainerId: tabbedContainer4
+    - targetContainerId: goldeTitleContainer
     - selectedItem: null
     - showInEditor: false
     - navigateContainer: true
@@ -72,7 +72,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer4
+    container: goldeTitleContainer
     rowGroup: header
     height: 0.8
     width: 12

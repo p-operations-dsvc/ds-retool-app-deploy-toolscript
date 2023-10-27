@@ -262,7 +262,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer5
+    container: referenceDataContainer
     subcontainer: c7966
     height: 8
     width: 12

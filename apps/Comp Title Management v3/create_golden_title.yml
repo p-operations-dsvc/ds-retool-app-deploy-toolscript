@@ -27,7 +27,9 @@ template:
         (golden_title_id, title_name, TITLE_TYPE, RELEASE_YEAR,
 
         season_num, episode_num, PRIMARY_GENRE, DISTRIBUTION_COMPANIES,
-        PRODUCTION_STATUS,LANGUAGES, plot)
+        PRODUCTION_STATUS,LANGUAGES, plot,
+
+        INACTIVE_INDICATOR, source_system_name)
 
         values (golden_title_id_seq.nextval,
                {{addNewGoldenTitleNameInput.value}},
@@ -37,7 +39,7 @@ template:
                 {{addNewGoldenTitleEpisodeInput.value==''?-1:addNewGoldenTitleEpisodeInput.value}},
                 {{addNewGoldenTitleGenreSelect.value}},        {{addNewGoldenTitleDistCompaniesSelect.value.join('~')}},
                 {{addNewGoldenTitleProdStatusSelect.value}},        {{addNewGoldenTitleLanguagesSelect.value.join('~')}},
-              {{addNewGoldenTitlePlotInput.value}}
+              {{addNewGoldenTitlePlotInput.value}}, false, 'CTM-EBX'
                )
 
     - playgroundQueryUuid: ''

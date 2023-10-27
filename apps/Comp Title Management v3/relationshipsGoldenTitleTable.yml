@@ -358,7 +358,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer4
+    container: goldeTitleContainer
     subcontainer: '04808'
     row: 1.2
     height: 8

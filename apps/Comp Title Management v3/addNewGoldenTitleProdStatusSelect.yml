@@ -89,7 +89,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: addNewGoldenTitle
+    container: addNewGoldenTitleForm
     row: 7
     height: 1
     width: 12

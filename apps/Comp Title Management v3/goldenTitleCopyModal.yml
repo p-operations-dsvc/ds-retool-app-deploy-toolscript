@@ -22,7 +22,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
+    container: mainContainer
     subcontainer: 443b9
     row: 1
     col: 10

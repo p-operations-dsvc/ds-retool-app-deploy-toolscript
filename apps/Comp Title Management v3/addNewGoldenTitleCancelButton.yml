@@ -1,16 +1,16 @@
-id: altNamesAddButton
-uuid: 6a027536-43f1-4a43-9274-434a0f233278
+id: addNewGoldenTitleCancelButton
+uuid: ae71cde8-0f14-4e68-b2e6-b3049c584523
 type: widget
 subtype: ButtonWidget2
 template:
   ordered:
-    - horizontalAlign: center
+    - horizontalAlign: stretch
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: +
+    - text: Cancel
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -19,9 +19,9 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: datasource
-            - method: trigger
-            - pluginId: queryAddGoldenTitleAltName
+            - type: widget
+            - method: close
+            - pluginId: goldenTitleCopyModal
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +35,10 @@ style:
   ordered: []
 position2:
   position2:
-    container: goldenTitleForm
-    row: 28.2
-    col: 4
+    container: addNewGoldenTitleForm
+    rowGroup: footer
+    row: 0.2
+    col: 7
     height: 1
-    width: 1
-createdAt: 2023-10-03T19:30:51.474Z
+    width: 4
+createdAt: 2023-10-26T23:12:56.528Z

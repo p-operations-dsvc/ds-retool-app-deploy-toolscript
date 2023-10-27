@@ -47,9 +47,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer4
-    rowGroup: header
-    row: 0.8
-    height: 31.599999999999998
+    container: goldeTitleContainer
+    subcontainer: f654f
+    row: 0.20000000000000284
+    height: 20.199999999999996
     width: 12
 createdAt: 2023-09-28T23:37:55.492Z

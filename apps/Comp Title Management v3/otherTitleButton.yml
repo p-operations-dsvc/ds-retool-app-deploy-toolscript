@@ -27,6 +27,16 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: widget
+            - method: clearSelection
+            - pluginId: otherTitleTable
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - loading: false
     - loaderPosition: auto
     - disabled: false
@@ -35,9 +45,10 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
+    container: mainContainer
     subcontainer: 4153c
-    col: 9
+    row: 1.4
+    col: 11
     height: 1
     width: 1
 createdAt: 2023-10-04T18:04:37.896Z

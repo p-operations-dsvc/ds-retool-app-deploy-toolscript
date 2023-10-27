@@ -1,4 +1,4 @@
-id: tabbedContainer5
+id: referenceDataContainer
 uuid: d8113bb9-e06a-43a7-893a-62b82a16594e
 type: widget
 subtype: ContainerWidget2
@@ -125,7 +125,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
+    container: mainContainer
     subcontainer: 6c9ea
     height: 0.2
     width: 12

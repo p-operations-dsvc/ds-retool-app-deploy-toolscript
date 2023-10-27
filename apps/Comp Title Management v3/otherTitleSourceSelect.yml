@@ -1,7 +1,7 @@
 id: otherTitleSourceSelect
 uuid: 56e657cf-98e2-43f2-8a79-35f355abb7b7
 type: widget
-subtype: SelectWidget2
+subtype: MultiselectWidget2
 template:
   ordered:
     - imageByIndex:
@@ -15,20 +15,26 @@ template:
     - readOnly: false
     - iconAfter: ''
     - _iconByIndex: []
+    - wrapTags: true
     - overlayMinWidth: null
-    - allowDeselect: false
+    - selectedIndexes:
+        array: []
+    - selectedItems:
+        array: []
     - inputValue: ''
     - marginType: normal
+    - persistSearchTerm: false
     - hidden: false
     - customValidation: ''
     - data: '{{ get_ctm_source_system.data }}'
+    - maxCount: null
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:
         array: []
     - textBefore: ''
     - _fallbackTextByIndex: []
-    - selectedItem: null
+    - minLines: null
     - validationMessage: ''
     - automaticItemColors: false
     - itemAdornmentShape: circle
@@ -38,7 +44,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: BOFLASH
+    - value: '[''BOFLASH'']'
     - hiddenByIndex:
         array: []
     - labelCaption: ''
@@ -46,7 +52,7 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: BOFLASH
+    - placeholder: ''
     - _captionByIndex: []
     - itemAdornmentSize: auto
     - label: Source
@@ -58,7 +64,6 @@ template:
     - labelWidthUnit: '%'
     - allowCustomValue: false
     - invalid: false
-    - selectedIndex: null
     - _tooltipByIndex: []
     - _colorByIndex: []
     - tooltipByIndex:
@@ -66,15 +71,18 @@ template:
     - iconBefore: ''
     - colorByIndex:
         array: []
-    - selectedLabel: ''
     - events:
         ordered: []
     - _ids: []
     - emptyMessage: No options
+    - selectedLabels:
+        array: []
     - overlayMaxHeight: 375
+    - maxLines: null
     - loading: false
     - disabled: false
     - labelPosition: left
+    - minCount: null
     - _labels: []
     - labelWrap: false
     - disabledValues:
@@ -89,8 +97,10 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
+    container: mainContainer
     subcontainer: 4153c
+    row: 1.4
+    col: 5
     height: 1
     width: 2
 createdAt: 2023-10-04T17:51:13.497Z
