@@ -11,7 +11,9 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: Execution Id {{get_dp_run_history.data[0].execution_id}} steps
+    - value: |-
+        Data pipeline <b> {{searchRunTable.selectedRow.datapipeline_name}} </b>
+         execution id <b>{{get_dp_run_history.data[0].execution_id}} </b> steps:
     - _disclosedFields:
         array: []
     - disableMarkdown: false
