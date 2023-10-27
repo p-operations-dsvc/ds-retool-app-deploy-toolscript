@@ -45,7 +45,8 @@ template:
         - '21516'
         - 5cc27
     - _isSaving: false
-    - _actionIds: []
+    - _actionIds:
+        - 9446d
     - _clearChangeset: false
     - caseSensitiveFiltering: false
     - _limitOffsetRowCount: null
@@ -150,7 +151,10 @@ template:
           - 09d9e: ''
           - 4a038: ''
           - c4aeb: ''
-          - '96e18': ''
+          - '96e18': |-
+              <a href= "{{item}}" target="_blank">
+              {{currentSourceRow.snow_incident_number}}
+              </a>
           - 95c8a: ''
           - 3d40b: '{{item?''Yes'':''No''}}'
           - 90bf1: ''
@@ -228,7 +232,7 @@ template:
           - 09d9e: datetime
           - 4a038: string
           - c4aeb: string
-          - '96e18': link
+          - '96e18': html
           - 95c8a: string
           - 3d40b: string
           - 90bf1: datetime
@@ -259,7 +263,8 @@ template:
           - '21516': center
           - ff15c: left
     - _actionIcon:
-        ordered: []
+        ordered:
+          - 9446d: bold/interface-edit-view
     - _columnTooltip:
         ordered:
           - c9777: ''
@@ -339,7 +344,8 @@ template:
     - _expandedRows: null
     - changesetObject: null
     - _actionDisabled:
-        ordered: []
+        ordered:
+          - 9446d: ''
     - _columnReferenceId:
         ordered:
           - c9777: ''
@@ -429,7 +435,9 @@ template:
         array: []
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
-        ordered: []
+        ordered:
+          - 5cc27: none
+          - '96e18': none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -501,11 +509,11 @@ template:
         ordered: []
     - events:
         - ordered:
-            - event: clickRow
+            - event: clickAction
             - type: widget
             - method: open
             - pluginId: getDPRunHistoryModal
-            - targetId: null
+            - targetId: 9446d
             - params:
                 ordered: []
             - waitType: debounce
@@ -625,11 +633,13 @@ template:
           - ff15c: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
-        ordered: []
+        ordered:
+          - 9446d: History
     - _virtualizeEndIndex: 0
     - selectedRow: null
     - _actionHidden:
-        ordered: []
+        ordered:
+          - 9446d: ''
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
@@ -640,12 +650,12 @@ template:
           - 09d9e: ''
           - 4a038: ''
           - c4aeb: 'true'
-          - '96e18': 'true'
+          - '96e18': 'false'
           - 95c8a: ''
           - 3d40b: ''
           - 90bf1: ''
           - 218ca: ''
-          - 5cc27: 'false'
+          - 5cc27: 'true'
           - '21516': ''
           - ff15c: ''
     - _columnLabel:
@@ -657,7 +667,7 @@ template:
           - 09d9e: Finish Time
           - 4a038: Task
           - c4aeb: Execution ID full
-          - '96e18': Snow incident number URL
+          - '96e18': Incident
           - 95c8a: Datapipeline Name
           - 3d40b: Exceeded Max Concurrency
           - 90bf1: Start Time
