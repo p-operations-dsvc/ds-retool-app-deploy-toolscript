@@ -24,7 +24,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: ''
+    - value: top gun
     - labelCaption: ''
     - labelWidth: '25'
     - autoFill: ''
