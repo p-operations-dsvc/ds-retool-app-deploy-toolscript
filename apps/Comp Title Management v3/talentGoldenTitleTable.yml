@@ -1,4 +1,4 @@
-id: goldenTitleTalentTable
+id: talentGoldenTitleTable
 type: widget
 subtype: TableWidget2
 template:
@@ -250,7 +250,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: goldenTitleTalentTable
+            - pluginId: talentGoldenTitleTable
             - targetId: 3c
         - ordered:
             - type: widget
@@ -258,7 +258,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: goldenTitleTalentTable
+            - pluginId: talentGoldenTitleTable
             - targetId: 4d
     - _columnEditable:
         ordered:
@@ -324,7 +324,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer4
+    container: goldeTitleContainer
     subcontainer: dc989
     height: 8
     width: 12

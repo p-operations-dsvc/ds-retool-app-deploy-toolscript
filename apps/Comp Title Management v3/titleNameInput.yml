@@ -36,17 +36,7 @@ template:
     - iconBefore: ''
     - minLength: null
     - inputTooltip: ''
-    - events:
-        - ordered:
-            - event: submit
-            - type: widget
-            - method: refresh
-            - pluginId: goldenTitleTable
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
+    - events: []
     - autoCapitalize: none
     - loading: false
     - disabled: false
@@ -58,9 +48,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
+    container: mainContainer
     subcontainer: 443b9
-    col: 6
+    col: 7
     height: 1
     width: 4
 createdAt: 2023-10-03T19:00:08.374Z

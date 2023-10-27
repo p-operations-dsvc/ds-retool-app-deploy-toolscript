@@ -1,6 +1,6 @@
 id: titleTypeSelect
 type: widget
-subtype: SelectWidget2
+subtype: MultiselectWidget2
 template:
   ordered:
     - imageByIndex:
@@ -14,20 +14,26 @@ template:
     - readOnly: false
     - iconAfter: ''
     - _iconByIndex: []
+    - wrapTags: true
     - overlayMinWidth: null
-    - allowDeselect: false
+    - selectedIndexes:
+        array: []
+    - selectedItems:
+        array: []
     - inputValue: ''
     - marginType: normal
+    - persistSearchTerm: false
     - hidden: false
     - customValidation: ''
-    - data: '{{ get_ctm_title_type_dropdown.data }}'
+    - data: '{{ get_ctm_title_type.data }}'
+    - maxCount: null
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:
         array: []
     - textBefore: ''
     - _fallbackTextByIndex: []
-    - selectedItem: null
+    - minLines: null
     - validationMessage: ''
     - automaticItemColors: false
     - itemAdornmentShape: circle
@@ -37,11 +43,11 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '''any'''
+    - value: '[''movie'']'
     - hiddenByIndex:
         array: []
     - labelCaption: ''
-    - labelWidth: '33'
+    - labelWidth: '15'
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
@@ -57,7 +63,6 @@ template:
     - labelWidthUnit: '%'
     - allowCustomValue: false
     - invalid: false
-    - selectedIndex: null
     - _tooltipByIndex: []
     - _colorByIndex: []
     - tooltipByIndex:
@@ -65,24 +70,17 @@ template:
     - iconBefore: ''
     - colorByIndex:
         array: []
-    - selectedLabel: ''
-    - events:
-        - ordered:
-            - event: change
-            - type: widget
-            - method: refresh
-            - pluginId: goldenTitleTable
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
+    - events: []
     - _ids: []
     - emptyMessage: No options
+    - selectedLabels:
+        array: []
     - overlayMaxHeight: 375
+    - maxLines: null
     - loading: false
     - disabled: false
     - labelPosition: left
+    - minCount: null
     - _labels: []
     - labelWrap: false
     - disabledValues:
@@ -97,8 +95,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
+    container: mainContainer
     subcontainer: 443b9
     col: 3
     height: 1
+    width: 4
 createdAt: 2023-09-28T18:24:02.443Z

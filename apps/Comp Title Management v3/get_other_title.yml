@@ -24,15 +24,16 @@ template:
     - query: >-
         select other_title_id as TITLE_ID, SOURCE_SYSTEM,
         SOURCE_SYSTEM_TITLE_ID, ot.TITLE_TYPE, NAME_FROM_SOURCE,
-        RELEASE_YEAR_FROM_SOURCE, SEASON_NUMBER_FROM_SOURCE,
-        EPISODE_NUMBER_FROM_SOURCE, GENRE_FROM_SOURCE,
-        DISTRIBUTION_COMPANIES_FROM_SOURCE, gt.TITLE_NAME as golden_title_name,
+        ot.RELEASE_YEAR_FROM_SOURCE, ot.SEASON_NUMBER_FROM_SOURCE,
+        ot.EPISODE_NUMBER_FROM_SOURCE, ot.GENRE_FROM_SOURCE,
+        ot.DISTRIBUTION_COMPANIES_FROM_SOURCE, gt.TITLE_NAME as
+        golden_title_name,
 
         ot.locked 
 
         from EDWCTM.OTHER_TITLE ot
 
-        left outer join EDWCTM.GOLDEN_TITLE gt on
+        left outer join EDWCTM.GOLDEN_TITLE_V3 gt on
         ot.GOLDEN_TITLE_ID=gt.GOLDEN_TITLE_ID
 
 
@@ -41,7 +42,7 @@ template:
         {{titleTypeSelect.value}} end||'%' 
 
         and SOURCE_SYSTEM = {{otherTitleSourceSelect.value}} and
-        release_year_FROM_SOURCE between
+        ot.release_year_FROM_SOURCE between
         {{otherTitleReleaseDateRange.value.start.split ('T')[0].split('-')[0]}}
         and {{otherTitleReleaseDateRange.value.end.split
         ('T')[0].split('-')[0]}} 

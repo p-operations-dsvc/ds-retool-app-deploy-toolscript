@@ -9,14 +9,14 @@ template:
         ordered:
           - ddd1f: ''
           - 1bf70: ''
-          - f4b5d: ''
-          - 609f8: ''
           - a6e74: ''
-          - 3d10e: ''
-          - 22dd9: ''
-          - 8cf18: ''
-          - '50025': ''
           - aab45: ''
+          - e197f: ''
+          - 72ff2: ''
+          - '93687': ''
+          - eb737: ''
+          - 0e83f: ''
+          - 10dd5: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
@@ -24,15 +24,15 @@ template:
     - _rowHeight: small
     - _columnIds:
         - ddd1f
-        - 1bf70
-        - f4b5d
-        - 609f8
         - a6e74
-        - 3d10e
-        - 22dd9
-        - 8cf18
-        - '50025'
+        - e197f
+        - 1bf70
         - aab45
+        - 72ff2
+        - '93687'
+        - eb737
+        - 0e83f
+        - 10dd5
     - _isSaving: false
     - _actionIds:
         - b53a9
@@ -50,26 +50,24 @@ template:
                 - showStepper: true
           - 1bf70:
               ordered: []
-          - f4b5d:
-              ordered: []
-          - 609f8:
-              ordered:
-                - showStepper: true
           - a6e74:
-              ordered: []
-          - 3d10e:
-              ordered:
-                - showStepper: true
-          - 22dd9:
-              ordered:
-                - showStepper: true
-          - 8cf18:
-              ordered: []
-          - '50025':
               ordered: []
           - aab45:
               ordered:
                 - showStepper: true
+          - e197f:
+              ordered: []
+          - 72ff2:
+              ordered:
+                - showStepper: true
+          - '93687':
+              ordered: []
+          - eb737:
+              ordered: []
+          - 0e83f:
+              ordered: []
+          - 10dd5:
+              ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns:
         ordered: []
@@ -118,41 +116,45 @@ template:
               ordered: []
           - 1bf70:
               ordered: []
-          - f4b5d:
-              ordered: []
-          - 609f8:
-              ordered: []
           - a6e74:
               ordered:
                 - mode: mapped
                 - mappedData: '{{ get_ctm_title_type.data }}'
                 - valueByIndex: '{{ item.ID }}'
                 - labelByIndex: '{{ item.NAME }}'
-          - 3d10e:
-              ordered: []
-          - 22dd9:
-              ordered: []
-          - 8cf18:
-              ordered: []
-          - '50025':
-              ordered: []
           - aab45:
+              ordered: []
+          - e197f:
+              ordered: []
+          - 72ff2:
+              ordered: []
+          - '93687':
+              ordered: []
+          - eb737:
+              ordered: []
+          - 0e83f:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_genre.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
+          - 10dd5:
               ordered: []
     - _columnValueOverride:
         ordered:
           - ddd1f: ''
           - 1bf70: ''
-          - f4b5d: ''
-          - 609f8: ''
           - a6e74: '{{ item }}'
-          - 3d10e: ''
-          - 22dd9: ''
-          - 8cf18: '{{ _.startCase(item) }}'
-          - '50025': |-
+          - aab45: ''
+          - e197f: ''
+          - 72ff2: ''
+          - '93687': ''
+          - eb737: ''
+          - 0e83f: '{{item }}'
+          - 10dd5: |-
               <a href= "{{item}}" target="_blank">
               IMDB Link
               </a>
-          - aab45: ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: '500'
@@ -165,14 +167,14 @@ template:
         ordered:
           - ddd1f: GOLDEN_TITLE_ID
           - 1bf70: IMDB_TT_CD
-          - f4b5d: TITLE_NAME
-          - 609f8: RELEASE_YEAR
           - a6e74: TITLE_TYPE
-          - 3d10e: SEASON_NUM
-          - 22dd9: EPISODE_NUM
-          - 8cf18: PRIMARY_GENRE
-          - '50025': IMDB_URL
           - aab45: PARENT_GOLDEN_TITLE_ID
+          - e197f: TITLE_NAME
+          - 72ff2: RELEASE_YEAR
+          - '93687': SEASON_NUM
+          - eb737: EPISODE_NUM
+          - 0e83f: PRIMARY_GENRE
+          - 10dd5: IMDB_URL
     - hidden: false
     - _toolbarButtonIds:
         - 1a
@@ -187,26 +189,26 @@ template:
         ordered:
           - ddd1f: ''
           - 1bf70: ''
-          - f4b5d: ''
-          - 609f8: ''
           - a6e74: ''
-          - 3d10e: ''
-          - 22dd9: ''
-          - 8cf18: ''
-          - '50025': ''
           - aab45: ''
+          - e197f: ''
+          - 72ff2: ''
+          - '93687': ''
+          - eb737: ''
+          - 0e83f: ''
+          - 10dd5: ''
     - _columnFormat:
         ordered:
           - ddd1f: decimal
           - 1bf70: string
-          - f4b5d: multilineString
-          - 609f8: decimal
           - a6e74: tag
-          - 3d10e: decimal
-          - 22dd9: decimal
-          - 8cf18: tag
-          - '50025': html
           - aab45: decimal
+          - e197f: multilineString
+          - 72ff2: decimal
+          - '93687': string
+          - eb737: string
+          - 0e83f: tag
+          - 10dd5: html
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
@@ -216,14 +218,14 @@ template:
         ordered:
           - ddd1f: center
           - 1bf70: left
-          - f4b5d: left
-          - 609f8: right
           - a6e74: left
-          - 3d10e: right
-          - 22dd9: right
-          - 8cf18: left
-          - '50025': left
           - aab45: right
+          - e197f: left
+          - 72ff2: right
+          - '93687': left
+          - eb737: left
+          - 0e83f: left
+          - 10dd5: left
     - _actionIcon:
         ordered:
           - b53a9: bold/interface-edit-view
@@ -232,38 +234,38 @@ template:
         ordered:
           - ddd1f: ''
           - 1bf70: ''
-          - f4b5d: ''
-          - 609f8: ''
           - a6e74: ''
-          - 3d10e: ''
-          - 22dd9: ''
-          - 8cf18: ''
-          - '50025': ''
           - aab45: ''
+          - e197f: ''
+          - 72ff2: ''
+          - '93687': ''
+          - eb737: ''
+          - 0e83f: ''
+          - 10dd5: ''
     - _columnIcon:
         ordered:
           - ddd1f: ''
           - 1bf70: ''
-          - f4b5d: ''
-          - 609f8: ''
           - a6e74: ''
-          - 3d10e: ''
-          - 22dd9: ''
-          - 8cf18: ''
-          - '50025': ''
           - aab45: ''
+          - e197f: ''
+          - 72ff2: ''
+          - '93687': ''
+          - eb737: ''
+          - 0e83f: ''
+          - 10dd5: ''
     - _columnCellTooltipMode:
         ordered:
           - ddd1f: ''
           - 1bf70: ''
-          - f4b5d: ''
-          - 609f8: ''
           - a6e74: ''
-          - 3d10e: ''
-          - 22dd9: ''
-          - 8cf18: ''
-          - '50025': ''
           - aab45: ''
+          - e197f: ''
+          - 72ff2: ''
+          - '93687': ''
+          - eb737: ''
+          - 0e83f: ''
+          - 10dd5: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -274,14 +276,14 @@ template:
         ordered:
           - ddd1f: false
           - 1bf70: false
-          - f4b5d: false
-          - 609f8: false
           - a6e74: false
-          - 3d10e: false
-          - 22dd9: false
-          - 8cf18: false
-          - '50025': false
           - aab45: false
+          - e197f: false
+          - 72ff2: false
+          - '93687': false
+          - eb737: false
+          - 0e83f: false
+          - 10dd5: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -294,14 +296,14 @@ template:
         ordered:
           - ddd1f: ''
           - 1bf70: ''
-          - f4b5d: ''
-          - 609f8: ''
           - a6e74: ''
-          - 3d10e: ''
-          - 22dd9: ''
-          - 8cf18: ''
-          - '50025': ''
           - aab45: ''
+          - e197f: ''
+          - 72ff2: ''
+          - '93687': ''
+          - eb737: ''
+          - 0e83f: ''
+          - 10dd5: ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: multiple
@@ -309,14 +311,14 @@ template:
         ordered:
           - ddd1f: ''
           - 1bf70: ''
-          - f4b5d: ''
-          - 609f8: ''
           - a6e74: ''
-          - 3d10e: ''
-          - 22dd9: ''
-          - 8cf18: ''
-          - '50025': ''
           - aab45: ''
+          - e197f: ''
+          - 72ff2: ''
+          - '93687': ''
+          - eb737: ''
+          - 0e83f: ''
+          - 10dd5: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
@@ -328,33 +330,29 @@ template:
                 - notation: standard
           - 1bf70:
               ordered: []
-          - f4b5d:
-              ordered: []
-          - 609f8:
-              ordered:
-                - showSeparators: false
-                - notation: standard
           - a6e74:
               ordered:
                 - automaticColors: true
-          - 3d10e:
-              ordered:
-                - showSeparators: false
-                - notation: standard
-          - 22dd9:
-              ordered:
-                - showSeparators: true
-                - notation: standard
-          - 8cf18:
-              ordered:
-                - automaticColors: true
-          - '50025':
-              ordered:
-                - showUnderline: hover
           - aab45:
               ordered:
                 - showSeparators: true
                 - notation: standard
+          - e197f:
+              ordered: []
+          - 72ff2:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - '93687':
+              ordered: []
+          - eb737:
+              ordered: []
+          - 0e83f:
+              ordered:
+                - automaticColors: true
+          - 10dd5:
+              ordered:
+                - showUnderline: hover
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -362,14 +360,15 @@ template:
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
         ordered:
-          - f4b5d: none
           - ddd1f: none
           - a6e74: none
-          - 3d10e: none
-          - 22dd9: none
-          - 8cf18: none
-          - '50025': none
           - aab45: none
+          - e197f: none
+          - 72ff2: none
+          - '93687': none
+          - eb737: none
+          - 0e83f: none
+          - 10dd5: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -383,34 +382,34 @@ template:
               ordered: []
           - 1bf70:
               ordered: []
-          - f4b5d:
-              ordered: []
-          - 609f8:
-              ordered: []
           - a6e74:
-              ordered: []
-          - 3d10e:
-              ordered: []
-          - 22dd9:
-              ordered: []
-          - 8cf18:
-              ordered: []
-          - '50025':
               ordered: []
           - aab45:
               ordered: []
+          - e197f:
+              ordered: []
+          - 72ff2:
+              ordered: []
+          - '93687':
+              ordered: []
+          - eb737:
+              ordered: []
+          - 0e83f:
+              ordered: []
+          - 10dd5:
+              ordered: []
     - _columnSize:
         ordered:
-          - 8cf18: 102.859375
           - aab45: 136.15625
-          - f4b5d: 570.515625
-          - a6e74: 109.890625
-          - 1bf70: 86.921875
-          - 609f8: 47.09375
-          - 3d10e: 70.375
-          - '50025': 250.890625
+          - a6e74: 114.609375
+          - 1bf70: 104.921875
+          - 10dd5: 250.890625
+          - 0e83f: 121.859375
+          - 72ff2: 66.09375
           - ddd1f: 70.421875
-          - 22dd9: 73.84375
+          - '93687': 80.375
+          - e197f: 358.796875
+          - eb737: 81.84375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -422,6 +421,16 @@ template:
     - _defaultFilters:
         ordered: []
     - events:
+        - ordered:
+            - event: changePage
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
         - ordered:
             - event: clickAction
             - type: widget
@@ -595,18 +604,29 @@ template:
                   - url: '{{ item }}'
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: clickCell
+            - type: util
+            - method: openUrl
+            - pluginId: ''
+            - targetId: 10dd5
+            - params:
+                ordered:
+                  - url: '{{ item }}'
+            - waitType: debounce
+            - waitMs: '0'
     - _columnEditable:
         ordered:
           - ddd1f: false
           - 1bf70: ''
-          - f4b5d: ''
-          - 609f8: ''
           - a6e74: ''
-          - 3d10e: ''
-          - 22dd9: ''
-          - 8cf18: ''
-          - '50025': ''
           - aab45: ''
+          - e197f: ''
+          - 72ff2: ''
+          - '93687': ''
+          - eb737: ''
+          - 0e83f: ''
+          - 10dd5: ''
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -614,14 +634,15 @@ template:
         array: []
     - _columnGroupAggregationMode:
         ordered:
-          - f4b5d: none
           - ddd1f: none
           - a6e74: none
-          - 3d10e: sum
-          - 22dd9: sum
-          - 8cf18: none
-          - '50025': none
           - aab45: sum
+          - e197f: none
+          - 72ff2: sum
+          - '93687': none
+          - eb737: none
+          - 0e83f: none
+          - 10dd5: none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -638,27 +659,27 @@ template:
         ordered:
           - ddd1f: center
           - 1bf70: center
-          - f4b5d: center
-          - 609f8: center
           - a6e74: center
-          - 3d10e: center
-          - 22dd9: center
-          - 8cf18: center
-          - '50025': center
           - aab45: center
+          - e197f: center
+          - 72ff2: center
+          - '93687': center
+          - eb737: center
+          - 0e83f: center
+          - 10dd5: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
           - ddd1f: Enter value
           - 1bf70: Enter value
-          - f4b5d: Enter value
-          - 609f8: Enter value
           - a6e74: Select option
-          - 3d10e: Enter value
-          - 22dd9: Enter value
-          - 8cf18: Select option
-          - '50025': ''
           - aab45: Enter value
+          - e197f: Enter value
+          - 72ff2: Enter value
+          - '93687': Enter value
+          - eb737: Enter value
+          - 0e83f: Select option
+          - 10dd5: ''
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered:
@@ -675,33 +696,34 @@ template:
         ordered:
           - ddd1f: ''
           - 1bf70: ''
-          - f4b5d: ''
-          - 609f8: ''
           - a6e74: ''
-          - 3d10e: ''
-          - 22dd9: ''
-          - 8cf18: ''
-          - '50025': ''
           - aab45: 'true'
+          - e197f: ''
+          - 72ff2: ''
+          - '93687': ''
+          - eb737: ''
+          - 0e83f: ''
+          - 10dd5: ''
     - _columnLabel:
         ordered:
           - ddd1f: ID
           - 1bf70: TT Code
-          - f4b5d: Name
-          - 609f8: Year
           - a6e74: Type
-          - 3d10e: Season
-          - 22dd9: Episode
-          - 8cf18: Genre
-          - '50025': IMDB URL
           - aab45: Parent golden title id
+          - e197f: Name
+          - 72ff2: Year
+          - '93687': Season
+          - eb737: Episode
+          - 0e83f: Genre
+          - 10dd5: IMDB URL
     - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer2
-    rowGroup: header
-    height: 32.6
+    container: mainContainer
+    subcontainer: 443b9
+    row: 2.2
+    height: 33.4
     width: 12
 createdAt: 2023-09-27T22:19:06.281Z

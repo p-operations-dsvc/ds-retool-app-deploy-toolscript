@@ -49,7 +49,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: addNewGoldenTitle
+    container: addNewGoldenTitleForm
     height: 1
     width: 12
 createdAt: 2023-10-05T19:50:33.085Z

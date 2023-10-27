@@ -28,7 +28,7 @@ template:
     - labelCaption: ''
     - maxDate: ''
     - labelWidth: '33'
-    - label: Release
+    - label: Release Year
     - formattedValue: ''
     - _validate: false
     - labelWidthUnit: '%'
@@ -58,8 +58,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
+    container: mainContainer
     subcontainer: 4153c
-    col: 4
+    row: 2.4
     height: 1
 createdAt: 2023-10-04T17:58:37.476Z

@@ -21,7 +21,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
+    container: mainContainer
     subcontainer: 4153c
     col: 11
     height: 1

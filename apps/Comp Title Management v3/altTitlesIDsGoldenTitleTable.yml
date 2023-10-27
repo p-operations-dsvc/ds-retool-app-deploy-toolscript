@@ -1,5 +1,5 @@
-id: sourceSystemTable
-uuid: 590aa89b-43ec-4dfa-a043-f31bc52e2a34
+id: altTitlesIDsGoldenTitleTable
+uuid: afd0a19a-1d96-4f67-a320-128fe6786312
 type: widget
 subtype: TableWidget2
 template:
@@ -8,16 +8,18 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - 885ff: ''
-          - 7776e: ''
+          - 00b72: ''
+          - c13d6: ''
+          - fdb16: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
     - disableEdits: false
-    - _rowHeight: small
+    - _rowHeight: medium
     - _columnIds:
-        - 885ff
-        - 7776e
+        - 00b72
+        - fdb16
+        - c13d6
     - _isSaving: false
     - _actionIds: []
     - _clearChangeset: false
@@ -28,9 +30,12 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - 885ff:
+          - 00b72:
               ordered: []
-          - 7776e:
+          - c13d6:
+              ordered:
+                - showStepper: true
+          - fdb16:
               ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns: []
@@ -55,14 +60,25 @@ template:
           - 4d: custom
     - _columnOptionList:
         ordered:
-          - 885ff:
+          - 00b72:
+              ordered:
+                - mode: manual
+                - mappedData: '{{ get_ctm_title_type.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
+          - c13d6:
               ordered: []
-          - 7776e:
-              ordered: []
+          - fdb16:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_source_system.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
     - _columnValueOverride:
         ordered:
-          - 885ff: ''
-          - 7776e: ''
+          - 00b72: '{{ item }}'
+          - c13d6: ''
+          - fdb16: '{{ item }}'
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
@@ -72,49 +88,56 @@ template:
     - _currentPage: 0
     - _columnKey:
         ordered:
-          - 885ff: ID
-          - 7776e: NAME
+          - 00b72: TITLE_TYPE
+          - c13d6: SOURCE_SYSTEM_TITLE_ID
+          - fdb16: SOURCE_SYSTEM_NAME
     - hidden: false
     - _toolbarButtonIds:
         - 1a
         - 3c
         - 4d
-    - data: '{{ get_ctm_source_system.data }}'
+    - data: '{{ get_group_golden_title_details.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - 885ff: ''
-          - 7776e: ''
+          - 00b72: ''
+          - c13d6: ''
+          - fdb16: ''
     - _columnFormat:
         ordered:
-          - 885ff: string
-          - 7776e: string
+          - 00b72: tag
+          - c13d6: string
+          - fdb16: tag
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: 885ff
+    - _primaryKeyColumnId: ''
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - 885ff: left
-          - 7776e: left
+          - 00b72: left
+          - c13d6: left
+          - fdb16: left
     - _actionIcon:
         ordered: []
     - _columnTooltip:
         ordered:
-          - 885ff: ''
-          - 7776e: ''
+          - 00b72: ''
+          - c13d6: ''
+          - fdb16: ''
     - _columnIcon:
         ordered:
-          - 885ff: ''
-          - 7776e: ''
+          - 00b72: ''
+          - c13d6: ''
+          - fdb16: ''
     - _columnCellTooltipMode:
         ordered:
-          - 885ff: ''
-          - 7776e: ''
+          - 00b72: ''
+          - c13d6: ''
+          - fdb16: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -123,8 +146,9 @@ template:
     - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
-          - 885ff: false
-          - 7776e: false
+          - 00b72: false
+          - c13d6: false
+          - fdb16: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -133,24 +157,32 @@ template:
         ordered: []
     - _columnReferenceId:
         ordered:
-          - 885ff: ''
-          - 7776e: ''
+          - 00b72: ''
+          - c13d6: ''
+          - fdb16: ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: single
     - _columnCaption:
         ordered:
-          - 885ff: ''
-          - 7776e: ''
+          - 00b72: ''
+          - c13d6: ''
+          - fdb16: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - 885ff:
-              ordered: []
-          - 7776e:
-              ordered: []
+          - 00b72:
+              ordered:
+                - automaticColors: true
+          - c13d6:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+          - fdb16:
+              ordered:
+                - automaticColors: true
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -158,8 +190,9 @@ template:
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
         ordered:
-          - 885ff: none
-          - 7776e: none
+          - 00b72: none
+          - c13d6: none
+          - fdb16: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -169,14 +202,17 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - 885ff:
+          - 00b72:
               ordered: []
-          - 7776e:
+          - c13d6:
+              ordered: []
+          - fdb16:
               ordered: []
     - _columnSize:
         ordered:
-          - 885ff: 234.9375
-          - 7776e: 71.9375
+          - 00b72: 122.046875
+          - fdb16: 281.4375
+          - c13d6: 141.640625
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -197,7 +233,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: sourceSystemTable
+            - pluginId: altTitlesIDsGoldenTitleTable
             - targetId: 3c
         - ordered:
             - type: widget
@@ -205,12 +241,13 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: sourceSystemTable
+            - pluginId: altTitlesIDsGoldenTitleTable
             - targetId: 4d
     - _columnEditable:
         ordered:
-          - 885ff: 'false'
-          - 7776e: ''
+          - 00b72: ''
+          - c13d6: ''
+          - fdb16: ''
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -218,8 +255,9 @@ template:
         array: []
     - _columnGroupAggregationMode:
         ordered:
-          - 885ff: none
-          - 7776e: none
+          - 00b72: none
+          - c13d6: sum
+          - fdb16: none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -234,13 +272,15 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - 885ff: center
-          - 7776e: center
+          - 00b72: center
+          - c13d6: center
+          - fdb16: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - 885ff: Enter value
-          - 7776e: Enter value
+          - 00b72: Select option
+          - c13d6: Enter value
+          - fdb16: Select option
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -251,19 +291,21 @@ template:
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - 885ff: ''
-          - 7776e: ''
+          - 00b72: ''
+          - c13d6: ''
+          - fdb16: ''
     - _columnLabel:
         ordered:
-          - 885ff: ID
-          - 7776e: Name
+          - 00b72: Title Type
+          - c13d6: Source System Title ID
+          - fdb16: Source System Name
     - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
-    container: referenceDataContainer
-    subcontainer: fb90a
+    container: goldeTitleContainer
+    subcontainer: '99178'
     height: 8
     width: 12
-createdAt: 2023-09-29T16:53:24.536Z
+createdAt: 2023-10-26T22:32:42.881Z

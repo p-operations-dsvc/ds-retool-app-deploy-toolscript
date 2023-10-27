@@ -11,7 +11,7 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: Golden Title Details
+    - value: ' <a href="{{get_golden_title_details.data.IMDB_URL[0]}}" target="_blank">{{get_golden_title_details.data.TITLE_NAME[0]}} on IMDB</a>'
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false

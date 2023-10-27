@@ -1,5 +1,5 @@
-id: otherTitleButton
-uuid: f2d2d3f8-4cc1-45ac-807a-b2cfb1b73824
+id: addNewGoldenTitleCancelButton
+uuid: ae71cde8-0f14-4e68-b2e6-b3049c584523
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,18 +10,18 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: Search
+    - text: Cancel
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
     - submit: false
-    - iconBefore: bold/interface-search
+    - iconBefore: ''
     - events:
         - ordered:
             - event: click
-            - type: datasource
-            - method: trigger
-            - pluginId: get_other_title
+            - type: widget
+            - method: close
+            - pluginId: goldenTitleCopyModal
             - targetId: null
             - params:
                 ordered: []
@@ -35,10 +35,10 @@ style:
   ordered: []
 position2:
   position2:
-    container: mainContainer
-    subcontainer: 4153c
-    row: 1.4
-    col: 11
+    container: addNewGoldenTitleForm
+    rowGroup: footer
+    row: 0.2
+    col: 7
     height: 1
-    width: 1
-createdAt: 2023-10-04T18:04:37.896Z
+    width: 4
+createdAt: 2023-10-26T23:12:56.528Z

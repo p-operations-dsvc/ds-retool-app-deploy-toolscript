@@ -65,10 +65,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
+    container: mainContainer
     subcontainer: 4153c
-    row: 1.4
-    col: 3
+    col: 1
     height: 1
     width: 1
 createdAt: 2023-10-04T22:20:17.695Z

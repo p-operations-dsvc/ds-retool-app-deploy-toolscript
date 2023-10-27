@@ -1,4 +1,4 @@
-id: tabbedContainer1
+id: mainContainer
 type: widget
 subtype: ContainerWidget2
 template:

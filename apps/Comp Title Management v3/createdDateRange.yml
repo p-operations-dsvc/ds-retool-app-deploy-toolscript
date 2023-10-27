@@ -35,17 +35,7 @@ template:
     - invalid: false
     - iconBefore: bold/interface-calendar-remove
     - endPlaceholder: '{{self.value.end}}'
-    - events:
-        - ordered:
-            - event: submit
-            - type: widget
-            - method: refresh
-            - pluginId: goldenTitleTable
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
+    - events: []
     - textBetween: '-'
     - loading: false
     - disabled: false
@@ -57,7 +47,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
+    container: mainContainer
     subcontainer: 443b9
     height: 1
 createdAt: 2023-09-28T17:19:22.588Z

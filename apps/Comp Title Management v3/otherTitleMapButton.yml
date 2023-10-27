@@ -58,9 +58,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
+    container: mainContainer
     subcontainer: 4153c
-    row: -5.551115123125783e-17
     col: 10
     height: 1
     width: 1
