@@ -1,4 +1,4 @@
-id: get_golden_title_details
+id: update_golden_parent_title
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
@@ -21,39 +21,11 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: |-
-        select   a.GOLDEN_TITLE_ID
-        , a.IMDB_TT_CD
-        , a.TITLE_NAME
-        , a.TITLE_TYPE
-        , a.RELEASE_YEAR
-        , a.SEASON_NUM
-        , a.EPISODE_NUM
-        , a.PARENT_GOLDEN_TITLE_ID
-        , a.PRIMARY_GENRE
-        , a.DISTRIBUTION_COMPANIES
-        , a.PRODUCTION_COMPANIES
-        , a.PRODUCTION_STATUS
-        , a.VOTE_COUNT_MAGNITUDE_RANGE
-        , a.LANGUAGES
-        , a.ALTERNATE_NAMES
-        , a.KEYWORDS
-        , a.PLOT
-        , a.IMDB_URL
-        , a.SOURCE_SYSTEM_NAME
-        , a.INACTIVE_INDICATOR
-        , a.release_year_from_source
-        , a.Season_From_Source
-        , a.EPISODE_NUMBER_from_source
-        , a.genres_from_source
-        , a.DISTRIBUTION_COMPANIES_from_source
-        , a.PRODUCTION_COMPANIES_from_source
-        , a.ALTERNATE_NAMES_AKA_from_source
-        , a.KEYWORDS_FROM_SOURCE
-        , a.parent_title_name
-        , a.TITLE_NAME_FROM_SOURCE
-        from EDWCTM.GOLDEN_TITLE_V3 a 
-        where a.golden_title_id={{currentRowGoldenTitleId.value}}
+    - query: |
+        update EDWCTM.GOLDEN_TITLE_V3 a
+        set a.PARENT_TITLE_NAME= {{goldenTitleNameText.value}},
+        a.PARENT_TITLE_NAME_UPDATE_INDICATOR = true
+        where a.PARENT_GOLDEN_TITLE_ID={{goldenTitleIdText.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -109,7 +81,18 @@ template:
     - transformer: |-
         // Query results are available as the `data` variable
         return formatDataAsArray(data)
-    - events: []
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - isMultiplayerEdited: false
     - tableName: ''
     - queryTimeout: '10001'
     - workflowId: null
@@ -126,4 +109,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-09-28T18:55:20.424Z
+createdAt: 2023-10-30T22:26:55.630Z

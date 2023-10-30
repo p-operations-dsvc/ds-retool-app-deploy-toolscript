@@ -1,95 +1,56 @@
 id: goldenTitleTypeDropdownSelect
+uuid: 4c84c05f-e2ac-4490-8380-480f78f41679
 type: widget
-subtype: SelectWidget2
+subtype: TextInputWidget2
 template:
   ordered:
-    - imageByIndex:
-        array: []
-    - _disabledByIndex: []
-    - showSelectionIndicator: true
-    - _values: []
-    - iconByIndex:
-        array: []
-    - values: '{{ item.ID }}'
+    - spellCheck: false
     - readOnly: false
     - iconAfter: ''
-    - _iconByIndex: []
-    - overlayMinWidth: null
-    - allowDeselect: false
-    - inputValue: ''
+    - showCharacterCount: false
+    - autoComplete: false
     - marginType: normal
+    - maxLength: null
     - hidden: false
     - customValidation: ''
-    - data: '{{ get_ctm_title_type.data }}'
-    - searchMode: fuzzy
+    - patternType: ''
     - hideValidationMessage: false
-    - fallbackTextByIndex:
-        array: []
     - textBefore: ''
-    - _fallbackTextByIndex: []
-    - selectedItem: null
     - validationMessage: ''
-    - automaticItemColors: false
-    - itemAdornmentShape: circle
     - textAfter: ''
     - showInEditor: false
     - showClear: false
+    - pattern: ''
     - tooltipText: ''
     - labelAlign: left
-    - formDataKey: TITLE_TYPE
+    - formDataKey: '{{ self.id }}'
     - value: '{{get_golden_title_details.data.TITLE_TYPE[0]}}'
-    - hiddenByIndex:
-        array: []
     - labelCaption: ''
     - labelWidth: '33'
-    - deprecatedLabels:
-        array: []
-    - _hiddenByIndex: []
+    - autoFill: ''
     - placeholder: '{{get_golden_title_details.data.TITLE_TYPE[0]}}'
-    - _captionByIndex: []
-    - itemAdornmentSize: auto
-    - label: Type
-    - _hasMigratedNestedItems: true
-    - captionByIndex:
-        array: []
+    - label: Title Type
     - _validate: false
-    - itemMode: dynamic
     - labelWidthUnit: '%'
-    - allowCustomValue: false
     - invalid: false
-    - selectedIndex: null
-    - _tooltipByIndex: []
-    - _colorByIndex: []
-    - tooltipByIndex:
-        array: []
     - iconBefore: ''
-    - colorByIndex:
-        array: []
-    - selectedLabel: ''
+    - minLength: null
+    - inputTooltip: ''
     - events:
         ordered: []
-    - _ids: []
-    - emptyMessage: No options
-    - overlayMaxHeight: 375
+    - autoCapitalize: none
     - loading: false
-    - disabled: false
+    - disabled: 'true'
     - labelPosition: left
-    - _labels: []
     - labelWrap: false
-    - disabledValues:
-        array: []
-    - disabledByIndex:
-        array: []
     - maintainSpaceWhenHidden: false
-    - _imageByIndex: []
-    - required: true
-    - labels: '{{ item.NAME }}'
+    - required: false
 style:
   ordered: []
 position2:
   position2:
     container: goldenTitleForm
-    row: 2.999999999999999
+    row: 4
     height: 1
     width: 12
-createdAt: 2023-09-28T23:42:30.525Z
+createdAt: 2023-10-30T19:37:40.478Z

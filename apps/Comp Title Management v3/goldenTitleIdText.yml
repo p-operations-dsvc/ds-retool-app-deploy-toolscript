@@ -40,7 +40,7 @@ template:
     - labelPosition: left
     - labelWrap: false
     - maintainSpaceWhenHidden: false
-    - required: true
+    - required: false
 style:
   ordered: []
 position2:

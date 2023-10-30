@@ -1,29 +1,20 @@
 id: goldenTitleProdStatusSelect
-uuid: d4f40c8b-294f-4826-8cf3-49833f6f6f0b
+uuid: 742406d1-fde4-47c5-9468-edc78313ae50
 type: widget
 subtype: SelectWidget2
 template:
   ordered:
     - imageByIndex:
         array: []
-    - _disabledByIndex:
-        - ''
-        - ''
-        - ''
+    - _disabledByIndex: []
     - showSelectionIndicator: true
-    - _values:
-        - Option 1
-        - Option 2
-        - Option 3
+    - _values: []
     - iconByIndex:
         array: []
     - values: '{{ item.ID }}'
     - readOnly: false
     - iconAfter: ''
-    - _iconByIndex:
-        - ''
-        - ''
-        - ''
+    - _iconByIndex: []
     - overlayMinWidth: null
     - allowDeselect: false
     - inputValue: ''
@@ -36,10 +27,7 @@ template:
     - fallbackTextByIndex:
         array: []
     - textBefore: ''
-    - _fallbackTextByIndex:
-        - ''
-        - ''
-        - ''
+    - _fallbackTextByIndex: []
     - selectedItem: null
     - validationMessage: ''
     - automaticItemColors: false
@@ -57,15 +45,9 @@ template:
     - labelWidth: '33'
     - deprecatedLabels:
         array: []
-    - _hiddenByIndex:
-        - ''
-        - ''
-        - ''
-    - placeholder: Select an option
-    - _captionByIndex:
-        - ''
-        - ''
-        - ''
+    - _hiddenByIndex: []
+    - placeholder: '{{get_golden_title_details.data.PRODUCTION_STATUS[0]}}'
+    - _captionByIndex: []
     - itemAdornmentSize: auto
     - label: Production Status
     - _hasMigratedNestedItems: true
@@ -77,14 +59,8 @@ template:
     - allowCustomValue: false
     - invalid: false
     - selectedIndex: null
-    - _tooltipByIndex:
-        - ''
-        - ''
-        - ''
-    - _colorByIndex:
-        - ''
-        - ''
-        - ''
+    - _tooltipByIndex: []
+    - _colorByIndex: []
     - tooltipByIndex:
         array: []
     - iconBefore: ''
@@ -93,29 +69,20 @@ template:
     - selectedLabel: ''
     - events:
         ordered: []
-    - _ids:
-        - a2524
-        - 3d5a0
-        - 09a0a
+    - _ids: []
     - emptyMessage: No options
     - overlayMaxHeight: 375
     - loading: false
-    - disabled: false
+    - disabled: 'true'
     - labelPosition: left
-    - _labels:
-        - ''
-        - ''
-        - ''
+    - _labels: []
     - labelWrap: false
     - disabledValues:
         array: []
     - disabledByIndex:
         array: []
     - maintainSpaceWhenHidden: false
-    - _imageByIndex:
-        - ''
-        - ''
-        - ''
+    - _imageByIndex: []
     - required: false
     - labels: '{{ item.NAME }}'
 style:
@@ -123,7 +90,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 24.19999999999999
+    row: 22.8
     height: 1
     width: 12
-createdAt: 2023-09-29T20:11:29.708Z
+createdAt: 2023-10-30T19:45:37.093Z

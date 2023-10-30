@@ -1,0 +1,20 @@
+id: alternateNamesUpdateIndicator
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        var orig = {{get_golden_title_details.data.ALTERNATE_NAMES[0]}}
+        var now  = {{altNamesTagsVariable.value.ID.join('~')}}
+        if (orig === null || orig =='')
+        {
+          orig = 'var1';
+        }
+        if (now === null || now == '')
+        {
+          now = 'var1';
+        }
+
+        return (orig==now?false:true)
+    - value: ''
+createdAt: 2023-10-30T21:42:03.549Z

@@ -28,7 +28,7 @@ template:
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
+    - placeholder: '{{get_golden_title_details.data.SEASON_FROM_SOURCE[0]}}'
     - label: Season from {{get_golden_title_details.data.SOURCE_SYSTEM_NAME[0]}}
     - _validate: false
     - labelWidthUnit: '%'
@@ -50,7 +50,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 10.799999999999999
+    row: 9
     height: 1
     width: 12
 createdAt: 2023-10-08T23:45:51.225Z

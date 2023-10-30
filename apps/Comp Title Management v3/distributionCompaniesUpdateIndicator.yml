@@ -1,0 +1,20 @@
+id: distributionCompaniesUpdateIndicator
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        var orig = {{get_golden_title_details.data.DISTRIBUTION_COMPANIES[0]}}
+        var now  = {{goldenTitleDistCompaniesSelect.value.join('~')}}
+        if (orig === null || orig =='')
+        {
+          orig = 'var1';
+        }
+        if (now === null || now == '')
+        {
+          now = 'var1';
+        }
+
+        return (orig==now?false:true)
+    - value: ''
+createdAt: 2023-10-30T21:38:34.513Z

@@ -1,0 +1,20 @@
+id: seasonNumUpdateIndicator
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        var orig = {{get_golden_title_details.data.SEASON_NUM[0]}}
+        var now  = {{seasonTextInput.value}}
+        if (orig === null || orig =='')
+        {
+          orig = 'var1';
+        }
+        if (now === null || now == '')
+        {
+          now = 'var1';
+        }
+
+        return (orig==now?false:true)
+    - value: ''
+createdAt: 2023-10-30T21:45:28.721Z

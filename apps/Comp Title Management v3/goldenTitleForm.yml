@@ -36,6 +36,19 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - method: trigger
+            - enabled: >-
+                {{goldenTitleTypeDropdownSelect.value=='tvSeries' &&
+                titleNameUpdateIndicator.value}}
+            - params:
+                ordered: []
+            - targetId: null
+            - pluginId: update_golden_parent_title
+            - waitType: debounce
+            - event: submit
+            - type: datasource
+            - waitMs: '0'
     - loading: false
     - overflowType: scroll
     - disabled: false

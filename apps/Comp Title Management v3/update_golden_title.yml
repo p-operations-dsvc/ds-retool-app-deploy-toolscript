@@ -24,30 +24,51 @@ template:
     - query: >
         update EDWCTM.GOLDEN_TITLE_V3 a
 
-        set a.RELEASE_YEAR={{goldenTitleReleaseYearInput.value}},
-
-        a.TITLE_TYPE={{goldenTitleTypeDropdownSelect.value}},
+        set a.RELEASE_YEAR={{goldenTitleReleaseYearInput.value}}, 
 
         a.KEYWORDS={{keywordsTagsVariable.value.ID.join('~')}},
 
         a.PRIMARY_GENRE={{goldenTitleGenreSelect.value}},
 
-        a.PRODUCTION_COMAPANIES={{prodCompanyTagsVariable.value.ID.join('~')}},
-
-        a.LANGUAGES={{goldenTitleLanguagesSelect.value.join('~')}},
-
-        a.VOTE_COUNT_MAGNITUDE_RANGE={{
-        goldenTitleVoteCountMagnitudeSelect.value}},
+        a.PRODUCTION_COMPANIES={{prodCompanyTagsVariable.value.ID.join('~')}},  
 
         a.DISTRIBUTION_COMPANIES={{goldenTitleDistCompaniesSelect.value.join('~')}},
 
-        a.ALTERNATE_NAMES={{altNamesTagsVariable.value.ID.join('~')}},
-
-        a.PRODUCTION_STATUS={{goldenTitleProdStatusSelect.value}},
+        a.ALTERNATE_NAMES={{altNamesTagsVariable.value.ID.join('~')}}, 
 
         a.SEASON_NUM={{seasonTextInput.value==''?-1:seasonTextInput.value}},
 
-        a.EPISODE_NUM={{goldenTitleEpisodeInput.value==''?-1:goldenTitleEpisodeInput.value}}
+        a.EPISODE_NUM={{goldenTitleEpisodeInput.value==''?-1:goldenTitleEpisodeInput.value}},
+
+        a.UPDATE_DATETIME=CURRENT_TIMESTAMP,
+
+        a.TITLE_NAME = {{goldenTitleNameText.value}},
+
+        a.TITLE_NAME_FOR_MATCHING = UPPER(REGEXP_REPLACE(     
+        REGEXP_REPLACE(REGEXP_REPLACE({{goldenTitleNameText.value}},'\\(\\d.*\\)$','',1,0,'i'), 
+              '(^The\\s|\\bThe$|\\bThe\\s$)|(^A\\s|\\bA$|\\bA\\s$)|(^An\\s|\\bAn$|\\bAn\\s$)'
+              ,'',1,0,'i'),'[^a-zA-Z0-9]','',1,0,'i')),
+        a.RELEASE_YEAR_UPDATE_INDICATOR = {{releaseYearUpdateIndicator.value}},
+
+        a.TITLE_NAME_UPDATE_INDICATOR = {{titleNameUpdateIndicator.value}},
+
+        a.KEYWORDS_UPDATE_INDICATOR = {{keywordsUpdateIndicator.value}},
+
+        a.PRIMARY_GENRE_UPDATE_INDICATOR =
+        {{primaryGenreUpdateIndicator.value}},
+
+        a.PRODUCTION_COMPANIES_UPDATE_INDICATOR =
+        {{productionCompaniesUpdateIndicator.value}},
+
+        a.DISTRIBUTION_COMPANIES_UPDATE_INDICATOR =
+        {{distributionCompaniesUpdateIndicator.value}},
+
+        a.ALTERNATE_NAMES_UPDATE_INDICATOR =
+        {{alternateNamesUpdateIndicator.value}},
+
+        a.SEASON_NUM_UPDATE_INDICATOR = {{seasonNumUpdateIndicator.value}},
+
+        a.EPISODE_NUM_UPDATE_INDICATOR = {{episodeNumUpdateIndicator.value}}
 
         where a.GOLDEN_TITLE_ID={{goldenTitleIdText.value}}
     - playgroundQueryUuid: ''
