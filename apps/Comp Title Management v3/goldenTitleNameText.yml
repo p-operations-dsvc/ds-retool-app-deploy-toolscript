@@ -36,7 +36,7 @@ template:
     - autoCapitalize: none
     - maxLines: null
     - loading: false
-    - disabled: 'true'
+    - disabled: 'false'
     - labelPosition: left
     - labelWrap: false
     - maintainSpaceWhenHidden: false
@@ -46,7 +46,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 2
+    row: 3
     height: 1
     width: 12
 createdAt: 2023-09-28T23:42:30.045Z

@@ -28,7 +28,7 @@ template:
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
+    - placeholder: '{{ get_golden_title_details.data.PRODUCTION_COMPANIES_FROM_SOURCE[0]}}'
     - label: >-
         Production Companies from {{
         get_golden_title_details.data.SOURCE_SYSTEM_NAME[0]}}
@@ -52,7 +52,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 17.4
+    row: 15.999999999999996
     height: 1
     width: 12
 createdAt: 2023-10-09T00:17:11.305Z

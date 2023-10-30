@@ -108,7 +108,7 @@ style:
 position2:
   position2:
     container: goldenTitleModal
-    row: 2
+    row: 1.2
     height: 4
     width: 12
 createdAt: 2023-09-28T21:52:22.425Z

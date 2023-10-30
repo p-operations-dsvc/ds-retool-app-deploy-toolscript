@@ -24,13 +24,13 @@ template:
     - query: >-
         select GOLDEN_TITLE_ID, IMDB_TT_CD, TITLE_NAME, TITLE_TYPE,
         RELEASE_YEAR, SEASON_NUM, EPISODE_NUM, PARENT_GOLDEN_TITLE_ID,
-        PRIMARY_GENRE, DISTRIBUTION_COMPANIES, PRODUCTION_COMAPANIES,
+        PRIMARY_GENRE, DISTRIBUTION_COMPANIES, PRODUCTION_COMPANIES,
         PRODUCTION_STATUS, VOTE_COUNT_MAGNITUDE_RANGE, LANGUAGES,
         ALTERNATE_NAMES, KEYWORDS, PLOT, IMDB_URL, SOURCE_SYSTEM_NAME,
         INACTIVE_INDICATOR, CREATE_DATETIME, UPDATE_DATETIME 
 
         from EDWCTM.GOLDEN_TITLE_V3 where
-        golden_title_id={{currentRowGoldenTitleId.value}}
+        parent_golden_title_id={{currentRowGoldenTitleId.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -87,6 +87,7 @@ template:
         // Query results are available as the `data` variable
         return formatDataAsArray(data)
     - events: []
+    - isMultiplayerEdited: false
     - tableName: ''
     - queryTimeout: '10001'
     - workflowId: null

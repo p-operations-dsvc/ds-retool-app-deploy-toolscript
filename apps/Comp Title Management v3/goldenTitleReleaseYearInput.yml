@@ -43,13 +43,13 @@ template:
     - labelPosition: left
     - labelWrap: false
     - maintainSpaceWhenHidden: false
-    - required: true
+    - required: false
 style:
   ordered: []
 position2:
   position2:
     container: goldenTitleForm
-    row: 6.3999999999999995
+    row: 5.999999999999999
     height: 1
     width: 12
 createdAt: 2023-09-28T23:42:30.893Z

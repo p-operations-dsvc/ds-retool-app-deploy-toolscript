@@ -1,0 +1,20 @@
+id: productionCompaniesUpdateIndicator
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        var orig = {{get_golden_title_details.data.PRODUCTION_COMPANIES[0]}}
+        var now  = {{prodCompanyTagsVariable.value.ID.join('~')}}
+        if (orig === null || orig =='')
+        {
+          orig = 'var1';
+        }
+        if (now === null || now == '')
+        {
+          now = 'var1';
+        }
+
+        return (orig==now?false:true)
+    - value: ''
+createdAt: 2023-10-30T21:38:01.514Z

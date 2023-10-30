@@ -1,5 +1,5 @@
-id: goldenTitleDistCompaniesFromSourceText
-uuid: 1c1bb717-1eac-455a-aaac-0c44653bb86f
+id: goldenTitleNameTextFromSource
+uuid: 192ec30e-51fa-483a-8378-4075604e8334
 type: widget
 subtype: TextInputWidget2
 template:
@@ -24,14 +24,12 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{ get_golden_title_details.data.DISTRIBUTION_COMPANIES_FROM_SOURCE[0]}}'
+    - value: '{{get_golden_title_details.data.TITLE_NAME_FROM_SOURCE[0]}}'
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: '{{ get_golden_title_details.data.DISTRIBUTION_COMPANIES_FROM_SOURCE[0]}}'
-    - label: >-
-        Dsitribution Companies from {{
-        get_golden_title_details.data.SOURCE_SYSTEM_NAME[0]}}
+    - placeholder: ' '
+    - label: Name From IMDB
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false
@@ -52,7 +50,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 14.000000000000002
+    row: 1.9999999999999998
     height: 1
     width: 12
-createdAt: 2023-10-09T00:14:30.939Z
+createdAt: 2023-10-30T19:40:35.281Z

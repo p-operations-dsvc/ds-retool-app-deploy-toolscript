@@ -1,5 +1,5 @@
-id: goldenTitleInactiveIndText
-uuid: e188f7d3-e110-4642-b3d5-e69b73d4f3e9
+id: languageText
+uuid: 5f631c0c-76d3-48c8-8b65-201e119d01a4
 type: widget
 subtype: TextInputWidget2
 template:
@@ -24,12 +24,16 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{get_golden_title_details.data.INACTIVE_INDICATOR[0]}}'
+    - value: >-
+        {{get_golden_title_details.data.LANGUAGES[0]===null?null:get_golden_title_details.data.LANGUAGES[0].split('~').join(',
+        ')}}
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
-    - label: Inactive Indicator
+    - placeholder: >-
+        {{get_golden_title_details.data.LANGUAGES[0]===null?null:get_golden_title_details.data.LANGUAGES[0].split('~').join(',
+        ')}}
+    - label: Languages
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false
@@ -50,7 +54,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 45.4
+    row: 23.8
     height: 1
     width: 12
-createdAt: 2023-10-06T21:53:57.699Z
+createdAt: 2023-10-30T19:47:59.605Z
