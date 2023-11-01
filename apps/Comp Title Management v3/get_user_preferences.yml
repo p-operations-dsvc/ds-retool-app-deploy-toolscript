@@ -1,4 +1,4 @@
-id: get_ctm_title_type
+id: get_user_preferences
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
@@ -21,8 +21,15 @@ template:
     - runWhenModelUpdates: true
     - workflowRunId: null
     - showFailureToaster: true
-    - query: |
-        select id, name from EDWCTM.ctm_title_type
+    - query: >-
+        select  a.setting_type_id, a.setting_type_name, coalesce ( 
+        setting_value, default_setting_value) as setting_value
+
+        from edwctm.ctm_setting_type a left outer join (select * from
+        edwctm.ctm_user_setting where user_id = {{current_user.email}}) b on
+        a.setting_type_id=b.setting_type_id
+
+        order by a.setting_type_id
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -77,24 +84,10 @@ template:
     - runWhenPageLoads: false
     - transformer: |-
         // Query results are available as the `data` variable
-        return formatDataAsArray(data)
-    - events:
-        - ordered:
-            - event: success
-            - type: util
-            - method: showNotification
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered:
-                  - options:
-                      ordered:
-                        - notificationType: info
-                        - description: Ran
-            - waitType: debounce
-            - waitMs: '0'
+        return data
+    - events: []
     - tableName: ''
-    - queryTimeout: '10001'
+    - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
     - queryFailureConditions: ''
@@ -109,4 +102,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-09-29T19:52:19.276Z
+createdAt: 2023-11-01T22:07:56.455Z

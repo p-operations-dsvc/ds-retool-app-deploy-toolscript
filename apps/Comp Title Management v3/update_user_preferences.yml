@@ -1,4 +1,4 @@
-id: get_ctm_title_type
+id: update_user_preferences
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
@@ -18,11 +18,18 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: true
+    - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: |
-        select id, name from EDWCTM.ctm_title_type
+    - query: >
+        MERGE INTO edwctm.ctm_user_setting USING (select {{current_user.email}}
+        as user_id, {{setting_type_id}} as setting_type_id, {{setting_value}} as
+        setting_value) as source_table
+            ON ctm_user_setting.user_id = source_table.user_id and ctm_user_setting.setting_type_id=source_table.setting_type_id
+            WHEN MATCHED THEN 
+                UPDATE SET ctm_user_setting.setting_value = source_table.setting_value
+            WHEN NOT MATCHED THEN 
+                INSERT (user_id, setting_type_id, setting_value) VALUES (source_table.user_id, source_table.setting_type_id, source_table.setting_value)
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -35,7 +42,7 @@ template:
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: true
+    - showSuccessToaster: false
     - dataArray: []
     - cacheKeyTtl: ''
     - filterBy: ''
@@ -62,7 +69,7 @@ template:
     - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
-    - resourceTypeOverride: ''
+    - resourceTypeOverride: null
     - watchedParams: []
     - enableErrorTransformer: false
     - enableBulkUpdates: false
@@ -77,24 +84,11 @@ template:
     - runWhenPageLoads: false
     - transformer: |-
         // Query results are available as the `data` variable
-        return formatDataAsArray(data)
-    - events:
-        - ordered:
-            - event: success
-            - type: util
-            - method: showNotification
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered:
-                  - options:
-                      ordered:
-                        - notificationType: info
-                        - description: Ran
-            - waitType: debounce
-            - waitMs: '0'
+        return data
+    - events: []
+    - isMultiplayerEdited: false
     - tableName: ''
-    - queryTimeout: '10001'
+    - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
     - queryFailureConditions: ''
@@ -109,4 +103,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-09-29T19:52:19.276Z
+createdAt: 2023-11-01T22:25:16.444Z
