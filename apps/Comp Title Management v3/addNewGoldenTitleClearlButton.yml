@@ -1,5 +1,5 @@
-id: addNewGoldenTitleCancelButton
-uuid: ae71cde8-0f14-4e68-b2e6-b3049c584523
+id: addNewGoldenTitleClearlButton
+uuid: 2cbf7c90-7c76-4ecd-9db8-bdc35101072d
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: Cancel
+    - text: Start Fresh
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -19,12 +19,18 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: widget
-            - method: close
-            - pluginId: goldenTitleCopyModal
+            - type: script
+            - method: run
+            - pluginId: ''
             - targetId: null
             - params:
-                ordered: []
+                ordered:
+                  - src: |-
+                      addNewGoldenTitleNameInput.setValue();
+                      addNewGoldenTitleReleaseYearInput.setValue();
+                      addNewGoldenTitlePlotInput.setValue();
+                      addNewGoldenTitleDistCompaniesSelect.setValue(['Other']);
+                      addNewGoldenTitleGenreSelect.setValue('Other');
             - waitType: debounce
             - waitMs: '0'
     - loading: false
@@ -37,7 +43,8 @@ position2:
   position2:
     container: addNewGoldenTitleForm
     rowGroup: footer
-    col: 5
+    row: 5.551115123125783e-17
+    col: 9
     height: 1
     width: 2
-createdAt: 2023-10-26T23:12:56.528Z
+createdAt: 2023-11-01T02:21:38.336Z
