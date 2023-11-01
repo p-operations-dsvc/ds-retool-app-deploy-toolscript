@@ -10,7 +10,6 @@ template:
         ordered:
           - 5008c: ''
           - d190e: ''
-          - c5423: ''
           - 3e3be: ''
           - 126d5: ''
           - 18e9b: ''
@@ -29,6 +28,8 @@ template:
           - 66cb6: ''
           - a8004: ''
           - 71fa4: ''
+          - 100bb: ''
+          - 8018d: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
@@ -44,7 +45,7 @@ template:
         - 9b9bb
         - cd387
         - 33c3c
-        - c5423
+        - 8018d
         - b462b
         - 5e1a3
         - 71fa4
@@ -56,8 +57,10 @@ template:
         - 877fd
         - 4dd51
         - 66cb6
+        - 100bb
     - _isSaving: false
-    - _actionIds: []
+    - _actionIds:
+        - e7de0
     - _clearChangeset: false
     - caseSensitiveFiltering: false
     - _limitOffsetRowCount: null
@@ -69,8 +72,6 @@ template:
           - 5008c:
               ordered: []
           - d190e:
-              ordered: []
-          - c5423:
               ordered: []
           - 3e3be:
               ordered: []
@@ -112,6 +113,11 @@ template:
               ordered: []
           - 71fa4:
               ordered: []
+          - 100bb:
+              ordered:
+                - showStepper: true
+          - 8018d:
+              ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns: []
     - _toolbarButtonLabel:
@@ -138,8 +144,6 @@ template:
           - 5008c:
               ordered: []
           - d190e:
-              ordered: []
-          - c5423:
               ordered: []
           - 3e3be:
               ordered: []
@@ -193,11 +197,14 @@ template:
                 - mappedData: '{{ get_ctm_language.data }}'
                 - valueByIndex: '{{ item.ID }}'
                 - labelByIndex: '{{ item.NAME }}'
+          - 100bb:
+              ordered: []
+          - 8018d:
+              ordered: []
     - _columnValueOverride:
         ordered:
           - 5008c: ''
           - d190e: ''
-          - c5423: '{{ item.split(''~'') }}'
           - 3e3be: '{{ item.split(''~'') }}'
           - 126d5: |-
               <a href= "{{item}}" target="_blank">
@@ -219,6 +226,8 @@ template:
           - 66cb6: ''
           - a8004: ''
           - 71fa4: '{{ item.split(''~'') }}'
+          - 100bb: ''
+          - 8018d: ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
@@ -230,7 +239,6 @@ template:
         ordered:
           - 5008c: IMDB_TT_CD
           - d190e: INACTIVE_INDICATOR
-          - c5423: PRODUCTION_COMAPANIES
           - 3e3be: ALTERNATE_NAMES
           - 126d5: IMDB_URL
           - 18e9b: KEYWORDS
@@ -249,6 +257,8 @@ template:
           - 66cb6: UPDATE_DATETIME
           - a8004: TITLE_NAME
           - 71fa4: LANGUAGES
+          - 100bb: PARENT_GOLDEN_TITLE_ID
+          - 8018d: PRODUCTION_COMPANIES
     - hidden: false
     - _toolbarButtonIds:
         - 1a
@@ -263,7 +273,6 @@ template:
         ordered:
           - 5008c: ''
           - d190e: ''
-          - c5423: ''
           - 3e3be: ''
           - 126d5: ''
           - 18e9b: ''
@@ -282,11 +291,12 @@ template:
           - 66cb6: ''
           - a8004: ''
           - 71fa4: ''
+          - 100bb: ''
+          - 8018d: ''
     - _columnFormat:
         ordered:
           - 5008c: string
           - d190e: string
-          - c5423: tags
           - 3e3be: tags
           - 126d5: html
           - 18e9b: tags
@@ -305,6 +315,8 @@ template:
           - 66cb6: datetime
           - a8004: string
           - 71fa4: tags
+          - 100bb: decimal
+          - 8018d: string
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
@@ -314,7 +326,6 @@ template:
         ordered:
           - 5008c: left
           - d190e: left
-          - c5423: left
           - 3e3be: left
           - 126d5: left
           - 18e9b: left
@@ -333,13 +344,15 @@ template:
           - 66cb6: left
           - a8004: left
           - 71fa4: left
+          - 100bb: right
+          - 8018d: left
     - _actionIcon:
-        ordered: []
+        ordered:
+          - e7de0: bold/interface-edit-view
     - _columnTooltip:
         ordered:
           - 5008c: ''
           - d190e: ''
-          - c5423: ''
           - 3e3be: ''
           - 126d5: ''
           - 18e9b: ''
@@ -358,11 +371,12 @@ template:
           - 66cb6: ''
           - a8004: ''
           - 71fa4: ''
+          - 100bb: ''
+          - 8018d: ''
     - _columnIcon:
         ordered:
           - 5008c: ''
           - d190e: ''
-          - c5423: ''
           - 3e3be: ''
           - 126d5: ''
           - 18e9b: ''
@@ -381,11 +395,12 @@ template:
           - 66cb6: ''
           - a8004: ''
           - 71fa4: ''
+          - 100bb: ''
+          - 8018d: ''
     - _columnCellTooltipMode:
         ordered:
           - 5008c: ''
           - d190e: ''
-          - c5423: ''
           - 3e3be: ''
           - 126d5: ''
           - 18e9b: ''
@@ -404,6 +419,8 @@ template:
           - 66cb6: ''
           - a8004: ''
           - 71fa4: ''
+          - 100bb: ''
+          - 8018d: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -414,7 +431,6 @@ template:
         ordered:
           - 5008c: false
           - d190e: false
-          - c5423: false
           - 3e3be: false
           - 126d5: false
           - 18e9b: false
@@ -433,17 +449,19 @@ template:
           - 66cb6: false
           - a8004: false
           - 71fa4: false
+          - 100bb: false
+          - 8018d: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
     - changesetObject: null
     - _actionDisabled:
-        ordered: []
+        ordered:
+          - e7de0: ''
     - _columnReferenceId:
         ordered:
           - 5008c: ''
           - d190e: ''
-          - c5423: ''
           - 3e3be: ''
           - 126d5: ''
           - 18e9b: ''
@@ -462,6 +480,8 @@ template:
           - 66cb6: ''
           - a8004: ''
           - 71fa4: ''
+          - 100bb: ''
+          - 8018d: ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: single
@@ -469,7 +489,6 @@ template:
         ordered:
           - 5008c: ''
           - d190e: ''
-          - c5423: ''
           - 3e3be: ''
           - 126d5: ''
           - 18e9b: ''
@@ -488,6 +507,8 @@ template:
           - 66cb6: ''
           - a8004: ''
           - 71fa4: ''
+          - 100bb: ''
+          - 8018d: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
@@ -497,9 +518,6 @@ template:
               ordered: []
           - d190e:
               ordered: []
-          - c5423:
-              ordered:
-                - automaticColors: true
           - 3e3be:
               ordered:
                 - automaticColors: true
@@ -552,6 +570,12 @@ template:
           - 71fa4:
               ordered:
                 - automaticColors: true
+          - 100bb:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - 8018d:
+              ordered: []
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -561,7 +585,6 @@ template:
         ordered:
           - 5008c: none
           - d190e: none
-          - c5423: none
           - 3e3be: none
           - 126d5: none
           - 18e9b: none
@@ -580,6 +603,8 @@ template:
           - 66cb6: none
           - a8004: none
           - 71fa4: none
+          - 100bb: none
+          - 8018d: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -592,8 +617,6 @@ template:
           - 5008c:
               ordered: []
           - d190e:
-              ordered: []
-          - c5423:
               ordered: []
           - 3e3be:
               ordered: []
@@ -631,28 +654,33 @@ template:
               ordered: []
           - 71fa4:
               ordered: []
+          - 100bb:
+              ordered: []
+          - 8018d:
+              ordered: []
     - _columnSize:
         ordered:
-          - 5008c: 118.140625
-          - d190e: 116.421875
-          - c5423: 153.015625
-          - 3e3be: 111.65625
-          - 126d5: 84.125
-          - 18e9b: 246.28125
-          - 07b4a: 90.09375
-          - 8d457: 87.375
+          - 5008c: 99.453125
+          - d190e: 61.9375
+          - 3e3be: 632.34375
+          - 8018d: 146.109375
+          - 126d5: 72.796875
+          - 18e9b: 73.28125
+          - 07b4a: 47.09375
+          - 8d457: 59
           - cebf4: 96.75
-          - b60e8: 137.4375
-          - 4dd51: 136.796875
-          - 9b9bb: 90.84375
-          - cd387: 97.671875
-          - 5e1a3: 180.84375
-          - 33c3c: 150.53125
-          - b462b: 119.078125
-          - 0618b: 72.25
-          - 877fd: 903
-          - 66cb6: 136.796875
-          - a8004: 208.71875
+          - b60e8: 103.5625
+          - 4dd51: 146.671875
+          - 9b9bb: 62.484375
+          - 100bb: 136.15625
+          - cd387: 69.484375
+          - 5e1a3: 146.5
+          - 33c3c: 152.53125
+          - b462b: 120.28125
+          - 0618b: 97.234375
+          - 877fd: 38.71875
+          - 66cb6: 146.671875
+          - a8004: 98.78125
           - 71fa4: 79.921875
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
@@ -668,6 +696,89 @@ template:
     - _defaultFilters:
         ordered: []
     - events:
+        - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: currentRowGoldenTitleId
+            - targetId: e7de0
+            - params:
+                ordered:
+                  - value: '{{currentRow.GOLDEN_TITLE_ID}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: currentRowGoldenTitleIMDBId
+            - targetId: e7de0
+            - params:
+                ordered:
+                  - value: '{{currentRow.IMDB_TT_CD}}'
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title_details
+            - targetId: e7de0
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_group_golden_title_details
+            - targetId: e7de0
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title_talent
+            - targetId: e7de0
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_related_by_golden_title_details
+            - targetId: e7de0
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_related_golden_title_details
+            - targetId: e7de0
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: setValue
+            - pluginId: goldenTitleTabs
+            - targetId: e7de0
+            - params:
+                ordered:
+                  - value: Main
+            - waitType: debounce
+            - waitMs: '0'
         - ordered:
             - type: widget
             - waitMs: '0'
@@ -699,13 +810,12 @@ template:
         ordered:
           - 5008c: ''
           - d190e: ''
-          - c5423: ''
           - 3e3be: ''
           - 126d5: ''
           - 18e9b: ''
           - 07b4a: ''
           - 8d457: ''
-          - cebf4: 'false'
+          - cebf4: false
           - b60e8: ''
           - 4dd51: ''
           - 9b9bb: ''
@@ -718,6 +828,8 @@ template:
           - 66cb6: ''
           - a8004: ''
           - 71fa4: ''
+          - 100bb: ''
+          - 8018d: ''
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -727,7 +839,6 @@ template:
         ordered:
           - 5008c: none
           - d190e: none
-          - c5423: none
           - 3e3be: none
           - 126d5: none
           - 18e9b: none
@@ -746,6 +857,8 @@ template:
           - 66cb6: none
           - a8004: none
           - 71fa4: none
+          - 100bb: sum
+          - 8018d: none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -762,7 +875,6 @@ template:
         ordered:
           - 5008c: center
           - d190e: center
-          - c5423: center
           - 3e3be: center
           - 126d5: center
           - 18e9b: center
@@ -781,12 +893,13 @@ template:
           - 66cb6: center
           - a8004: center
           - 71fa4: center
+          - 100bb: center
+          - 8018d: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
           - 5008c: Enter value
           - d190e: Enter value
-          - c5423: Select options
           - 3e3be: Select options
           - 126d5: ''
           - 18e9b: Select options
@@ -805,19 +918,22 @@ template:
           - 66cb6: Enter value
           - a8004: Enter value
           - 71fa4: Select options
+          - 100bb: Enter value
+          - 8018d: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
-        ordered: []
+        ordered:
+          - e7de0: View
     - _virtualizeEndIndex: 0
     - selectedRow: null
     - _actionHidden:
-        ordered: []
+        ordered:
+          - e7de0: ''
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
           - 5008c: ''
-          - d190e: ''
-          - c5423: ''
+          - d190e: 'true'
           - 3e3be: ''
           - 126d5: ''
           - 18e9b: ''
@@ -838,11 +954,12 @@ template:
           - 66cb6: 'true'
           - a8004: ''
           - 71fa4: ''
+          - 100bb: 'true'
+          - 8018d: 'false'
     - _columnLabel:
         ordered:
           - 5008c: IMDB TT Code
           - d190e: Inactive
-          - c5423: Production Companies
           - 3e3be: Alt Names
           - 126d5: URL
           - 18e9b: Keywords
@@ -861,6 +978,8 @@ template:
           - 66cb6: Updated
           - a8004: Name
           - 71fa4: Languages
+          - 100bb: Parent golden title id
+          - 8018d: Production Companies
     - _showToolbar: true
 style:
   ordered: []
