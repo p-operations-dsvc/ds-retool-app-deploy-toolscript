@@ -28,7 +28,7 @@ template:
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
+    - placeholder: '{{ get_golden_title_details.data.ALTERNATE_NAMES_AKA_FROM_SOURCE[0]}}'
     - label: AKAs from {{ get_golden_title_details.data.SOURCE_SYSTEM_NAME[0]}}
     - _validate: false
     - labelWidthUnit: '%'

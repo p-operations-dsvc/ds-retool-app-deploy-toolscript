@@ -25,7 +25,8 @@ template:
         call get_other_title_v3 ({{otherTitleReleaseDateRange.value.start.split
         ('T')[0].split('-')[0]}}, {{otherTitleReleaseDateRange.value.end.split
         ('T')[0].split('-')[0]}}, {{otherTitleTypeSelect.value.join('\',\'')}},
-        {{otherTitleNameInput.value}}, {{otherTitleMapToggleButton.value}}, 
+        {{otherTitleNameInput.value.replace ('\'', '\\\'')}},
+        {{otherTitleMapToggleButton.value}}, 
                                    {{otherTitleSourceSelect.value.join('\',\'')}}, {{otherTitleTable.sortArray.length===0?'OTHER_TITLE_ID':otherTitleTable.sortArray[0].columnId}}, {{otherTitleTable.sortArray.length===0?'asc':otherTitleTable.sortArray[0].direction}}, 
                        {{ otherTitleTable.pagination.pageSize }},{{otherTitleTable.pagination.offset }})
     - playgroundQueryUuid: ''

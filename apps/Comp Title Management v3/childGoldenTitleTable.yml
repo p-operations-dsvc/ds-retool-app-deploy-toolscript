@@ -633,7 +633,7 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - 5008c: 79.140625
+          - 5008c: 118.140625
           - d190e: 116.421875
           - c5423: 153.015625
           - 3e3be: 111.65625
@@ -868,6 +868,6 @@ position2:
   position2:
     container: goldeTitleContainer
     subcontainer: '90040'
-    height: 3.2
+    height: 7.999999999999999
     width: 12
 createdAt: 2023-10-03T23:12:29.889Z

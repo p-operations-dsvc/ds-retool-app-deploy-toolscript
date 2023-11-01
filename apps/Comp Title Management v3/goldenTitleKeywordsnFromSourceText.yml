@@ -28,7 +28,7 @@ template:
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
+    - placeholder: '{{ get_golden_title_details.data.KEYWORDS_FROM_SOURCE[0]}}'
     - label: Keywords from {{ get_golden_title_details.data.SOURCE_SYSTEM_NAME[0]}}
     - _validate: false
     - labelWidthUnit: '%'
