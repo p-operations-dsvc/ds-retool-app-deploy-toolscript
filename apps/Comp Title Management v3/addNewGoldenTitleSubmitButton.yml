@@ -28,8 +28,7 @@ position2:
   position2:
     container: addNewGoldenTitleForm
     rowGroup: footer
-    row: 0.2
-    col: 2
+    col: 1
     height: 1
-    width: 4
+    width: 2
 createdAt: 2023-10-05T19:48:23.481Z

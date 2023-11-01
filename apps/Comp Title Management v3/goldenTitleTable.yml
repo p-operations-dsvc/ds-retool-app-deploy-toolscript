@@ -422,47 +422,6 @@ template:
         ordered: []
     - events:
         - ordered:
-            - event: changePage
-            - type: datasource
-            - method: trigger
-            - pluginId: get_golden_title
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: clickAction
-            - type: widget
-            - method: open
-            - pluginId: goldenTitleCopyModal
-            - targetId: ba822
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: clickAction
-            - type: datasource
-            - method: trigger
-            - pluginId: get_golden_title_details
-            - targetId: ba822
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: clickAction
-            - type: state
-            - method: setValue
-            - pluginId: currentRowGoldenTitleId
-            - targetId: ba822
-            - params:
-                ordered:
-                  - value: '{{ currentRow.GOLDEN_TITLE_ID }}'
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
             - event: clickAction
             - type: widget
             - method: open
@@ -553,6 +512,58 @@ template:
             - targetId: b53a9
             - params:
                 ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: setValue
+            - pluginId: goldenTitleTabs
+            - targetId: b53a9
+            - params:
+                ordered:
+                  - value: Main
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: changePage
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: open
+            - pluginId: goldenTitleCopyModal
+            - targetId: ba822
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title_details
+            - targetId: ba822
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: state
+            - method: setValue
+            - pluginId: currentRowGoldenTitleId
+            - targetId: ba822
+            - params:
+                ordered:
+                  - value: '{{ currentRow.GOLDEN_TITLE_ID }}'
             - waitType: debounce
             - waitMs: '0'
         - ordered:
