@@ -306,7 +306,7 @@ template:
           - 10dd5: ''
     - _dynamicColumnSource:
         array: []
-    - _rowSelection: multiple
+    - _rowSelection: none
     - _columnCaption:
         ordered:
           - ddd1f: ''

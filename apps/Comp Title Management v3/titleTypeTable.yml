@@ -79,7 +79,7 @@ template:
         - 1a
         - 3c
         - 4d
-    - data: '{{ get_ctm_title_type_dropdown.data }}'
+    - data: '{{ get_ctm_title_type.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
@@ -95,7 +95,7 @@ template:
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: 9d1dd
+    - _primaryKeyColumnId: ''
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
@@ -175,7 +175,7 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - 9d1dd: 338.25
+          - 9d1dd: 387.25
           - 20d64: 80.40625
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace

@@ -28,7 +28,7 @@ template:
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
+    - placeholder: '{{get_golden_title_details.data.EPISODE_NUMBER_FROM_SOURCE[0]}}'
     - label: Episode from {{get_golden_title_details.data.SOURCE_SYSTEM_NAME[0]}}
     - _validate: false
     - labelWidthUnit: '%'
@@ -40,7 +40,7 @@ template:
         ordered: []
     - autoCapitalize: none
     - loading: false
-    - disabled: false
+    - disabled: 'true'
     - labelPosition: left
     - labelWrap: false
     - maintainSpaceWhenHidden: false
@@ -50,7 +50,7 @@ style:
 position2:
   position2:
     container: goldenTitleForm
-    row: 11
+    row: 10
     height: 1
     width: 12
 createdAt: 2023-10-08T23:47:08.397Z

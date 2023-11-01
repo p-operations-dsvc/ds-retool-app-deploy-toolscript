@@ -25,7 +25,7 @@ template:
         CALL edwctm.get_golden_title_v3 ({{createdDateRange.value.start.split
         ('T')[0].split('-')[0]}} , {{createdDateRange.value.end.split
         ('T')[0].split('-')[0]}}, {{titleTypeSelect.value.join('\',\'')}}, {{
-        titleNameInput.value}},
+        titleNameInput.value.replace ('\'', '\\\'')}},
         {{goldenTitleTable.sortArray.length===0?'GOLDEN_TITLE_ID':goldenTitleTable.sortArray[0].columnId}},
         {{goldenTitleTable.sortArray.length===0?'asc':goldenTitleTable.sortArray[0].direction}},
         {{goldenTitleTable.pagination.pageSize}}, {{
