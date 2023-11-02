@@ -24,11 +24,11 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: top gun
+    - value: '{{get_user_preferences.data.SETTING_VALUE[0]}}'
     - labelCaption: ''
     - labelWidth: '25'
     - autoFill: ''
-    - placeholder: top gun
+    - placeholder: '{{get_user_preferences.data.SETTING_VALUE[0]}}'
     - label: Title Name
     - _validate: false
     - labelWidthUnit: '%'

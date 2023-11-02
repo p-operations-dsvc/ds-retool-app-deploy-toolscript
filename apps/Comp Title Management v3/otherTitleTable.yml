@@ -165,7 +165,7 @@ template:
           - 946d6: '{{ item }}'
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: '500'
+    - _templatePageSize: '{{get_user_preferences.data.SETTING_VALUE[1]}}'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true

@@ -1,0 +1,311 @@
+id: userSettingsTable
+uuid: 2d560937-3654-497b-ad65-55365bc9468e
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - 2fd3e: ''
+          - 5d68a: ''
+          - 22a72: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 22a72
+        - 2fd3e
+        - 5d68a
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - 2fd3e:
+              ordered: []
+          - 5d68a:
+              ordered: []
+          - 22a72:
+              ordered:
+                - showStepper: true
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - 2fd3e:
+              ordered: []
+          - 5d68a:
+              ordered: []
+          - 22a72:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - 2fd3e: ''
+          - 5d68a: ''
+          - 22a72: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - 2fd3e: SETTING_TYPE_NAME
+          - 5d68a: SETTING_VALUE
+          - 22a72: SETTING_TYPE_ID
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_user_preferences.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - 2fd3e: ''
+          - 5d68a: ''
+          - 22a72: ''
+    - _columnFormat:
+        ordered:
+          - 2fd3e: string
+          - 5d68a: string
+          - 22a72: decimal
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: 22a72
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - 2fd3e: left
+          - 5d68a: left
+          - 22a72: right
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - 2fd3e: ''
+          - 5d68a: ''
+          - 22a72: ''
+    - _columnIcon:
+        ordered:
+          - 2fd3e: ''
+          - 5d68a: ''
+          - 22a72: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - 2fd3e: ''
+          - 5d68a: ''
+          - 22a72: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - 2fd3e: false
+          - 5d68a: false
+          - 22a72: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - 2fd3e: ''
+          - 5d68a: ''
+          - 22a72: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - 2fd3e: ''
+          - 5d68a: ''
+          - 22a72: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - 2fd3e:
+              ordered: []
+          - 5d68a:
+              ordered: []
+          - 22a72:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - 2fd3e: none
+          - 5d68a: none
+          - 22a72: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - 2fd3e:
+              ordered: []
+          - 5d68a:
+              ordered: []
+          - 22a72:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - 22a72: 100.703125
+          - 2fd3e: 317.765625
+          - 5d68a: 92.109375
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - event: save
+            - type: datasource
+            - method: trigger
+            - pluginId: updateUserPreferencesJQ
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: userSettingsTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: userSettingsTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - 2fd3e: ''
+          - 5d68a: 'true'
+          - 22a72: 'false'
+    - _rowBackgroundColor:
+        array: []
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - 2fd3e: none
+          - 5d68a: none
+          - 22a72: sum
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - 2fd3e: center
+          - 5d68a: center
+          - 22a72: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - 2fd3e: Enter value
+          - 5d68a: ''
+          - 22a72: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - 2fd3e: ''
+          - 5d68a: ''
+          - 22a72: 'true'
+    - _columnLabel:
+        ordered:
+          - 2fd3e: Setting Type
+          - 5d68a: Value
+          - 22a72: Setting type id
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 65d3e
+    height: 8
+    width: 12
+createdAt: 2023-11-01T22:21:17.677Z
