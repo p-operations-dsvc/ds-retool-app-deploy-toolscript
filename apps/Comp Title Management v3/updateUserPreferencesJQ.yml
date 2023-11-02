@@ -32,7 +32,7 @@ template:
           i++;
         }  
         userSettingsTable.clearChangeset();
-        get_user_preferences.trigger();
+        //get_user_preferences.trigger();
         //userSettingsTable.refresh();
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
@@ -82,16 +82,6 @@ template:
     - events:
         - ordered:
             - event: success
-            - type: widget
-            - method: refresh
-            - pluginId: userSettingsTable
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
             - type: util
             - method: showNotification
             - pluginId: ''
@@ -102,6 +92,16 @@ template:
                       ordered:
                         - notificationType: success
                         - title: Settings updated successfully!
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_user_preferences
+            - targetId: null
+            - params:
+                ordered: []
             - waitType: debounce
             - waitMs: '0'
     - isMultiplayerEdited: false
