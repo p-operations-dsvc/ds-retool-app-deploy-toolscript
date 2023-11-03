@@ -28,7 +28,7 @@ template:
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
+    - placeholder: '{{get_golden_title_details.data.PARENT_TITLE_NAME[0]}}'
     - label: Parent Title
     - _validate: false
     - labelWidthUnit: '%'

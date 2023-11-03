@@ -1,50 +1,91 @@
 id: goldenTitleTypeDropdownSelect
-uuid: 4c84c05f-e2ac-4490-8380-480f78f41679
+uuid: 6e1b9a9c-728a-4af6-9729-5e4d184edc81
 type: widget
-subtype: TextInputWidget2
+subtype: SelectWidget2
 template:
   ordered:
-    - spellCheck: false
+    - imageByIndex:
+        array: []
+    - _disabledByIndex: []
+    - showSelectionIndicator: true
+    - _values: []
+    - iconByIndex:
+        array: []
+    - values: '{{ item.ID }}'
     - readOnly: false
     - iconAfter: ''
-    - showCharacterCount: false
-    - autoComplete: false
+    - _iconByIndex: []
+    - overlayMinWidth: null
+    - allowDeselect: false
+    - inputValue: ''
     - marginType: normal
-    - maxLength: null
     - hidden: false
     - customValidation: ''
-    - patternType: ''
+    - data: '{{ get_ctm_title_type.data }}'
+    - searchMode: fuzzy
     - hideValidationMessage: false
+    - fallbackTextByIndex:
+        array: []
     - textBefore: ''
+    - _fallbackTextByIndex: []
+    - selectedItem: null
     - validationMessage: ''
+    - automaticItemColors: false
+    - itemAdornmentShape: circle
     - textAfter: ''
     - showInEditor: false
     - showClear: false
-    - pattern: ''
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
     - value: '{{get_golden_title_details.data.TITLE_TYPE[0]}}'
+    - hiddenByIndex:
+        array: []
     - labelCaption: ''
     - labelWidth: '33'
-    - autoFill: ''
+    - deprecatedLabels:
+        array: []
+    - _hiddenByIndex: []
     - placeholder: '{{get_golden_title_details.data.TITLE_TYPE[0]}}'
-    - label: Title Type
+    - _captionByIndex: []
+    - itemAdornmentSize: auto
+    - label: Label
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
     - _validate: false
+    - itemMode: dynamic
     - labelWidthUnit: '%'
+    - allowCustomValue: false
     - invalid: false
+    - selectedIndex: null
+    - _tooltipByIndex: []
+    - _colorByIndex: []
+    - tooltipByIndex:
+        array: []
     - iconBefore: ''
-    - minLength: null
-    - inputTooltip: ''
+    - colorByIndex:
+        array: []
+    - selectedLabel: ''
     - events:
         ordered: []
-    - autoCapitalize: none
+    - _ids: []
+    - emptyMessage: No options
+    - overlayMaxHeight: 375
     - loading: false
-    - disabled: 'true'
+    - disabled: |
+        true
     - labelPosition: left
+    - _labels: []
     - labelWrap: false
+    - disabledValues:
+        array: []
+    - disabledByIndex:
+        array: []
     - maintainSpaceWhenHidden: false
+    - _imageByIndex: []
     - required: false
+    - labels: '{{ item.NAME }}'
 style:
   ordered: []
 position2:
@@ -53,4 +94,4 @@ position2:
     row: 4
     height: 1
     width: 12
-createdAt: 2023-10-30T19:37:40.478Z
+createdAt: 2023-11-02T22:12:28.075Z
