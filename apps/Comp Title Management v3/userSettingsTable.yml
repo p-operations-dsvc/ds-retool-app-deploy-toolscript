@@ -201,7 +201,7 @@ template:
     - _columnSize:
         ordered:
           - 22a72: 100.703125
-          - 2fd3e: 317.765625
+          - 2fd3e: 346.765625
           - 5d68a: 92.109375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
