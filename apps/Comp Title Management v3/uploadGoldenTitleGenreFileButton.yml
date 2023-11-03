@@ -1,0 +1,55 @@
+id: uploadGoldenTitleGenreFileButton
+uuid: ee28c78c-528f-4281-94e9-1c14e290d0d7
+type: widget
+subtype: FileButtonWidget
+template:
+  ordered:
+    - parsedValue:
+        array: []
+    - iconAfter: ''
+    - parseFiles: true
+    - maxSize: ''
+    - appendNewSelection: false
+    - selectionType: single
+    - accept:
+        array: []
+    - marginType: normal
+    - hidden: false
+    - customValidation: ''
+    - maxCount: null
+    - hideValidationMessage: false
+    - text: Browse
+    - validationMessage: ''
+    - showInEditor: false
+    - parsing: false
+    - tooltipText: ''
+    - formDataKey: '{{ self.id }}'
+    - value:
+        array: []
+    - _isUpgraded: false
+    - minSize: ''
+    - styleVariant: outline
+    - uploadToRetoolStorage: false
+    - _validate: false
+    - invalid: false
+    - files:
+        array: []
+    - iconBefore: bold/programming-browser-search
+    - events:
+        ordered: []
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - minCount: null
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mapGoldenTitleGenreModal
+    row: 2
+    col: 2
+    height: 1
+    width: 9
+createdAt: 2023-11-02T22:20:16.662Z

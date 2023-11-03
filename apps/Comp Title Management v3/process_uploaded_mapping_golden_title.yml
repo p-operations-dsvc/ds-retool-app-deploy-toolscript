@@ -1,4 +1,4 @@
-id: process_uploaded_mapping_title
+id: process_uploaded_mapping_golden_title
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
@@ -22,8 +22,8 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        call edwctm.map_other_title_bulk
-        (array_construct({{otherTitleMappingTransform.value}}))
+        call edwctm.map_golden_title_genre_bulk
+        (array_construct({{goldenTitleMappingTransform.value}}))
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -84,7 +84,7 @@ template:
             - event: success
             - type: datasource
             - method: trigger
-            - pluginId: get_other_title
+            - pluginId: get_golden_title
             - targetId: null
             - params:
                 ordered: []
@@ -94,7 +94,7 @@ template:
             - event: success
             - type: widget
             - method: close
-            - pluginId: uploadMappingFileModal
+            - pluginId: mapGoldenTitleGenreModal
             - targetId: null
             - params:
                 ordered: []
@@ -118,7 +118,7 @@ template:
             - event: success
             - type: widget
             - method: clearValue
-            - pluginId: uploadMappingFileSelectButton
+            - pluginId: uploadGoldenTitleGenreFileButton
             - targetId: null
             - params:
                 ordered: []
@@ -141,4 +141,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-10-19T22:47:43.674Z
+createdAt: 2023-11-02T22:24:21.995Z

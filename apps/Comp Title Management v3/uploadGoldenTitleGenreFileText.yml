@@ -1,0 +1,28 @@
+id: uploadGoldenTitleGenreFileText
+uuid: 4f6d58bf-59a3-48d1-b0d0-323be33c233c
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: <b>Upload Golden Title Genre Mapping</b>
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mapGoldenTitleGenreModal
+    row: 0.2
+    col: 2
+    height: 0.6
+    width: 9
+createdAt: 2023-11-02T22:25:51.623Z

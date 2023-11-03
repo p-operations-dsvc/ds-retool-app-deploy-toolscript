@@ -28,8 +28,8 @@ template:
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
-    - label: Title name
+    - placeholder: '{{table21.data[0].TITLE_NAME}}'
+    - label: Title Name
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false

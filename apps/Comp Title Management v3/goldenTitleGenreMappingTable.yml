@@ -1,5 +1,5 @@
-id: goldenTitleAltNamesTable
-uuid: 4c8e6ff7-6efa-4c4c-a5b3-596e5b0c39e4
+id: goldenTitleGenreMappingTable
+uuid: 789f8640-8974-4af4-8819-990060b09b80
 type: widget
 subtype: TableWidget2
 template:
@@ -8,17 +8,18 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - dcd07: ''
+          - b9e6a: ''
+          - '48613': ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
     - disableEdits: false
     - _rowHeight: medium
     - _columnIds:
-        - dcd07
+        - b9e6a
+        - '48613'
     - _isSaving: false
-    - _actionIds:
-        - bc70d
+    - _actionIds: []
     - _clearChangeset: false
     - caseSensitiveFiltering: false
     - _limitOffsetRowCount: null
@@ -27,7 +28,10 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - dcd07:
+          - b9e6a:
+              ordered:
+                - showStepper: true
+          - '48613':
               ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns: []
@@ -52,57 +56,66 @@ template:
           - 4d: custom
     - _columnOptionList:
         ordered:
-          - dcd07:
+          - b9e6a:
+              ordered: []
+          - '48613':
               ordered: []
     - _columnValueOverride:
         ordered:
-          - dcd07: ''
+          - b9e6a: ''
+          - '48613': ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
     - _dynamicColumnProperties:
         ordered: []
-    - _showHeader: false
+    - _showHeader: true
     - _currentPage: 0
     - _columnKey:
         ordered:
-          - dcd07: ID
+          - b9e6a: GOLDEN_TILTLE_ID
+          - '48613': GENRE_NAME
     - hidden: false
     - _toolbarButtonIds:
         - 1a
         - 3c
         - 4d
-    - data: '{{altNamesTagsVariable.value}}'
+    - data: '{{uploadGoldenTitleGenreFileButton.parsedValue[0]}}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - dcd07: ''
+          - b9e6a: ''
+          - '48613': ''
     - _columnFormat:
         ordered:
-          - dcd07: string
+          - b9e6a: decimal
+          - '48613': string
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: dcd07
+    - _primaryKeyColumnId: b9e6a
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - dcd07: left
+          - b9e6a: right
+          - '48613': left
     - _actionIcon:
-        ordered:
-          - bc70d: bold/interface-remove-2
+        ordered: []
     - _columnTooltip:
         ordered:
-          - dcd07: ''
+          - b9e6a: ''
+          - '48613': ''
     - _columnIcon:
         ordered:
-          - dcd07: ''
+          - b9e6a: ''
+          - '48613': ''
     - _columnCellTooltipMode:
         ordered:
-          - dcd07: ''
+          - b9e6a: ''
+          - '48613': ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -111,29 +124,35 @@ template:
     - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
-          - dcd07: false
+          - b9e6a: false
+          - '48613': false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
     - changesetObject: null
     - _actionDisabled:
-        ordered:
-          - bc70d: ''
+        ordered: []
     - _columnReferenceId:
         ordered:
-          - dcd07: ''
+          - b9e6a: ''
+          - '48613': ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: single
     - _columnCaption:
         ordered:
-          - dcd07: ''
+          - b9e6a: ''
+          - '48613': ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - dcd07:
+          - b9e6a:
+              ordered:
+                - showSeparators: false
+                - notation: standard
+          - '48613':
               ordered: []
     - _changeset: null
     - _afterCursor: ''
@@ -142,7 +161,8 @@ template:
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
         ordered:
-          - dcd07: none
+          - b9e6a: none
+          - '48613': none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -152,14 +172,17 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - dcd07:
+          - b9e6a:
+              ordered: []
+          - '48613':
               ordered: []
     - _columnSize:
         ordered:
-          - dcd07: 193.328125
+          - '48613': 86.171875
+          - b9e6a: 151.890625
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
-    - _showFooter: false
+    - _showFooter: true
     - _groupedColumnConfig:
         ordered: []
     - _virtualizeStartIndex: 0
@@ -172,31 +195,26 @@ template:
         ordered: []
     - events:
         - ordered:
-            - event: doubleClickRow
-            - type: script
-            - method: run
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered:
-                  - src: >-
-                      goldenTitleAltNamesTextInput.setValue
-                      (goldenTitleAltNamesTable.selectedRow.ID)
-            - waitType: debounce
+            - type: widget
             - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: goldenTitleGenreMappingTable
+            - targetId: 3c
         - ordered:
-            - event: clickAction
-            - type: datasource
-            - method: trigger
-            - pluginId: queryDeleteGoldenTitleAltName
-            - targetId: bc70d
-            - params:
-                ordered: []
-            - waitType: debounce
+            - type: widget
             - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: goldenTitleGenreMappingTable
+            - targetId: 4d
     - _columnEditable:
         ordered:
-          - dcd07: false
+          - '': false
+          - b9e6a: false
+          - '48613': ''
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -204,7 +222,8 @@ template:
         array: []
     - _columnGroupAggregationMode:
         ordered:
-          - dcd07: none
+          - b9e6a: sum
+          - '48613': none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -219,35 +238,36 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - dcd07: center
+          - b9e6a: center
+          - '48613': center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - dcd07: Enter value
+          - b9e6a: Enter value
+          - '48613': Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
-        ordered:
-          - bc70d: Delete
+        ordered: []
     - _virtualizeEndIndex: 0
     - selectedRow: null
     - _actionHidden:
-        ordered:
-          - bc70d: ''
+        ordered: []
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - dcd07: ''
+          - b9e6a: ''
+          - '48613': ''
     - _columnLabel:
         ordered:
-          - dcd07: Id
-    - _showToolbar: false
+          - b9e6a: Golden Title ID
+          - '48613': Primary Genre
+    - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
-    container: goldenTitleForm
-    row: 26.799999999999997
-    col: 5
+    container: mapGoldenTitleGenreModal
+    row: 5.8
     height: 8
-    width: 7
-createdAt: 2023-10-25T22:12:06.080Z
+    width: 12
+createdAt: 2023-11-02T22:26:06.023Z
