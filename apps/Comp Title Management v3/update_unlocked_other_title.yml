@@ -24,7 +24,7 @@ template:
     - query: |
         update EDWCTM.OTHER_TITLE a
         set   a.locked = false,
-        a.UPDATE_DATETIME=CURRENT_TIMESTAMP,
+        a.UPDATE_DATETIME=CURRENT_TIMESTAMP
         where a.other_title_id={{unlockOtherTitleIdVariable.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
