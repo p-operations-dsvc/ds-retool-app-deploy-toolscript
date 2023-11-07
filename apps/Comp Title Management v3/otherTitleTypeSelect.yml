@@ -99,7 +99,6 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 4153c
-    row: 2.4
     col: 3
     height: 1
     width: 2

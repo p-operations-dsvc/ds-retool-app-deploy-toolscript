@@ -8,12 +8,14 @@ template:
         - ''
         - ''
         - false
+        - false
     - heightType: auto
     - currentViewKey: '{{ self.viewKeys[0] }}'
     - iconByIndex:
         array: []
     - clickable: false
     - _iconByIndex:
+        - ''
         - ''
         - ''
         - ''
@@ -38,12 +40,14 @@ template:
         - ''
         - ''
         - false
+        - false
     - currentViewIndex: null
     - _hasMigratedNestedItems: true
     - transition: none
     - showHeaderBorder: true
     - itemMode: static
     - _tooltipByIndex:
+        - ''
         - ''
         - ''
         - ''
@@ -55,12 +59,14 @@ template:
         - Golden Title Management
         - Other Title Management
         - Reference Data Management
+        - Bulk Upload
         - User Settings
     - events: []
     - _ids:
         - 443b9
         - 4153c
         - 6c9ea
+        - 762c8
         - 65d3e
     - viewKeys:
         array: []
@@ -71,11 +77,13 @@ template:
         - ''
         - ''
         - left
+        - left
     - hovered: false
     - loading: false
     - overflowType: scroll
     - disabled: false
     - _labels:
+        - ''
         - ''
         - ''
         - ''

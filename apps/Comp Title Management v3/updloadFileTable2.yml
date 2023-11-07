@@ -1,5 +1,5 @@
-id: updloadFileTable
-uuid: da4aa5b8-231f-467c-a574-d5fce809f799
+id: updloadFileTable2
+uuid: 8e3748dd-e1b4-48ee-b99f-f385d9f6d23d
 type: widget
 subtype: TableWidget2
 template:
@@ -93,7 +93,7 @@ template:
         - 1a
         - 3c
         - 4d
-    - data: '{{uploadMappingFileSelectButton.parsedValue[0]}}'
+    - data: '{{uploadMappingFileSelectButton2.parsedValue[0]}}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
@@ -231,7 +231,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: updloadFileTable
+            - pluginId: updloadFileTable2
             - targetId: 3c
         - ordered:
             - type: widget
@@ -239,7 +239,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: updloadFileTable
+            - pluginId: updloadFileTable2
             - targetId: 4d
     - _columnEditable:
         ordered:
@@ -302,8 +302,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: uploadMappingFileModal
+    container: uploadMappingFileModal2
     row: 4.4
     height: 8
     width: 12
-createdAt: 2023-10-20T04:22:54.397Z
+createdAt: 2023-11-07T18:58:54.722Z

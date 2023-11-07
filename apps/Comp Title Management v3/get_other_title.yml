@@ -27,8 +27,8 @@ template:
         ('T')[0].split('-')[0]}}, {{otherTitleTypeSelect.value.join('\',\'')}},
         {{otherTitleNameInput.value.replace ('\'', '\\\'')}},
         {{otherTitleMapToggleButton.value}}, 
-                                   {{otherTitleSourceSelect.value.join('\',\'')}}, {{otherTitleTable.sortArray.length===0?'OTHER_TITLE_ID':otherTitleTable.sortArray[0].columnId}}, {{otherTitleTable.sortArray.length===0?'asc':otherTitleTable.sortArray[0].direction}}, 
-                       {{ otherTitleTable.pagination.pageSize }},{{otherTitleTable.pagination.offset }})
+                                   {{otherTitleSourceSelect.value.join('\',\'')}}, 'OTHER_TITLE_ID', 'asc', 
+        {{get_user_preferences.data.SETTING_VALUE[1]}},{{page_number}})
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

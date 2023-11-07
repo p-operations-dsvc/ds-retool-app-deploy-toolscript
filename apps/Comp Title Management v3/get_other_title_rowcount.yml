@@ -1,4 +1,4 @@
-id: get_golden_title
+id: get_other_title_rowcount
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
@@ -22,11 +22,13 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        CALL edwctm.get_golden_title_v3 ({{createdDateRange.value.start.split
-        ('T')[0].split('-')[0]}} , {{createdDateRange.value.end.split
-        ('T')[0].split('-')[0]}}, {{titleTypeSelect.value.join('\',\'')}}, {{
-        titleNameInput.value.replace ('\'', '\\\'')}}, 'GOLDEN_TITLE_ID', 'asc',
-        {{get_user_preferences.data.SETTING_VALUE[1]}}, {{page_number}});
+        call get_other_title_v3_rowcount
+        ({{otherTitleReleaseDateRange.value.start.split
+        ('T')[0].split('-')[0]}}, {{otherTitleReleaseDateRange.value.end.split
+        ('T')[0].split('-')[0]}}, {{otherTitleTypeSelect.value.join('\',\'')}},
+        {{otherTitleNameInput.value.replace ('\'', '\\\'')}},
+        {{otherTitleMapToggleButton.value}}, 
+                                   {{otherTitleSourceSelect.value.join('\',\'')}})
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -82,7 +84,17 @@ template:
     - transformer: |-
         // Query results are available as the `data` variable
         return formatDataAsArray(data)
-    - events: []
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: setOtherTitlePages
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - isMultiplayerEdited: false
     - tableName: ''
     - queryTimeout: '10001'
@@ -100,4 +112,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-09-27T22:19:26.548Z
+createdAt: 2023-11-07T21:23:59.172Z

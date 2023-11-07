@@ -1,5 +1,5 @@
-id: goldenTitleGenreMappingTable
-uuid: 789f8640-8974-4af4-8819-990060b09b80
+id: goldenTitleGenreMappingTable2
+uuid: 9d31e723-3a91-4906-9538-fb94cd6544e7
 type: widget
 subtype: TableWidget2
 template:
@@ -80,7 +80,7 @@ template:
         - 1a
         - 3c
         - 4d
-    - data: '{{uploadGoldenTitleGenreFileButton.parsedValue[0]}}'
+    - data: '{{uploadGoldenTitleGenreFileButton2.parsedValue[0]}}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
@@ -200,7 +200,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: goldenTitleGenreMappingTable
+            - pluginId: goldenTitleGenreMappingTable2
             - targetId: 3c
         - ordered:
             - type: widget
@@ -208,7 +208,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: goldenTitleGenreMappingTable
+            - pluginId: goldenTitleGenreMappingTable2
             - targetId: 4d
     - _columnEditable:
         ordered:
@@ -266,8 +266,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: mapGoldenTitleGenreModal
+    container: mapGoldenTitleGenreModal2
     row: 5.8
     height: 8
     width: 12
-createdAt: 2023-11-02T22:26:06.023Z
+createdAt: 2023-11-07T18:55:05.510Z

@@ -82,16 +82,6 @@ template:
     - events:
         - ordered:
             - event: success
-            - type: datasource
-            - method: trigger
-            - pluginId: get_golden_title
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
             - type: widget
             - method: close
             - pluginId: mapGoldenTitleGenreModal
@@ -122,6 +112,24 @@ template:
             - targetId: null
             - params:
                 ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: |-
+                      get_golden_title.trigger (
+                        {
+                        additionalScope: {
+                         page_number:0
+                        }
+                      }
+                      )
             - waitType: debounce
             - waitMs: '0'
     - isMultiplayerEdited: false

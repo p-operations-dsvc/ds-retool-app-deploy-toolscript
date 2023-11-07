@@ -19,12 +19,20 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: datasource
-            - method: trigger
-            - pluginId: get_other_title
+            - type: script
+            - method: run
+            - pluginId: ''
             - targetId: null
             - params:
-                ordered: []
+                ordered:
+                  - src: |-
+                      get_other_title.trigger (
+                        {
+                        additionalScope: {
+                         page_number:0
+                        }
+                      }
+                      )
             - waitType: debounce
             - waitMs: '0'
         - ordered:
@@ -32,6 +40,16 @@ template:
             - type: widget
             - method: clearSelection
             - pluginId: otherTitleTable
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: get_other_title_rowcount
             - targetId: null
             - params:
                 ordered: []
@@ -47,8 +65,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 4153c
-    row: 1.4
-    col: 11
+    col: 10
     height: 1
     width: 1
 createdAt: 2023-10-04T18:04:37.896Z

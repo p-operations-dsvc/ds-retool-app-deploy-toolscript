@@ -74,21 +74,18 @@ template:
     - _toolbarButtonLabel:
         ordered:
           - 3c: Download
-          - 4d: Refresh
           - 1bfdd: Filter
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
         ordered:
           - 3c: bold/interface-download-button-2
-          - 4d: bold/interface-arrows-round-left
           - 1bfdd: bold/interface-text-formatting-filter-2
     - changesetArray:
         array: []
     - _toolbarButtonType:
         ordered:
           - 3c: custom
-          - 4d: custom
           - 1bfdd: filter
     - _columnStatusIndicator:
         ordered:
@@ -180,10 +177,9 @@ template:
     - _toolbarButtonIds:
         - 1bfdd
         - 3c
-        - 4d
     - data: '{{ get_golden_title.data }}'
     - _cellSelection: none
-    - _serverPaginated: true
+    - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
@@ -405,11 +401,11 @@ template:
           - a6e74: 66.609375
           - 1bf70: 86.921875
           - 10dd5: 73.140625
-          - 0e83f: 104.09375
+          - 0e83f: 122.09375
           - 72ff2: 47.09375
           - ddd1f: 70.421875
           - '93687': 59
-          - e197f: 194.796875
+          - e197f: 480.796875
           - eb737: 62.484375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
@@ -423,16 +419,6 @@ template:
     - _defaultFilters:
         ordered: []
     - events:
-        - ordered:
-            - event: changePage
-            - type: datasource
-            - method: trigger
-            - pluginId: get_golden_title
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
         - ordered:
             - event: clickAction
             - type: widget
@@ -588,14 +574,6 @@ template:
             - pluginId: goldenTitleTable
             - targetId: 3c
         - ordered:
-            - type: widget
-            - waitMs: '0'
-            - waitType: debounce
-            - event: clickToolbar
-            - method: refresh
-            - pluginId: goldenTitleTable
-            - targetId: 4d
-        - ordered:
             - event: clickCell
             - type: util
             - method: openUrl
@@ -736,7 +714,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 443b9
-    row: 2
-    height: 33.4
+    row: 3
+    height: 35.4
     width: 12
 createdAt: 2023-09-27T22:19:06.281Z
