@@ -4,7 +4,7 @@ subtype: Function
 template:
   ordered:
     - funcBody: |
-        let upload = {{uploadGoldenTitleGenreFileButton.parsedValue}};
+        let upload = {{uploadGoldenTitleGenreFileButton2.parsedValue}};
         let arr = [];
         if (upload.length==0) {
           return arr

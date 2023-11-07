@@ -84,7 +84,7 @@ template:
             - event: success
             - type: widget
             - method: close
-            - pluginId: mapGoldenTitleGenreModal
+            - pluginId: mapGoldenTitleGenreModal2
             - targetId: null
             - params:
                 ordered: []

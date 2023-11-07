@@ -59,7 +59,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: uploadMappingFileModal2
+    container: mapOtherTitleModal
     row: 0.8
     col: 3
     height: 1

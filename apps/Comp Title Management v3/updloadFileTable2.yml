@@ -302,7 +302,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: uploadMappingFileModal2
+    container: mapOtherTitleModal
     row: 4.4
     height: 8
     width: 12

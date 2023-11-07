@@ -4,7 +4,7 @@ subtype: Function
 template:
   ordered:
     - funcBody: |
-        var upload = {{uploadMappingFileSelectButton.parsedValue }}
+        var upload = {{uploadMappingFileSelectButton2.parsedValue }}
         let arr = [];
         if (upload.length==0) {
           return arr
