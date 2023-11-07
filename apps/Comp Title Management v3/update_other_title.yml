@@ -25,7 +25,8 @@ template:
         update EDWCTM.OTHER_TITLE a
         set a.golden_title_id={{goldenTitleIdToMapTo.value}},
         a.MAPPED_STATE = TRUE,
-        a.locked = TRUE
+        a.locked = TRUE,
+        a.UPDATE_DATETIME=CURRENT_TIMESTAMP,
         where a.other_title_id={{titleToMapSelect.selectedItem.id}} 
     - playgroundQueryUuid: ''
     - playgroundQueryId: null

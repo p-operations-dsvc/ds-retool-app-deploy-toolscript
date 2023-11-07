@@ -7,7 +7,7 @@ template:
   ordered:
     - queryRefreshTime: ''
     - streamResponse: false
-    - records: ''
+    - records: '{{userSettingsTable.changesetArray}}'
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
     - queryDisabledMessage: ''
@@ -50,9 +50,9 @@ template:
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: sql
+    - editorMode: gui
     - queryRunTime: null
-    - actionType: ''
+    - actionType: BULK_UPDATE_BY_KEY
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -80,14 +80,24 @@ template:
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
     - overrideOrgCacheForUserCache: false
-    - bulkUpdatePrimaryKey: ''
+    - bulkUpdatePrimaryKey: USER_SETTING_ID
     - runWhenPageLoads: false
     - transformer: |-
         // Query results are available as the `data` variable
         return data
-    - events: []
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_user_preferences
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - isMultiplayerEdited: false
-    - tableName: ''
+    - tableName: EDWCTM.CTM_USER_SETTING
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false

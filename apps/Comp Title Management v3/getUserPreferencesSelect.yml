@@ -11,7 +11,7 @@ template:
     - _values: []
     - iconByIndex:
         array: []
-    - values: '{{ item.SETTING_VALUE }}'
+    - values: ''
     - readOnly: false
     - iconAfter: ''
     - _iconByIndex: []
@@ -21,7 +21,7 @@ template:
     - marginType: normal
     - hidden: 'true'
     - customValidation: ''
-    - data: '{{ get_user_preferences.data }}'
+    - data: '{{ get_user_preferences_splash.data }}'
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:
@@ -67,8 +67,7 @@ template:
     - colorByIndex:
         array: []
     - selectedLabel: ''
-    - events:
-        ordered: []
+    - events: []
     - _ids: []
     - emptyMessage: No options
     - overlayMaxHeight: 375
@@ -84,7 +83,7 @@ template:
     - maintainSpaceWhenHidden: false
     - _imageByIndex: []
     - required: false
-    - labels: '{{ item.SETTING_TYPE_NAME }}'
+    - labels: ''
 style:
   ordered: []
 position2:
