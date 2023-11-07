@@ -73,23 +73,23 @@ template:
         ordered: []
     - _toolbarButtonLabel:
         ordered:
-          - 1a: Filter
           - 3c: Download
           - 4d: Refresh
+          - 1bfdd: Filter
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
         ordered:
-          - 1a: bold/interface-text-formatting-filter-2
           - 3c: bold/interface-download-button-2
           - 4d: bold/interface-arrows-round-left
+          - 1bfdd: bold/interface-text-formatting-filter-2
     - changesetArray:
         array: []
     - _toolbarButtonType:
         ordered:
-          - 1a: filter
           - 3c: custom
           - 4d: custom
+          - 1bfdd: filter
     - _columnStatusIndicator:
         ordered:
           - ddd1f:
@@ -157,7 +157,8 @@ template:
               </a>
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: '{{get_user_preferences.data.SETTING_VALUE[1]}}'
+    - _templatePageSize: >-
+        {{get_user_preferences.dataArray.length==0?500:get_user_preferences.data.SETTING_VALUE[1]}}
     - _dynamicColumnProperties:
         ordered:
           - formatByIndex: multilineString
@@ -177,7 +178,7 @@ template:
           - 10dd5: IMDB_URL
     - hidden: false
     - _toolbarButtonIds:
-        - 1a
+        - 1bfdd
         - 3c
         - 4d
     - data: '{{ get_golden_title.data }}'
@@ -401,15 +402,15 @@ template:
     - _columnSize:
         ordered:
           - aab45: 136.15625
-          - a6e74: 114.609375
-          - 1bf70: 104.921875
-          - 10dd5: 250.890625
-          - 0e83f: 121.859375
-          - 72ff2: 66.09375
+          - a6e74: 66.609375
+          - 1bf70: 86.921875
+          - 10dd5: 73.140625
+          - 0e83f: 104.09375
+          - 72ff2: 47.09375
           - ddd1f: 70.421875
-          - '93687': 80.375
-          - e197f: 358.796875
-          - eb737: 81.84375
+          - '93687': 59
+          - e197f: 194.796875
+          - eb737: 62.484375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -417,10 +418,21 @@ template:
         ordered: []
     - _virtualizeStartIndex: 0
     - _toolbarButtonHidden:
-        ordered: []
+        ordered:
+          - 1bfdd: ''
     - _defaultFilters:
         ordered: []
     - events:
+        - ordered:
+            - event: changePage
+            - type: datasource
+            - method: trigger
+            - pluginId: get_golden_title
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
         - ordered:
             - event: clickAction
             - type: widget
@@ -523,16 +535,6 @@ template:
             - params:
                 ordered:
                   - value: Main
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: changePage
-            - type: datasource
-            - method: trigger
-            - pluginId: get_golden_title
-            - targetId: null
-            - params:
-                ordered: []
             - waitType: debounce
             - waitMs: '0'
         - ordered:

@@ -8,9 +8,11 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - 2fd3e: ''
           - 5d68a: ''
           - 22a72: ''
+          - f44dd: ''
+          - f1073: ''
+          - 7d0c8: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
@@ -18,8 +20,10 @@ template:
     - _rowHeight: small
     - _columnIds:
         - 22a72
-        - 2fd3e
+        - f44dd
+        - 7d0c8
         - 5d68a
+        - f1073
     - _isSaving: false
     - _actionIds: []
     - _clearChangeset: false
@@ -30,13 +34,18 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - 2fd3e:
-              ordered: []
           - 5d68a:
               ordered: []
           - 22a72:
               ordered:
                 - showStepper: true
+          - f44dd:
+              ordered:
+                - showStepper: true
+          - f1073:
+              ordered: []
+          - 7d0c8:
+              ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns: []
     - _toolbarButtonLabel:
@@ -60,17 +69,23 @@ template:
           - 4d: custom
     - _columnOptionList:
         ordered:
-          - 2fd3e:
-              ordered: []
           - 5d68a:
               ordered: []
           - 22a72:
               ordered: []
+          - f44dd:
+              ordered: []
+          - f1073:
+              ordered: []
+          - 7d0c8:
+              ordered: []
     - _columnValueOverride:
         ordered:
-          - 2fd3e: ''
           - 5d68a: ''
           - 22a72: ''
+          - f44dd: ''
+          - f1073: ''
+          - 7d0c8: ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
@@ -80,9 +95,11 @@ template:
     - _currentPage: 0
     - _columnKey:
         ordered:
-          - 2fd3e: SETTING_TYPE_NAME
           - 5d68a: SETTING_VALUE
           - 22a72: SETTING_TYPE_ID
+          - f44dd: USER_SETTING_ID
+          - f1073: USER_ID
+          - 7d0c8: SETTING_TYPE_NAME
     - hidden: false
     - _toolbarButtonIds:
         - 1a
@@ -95,41 +112,53 @@ template:
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - 2fd3e: ''
           - 5d68a: ''
           - 22a72: ''
+          - f44dd: ''
+          - f1073: ''
+          - 7d0c8: ''
     - _columnFormat:
         ordered:
-          - 2fd3e: string
           - 5d68a: string
           - 22a72: decimal
+          - f44dd: decimal
+          - f1073: link
+          - 7d0c8: string
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: 22a72
+    - _primaryKeyColumnId: f44dd
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - 2fd3e: left
           - 5d68a: left
           - 22a72: right
+          - f44dd: right
+          - f1073: left
+          - 7d0c8: left
     - _actionIcon:
         ordered: []
     - _columnTooltip:
         ordered:
-          - 2fd3e: ''
           - 5d68a: ''
           - 22a72: ''
+          - f44dd: ''
+          - f1073: ''
+          - 7d0c8: ''
     - _columnIcon:
         ordered:
-          - 2fd3e: ''
           - 5d68a: ''
           - 22a72: ''
+          - f44dd: ''
+          - f1073: ''
+          - 7d0c8: ''
     - _columnCellTooltipMode:
         ordered:
-          - 2fd3e: ''
           - 5d68a: ''
           - 22a72: ''
+          - f44dd: ''
+          - f1073: ''
+          - 7d0c8: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -138,9 +167,11 @@ template:
     - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
-          - 2fd3e: false
           - 5d68a: false
           - 22a72: false
+          - f44dd: false
+          - f1073: false
+          - 7d0c8: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -149,30 +180,41 @@ template:
         ordered: []
     - _columnReferenceId:
         ordered:
-          - 2fd3e: ''
           - 5d68a: ''
           - 22a72: ''
+          - f44dd: ''
+          - f1073: ''
+          - 7d0c8: ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: single
     - _columnCaption:
         ordered:
-          - 2fd3e: ''
           - 5d68a: ''
           - 22a72: ''
+          - f44dd: ''
+          - f1073: ''
+          - 7d0c8: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - 2fd3e:
-              ordered: []
           - 5d68a:
               ordered: []
           - 22a72:
               ordered:
                 - showSeparators: true
                 - notation: standard
+          - f44dd:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+          - f1073:
+              ordered:
+                - showUnderline: hover
+          - 7d0c8:
+              ordered: []
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -180,9 +222,11 @@ template:
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
         ordered:
-          - 2fd3e: none
           - 5d68a: none
           - 22a72: none
+          - f44dd: none
+          - f1073: none
+          - 7d0c8: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -192,17 +236,23 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - 2fd3e:
-              ordered: []
           - 5d68a:
               ordered: []
           - 22a72:
               ordered: []
+          - f44dd:
+              ordered: []
+          - f1073:
+              ordered: []
+          - 7d0c8:
+              ordered: []
     - _columnSize:
         ordered:
           - 22a72: 100.703125
-          - 2fd3e: 346.765625
-          - 5d68a: 92.109375
+          - 7d0c8: 256.765625
+          - 5d68a: 59.453125
+          - f44dd: 100.6875
+          - f1073: 213.359375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -221,7 +271,7 @@ template:
             - event: save
             - type: datasource
             - method: trigger
-            - pluginId: updateUserPreferencesJQ
+            - pluginId: update_user_preferences
             - targetId: null
             - params:
                 ordered: []
@@ -243,11 +293,24 @@ template:
             - method: refresh
             - pluginId: userSettingsTable
             - targetId: 4d
+        - ordered:
+            - event: clickCell
+            - type: util
+            - method: openUrl
+            - pluginId: ''
+            - targetId: f1073
+            - params:
+                ordered:
+                  - url: mailto:{{ item }}
+            - waitType: debounce
+            - waitMs: '0'
     - _columnEditable:
         ordered:
-          - 2fd3e: ''
           - 5d68a: 'true'
           - 22a72: 'false'
+          - f44dd: false
+          - f1073: ''
+          - 7d0c8: ''
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -255,9 +318,11 @@ template:
         array: []
     - _columnGroupAggregationMode:
         ordered:
-          - 2fd3e: none
           - 5d68a: none
           - 22a72: sum
+          - f44dd: sum
+          - f1073: none
+          - 7d0c8: none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -272,15 +337,19 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - 2fd3e: center
           - 5d68a: center
           - 22a72: center
+          - f44dd: center
+          - f1073: center
+          - 7d0c8: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - 2fd3e: Enter value
           - 5d68a: ''
           - 22a72: Enter value
+          - f44dd: Enter value
+          - f1073: ''
+          - 7d0c8: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -291,14 +360,18 @@ template:
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - 2fd3e: ''
           - 5d68a: ''
-          - 22a72: 'true'
+          - 22a72: 'false'
+          - f44dd: 'true'
+          - f1073: 'true'
+          - 7d0c8: ''
     - _columnLabel:
         ordered:
-          - 2fd3e: Setting Type
           - 5d68a: Value
-          - 22a72: Setting type id
+          - 22a72: ID
+          - f44dd: User setting id
+          - f1073: User id
+          - 7d0c8: Name
     - _showToolbar: true
 style:
   ordered: []

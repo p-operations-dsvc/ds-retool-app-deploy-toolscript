@@ -22,14 +22,14 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        select  a.setting_type_id, a.setting_type_name, coalesce ( 
-        setting_value, default_setting_value) as setting_value
+        select a.USER_SETTING_ID, a.USER_ID, a.SETTING_TYPE_ID,
+        b.SETTING_TYPE_NAME, a.SETTING_VALUE from edwctm.ctm_user_setting a,
 
-        from edwctm.ctm_setting_type a left outer join (select * from
-        edwctm.ctm_user_setting where user_id = {{current_user.email}}) b on
-        a.setting_type_id=b.setting_type_id
+        EDWCTM.CTM_SETTING_TYPE b  where
 
-        order by a.setting_type_id
+        a.SETTING_TYPE_ID=b.SETTING_TYPE_ID
+
+        and user_id = {{current_user.email}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -86,7 +86,8 @@ template:
         // Query results are available as the `data` variable
         return data
     - events: []
-    - tableName: ''
+    - isMultiplayerEdited: false
+    - tableName: EDWCTM.CTM_USER_SETTING
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false

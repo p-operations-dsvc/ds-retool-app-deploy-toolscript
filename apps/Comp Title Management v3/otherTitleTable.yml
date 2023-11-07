@@ -80,21 +80,18 @@ template:
         ordered: []
     - _toolbarButtonLabel:
         ordered:
-          - 1a: Filter
           - 3c: Download
           - 4d: Refresh
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
         ordered:
-          - 1a: bold/interface-text-formatting-filter-2
           - 3c: bold/interface-download-button-2
           - 4d: bold/interface-arrows-round-left
     - changesetArray:
         array: []
     - _toolbarButtonType:
         ordered:
-          - 1a: filter
           - 3c: custom
           - 4d: custom
     - _columnStatusIndicator:
@@ -165,7 +162,8 @@ template:
           - 946d6: '{{ item }}'
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: '{{get_user_preferences.data.SETTING_VALUE[1]}}'
+    - _templatePageSize: >-
+        {{get_user_preferences.dataArray.length==0?500:get_user_preferences.data.SETTING_VALUE[1]}}
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true
@@ -186,7 +184,6 @@ template:
           - 946d6: GOLDEN_TITLE_NAME
     - hidden: false
     - _toolbarButtonIds:
-        - 1a
         - 3c
         - 4d
     - data: '{{ get_other_title.data }}'
@@ -314,7 +311,7 @@ template:
     - _actionDisabled:
         ordered:
           - 1b4cf: ''
-          - 0f13c: ''
+          - 0f13c: '{{currentRow.LOCKED=="True"}}'
     - _columnReferenceId:
         ordered:
           - 751f9: ''

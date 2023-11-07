@@ -1,12 +1,15 @@
-id: updateUserPreferencesJQ
+id: get_user_preferences_splash
 type: datasource
-subtype: JavascriptQuery
-resourceName: JavascriptQuery
+subtype: SqlQueryUnified
+resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
+resourceDisplayName: Snowflake CTMv3
 template:
   ordered:
     - queryRefreshTime: ''
     - streamResponse: false
+    - records: ''
     - lastReceivedFromResourceAt: null
+    - databasePasswordOverride: ''
     - queryDisabledMessage: ''
     - servedFromCache: false
     - offlineUserQueryInputs: ''
@@ -15,43 +18,44 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: false
+    - runWhenModelUpdates: true
     - workflowRunId: null
     - showFailureToaster: true
-    - query: |
-        let i=0;
-        let arr = userSettingsTable.changesetArray;
-        while (i < arr.length) { 
-          //console.log (arr[i]);
-           update_user_preferences.trigger({
-          additionalScope : {
-            setting_type_id: arr[i].SETTING_TYPE_ID,
-            setting_value:  arr[i].SETTING_VALUE 
-          }  
-        });  
-          i++;
-        }  
-        userSettingsTable.clearChangeset();
-        //get_user_preferences.trigger();
-        //userSettingsTable.refresh();
+    - query: >-
+        insert into edwctm.ctm_user_setting (user_setting_id, user_id,
+        setting_type_id, setting_value)
+
+        select ctm_user_setting_seq.nextval, {{current_user.email}} as user_id,
+        setting_type_id,  default_setting_value
+
+        from edwctm.ctm_setting_type where setting_type_id not in (select
+        setting_type_id from edwctm.ctm_user_setting where user_id =
+        {{current_user.email}})
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
+    - warningCodes: []
     - data: null
+    - recordId: ''
     - importedQueryInputs:
         ordered: []
-    - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
+    - dataArray: []
     - cacheKeyTtl: ''
+    - filterBy: ''
     - requestSentTimestamp: null
+    - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
+    - editorMode: sql
     - queryRunTime: null
+    - actionType: ''
     - changesetObject: ''
+    - shouldUseLegacySql: false
     - errorTransformer: >-
         // The variable 'data' allows you to reference the request's data in the
         transformer. 
@@ -60,14 +64,16 @@ template:
 
         return data.error
     - finished: null
+    - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
     - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
-    - resourceTypeOverride: null
+    - resourceTypeOverride: ''
     - watchedParams: []
     - enableErrorTransformer: false
+    - enableBulkUpdates: false
     - showLatestVersionUpdatedWarning: false
     - timestamp: 0
     - importedQueryDefaults:
@@ -75,25 +81,12 @@ template:
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
     - overrideOrgCacheForUserCache: false
+    - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
     - transformer: |-
         // Query results are available as the `data` variable
         return data
     - events:
-        - ordered:
-            - event: success
-            - type: util
-            - method: showNotification
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered:
-                  - options:
-                      ordered:
-                        - notificationType: success
-                        - title: Settings updated successfully!
-            - waitType: debounce
-            - waitMs: '0'
         - ordered:
             - event: success
             - type: datasource
@@ -104,7 +97,7 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-    - isMultiplayerEdited: false
+    - tableName: ''
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -113,8 +106,11 @@ template:
     - enableCaching: false
     - allowedGroups: []
     - workflowBlockPluginId: null
+    - databaseUsernameOverride: ''
+    - shouldEnableBatchQuerying: false
+    - doNotThrowOnNoOp: false
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-11-01T22:36:42.346Z
+createdAt: 2023-11-06T22:49:33.353Z
