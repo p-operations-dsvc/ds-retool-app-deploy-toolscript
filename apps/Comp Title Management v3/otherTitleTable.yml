@@ -310,7 +310,7 @@ template:
     - changesetObject: null
     - _actionDisabled:
         ordered:
-          - 1b4cf: '{{currentRow.GOLDEN_TITLE_NAME==''Unmapped''}}'
+          - 1b4cf: '{{currentRow.GOLDEN_TITLE_NAME==''Unmatched''}}'
           - 0f13c: '{{currentRow.LOCKED=="False"}}'
     - _columnReferenceId:
         ordered:
