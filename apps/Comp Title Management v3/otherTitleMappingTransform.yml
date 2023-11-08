@@ -10,7 +10,7 @@ template:
           return arr
         }
         for (let i=0; i< upload[0].length; i++ ) { 
-                        arr.push (upload[0][i]['SOURCE_SYSTEM']+"|"+upload[0][i]['SOURCE_SYSTEM_TITLE_ID']+"|"+upload[0][i]['GOLDEN_TITLE_ID'])
+                        arr.push (upload[0][i].SOURCE_SYSTEM+"|"+upload[0][i].SOURCE_SYSTEM_TITLE_ID+"|"+upload[0][i].GOLDEN_TITLE_ID)
                 }
         return arr
     - value: ''

@@ -132,6 +132,17 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setValue
+            - pluginId: mainTabs
+            - targetId: null
+            - params:
+                ordered:
+                  - value: Other Title Management
+            - waitType: debounce
+            - waitMs: '0'
     - isMultiplayerEdited: false
     - tableName: ''
     - queryTimeout: '10000'

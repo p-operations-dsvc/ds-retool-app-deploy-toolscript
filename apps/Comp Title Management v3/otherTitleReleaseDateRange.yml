@@ -22,7 +22,7 @@ template:
     - formDataKey: '{{ self.id }}'
     - value:
         ordered:
-          - start: '{{ moment().add(-300, ''days'') }}'
+          - start: '{{ moment().add(-900, ''days'') }}'
           - end: '{{ moment().add(1, ''days'') }}'
     - startPlaceholder: '{{self.value.start}}'
     - labelCaption: ''
