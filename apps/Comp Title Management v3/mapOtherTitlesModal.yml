@@ -15,12 +15,20 @@ template:
     - events:
         - ordered:
             - event: close
-            - type: datasource
-            - method: trigger
-            - pluginId: get_other_title
+            - type: script
+            - method: run
+            - pluginId: ''
             - targetId: null
             - params:
-                ordered: []
+                ordered:
+                  - src: |-
+                      get_other_title.trigger (
+                        {
+                        additionalScope: {
+                         page_number:otherTitlePageSelect.value - 1
+                        }
+                      }
+                      )
             - waitType: debounce
             - waitMs: '0'
             - enabled: '{{otherTitlesMappedSoFarVariable.value}}'
