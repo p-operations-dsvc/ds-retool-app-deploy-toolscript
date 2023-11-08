@@ -398,15 +398,15 @@ template:
     - _columnSize:
         ordered:
           - aab45: 136.15625
-          - a6e74: 66.609375
-          - 1bf70: 86.921875
+          - a6e74: 81.609375
+          - 1bf70: 110.921875
           - 10dd5: 73.140625
-          - 0e83f: 122.09375
+          - 0e83f: 124.09375
           - 72ff2: 47.09375
-          - ddd1f: 70.421875
+          - ddd1f: 94.421875
           - '93687': 59
-          - e197f: 480.796875
-          - eb737: 62.484375
+          - e197f: 631.796875
+          - eb737: 77.484375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
