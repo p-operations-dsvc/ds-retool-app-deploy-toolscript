@@ -90,7 +90,8 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 443b9
-    col: 6
+    row: 0.9999999999999998
+    col: 7
     height: 1
-    width: 4
+    width: 1
 createdAt: 2023-11-01T22:11:10.246Z

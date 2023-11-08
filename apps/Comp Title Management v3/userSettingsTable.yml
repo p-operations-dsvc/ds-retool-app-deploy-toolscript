@@ -132,7 +132,7 @@ template:
     - _columnAlignment:
         ordered:
           - 5d68a: left
-          - 22a72: right
+          - 22a72: center
           - f44dd: right
           - f1073: left
           - 7d0c8: left
@@ -248,10 +248,10 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - 22a72: 100.703125
-          - 7d0c8: 256.765625
-          - 5d68a: 59.453125
+          - 22a72: 169.703125
           - f44dd: 100.6875
+          - 7d0c8: 426.765625
+          - 5d68a: 59.453125
           - f1073: 213.359375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace

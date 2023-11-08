@@ -1,5 +1,5 @@
-id: mapGoldenTitleGenreModal
-uuid: 856414aa-cba7-45e3-aaf6-cdb96b1545b3
+id: mapOtherTitleModal
+uuid: 02f6b36e-5ee6-4528-aad7-e4ddcc7b627d
 type: widget
 subtype: ModalWidget
 template:
@@ -8,21 +8,22 @@ template:
     - modalOverflowType: scroll
     - onModalClose: ''
     - modalHeightType: fixed
-    - tooltipText: Upload Genre Map
+    - tooltipText: Upload mapping file
     - modalHeight: ''
     - onModalOpen: ''
+    - events: []
     - modalWidth: ''
     - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''
-    - buttonText: Upload
+    - buttonText: Upload Other Title To Golden Ttile Mapping
 style:
   ordered: []
 position2:
   position2:
     container: mainContainer
-    subcontainer: 443b9
-    col: 11
+    subcontainer: 762c8
+    row: 0.2
+    col: 7
     height: 1
-    width: 1
-createdAt: 2023-11-02T22:18:12.087Z
+createdAt: 2023-11-07T18:58:54.367Z

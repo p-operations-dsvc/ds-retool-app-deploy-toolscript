@@ -1,15 +1,12 @@
-id: get_golden_title
+id: setOtherTitlePages
 type: datasource
-subtype: SqlQueryUnified
-resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
-resourceDisplayName: Snowflake CTMv3
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
 template:
   ordered:
     - queryRefreshTime: ''
     - streamResponse: false
-    - records: ''
     - lastReceivedFromResourceAt: null
-    - databasePasswordOverride: ''
     - queryDisabledMessage: ''
     - servedFromCache: false
     - offlineUserQueryInputs: ''
@@ -21,37 +18,36 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >-
-        CALL edwctm.get_golden_title_v3 ({{createdDateRange.value.start.split
-        ('T')[0].split('-')[0]}} , {{createdDateRange.value.end.split
-        ('T')[0].split('-')[0]}}, {{titleTypeSelect.value.join('\',\'')}}, {{
-        titleNameInput.value.replace ('\'', '\\\'')}}, 'GOLDEN_TITLE_ID', 'asc',
-        {{get_user_preferences.data.SETTING_VALUE[1]}}, {{page_number}});
+    - query: |-
+        let i=0;
+        let arr = [];
+        let rowcount = get_other_title_rowcount.data.CNT[0];
+        let pagesize = get_user_preferences.data.SETTING_VALUE[1];
+        let max = rowcount / pagesize;
+        while (i <= max) { 
+            arr.push (i+1)
+            i++;
+        } 
+        otherTitleTablePagesVariable.setValue (arr); 
+        otherTitlePageSelect.setValue (1);
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
-    - warningCodes: []
     - data: null
-    - recordId: ''
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: false
-    - dataArray: []
     - cacheKeyTtl: ''
-    - filterBy: ''
     - requestSentTimestamp: null
-    - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: sql
     - queryRunTime: null
-    - actionType: ''
     - changesetObject: ''
-    - shouldUseLegacySql: false
     - errorTransformer: >-
         // The variable 'data' allows you to reference the request's data in the
         transformer. 
@@ -60,16 +56,14 @@ template:
 
         return data.error
     - finished: null
-    - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
     - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
-    - resourceTypeOverride: ''
+    - resourceTypeOverride: null
     - watchedParams: []
     - enableErrorTransformer: false
-    - enableBulkUpdates: false
     - showLatestVersionUpdatedWarning: false
     - timestamp: 0
     - importedQueryDefaults:
@@ -77,15 +71,23 @@ template:
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
     - overrideOrgCacheForUserCache: false
-    - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
     - transformer: |-
         // Query results are available as the `data` variable
-        return formatDataAsArray(data)
-    - events: []
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: widget
+            - method: refresh
+            - pluginId: goldenTitleProdCompaniesTable
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - isMultiplayerEdited: false
-    - tableName: ''
-    - queryTimeout: '10001'
+    - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
     - queryFailureConditions: ''
@@ -93,11 +95,8 @@ template:
     - enableCaching: false
     - allowedGroups: []
     - workflowBlockPluginId: null
-    - databaseUsernameOverride: ''
-    - shouldEnableBatchQuerying: false
-    - doNotThrowOnNoOp: false
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-09-27T22:19:26.548Z
+createdAt: 2023-11-07T21:26:52.352Z

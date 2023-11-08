@@ -21,7 +21,7 @@ template:
             - event: click
             - type: datasource
             - method: trigger
-            - pluginId: get_golden_title
+            - pluginId: get_golden_title_rowcount
             - targetId: null
             - params:
                 ordered: []
@@ -29,8 +29,26 @@ template:
             - waitMs: '0'
         - ordered:
             - event: click
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: |-
+                      get_golden_title.trigger (
+                        {
+                        additionalScope: {
+                         page_number:0
+                        }
+                      }
+                      )
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
             - type: widget
-            - method: refresh
+            - method: clearFilterStack
             - pluginId: goldenTitleTable
             - targetId: null
             - params:

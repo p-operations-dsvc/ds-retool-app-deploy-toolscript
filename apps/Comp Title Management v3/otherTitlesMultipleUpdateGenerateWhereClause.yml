@@ -5,9 +5,9 @@ template:
   ordered:
     - funcBody: |-
         let array = []
-        rows = {{otherTitleToMapVariable.value}}
+        let rows = {{otherTitleToMapVariable.value}}
         for (const key in rows) {
-          array.push (rows[key]['id'])
+          array.push (rows[key].id)
         }
 
         return  array.join ("|")

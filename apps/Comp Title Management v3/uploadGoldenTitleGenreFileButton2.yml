@@ -1,5 +1,5 @@
-id: uploadMappingFileSelectButton
-uuid: 1df8d395-2a72-427f-8091-59d89898a3bf
+id: uploadGoldenTitleGenreFileButton2
+uuid: 1573fa60-fbb0-4cb3-b887-65458cc771b8
 type: widget
 subtype: FileButtonWidget
 template:
@@ -11,13 +11,14 @@ template:
     - maxSize: ''
     - appendNewSelection: false
     - selectionType: single
-    - accept: '["CSV"]'
+    - accept:
+        array: []
     - marginType: normal
     - hidden: false
     - customValidation: ''
     - maxCount: null
     - hideValidationMessage: false
-    - text: Select File
+    - text: Browse
     - validationMessage: ''
     - showInEditor: false
     - parsing: false
@@ -35,20 +36,7 @@ template:
         array: []
     - iconBefore: bold/programming-browser-search
     - events:
-        - ordered:
-            - event: parse
-            - type: util
-            - method: showNotification
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered:
-                  - options:
-                      ordered:
-                        - notificationType: success
-                        - title: Parsed
-            - waitType: debounce
-            - waitMs: '0'
+        ordered: []
     - loading: false
     - loaderPosition: auto
     - disabled: false
@@ -59,9 +47,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: uploadMappingFileModal
-    row: 0.8000000000000002
-    col: 3
+    container: mapGoldenTitleGenreModal2
+    row: 2
+    col: 2
     height: 1
-    width: 6
-createdAt: 2023-10-19T22:03:56.851Z
+    width: 9
+createdAt: 2023-11-07T18:55:05.060Z

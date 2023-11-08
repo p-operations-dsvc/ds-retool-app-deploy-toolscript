@@ -1,7 +1,7 @@
-id: otherTitleSourceSelect
-uuid: 56e657cf-98e2-43f2-8a79-35f355abb7b7
+id: goldenTitlePageSelect
+uuid: 7e6c4d3b-25b3-4c40-a919-09660717c60c
 type: widget
-subtype: MultiselectWidget2
+subtype: SelectWidget2
 template:
   ordered:
     - imageByIndex:
@@ -11,30 +11,25 @@ template:
     - _values: []
     - iconByIndex:
         array: []
-    - values: '{{ item.ID }}'
+    - values:
+        array: []
     - readOnly: false
     - iconAfter: ''
     - _iconByIndex: []
-    - wrapTags: true
     - overlayMinWidth: null
-    - selectedIndexes:
-        array: []
-    - selectedItems:
-        array: []
+    - allowDeselect: false
     - inputValue: ''
     - marginType: normal
-    - persistSearchTerm: false
     - hidden: false
     - customValidation: ''
-    - data: '{{ get_ctm_source_system.data }}'
-    - maxCount: null
+    - data: '{{goldenTitleTablePagesVariable.value}}'
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:
         array: []
     - textBefore: ''
     - _fallbackTextByIndex: []
-    - minLines: null
+    - selectedItem: null
     - validationMessage: ''
     - automaticItemColors: false
     - itemAdornmentShape: circle
@@ -44,7 +39,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '[''BOFLASH'']'
+    - value: null
     - hiddenByIndex:
         array: []
     - labelCaption: ''
@@ -52,10 +47,10 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: ''
+    - placeholder: Select an option
     - _captionByIndex: []
     - itemAdornmentSize: auto
-    - label: Source
+    - label: Page
     - _hasMigratedNestedItems: true
     - captionByIndex:
         array: []
@@ -64,6 +59,7 @@ template:
     - labelWidthUnit: '%'
     - allowCustomValue: false
     - invalid: false
+    - selectedIndex: null
     - _tooltipByIndex: []
     - _colorByIndex: []
     - tooltipByIndex:
@@ -71,18 +67,32 @@ template:
     - iconBefore: ''
     - colorByIndex:
         array: []
+    - selectedLabel: ''
     - events:
-        ordered: []
+        - ordered:
+            - event: change
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: |-
+                      get_golden_title.trigger (
+                        {
+                        additionalScope: {
+                         page_number: goldenTitlePageSelect.value -1
+                        }
+                      }
+                      )
+            - waitType: debounce
+            - waitMs: '0'
     - _ids: []
     - emptyMessage: No options
-    - selectedLabels:
-        array: []
     - overlayMaxHeight: 375
-    - maxLines: null
     - loading: false
     - disabled: false
     - labelPosition: left
-    - minCount: null
     - _labels: []
     - labelWrap: false
     - disabledValues:
@@ -92,14 +102,15 @@ template:
     - maintainSpaceWhenHidden: false
     - _imageByIndex: []
     - required: false
-    - labels: '{{ item.NAME }}'
+    - labels:
+        array: []
 style:
   ordered: []
 position2:
   position2:
     container: mainContainer
-    subcontainer: 4153c
-    col: 5
+    subcontainer: 443b9
+    col: 11
     height: 1
-    width: 2
-createdAt: 2023-10-04T17:51:13.497Z
+    width: 1
+createdAt: 2023-11-07T18:06:59.646Z

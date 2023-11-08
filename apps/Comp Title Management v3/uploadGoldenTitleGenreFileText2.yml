@@ -1,5 +1,5 @@
-id: uploadGoldenTitleGenreFileText
-uuid: 4f6d58bf-59a3-48d1-b0d0-323be33c233c
+id: uploadGoldenTitleGenreFileText2
+uuid: 5b1bb2fc-bba2-4634-b24d-42fe25fabbb1
 type: widget
 subtype: TextWidget2
 template:
@@ -20,9 +20,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: mapGoldenTitleGenreModal
+    container: mapGoldenTitleGenreModal2
     row: 0.2
     col: 2
     height: 0.6
     width: 9
-createdAt: 2023-11-02T22:25:51.623Z
+createdAt: 2023-11-07T18:55:05.378Z

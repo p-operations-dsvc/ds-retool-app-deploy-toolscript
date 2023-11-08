@@ -1,5 +1,5 @@
-id: processGoldenTitleGenreFileButton
-uuid: 595a5d96-e03f-4717-9dcc-8f1bbd7bfef5
+id: uploadMappingFileProcessButton2
+uuid: bb4b11ee-4bf8-45c6-8e8d-720c71f19ae9
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: Submit
+    - text: Update Mapping
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -21,7 +21,7 @@ template:
             - event: click
             - type: datasource
             - method: trigger
-            - pluginId: process_uploaded_mapping_golden_title
+            - pluginId: process_uploaded_mapping_other_title
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +35,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: mapGoldenTitleGenreModal
-    row: 3.8
-    col: 2
+    container: mapOtherTitleModal
+    row: 2.8
+    col: 3
     height: 1
-    width: 9
-createdAt: 2023-11-02T22:20:23.606Z
+    width: 6
+createdAt: 2023-11-07T18:58:54.606Z

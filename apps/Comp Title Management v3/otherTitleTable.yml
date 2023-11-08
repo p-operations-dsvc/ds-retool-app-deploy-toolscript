@@ -81,19 +81,19 @@ template:
     - _toolbarButtonLabel:
         ordered:
           - 3c: Download
-          - 4d: Refresh
+          - 5eeed: Filter
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
         ordered:
           - 3c: bold/interface-download-button-2
-          - 4d: bold/interface-arrows-round-left
+          - 5eeed: bold/interface-text-formatting-filter-2
     - changesetArray:
         array: []
     - _toolbarButtonType:
         ordered:
           - 3c: custom
-          - 4d: custom
+          - 5eeed: filter
     - _columnStatusIndicator:
         ordered:
           - 4ed6e:
@@ -184,11 +184,11 @@ template:
           - 946d6: GOLDEN_TITLE_NAME
     - hidden: false
     - _toolbarButtonIds:
+        - 5eeed
         - 3c
-        - 4d
     - data: '{{ get_other_title.data }}'
     - _cellSelection: none
-    - _serverPaginated: true
+    - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
@@ -446,20 +446,11 @@ template:
         ordered: []
     - _virtualizeStartIndex: 0
     - _toolbarButtonHidden:
-        ordered: []
+        ordered:
+          - 5eeed: ''
     - _defaultFilters:
         ordered: []
     - events:
-        - ordered:
-            - event: changePage
-            - type: datasource
-            - method: trigger
-            - pluginId: get_other_title
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
         - ordered:
             - event: clickAction
             - type: widget
@@ -532,14 +523,6 @@ template:
             - method: exportData
             - pluginId: otherTitleTable
             - targetId: 3c
-        - ordered:
-            - type: widget
-            - waitMs: '0'
-            - waitType: debounce
-            - event: clickToolbar
-            - method: refresh
-            - pluginId: otherTitleTable
-            - targetId: 4d
     - _columnEditable:
         ordered:
           - 751f9: ''
@@ -549,11 +532,12 @@ template:
           - c59d0: ''
           - bc576: ''
           - 49aa8: ''
-          - '391e2': ''
+          - '391e2': false
           - a91cc: ''
           - a1b8e: false
           - 5506b: ''
           - 946d6: ''
+          - '': false
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -658,7 +642,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 4153c
-    row: 3.4000000000000004
-    height: 23
+    row: 2.0000000000000004
+    height: 24.4
     width: 12
 createdAt: 2023-09-27T18:35:58.567Z
