@@ -25,7 +25,7 @@ template:
     - _limitOffsetRowCount: null
     - selectedSourceRow: null
     - _dynamicColumnsEnabled: false
-    - disableSave: false
+    - disableSave: '{{securityGroupCheck.value}}'
     - _columnEditableOptions:
         ordered:
           - 9d1dd:
@@ -39,6 +39,7 @@ template:
           - 1a: Filter
           - 3c: Download
           - 4d: Refresh
+          - 835ce: Add
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
@@ -46,6 +47,7 @@ template:
           - 1a: bold/interface-text-formatting-filter-2
           - 3c: bold/interface-download-button-2
           - 4d: bold/interface-arrows-round-left
+          - 835ce: bold/interface-add-1
     - changesetArray:
         array: []
     - _toolbarButtonType:
@@ -53,6 +55,7 @@ template:
           - 1a: filter
           - 3c: custom
           - 4d: custom
+          - 835ce: custom
     - _columnOptionList:
         ordered:
           - 9d1dd:
@@ -79,6 +82,7 @@ template:
         - 1a
         - 3c
         - 4d
+        - 835ce
     - data: '{{ get_ctm_title_type.data }}'
     - _cellSelection: none
     - _serverPaginated: false
@@ -95,7 +99,7 @@ template:
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: ''
+    - _primaryKeyColumnId: 9d1dd
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
@@ -125,6 +129,7 @@ template:
         ordered:
           - 9d1dd: false
           - 20d64: false
+    - undefined: null
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -175,7 +180,7 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - 9d1dd: 387.25
+          - 9d1dd: 532.25
           - 20d64: 80.40625
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
@@ -188,9 +193,20 @@ template:
           - 1a: ''
           - 3c: ''
           - 4d: ''
+          - 835ce: '{{securityGroupCheck.value}}'
     - _defaultFilters:
         ordered: []
     - events:
+        - ordered:
+            - event: save
+            - type: datasource
+            - method: trigger
+            - pluginId: update_ctm_title_type
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
         - ordered:
             - type: widget
             - waitMs: '0'
@@ -209,8 +225,8 @@ template:
             - targetId: 4d
     - _columnEditable:
         ordered:
-          - 9d1dd: 'false'
-          - 20d64: ''
+          - 9d1dd: false
+          - 20d64: true
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -264,6 +280,7 @@ position2:
   position2:
     container: referenceDataContainer
     subcontainer: e8297
+    row: 1
     height: 8
     width: 12
 createdAt: 2023-09-29T16:53:24.952Z

@@ -1,0 +1,27 @@
+id: genreTableAddRowModalText
+uuid: a982b482-c26f-4716-bd05-d319806bf008
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: '**Add New Genre**'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: genreTableAddRowModal
+    col: 2
+    height: 0.6
+    width: 9
+createdAt: 2023-11-08T22:10:33.497Z

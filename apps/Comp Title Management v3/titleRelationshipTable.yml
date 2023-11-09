@@ -25,7 +25,7 @@ template:
     - _limitOffsetRowCount: null
     - selectedSourceRow: null
     - _dynamicColumnsEnabled: false
-    - disableSave: false
+    - disableSave: '{{securityGroupCheck.value}}'
     - _columnEditableOptions:
         ordered:
           - c31f7:
@@ -39,6 +39,7 @@ template:
           - 1a: Filter
           - 3c: Download
           - 4d: Refresh
+          - eb914: Add
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
@@ -46,6 +47,7 @@ template:
           - 1a: bold/interface-text-formatting-filter-2
           - 3c: bold/interface-download-button-2
           - 4d: bold/interface-arrows-round-left
+          - eb914: bold/interface-add-1
     - changesetArray:
         array: []
     - _toolbarButtonType:
@@ -53,6 +55,7 @@ template:
           - 1a: filter
           - 3c: custom
           - 4d: custom
+          - eb914: custom
     - _columnOptionList:
         ordered:
           - c31f7:
@@ -79,6 +82,7 @@ template:
         - 1a
         - 3c
         - 4d
+        - eb914
     - data: '{{ get_ctm_title_relationship_type.data }}'
     - _cellSelection: none
     - _serverPaginated: false
@@ -125,6 +129,7 @@ template:
         ordered:
           - c31f7: false
           - 46ebb: false
+    - undefined: null
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -175,7 +180,7 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - c31f7: 273.421875
+          - c31f7: 533.421875
           - 46ebb: 189.53125
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
@@ -188,14 +193,25 @@ template:
           - 1a: ''
           - 3c: ''
           - 4d: ''
+          - eb914: '{{securityGroupCheck.value}}'
     - _defaultFilters:
         ordered: []
     - events:
         - ordered:
+            - event: clickToolbar
+            - type: widget
+            - method: open
+            - pluginId: titleRelationshipTableAddRowModal
+            - targetId: eb914
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
             - event: save
             - type: datasource
             - method: trigger
-            - pluginId: update_unmap_other_title
+            - pluginId: update_ctm_title_relationship
             - targetId: null
             - params:
                 ordered: []
@@ -220,7 +236,7 @@ template:
     - _columnEditable:
         ordered:
           - c31f7: 'false'
-          - 46ebb: false
+          - 46ebb: true
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -246,7 +262,7 @@ template:
         ordered:
           - c31f7: center
           - 46ebb: center
-    - _enableSaveActions: false
+    - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
           - c31f7: Enter value
@@ -274,6 +290,7 @@ position2:
   position2:
     container: referenceDataContainer
     subcontainer: 7cf52
-    height: 8
+    row: 1
+    height: 7
     width: 12
 createdAt: 2023-09-29T16:53:24.735Z

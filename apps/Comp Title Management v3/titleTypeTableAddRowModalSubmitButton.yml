@@ -1,0 +1,43 @@
+id: titleTypeTableAddRowModalSubmitButton
+uuid: 644c0068-c8dd-4468-8a9f-e4e750b47e65
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: Submit
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: add_ctm_title_type
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: titleTypeTableAddRowModal
+    row: 5.8
+    col: 3
+    height: 1
+    width: 7
+createdAt: 2023-11-08T23:32:07.226Z

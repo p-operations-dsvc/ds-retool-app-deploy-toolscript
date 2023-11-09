@@ -1,0 +1,27 @@
+id: voteCountMagnitudeTableAddRowModalText
+uuid: 30c8adb9-88b0-472c-a0e4-e4946526f42b
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: '**Add New Vote Count Magnitude**'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: voteCountMagnitudeTableAddRowModal
+    col: 2
+    height: 0.6
+    width: 9
+createdAt: 2023-11-08T23:39:39.186Z

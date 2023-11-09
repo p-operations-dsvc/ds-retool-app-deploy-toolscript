@@ -1,0 +1,29 @@
+id: genreTableAddRowModal
+uuid: 855ee20d-7320-4738-98e3-a9f1f56ea9eb
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open
+style:
+  ordered: []
+position2:
+  position2:
+    container: referenceDataContainer
+    subcontainer: 4153c
+    row: -1.1102230246251565e-15
+    col: 4
+    height: 1
+createdAt: 2023-11-08T22:10:33.347Z

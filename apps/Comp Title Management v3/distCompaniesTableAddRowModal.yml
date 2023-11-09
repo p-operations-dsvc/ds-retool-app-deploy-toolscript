@@ -1,0 +1,28 @@
+id: distCompaniesTableAddRowModal
+uuid: a26312d7-7d1e-4e8f-8131-fcbcc4d6bae5
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open
+style:
+  ordered: []
+position2:
+  position2:
+    container: referenceDataContainer
+    subcontainer: 443b9
+    col: 9
+    height: 1
+createdAt: 2023-11-08T19:53:25.005Z

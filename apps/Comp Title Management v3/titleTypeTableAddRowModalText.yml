@@ -1,0 +1,27 @@
+id: titleTypeTableAddRowModalText
+uuid: 4b6cd0d3-d486-475c-bed8-cfaa43b774b4
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: '**Add New Title Type**'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: titleTypeTableAddRowModal
+    col: 2
+    height: 0.6
+    width: 9
+createdAt: 2023-11-08T23:32:06.675Z

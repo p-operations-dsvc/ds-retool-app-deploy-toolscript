@@ -1,0 +1,43 @@
+id: productionStatusTableAddRowModalSubmitButton
+uuid: afb5b669-d2d9-4ab4-a65d-a50e1d540a78
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: Submit
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: add_ctm_production_status
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: productionStatusTableAddRowModal
+    row: 5.8
+    col: 3
+    height: 1
+    width: 7
+createdAt: 2023-11-08T22:28:41.202Z

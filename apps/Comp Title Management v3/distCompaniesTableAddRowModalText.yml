@@ -1,0 +1,27 @@
+id: distCompaniesTableAddRowModalText
+uuid: f23966c9-24b2-4dc9-9133-b65c2d031a8b
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: '**Add New Distribution Company**'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: distCompaniesTableAddRowModal
+    col: 2
+    height: 0.6
+    width: 9
+createdAt: 2023-11-08T19:54:27.273Z

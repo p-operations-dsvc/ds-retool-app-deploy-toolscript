@@ -1,0 +1,28 @@
+id: sourceSystemTableAddRowModal
+uuid: 71b22a1e-0220-46ea-9415-6a66e4fa4ab0
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open
+style:
+  ordered: []
+position2:
+  position2:
+    container: referenceDataContainer
+    subcontainer: fb90a
+    col: 4
+    height: 1
+createdAt: 2023-11-08T22:41:20.378Z

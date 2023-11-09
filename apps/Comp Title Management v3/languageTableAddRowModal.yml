@@ -1,0 +1,28 @@
+id: languageTableAddRowModal
+uuid: 51e8847b-5a27-45e6-a32d-3caa22371561
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open
+style:
+  ordered: []
+position2:
+  position2:
+    container: referenceDataContainer
+    subcontainer: 6c9ea
+    col: 4
+    height: 1
+createdAt: 2023-11-08T22:20:07.853Z

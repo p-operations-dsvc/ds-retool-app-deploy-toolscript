@@ -1,0 +1,28 @@
+id: titleTypeTableAddRowModal
+uuid: a63d485f-1a85-43ff-ae26-c93342717374
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open
+style:
+  ordered: []
+position2:
+  position2:
+    container: referenceDataContainer
+    subcontainer: e8297
+    col: 4
+    height: 1
+createdAt: 2023-11-08T23:32:06.527Z
