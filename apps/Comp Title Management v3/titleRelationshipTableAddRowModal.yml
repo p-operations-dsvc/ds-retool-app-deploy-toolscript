@@ -1,0 +1,28 @@
+id: titleRelationshipTableAddRowModal
+uuid: fc93dcce-5040-486f-9976-1697557b9ad7
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open
+style:
+  ordered: []
+position2:
+  position2:
+    container: referenceDataContainer
+    subcontainer: 7cf52
+    col: 4
+    height: 1
+createdAt: 2023-11-08T23:05:33.407Z

@@ -1,0 +1,27 @@
+id: languageTableAddRowModalText
+uuid: 50bc468f-19db-4363-a8be-4512aeff108f
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: '**Add New Language**'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: languageTableAddRowModal
+    col: 2
+    height: 0.6
+    width: 9
+createdAt: 2023-11-08T22:20:08.000Z

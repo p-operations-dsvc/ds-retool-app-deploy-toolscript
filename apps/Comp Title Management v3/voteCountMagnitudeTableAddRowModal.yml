@@ -1,0 +1,28 @@
+id: voteCountMagnitudeTableAddRowModal
+uuid: b9749c07-8766-4c57-b81d-f8cb5e671876
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open
+style:
+  ordered: []
+position2:
+  position2:
+    container: referenceDataContainer
+    subcontainer: eca66
+    col: 5
+    height: 1
+createdAt: 2023-11-08T23:39:39.034Z

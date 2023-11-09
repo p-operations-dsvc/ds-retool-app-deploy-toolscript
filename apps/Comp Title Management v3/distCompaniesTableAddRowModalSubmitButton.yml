@@ -1,0 +1,43 @@
+id: distCompaniesTableAddRowModalSubmitButton
+uuid: 6604d582-56e5-42f0-adcb-e3733c2f8b60
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: Submit
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: add_ctm_dist_companies
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: distCompaniesTableAddRowModal
+    row: 5.800000000000001
+    col: 3
+    height: 1
+    width: 7
+createdAt: 2023-11-08T19:56:10.704Z

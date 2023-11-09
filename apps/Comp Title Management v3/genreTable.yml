@@ -25,7 +25,7 @@ template:
     - _limitOffsetRowCount: null
     - selectedSourceRow: null
     - _dynamicColumnsEnabled: false
-    - disableSave: false
+    - disableSave: '{{securityGroupCheck.value}}'
     - _columnEditableOptions:
         ordered:
           - e3415:
@@ -39,6 +39,7 @@ template:
           - 1a: Filter
           - 3c: Download
           - 4d: Refresh
+          - 9f5f7: Add
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
@@ -46,6 +47,7 @@ template:
           - 1a: bold/interface-text-formatting-filter-2
           - 3c: bold/interface-download-button-2
           - 4d: bold/interface-arrows-round-left
+          - 9f5f7: bold/interface-add-1
     - changesetArray:
         array: []
     - _toolbarButtonType:
@@ -53,6 +55,7 @@ template:
           - 1a: filter
           - 3c: custom
           - 4d: custom
+          - 9f5f7: custom
     - _columnStatusIndicator:
         ordered:
           - d2a39:
@@ -97,6 +100,7 @@ template:
         - 1a
         - 3c
         - 4d
+        - 9f5f7
     - data: '{{ get_ctm_genre.data }}'
     - _cellSelection: none
     - _serverPaginated: false
@@ -143,6 +147,7 @@ template:
         ordered:
           - e3415: false
           - fcbed: false
+    - undefined: null
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -193,7 +198,7 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - e3415: 405.953125
+          - e3415: 528.953125
           - fcbed: 92.390625
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
@@ -202,10 +207,31 @@ template:
         ordered: []
     - _virtualizeStartIndex: 0
     - _toolbarButtonHidden:
-        ordered: []
+        ordered:
+          - 9f5f7: '{{securityGroupCheck.value}}'
     - _defaultFilters:
         ordered: []
     - events:
+        - ordered:
+            - event: clickToolbar
+            - type: widget
+            - method: open
+            - pluginId: genreTableAddRowModal
+            - targetId: 9f5f7
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: save
+            - type: datasource
+            - method: trigger
+            - pluginId: update_ctm_genre
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
         - ordered:
             - type: widget
             - waitMs: '0'
@@ -225,7 +251,7 @@ template:
     - _columnEditable:
         ordered:
           - e3415: 'false'
-          - fcbed: ''
+          - fcbed: true
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -279,7 +305,7 @@ position2:
   position2:
     container: referenceDataContainer
     subcontainer: 4153c
-    row: 0.2
-    height: 8
+    row: 1
+    height: 7.6
     width: 12
 createdAt: 2023-09-29T16:53:23.865Z

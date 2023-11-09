@@ -25,7 +25,7 @@ template:
     - _limitOffsetRowCount: null
     - selectedSourceRow: null
     - _dynamicColumnsEnabled: false
-    - disableSave: false
+    - disableSave: '{{securityGroupCheck.value}}'
     - _columnEditableOptions:
         ordered:
           - dee49:
@@ -39,6 +39,7 @@ template:
           - 1a: Filter
           - 3c: Download
           - 4d: Refresh
+          - 56c25: Add
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
@@ -46,6 +47,7 @@ template:
           - 1a: bold/interface-text-formatting-filter-2
           - 3c: bold/interface-download-button-2
           - 4d: bold/interface-arrows-round-left
+          - 56c25: bold/interface-add-1
     - changesetArray:
         array: []
     - _toolbarButtonType:
@@ -53,6 +55,7 @@ template:
           - 1a: filter
           - 3c: custom
           - 4d: custom
+          - 56c25: custom
     - _columnStatusIndicator:
         ordered:
           - '29947':
@@ -97,6 +100,7 @@ template:
         - 1a
         - 3c
         - 4d
+        - 56c25
     - data: '{{ get_ctm_distribution_company.data }}'
     - _cellSelection: none
     - _serverPaginated: false
@@ -143,6 +147,7 @@ template:
         ordered:
           - dee49: false
           - 26d8b: false
+    - undefined: null
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -193,7 +198,7 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - dee49: 595.578125
+          - dee49: 534.578125
           - 26d8b: 77.578125
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
@@ -202,10 +207,31 @@ template:
         ordered: []
     - _virtualizeStartIndex: 0
     - _toolbarButtonHidden:
-        ordered: []
+        ordered:
+          - 56c25: '{{securityGroupCheck.value}}'
     - _defaultFilters:
         ordered: []
     - events:
+        - ordered:
+            - event: clickToolbar
+            - type: widget
+            - method: open
+            - pluginId: distCompaniesTableAddRowModal
+            - targetId: 56c25
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: save
+            - type: datasource
+            - method: trigger
+            - pluginId: update_ctm_dist_companies
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
         - ordered:
             - type: widget
             - waitMs: '0'
@@ -225,7 +251,7 @@ template:
     - _columnEditable:
         ordered:
           - dee49: 'false'
-          - 26d8b: ''
+          - 26d8b: true
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -279,7 +305,7 @@ position2:
   position2:
     container: referenceDataContainer
     subcontainer: 443b9
-    row: 0.6000000000000001
+    row: 1
     height: 8
     width: 12
 createdAt: 2023-09-29T16:53:23.665Z

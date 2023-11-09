@@ -1,0 +1,28 @@
+id: productionStatusTableAddRowModal
+uuid: 164be270-8e0f-4fa0-9cce-96d554a6cac9
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open
+style:
+  ordered: []
+position2:
+  position2:
+    container: referenceDataContainer
+    subcontainer: c7966
+    col: 3
+    height: 1
+createdAt: 2023-11-08T22:28:40.681Z

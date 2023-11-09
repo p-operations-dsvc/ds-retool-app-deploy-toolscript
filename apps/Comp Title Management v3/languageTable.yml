@@ -25,7 +25,7 @@ template:
     - _limitOffsetRowCount: null
     - selectedSourceRow: null
     - _dynamicColumnsEnabled: false
-    - disableSave: false
+    - disableSave: '{{securityGroupCheck.value}}'
     - _columnEditableOptions:
         ordered:
           - c5c96:
@@ -39,6 +39,7 @@ template:
           - 1a: Filter
           - 3c: Download
           - 4d: Refresh
+          - '68e17': Add
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
@@ -46,6 +47,7 @@ template:
           - 1a: bold/interface-text-formatting-filter-2
           - 3c: bold/interface-download-button-2
           - 4d: bold/interface-arrows-round-left
+          - '68e17': bold/interface-add-1
     - changesetArray:
         array: []
     - _toolbarButtonType:
@@ -53,6 +55,7 @@ template:
           - 1a: filter
           - 3c: custom
           - 4d: custom
+          - '68e17': custom
     - _columnStatusIndicator:
         ordered:
           - 6dacb:
@@ -97,6 +100,7 @@ template:
         - 1a
         - 3c
         - 4d
+        - '68e17'
     - data: '{{ get_ctm_language.data }}'
     - _cellSelection: none
     - _serverPaginated: false
@@ -143,6 +147,7 @@ template:
         ordered:
           - c5c96: false
           - dbab6: false
+    - undefined: null
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -193,7 +198,7 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - c5c96: 290.109375
+          - c5c96: 526.109375
           - dbab6: 196.59375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
@@ -202,10 +207,31 @@ template:
         ordered: []
     - _virtualizeStartIndex: 0
     - _toolbarButtonHidden:
-        ordered: []
+        ordered:
+          - '68e17': '{{securityGroupCheck.value}}'
     - _defaultFilters:
         ordered: []
     - events:
+        - ordered:
+            - event: save
+            - type: datasource
+            - method: trigger
+            - pluginId: update_ctm_language
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickToolbar
+            - type: widget
+            - method: open
+            - pluginId: languageTableAddRowModal
+            - targetId: '68e17'
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
         - ordered:
             - type: widget
             - waitMs: '0'
@@ -225,7 +251,7 @@ template:
     - _columnEditable:
         ordered:
           - c5c96: false
-          - dbab6: ''
+          - dbab6: true
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -279,6 +305,7 @@ position2:
   position2:
     container: referenceDataContainer
     subcontainer: 6c9ea
-    height: 8
+    row: 1
+    height: 7.6
     width: 12
 createdAt: 2023-09-29T16:53:24.084Z
