@@ -1,0 +1,24 @@
+id: otherTitleSourceSwitch
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >+
+        // Reference external variables with curly brackets or using JS
+        variables
+
+        let selected = {{otherTitleSourceSelect.value}}
+
+
+        if (selected.length==0) {
+          return {{get_ctm_source_system.data.ID.join('\',\'')}}
+        }
+
+        else {
+         return {{otherTitleSourceSelect.value.join('\',\'') }}
+        }
+
+         
+
+    - value: ''
+createdAt: 2023-11-10T21:35:33.683Z

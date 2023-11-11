@@ -17,7 +17,7 @@ template:
     - customValidation: ''
     - maxCount: null
     - hideValidationMessage: false
-    - text: Select File
+    - text: Browse
     - validationMessage: ''
     - showInEditor: false
     - parsing: false
@@ -51,7 +51,7 @@ template:
             - waitMs: '0'
     - loading: false
     - loaderPosition: auto
-    - disabled: false
+    - disabled: '{{securityGroupCheck.value}}'
     - minCount: null
     - maintainSpaceWhenHidden: false
     - required: false
@@ -60,8 +60,8 @@ style:
 position2:
   position2:
     container: mapOtherTitleModal
-    row: 0.8
-    col: 3
+    row: 1.4
+    col: 2
     height: 1
-    width: 6
+    width: 8
 createdAt: 2023-11-07T18:58:54.479Z

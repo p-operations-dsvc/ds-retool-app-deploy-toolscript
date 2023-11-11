@@ -79,21 +79,18 @@ template:
         ordered:
           - 1a: Filter
           - 3c: Download
-          - 4d: Refresh
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
         ordered:
           - 1a: bold/interface-text-formatting-filter-2
           - 3c: bold/interface-download-button-2
-          - 4d: bold/interface-arrows-round-left
     - changesetArray:
         array: []
     - _toolbarButtonType:
         ordered:
           - 1a: filter
           - 3c: custom
-          - 4d: custom
     - _columnOptionList:
         ordered:
           - 962dd:
@@ -134,7 +131,7 @@ template:
           - ec5e1: ''
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: '20'
+    - _templatePageSize: '{{get_user_preferences.data.SETTING_VALUE[1]}}'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true
@@ -155,10 +152,9 @@ template:
     - _toolbarButtonIds:
         - 1a
         - 3c
-        - 4d
     - data: '{{ get_manual_candidate_golden_title.data }}'
     - _cellSelection: none
-    - _serverPaginated: true
+    - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
@@ -401,7 +397,6 @@ template:
         ordered:
           - 1a: ''
           - 3c: ''
-          - 4d: ''
     - _defaultFilters:
         ordered: []
     - events:
@@ -455,14 +450,6 @@ template:
             - method: exportData
             - pluginId: mapManualCandidatesTable
             - targetId: 3c
-        - ordered:
-            - type: widget
-            - waitMs: '0'
-            - waitType: debounce
-            - event: clickToolbar
-            - method: refresh
-            - pluginId: mapManualCandidatesTable
-            - targetId: 4d
     - _columnEditable:
         ordered:
           - 962dd: false
@@ -573,7 +560,7 @@ style:
 position2:
   position2:
     container: mapOtherTitlesModal
-    row: 13.600000000000001
+    row: 14.600000000000001
     height: 8
     width: 12
 createdAt: 2023-10-05T01:21:33.118Z

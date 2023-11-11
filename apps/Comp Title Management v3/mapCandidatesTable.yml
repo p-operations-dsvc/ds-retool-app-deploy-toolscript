@@ -72,7 +72,8 @@ template:
           - 85b7c:
               ordered: []
     - _toolbarPosition: bottom
-    - _groupByColumns: []
+    - _groupByColumns:
+        ordered: []
     - _toolbarButtonLabel:
         ordered:
           - 1a: Filter
@@ -136,7 +137,7 @@ template:
           - 85b7c: ''
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: null
+    - _templatePageSize: '10'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true
@@ -342,17 +343,7 @@ template:
         array: []
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
-        ordered:
-          - 90d28: none
-          - 5c264: none
-          - 962dd: none
-          - 8b56d: none
-          - de3ee: none
-          - e3c42: none
-          - 7a4c7: none
-          - ee24f: none
-          - 368fc: none
-          - 85b7c: none
+        ordered: []
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -407,6 +398,27 @@ template:
     - _defaultFilters:
         ordered: []
     - events:
+        - ordered:
+            - event: selectRow
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: info
+                        - title: >-
+                            Selected title
+                            "{{mapCandidatesTable.selectedRow.GOLDEN_TITLE_NAME}}"
+                        - description: >-
+                            Release year
+                            {{mapCandidatesTable.selectedRow.GOLDEN_TITLE_RELEASE}},
+                            {{mapCandidatesTable.selectedRow.VOTE_MAGNITUDE_RANGE=='n/a'?"no":mapCandidatesTable.selectedRow.VOTE_MAGNITUDE_RANGE}}
+                            votes.
+            - waitType: debounce
+            - waitMs: '0'
         - ordered:
             - event: clickAction
             - type: state
@@ -497,7 +509,7 @@ template:
     - sortArray:
         array: []
     - _selectedCell: null
-    - overflowType: scroll
+    - overflowType: pagination
     - selectedCell: null
     - _defaultSelectedRow:
         ordered:

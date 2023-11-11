@@ -19,7 +19,7 @@ template:
     - validationMessage: ''
     - textAfter: ''
     - showInEditor: false
-    - showClear: false
+    - showClear: true
     - pattern: ''
     - tooltipText: ''
     - labelAlign: left
@@ -29,7 +29,7 @@ template:
     - labelWidth: '33'
     - autoFill: ''
     - placeholder: ''
-    - label: Title Name
+    - label: Title Name/ID
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false
@@ -52,5 +52,4 @@ position2:
     container: mapOtherTitlesModal
     row: 12.600000000000001
     height: 1
-    width: 4
 createdAt: 2023-10-05T01:19:37.372Z

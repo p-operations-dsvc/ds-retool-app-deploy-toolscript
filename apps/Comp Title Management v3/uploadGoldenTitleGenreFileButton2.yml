@@ -39,7 +39,7 @@ template:
         ordered: []
     - loading: false
     - loaderPosition: auto
-    - disabled: false
+    - disabled: '{{securityGroupCheck.value}}'
     - minCount: null
     - maintainSpaceWhenHidden: false
     - required: false
