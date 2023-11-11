@@ -27,7 +27,7 @@ template:
         ('T')[0].split('-')[0]}},
         {{manualCandidateTitleReleaseDateRange.value.end.split
         ('T')[0].split('-')[0]}},
-        {{manualCandidateTitleTypeSelect.value.join('\',\'')}},
+        {{manualCandidateTitleTypeSourceSwitch.value}},
         {{manualCandidateTitleText.value.replace ('\'', '\\\'')}},
         {{manualCandidateTitleCheckbox.value}})
     - playgroundQueryUuid: ''

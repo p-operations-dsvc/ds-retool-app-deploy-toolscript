@@ -27,10 +27,10 @@ template:
         ('T')[0].split('-')[0]}},
         {{manualCandidateTitleReleaseDateRange.value.end.split
         ('T')[0].split('-')[0]}},
-        {{manualCandidateTitleTypeSelect.value.join('\',\'')}},
+        {{manualCandidateTitleTypeSourceSwitch.value}},
         {{manualCandidateTitleText.value.replace ('\'', '\\\'')}},
         {{manualCandidateTitleCheckbox.value}}, 'GOLDEN_TITLE_ID', 'asc',
-        {{get_user_preferences.data.SETTING_VALUE[1]}},{{page_number}})
+        {{get_user_preferences.data.SETTING_VALUE[1]}},{{page_number}} )
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -86,7 +86,17 @@ template:
     - transformer: |-
         // Query results are available as the `data` variable
         return formatDataAsArray(data)
-    - events: []
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: setManualCandidateTitlePages
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - isMultiplayerEdited: false
     - tableName: ''
     - queryTimeout: '10001'
