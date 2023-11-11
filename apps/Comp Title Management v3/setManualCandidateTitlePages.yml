@@ -75,17 +75,7 @@ template:
     - transformer: |-
         // Query results are available as the `data` variable
         return data
-    - events:
-        - ordered:
-            - event: success
-            - type: widget
-            - method: refresh
-            - pluginId: goldenTitleProdCompaniesTable
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
+    - events: []
     - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
