@@ -1,4 +1,4 @@
-id: get_other_title
+id: get_manual_candidate_golden_title_rowcount
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 41c0a6e5-4e39-46dc-9646-6210eed0de36
@@ -22,16 +22,14 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        call get_other_title_v3 ({{otherTitleReleaseDateRange.value.start.split
-        ('T')[0].split('-')[0]}}, {{otherTitleReleaseDateRange.value.end.split
-        ('T')[0].split('-')[0]}}, {{otherTitleTypeSelect.value.join('\',\'')}},
-        {{otherTitleNameInput.value.replace ('\'', '\\\'')}},
-        {{otherTitleMapToggleButton.value}}, 
-
-        {{otherTitleSourceSwitch.value}}
-                                 , 'OTHER_TITLE_ID', 'asc', 
-        {{get_user_preferences.data.SETTING_VALUE[1]}},{{page_number}})
-         
+        call get_manual_candidate_golden_title_rowcount
+        ({{manualCandidateTitleReleaseDateRange.value.start.split
+        ('T')[0].split('-')[0]}},
+        {{manualCandidateTitleReleaseDateRange.value.end.split
+        ('T')[0].split('-')[0]}},
+        {{manualCandidateTitleTypeSelect.value.join('\',\'')}},
+        {{manualCandidateTitleText.value.replace ('\'', '\\\'')}},
+        {{manualCandidateTitleCheckbox.value}})
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -87,7 +85,17 @@ template:
     - transformer: |-
         // Query results are available as the `data` variable
         return formatDataAsArray(data)
-    - events: []
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: setManualCandidateTitlePages
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - isMultiplayerEdited: false
     - tableName: ''
     - queryTimeout: '10001'
@@ -105,4 +113,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-09-27T18:29:33.284Z
+createdAt: 2023-11-10T23:16:36.723Z

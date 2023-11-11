@@ -38,27 +38,27 @@ template:
           - 739b1:
               ordered:
                 - showStepper: true
-    - _toolbarPosition: bottom
+    - _toolbarPosition: top
     - _groupByColumns: []
     - _toolbarButtonLabel:
         ordered:
           - 1a: Filter
           - 3c: Download
-          - 4d: Refresh
+          - 6787d: Refresh
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
         ordered:
           - 1a: bold/interface-text-formatting-filter-2
           - 3c: bold/interface-download-button-2
-          - 4d: bold/interface-arrows-round-left
+          - 6787d: bold/interface-arrows-round-left
     - changesetArray:
         array: []
     - _toolbarButtonType:
         ordered:
           - 1a: filter
           - 3c: custom
-          - 4d: custom
+          - 6787d: custom
     - _columnOptionList:
         ordered:
           - 074d2:
@@ -92,7 +92,7 @@ template:
     - _toolbarButtonIds:
         - 1a
         - 3c
-        - 4d
+        - 6787d
     - data: '{{uploadMappingFileSelectButton2.parsedValue[0]}}'
     - _cellSelection: none
     - _serverPaginated: false
@@ -208,7 +208,7 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - ce6d2: 100
+          - ce6d2: 120
           - 739b1: 156
           - 074d2: 100
     - _serverPaginationType: limitOffsetBased
@@ -221,7 +221,7 @@ template:
         ordered:
           - 1a: ''
           - 3c: ''
-          - 4d: ''
+          - 6787d: ''
     - _defaultFilters:
         ordered: []
     - events:
@@ -240,7 +240,7 @@ template:
             - event: clickToolbar
             - method: refresh
             - pluginId: updloadFileTable2
-            - targetId: 4d
+            - targetId: 6787d
     - _columnEditable:
         ordered:
           - 074d2: ''
@@ -295,7 +295,7 @@ template:
     - _columnLabel:
         ordered:
           - 074d2: Golden Title ID
-          - ce6d2: Source system
+          - ce6d2: Source System
           - 739b1: Source System Title ID
     - _showToolbar: true
 style:
@@ -303,7 +303,7 @@ style:
 position2:
   position2:
     container: mapOtherTitleModal
-    row: 4.4
-    height: 8
+    row: 5.000000000000001
+    height: 7.3999999999999995
     width: 12
 createdAt: 2023-11-07T18:58:54.722Z

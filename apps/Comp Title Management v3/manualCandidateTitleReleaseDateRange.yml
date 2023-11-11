@@ -22,7 +22,7 @@ template:
     - formDataKey: '{{ self.id }}'
     - value:
         ordered:
-          - start: '{{ moment().add(-300, ''days'') }}'
+          - start: '{{ moment().add(-900, ''days'') }}'
           - end: '{{ moment().add(1, ''days'') }}'
     - startPlaceholder: '{{self.value.start}}'
     - labelCaption: ''
@@ -60,7 +60,7 @@ position2:
   position2:
     container: mapOtherTitlesModal
     row: 12.600000000000001
-    col: 4
+    col: 3
     height: 1
     width: 4
 createdAt: 2023-10-05T01:20:58.685Z

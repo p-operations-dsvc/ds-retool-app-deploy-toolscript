@@ -1,7 +1,7 @@
-id: manualCandidateTitleTypeSelect
-uuid: cd062dbd-919f-4e34-88c7-02b2061a65de
+id: manualCandidatePageSelect
+uuid: 4fccaee5-93c1-4206-810a-0f6e4751639c
 type: widget
-subtype: MultiselectWidget2
+subtype: SelectWidget2
 template:
   ordered:
     - imageByIndex:
@@ -11,30 +11,25 @@ template:
     - _values: []
     - iconByIndex:
         array: []
-    - values: '{{ item.ID }}'
+    - values:
+        array: []
     - readOnly: false
     - iconAfter: ''
     - _iconByIndex: []
-    - wrapTags: true
     - overlayMinWidth: null
-    - selectedIndexes:
-        array: []
-    - selectedItems:
-        array: []
+    - allowDeselect: false
     - inputValue: ''
     - marginType: normal
-    - persistSearchTerm: false
     - hidden: false
     - customValidation: ''
-    - data: '{{ get_ctm_title_type.data }}'
-    - maxCount: null
+    - data: '{{manualCandidateTitleTablePagesVariable.value}}'
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:
         array: []
     - textBefore: ''
     - _fallbackTextByIndex: []
-    - minLines: null
+    - selectedItem: null
     - validationMessage: ''
     - automaticItemColors: false
     - itemAdornmentShape: circle
@@ -44,7 +39,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '[''movie'']'
+    - value: null
     - hiddenByIndex:
         array: []
     - labelCaption: ''
@@ -52,10 +47,10 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select options
+    - placeholder: Select an option
     - _captionByIndex: []
     - itemAdornmentSize: auto
-    - label: Title Type
+    - label: ''
     - _hasMigratedNestedItems: true
     - captionByIndex:
         array: []
@@ -64,6 +59,7 @@ template:
     - labelWidthUnit: '%'
     - allowCustomValue: false
     - invalid: false
+    - selectedIndex: null
     - _tooltipByIndex: []
     - _colorByIndex: []
     - tooltipByIndex:
@@ -71,18 +67,32 @@ template:
     - iconBefore: ''
     - colorByIndex:
         array: []
+    - selectedLabel: ''
     - events:
-        ordered: []
+        - ordered:
+            - event: change
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: |-
+                      get_manual_candidate_golden_title.trigger (
+                        {
+                        additionalScope: {
+                         page_number:manualCandidatePageSelect.value -1
+                        }
+                      }
+                      )
+            - waitType: debounce
+            - waitMs: '0'
     - _ids: []
     - emptyMessage: No options
-    - selectedLabels:
-        array: []
     - overlayMaxHeight: 375
-    - maxLines: null
     - loading: false
     - disabled: false
     - labelPosition: left
-    - minCount: null
     - _labels: []
     - labelWrap: false
     - disabledValues:
@@ -92,13 +102,15 @@ template:
     - maintainSpaceWhenHidden: false
     - _imageByIndex: []
     - required: false
-    - labels: '{{ item.NAME }}'
+    - labels:
+        array: []
 style:
   ordered: []
 position2:
   position2:
     container: mapOtherTitlesModal
-    row: 12.6
-    col: 7
+    row: 12.600000000000001
+    col: 11
     height: 1
-createdAt: 2023-11-10T22:27:10.934Z
+    width: 1
+createdAt: 2023-11-10T22:29:35.329Z

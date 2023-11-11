@@ -1,0 +1,11 @@
+id: manualCandidateTitleTablePagesVariable
+type: state
+subtype: State
+template:
+  ordered:
+    - _persistedValueGetter: null
+    - _persistedValueSetter: null
+    - persistValue: false
+    - persistedValueKey: ''
+    - value: null
+createdAt: 2023-11-10T23:19:38.861Z

@@ -19,19 +19,27 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: datasource
-            - method: trigger
-            - pluginId: get_manual_candidate_golden_title
+            - type: script
+            - method: run
+            - pluginId: ''
             - targetId: null
             - params:
-                ordered: []
+                ordered:
+                  - src: |-
+                      get_manual_candidate_golden_title.trigger (
+                        {
+                        additionalScope: {
+                         page_number:0
+                        }
+                      }
+                      )
             - waitType: debounce
             - waitMs: '0'
         - ordered:
             - event: click
-            - type: widget
-            - method: refresh
-            - pluginId: mapManualCandidatesTable
+            - type: datasource
+            - method: trigger
+            - pluginId: get_manual_candidate_golden_title_rowcount
             - targetId: null
             - params:
                 ordered: []
@@ -39,7 +47,9 @@ template:
             - waitMs: '0'
     - loading: false
     - loaderPosition: auto
-    - disabled: false
+    - disabled: >-
+        {{manualCandidateTitleCheckbox.value && !
+        (manualCandidateTitleText.value.match(/^-?\d+$/))}} 
     - maintainSpaceWhenHidden: false
 style:
   ordered: []
@@ -47,7 +57,7 @@ position2:
   position2:
     container: mapOtherTitlesModal
     row: 12.600000000000001
-    col: 11
+    col: 10
     height: 1
     width: 1
 createdAt: 2023-10-05T01:22:18.070Z

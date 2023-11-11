@@ -1,0 +1,37 @@
+id: manualCandidateTitleCheckbox
+uuid: b0175b68-f1b7-4313-a304-3bb8c5c5d153
+type: widget
+subtype: CheckboxWidget2
+template:
+  ordered:
+    - marginType: normal
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - validationMessage: ''
+    - showInEditor: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: false
+    - labelCaption: ''
+    - label: Is Golden Title ID
+    - _validate: false
+    - invalid: false
+    - events:
+        ordered: []
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mapOtherTitlesModal
+    row: 13.6
+    col: 1
+    height: 0.6
+    width: 2
+createdAt: 2023-11-10T22:11:06.973Z

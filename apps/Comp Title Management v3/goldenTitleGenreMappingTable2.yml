@@ -33,7 +33,7 @@ template:
                 - showStepper: true
           - '48613':
               ordered: []
-    - _toolbarPosition: bottom
+    - _toolbarPosition: top
     - _groupByColumns: []
     - _toolbarButtonLabel:
         ordered:

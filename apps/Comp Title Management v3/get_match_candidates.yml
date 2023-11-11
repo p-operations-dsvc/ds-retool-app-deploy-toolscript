@@ -70,7 +70,10 @@ template:
         AND gt.INACTIVE_INDICATOR='false' 
 
         and ot.other_title_id={{titleToMapSelect.selectedItem.id}} ) scored
-        where  ROW_RANK<6
+        where  ROW_RANK<11
+
+        and
+        scored.jaro_score>={{get_user_preferences.dataArray.length==0?95:get_user_preferences.data.SETTING_VALUE[2]}}
 
         order by ROW_RANK asc
     - playgroundQueryUuid: ''

@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: Submit
+    - text: Update Mapping
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -29,7 +29,7 @@ template:
             - waitMs: '0'
     - loading: false
     - loaderPosition: auto
-    - disabled: false
+    - disabled: '{{securityGroupCheck.value}}'
     - maintainSpaceWhenHidden: false
 style:
   ordered: []

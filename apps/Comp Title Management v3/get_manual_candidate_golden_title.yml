@@ -22,25 +22,15 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        select GOLDEN_TITLE_ID, IMDB_TT_CD, TITLE_NAME, TITLE_TYPE,
-        RELEASE_YEAR, SEASON_NUM, EPISODE_NUM,  PRIMARY_GENRE,  IMDB_URL,
-        parent_golden_title_id from EDWCTM.GOLDEN_TITLE_V3 where title_type like
-        '%'||case when {{manualCandidateTitleTypeSelect.value}}='any' then ''
-        else {{manualCandidateTitleTypeSelect.value}} end||'%' 
-
-        and title_name ilike '%'||{{ manualCandidateTitleText.value}}||'%'
-
-        and release_year between
-        {{manualCandidateTitleReleaseDateRange.value.start.split
-        ('T')[0].split('-')[0]}} and
+        call get_manual_candidate_golden_title 
+        ({{manualCandidateTitleReleaseDateRange.value.start.split
+        ('T')[0].split('-')[0]}},
         {{manualCandidateTitleReleaseDateRange.value.end.split
-        ('T')[0].split('-')[0]}} 
-
-        and INACTIVE_INDICATOR='false'
-
-        order by GOLDEN_TITLE_ID limit {{
-        mapManualCandidatesTable.pagination.pageSize }} offset  {{
-        mapManualCandidatesTable.pagination.offset }}
+        ('T')[0].split('-')[0]}},
+        {{manualCandidateTitleTypeSelect.value.join('\',\'')}},
+        {{manualCandidateTitleText.value.replace ('\'', '\\\'')}},
+        {{manualCandidateTitleCheckbox.value}}, 'GOLDEN_TITLE_ID', 'asc',
+        {{get_user_preferences.data.SETTING_VALUE[1]}},{{page_number}})
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
