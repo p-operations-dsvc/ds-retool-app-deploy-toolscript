@@ -5,6 +5,7 @@ template:
   ordered:
     - opened: false
     - modalOverflowType: scroll
+    - hidden: 'true'
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''
@@ -14,14 +15,13 @@ template:
     - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''
-    - buttonText: Update Datapipeline
+    - buttonText: Open
 style:
   ordered: []
 position2:
   position2:
     container: dpEntryForm2
     rowGroup: footer
-    col: 4
+    col: 1
     height: 1
-    width: 3
 createdAt: 2023-03-01T00:23:59.048Z
