@@ -11,7 +11,7 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: Enter pipeline settings
+    - value: Update pipeline settings
     - _disclosedFields:
         array: []
     - disableMarkdown: false

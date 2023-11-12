@@ -1,0 +1,118 @@
+id: dpCreateCheckScheduleName
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: |-
+        const dps = get_dp_objects_all.data
+        var i = 0
+
+        while (i<dps.length) {
+
+         if (dps[i].schedule_name == dpScheduleName.value &&
+             dps[i].schedule_group == dpScheduleGroup.value 
+             ) {
+               utils.showNotification({ 
+          title: "Validation Error", 
+          description: "Schedule name is already used by a different datapipeline", 
+          notificationType: "error" ,
+          duration: 5});
+                dpScheduleName.focus();
+                return;
+              } 
+          else if (dps[i].datapipeline_name == dpObjName.value ) {
+             utils.showNotification({ 
+          title: "Validation Error", 
+          description: "Duplicate datapipeline name", 
+          notificationType: "error",
+          duration: 5});
+             dpObjName.focus();
+             return;
+          }
+          else if (dps[i].task_name == dpTaskName.value) {
+            utils.showNotification({ 
+          title: "Validation Error", 
+          description: "Duplicate task name", 
+          notificationType: "error",
+          duration: 5});
+            dpTaskName.focus();
+            return;
+          }
+          i++;
+        }
+        createDPModal.open();
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return data
+    - events: []
+    - isMultiplayerEdited: false
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - workflowBlockPluginId: null
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-11-12T00:10:27.014Z
