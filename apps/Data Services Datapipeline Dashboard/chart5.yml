@@ -1,0 +1,204 @@
+id: chart5
+uuid: c3cc43df-d0ea-49de-a3fb-0df7b317d78b
+type: widget
+subtype: PlotlyChartWidget
+template:
+  ordered:
+    - dataseries:
+        ordered:
+          - '11':
+              ordered:
+                - label: Median run time of succesful runs
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['Median
+                    run time of succesful runs']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#AED6BD'
+                - colors:
+                    ordered: []
+                - visible: false
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+          - '0':
+              ordered:
+                - label: days_in_service
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['days_in_service']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#033663'
+                - colors:
+                    ordered: []
+                - visible: false
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+          - '1':
+              ordered:
+                - label: days_since_first_run
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['days_since_first_run']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#247BC7'
+                - colors:
+                    ordered: []
+                - visible: false
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+          - '2':
+              ordered:
+                - label: Count of successful runs
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['Count
+                    of successful runs']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#55A1E3'
+                - colors:
+                    ordered: []
+                - visible: true
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+          - '3':
+              ordered:
+                - label: Count of failed runs
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['Count
+                    of failed runs']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#DAECFC'
+                - colors:
+                    ordered: []
+                - visible: true
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+          - '4':
+              ordered:
+                - label: Count of timed out runs
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['Count
+                    of timed out runs']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#EECA86'
+                - colors:
+                    ordered: []
+                - visible: false
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+          - '5':
+              ordered:
+                - label: Count of exceeded max concurrency runs
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['Count
+                    of exceeded max concurrency runs']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#E9AB11'
+                - colors:
+                    ordered: []
+                - visible: false
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+          - '6':
+              ordered:
+                - label: Count of auto restarted runs
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['Count
+                    of auto restarted runs']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#D47E2F'
+                - colors:
+                    ordered: []
+                - visible: false
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+          - '7':
+              ordered:
+                - label: Count of manually restarted runs
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['Count
+                    of manually restarted runs']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#C15627'
+                - colors:
+                    ordered: []
+                - visible: false
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+          - '8':
+              ordered:
+                - label: Average run time of succesful runs
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['Average
+                    run time of succesful runs']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#224930'
+                - colors:
+                    ordered: []
+                - visible: false
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+          - '9':
+              ordered:
+                - label: Min run time of succesful runs
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['Min
+                    run time of succesful runs']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#238146'
+                - colors:
+                    ordered: []
+                - visible: false
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+          - '10':
+              ordered:
+                - label: Max run time of succesful runs
+                - datasource: >-
+                    {{formatDataAsObject(getOneDPStatisticsVariable.value)['Max
+                    run time of succesful runs']}}
+                - chartType: bar
+                - aggregationType: sum
+                - color: '#55A874'
+                - colors:
+                    ordered: []
+                - visible: false
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+    - isDataTemplateDirty: true
+    - datasource: ''
+    - isJsonTemplateDirty: false
+    - groupByDropdown: ''
+    - datasourceInputMode: javascript
+    - datasourceDataType: array
+    - layout: ''
+    - xAxisDropdown: datapipeline_name
+    - data: ''
+    - isStackSeriesEnabled: false
+    - xAxisTickFormat: ''
+    - skipDatasourceUpdate: true
+    - datasourceJS: '{{getOneDPStatisticsVariable.value}}'
+    - yAxisTickFormat: ''
+    - datasourcePluginType: null
+    - xAxisType: default
+    - datasourcePluginId: null
+    - legendAlignment: bottom
+    - isLayoutJsonDirty: false
+    - chartType: bar
+    - title: Success vs Failure Counts
+    - xAxis: >-
+        {{formatDataAsObject(getOneDPStatisticsVariable.value).datapipeline_name}}
+    - groupByMode: dropdown
+    - onPointSelectQuery: ''
+    - xAxisMode: dropdown
+    - shouldShowLegend: true
+    - yAxisTitle: ''
+    - selectedPoints:
+        array: []
+    - xAxisTitle: ''
+    - groupByJS: ''
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 3d309
+    row: 2.6
+    height: 10.2
+    width: 6
+createdAt: 2023-11-14T00:13:10.414Z

@@ -1,0 +1,32 @@
+id: text2
+uuid: 4a30b12c-c1bc-4926-9a3e-fca949316f7f
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: >-
+        Number of days since inception:
+        {{getOneDPStatisticsVariable.value[0].days_in_service}}<p> Number of
+        days since 1st run:
+        {{getOneDPStatisticsVariable.value[0].days_since_first_run}}
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 3d309
+    row: 1
+    col: 4
+    height: 0.6
+createdAt: 2023-11-13T23:30:55.968Z
