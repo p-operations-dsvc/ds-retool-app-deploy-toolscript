@@ -8,15 +8,15 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - b9e6a: ''
           - '48613': ''
+          - '46715': ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
     - disableEdits: false
     - _rowHeight: medium
     - _columnIds:
-        - b9e6a
+        - '46715'
         - '48613'
     - _isSaving: false
     - _actionIds: []
@@ -28,11 +28,11 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - b9e6a:
-              ordered:
-                - showStepper: true
           - '48613':
               ordered: []
+          - '46715':
+              ordered:
+                - showStepper: true
     - _toolbarPosition: top
     - _groupByColumns: []
     - _toolbarButtonLabel:
@@ -56,14 +56,14 @@ template:
           - 4d: custom
     - _columnOptionList:
         ordered:
-          - b9e6a:
-              ordered: []
           - '48613':
+              ordered: []
+          - '46715':
               ordered: []
     - _columnValueOverride:
         ordered:
-          - b9e6a: ''
           - '48613': ''
+          - '46715': ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
@@ -73,8 +73,8 @@ template:
     - _currentPage: 0
     - _columnKey:
         ordered:
-          - b9e6a: GOLDEN_TILTLE_ID
           - '48613': GENRE_NAME
+          - '46715': GOLDEN_TITLE_ID
     - hidden: false
     - _toolbarButtonIds:
         - 1a
@@ -87,35 +87,35 @@ template:
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - b9e6a: ''
           - '48613': ''
+          - '46715': ''
     - _columnFormat:
         ordered:
-          - b9e6a: decimal
           - '48613': string
+          - '46715': decimal
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: b9e6a
+    - _primaryKeyColumnId: '46715'
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - b9e6a: right
           - '48613': left
+          - '46715': right
     - _actionIcon:
         ordered: []
     - _columnTooltip:
         ordered:
-          - b9e6a: ''
           - '48613': ''
+          - '46715': ''
     - _columnIcon:
         ordered:
-          - b9e6a: ''
           - '48613': ''
+          - '46715': ''
     - _columnCellTooltipMode:
         ordered:
-          - b9e6a: ''
           - '48613': ''
+          - '46715': ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -124,8 +124,8 @@ template:
     - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
-          - b9e6a: false
           - '48613': false
+          - '46715': false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -134,26 +134,26 @@ template:
         ordered: []
     - _columnReferenceId:
         ordered:
-          - b9e6a: ''
           - '48613': ''
+          - '46715': ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: single
     - _columnCaption:
         ordered:
-          - b9e6a: ''
           - '48613': ''
+          - '46715': ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - b9e6a:
+          - '48613':
+              ordered: []
+          - '46715':
               ordered:
                 - showSeparators: false
                 - notation: standard
-          - '48613':
-              ordered: []
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -161,8 +161,8 @@ template:
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
         ordered:
-          - b9e6a: none
           - '48613': none
+          - '46715': none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -172,14 +172,14 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - b9e6a:
-              ordered: []
           - '48613':
+              ordered: []
+          - '46715':
               ordered: []
     - _columnSize:
         ordered:
-          - '48613': 86.171875
-          - b9e6a: 151.890625
+          - '46715': 221.75
+          - '48613': 99.234375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
@@ -213,8 +213,8 @@ template:
     - _columnEditable:
         ordered:
           - '': false
-          - b9e6a: false
           - '48613': ''
+          - '46715': false
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -222,8 +222,8 @@ template:
         array: []
     - _columnGroupAggregationMode:
         ordered:
-          - b9e6a: sum
           - '48613': none
+          - '46715': sum
     - sortArray:
         array: []
     - _selectedCell: null
@@ -238,13 +238,13 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - b9e6a: center
           - '48613': center
+          - '46715': center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - b9e6a: Enter value
           - '48613': Enter value
+          - '46715': Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -255,12 +255,12 @@ template:
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - b9e6a: ''
           - '48613': ''
+          - '46715': ''
     - _columnLabel:
         ordered:
-          - b9e6a: Golden Title ID
           - '48613': Primary Genre
+          - '46715': Golden Title ID
     - _showToolbar: true
 style:
   ordered: []
