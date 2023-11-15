@@ -18,12 +18,66 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >+
-        const dps = [dpStatisticsDPName.value]
+    - query: >
+        const stats = get_dp_statistics.data;
 
-        getOneDPStatisticsVariable.setValue (get_dp_statistics.data.filter(i =>
-        dps.includes( i.datapipeline_name )))
+        var failure = [];
 
+        var overall = [];
+
+        var success = [];
+
+        if (stats.length>0) {
+
+        overall = [
+          {'Id': 1, 'Name': 'Days in Service', 'Value': stats[0].days_in_service},
+          {'Id': 2, 'Name': 'Days Since First Run', 'Value': stats[0].days_since_first_run},
+          {'Id': 3, 'Name': 'Count of Successful Runs', 'Value': stats[0].count_of_successful_runs},
+            {'Id': 4, 'Name': 'Count of Failed Runs', 'Value': stats[0].count_of_failed_runs}
+        ];
+
+        success = [{'Id': 1,'Name': 'Average Run Time', 'Value':
+        stats[0].average_run_time_of_succesful_runs},
+
+        {'Id': 2,'Name': 'Min Run Time', 'Value':
+        stats[0].min_run_time_of_succesful_runs},             
+
+        {'Id': 3,'Name': 'Max Run Time', 'Value':
+        stats[0].max_run_time_of_succesful_runs},             
+
+        {'Id': 4,'Name': 'Median Run Time', 'Value':
+        stats[0].median_run_time_of_succesful_runs}];
+
+
+        failure = [{'Id': 1,'Name': 'Average Run Time', 'Value':
+        stats[0].average_run_time_of_failed_runs},
+
+        {'Id': 2,'Name': 'Min Run Time', 'Value':
+        stats[0].min_run_time_of_failed_runs},             
+
+        {'Id': 3,'Name': 'Max Run Time', 'Value':
+        stats[0].max_run_time_of_failed_runs},             
+
+        {'Id': 4,'Name': 'Median Run Time', 'Value':
+        stats[0].median_run_time_of_failed_runs},
+
+        {'Id': 5,'Name': 'Container Errors', 'Value':
+        stats[0].count_of_errors},   
+
+        {'Id': 6,'Name': 'Concurrency Errors', 'Value':
+        stats[0].count_of_exceeded_max_concurrency_runs},   
+
+        {'Id': 7,'Name': 'Time Outs', 'Value':
+        stats[0].count_of_timed_out_runs}];
+
+
+        }
+
+        getOneDPStatisticsOverallVariable.setValue (overall);
+
+        getOneDPStatisticsSuccessVariable.setValue (success);
+
+        getOneDPStatisticsFailureVariable.setValue (failure);
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

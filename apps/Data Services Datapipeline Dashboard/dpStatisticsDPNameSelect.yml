@@ -1,14 +1,16 @@
-id: dpStatisticsDPName
-uuid: 6862e093-3863-401e-a63f-c61a0d954abf
+id: dpStatisticsDPNameSelect
+uuid: 15d0571e-2c08-4cf8-8a32-6f32398ad8f3
 type: widget
 subtype: SelectWidget2
 template:
   ordered:
-    - imageByIndex: ''
+    - imageByIndex:
+        array: []
     - _disabledByIndex: []
     - showSelectionIndicator: true
     - _values: []
-    - iconByIndex: ''
+    - iconByIndex:
+        array: []
     - values: '{{ item.datapipeline_name }}'
     - readOnly: false
     - iconAfter: ''
@@ -22,7 +24,8 @@ template:
     - data: '{{ get_dp_dropdown_statistics.data }}'
     - searchMode: fuzzy
     - hideValidationMessage: false
-    - fallbackTextByIndex: ''
+    - fallbackTextByIndex:
+        array: []
     - textBefore: ''
     - _fallbackTextByIndex: []
     - selectedItem: null
@@ -36,7 +39,8 @@ template:
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
     - value: '{{get_dp_dropdown_statistics.data[0].datapipeline_name}}'
-    - hiddenByIndex: ''
+    - hiddenByIndex:
+        array: []
     - labelCaption: ''
     - labelWidth: '33'
     - deprecatedLabels:
@@ -47,7 +51,8 @@ template:
     - itemAdornmentSize: auto
     - label: Datapipeline Name
     - _hasMigratedNestedItems: true
-    - captionByIndex: ''
+    - captionByIndex:
+        array: []
     - _validate: false
     - itemMode: dynamic
     - labelWidthUnit: '%'
@@ -56,21 +61,14 @@ template:
     - selectedIndex: null
     - _tooltipByIndex: []
     - _colorByIndex: []
-    - tooltipByIndex: ''
+    - tooltipByIndex:
+        array: []
     - iconBefore: ''
-    - colorByIndex: ''
+    - colorByIndex:
+        array: []
     - selectedLabel: ''
     - events:
-        - ordered:
-            - event: change
-            - type: datasource
-            - method: trigger
-            - pluginId: getOneDPStatistics
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
+        ordered: []
     - _ids: []
     - emptyMessage: No options
     - overlayMaxHeight: 375
@@ -81,7 +79,8 @@ template:
     - labelWrap: false
     - disabledValues:
         array: []
-    - disabledByIndex: ''
+    - disabledByIndex:
+        array: []
     - maintainSpaceWhenHidden: false
     - _imageByIndex: []
     - required: false
@@ -92,7 +91,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 3d309
-    col: 6
+    col: 7
     height: 1
-    width: 5
-createdAt: 2023-11-13T22:54:55.935Z
+    width: 4
+createdAt: 2023-11-14T22:25:24.524Z

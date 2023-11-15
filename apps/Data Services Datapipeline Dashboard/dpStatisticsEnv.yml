@@ -52,23 +52,13 @@ template:
             - event: change
             - type: datasource
             - method: trigger
-            - pluginId: get_dp_objects_all
+            - pluginId: get_dp_dropdown_statistics
             - targetId: null
             - params:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-        - ordered:
-            - event: change
-            - type: widget
-            - method: setValue
-            - pluginId: runEnvInFlight
-            - targetId: null
-            - params:
-                ordered:
-                  - value: '{{dpStatisticsEnv.value}}'
-            - waitType: debounce
-            - waitMs: '0'
+            - enabled: '{{!waitForStatsDPRefresh.value}}'
     - _ids:
         - d7cdf
         - 70b2f

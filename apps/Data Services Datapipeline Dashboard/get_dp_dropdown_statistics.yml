@@ -24,7 +24,8 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - paginationEnabled: false
-    - query: get_ds_pipeline_objects?datapipeline_name=DROPDOWN&env={{dpEnv2.value}}
+    - query: >-
+        get_ds_pipeline_objects?datapipeline_name=DROPDOWN&env={{dpStatisticsEnv.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
