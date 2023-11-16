@@ -24,13 +24,15 @@ template:
     - query: >-
         call get_other_title_v3 ({{otherTitleReleaseDateRange.value.start.split
         ('T')[0].split('-')[0]}}, {{otherTitleReleaseDateRange.value.end.split
-        ('T')[0].split('-')[0]}}, {{otherTitleTypeSelect.value.join('\',\'')}},
+        ('T')[0].split('-')[0]}}, {{otherTitleTypeSwitch.value}},
         {{otherTitleNameInput.value.replace ('\'', '\\\'')}},
         {{otherTitleMapToggleButton.value}}, 
 
         {{otherTitleSourceSwitch.value}}
                                  , 'OTHER_TITLE_ID', 'asc', 
-        {{get_user_preferences.data.SETTING_VALUE[1]}},{{page_number}})
+        {{get_user_preferences.data.SETTING_VALUE[1]}},{{page_number}},
+
+        {{goldenTitleIsTitleCheckbox.value}})
          
     - playgroundQueryUuid: ''
     - playgroundQueryId: null

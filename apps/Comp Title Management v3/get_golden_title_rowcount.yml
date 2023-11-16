@@ -25,8 +25,8 @@ template:
         CALL edwctm.get_golden_title_v3_rowcount
         ({{createdDateRange.value.start.split ('T')[0].split('-')[0]}} ,
         {{createdDateRange.value.end.split ('T')[0].split('-')[0]}},
-        {{titleTypeSelect.value.join('\',\'')}}, {{ titleNameInput.value.replace
-        ('\'', '\\\'')}});
+        {{goldenTitleTypeSwitch.value}}, {{ titleNameInput.value.replace ('\'',
+        '\\\'')}});
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

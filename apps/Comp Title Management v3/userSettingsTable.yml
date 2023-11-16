@@ -85,7 +85,7 @@ template:
           - 22a72: ''
           - f44dd: ''
           - f1073: ''
-          - 7d0c8: ''
+          - 7d0c8: '{{ _.startCase(item) }}'
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null

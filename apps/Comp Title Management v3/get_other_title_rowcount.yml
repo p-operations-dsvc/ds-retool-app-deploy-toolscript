@@ -25,10 +25,12 @@ template:
         call get_other_title_v3_rowcount
         ({{otherTitleReleaseDateRange.value.start.split
         ('T')[0].split('-')[0]}}, {{otherTitleReleaseDateRange.value.end.split
-        ('T')[0].split('-')[0]}}, {{otherTitleTypeSelect.value.join('\',\'')}},
+        ('T')[0].split('-')[0]}}, {{otherTitleTypeSwitch.value}},
         {{otherTitleNameInput.value.replace ('\'', '\\\'')}},
-        {{otherTitleMapToggleButton.value}}, 
-                                   {{otherTitleSourceSelect.value.join('\',\'')}})
+        {{otherTitleMapToggleButton.value}},                           
+        {{otherTitleSourceSwitch.value}},
+
+        {{goldenTitleIsTitleCheckbox.value}}                                 )
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
