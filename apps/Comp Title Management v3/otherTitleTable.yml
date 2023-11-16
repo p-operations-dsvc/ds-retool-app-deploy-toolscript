@@ -125,15 +125,27 @@ template:
           - 751f9:
               ordered: []
           - '3e516':
-              ordered: []
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_source_system.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
           - 582eb:
-              ordered: []
+              ordered:
+                - mode: manual
+                - mappedData: '{{ get_ctm_distribution_company.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
           - 8351e:
               ordered: []
           - c59d0:
               ordered: []
           - bc576:
-              ordered: []
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_title_type.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
           - 49aa8:
               ordered: []
           - '391e2':
@@ -149,11 +161,11 @@ template:
     - _columnValueOverride:
         ordered:
           - 751f9: ''
-          - '3e516': '{{ _.startCase(item) }}'
-          - 582eb: '{{ _.startCase(item) }}'
+          - '3e516': '{{item }}'
+          - 582eb: '{{ item }}'
           - 8351e: ''
           - c59d0: ''
-          - bc576: '{{ _.startCase(item) }}'
+          - bc576: '{{ item }}'
           - 49aa8: ''
           - '391e2': ''
           - a91cc: '{{ _.startCase(item) }}'
@@ -392,6 +404,9 @@ template:
           - c59d0: none
           - 5506b: none
           - 946d6: none
+          - bc576: none
+          - 582eb: none
+          - '3e516': none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -550,6 +565,9 @@ template:
           - c59d0: none
           - 5506b: none
           - 946d6: none
+          - bc576: none
+          - 582eb: none
+          - '3e516': none
     - sortArray:
         array: []
     - _selectedCell: null

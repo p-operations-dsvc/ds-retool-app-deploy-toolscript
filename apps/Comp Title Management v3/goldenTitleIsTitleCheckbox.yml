@@ -1,0 +1,38 @@
+id: goldenTitleIsTitleCheckbox
+uuid: ebdd9892-21f9-47e0-b29f-74122b28f8bc
+type: widget
+subtype: CheckboxWidget2
+template:
+  ordered:
+    - marginType: normal
+    - hidden: false
+    - customValidation: ''
+    - hideValidationMessage: false
+    - validationMessage: ''
+    - showInEditor: false
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: false
+    - labelCaption: ''
+    - label: Is Title ID
+    - _validate: false
+    - invalid: false
+    - events:
+        ordered: []
+    - disabled: false
+    - labelPosition: left
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 4153c
+    row: 1.2
+    col: 7
+    height: 0.6
+    width: 2
+createdAt: 2023-11-16T18:30:09.078Z

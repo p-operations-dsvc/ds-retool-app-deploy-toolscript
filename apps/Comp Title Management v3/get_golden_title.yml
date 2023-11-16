@@ -24,7 +24,7 @@ template:
     - query: >-
         CALL edwctm.get_golden_title_v3 ({{createdDateRange.value.start.split
         ('T')[0].split('-')[0]}} , {{createdDateRange.value.end.split
-        ('T')[0].split('-')[0]}}, {{titleTypeSelect.value.join('\',\'')}}, {{
+        ('T')[0].split('-')[0]}}, {{goldenTitleTypeSwitch.value}}, {{
         titleNameInput.value.replace ('\'', '\\\'')}}, 'GOLDEN_TITLE_ID', 'asc',
         {{get_user_preferences.data.SETTING_VALUE[1]}}, {{page_number}});
     - playgroundQueryUuid: ''
