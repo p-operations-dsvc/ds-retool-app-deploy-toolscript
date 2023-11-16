@@ -27,10 +27,10 @@ template:
     - value: >-
         {{get_user_preferences.dataArray.length==0?'':get_user_preferences.data.SETTING_VALUE[0]}}
     - labelCaption: ''
-    - labelWidth: '25'
+    - labelWidth: '30'
     - autoFill: ''
     - placeholder: ''
-    - label: Title Name
+    - label: Name / ID
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false
