@@ -57,7 +57,11 @@ template:
     - _columnOptionList:
         ordered:
           - '48613':
-              ordered: []
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_ctm_genre.data }}'
+                - valueByIndex: '{{ item.ID }}'
+                - labelByIndex: '{{ item.NAME }}'
           - '46715':
               ordered: []
     - _columnValueOverride:
@@ -91,7 +95,7 @@ template:
           - '46715': ''
     - _columnFormat:
         ordered:
-          - '48613': string
+          - '48613': tag
           - '46715': decimal
     - _cursorCache:
         object: {}
@@ -149,7 +153,8 @@ template:
     - _columnFormatOptions:
         ordered:
           - '48613':
-              ordered: []
+              ordered:
+                - automaticColors: true
           - '46715':
               ordered:
                 - showSeparators: false
@@ -243,7 +248,7 @@ template:
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - '48613': Enter value
+          - '48613': Select option
           - '46715': Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
