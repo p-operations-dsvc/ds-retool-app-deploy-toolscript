@@ -23,7 +23,7 @@ template:
     - showFailureToaster: true
     - query: >-
         call edwctm.map_golden_title_genre_bulk
-        (array_construct({{goldenTitleMappingTransform.value}}))
+        (array_construct({{input_array}}))
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -108,7 +108,7 @@ template:
             - event: success
             - type: widget
             - method: clearValue
-            - pluginId: uploadGoldenTitleGenreFileButton
+            - pluginId: uploadGoldenTitleGenreFileButton2
             - targetId: null
             - params:
                 ordered: []

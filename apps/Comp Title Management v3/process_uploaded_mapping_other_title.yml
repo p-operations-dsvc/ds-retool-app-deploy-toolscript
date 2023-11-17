@@ -21,9 +21,7 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >-
-        call edwctm.map_other_title_bulk
-        (array_construct({{otherTitleMappingTransform.value}}))
+    - query: call edwctm.map_other_title_bulk (array_construct({{input_array}}))
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -126,7 +124,7 @@ template:
             - event: success
             - type: widget
             - method: clearValue
-            - pluginId: uploadMappingFileSelectButton
+            - pluginId: uploadMappingFileSelectButton2
             - targetId: null
             - params:
                 ordered: []

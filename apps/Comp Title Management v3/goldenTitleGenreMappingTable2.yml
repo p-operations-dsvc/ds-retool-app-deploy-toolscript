@@ -101,7 +101,7 @@ template:
     - _columnAlignment:
         ordered:
           - '48613': left
-          - '46715': right
+          - '46715': center
     - _actionIcon:
         ordered: []
     - _columnTooltip:
@@ -178,7 +178,7 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - '46715': 221.75
+          - '46715': 329.75
           - '48613': 99.234375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
@@ -214,7 +214,7 @@ template:
         ordered:
           - '': false
           - '48613': ''
-          - '46715': false
+          - '46715': 'false'
     - _rowBackgroundColor:
         array: []
     - pagination: null

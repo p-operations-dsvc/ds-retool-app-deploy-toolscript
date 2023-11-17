@@ -9,7 +9,7 @@ template:
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: Upload mapping file
-    - modalHeight: ''
+    - modalHeight: '600'
     - onModalOpen: ''
     - events: []
     - modalWidth: ''

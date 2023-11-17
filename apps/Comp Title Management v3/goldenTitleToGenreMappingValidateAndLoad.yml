@@ -1,0 +1,109 @@
+id: goldenTitleToGenreMappingValidateAndLoad
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: |-
+        let upload = uploadGoldenTitleGenreFileButton2.parsedValue;
+        let arr = [];
+        if (upload.length==0) {
+          utils.showNotification({ title: "Error parsing input file", description: "No rows in the input file", notificationType: "error", duration: 5 });
+          return;
+        }
+        for (let i=0; i< upload[0].length; i++ ) { 
+          if (upload[0][i].GOLDEN_TITLE_ID===undefined || upload[0][i].GENRE_NAME===undefined) { 
+           // console.log ("Row "+i+" failed to parse, " + upload[0][i]);
+            utils.showNotification({ title: "Row "+i+" parse error", description: "Row failed to parse, missing one of the values", notificationType: "warning", duration: 5 });
+          }
+          else {
+            arr.push (upload[0][i].GOLDEN_TITLE_ID+"|"+upload[0][i].GENRE_NAME);
+            }
+        }
+        if (arr.length==0) {
+          utils.showNotification({ title: "Error parsing input file", description: "All rows failed to parse", notificationType: "error", duration: 5 });
+          return;
+        }
+
+        //console.log (arr);
+
+        process_uploaded_mapping_golden_title.trigger ({
+          additionalScope: {
+           input_array: arr
+           }
+          }
+         );
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return data
+    - events: []
+    - isMultiplayerEdited: false
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - workflowBlockPluginId: null
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-11-16T22:18:34.976Z

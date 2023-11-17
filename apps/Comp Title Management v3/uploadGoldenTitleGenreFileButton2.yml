@@ -11,8 +11,7 @@ template:
     - maxSize: ''
     - appendNewSelection: false
     - selectionType: single
-    - accept:
-        array: []
+    - accept: '["CSV"]'
     - marginType: normal
     - hidden: false
     - customValidation: ''

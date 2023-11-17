@@ -34,21 +34,7 @@ template:
     - files:
         array: []
     - iconBefore: bold/programming-browser-search
-    - events:
-        - ordered:
-            - event: parse
-            - type: util
-            - method: showNotification
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered:
-                  - options:
-                      ordered:
-                        - notificationType: success
-                        - title: Parsed
-            - waitType: debounce
-            - waitMs: '0'
+    - events: []
     - loading: false
     - loaderPosition: auto
     - disabled: '{{securityGroupCheck.value}}'
