@@ -9,9 +9,9 @@ template:
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: Upload Genre Map
-    - modalHeight: ''
+    - modalHeight: '600'
     - onModalOpen: ''
-    - modalWidth: ''
+    - modalWidth: 60%
     - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''
