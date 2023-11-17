@@ -11,6 +11,17 @@ template:
     - tooltipText: Upload Genre Map
     - modalHeight: '600'
     - onModalOpen: ''
+    - events:
+        - ordered:
+            - event: close
+            - type: widget
+            - method: clearValue
+            - pluginId: uploadGoldenTitleGenreFileButton2
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - modalWidth: 60%
     - closeOnOutsideClick: true
     - loading: ''
