@@ -1,4 +1,4 @@
-id: get_dp_run_history
+id: get_dp_run_container_log
 type: datasource
 subtype: RESTQuery
 resourceName: 5dce28aa-d15b-4da8-9a5b-cbc4b34e1cf0
@@ -25,7 +25,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        get_ds_pipeline_run_history?env={{runEnvHistory.value}}&execution_id={{searchRunTable.selectedRow.execution_id_full}}&history_type=sfn
+        get_ds_pipeline_run_history?env={{dpStatisticsEnv.value}}&history_type=container_log&execution_id={{execSelect.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -36,7 +36,7 @@ template:
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: true
+    - showSuccessToaster: false
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
     - cookies: ''
@@ -79,6 +79,16 @@ template:
         return data
     - events:
         - ordered:
+            - event: success
+            - type: widget
+            - method: open
+            - pluginId: executIonHistoryModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
             - event: failure
             - type: util
             - method: showNotification
@@ -94,6 +104,7 @@ template:
                         - duration: '5'
             - waitType: debounce
             - waitMs: '0'
+    - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -108,4 +119,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-02-25T01:52:22.920Z
+createdAt: 2023-11-28T00:58:16.644Z

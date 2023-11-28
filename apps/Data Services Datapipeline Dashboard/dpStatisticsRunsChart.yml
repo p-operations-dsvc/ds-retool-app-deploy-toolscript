@@ -52,6 +52,17 @@ template:
     - chartType: bar
     - title: Run Status Breakdowns
     - xAxis: '{{formatDataAsObject(get_dp_time_series.data)[''run_date'']}}'
+    - events:
+        - ordered:
+            - event: select
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_run_execution_ids
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - groupByMode: dropdown
     - onPointSelectQuery: ''
     - xAxisMode: dropdown
