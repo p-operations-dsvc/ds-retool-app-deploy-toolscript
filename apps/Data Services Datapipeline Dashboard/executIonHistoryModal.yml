@@ -11,7 +11,7 @@ template:
     - tooltipText: ''
     - modalHeight: 800px
     - onModalOpen: ''
-    - modalWidth: 80%
+    - modalWidth: 60%
     - closeOnOutsideClick: false
     - loading: ''
     - disabled: ''

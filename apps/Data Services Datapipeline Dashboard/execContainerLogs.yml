@@ -24,7 +24,7 @@ template:
           - 0922e: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
-    - heightType: fixed
+    - heightType: auto
     - disableEdits: false
     - _rowHeight: medium
     - _columnIds:
@@ -320,7 +320,7 @@ template:
           - 0922e: ''
     - _dynamicColumnSource:
         array: []
-    - _rowSelection: single
+    - _rowSelection: none
     - _columnCaption:
         ordered:
           - 6b460: ''
@@ -582,6 +582,6 @@ position2:
   position2:
     container: executIonHistoryModal
     row: 1
-    height: 17
+    height: 1
     width: 12
 createdAt: 2023-11-28T01:03:16.084Z

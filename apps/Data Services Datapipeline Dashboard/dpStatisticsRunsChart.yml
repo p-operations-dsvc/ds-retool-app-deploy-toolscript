@@ -63,6 +63,7 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+            - enabled: '{{dpStatisticsRunsChart.selectedPoints[0].y>0}}'
     - groupByMode: dropdown
     - onPointSelectQuery: ''
     - xAxisMode: dropdown
