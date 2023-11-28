@@ -26,7 +26,7 @@ template:
     - _clearChangesetOnSave: true
     - heightType: auto
     - disableEdits: false
-    - _rowHeight: medium
+    - _rowHeight: small
     - _columnIds:
         - 6b460
         - 7e3cd
@@ -140,7 +140,7 @@ template:
           - 0922e: ''
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: '100'
+    - _templatePageSize: '50'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true

@@ -55,15 +55,22 @@ template:
     - events:
         - ordered:
             - event: select
-            - type: datasource
-            - method: trigger
-            - pluginId: get_dp_run_execution_ids
+            - type: script
+            - method: run
+            - pluginId: ''
             - targetId: null
             - params:
-                ordered: []
+                ordered:
+                  - src: |-
+                      let points = dpStatisticsRunsChart.selectedPoints
+
+                      if (points.length>0 && points[0].y>0) {
+                        get_dp_run_execution_ids.trigger();
+                        
+                      }
             - waitType: debounce
             - waitMs: '0'
-            - enabled: '{{dpStatisticsRunsChart.selectedPoints[0].y>0}}'
+            - enabled: ''
     - groupByMode: dropdown
     - onPointSelectQuery: ''
     - xAxisMode: dropdown

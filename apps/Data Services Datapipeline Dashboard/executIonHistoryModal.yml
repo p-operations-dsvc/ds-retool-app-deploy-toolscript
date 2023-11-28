@@ -10,9 +10,9 @@ template:
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''
-    - modalHeight: 800px
+    - modalHeight: 1000px
     - onModalOpen: ''
-    - modalWidth: 60%
+    - modalWidth: 80%
     - closeOnOutsideClick: false
     - loading: ''
     - disabled: ''
