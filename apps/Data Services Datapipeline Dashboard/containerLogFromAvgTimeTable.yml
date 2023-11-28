@@ -1,5 +1,5 @@
-id: dpStatisticsSuccessTable
-uuid: 2e4e68f6-fd9c-4881-a7f3-928653bfc4da
+id: containerLogFromAvgTimeTable
+uuid: 38ba9a7b-45e7-49f7-beb6-c15d76c24dd2
 type: widget
 subtype: TableWidget2
 template:
@@ -8,21 +8,20 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - b566d: ''
-          - 8979c: ''
-          - ea3a6: ''
-    - _defaultSort:
-        - object:
-            columnId: b566d
-            direction: asc
+          - 837b9: ''
+          - 7915a: ''
+          - 1274a: ''
+          - 7aed0: ''
+    - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
     - disableEdits: false
-    - _rowHeight: medium
+    - _rowHeight: small
     - _columnIds:
-        - b566d
-        - 8979c
-        - ea3a6
+        - 837b9
+        - 7915a
+        - 1274a
+        - 7aed0
     - _isSaving: false
     - _actionIds: []
     - _clearChangeset: false
@@ -33,16 +32,17 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - b566d:
-              ordered:
-                - showStepper: true
-          - 8979c:
+          - 837b9:
               ordered: []
-          - ea3a6:
-              ordered:
-                - showStepper: true
+          - 7915a:
+              ordered: []
+          - 1274a:
+              ordered: []
+          - 7aed0:
+              ordered: []
     - _toolbarPosition: bottom
-    - _groupByColumns: []
+    - _groupByColumns:
+        ordered: []
     - _toolbarButtonLabel:
         ordered:
           - 1a: Filter
@@ -64,76 +64,86 @@ template:
           - 4d: custom
     - _columnOptionList:
         ordered:
-          - b566d:
+          - 837b9:
               ordered: []
-          - 8979c:
+          - 7915a:
               ordered: []
-          - ea3a6:
+          - 1274a:
+              ordered: []
+          - 7aed0:
               ordered: []
     - _columnValueOverride:
         ordered:
-          - b566d: ''
-          - 8979c: ''
-          - ea3a6: ''
+          - 837b9: ''
+          - 7915a: ''
+          - 1274a: ''
+          - 7aed0: ''
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: null
+    - _templatePageSize: '50'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true
     - _currentPage: 0
     - _columnKey:
         ordered:
-          - b566d: Id
-          - 8979c: Name
-          - ea3a6: Value
+          - 837b9: execution_id
+          - 7915a: stream_name
+          - 1274a: record_timestamp
+          - 7aed0: record_text
     - hidden: false
     - _toolbarButtonIds:
         - 1a
         - 3c
         - 4d
-    - data: '{{getOneDPStatisticsSuccessVariable.value}}'
+    - data: '{{ get_dp_run_container_log_from_avg_run_time.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - b566d: ''
-          - 8979c: ''
-          - ea3a6: ''
+          - 837b9: ''
+          - 7915a: ''
+          - 1274a: ''
+          - 7aed0: ''
     - _columnFormat:
         ordered:
-          - b566d: decimal
-          - 8979c: string
-          - ea3a6: decimal
+          - 837b9: string
+          - 7915a: string
+          - 1274a: string
+          - 7aed0: multilineString
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: b566d
+    - _primaryKeyColumnId: ''
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - b566d: right
-          - 8979c: left
-          - ea3a6: right
+          - 837b9: left
+          - 7915a: left
+          - 1274a: left
+          - 7aed0: left
     - _actionIcon:
         ordered: []
     - _columnTooltip:
         ordered:
-          - b566d: ''
-          - 8979c: ''
-          - ea3a6: ''
+          - 837b9: ''
+          - 7915a: ''
+          - 1274a: ''
+          - 7aed0: ''
     - _columnIcon:
         ordered:
-          - b566d: ''
-          - 8979c: ''
-          - ea3a6: ''
+          - 837b9: ''
+          - 7915a: ''
+          - 1274a: ''
+          - 7aed0: ''
     - _columnCellTooltipMode:
         ordered:
-          - b566d: ''
-          - 8979c: ''
-          - ea3a6: ''
+          - 837b9: ''
+          - 7915a: ''
+          - 1274a: ''
+          - 7aed0: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -142,9 +152,10 @@ template:
     - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
-          - b566d: false
-          - 8979c: false
-          - ea3a6: false
+          - 837b9: false
+          - 7915a: false
+          - 1274a: false
+          - 7aed0: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -153,42 +164,39 @@ template:
         ordered: []
     - _columnReferenceId:
         ordered:
-          - b566d: ''
-          - 8979c: ''
-          - ea3a6: ''
+          - 837b9: ''
+          - 7915a: ''
+          - 1274a: ''
+          - 7aed0: ''
     - _dynamicColumnSource:
         array: []
-    - _rowSelection: none
+    - _rowSelection: single
     - _columnCaption:
         ordered:
-          - b566d: ''
-          - 8979c: ''
-          - ea3a6: ''
+          - 837b9: ''
+          - 7915a: ''
+          - 1274a: ''
+          - 7aed0: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - b566d:
-              ordered:
-                - showSeparators: true
-                - notation: standard
-          - 8979c:
+          - 837b9:
               ordered: []
-          - ea3a6:
-              ordered:
-                - showSeparators: true
-                - notation: standard
+          - 7915a:
+              ordered: []
+          - 1274a:
+              ordered: []
+          - 7aed0:
+              ordered: []
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
         array: []
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
-        ordered:
-          - b566d: none
-          - 8979c: none
-          - ea3a6: none
+        ordered: []
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -198,20 +206,23 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - b566d:
+          - 837b9:
               ordered: []
-          - 8979c:
+          - 7915a:
               ordered: []
-          - ea3a6:
+          - 1274a:
+              ordered: []
+          - 7aed0:
               ordered: []
     - _columnSize:
         ordered:
-          - b566d: 28
-          - 8979c: 118.65625
-          - ea3a6: 58.171875
+          - 837b9: 100
+          - 7915a: 100
+          - 1274a: 199
+          - 7aed0: 100
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
-    - _showFooter: false
+    - _showFooter: true
     - _groupedColumnConfig:
         ordered: []
     - _virtualizeStartIndex: 0
@@ -222,12 +233,29 @@ template:
           - 4d: ''
     - _defaultFilters:
         ordered: []
-    - events: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: containerLogFromAvgTimeTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: containerLogFromAvgTimeTable
+            - targetId: 4d
     - _columnEditable:
         ordered:
-          - b566d: ''
-          - 8979c: ''
-          - ea3a6: ''
+          - 837b9: ''
+          - 7915a: ''
+          - 1274a: ''
+          - 7aed0: ''
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -235,13 +263,14 @@ template:
         array: []
     - _columnGroupAggregationMode:
         ordered:
-          - b566d: sum
-          - 8979c: none
-          - ea3a6: sum
+          - 837b9: none
+          - 7915a: none
+          - 1274a: none
+          - 7aed0: none
     - sortArray:
         array: []
     - _selectedCell: null
-    - overflowType: scroll
+    - overflowType: pagination
     - selectedCell: null
     - _defaultSelectedRow:
         ordered:
@@ -252,15 +281,17 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - b566d: center
-          - 8979c: center
-          - ea3a6: center
+          - 837b9: center
+          - 7915a: center
+          - 1274a: center
+          - 7aed0: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - b566d: Enter value
-          - 8979c: Enter value
-          - ea3a6: Enter value
+          - 837b9: Enter value
+          - 7915a: Enter value
+          - 1274a: Enter value
+          - 7aed0: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -271,22 +302,23 @@ template:
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - b566d: 'true'
-          - 8979c: ''
-          - ea3a6: ''
+          - 837b9: 'true'
+          - 7915a: 'true'
+          - 1274a: ''
+          - 7aed0: ''
     - _columnLabel:
         ordered:
-          - b566d: ID
-          - 8979c: Name
-          - ea3a6: Value
-    - _showToolbar: false
+          - 837b9: Execution ID
+          - 7915a: Stream name
+          - 1274a: Timestamp
+          - 7aed0: Log Record
+    - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
-    container: mainContainer
-    subcontainer: 3d309
-    row: 1.5999999999999992
-    col: 5
-    height: 7
-createdAt: 2023-11-14T23:19:12.760Z
+    container: executIonHistoryFromAvgRunTimeModal
+    row: 3.8
+    height: 19.599999999999998
+    width: 12
+createdAt: 2023-11-28T19:53:12.431Z

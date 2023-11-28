@@ -41,7 +41,17 @@ template:
     - chartType: line
     - title: Avg Run Time In Seconds
     - xAxis: '{{formatDataAsObject(get_dp_time_series.data)[''run_date'']}}'
-    - events: []
+    - events:
+        - ordered:
+            - event: select
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_run_execution_ids_from_avg_run_time
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - groupByMode: dropdown
     - onPointSelectQuery: ''
     - xAxisMode: dropdown

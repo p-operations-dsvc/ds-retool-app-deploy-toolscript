@@ -1,4 +1,4 @@
-id: execContainerLogs
+id: containerLogTable
 uuid: b68fee79-f5ba-48d4-a3c7-84d26eb3f732
 type: widget
 subtype: TableWidget2
@@ -443,7 +443,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: execContainerLogs
+            - pluginId: containerLogTable
             - targetId: 3c
         - ordered:
             - type: widget
@@ -451,7 +451,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: execContainerLogs
+            - pluginId: containerLogTable
             - targetId: 4d
     - _columnEditable:
         ordered:
@@ -581,7 +581,7 @@ style:
 position2:
   position2:
     container: executIonHistoryModal
-    row: 1
+    row: 3.1999999999999997
     height: 1
     width: 12
 createdAt: 2023-11-28T01:03:16.084Z

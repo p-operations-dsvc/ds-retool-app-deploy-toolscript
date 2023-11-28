@@ -1,4 +1,4 @@
-id: get_dp_run_container_log
+id: get_dp_run_container_log_from_avg_run_time
 type: datasource
 subtype: RESTQuery
 resourceName: 5dce28aa-d15b-4da8-9a5b-cbc4b34e1cf0
@@ -25,7 +25,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        get_ds_pipeline_run_history?env={{dpStatisticsEnv.value}}&history_type=container_log&execution_id={{containerLogSelect.value}}
+        get_ds_pipeline_run_history?env={{dpStatisticsEnv.value}}&history_type=container_log&execution_id={{containerLogFromAvgTimeSelect.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -79,26 +79,6 @@ template:
         return data
     - events:
         - ordered:
-            - event: success
-            - type: widget
-            - method: open
-            - pluginId: executIonHistoryModal
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: datasource
-            - method: trigger
-            - pluginId: get_dp_run_container_log_from_avg_run_time
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
             - event: failure
             - type: util
             - method: showNotification
@@ -129,4 +109,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-11-28T00:58:16.644Z
+createdAt: 2023-11-28T19:26:38.080Z
