@@ -1,0 +1,73 @@
+id: dpStatisticsTimeSeriesChart
+uuid: 3e877805-c6ab-41c7-930e-c48b8a09d1e9
+type: widget
+subtype: PlotlyChartWidget
+template:
+  ordered:
+    - dataseries:
+        ordered:
+          - '0':
+              ordered:
+                - label: Average Duration of a Run
+                - datasource: >-
+                    {{formatDataAsObject(get_dp_time_series.data)['avg_duration_in_secs']}}
+                - chartType: line
+                - aggregationType: none
+                - color: null
+                - colors:
+                    ordered:
+                      - '0': '#247BC7'
+                - visible: true
+                - hovertemplate: '<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>'
+    - isDataTemplateDirty: true
+    - datasource: ''
+    - isJsonTemplateDirty: false
+    - groupByDropdown: datapipeline_name
+    - datasourceInputMode: javascript
+    - datasourceDataType: array
+    - layout: ''
+    - xAxisDropdown: run_date
+    - data: ''
+    - isStackSeriesEnabled: false
+    - xAxisTickFormat: ''
+    - skipDatasourceUpdate: true
+    - datasourceJS: '{{get_dp_time_series.data}}'
+    - yAxisTickFormat: ''
+    - datasourcePluginType: null
+    - xAxisType: date
+    - datasourcePluginId: null
+    - legendAlignment: bottom
+    - isLayoutJsonDirty: false
+    - chartType: line
+    - title: Avg Run Time In Seconds
+    - xAxis: '{{formatDataAsObject(get_dp_time_series.data)[''run_date'']}}'
+    - events:
+        - ordered:
+            - event: select
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_run_execution_ids_from_avg_run_time
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - groupByMode: dropdown
+    - onPointSelectQuery: ''
+    - xAxisMode: dropdown
+    - shouldShowLegend: true
+    - yAxisTitle: ''
+    - selectedPoints:
+        array: []
+    - xAxisTitle: ''
+    - groupByJS: '{{formatDataAsObject(get_dp_time_series.data)[''datapipeline_name'']}}'
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 3d309
+    row: 16
+    height: 13
+    width: 12
+createdAt: 2023-11-14T22:29:31.693Z

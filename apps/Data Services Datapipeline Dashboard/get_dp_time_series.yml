@@ -1,4 +1,4 @@
-id: get_dp_run_history
+id: get_dp_time_series
 type: datasource
 subtype: RESTQuery
 resourceName: 5dce28aa-d15b-4da8-9a5b-cbc4b34e1cf0
@@ -18,14 +18,14 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: false
+    - runWhenModelUpdates: true
     - paginationPaginationField: ''
     - headers: ''
     - workflowRunId: null
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        get_ds_pipeline_run_history?env={{runEnvHistory.value}}&execution_id={{searchRunTable.selectedRow.execution_id_full}}&history_type=sfn
+        get_ds_pipeline_analytics?datapipeline_name={{dpStatisticsDPNameSelect.value}}&env={{dpStatisticsEnv.value}}&request_type=run_time_series
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -89,11 +89,12 @@ template:
                   - options:
                       ordered:
                         - notificationType: error
-                        - title: Failed to get history of execution
-                        - description: '{{get_dp_run_history.error}}'
+                        - title: Failed to get dp objects
+                        - description: '{{get_dp_objects_by_name.error}}'
                         - duration: '5'
             - waitType: debounce
             - waitMs: '0'
+    - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -108,4 +109,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-02-25T01:52:22.920Z
+createdAt: 2023-11-14T22:28:44.280Z

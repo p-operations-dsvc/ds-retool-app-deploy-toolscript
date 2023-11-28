@@ -1,27 +1,29 @@
-id: startDPModal
+id: executIonHistoryFromAvgRunTimeModal
+uuid: a17cdd41-1c2d-4a78-80d0-40d7ecac01ba
 type: widget
 subtype: ModalWidget
 template:
   ordered:
     - opened: false
     - modalOverflowType: scroll
+    - hidden: 'true'
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''
-    - modalHeight: '250'
+    - modalHeight: 1000px
     - onModalOpen: ''
-    - modalWidth: ''
+    - modalWidth: 80%
     - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''
-    - buttonText: Start Datapipeline
+    - buttonText: Execution Modal
 style:
   ordered: []
 position2:
   position2:
-    container: dpSettingRowModal
-    row: 0.5999999999999999
-    col: 3
-    height: 1.8
-    width: 6
-createdAt: 2023-02-28T21:08:13.794Z
+    container: mainContainer
+    subcontainer: 3d309
+    col: 5
+    height: 1
+    width: 1
+createdAt: 2023-11-28T19:24:01.471Z

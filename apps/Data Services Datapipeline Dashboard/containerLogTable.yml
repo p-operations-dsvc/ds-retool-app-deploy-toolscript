@@ -1,0 +1,587 @@
+id: containerLogTable
+uuid: b68fee79-f5ba-48d4-a3c7-84d26eb3f732
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - 6b460: ''
+          - effdb: ''
+          - cfead: ''
+          - '2e701': ''
+          - 7e3cd: ''
+          - '8e622': ''
+          - c4758: ''
+          - d2dc7: ''
+          - '36321': ''
+          - '50330': ''
+          - d79c3: ''
+          - '76636': ''
+          - '86933': ''
+          - 0922e: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: auto
+    - disableEdits: false
+    - _rowHeight: small
+    - _columnIds:
+        - 6b460
+        - 7e3cd
+        - '50330'
+        - 0922e
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - 6b460:
+              ordered: []
+          - effdb:
+              ordered: []
+          - cfead:
+              ordered: []
+          - '2e701':
+              ordered: []
+          - 7e3cd:
+              ordered: []
+          - '8e622':
+              ordered: []
+          - c4758:
+              ordered: []
+          - d2dc7:
+              ordered: []
+          - '36321':
+              ordered: []
+          - '50330':
+              ordered: []
+          - d79c3:
+              ordered: []
+          - '76636':
+              ordered: []
+          - '86933':
+              ordered: []
+          - 0922e:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns:
+        ordered: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnOptionList:
+        ordered:
+          - 6b460:
+              ordered: []
+          - effdb:
+              ordered: []
+          - cfead:
+              ordered: []
+          - '2e701':
+              ordered: []
+          - 7e3cd:
+              ordered: []
+          - '8e622':
+              ordered: []
+          - c4758:
+              ordered: []
+          - d2dc7:
+              ordered: []
+          - '36321':
+              ordered: []
+          - '50330':
+              ordered: []
+          - d79c3:
+              ordered: []
+          - '76636':
+              ordered: []
+          - '86933':
+              ordered: []
+          - 0922e:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - 6b460: ''
+          - effdb: ''
+          - cfead: ''
+          - '2e701': ''
+          - 7e3cd: ''
+          - '8e622': ''
+          - c4758: ''
+          - d2dc7: ''
+          - '36321': '{{ currentSourceRow.firstName }} {{ currentSourceRow.lastName }}'
+          - '50330': ''
+          - d79c3: ''
+          - '76636': ''
+          - '86933': ''
+          - 0922e: ''
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: '50'
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - 6b460: execution_id
+          - effdb: role
+          - cfead: firstName
+          - '2e701': createdAt
+          - 7e3cd: stream_name
+          - '8e622': website
+          - c4758: teams
+          - d2dc7: text
+          - '36321': email
+          - '50330': record_timestamp
+          - d79c3: lastName
+          - '76636': enabled
+          - '86933': id
+          - 0922e: record_text
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ get_dp_run_container_log.data }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - 6b460: ''
+          - effdb: ''
+          - cfead: ''
+          - '2e701': ''
+          - 7e3cd: ''
+          - '8e622': ''
+          - c4758: ''
+          - d2dc7: ''
+          - '36321': ''
+          - '50330': ''
+          - d79c3: ''
+          - '76636': ''
+          - '86933': ''
+          - 0922e: ''
+    - _columnFormat:
+        ordered:
+          - 6b460: string
+          - effdb: tag
+          - cfead: string
+          - '2e701': date
+          - 7e3cd: string
+          - '8e622': link
+          - c4758: tags
+          - d2dc7: multilineString
+          - '36321': avatar
+          - '50330': datetime
+          - d79c3: string
+          - '76636': boolean
+          - '86933': decimal
+          - 0922e: multilineString
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: ''
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - 6b460: left
+          - effdb: left
+          - cfead: left
+          - '2e701': left
+          - 7e3cd: left
+          - '8e622': left
+          - c4758: left
+          - d2dc7: left
+          - '36321': left
+          - '50330': left
+          - d79c3: left
+          - '76636': left
+          - '86933': right
+          - 0922e: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - 6b460: ''
+          - effdb: ''
+          - cfead: ''
+          - '2e701': ''
+          - 7e3cd: ''
+          - '8e622': ''
+          - c4758: ''
+          - d2dc7: ''
+          - '36321': ''
+          - '50330': ''
+          - d79c3: ''
+          - '76636': ''
+          - '86933': ''
+          - 0922e: ''
+    - _columnIcon:
+        ordered:
+          - 6b460: ''
+          - effdb: ''
+          - cfead: ''
+          - '2e701': ''
+          - 7e3cd: ''
+          - '8e622': ''
+          - c4758: ''
+          - d2dc7: ''
+          - '36321': ''
+          - '50330': ''
+          - d79c3: ''
+          - '76636': ''
+          - '86933': ''
+          - 0922e: ''
+    - _columnCellTooltipMode:
+        ordered:
+          - 6b460: ''
+          - effdb: ''
+          - cfead: ''
+          - '2e701': ''
+          - 7e3cd: ''
+          - '8e622': ''
+          - c4758: overflow
+          - d2dc7: overflow
+          - '36321': ''
+          - '50330': ''
+          - d79c3: ''
+          - '76636': ''
+          - '86933': ''
+          - 0922e: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - 6b460: false
+          - effdb: false
+          - cfead: false
+          - '2e701': false
+          - 7e3cd: false
+          - '8e622': false
+          - c4758: false
+          - d2dc7: false
+          - '36321': false
+          - '50330': false
+          - d79c3: false
+          - '76636': false
+          - '86933': false
+          - 0922e: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - 6b460: ''
+          - effdb: ''
+          - cfead: ''
+          - '2e701': ''
+          - 7e3cd: ''
+          - '8e622': ''
+          - c4758: ''
+          - d2dc7: ''
+          - '36321': name
+          - '50330': ''
+          - d79c3: ''
+          - '76636': ''
+          - '86933': ''
+          - 0922e: ''
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: none
+    - _columnCaption:
+        ordered:
+          - 6b460: ''
+          - effdb: ''
+          - cfead: ''
+          - '2e701': ''
+          - 7e3cd: ''
+          - '8e622': ''
+          - c4758: ''
+          - d2dc7: ''
+          - '36321': '{{ currentSourceRow.email }}'
+          - '50330': ''
+          - d79c3: ''
+          - '76636': ''
+          - '86933': ''
+          - 0922e: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - 6b460:
+              ordered: []
+          - effdb:
+              ordered:
+                - automaticColors: true
+          - cfead:
+              ordered: []
+          - '2e701':
+              ordered: []
+          - 7e3cd:
+              ordered: []
+          - '8e622':
+              ordered: []
+          - c4758:
+              ordered:
+                - automaticColors: true
+          - d2dc7:
+              ordered: []
+          - '36321':
+              ordered: []
+          - '50330':
+              ordered: []
+          - d79c3:
+              ordered: []
+          - '76636':
+              ordered: []
+          - '86933':
+              ordered: []
+          - 0922e:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - 0922e: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - 6b460:
+              ordered: []
+          - effdb:
+              ordered: []
+          - cfead:
+              ordered: []
+          - '2e701':
+              ordered: []
+          - 7e3cd:
+              ordered: []
+          - '8e622':
+              ordered: []
+          - c4758:
+              ordered: []
+          - d2dc7:
+              ordered: []
+          - '36321':
+              ordered: []
+          - '50330':
+              ordered: []
+          - d79c3:
+              ordered: []
+          - '76636':
+              ordered: []
+          - '86933':
+              ordered: []
+          - 0922e:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - '50330': 155.265625
+          - 6b460: 277.25
+          - 7e3cd: 444.109375
+          - 0922e: 1004
+    - _serverPaginationType: limitOffsetBased
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: containerLogTable
+            - targetId: 3c
+        - ordered:
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: containerLogTable
+            - targetId: 4d
+    - _columnEditable:
+        ordered:
+          - 6b460: ''
+          - effdb: ''
+          - cfead: ''
+          - '2e701': ''
+          - 7e3cd: ''
+          - '8e622': ''
+          - c4758: ''
+          - d2dc7: ''
+          - '36321': ''
+          - '50330': ''
+          - d79c3: ''
+          - '76636': ''
+          - '86933': ''
+          - 0922e: ''
+    - _rowBackgroundColor:
+        array: []
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - 6b460: none
+          - effdb: none
+          - cfead: none
+          - '2e701': none
+          - 7e3cd: none
+          - '8e622': none
+          - c4758: none
+          - d2dc7: none
+          - '36321': none
+          - '50330': none
+          - d79c3: none
+          - '76636': none
+          - '86933': countDistinct
+          - 0922e: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: pagination
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - 6b460: center
+          - effdb: center
+          - cfead: center
+          - '2e701': center
+          - 7e3cd: center
+          - '8e622': center
+          - c4758: center
+          - d2dc7: center
+          - '36321': center
+          - '50330': center
+          - d79c3: center
+          - '76636': center
+          - '86933': center
+          - 0922e: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - 6b460: Enter value
+          - effdb: Select option
+          - cfead: Enter value
+          - '2e701': ''
+          - 7e3cd: Enter value
+          - '8e622': ''
+          - c4758: Select options
+          - d2dc7: ''
+          - '36321': ''
+          - '50330': Enter value
+          - d79c3: Enter value
+          - '76636': ''
+          - '86933': ''
+          - 0922e: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - 6b460: 'true'
+          - effdb: ''
+          - cfead: ''
+          - '2e701': ''
+          - 7e3cd: 'true'
+          - '8e622': ''
+          - c4758: ''
+          - d2dc7: ''
+          - '36321': ''
+          - '50330': ''
+          - d79c3: ''
+          - '76636': ''
+          - '86933': ''
+          - 0922e: ''
+    - _columnLabel:
+        ordered:
+          - 6b460: Execution ID
+          - effdb: Role
+          - cfead: First name
+          - '2e701': Created at
+          - 7e3cd: Stream name
+          - '8e622': Website
+          - c4758: Teams
+          - d2dc7: Bio
+          - '36321': User
+          - '50330': Timestamp
+          - d79c3: Last name
+          - '76636': Enabled
+          - '86933': ID
+          - 0922e: Log Record
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    container: executIonHistoryModal
+    row: 3.1999999999999997
+    height: 1
+    width: 12
+createdAt: 2023-11-28T01:03:16.084Z

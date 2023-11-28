@@ -1,0 +1,28 @@
+id: dpStatisticsSuccessText
+uuid: 8def2d33-8810-4867-994a-d35e19845b6f
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: '**Success (Run Times in Seconds)**'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 3d309
+    row: 0.9999999999999999
+    col: 5
+    height: 0.6
+createdAt: 2023-11-14T23:25:49.424Z
