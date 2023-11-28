@@ -11,7 +11,7 @@ template:
     - _values: []
     - iconByIndex:
         array: []
-    - values: '{{ item.execution_id }}'
+    - values: '{{ item.execution_id}}'
     - readOnly: false
     - iconAfter: ''
     - _iconByIndex: []
