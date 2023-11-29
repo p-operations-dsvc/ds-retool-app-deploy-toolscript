@@ -91,7 +91,6 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 3d309
-    col: 7
+    col: 9
     height: 1
-    width: 4
 createdAt: 2023-11-14T22:25:24.524Z

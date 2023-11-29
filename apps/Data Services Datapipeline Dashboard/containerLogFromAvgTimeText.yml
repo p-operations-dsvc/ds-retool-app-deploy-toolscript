@@ -1,56 +1,33 @@
 id: containerLogFromAvgTimeText
-uuid: 8fe16b94-bdc9-4f9e-b47c-c446052d85a7
+uuid: 873caa6a-4e17-454f-b668-be82afb55966
 type: widget
-subtype: TextInputWidget2
+subtype: TextWidget2
 template:
   ordered:
-    - spellCheck: false
-    - readOnly: false
-    - iconAfter: ''
-    - showCharacterCount: false
-    - autoComplete: false
+    - heightType: auto
+    - horizontalAlign: center
     - marginType: normal
-    - maxLength: null
     - hidden: false
-    - customValidation: ''
-    - patternType: ''
-    - hideValidationMessage: false
-    - textBefore: ''
-    - validationMessage: ''
-    - textAfter: ''
+    - imageWidth: fit
     - showInEditor: false
-    - showClear: false
-    - pattern: ''
+    - verticalAlign: center
     - tooltipText: ''
-    - labelAlign: left
-    - formDataKey: '{{ self.id }}'
-    - value: '{{containerLogFromAvgTimeSelect.value}}'
-    - labelCaption: ''
-    - labelWidth: '10'
-    - autoFill: ''
-    - placeholder: Enter value
-    - label: Execution Id
-    - _validate: false
-    - labelWidthUnit: '%'
-    - invalid: false
-    - iconBefore: ''
-    - minLength: null
-    - inputTooltip: ''
-    - events:
-        ordered: []
-    - autoCapitalize: none
-    - loading: false
-    - disabled: 'true'
-    - labelPosition: left
-    - labelWrap: false
+    - value: >-
+        **<h4>Execution ID
+        {{get_dp_run_container_log_from_avg_run_time.data[0].execution_id}}</h4>**
+    - style:
+        ordered:
+          - background: info
+    - disableMarkdown: false
+    - overflowType: scroll
     - maintainSpaceWhenHidden: false
-    - required: false
 style:
   ordered: []
 position2:
   position2:
     container: executIonHistoryFromAvgRunTimeModal
-    row: 2
-    height: 1
-    width: 12
-createdAt: 2023-11-28T19:57:03.893Z
+    row: 1.6
+    col: 2
+    height: 0.6
+    width: 8
+createdAt: 2023-11-28T23:54:28.180Z

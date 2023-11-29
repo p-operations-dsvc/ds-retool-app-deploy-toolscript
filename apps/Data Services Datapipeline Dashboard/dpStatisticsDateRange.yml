@@ -1,4 +1,5 @@
-id: startDateRangeHistory
+id: dpStatisticsDateRange
+uuid: ecc76c6e-2685-4444-8105-140f7bb30556
 type: widget
 subtype: DateRangeWidget
 template:
@@ -6,9 +7,7 @@ template:
     - minDate: ''
     - readOnly: false
     - iconAfter: ''
-    - dateFormat: |-
-
-        yyyy-MM-dd
+    - dateFormat: yyyy-MM-dd
     - marginType: normal
     - hidden: false
     - customValidation: ''
@@ -23,18 +22,13 @@ template:
     - formDataKey: '{{ self.id }}'
     - value:
         ordered:
-          - start: '{{ moment().add(-6, ''days'') }}'
-          - end: |-
-
-              {{ moment().add(1, 'days') }}
+          - start: '{{ moment().add(-6, ''months'')}}'
+          - end: '{{ moment().add(1, ''days'') }}'
     - startPlaceholder: '{{self.value.start}}'
     - labelCaption: ''
     - maxDate: ''
-    - labelWidth: '29'
-    - _disclosedFields:
-        array: []
-    - label: |
-        Select Start Date
+    - labelWidth: '33'
+    - label: Start/End Dates
     - formattedValue: ''
     - _validate: false
     - labelWidthUnit: '%'
@@ -43,16 +37,7 @@ template:
     - iconBefore: bold/interface-calendar-remove
     - endPlaceholder: '{{self.value.end}}'
     - events:
-        - ordered:
-            - event: change
-            - type: widget
-            - method: refresh
-            - pluginId: searchRunTable
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
+        ordered: []
     - textBetween: '-'
     - loading: false
     - disabled: false
@@ -65,8 +50,8 @@ style:
 position2:
   position2:
     container: mainContainer
-    subcontainer: df36c
-    row: -2.4424906541753444e-15
-    col: 2
+    subcontainer: 3d309
+    col: 4
     height: 1
-createdAt: 2023-02-14T02:02:30.843Z
+    width: 5
+createdAt: 2023-11-29T00:32:57.671Z

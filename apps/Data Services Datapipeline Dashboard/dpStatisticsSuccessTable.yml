@@ -278,7 +278,7 @@ template:
         ordered:
           - b566d: ID
           - 8979c: Name
-          - ea3a6: Value
+          - ea3a6: Successful Runs
     - _showToolbar: false
 style:
   ordered: []
@@ -286,7 +286,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 3d309
-    row: 1.5999999999999992
+    row: 1.7999999999999992
     col: 5
     height: 7
 createdAt: 2023-11-14T23:19:12.760Z
