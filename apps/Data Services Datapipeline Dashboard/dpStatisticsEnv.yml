@@ -32,7 +32,7 @@ template:
     - tooltipText: ''
     - labelAlign: right
     - formDataKey: '{{ self.id }}'
-    - value: '{{ self.values[0] }}'
+    - value: '{{ self.values[2] }}'
     - labelCaption: ''
     - labelWidth: '33'
     - deprecatedLabels:
