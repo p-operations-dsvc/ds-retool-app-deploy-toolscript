@@ -18,7 +18,7 @@ template:
     - showInEditor: false
     - showClear: false
     - tooltipText: ''
-    - labelAlign: left
+    - labelAlign: right
     - formDataKey: '{{ self.id }}'
     - value:
         ordered:
