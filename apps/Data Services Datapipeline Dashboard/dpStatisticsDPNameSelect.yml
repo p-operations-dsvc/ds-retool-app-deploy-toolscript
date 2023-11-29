@@ -36,7 +36,7 @@ template:
     - showInEditor: false
     - showClear: false
     - tooltipText: ''
-    - labelAlign: left
+    - labelAlign: right
     - formDataKey: '{{ self.id }}'
     - value: '{{get_dp_dropdown_statistics.data[0].datapipeline_name}}'
     - hiddenByIndex:

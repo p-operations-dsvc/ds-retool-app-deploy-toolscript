@@ -30,7 +30,7 @@ template:
     - validationMessage: ''
     - showInEditor: false
     - tooltipText: ''
-    - labelAlign: left
+    - labelAlign: right
     - formDataKey: '{{ self.id }}'
     - value: '{{ self.values[0] }}'
     - labelCaption: ''
