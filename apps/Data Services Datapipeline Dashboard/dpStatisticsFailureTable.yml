@@ -278,7 +278,7 @@ template:
         ordered:
           - 26bd6: ID
           - e978b: Name
-          - 794c0: Value
+          - 794c0: Failed Runs
     - _showToolbar: false
 style:
   ordered: []
@@ -286,7 +286,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 3d309
-    row: 1.6
+    row: 1.8
     col: 9
     height: 6.999999999999999
 createdAt: 2023-11-14T23:20:34.492Z
