@@ -62,17 +62,7 @@ template:
     - iconBefore: ''
     - colorByIndex: ''
     - selectedLabel: ''
-    - events:
-        - ordered:
-            - event: change
-            - type: widget
-            - method: refresh
-            - pluginId: searchRunTable
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
+    - events: []
     - _ids: []
     - emptyMessage: No options
     - overlayMaxHeight: 375
