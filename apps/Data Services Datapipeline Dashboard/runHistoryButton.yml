@@ -1,0 +1,43 @@
+id: runHistoryButton
+uuid: 7d05e0b2-5d75-49fd-b72b-00bfb2ecf4ad
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: center
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: Search
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_run
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: df36c
+    col: 11
+    height: 1
+    width: 1
+createdAt: 2023-11-30T19:16:25.877Z
