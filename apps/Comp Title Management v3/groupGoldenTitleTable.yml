@@ -240,7 +240,7 @@ template:
           - 930d7: tag
           - 727ec: string
           - 6c433: string
-          - 918a6: decimal
+          - 918a6: string
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
@@ -263,7 +263,7 @@ template:
           - 930d7: center
           - 727ec: left
           - 6c433: left
-          - 918a6: center
+          - 918a6: left
     - _actionIcon:
         ordered: []
     - _columnTooltip:

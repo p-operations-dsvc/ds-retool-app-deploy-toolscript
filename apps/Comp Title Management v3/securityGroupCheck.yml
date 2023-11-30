@@ -5,7 +5,7 @@ template:
   ordered:
     - funcBody: |-
         let groups = {{current_user.groups}}
-        let editor_groups = ['CTM Editors', 'admin']
+        let editor_groups = ['CTM Editors', 'admin', 'CTM Owners']
         for (const key in groups) {
           if (editor_groups.includes (groups[key].name)) {
              return false
