@@ -18,7 +18,7 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: false
+    - runWhenModelUpdates: true
     - paginationPaginationField: ''
     - headers: ''
     - workflowRunId: null
@@ -77,23 +77,8 @@ template:
         20)
 
         return data
-    - events:
-        - ordered:
-            - event: failure
-            - type: util
-            - method: showNotification
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered:
-                  - options:
-                      ordered:
-                        - notificationType: error
-                        - title: Failed to search runs
-                        - description: '{{get_dp_run.error}}'
-                        - duration: '5'
-            - waitType: debounce
-            - waitMs: '0'
+    - events: []
+    - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false

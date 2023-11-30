@@ -36,7 +36,7 @@ template:
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: true
+    - showSuccessToaster: false
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
     - cookies: ''
@@ -77,23 +77,7 @@ template:
         20)
 
         return data
-    - events:
-        - ordered:
-            - event: failure
-            - type: util
-            - method: showNotification
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered:
-                  - options:
-                      ordered:
-                        - notificationType: error
-                        - title: Failed to get history of execution
-                        - description: '{{get_dp_run_history.error}}'
-                        - duration: '5'
-            - waitType: debounce
-            - waitMs: '0'
+    - events: []
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false

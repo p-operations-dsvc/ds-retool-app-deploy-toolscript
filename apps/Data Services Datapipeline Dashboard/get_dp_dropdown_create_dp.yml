@@ -76,23 +76,7 @@ template:
         20)
 
         return data
-    - events:
-        - ordered:
-            - event: failure
-            - type: util
-            - method: showNotification
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered:
-                  - options:
-                      ordered:
-                        - notificationType: error
-                        - title: Failed to get dp objects
-                        - description: '{{get_dp_objects_by_name.error}}'
-                        - duration: '5'
-            - waitType: debounce
-            - waitMs: '0'
+    - events: []
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
