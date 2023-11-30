@@ -11,7 +11,17 @@ template:
     - tooltipText: Upload mapping file
     - modalHeight: '600'
     - onModalOpen: ''
-    - events: []
+    - events:
+        - ordered:
+            - event: close
+            - type: widget
+            - method: clearValue
+            - pluginId: uploadMappingFileSelectButton2
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - modalWidth: ''
     - closeOnOutsideClick: true
     - loading: ''
