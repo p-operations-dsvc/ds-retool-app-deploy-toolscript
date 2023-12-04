@@ -25,7 +25,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        get_ds_pipeline_analytics?datapipeline_name={{dpStatisticsDPNameSelect.value}}&env={{dpStatisticsEnv.value}}&request_type=STATISTICS
+        get_ds_pipeline_analytics?datapipeline_name={{dpStatisticsDPNameSelect.value}}&env={{dpStatisticsEnv.value}}&request_type=STATISTICS&start_date={{dpStatisticsDateRange.value.start.split('T')[0]}}&end_date={{dpStatisticsDateRange.value.end.split('T')[0]}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
