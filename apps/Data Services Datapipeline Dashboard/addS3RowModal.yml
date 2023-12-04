@@ -1,27 +1,29 @@
-id: createDPTaskRoleModal
+id: addS3RowModal
+uuid: 22322e22-d524-4991-8579-c27129b167fc
 type: widget
 subtype: ModalWidget
 template:
   ordered:
     - opened: false
     - modalOverflowType: scroll
+    - hidden: 'true'
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''
     - modalHeight: ''
     - onModalOpen: ''
     - modalWidth: ''
-    - closeOnOutsideClick: true
+    - closeOnOutsideClick: false
     - loading: ''
     - disabled: ''
-    - buttonText: Create Role
+    - buttonText: Open Modal
 style:
   ordered: []
 position2:
   position2:
     container: mainContainer
     subcontainer: '01622'
-    row: 10.000000000000002
-    col: 4
+    col: 2
     height: 1
-createdAt: 2023-03-14T00:31:57.994Z
+    width: 1
+createdAt: 2023-12-04T22:42:06.675Z
