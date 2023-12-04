@@ -1091,7 +1091,7 @@ template:
           - 3bf7e: Task role arn
           - ee7b0: Schedule tz
           - efe69: Auto restart on failure
-          - 9b188: 'Overall #s'
+          - 9b188: ITD
           - fd6e6: Cluster arn
           - 777b4: Schedule group
           - 127d8: Snow urgency
