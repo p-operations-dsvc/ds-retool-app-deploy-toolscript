@@ -1,5 +1,5 @@
-id: button1
-uuid: fb1386a9-f16b-48d3-8942-45254b7bbdb6
+id: addS3RowAccessButton
+uuid: 6cb9ba8b-4e5e-4ccf-95fb-885021791b9b
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: Button
+    - text: Save
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -21,7 +21,7 @@ template:
             - event: click
             - type: datasource
             - method: trigger
-            - pluginId: editS3KeyAccessRow
+            - pluginId: addS3KeyAccessRow
             - targetId: null
             - params:
                 ordered: []
@@ -35,9 +35,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: editS3RowModal
+    container: addS3RowModal
     row: 6.4
     col: 1
     height: 1
     width: 10
-createdAt: 2023-12-04T22:28:47.095Z
+createdAt: 2023-12-04T22:42:08.248Z

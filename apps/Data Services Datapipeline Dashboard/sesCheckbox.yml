@@ -1,23 +1,21 @@
-id: addS3RowDeleteCheckbox
-uuid: 5030a7ff-9f76-4706-8d60-1481ccd6bd0c
+id: sesCheckbox
+uuid: dbe2c4d6-14dc-4920-83cf-748ffaba0253
 type: widget
 subtype: CheckboxWidget2
 template:
   ordered:
     - marginType: normal
     - hidden: false
-    - customValidation: >-
-        {{addS3RowAccessTypeSelect.value=='ro'&&self.value?"Read only access and
-        delete grants do not go together":''}}
+    - customValidation: ''
     - hideValidationMessage: false
     - validationMessage: ''
     - showInEditor: false
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: 'false'
+    - value: 'true'
     - labelCaption: ''
-    - label: Needs Delete?
+    - label: SES Access?
     - _validate: false
     - invalid: false
     - events:
@@ -31,8 +29,10 @@ style:
   ordered: []
 position2:
   position2:
-    container: addS3RowModal
-    row: 5
+    container: mainContainer
+    subcontainer: '01622'
+    row: 2.000000000000001
+    col: 10
     height: 0.6
-    width: 12
-createdAt: 2023-12-04T22:42:07.960Z
+    width: 2
+createdAt: 2023-12-05T02:54:31.183Z

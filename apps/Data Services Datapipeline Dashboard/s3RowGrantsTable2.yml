@@ -1,5 +1,5 @@
-id: s3RowGrantsTable
-uuid: 57d1e21a-20b6-4834-a593-5dee247dbbc3
+id: s3RowGrantsTable2
+uuid: fe43cf10-47a3-496b-b27d-ec2077b62a33
 type: widget
 subtype: TableWidget2
 template:
@@ -76,7 +76,7 @@ template:
                 - mode: mapped
                 - mappedData: '{{s3KeyAccessTypeVariable.value}}'
                 - valueByIndex: '{{ item.type }}'
-                - labelByIndex: '{{ item.name }}'
+                - labelByIndex: ''
                 - colorByIndex: ''
                 - iconByIndex: ''
                 - fallbackTextByIndex: ''
@@ -291,7 +291,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: s3RowGrantsTable
+            - pluginId: s3RowGrantsTable2
             - targetId: 4d
     - _columnEditable:
         ordered:
@@ -362,9 +362,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: mainContainer
-    subcontainer: '01622'
-    row: 3
+    container: s3RowGrantsTable
     height: 8
     width: 5
-createdAt: 2023-12-04T21:55:25.871Z
+createdAt: 2023-12-05T02:20:03.449Z

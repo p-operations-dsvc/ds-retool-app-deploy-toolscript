@@ -1,5 +1,5 @@
-id: editS3RowAccessTypeSelect
-uuid: 7696d890-ab35-45be-b383-a15bcd25ea57
+id: createDPTaskRoleSelect
+uuid: 05db8f23-b6d0-4827-88b2-fd8fa6fa7d87
 type: widget
 subtype: SelectWidget2
 template:
@@ -11,7 +11,7 @@ template:
     - _values: []
     - iconByIndex:
         array: []
-    - values: '{{item.type}}'
+    - values: '{{item.role_arn}}'
     - readOnly: false
     - iconAfter: ''
     - _iconByIndex: []
@@ -21,7 +21,7 @@ template:
     - marginType: normal
     - hidden: false
     - customValidation: ''
-    - data: '{{s3KeyAccessTypeVariable.value}}'
+    - data: '{{ get_dp_role_dropdown.data }}'
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:
@@ -38,7 +38,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: ''
+    - value: null
     - hiddenByIndex:
         array: []
     - labelCaption: ''
@@ -46,10 +46,10 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select an option
+    - placeholder: ''
     - _captionByIndex: []
     - itemAdornmentSize: auto
-    - label: Access Type
+    - label: Select a role to edit
     - _hasMigratedNestedItems: true
     - captionByIndex:
         array: []
@@ -68,7 +68,16 @@ template:
         array: []
     - selectedLabel: ''
     - events:
-        ordered: []
+        - ordered:
+            - event: change
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_role
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - _ids: []
     - emptyMessage: No options
     - overlayMaxHeight: 375
@@ -84,13 +93,15 @@ template:
     - maintainSpaceWhenHidden: false
     - _imageByIndex: []
     - required: false
-    - labels: '{{item.name}}'
+    - labels: '{{item.role_name}}'
 style:
   ordered: []
 position2:
   position2:
-    container: editS3RowModal
-    row: 3.2
+    container: mainContainer
+    subcontainer: '01622'
+    row: 0.39999999999999997
+    col: 6
     height: 1
-    width: 12
-createdAt: 2023-12-04T22:22:45.961Z
+    width: 4
+createdAt: 2023-12-06T03:04:28.259Z

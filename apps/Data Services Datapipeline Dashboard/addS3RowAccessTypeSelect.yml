@@ -84,8 +84,7 @@ template:
     - maintainSpaceWhenHidden: false
     - _imageByIndex: []
     - required: false
-    - labels:
-        array: []
+    - labels: '{{item.name}}'
 style:
   ordered: []
 position2:
