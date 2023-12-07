@@ -1,5 +1,5 @@
-id: addTagButton
-uuid: e9885c69-2ae6-4575-8831-07712a409aa7
+id: editS3RowButton
+uuid: fb1386a9-f16b-48d3-8942-45254b7bbdb6
 type: widget
 subtype: ButtonWidget2
 template:
@@ -10,7 +10,7 @@ template:
     - submitTargetId: null
     - marginType: normal
     - hidden: false
-    - text: +
+    - text: Save
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -21,7 +21,7 @@ template:
             - event: click
             - type: datasource
             - method: trigger
-            - pluginId: addTag
+            - pluginId: editS3KeyAccessRow
             - targetId: null
             - params:
                 ordered: []
@@ -35,10 +35,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: mainContainer
-    subcontainer: dc084
-    row: 1.8
-    col: 4
+    container: editS3RowModal
+    row: 6.4
+    col: 1
     height: 1
-    width: 1
-createdAt: 2023-10-17T15:39:25.670Z
+    width: 10
+createdAt: 2023-12-04T22:28:47.095Z

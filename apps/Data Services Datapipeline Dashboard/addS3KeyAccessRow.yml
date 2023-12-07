@@ -1,4 +1,4 @@
-id: addDependentDP
+id: addS3KeyAccessRow
 type: datasource
 subtype: JavascriptQuery
 resourceName: JavascriptQuery
@@ -18,31 +18,24 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >+
-        if
-        (dependentDPMultiselectListbox.values.includes(addDependentDPSelect.value))
-        {
-          utils.showNotification ({title: 'This dependency already exists', notificationType: 'error', duration: 5});
-          return;
+    - query: |-
+        let s3_grants= createIAMRoleS3Variable.value
+
+        let new_vals = {
+          "bucket": addS3RowBucketNameSelect.value,
+          "folder": addS3RowFolderNameText.value,
+          "access": addS3RowAccessTypeSelect.value,
+          "delete": addS3RowDeleteCheckbox.value
         }
+        let i=s3_grants.length
 
+        s3_grants.push( new_vals)
 
-        dpDependencyVariable.setValue
-        (dependentDPMultiselectListbox.selectedItems); 
-          
-        //dpDependencyVariable.setValue
-        (dpDependencyVariable.value.concat(addDependentDPSelect.value));
-
-
-        dpDependencyVariable.setIn
-        ([dependentDPMultiselectListbox.selectedItems.length],
-        addDependentDPSelect.value)
-
-
-        dependentDPMultiselectListbox.clearValue(); 
-
-        dependentDPMultiselectListbox.setValue(dpDependencyVariable.value);   
-
+        createIAMRoleS3Variable.setValue (s3_grants)
+        s3RowGrantsTable.refresh()
+        addS3RowBucketNameSelect.clearValue()
+        addS3RowFolderNameText.clearValue()
+        addS3RowModal.close()
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -102,4 +95,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-11-29T23:14:04.976Z
+createdAt: 2023-12-04T22:44:19.230Z

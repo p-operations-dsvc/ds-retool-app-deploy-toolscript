@@ -1,5 +1,5 @@
-id: createDPTaskRoleText
-uuid: bb4caa85-fd89-4c40-a7ee-5ffe2c76803c
+id: addS3RowFolderNameText
+uuid: 3d555651-c5e5-4312-babb-f75cf06b3e5c
 type: widget
 subtype: TextInputWidget2
 template:
@@ -28,8 +28,8 @@ template:
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter new role name
-    - label: Role name
+    - placeholder: Enter value
+    - label: Folder
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false
@@ -49,9 +49,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: mainContainer
-    subcontainer: '01622'
-    row: 0.39999999999999997
+    container: addS3RowModal
+    row: 1.6
     height: 1
-    width: 4
-createdAt: 2023-12-05T02:18:03.065Z
+    width: 12
+createdAt: 2023-12-04T22:42:07.240Z

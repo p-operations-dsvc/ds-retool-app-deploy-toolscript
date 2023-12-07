@@ -1,4 +1,4 @@
-id: addDependentDP
+id: dpRoleSetValues
 type: datasource
 subtype: JavascriptQuery
 resourceName: JavascriptQuery
@@ -18,31 +18,13 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >+
-        if
-        (dependentDPMultiselectListbox.values.includes(addDependentDPSelect.value))
-        {
-          utils.showNotification ({title: 'This dependency already exists', notificationType: 'error', duration: 5});
-          return;
-        }
+    - query: |-
+        let val = get_dp_role.data[0]
+        createIAMRoleS3Variable.setValue (val.s3_grants)
+        createIAMRoleSecretsVariable.setValue (val.secrets_grants)
 
-
-        dpDependencyVariable.setValue
-        (dependentDPMultiselectListbox.selectedItems); 
-          
-        //dpDependencyVariable.setValue
-        (dpDependencyVariable.value.concat(addDependentDPSelect.value));
-
-
-        dpDependencyVariable.setIn
-        ([dependentDPMultiselectListbox.selectedItems.length],
-        addDependentDPSelect.value)
-
-
-        dependentDPMultiselectListbox.clearValue(); 
-
-        dependentDPMultiselectListbox.setValue(dpDependencyVariable.value);   
-
+        sesCheckbox.setValue (val.ses_flag)
+        createDPTaskRoleText.setValue (val.task_role_arn.split('/')[1])
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -54,7 +36,7 @@ template:
         ordered: []
     - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
     - metadata: null
@@ -102,4 +84,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-11-29T23:14:04.976Z
+createdAt: 2023-12-06T03:09:20.257Z

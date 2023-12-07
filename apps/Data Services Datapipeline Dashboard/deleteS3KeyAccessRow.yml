@@ -1,4 +1,4 @@
-id: addDependentDP
+id: deleteS3KeyAccessRow
 type: datasource
 subtype: JavascriptQuery
 resourceName: JavascriptQuery
@@ -18,31 +18,22 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >+
-        if
-        (dependentDPMultiselectListbox.values.includes(addDependentDPSelect.value))
-        {
-          utils.showNotification ({title: 'This dependency already exists', notificationType: 'error', duration: 5});
-          return;
-        }
+    - query: |-
+        let curr_row = s3RowGrantsTable.selectedRow
 
+        let s3_grants= createIAMRoleS3Variable.value
 
-        dpDependencyVariable.setValue
-        (dependentDPMultiselectListbox.selectedItems); 
-          
-        //dpDependencyVariable.setValue
-        (dpDependencyVariable.value.concat(addDependentDPSelect.value));
+        let i=0
 
-
-        dpDependencyVariable.setIn
-        ([dependentDPMultiselectListbox.selectedItems.length],
-        addDependentDPSelect.value)
-
-
-        dependentDPMultiselectListbox.clearValue(); 
-
-        dependentDPMultiselectListbox.setValue(dpDependencyVariable.value);   
-
+        while (i<s3_grants.length) {
+          if (s3_grants[i].bucket==curr_row.bucket && s3_grants[i].folder==curr_row.folder) {
+             s3_grants.splice(i, 1);  
+            }
+          i++
+          } 
+        createIAMRoleS3Variable.setValue (s3_grants)
+        s3RowGrantsTable.refresh()
+        editS3RowModal.close()
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -54,7 +45,7 @@ template:
         ordered: []
     - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
     - metadata: null
@@ -69,7 +60,7 @@ template:
 
         return data.error
     - finished: null
-    - confirmationMessage: null
+    - confirmationMessage: Are you sure that you want to delete this row?
     - isFetching: false
     - changeset: ''
     - rawData: null
@@ -92,7 +83,7 @@ template:
     - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
-    - requireConfirmation: false
+    - requireConfirmation: true
     - queryFailureConditions: ''
     - changesetIsObject: false
     - enableCaching: false
@@ -102,4 +93,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-11-29T23:14:04.976Z
+createdAt: 2023-12-04T22:50:31.659Z

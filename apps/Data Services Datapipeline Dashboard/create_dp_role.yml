@@ -8,7 +8,7 @@ template:
     - queryRefreshTime: ''
     - paginationLimit: ''
     - streamResponse: false
-    - body: '{{createDPTaskRoleJsonEntry.value}}'
+    - body: '{{createIAMRoleJSONPayload.value}}'
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''
     - servedFromCache: false
@@ -99,19 +99,12 @@ template:
             - waitMs: '0'
         - ordered:
             - event: success
-            - type: util
-            - method: showNotification
-            - pluginId: ''
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_role_dropdown
             - targetId: null
             - params:
-                ordered:
-                  - options:
-                      ordered:
-                        - notificationType: success
-                        - title: >-
-                            Created or updated datapipeline IAM role
-                            {{createDPTaskRoleJsonEntry.value.role_name}}
-                        - duration: '5.5'
+                ordered: []
             - waitType: debounce
             - waitMs: '0'
     - queryTimeout: '10000'

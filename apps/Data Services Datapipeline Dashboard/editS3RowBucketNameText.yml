@@ -1,5 +1,5 @@
-id: createDPTaskRoleText
-uuid: bb4caa85-fd89-4c40-a7ee-5ffe2c76803c
+id: editS3RowBucketNameText
+uuid: cc5eda28-fc99-444a-a077-334ec49ad213
 type: widget
 subtype: TextInputWidget2
 template:
@@ -24,12 +24,12 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: ''
+    - value: '{{s3RowGrantsTable.selectedRow.bucket}}'
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter new role name
-    - label: Role name
+    - placeholder: Enter value
+    - label: Bucket Name
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false
@@ -49,9 +49,7 @@ style:
   ordered: []
 position2:
   position2:
-    container: mainContainer
-    subcontainer: '01622'
-    row: 0.39999999999999997
+    container: editS3RowModal
     height: 1
-    width: 4
-createdAt: 2023-12-05T02:18:03.065Z
+    width: 12
+createdAt: 2023-12-04T22:21:24.398Z

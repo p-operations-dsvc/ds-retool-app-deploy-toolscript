@@ -1,11 +1,14 @@
-id: addDependentDP
+id: get_dp_role
 type: datasource
-subtype: JavascriptQuery
-resourceName: JavascriptQuery
+subtype: RESTQuery
+resourceName: 5dce28aa-d15b-4da8-9a5b-cbc4b34e1cf0
+resourceDisplayName: dp_api
 template:
   ordered:
     - queryRefreshTime: ''
+    - paginationLimit: ''
     - streamResponse: false
+    - body: ''
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''
     - servedFromCache: false
@@ -15,34 +18,13 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: false
+    - runWhenModelUpdates: true
+    - paginationPaginationField: ''
+    - headers: ''
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >+
-        if
-        (dependentDPMultiselectListbox.values.includes(addDependentDPSelect.value))
-        {
-          utils.showNotification ({title: 'This dependency already exists', notificationType: 'error', duration: 5});
-          return;
-        }
-
-
-        dpDependencyVariable.setValue
-        (dependentDPMultiselectListbox.selectedItems); 
-          
-        //dpDependencyVariable.setValue
-        (dpDependencyVariable.value.concat(addDependentDPSelect.value));
-
-
-        dpDependencyVariable.setIn
-        ([dependentDPMultiselectListbox.selectedItems.length],
-        addDependentDPSelect.value)
-
-
-        dependentDPMultiselectListbox.clearValue(); 
-
-        dependentDPMultiselectListbox.setValue(dpDependencyVariable.value);   
-
+    - paginationEnabled: false
+    - query: get_ds_pipeline_role?role_arn={{createDPTaskRoleSelect.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -52,11 +34,11 @@ template:
     - data: null
     - importedQueryInputs:
         ordered: []
-    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: false
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
+    - cookies: ''
     - metadata: null
     - workflowActionType: null
     - queryRunTime: null
@@ -74,32 +56,50 @@ template:
     - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
-    - resourceTypeOverride: null
+    - resourceTypeOverride: ''
     - watchedParams: []
     - enableErrorTransformer: false
     - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
     - timestamp: 0
     - importedQueryDefaults:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
+    - version: 1
     - overrideOrgCacheForUserCache: false
     - runWhenPageLoads: false
-    - transformer: |-
-        // Query results are available as the `data` variable
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
         return data
-    - events: []
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: dpRoleSetValues
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
+    - type: GET
     - queryFailureConditions: ''
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
     - workflowBlockPluginId: null
+    - bodyType: none
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-11-29T23:14:04.976Z
+createdAt: 2023-12-06T03:07:56.970Z
