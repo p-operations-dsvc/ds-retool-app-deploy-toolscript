@@ -18,7 +18,7 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: false
+    - runWhenModelUpdates: true
     - paginationPaginationField: ''
     - headers: ''
     - workflowRunId: null
