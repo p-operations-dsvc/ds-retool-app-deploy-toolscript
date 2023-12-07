@@ -22,7 +22,7 @@ template:
         let s3_grants= createIAMRoleS3Variable.value
 
         let new_vals = {
-          "bucket": addS3RowBucketNameText.value,
+          "bucket": addS3RowBucketNameSelect.value,
           "folder": addS3RowFolderNameText.value,
           "access": addS3RowAccessTypeSelect.value,
           "delete": addS3RowDeleteCheckbox.value
@@ -33,7 +33,7 @@ template:
 
         createIAMRoleS3Variable.setValue (s3_grants)
         s3RowGrantsTable.refresh()
-        addS3RowBucketNameText.clearValue()
+        addS3RowBucketNameSelect.clearValue()
         addS3RowFolderNameText.clearValue()
         addS3RowModal.close()
     - playgroundQueryUuid: ''

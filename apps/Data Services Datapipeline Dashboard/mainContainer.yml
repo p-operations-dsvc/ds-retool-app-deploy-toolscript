@@ -85,7 +85,7 @@ template:
         - Datapipelines
         - Create a New Datapipeline
         - Update an Existing Datapipeline
-        - Create IAM Role
+        - Manage IAM Roles
         - Manage Tags
         - Manage Dependencies
         - Statistics
@@ -142,7 +142,7 @@ style:
   ordered: []
 position2:
   position2:
-    row: 4.440892098500626e-16
+    row: 0.20000000000000046
     height: 2
     width: 12
 createdAt: 2023-02-10T23:13:19.441Z

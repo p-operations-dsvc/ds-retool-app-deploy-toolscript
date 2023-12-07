@@ -42,7 +42,7 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select an option
+    - placeholder: Select a datapipeline
     - _captionByIndex: []
     - _disclosedFields:
         array: []

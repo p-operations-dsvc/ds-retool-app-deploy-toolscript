@@ -68,7 +68,10 @@ template:
     - _columnOptionList:
         ordered:
           - '91288':
-              ordered: []
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_dp_env_objects_buckets.data }}'
+                - valueByIndex: '{{ item.bucket_name }}'
           - f23fd:
               ordered: []
           - 7705a:
@@ -121,7 +124,7 @@ template:
           - 2c956: ''
     - _columnFormat:
         ordered:
-          - '91288': string
+          - '91288': tag
           - f23fd: string
           - 7705a: tag
           - 2c956: boolean
@@ -198,7 +201,8 @@ template:
     - _columnFormatOptions:
         ordered:
           - '91288':
-              ordered: []
+              ordered:
+                - automaticColors: true
           - f23fd:
               ordered: []
           - 7705a:
@@ -331,7 +335,7 @@ template:
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - '91288': Enter value
+          - '91288': Select option
           - f23fd: Enter value
           - 7705a: Select option
           - 2c956: Enter value
@@ -364,7 +368,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: '01622'
-    row: 3
+    row: 1.8
     height: 8
     width: 5
 createdAt: 2023-12-04T21:55:25.871Z

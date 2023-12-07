@@ -1,4 +1,4 @@
-id: addDependentDP
+id: addTag
 type: datasource
 subtype: JavascriptQuery
 resourceName: JavascriptQuery
@@ -19,29 +19,24 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >+
-        if
-        (dependentDPMultiselectListbox.values.includes(addDependentDPSelect.value))
-        {
-          utils.showNotification ({title: 'This dependency already exists', notificationType: 'error', duration: 5});
+        if (tagsMultiselectListbox.values.includes(addNewTagText.value)) {
+          utils.showNotification ({title: 'This tag already exists', notificationType: 'error', duration: 5});
           return;
         }
 
 
-        dpDependencyVariable.setValue
-        (dependentDPMultiselectListbox.selectedItems); 
+        dpTagsVariable.setValue (tagsMultiselectListbox.selectedItems); 
           
-        //dpDependencyVariable.setValue
-        (dpDependencyVariable.value.concat(addDependentDPSelect.value));
+        dpTagsVariable.setValue
+        (dpTagsVariable.value.concat(addNewTagText.value));
 
 
-        dpDependencyVariable.setIn
-        ([dependentDPMultiselectListbox.selectedItems.length],
-        addDependentDPSelect.value)
 
+        tagsMultiselectListbox.clearValue(); 
 
-        dependentDPMultiselectListbox.clearValue(); 
+        tagsMultiselectListbox.setValue(dpTagsVariable.value);   
 
-        dependentDPMultiselectListbox.setValue(dpDependencyVariable.value);   
+        addNewTagText.clearValue();
 
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
@@ -102,4 +97,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-11-29T23:14:04.976Z
+createdAt: 2023-12-07T00:45:13.397Z
