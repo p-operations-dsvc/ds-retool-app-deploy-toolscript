@@ -38,7 +38,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: null
+    - value: ''
     - hiddenByIndex:
         array: []
     - labelCaption: ''

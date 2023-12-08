@@ -240,8 +240,8 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - '91288': 115.34375
-          - f23fd: 152.421875
+          - '91288': 170.34375
+          - f23fd: 325.421875
           - 7705a: 187.640625
           - 2c956: 53.65625
     - _serverPaginationType: limitOffsetBased

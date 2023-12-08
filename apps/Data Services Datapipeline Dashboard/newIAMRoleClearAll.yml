@@ -1,4 +1,4 @@
-id: dpRoleSetValues
+id: newIAMRoleClearAll
 type: datasource
 subtype: JavascriptQuery
 resourceName: JavascriptQuery
@@ -19,12 +19,10 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: |-
-        let val = get_dp_role.data[0]
-        createIAMRoleS3Variable.setValue (val.s3_grants)
-        createIAMRoleSecretsVariable.setValue (val.secrets_grants)
-
-        sesCheckbox.setValue (val.ses_flag)
-        createDPTaskRoleText.setValue (val.task_role_arn.split('/')[1])
+        createIAMRoleS3Variable.setValue([])
+        createIAMRoleSecretsVariable.setValue ([])
+        sesCheckbox.setValue(false)
+        createDPTaskRoleText.clearValue ()
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -36,7 +34,7 @@ template:
         ordered: []
     - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
     - metadata: null
@@ -71,7 +69,6 @@ template:
         // Query results are available as the `data` variable
         return data
     - events: []
-    - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -84,4 +81,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-12-06T03:09:20.257Z
+createdAt: 2023-12-08T01:25:16.652Z
