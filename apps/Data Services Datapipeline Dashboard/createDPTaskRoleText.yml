@@ -26,7 +26,7 @@ template:
     - formDataKey: '{{ self.id }}'
     - value: ''
     - labelCaption: ''
-    - labelWidth: '33'
+    - labelWidth: '15'
     - autoFill: ''
     - placeholder: Enter new role name
     - label: Role name

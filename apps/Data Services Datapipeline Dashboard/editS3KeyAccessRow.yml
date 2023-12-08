@@ -24,7 +24,7 @@ template:
         let s3_grants= createIAMRoleS3Variable.value
 
         let new_vals = {
-          "bucket": editS3RowBucketNameText.value,
+          "bucket": editS3RowBucketNameSelect.value,
           "folder": editS3RowFolderNameText.value,
           "access": editS3RowAccessTypeSelect.value,
           "delete": editS3RowDeleteCheckbox.value
