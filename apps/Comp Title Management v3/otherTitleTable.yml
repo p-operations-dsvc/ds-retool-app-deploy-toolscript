@@ -19,6 +19,7 @@ template:
           - a1b8e: ''
           - 5506b: ''
           - 946d6: ''
+          - 1c927: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
@@ -36,6 +37,7 @@ template:
         - 582eb
         - a1b8e
         - 946d6
+        - 1c927
         - 5506b
     - _isSaving: false
     - _actionIds:
@@ -75,6 +77,9 @@ template:
               ordered: []
           - 946d6:
               ordered: []
+          - 1c927:
+              ordered:
+                - showStepper: true
     - _toolbarPosition: bottom
     - _groupByColumns:
         ordered: []
@@ -131,11 +136,7 @@ template:
                 - valueByIndex: '{{ item.ID }}'
                 - labelByIndex: '{{ item.NAME }}'
           - 582eb:
-              ordered:
-                - mode: manual
-                - mappedData: '{{ get_ctm_distribution_company.data }}'
-                - valueByIndex: '{{ item.ID }}'
-                - labelByIndex: '{{ item.NAME }}'
+              ordered: []
           - 8351e:
               ordered: []
           - c59d0:
@@ -158,11 +159,13 @@ template:
               ordered: []
           - 946d6:
               ordered: []
+          - 1c927:
+              ordered: []
     - _columnValueOverride:
         ordered:
           - 751f9: ''
           - '3e516': '{{item }}'
-          - 582eb: '{{ item }}'
+          - 582eb: '{{ item.split (''~'') }}'
           - 8351e: ''
           - c59d0: ''
           - bc576: '{{ item }}'
@@ -172,6 +175,7 @@ template:
           - a1b8e: ''
           - 5506b: '{{ _.startCase(item) }}'
           - 946d6: '{{ item }}'
+          - 1c927: ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: >-
@@ -194,6 +198,7 @@ template:
           - a1b8e: TITLE_ID
           - 5506b: LOCKED
           - 946d6: GOLDEN_TITLE_NAME
+          - 1c927: GOLDEN_TITLE_ID
     - hidden: false
     - _toolbarButtonIds:
         - 5eeed
@@ -217,11 +222,12 @@ template:
           - a1b8e: ''
           - 5506b: ''
           - 946d6: ''
+          - 1c927: ''
     - _columnFormat:
         ordered:
           - 751f9: decimal
           - '3e516': tag
-          - 582eb: tag
+          - 582eb: tags
           - 8351e: string
           - c59d0: string
           - bc576: tag
@@ -229,8 +235,9 @@ template:
           - '391e2': string
           - a91cc: tag
           - a1b8e: string
-          - 5506b: string
+          - 5506b: boolean
           - 946d6: string
+          - 1c927: decimal
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
@@ -250,6 +257,7 @@ template:
           - a1b8e: left
           - 5506b: left
           - 946d6: left
+          - 1c927: right
     - _actionIcon:
         ordered:
           - 1b4cf: bold/travel-map-location-target-off
@@ -268,6 +276,7 @@ template:
           - a1b8e: ''
           - 5506b: ''
           - 946d6: ''
+          - 1c927: ''
     - _columnIcon:
         ordered:
           - 751f9: ''
@@ -282,6 +291,7 @@ template:
           - a1b8e: ''
           - 5506b: ''
           - 946d6: ''
+          - 1c927: ''
     - _columnCellTooltipMode:
         ordered:
           - 751f9: ''
@@ -296,6 +306,7 @@ template:
           - a1b8e: ''
           - 5506b: ''
           - 946d6: ''
+          - 1c927: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -316,6 +327,7 @@ template:
           - a1b8e: false
           - 5506b: false
           - 946d6: false
+          - 1c927: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -338,6 +350,7 @@ template:
           - a1b8e: ''
           - 5506b: ''
           - 946d6: ''
+          - 1c927: ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: multiple
@@ -355,6 +368,7 @@ template:
           - a1b8e: ''
           - 5506b: ''
           - 946d6: ''
+          - 1c927: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
@@ -393,6 +407,10 @@ template:
           - 946d6:
               ordered:
                 - automaticColors: true
+          - 1c927:
+              ordered:
+                - showSeparators: false
+                - notation: standard
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -407,6 +425,7 @@ template:
           - bc576: none
           - 582eb: none
           - '3e516': none
+          - 1c927: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -440,19 +459,22 @@ template:
               ordered: []
           - 946d6:
               ordered: []
+          - 1c927:
+              ordered: []
     - _columnSize:
         ordered:
-          - 751f9: 62.671875
-          - '3e516': 96.265625
-          - 582eb: 186.484375
-          - 946d6: 256.21875
+          - 751f9: 47.09375
+          - '3e516': 88.265625
+          - 1c927: 135.75
+          - 582eb: 265.71875
+          - 946d6: 196.359375
           - 8351e: 62.484375
           - c59d0: 59
           - bc576: 73.65625
-          - 49aa8: 337.53125
-          - '391e2': 119.84375
-          - a91cc: 186.859375
-          - 5506b: 58.25
+          - 49aa8: 134.359375
+          - '391e2': 100.84375
+          - a91cc: 102.859375
+          - 5506b: 94.09375
           - a1b8e: 55.65625
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
@@ -553,6 +575,7 @@ template:
           - 5506b: ''
           - 946d6: ''
           - '': false
+          - 1c927: ''
     - _rowBackgroundColor:
         array: []
     - pagination: null
@@ -568,6 +591,7 @@ template:
           - bc576: none
           - 582eb: none
           - '3e516': none
+          - 1c927: sum
     - sortArray:
         array: []
     - _selectedCell: null
@@ -594,12 +618,13 @@ template:
           - a1b8e: center
           - 5506b: center
           - 946d6: center
+          - 1c927: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
           - 751f9: Enter value
           - '3e516': Select option
-          - 582eb: Select option
+          - 582eb: Select options
           - 8351e: Enter value
           - c59d0: Enter value
           - bc576: Select option
@@ -609,6 +634,7 @@ template:
           - a1b8e: Enter value
           - 5506b: Enter value
           - 946d6: Enter value
+          - 1c927: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered:
@@ -639,6 +665,7 @@ template:
           - a1b8e: 'true'
           - 5506b: ''
           - 946d6: ''
+          - 1c927: ''
     - _columnLabel:
         ordered:
           - 751f9: Year
@@ -653,6 +680,7 @@ template:
           - a1b8e: Title id
           - 5506b: Locked
           - 946d6: Golden Title
+          - 1c927: Golden Title ID
     - _showToolbar: true
 style:
   ordered: []
