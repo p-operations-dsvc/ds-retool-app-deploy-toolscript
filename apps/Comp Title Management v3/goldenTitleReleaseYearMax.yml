@@ -30,7 +30,7 @@ template:
     - min: null
     - labelWidth: '28'
     - placeholder: '{{futureCutOffYear.value}}'
-    - showStepper: true
+    - showStepper: false
     - label: To
     - _validate: false
     - labelWidthUnit: '%'
