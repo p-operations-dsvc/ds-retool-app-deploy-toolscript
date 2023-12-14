@@ -47,7 +47,7 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select an option
+    - placeholder: ''
     - _captionByIndex: []
     - itemAdornmentSize: auto
     - label: Page

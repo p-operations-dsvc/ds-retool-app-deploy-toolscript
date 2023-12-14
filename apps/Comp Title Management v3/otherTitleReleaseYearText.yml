@@ -1,0 +1,27 @@
+id: otherTitleReleaseYearText
+uuid: 95b36266-0385-48c6-a0f2-50526f2a572e
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: <p  style="font-size:13px;"">Release Year
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 4153c
+    height: 0.6
+    width: 1
+createdAt: 2023-12-14T17:58:28.086Z

@@ -22,10 +22,8 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        call get_other_title_v3_rowcount
-        ({{otherTitleReleaseDateRange.value.start.split
-        ('T')[0].split('-')[0]}}, {{otherTitleReleaseDateRange.value.end.split
-        ('T')[0].split('-')[0]}}, {{otherTitleTypeSwitch.value}},
+        call get_other_title_v3_rowcount ({{otherTitleReleaseYearMin.value}},
+        {{otherTitleReleaseYearMax.value}}, {{otherTitleTypeSwitch.value}},
         {{otherTitleNameInput.value.replace ('\'', '\\\'')}},
         {{otherTitleMappedStateSelect.value}},                           
         {{otherTitleSourceSwitch.value}},

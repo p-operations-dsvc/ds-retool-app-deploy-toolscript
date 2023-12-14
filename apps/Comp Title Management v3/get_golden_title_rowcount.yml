@@ -23,10 +23,9 @@ template:
     - showFailureToaster: true
     - query: >-
         CALL edwctm.get_golden_title_v3_rowcount
-        ({{createdDateRange.value.start.split ('T')[0].split('-')[0]}} ,
-        {{createdDateRange.value.end.split ('T')[0].split('-')[0]}},
-        {{goldenTitleTypeSwitch.value}}, {{ titleNameInput.value.replace ('\'',
-        '\\\'')}});
+        ({{goldenTitleReleaseYearMin.value }} , {{
+        goldenTitleReleaseYearMax.value }}, {{goldenTitleTypeSwitch.value}}, {{
+        goldenTitleNameInput.value.replace ('\'', '\\\'')}});
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

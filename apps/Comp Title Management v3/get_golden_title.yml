@@ -22,10 +22,10 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        CALL edwctm.get_golden_title_v3 ({{createdDateRange.value.start.split
-        ('T')[0].split('-')[0]}} , {{createdDateRange.value.end.split
-        ('T')[0].split('-')[0]}}, {{goldenTitleTypeSwitch.value}}, {{
-        titleNameInput.value.replace ('\'', '\\\'')}}, 'GOLDEN_TITLE_ID', 'asc',
+        CALL edwctm.get_golden_title_v3 ({{goldenTitleReleaseYearMin.value }} ,
+        {{ goldenTitleReleaseYearMax.value }}, {{goldenTitleTypeSwitch.value}},
+        {{ goldenTitleNameInput.value.replace ('\'', '\\\'')}},
+        'GOLDEN_TITLE_ID', 'asc',
         {{get_user_preferences.data.SETTING_VALUE[1]}}, {{page_number}});
     - playgroundQueryUuid: ''
     - playgroundQueryId: null

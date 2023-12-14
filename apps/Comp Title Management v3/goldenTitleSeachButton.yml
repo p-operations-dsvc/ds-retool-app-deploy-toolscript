@@ -4,7 +4,7 @@ type: widget
 subtype: ButtonWidget2
 template:
   ordered:
-    - horizontalAlign: stretch
+    - horizontalAlign: center
     - clickable: false
     - iconAfter: ''
     - submitTargetId: ''

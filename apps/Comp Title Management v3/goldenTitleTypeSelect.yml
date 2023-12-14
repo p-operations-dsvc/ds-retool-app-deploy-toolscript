@@ -1,4 +1,4 @@
-id: titleTypeSelect
+id: goldenTitleTypeSelect
 type: widget
 subtype: MultiselectWidget2
 template:

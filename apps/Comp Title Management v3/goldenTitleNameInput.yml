@@ -1,43 +1,44 @@
-id: otherTitleReleaseDateRange
-uuid: ddabaa37-ffcb-4f78-b9fa-819218ed3e91
+id: goldenTitleNameInput
+uuid: a3d03ca5-a94d-40dc-a13f-71c40d66ff2c
 type: widget
-subtype: DateRangeWidget
+subtype: TextInputWidget2
 template:
   ordered:
-    - minDate: ''
+    - spellCheck: false
     - readOnly: false
     - iconAfter: ''
-    - dateFormat: yyyy-MM-dd
+    - showCharacterCount: false
+    - autoComplete: false
     - marginType: normal
+    - maxLength: null
     - hidden: false
     - customValidation: ''
+    - patternType: ''
     - hideValidationMessage: false
     - textBefore: ''
     - validationMessage: ''
     - textAfter: ''
     - showInEditor: false
     - showClear: false
+    - pattern: ''
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value:
-        ordered:
-          - start: '{{ moment().add(-900, ''days'') }}'
-          - end: '{{ moment().add(1, ''days'') }}'
-    - startPlaceholder: '{{self.value.start}}'
+    - value: >-
+        {{get_user_preferences.dataArray.length==0?'':get_user_preferences.data.SETTING_VALUE[0]}}
     - labelCaption: ''
-    - maxDate: ''
     - labelWidth: '33'
-    - label: Release Year
-    - formattedValue: ''
+    - autoFill: ''
+    - placeholder: ''
+    - label: Title Name/TT Code
     - _validate: false
     - labelWidthUnit: '%'
-    - firstDayOfWeek: 1
     - invalid: false
-    - iconBefore: bold/interface-calendar-remove
-    - endPlaceholder: '{{self.value.end}}'
+    - iconBefore: ''
+    - minLength: null
+    - inputTooltip: ''
     - events: []
-    - textBetween: '-'
+    - autoCapitalize: none
     - loading: false
     - disabled: false
     - labelPosition: left
@@ -49,6 +50,8 @@ style:
 position2:
   position2:
     container: mainContainer
-    subcontainer: 4153c
+    subcontainer: 443b9
+    col: 6
     height: 1
-createdAt: 2023-10-04T17:58:37.476Z
+    width: 4
+createdAt: 2023-10-03T19:00:08.374Z

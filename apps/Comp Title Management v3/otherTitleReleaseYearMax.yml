@@ -1,0 +1,61 @@
+id: otherTitleReleaseYearMax
+uuid: 6009ecb6-1d96-4599-8da0-248e23fdf6ba
+type: widget
+subtype: EditableNumberWidget
+template:
+  ordered:
+    - readOnly: false
+    - iconAfter: ''
+    - editIcon: bold/interface-edit-pencil
+    - max: null
+    - inputValue: null
+    - marginType: normal
+    - hidden: false
+    - customValidation: ''
+    - showSeparators: false
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textSize: default
+    - textAfter: ''
+    - showInEditor: false
+    - allowNull: false
+    - showClear: false
+    - tooltipText: ''
+    - currency: USD
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: '{{futureCutOffYear.value}}'
+    - labelCaption: ''
+    - min: null
+    - labelWidth: '28'
+    - placeholder: '{{futureCutOffYear.value}}'
+    - showStepper: true
+    - label: To
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - format: decimal
+    - iconBefore: ''
+    - textAlign: right
+    - inputTooltip: ''
+    - events:
+        ordered: []
+    - loading: false
+    - labelPosition: left
+    - decimalPlaces: null
+    - labelWrap: false
+    - padDecimal: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 4153c
+    row: 5.551115123125783e-17
+    col: 2
+    height: 0.6
+    width: 1
+createdAt: 2023-12-14T17:57:22.668Z

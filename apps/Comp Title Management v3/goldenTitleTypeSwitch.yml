@@ -7,7 +7,7 @@ template:
         // Reference external variables with curly brackets or using JS
         variables
 
-        let selected = {{titleTypeSelect.value}}
+        let selected = {{goldenTitleTypeSelect.value}}
 
 
         if (selected.length==0) {
@@ -15,7 +15,7 @@ template:
         }
 
         else {
-         return {{titleTypeSelect.value.join('\',\'') }}
+         return {{goldenTitleTypeSelect.value.join('\',\'') }}
         }
 
          
