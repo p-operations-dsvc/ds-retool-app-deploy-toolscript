@@ -7,7 +7,7 @@ template:
         // Reference external variables with curly brackets or using JS
         variables
 
-        const future_cutoff = moment().add(5, 'years') 
+        const future_cutoff = moment()
 
 
         return Number(future_cutoff.toISOString().split ('T')[0].split('-')[0])
