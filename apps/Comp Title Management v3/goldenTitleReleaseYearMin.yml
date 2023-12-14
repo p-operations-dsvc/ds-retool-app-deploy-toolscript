@@ -1,46 +1,51 @@
-id: createdDateRange
+id: goldenTitleReleaseYearMin
+uuid: 1cbb92b9-ad1e-4461-bbcf-13456030c27d
 type: widget
-subtype: DateRangeWidget
+subtype: EditableNumberWidget
 template:
   ordered:
-    - minDate: ''
     - readOnly: false
     - iconAfter: ''
-    - dateFormat: yyyy-MM-dd
+    - editIcon: bold/interface-edit-write-1
+    - max: null
+    - inputValue: null
     - marginType: normal
     - hidden: false
     - customValidation: ''
+    - showSeparators: false
     - hideValidationMessage: false
     - textBefore: ''
     - validationMessage: ''
+    - textSize: default
     - textAfter: ''
     - showInEditor: false
+    - allowNull: false
     - showClear: false
     - tooltipText: ''
+    - currency: USD
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value:
-        ordered:
-          - start: '{{ moment().add(-900, ''days'') }}'
-          - end: '{{ moment().add(1, ''days'') }}'
-    - startPlaceholder: '{{self.value.start}}'
+    - value: '{{pastCutOffYear.value}}'
     - labelCaption: ''
-    - maxDate: ''
-    - labelWidth: '25'
-    - label: Release Year
-    - formattedValue: ''
+    - min: null
+    - labelWidth: '31'
+    - placeholder: '{{pastCutOffYear.value}}'
+    - showStepper: true
+    - label: ''
     - _validate: false
     - labelWidthUnit: '%'
-    - firstDayOfWeek: 1
     - invalid: false
-    - iconBefore: bold/interface-calendar-remove
-    - endPlaceholder: '{{self.value.end}}'
-    - events: []
-    - textBetween: '-'
+    - format: decimal
+    - iconBefore: ''
+    - textAlign: left
+    - inputTooltip: ''
+    - events:
+        ordered: []
     - loading: false
-    - disabled: false
     - labelPosition: left
+    - decimalPlaces: null
     - labelWrap: false
+    - padDecimal: false
     - maintainSpaceWhenHidden: false
     - required: false
 style:
@@ -49,5 +54,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 443b9
-    height: 1
-createdAt: 2023-09-28T17:19:22.588Z
+    col: 1
+    height: 0.6
+    width: 1
+createdAt: 2023-12-14T21:48:00.166Z

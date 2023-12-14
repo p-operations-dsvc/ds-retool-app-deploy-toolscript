@@ -1,0 +1,27 @@
+id: goldenTitleReleaseYearText
+uuid: 41a244a3-1633-427d-ba30-df3022fed5c6
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: <p  style="font-size:13px;"">Release Year
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: mainContainer
+    subcontainer: 443b9
+    height: 0.6
+    width: 1
+createdAt: 2023-12-14T21:47:59.924Z

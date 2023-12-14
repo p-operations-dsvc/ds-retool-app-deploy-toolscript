@@ -1,0 +1,15 @@
+id: pastCutOffYear
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        // Reference external variables with curly brackets or using JS
+        variables
+
+        const past_cutoff = moment().add(-5, 'years') 
+
+
+        return Number(past_cutoff.toISOString().split ('T')[0].split('-')[0])
+    - value: ''
+createdAt: 2023-12-14T17:52:35.714Z

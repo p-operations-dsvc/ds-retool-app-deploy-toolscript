@@ -1,0 +1,15 @@
+id: futureCutOffYear
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        // Reference external variables with curly brackets or using JS
+        variables
+
+        const future_cutoff = moment().add(5, 'years') 
+
+
+        return Number(future_cutoff.toISOString().split ('T')[0].split('-')[0])
+    - value: ''
+createdAt: 2023-12-14T17:47:17.261Z

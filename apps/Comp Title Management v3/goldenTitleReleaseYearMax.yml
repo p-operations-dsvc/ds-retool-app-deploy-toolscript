@@ -1,48 +1,51 @@
-id: titleNameInput
-uuid: a3d03ca5-a94d-40dc-a13f-71c40d66ff2c
+id: goldenTitleReleaseYearMax
+uuid: bbd6520d-5248-41b9-a495-75ce7539c5e0
 type: widget
-subtype: TextInputWidget2
+subtype: EditableNumberWidget
 template:
   ordered:
-    - spellCheck: false
     - readOnly: false
     - iconAfter: ''
-    - showCharacterCount: false
-    - autoComplete: false
+    - editIcon: bold/interface-edit-pencil
+    - max: null
+    - inputValue: null
     - marginType: normal
-    - maxLength: null
     - hidden: false
     - customValidation: ''
-    - patternType: ''
+    - showSeparators: false
     - hideValidationMessage: false
     - textBefore: ''
     - validationMessage: ''
+    - textSize: default
     - textAfter: ''
     - showInEditor: false
+    - allowNull: false
     - showClear: false
-    - pattern: ''
     - tooltipText: ''
+    - currency: USD
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: >-
-        {{get_user_preferences.dataArray.length==0?'':get_user_preferences.data.SETTING_VALUE[0]}}
+    - value: '{{futureCutOffYear.value}}'
     - labelCaption: ''
-    - labelWidth: '33'
-    - autoFill: ''
-    - placeholder: ''
-    - label: Title Name/TT Code
+    - min: null
+    - labelWidth: '28'
+    - placeholder: '{{futureCutOffYear.value}}'
+    - showStepper: true
+    - label: To
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false
+    - format: decimal
     - iconBefore: ''
-    - minLength: null
+    - textAlign: right
     - inputTooltip: ''
-    - events: []
-    - autoCapitalize: none
+    - events:
+        ordered: []
     - loading: false
-    - disabled: false
     - labelPosition: left
+    - decimalPlaces: null
     - labelWrap: false
+    - padDecimal: false
     - maintainSpaceWhenHidden: false
     - required: false
 style:
@@ -51,7 +54,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 443b9
-    col: 6
-    height: 1
-    width: 4
-createdAt: 2023-10-03T19:00:08.374Z
+    col: 2
+    height: 0.6
+    width: 1
+createdAt: 2023-12-14T21:48:00.422Z
