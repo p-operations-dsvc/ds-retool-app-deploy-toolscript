@@ -26,11 +26,14 @@ template:
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
     - value: '{{pastCutOffYear.value}}'
+    - style:
+        ordered:
+          - inputBorder: rgba(224, 224, 224, 1)
     - labelCaption: ''
     - min: null
     - labelWidth: '31'
     - placeholder: '{{pastCutOffYear.value}}'
-    - showStepper: true
+    - showStepper: false
     - label: ''
     - _validate: false
     - labelWidthUnit: '%'
