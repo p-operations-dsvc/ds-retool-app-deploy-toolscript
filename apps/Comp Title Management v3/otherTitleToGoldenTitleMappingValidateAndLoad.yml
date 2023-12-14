@@ -1,4 +1,4 @@
-id: otherTitleToGenreMappingValidateAndLoad
+id: otherTitleToGoldenTitleMappingValidateAndLoad
 type: datasource
 subtype: JavascriptQuery
 resourceName: JavascriptQuery
@@ -39,7 +39,7 @@ template:
           return;
         }
 
-        console.log (arr);
+        //console.log (arr);
 
         process_uploaded_mapping_other_title.trigger ({
           additionalScope: {
@@ -58,7 +58,7 @@ template:
         ordered: []
     - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: true
+    - showSuccessToaster: false
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
     - metadata: null

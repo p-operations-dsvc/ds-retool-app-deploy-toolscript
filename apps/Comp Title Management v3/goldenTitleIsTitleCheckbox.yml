@@ -31,8 +31,8 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 4153c
-    row: 1.2
+    row: 1
     col: 7
     height: 0.6
-    width: 2
+    width: 1
 createdAt: 2023-11-16T18:30:09.078Z

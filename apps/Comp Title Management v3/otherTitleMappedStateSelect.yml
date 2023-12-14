@@ -1,34 +1,47 @@
-id: otherTitlePageSelect
-uuid: 1c80422c-84c0-42da-83d0-4f408e76e8b8
+id: otherTitleMappedStateSelect
+uuid: 580a5f00-1558-4794-9bd8-32056ed65783
 type: widget
 subtype: SelectWidget2
 template:
   ordered:
     - imageByIndex:
         array: []
-    - _disabledByIndex: []
+    - _disabledByIndex:
+        - ''
+        - ''
+        - ''
     - showSelectionIndicator: true
-    - _values: []
+    - _values:
+        - Mapped
+        - Unmapped
+        - Either
     - iconByIndex:
         array: []
     - values:
         array: []
     - readOnly: false
     - iconAfter: ''
-    - _iconByIndex: []
+    - _iconByIndex:
+        - bold/travel-map-alternate
+        - bold/travel-map-location-target-off
+        - bold/interface-arrows-expand-1
     - overlayMinWidth: null
     - allowDeselect: false
     - inputValue: ''
     - marginType: normal
     - hidden: false
     - customValidation: ''
-    - data: '{{otherTitleTablePagesVariable.value}}'
+    - data:
+        array: []
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:
         array: []
     - textBefore: ''
-    - _fallbackTextByIndex: []
+    - _fallbackTextByIndex:
+        - ''
+        - ''
+        - ''
     - selectedItem: null
     - validationMessage: ''
     - automaticItemColors: false
@@ -39,29 +52,41 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: null
+    - value: Mapped
     - hiddenByIndex:
         array: []
     - labelCaption: ''
     - labelWidth: '33'
     - deprecatedLabels:
         array: []
-    - _hiddenByIndex: []
-    - placeholder: Select an option
-    - _captionByIndex: []
+    - _hiddenByIndex:
+        - ''
+        - ''
+        - ''
+    - placeholder: ''
+    - _captionByIndex:
+        - ''
+        - ''
+        - ''
     - itemAdornmentSize: auto
-    - label: Page
+    - label: Mapped?
     - _hasMigratedNestedItems: true
     - captionByIndex:
         array: []
     - _validate: false
-    - itemMode: dynamic
+    - itemMode: static
     - labelWidthUnit: '%'
     - allowCustomValue: false
     - invalid: false
     - selectedIndex: null
-    - _tooltipByIndex: []
-    - _colorByIndex: []
+    - _tooltipByIndex:
+        - ''
+        - ''
+        - ''
+    - _colorByIndex:
+        - ''
+        - ''
+        - ''
     - tooltipByIndex:
         array: []
     - iconBefore: ''
@@ -69,37 +94,30 @@ template:
         array: []
     - selectedLabel: ''
     - events:
-        - ordered:
-            - event: change
-            - type: script
-            - method: run
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered:
-                  - src: |-
-                      get_other_title.trigger (
-                        {
-                        additionalScope: {   page_number:otherTitlePageSelect.value -1
-                        }
-                      }
-                      )
-            - waitType: debounce
-            - waitMs: '0'
-    - _ids: []
+        ordered: []
+    - _ids:
+        - 0ecd0
+        - 5af33
+        - 82e9f
     - emptyMessage: No options
     - overlayMaxHeight: 375
     - loading: false
     - disabled: false
     - labelPosition: left
-    - _labels: []
+    - _labels:
+        - ''
+        - ''
+        - ''
     - labelWrap: false
     - disabledValues:
         array: []
     - disabledByIndex:
         array: []
     - maintainSpaceWhenHidden: false
-    - _imageByIndex: []
+    - _imageByIndex:
+        - ''
+        - ''
+        - ''
     - required: false
     - labels:
         array: []
@@ -109,7 +127,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 4153c
-    col: 9
+    row: 1
+    col: 3
     height: 1
-    width: 1
-createdAt: 2023-11-07T21:25:44.810Z
+createdAt: 2023-12-13T03:01:43.275Z

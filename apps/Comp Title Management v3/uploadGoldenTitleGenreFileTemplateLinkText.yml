@@ -1,5 +1,5 @@
-id: uploadGoldenTitleGenreFileText2
-uuid: 5b1bb2fc-bba2-4634-b24d-42fe25fabbb1
+id: uploadGoldenTitleGenreFileTemplateLinkText
+uuid: 25a3dd97-ca19-4246-9fa8-c8902edf76e0
 type: widget
 subtype: TextWidget2
 template:
@@ -12,7 +12,9 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: <b>Upload Golden Title Genre Mapping</b>
+    - value: >-
+        <h6><a
+        href="https://viacom.sharepoint.com/:x:/s/PAR-MTS-DataAnalytics/ET6PL3wnHq1MrDpVZz7LDYYBvVjDn4C3bhuq0wCb1Vm6tA?e=alyCMw">Template</a> 
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
@@ -21,8 +23,8 @@ style:
 position2:
   position2:
     container: mapGoldenTitleGenreModal2
-    row: 0.2
+    row: 1
     col: 4
     height: 0.6
     width: 5
-createdAt: 2023-11-07T18:55:05.378Z
+createdAt: 2023-12-14T00:34:14.214Z

@@ -48,7 +48,7 @@ position2:
   position2:
     container: mapGoldenTitleGenreModal2
     row: 2
-    col: 2
+    col: 4
     height: 1
-    width: 9
+    width: 5
 createdAt: 2023-11-07T18:55:05.060Z
