@@ -26,7 +26,7 @@ template:
     - startPlaceholder: '{{self.value.start}}'
     - labelCaption: ''
     - maxDate: ''
-    - labelWidth: '33'
+    - labelWidth: '25'
     - label: Release Year
     - formattedValue: ''
     - _validate: false

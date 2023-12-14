@@ -47,7 +47,7 @@ template:
     - hiddenByIndex:
         array: []
     - labelCaption: ''
-    - labelWidth: '15'
+    - labelWidth: '25'
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
