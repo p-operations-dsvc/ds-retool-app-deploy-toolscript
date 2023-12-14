@@ -31,7 +31,6 @@ position2:
   position2:
     container: mapOtherTitlesModal
     row: 13.6
-    col: 1
     height: 0.6
     width: 2
 createdAt: 2023-11-10T22:11:06.973Z

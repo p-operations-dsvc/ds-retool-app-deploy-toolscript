@@ -183,7 +183,7 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - '46715': 329.75
+          - '46715': 215.75
           - '48613': 99.234375
     - _serverPaginationType: limitOffsetBased
     - _selectSingleRowsOnActionClick: replace
@@ -273,6 +273,7 @@ position2:
   position2:
     container: mapGoldenTitleGenreModal2
     row: 5.8
+    col: 1
     height: 8
-    width: 12
+    width: 11
 createdAt: 2023-11-07T18:55:05.510Z

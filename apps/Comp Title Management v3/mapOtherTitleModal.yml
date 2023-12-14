@@ -7,9 +7,9 @@ template:
     - opened: false
     - modalOverflowType: scroll
     - onModalClose: ''
-    - modalHeightType: fixed
+    - modalHeightType: auto
     - tooltipText: Upload mapping file
-    - modalHeight: '600'
+    - modalHeight: 576px
     - onModalOpen: ''
     - events:
         - ordered:

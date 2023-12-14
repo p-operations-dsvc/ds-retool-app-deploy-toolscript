@@ -27,7 +27,7 @@ template:
         ('T')[0].split('-')[0]}}, {{otherTitleReleaseDateRange.value.end.split
         ('T')[0].split('-')[0]}}, {{otherTitleTypeSwitch.value}},
         {{otherTitleNameInput.value.replace ('\'', '\\\'')}},
-        {{otherTitleMapToggleButton.value}},                           
+        {{otherTitleMappedStateSelect.value}},                           
         {{otherTitleSourceSwitch.value}},
 
         {{goldenTitleIsTitleCheckbox.value}}                                 )

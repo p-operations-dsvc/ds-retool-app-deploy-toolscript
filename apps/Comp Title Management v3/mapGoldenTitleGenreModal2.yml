@@ -9,7 +9,7 @@ template:
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: Upload Genre Map
-    - modalHeight: '600'
+    - modalHeight: 600px
     - onModalOpen: ''
     - events:
         - ordered:
@@ -22,7 +22,7 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-    - modalWidth: 60%
+    - modalWidth: 45%
     - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''

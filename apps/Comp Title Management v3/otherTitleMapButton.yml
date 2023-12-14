@@ -4,7 +4,7 @@ type: widget
 subtype: ButtonWidget2
 template:
   ordered:
-    - horizontalAlign: stretch
+    - horizontalAlign: center
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
@@ -60,7 +60,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 4153c
-    row: 1
+    col: 11
     height: 1
     width: 1
 createdAt: 2023-10-04T18:05:50.709Z

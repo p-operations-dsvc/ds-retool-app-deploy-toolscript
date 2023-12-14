@@ -55,7 +55,7 @@ template:
     - placeholder: ''
     - _captionByIndex: []
     - itemAdornmentSize: auto
-    - label: Source
+    - label: Title Source
     - _hasMigratedNestedItems: true
     - captionByIndex:
         array: []
@@ -99,7 +99,6 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 4153c
-    col: 5
+    row: 1
     height: 1
-    width: 2
 createdAt: 2023-10-04T17:51:13.497Z

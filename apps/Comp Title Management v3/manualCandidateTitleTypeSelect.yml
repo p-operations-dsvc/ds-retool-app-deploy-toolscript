@@ -52,7 +52,7 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select options
+    - placeholder: ''
     - _captionByIndex: []
     - itemAdornmentSize: auto
     - label: Title Type
