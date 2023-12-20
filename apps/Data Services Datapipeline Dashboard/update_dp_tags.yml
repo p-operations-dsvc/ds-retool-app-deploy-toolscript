@@ -7,6 +7,7 @@ template:
   ordered:
     - queryRefreshTime: ''
     - paginationLimit: ''
+    - allowedGroupIds: []
     - streamResponse: false
     - body: >-
         [{"key":"env","value":"{{manageTagsEnv.value}}"},{"key":"datapipeline_name","value":"{{manageTagsDPSelect.value}}"},{"key":"tags","value":"{{tagsMultiselectListbox.value}}"}]

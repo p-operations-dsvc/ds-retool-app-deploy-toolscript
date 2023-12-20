@@ -42,21 +42,26 @@ template:
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
+    - _columnTextColor:
+        ordered:
+          - '43581': ''
+          - '54398': ''
     - disableEdits: false
+    - autoColumnWidth: false
     - _rowHeight: small
     - _columnIds:
         - 9bb52
         - ae35b
+        - 1b0ef
         - 9bba0
         - b5497
         - '006e2'
         - 14cf5
-        - 1b0ef
         - a6d61
         - 30f6e
-        - 04d94
         - e4a84
         - '54398'
+        - 04d94
         - 023b7
         - 5259e
         - 8cf16
@@ -501,6 +506,7 @@ template:
           - cf3c1: ''
           - b5497: ''
           - 14cf5: ''
+    - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
           - 1b0ef: ''
@@ -714,7 +720,7 @@ template:
               ordered: []
           - '54398':
               ordered:
-                - showSeparators: true
+                - showSeparators: false
                 - notation: standard
           - 631de:
               ordered: []
@@ -748,6 +754,7 @@ template:
         ordered:
           - '54398': none
           - 14cf5: none
+          - '43581': none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -837,25 +844,31 @@ template:
           - cd7a5: 151.921875
           - aa6a6: 124.125
           - bc8c7: 480.546875
-          - e4a84: 111.03125
+          - e4a84: 220.03125
           - '43581': 865.484375
           - 14cf5: 454.546875
           - 58e8f: 152.578125
           - e557d: 438.4375
           - 2d7d2: 1107.328125
-          - '54398': 97.140625
+          - '54398': 142.3125
           - 631de: 673.421875
           - 5d2a4: 98.015625
           - 9bb52: 377.8125
           - 30f6e: 273.109375
-          - 04d94: 541.3125
+          - 04d94: 425.3125
           - ae35b: 104.125
           - cf3c1: 416.484375
           - b5497: 212.90625
     - _serverPaginationType: limitOffsetBased
+    - _columnSortMode:
+        ordered:
+          - '43581': default
+          - '54398': default
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:
+        ordered: []
+    - _dynamicColumnSize:
         ordered: []
     - _virtualizeStartIndex: 0
     - _toolbarButtonHidden:
@@ -938,6 +951,7 @@ template:
           - 14cf5: ''
     - _rowBackgroundColor:
         array: []
+    - emptyMessage: ''
     - pagination: null
     - selectedDataIndexes:
         array: []
@@ -1082,7 +1096,7 @@ template:
           - aa6a6: 'true'
           - bc8c7: 'true'
           - e4a84: ''
-          - '43581': 'true'
+          - '43581': 'false'
           - 58e8f: 'true'
           - e557d: 'true'
           - 2d7d2: 'true'
@@ -1115,7 +1129,7 @@ template:
           - aa6a6: Container memory
           - bc8c7: Task role arn
           - e4a84: Container Repo
-          - '43581': Task definition arn
+          - '43581': Task Definition
           - 58e8f: Schedule tz
           - e557d: Cluster arn
           - 2d7d2: Override commands str

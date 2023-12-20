@@ -97,9 +97,9 @@ template:
     - events:
         - ordered:
             - event: change
-            - type: widget
-            - method: refresh
-            - pluginId: searchRunTable
+            - type: datasource
+            - method: trigger
+            - pluginId: searchRunTableQuery
             - targetId: null
             - params:
                 ordered: []
@@ -147,6 +147,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: df36c
+    col: 1
     height: 1
     width: 2
 createdAt: 2023-02-24T00:34:30.222Z
