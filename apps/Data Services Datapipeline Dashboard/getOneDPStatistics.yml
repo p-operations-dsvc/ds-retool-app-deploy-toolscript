@@ -5,6 +5,7 @@ resourceName: JavascriptQuery
 template:
   ordered:
     - queryRefreshTime: ''
+    - allowedGroupIds: []
     - streamResponse: false
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''

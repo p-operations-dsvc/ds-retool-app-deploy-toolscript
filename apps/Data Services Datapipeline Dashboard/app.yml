@@ -4,11 +4,6 @@ appTemplate:
   mobileAppSettings:
     object:
       mobileOfflineModeEnabled: false
-  experimentalPerfFeatures:
-    object:
-      serverDepGraphEnabled: false
-      useRuntimeV2: false
-      runtimeV2OptOut: false
-  version: 3.14.5
+  version: 3.22.8
   responsiveLayoutDisabled: true
   markdownLinkBehavior: always

@@ -27,7 +27,10 @@ template:
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
+    - _columnTextColor:
+        ordered: []
     - disableEdits: false
+    - autoColumnWidth: false
     - _rowHeight: small
     - _columnIds:
         - 4ec76
@@ -301,6 +304,7 @@ template:
           - 22db9: ''
           - 19a38: ''
           - a49cf: ''
+    - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
           - 37c78: ''
@@ -501,9 +505,13 @@ template:
           - 22db9: 119.484375
           - 19a38: 79.09375
     - _serverPaginationType: limitOffsetBased
+    - _columnSortMode:
+        ordered: []
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:
+        ordered: []
+    - _dynamicColumnSize:
         ordered: []
     - _virtualizeStartIndex: 0
     - _toolbarButtonHidden:
@@ -556,6 +564,7 @@ template:
           - a49cf: ''
     - _rowBackgroundColor:
         array: []
+    - emptyMessage: ''
     - pagination: null
     - selectedDataIndexes:
         array: []

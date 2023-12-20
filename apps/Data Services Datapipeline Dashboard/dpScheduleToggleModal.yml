@@ -18,13 +18,13 @@ template:
     - disabled: ''
     - buttonText: >-
         {{dpAllTableV2.selectedRow.schedule_state == 'ENABLED'? 'Disable':
-        'Enable'}} Schedule
+        'Enable'}} Datapipeline Schedule
 style:
   ordered: []
 position2:
   position2:
     container: dpSettingRowModal
-    row: 4
+    row: 3
     col: 3
     height: 1.6
     width: 6

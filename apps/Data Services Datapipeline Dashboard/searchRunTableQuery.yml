@@ -1,15 +1,12 @@
-id: get_dp_run
+id: searchRunTableQuery
 type: datasource
-subtype: RESTQuery
-resourceName: 5dce28aa-d15b-4da8-9a5b-cbc4b34e1cf0
-resourceDisplayName: dp_api
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
 template:
   ordered:
     - queryRefreshTime: ''
-    - paginationLimit: ''
     - allowedGroupIds: []
     - streamResponse: false
-    - body: ''
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''
     - servedFromCache: false
@@ -20,13 +17,35 @@ template:
     - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
-    - paginationPaginationField: ''
-    - headers: ''
     - workflowRunId: null
     - showFailureToaster: true
-    - paginationEnabled: false
-    - query: >-
-        get_ds_pipeline_run?datapipeline_name={{dpNameHistory.value}}&env={{runEnvHistory.value}}&start={{startDateRangeHistory.startPlaceholder}}&end={{startDateRangeHistory.endPlaceholder}}&status={{runStatusHistory.value}}
+    - query: |-
+        let  MaxDateDiff = 0;
+
+        if (dpNameHistory.value=='Any') {
+          MaxDateDiff = 4;
+        }
+        else {
+          MaxDateDiff = 100
+        }
+        const start = new Date(startDateRangeHistory.value.start );
+
+        const end = new Date (startDateRangeHistory.value.end)
+
+        const diff = Math.ceil(Math.abs(end - start) / (1000 * 60 * 60 * 24)); 
+
+        if (diff>MaxDateDiff) {
+          utils.showNotification ({
+            'title': 'Difference between start and end date is too large',
+            'description': "Difference between start and end date cannot be greater than "+MaxDateDiff+" days when all datapipelines are selected",
+            'notificationType':'error',
+            'duration':5
+          });
+          return;
+        }
+        else {
+          searchRunTable.refresh();
+        }
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -36,11 +55,11 @@ template:
     - data: null
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: false
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
-    - cookies: ''
     - metadata: null
     - workflowActionType: null
     - queryRunTime: null
@@ -58,40 +77,32 @@ template:
     - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
-    - resourceTypeOverride: ''
+    - resourceTypeOverride: null
     - watchedParams: []
     - enableErrorTransformer: false
     - showLatestVersionUpdatedWarning: false
-    - paginationDataField: ''
     - timestamp: 0
     - importedQueryDefaults:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
-    - version: 1
     - overrideOrgCacheForUserCache: false
     - runWhenPageLoads: false
-    - transformer: >-
-        // type your code here
-
-        // example: return formatDataAsArray(data).filter(row => row.quantity >
-        20)
-
+    - transformer: |-
+        // Query results are available as the `data` variable
         return data
     - events: []
     - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
-    - type: GET
     - queryFailureConditions: ''
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
     - workflowBlockPluginId: null
-    - bodyType: none
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-02-25T00:21:37.314Z
+createdAt: 2023-12-20T22:27:16.567Z

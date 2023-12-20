@@ -58,7 +58,7 @@ template:
     - hiddenByIndex:
         array: []
     - labelCaption: ''
-    - labelWidth: '18'
+    - labelWidth: '25'
     - deprecatedLabels:
         array: []
     - _hiddenByIndex:
@@ -100,9 +100,9 @@ template:
     - events:
         - ordered:
             - event: change
-            - type: widget
-            - method: refresh
-            - pluginId: searchRunTable
+            - type: datasource
+            - method: trigger
+            - pluginId: searchRunTableQuery
             - targetId: null
             - params:
                 ordered: []
@@ -142,7 +142,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: df36c
-    col: 10
+    col: 9
     height: 2.4
     width: 2
 createdAt: 2023-02-14T00:25:20.023Z
