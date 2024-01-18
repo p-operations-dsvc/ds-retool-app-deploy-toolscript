@@ -70,7 +70,6 @@ template:
                       }
             - waitType: debounce
             - waitMs: '0'
-            - enabled: ''
     - groupByMode: dropdown
     - onPointSelectQuery: ''
     - xAxisMode: dropdown
