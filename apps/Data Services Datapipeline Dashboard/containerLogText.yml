@@ -12,7 +12,7 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: '**<h4>Execution ID {{get_dp_run_container_log.data[0].execution_id}}**'
+    - value: '**<h4>Execution ID {{containerLogSelect.value.split('':'').pop()}}**'
     - style:
         ordered:
           - background: info

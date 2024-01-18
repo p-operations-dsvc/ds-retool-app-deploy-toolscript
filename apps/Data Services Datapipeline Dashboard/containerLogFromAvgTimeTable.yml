@@ -99,7 +99,7 @@ template:
         - 1a
         - 3c
         - 4d
-    - data: '{{ get_dp_run_container_log_from_avg_run_time.data }}'
+    - data: '{{ get_dp_run_container_log_from_s3_avg_run_time.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
@@ -220,10 +220,10 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - 837b9: 100
-          - 7915a: 100
-          - 1274a: 199
-          - 7aed0: 100
+          - 837b9: 860.59375
+          - 7915a: 447.84375
+          - 1274a: 117.046875
+          - 7aed0: 892
     - _serverPaginationType: limitOffsetBased
     - _columnSortMode:
         ordered: []

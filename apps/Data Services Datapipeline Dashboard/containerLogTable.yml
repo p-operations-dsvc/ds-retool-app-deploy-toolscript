@@ -8,11 +8,9 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - 6b460: ''
           - effdb: ''
           - cfead: ''
           - '2e701': ''
-          - 7e3cd: ''
           - '8e622': ''
           - c4758: ''
           - d2dc7: ''
@@ -31,8 +29,6 @@ template:
     - autoColumnWidth: false
     - _rowHeight: small
     - _columnIds:
-        - 6b460
-        - 7e3cd
         - '50330'
         - 0922e
     - _isSaving: false
@@ -45,15 +41,11 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - 6b460:
-              ordered: []
           - effdb:
               ordered: []
           - cfead:
               ordered: []
           - '2e701':
-              ordered: []
-          - 7e3cd:
               ordered: []
           - '8e622':
               ordered: []
@@ -97,15 +89,11 @@ template:
           - 4d: custom
     - _columnOptionList:
         ordered:
-          - 6b460:
-              ordered: []
           - effdb:
               ordered: []
           - cfead:
               ordered: []
           - '2e701':
-              ordered: []
-          - 7e3cd:
               ordered: []
           - '8e622':
               ordered: []
@@ -127,11 +115,9 @@ template:
               ordered: []
     - _columnValueOverride:
         ordered:
-          - 6b460: ''
           - effdb: ''
           - cfead: ''
           - '2e701': ''
-          - 7e3cd: ''
           - '8e622': ''
           - c4758: ''
           - d2dc7: ''
@@ -150,11 +136,9 @@ template:
     - _currentPage: 0
     - _columnKey:
         ordered:
-          - 6b460: execution_id
           - effdb: role
           - cfead: firstName
           - '2e701': createdAt
-          - 7e3cd: stream_name
           - '8e622': website
           - c4758: teams
           - d2dc7: text
@@ -169,18 +153,16 @@ template:
         - 1a
         - 3c
         - 4d
-    - data: '{{ get_dp_run_container_log.data }}'
+    - data: '{{ get_dp_run_container_log_from_s3.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - 6b460: ''
           - effdb: ''
           - cfead: ''
           - '2e701': ''
-          - 7e3cd: ''
           - '8e622': ''
           - c4758: ''
           - d2dc7: ''
@@ -192,11 +174,9 @@ template:
           - 0922e: ''
     - _columnFormat:
         ordered:
-          - 6b460: string
           - effdb: tag
           - cfead: string
           - '2e701': date
-          - 7e3cd: string
           - '8e622': link
           - c4758: tags
           - d2dc7: multilineString
@@ -213,11 +193,9 @@ template:
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - 6b460: left
           - effdb: left
           - cfead: left
           - '2e701': left
-          - 7e3cd: left
           - '8e622': left
           - c4758: left
           - d2dc7: left
@@ -231,11 +209,9 @@ template:
         ordered: []
     - _columnTooltip:
         ordered:
-          - 6b460: ''
           - effdb: ''
           - cfead: ''
           - '2e701': ''
-          - 7e3cd: ''
           - '8e622': ''
           - c4758: ''
           - d2dc7: ''
@@ -247,11 +223,9 @@ template:
           - 0922e: ''
     - _columnIcon:
         ordered:
-          - 6b460: ''
           - effdb: ''
           - cfead: ''
           - '2e701': ''
-          - 7e3cd: ''
           - '8e622': ''
           - c4758: ''
           - d2dc7: ''
@@ -264,11 +238,9 @@ template:
     - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
-          - 6b460: ''
           - effdb: ''
           - cfead: ''
           - '2e701': ''
-          - 7e3cd: ''
           - '8e622': ''
           - c4758: overflow
           - d2dc7: overflow
@@ -286,11 +258,9 @@ template:
     - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
-          - 6b460: false
           - effdb: false
           - cfead: false
           - '2e701': false
-          - 7e3cd: false
           - '8e622': false
           - c4758: false
           - d2dc7: false
@@ -308,11 +278,9 @@ template:
         ordered: []
     - _columnReferenceId:
         ordered:
-          - 6b460: ''
           - effdb: ''
           - cfead: ''
           - '2e701': ''
-          - 7e3cd: ''
           - '8e622': ''
           - c4758: ''
           - d2dc7: ''
@@ -327,11 +295,9 @@ template:
     - _rowSelection: none
     - _columnCaption:
         ordered:
-          - 6b460: ''
           - effdb: ''
           - cfead: ''
           - '2e701': ''
-          - 7e3cd: ''
           - '8e622': ''
           - c4758: ''
           - d2dc7: ''
@@ -346,16 +312,12 @@ template:
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - 6b460:
-              ordered: []
           - effdb:
               ordered:
                 - automaticColors: true
           - cfead:
               ordered: []
           - '2e701':
-              ordered: []
-          - 7e3cd:
               ordered: []
           - '8e622':
               ordered: []
@@ -393,15 +355,11 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - 6b460:
-              ordered: []
           - effdb:
               ordered: []
           - cfead:
               ordered: []
           - '2e701':
-              ordered: []
-          - 7e3cd:
               ordered: []
           - '8e622':
               ordered: []
@@ -423,10 +381,8 @@ template:
               ordered: []
     - _columnSize:
         ordered:
-          - '50330': 155.265625
-          - 6b460: 277.25
-          - 7e3cd: 444.109375
-          - 0922e: 1004
+          - '50330': 182.671875
+          - 0922e: 683
     - _serverPaginationType: limitOffsetBased
     - _columnSortMode:
         ordered: []
@@ -463,11 +419,9 @@ template:
             - targetId: 4d
     - _columnEditable:
         ordered:
-          - 6b460: ''
           - effdb: ''
           - cfead: ''
           - '2e701': ''
-          - 7e3cd: ''
           - '8e622': ''
           - c4758: ''
           - d2dc7: ''
@@ -485,11 +439,9 @@ template:
         array: []
     - _columnGroupAggregationMode:
         ordered:
-          - 6b460: none
           - effdb: none
           - cfead: none
           - '2e701': none
-          - 7e3cd: none
           - '8e622': none
           - c4758: none
           - d2dc7: none
@@ -513,11 +465,9 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - 6b460: center
           - effdb: center
           - cfead: center
           - '2e701': center
-          - 7e3cd: center
           - '8e622': center
           - c4758: center
           - d2dc7: center
@@ -530,11 +480,9 @@ template:
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - 6b460: Enter value
           - effdb: Select option
           - cfead: Enter value
           - '2e701': ''
-          - 7e3cd: Enter value
           - '8e622': ''
           - c4758: Select options
           - d2dc7: ''
@@ -554,11 +502,9 @@ template:
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - 6b460: 'true'
           - effdb: ''
           - cfead: ''
           - '2e701': ''
-          - 7e3cd: 'true'
           - '8e622': ''
           - c4758: ''
           - d2dc7: ''
@@ -570,11 +516,9 @@ template:
           - 0922e: ''
     - _columnLabel:
         ordered:
-          - 6b460: Execution ID
           - effdb: Role
           - cfead: First name
           - '2e701': Created at
-          - 7e3cd: Stream name
           - '8e622': Website
           - c4758: Teams
           - d2dc7: Bio
@@ -590,7 +534,7 @@ style:
 position2:
   position2:
     container: executIonHistoryModal
-    row: 3.1999999999999997
+    row: 1.9999999999999998
     height: 1
     width: 12
 createdAt: 2023-11-28T01:03:16.084Z
