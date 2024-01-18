@@ -81,24 +81,26 @@ template:
         return data
     - events:
         - ordered:
+            - method: open
+            - enabled: '{{get_dp_run_execution_ids.data.length>0}}'
+            - params:
+                ordered: []
+            - targetId: null
+            - pluginId: executIonHistoryModal
+            - waitType: debounce
             - event: success
             - type: widget
-            - method: open
-            - pluginId: executIonHistoryModal
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
             - waitMs: '0'
         - ordered:
-            - event: success
-            - type: datasource
             - method: trigger
-            - pluginId: get_dp_run_container_log
-            - targetId: null
+            - enabled: '{{get_dp_run_execution_ids.data.length>0}}'
             - params:
                 ordered: []
+            - targetId: null
+            - pluginId: get_dp_run_container_log
             - waitType: debounce
+            - event: success
+            - type: datasource
             - waitMs: '0'
     - isMultiplayerEdited: false
     - queryTimeout: '10000'

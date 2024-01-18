@@ -14,7 +14,7 @@ template:
     - tooltipText: ''
     - value: >-
         **<h4>Execution ID
-        {{get_dp_run_container_log_from_avg_run_time.data[0].execution_id}}</h4>**
+        {{containerLogFromAvgTimeSelect.value.split(':').pop()}}</h4>**
     - style:
         ordered:
           - background: info

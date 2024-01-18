@@ -8,21 +8,18 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - 837b9: ''
-          - 7915a: ''
           - 1274a: ''
           - 7aed0: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
     - _columnTextColor:
-        ordered: []
+        ordered:
+          - 1274a: ''
     - disableEdits: false
     - autoColumnWidth: false
     - _rowHeight: small
     - _columnIds:
-        - 837b9
-        - 7915a
         - 1274a
         - 7aed0
     - _isSaving: false
@@ -35,10 +32,6 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - 837b9:
-              ordered: []
-          - 7915a:
-              ordered: []
           - 1274a:
               ordered: []
           - 7aed0:
@@ -67,31 +60,23 @@ template:
           - 4d: custom
     - _columnOptionList:
         ordered:
-          - 837b9:
-              ordered: []
-          - 7915a:
-              ordered: []
           - 1274a:
               ordered: []
           - 7aed0:
               ordered: []
     - _columnValueOverride:
         ordered:
-          - 837b9: ''
-          - 7915a: ''
           - 1274a: ''
           - 7aed0: ''
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: '50'
+    - _templatePageSize: '20'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true
     - _currentPage: 0
     - _columnKey:
         ordered:
-          - 837b9: execution_id
-          - 7915a: stream_name
           - 1274a: record_timestamp
           - 7aed0: record_text
     - hidden: false
@@ -99,22 +84,18 @@ template:
         - 1a
         - 3c
         - 4d
-    - data: '{{ get_dp_run_container_log_from_avg_run_time.data }}'
+    - data: '{{ get_dp_run_container_log_from_s3_avg_run_time.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - 837b9: ''
-          - 7915a: ''
           - 1274a: ''
           - 7aed0: ''
     - _columnFormat:
         ordered:
-          - 837b9: string
-          - 7915a: string
-          - 1274a: string
+          - 1274a: datetime
           - 7aed0: multilineString
     - _cursorCache:
         object: {}
@@ -123,29 +104,21 @@ template:
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - 837b9: left
-          - 7915a: left
           - 1274a: left
           - 7aed0: left
     - _actionIcon:
         ordered: []
     - _columnTooltip:
         ordered:
-          - 837b9: ''
-          - 7915a: ''
           - 1274a: ''
           - 7aed0: ''
     - _columnIcon:
         ordered:
-          - 837b9: ''
-          - 7915a: ''
           - 1274a: ''
           - 7aed0: ''
     - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
-          - 837b9: ''
-          - 7915a: ''
           - 1274a: ''
           - 7aed0: ''
     - _pageSize: null
@@ -156,8 +129,6 @@ template:
     - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
-          - 837b9: false
-          - 7915a: false
           - 1274a: false
           - 7aed0: false
     - _showSummaryRow: false
@@ -168,8 +139,6 @@ template:
         ordered: []
     - _columnReferenceId:
         ordered:
-          - 837b9: ''
-          - 7915a: ''
           - 1274a: ''
           - 7aed0: ''
     - _dynamicColumnSource:
@@ -177,8 +146,6 @@ template:
     - _rowSelection: single
     - _columnCaption:
         ordered:
-          - 837b9: ''
-          - 7915a: ''
           - 1274a: ''
           - 7aed0: ''
     - _dynamicColumnFormatOptions:
@@ -186,10 +153,6 @@ template:
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - 837b9:
-              ordered: []
-          - 7915a:
-              ordered: []
           - 1274a:
               ordered: []
           - 7aed0:
@@ -200,7 +163,8 @@ template:
         array: []
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
-        ordered: []
+        ordered:
+          - 1274a: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -210,23 +174,18 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - 837b9:
-              ordered: []
-          - 7915a:
-              ordered: []
           - 1274a:
               ordered: []
           - 7aed0:
               ordered: []
     - _columnSize:
         ordered:
-          - 837b9: 100
-          - 7915a: 100
-          - 1274a: 199
-          - 7aed0: 100
+          - 1274a: 197.046875
+          - 7aed0: 892
     - _serverPaginationType: limitOffsetBased
     - _columnSortMode:
-        ordered: []
+        ordered:
+          - 1274a: default
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:
@@ -260,8 +219,6 @@ template:
             - targetId: 4d
     - _columnEditable:
         ordered:
-          - 837b9: ''
-          - 7915a: ''
           - 1274a: ''
           - 7aed0: ''
     - _rowBackgroundColor:
@@ -272,8 +229,6 @@ template:
         array: []
     - _columnGroupAggregationMode:
         ordered:
-          - 837b9: none
-          - 7915a: none
           - 1274a: none
           - 7aed0: none
     - sortArray:
@@ -290,15 +245,11 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - 837b9: center
-          - 7915a: center
           - 1274a: center
           - 7aed0: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - 837b9: Enter value
-          - 7915a: Enter value
           - 1274a: Enter value
           - 7aed0: Enter value
     - _defaultFilterOperator: and
@@ -311,14 +262,10 @@ template:
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - 837b9: 'true'
-          - 7915a: 'true'
           - 1274a: ''
           - 7aed0: ''
     - _columnLabel:
         ordered:
-          - 837b9: Execution ID
-          - 7915a: Stream name
           - 1274a: Timestamp
           - 7aed0: Log Record
     - _showToolbar: true

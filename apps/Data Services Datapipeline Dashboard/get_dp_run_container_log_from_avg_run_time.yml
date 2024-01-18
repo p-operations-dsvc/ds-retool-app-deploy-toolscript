@@ -78,9 +78,30 @@ template:
         20)
 
         return data
-    - events: []
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_dp_run_container_log_from_s3_avg_run_time
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: setPage
+            - pluginId: containerLogFromAvgTimeTable
+            - targetId: null
+            - params:
+                ordered:
+                  - page: '0'
+            - waitType: debounce
+            - waitMs: '0'
     - isMultiplayerEdited: false
-    - queryTimeout: '10000'
+    - queryTimeout: '29000'
     - workflowId: null
     - requireConfirmation: false
     - type: GET

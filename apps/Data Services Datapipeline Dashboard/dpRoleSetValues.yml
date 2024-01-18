@@ -20,6 +20,10 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: |-
+        let len = get_dp_role.data.length
+        if (len==0){
+          return
+        }
         let val = get_dp_role.data[0]
         createIAMRoleS3Variable.setValue (val.s3_grants)
         createIAMRoleSecretsVariable.setValue (val.secrets_grants)

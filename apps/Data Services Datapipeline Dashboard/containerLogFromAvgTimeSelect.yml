@@ -38,7 +38,8 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{get_dp_run_execution_ids_from_avg_run_time.data[0].execution_id}}'
+    - value: >-
+        {{get_dp_run_execution_ids_from_avg_run_time.data.length==0?'none':get_dp_run_execution_ids_from_avg_run_time.data[0].execution_id}}
     - hiddenByIndex:
         array: []
     - labelCaption: ''
