@@ -129,7 +129,7 @@ template:
           - 0922e: ''
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: '50'
+    - _templatePageSize: '20'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true
