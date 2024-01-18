@@ -1,57 +1,28 @@
 id: createDPTaskRoleText
-uuid: bb4caa85-fd89-4c40-a7ee-5ffe2c76803c
 type: widget
-subtype: TextInputWidget2
+subtype: TextWidget2
 template:
   ordered:
-    - spellCheck: false
-    - readOnly: false
-    - iconAfter: ''
-    - showCharacterCount: false
-    - autoComplete: false
+    - heightType: auto
+    - horizontalAlign: center
     - marginType: normal
-    - maxLength: null
     - hidden: false
-    - customValidation: ''
-    - patternType: ''
-    - hideValidationMessage: false
-    - textBefore: ''
-    - validationMessage: ''
-    - textAfter: ''
+    - imageWidth: fit
     - showInEditor: false
-    - showClear: false
-    - pattern: ''
+    - verticalAlign: center
     - tooltipText: ''
-    - labelAlign: left
-    - formDataKey: '{{ self.id }}'
-    - value: ''
-    - labelCaption: ''
-    - labelWidth: '15'
-    - autoFill: ''
-    - placeholder: Enter new role name
-    - label: Role name
-    - _validate: false
-    - labelWidthUnit: '%'
-    - invalid: false
-    - iconBefore: ''
-    - minLength: null
-    - inputTooltip: ''
-    - events:
-        ordered: []
-    - autoCapitalize: none
-    - loading: false
-    - disabled: false
-    - labelPosition: left
-    - labelWrap: false
+    - value: <b>Paste the role config json document below</b>
+    - _disclosedFields:
+        array: []
+    - disableMarkdown: false
+    - overflowType: scroll
     - maintainSpaceWhenHidden: false
-    - required: false
 style:
   ordered: []
 position2:
   position2:
     container: mainContainer
     subcontainer: '01622'
-    row: 0.39999999999999997
-    height: 1
-    width: 4
-createdAt: 2023-12-05T02:18:03.065Z
+    col: 4
+    height: 0.6
+createdAt: 2023-03-14T00:30:00.177Z

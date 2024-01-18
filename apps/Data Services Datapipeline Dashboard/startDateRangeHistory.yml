@@ -23,7 +23,9 @@ template:
     - formDataKey: '{{ self.id }}'
     - value:
         ordered:
-          - start: '{{ moment().add(-2, ''days'') }}'
+          - start: |-
+
+              {{ moment().add(-6, 'days') }}
           - end: |-
 
               {{ moment().add(1, 'days') }}
@@ -45,9 +47,9 @@ template:
     - events:
         - ordered:
             - event: change
-            - type: datasource
-            - method: trigger
-            - pluginId: searchRunTableQuery
+            - type: widget
+            - method: refresh
+            - pluginId: searchRunTable
             - targetId: null
             - params:
                 ordered: []
@@ -67,6 +69,6 @@ position2:
     container: mainContainer
     subcontainer: df36c
     row: -2.4424906541753444e-15
-    col: 3
+    col: 2
     height: 1
 createdAt: 2023-02-14T02:02:30.843Z

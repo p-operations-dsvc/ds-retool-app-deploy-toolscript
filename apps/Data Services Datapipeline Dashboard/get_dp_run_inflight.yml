@@ -7,7 +7,6 @@ template:
   ordered:
     - queryRefreshTime: ''
     - paginationLimit: ''
-    - allowedGroupIds: []
     - streamResponse: false
     - body: ''
     - lastReceivedFromResourceAt: null
@@ -37,7 +36,7 @@ template:
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
     - cookies: ''
@@ -78,8 +77,23 @@ template:
         20)
 
         return data
-    - events: []
-    - isMultiplayerEdited: false
+    - events:
+        - ordered:
+            - event: failure
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: error
+                        - title: Failed to get in flight runs
+                        - description: '{{get_dp_run_inflight.error}}'
+                        - duration: '5'
+            - waitType: debounce
+            - waitMs: '0'
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false

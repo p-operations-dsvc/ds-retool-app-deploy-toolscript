@@ -42,7 +42,7 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select a datapipeline
+    - placeholder: Select an option
     - _captionByIndex: []
     - _disclosedFields:
         array: []
@@ -62,7 +62,17 @@ template:
     - iconBefore: ''
     - colorByIndex: ''
     - selectedLabel: ''
-    - events: []
+    - events:
+        - ordered:
+            - event: change
+            - type: widget
+            - method: refresh
+            - pluginId: searchRunTable
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - _ids: []
     - emptyMessage: No options
     - overlayMaxHeight: 375

@@ -7,7 +7,6 @@ template:
   ordered:
     - queryRefreshTime: ''
     - paginationLimit: ''
-    - allowedGroupIds: []
     - streamResponse: false
     - body: >-
         [{"key":"env","value":"{{dpEnv2.value}}"},{"key":"datapipeline_name","value":"{{dpName2.value}}"},{"key":"datapipeline_timeout_seconds","value":"{{dpTimeout2.value}}"},{"key":"snow_assignment_group","value":"{{dpIncQueue2.value}}"},{"key":"snow_ci","value":"{{dpIncCI2.value}}"},{"key":"snow_urgency","value":"{{dpIncUrgency2.value}}"},{"key":"snow_impact","value":"{{dpIncImpact2.value}}"},{"key":"auto_restart_on_failure","value":"{{dpAutoRestart2.value}}"},{"key":"max_number_of_restarts","value":"{{dpMaxNumberofRestarts2.value}}"},{"key":"max_concurrent_instances","value":"{{dpMaxConcurrentInstances2.value}}"},{"key":"cluster_arn","value":"{{dpCluster2.value}}"},{"key":"container_name","value":"{{dpContainerName2.value}}"},{"key":"container_arn","value":"{{dpContainerARN2.value}}"},{"key":"sns_success_topic_arn","value":"{{dpSNSSuccessTopicARN2.value}}"},{"key":"sns_failure_topic_arn","value":"{{dpSNSFailureTopicARN2.value}}"},{"key":"task_name","value":"{{dpTaskName2.value}}"},{"key":"task_definition_arn","value":"{{dpTaskDefinitionARN2.value}}"},{"key":"task_storage","value":"{{dpTaskStorage2.value}}"},{"key":"task_cpu","value":"\"{{dpTaskCPU2.value}}\""},{"key":"task_memory","value":"\"{{dpTaskMemory2.value}}\""},{"key":"task_role_arn","value":"{{dpRoleARN2.value}}"},{"key":"schedule_name","value":"{{dpScheduleName2.value}}"},{"key":"schedule_cron_expression","value":"{{dpScheduleExpression2.value}}"},{"key":"documentation_url","value":"{{dpDocumentationURL2.value}}"},{"key":"overrides","value":"{{dpOverrides2.value}}"},{"key":"override_commands","value":"{{dpOverridesCommands2.value}}"},{"key":"schedule_group","value":"{{dpScheduleGroup2.value}}"},{"key":"schedule_tz","value":"{{dpScheduleTZ2.value}}"},{"key":"schedule_state","value":"{{dpScheduleState2.value}}"},{"key":"old_schedule_group","value":"{{currentScheduleGroup.value}}"},{"key":"old_schedule_name","value":"{{currentScheduleName.value}}"},{"key":"","value":""}]
@@ -107,6 +106,22 @@ template:
             - targetId: null
             - params:
                 ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: failure
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: error
+                        - title: Failed to update datapipeline {{dpName2.value}}
+                        - description: '{{upsert_dp.error}}'
+                        - duration: '5'
             - waitType: debounce
             - waitMs: '0'
     - queryTimeout: '10000'

@@ -7,7 +7,6 @@ template:
   ordered:
     - queryRefreshTime: ''
     - paginationLimit: ''
-    - allowedGroupIds: []
     - streamResponse: false
     - body: ''
     - lastReceivedFromResourceAt: null
@@ -108,6 +107,24 @@ template:
             - targetId: null
             - params:
                 ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: failure
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: error
+                        - title: >-
+                            Failed to start datapipeline
+                            {{dpAllTableV2.selectedRow.datapipeline_name}}
+                        - description: '{{start_dp.error}}'
+                        - duration: '5'
             - waitType: debounce
             - waitMs: '0'
     - isMultiplayerEdited: false

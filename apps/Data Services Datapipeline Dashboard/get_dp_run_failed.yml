@@ -7,7 +7,6 @@ template:
   ordered:
     - queryRefreshTime: ''
     - paginationLimit: ''
-    - allowedGroupIds: []
     - streamResponse: false
     - body: ''
     - lastReceivedFromResourceAt: null

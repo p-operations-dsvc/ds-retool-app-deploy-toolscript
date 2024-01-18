@@ -7,7 +7,6 @@ template:
   ordered:
     - queryRefreshTime: ''
     - paginationLimit: ''
-    - allowedGroupIds: []
     - streamResponse: false
     - body: ''
     - lastReceivedFromResourceAt: null
@@ -26,7 +25,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        get_ds_pipeline_run_history?env={{runEnvHistory.value}}&execution_id={{searchRunTable.selectedRow.execution_id_full}}&history_type=sfn
+        get_ds_pipeline_run_history?env={{runEnvHistory.value}}&execution_id={{searchRunTable.selectedRow.execution_id_full}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -37,7 +36,7 @@ template:
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
     - cookies: ''
@@ -78,7 +77,23 @@ template:
         20)
 
         return data
-    - events: []
+    - events:
+        - ordered:
+            - event: failure
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: error
+                        - title: Failed to get history of execution
+                        - description: '{{get_dp_run_history.error}}'
+                        - duration: '5'
+            - waitType: debounce
+            - waitMs: '0'
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false

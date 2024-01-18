@@ -7,7 +7,6 @@ template:
   ordered:
     - queryRefreshTime: ''
     - paginationLimit: ''
-    - allowedGroupIds: []
     - streamResponse: false
     - body: '[]'
     - lastReceivedFromResourceAt: null
@@ -107,6 +106,24 @@ template:
             - targetId: null
             - params:
                 ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: failure
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: error
+                        - title: >-
+                            Failed to add incident queue
+                            {{addSnowQueueForm.data.textInput1}}
+                        - description: '{{create_snow_queue.error}}'
+                        - duration: '5'
             - waitType: debounce
             - waitMs: '0'
     - queryTimeout: '10000'

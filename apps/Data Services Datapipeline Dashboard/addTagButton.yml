@@ -19,9 +19,34 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: datasource
-            - method: trigger
-            - pluginId: addTag
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: >-
+                      dpTagsVariable.setValue
+                      (dpTagsVariable.value.concat(addNewTagText.value))
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: >-
+                      tagsMultiselectListbox.setValue(tagsMultiselectListbox.values)
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: click
+            - type: widget
+            - method: clearValue
+            - pluginId: addNewTagText
             - targetId: null
             - params:
                 ordered: []
