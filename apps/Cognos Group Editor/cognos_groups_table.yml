@@ -157,7 +157,7 @@ template:
           - 7fc32: center
           - 6e57f: right
           - cecfb: left
-          - '9e025': center
+          - '9e025': left
     - _actionIcon:
         ordered:
           - 58b03: bold/interface-user-multiple
