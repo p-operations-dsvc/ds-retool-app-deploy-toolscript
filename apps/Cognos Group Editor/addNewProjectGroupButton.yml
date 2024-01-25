@@ -7,6 +7,7 @@ template:
     - clickable: false
     - iconAfter: ''
     - submitTargetId: addNewProjectGroupForm
+    - marginType: normal
     - hidden: false
     - text: Submit
     - showInEditor: false

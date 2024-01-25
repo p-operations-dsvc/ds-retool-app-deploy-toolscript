@@ -13,7 +13,10 @@ template:
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
+    - _columnTextColor:
+        ordered: []
     - disableEdits: false
+    - autoColumnWidth: false
     - _rowHeight: small
     - _columnIds:
         - 79c74
@@ -85,6 +88,7 @@ template:
           - d6cef: ''
           - 79c74: ''
           - a16c9: ''
+    - marginType: normal
     - _showBorder: true
     - _templatePageSize: '20'
     - _dynamicColumnProperties:
@@ -140,6 +144,7 @@ template:
           - d6cef: ''
           - 79c74: ''
           - a16c9: ''
+    - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
           - a16c9: ''
@@ -147,13 +152,17 @@ template:
     - showInEditor: false
     - selectedSourceRows:
         array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
           - d6cef: false
           - 79c74: false
           - a16c9: false
     - undefined: null
+    - _showSummaryRow: false
     - filterStack: null
+    - _expandedRows: null
     - changesetObject: null
     - _actionDisabled:
         ordered: []
@@ -170,6 +179,8 @@ template:
           - d6cef: ''
           - 79c74: ''
           - a16c9: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
@@ -186,10 +197,14 @@ template:
     - selectedRowKeys:
         array: []
     - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered: []
     - searchTerm: ''
     - selectedRows:
         array: []
     - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
@@ -201,10 +216,17 @@ template:
           - d6cef: 483.75
           - a16c9: 76.390625
     - _serverPaginationType: limitOffsetBased
+    - _columnSortMode:
+        ordered: []
+    - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:
         ordered: []
+    - _dynamicColumnSize:
+        ordered: []
     - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered: []
     - _defaultFilters:
         ordered: []
     - events:
@@ -260,9 +282,14 @@ template:
           - '': false
           - 79c74: false
           - a16c9: 'true'
+    - _rowBackgroundColor:
+        array: []
+    - emptyMessage: ''
     - pagination: null
     - selectedDataIndexes:
         array: []
+    - _columnGroupAggregationMode:
+        ordered: []
     - sortArray:
         array: []
     - _selectedCell: null

@@ -11,6 +11,7 @@ template:
     - appendNewSelection: false
     - selectionType: single
     - accept: '["CSV"]'
+    - marginType: normal
     - hidden: false
     - customValidation: ''
     - maxCount: null
@@ -23,8 +24,10 @@ template:
     - formDataKey: '{{ self.id }}'
     - value:
         array: []
+    - _isUpgraded: false
     - minSize: ''
     - styleVariant: outline
+    - uploadToRetoolStorage: false
     - _validate: false
     - invalid: false
     - files:

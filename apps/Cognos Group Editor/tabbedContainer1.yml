@@ -22,12 +22,18 @@ template:
         - ''
         - ''
         - ''
+    - showFooterBorder: true
+    - marginType: normal
+    - enableFullBleed: false
+    - showBorder: true
     - hidden: false
     - showHeader: true
     - hoistFetching: false
+    - paddingType: normal
     - views:
         array: []
     - showInEditor: false
+    - footerPaddingType: normal
     - tooltipText: ''
     - hiddenByIndex:
         array: []
@@ -41,6 +47,7 @@ template:
     - currentViewIndex: null
     - _hasMigratedNestedItems: true
     - transition: none
+    - showHeaderBorder: true
     - itemMode: static
     - _tooltipByIndex:
         - ''
@@ -90,6 +97,7 @@ template:
         - Groups
         - ''
         - ''
+    - headerPaddingType: normal
     - disabledByIndex:
         array: []
     - maintainSpaceWhenHidden: false

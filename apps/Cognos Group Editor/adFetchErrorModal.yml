@@ -1,0 +1,29 @@
+id: adFetchErrorModal
+uuid: ce784434-360a-4a5d-99b2-7c7d71e3c7cb
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - hidden: 'true'
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open Modal
+style:
+  ordered: []
+position2:
+  position2:
+    container: tabbedContainer1
+    subcontainer: 75d64
+    row: 1
+    col: 1
+    height: 1
+createdAt: 2024-01-25T21:42:09.371Z
