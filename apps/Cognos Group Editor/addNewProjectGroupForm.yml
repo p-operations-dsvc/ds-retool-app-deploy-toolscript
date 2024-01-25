@@ -5,16 +5,23 @@ template:
   ordered:
     - disableSubmit: false
     - heightType: auto
+    - showFooterBorder: true
     - resetAfterSubmit: true
     - submitting: false
+    - marginType: normal
+    - enableFullBleed: false
+    - showBorder: true
     - hidden: false
     - data:
         object: {}
     - showHeader: true
     - hoistFetching: false
+    - paddingType: normal
     - initialData: '{{ cognos_project_group_table.selectedRow }}'
     - showInEditor: false
+    - footerPaddingType: normal
     - tooltipText: ''
+    - showHeaderBorder: true
     - invalid: false
     - showFooter: true
     - events:
@@ -31,6 +38,7 @@ template:
     - loading: false
     - overflowType: scroll
     - disabled: false
+    - headerPaddingType: normal
     - requireValidation: true
     - maintainSpaceWhenHidden: false
     - showBody: true

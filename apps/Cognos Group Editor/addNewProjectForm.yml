@@ -8,17 +8,24 @@ template:
         x.toUpperCase(); }).indexOf
         (addNewProjectNameText.value.toUpperCase())!==-1}}
     - heightType: auto
+    - showFooterBorder: true
     - resetAfterSubmit: true
     - submitting: false
+    - marginType: normal
+    - enableFullBleed: false
+    - showBorder: true
     - hidden: false
     - data:
         object: {}
     - showHeader: true
     - hoistFetching: false
+    - paddingType: normal
     - scroll: true
     - initialData: '{{ cognos_project_table.selectedRow }}'
     - showInEditor: false
+    - footerPaddingType: normal
     - tooltipText: ''
+    - showHeaderBorder: true
     - invalid: false
     - showFooter: true
     - events:
@@ -35,6 +42,7 @@ template:
     - loading: false
     - overflowType: scroll
     - disabled: false
+    - headerPaddingType: normal
     - requireValidation: true
     - maintainSpaceWhenHidden: false
     - showBody: true

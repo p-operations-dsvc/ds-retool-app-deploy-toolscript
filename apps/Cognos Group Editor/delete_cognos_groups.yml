@@ -6,6 +6,8 @@ resourceDisplayName: cognos_retool_repo
 template:
   ordered:
     - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
     - records: '{{cognos_project_table.changeSet}}'
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
@@ -66,6 +68,7 @@ template:
     - resourceTypeOverride: null
     - watchedParams: []
     - enableErrorTransformer: false
+    - databaseWarehouseOverride: ''
     - enableBulkUpdates: false
     - showLatestVersionUpdatedWarning: false
     - timestamp: 0
@@ -73,6 +76,7 @@ template:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
     - bulkUpdatePrimaryKey: project_name
     - runWhenPageLoads: false
     - transformer: >-
@@ -123,6 +127,7 @@ template:
     - allowedGroups: []
     - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
+    - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
     - doNotThrowOnNoOp: true
     - offlineQueryType: None

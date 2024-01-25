@@ -16,7 +16,10 @@ template:
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
+    - _columnTextColor:
+        ordered: []
     - disableEdits: false
+    - autoColumnWidth: false
     - _rowHeight: small
     - _columnIds:
         - 3d334
@@ -104,6 +107,7 @@ template:
           - 80feb: '{{ _.startCase(item) }}'
           - '560e3': '{{ _.startCase(item) }}'
           - 6aed4: ''
+    - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
     - _dynamicColumnProperties:
@@ -175,6 +179,7 @@ template:
           - 80feb: ''
           - '560e3': ''
           - 6aed4: ''
+    - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
           - 3d334: ''
@@ -187,6 +192,8 @@ template:
     - showInEditor: false
     - selectedSourceRows:
         array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
           - 3d334: false
@@ -195,7 +202,9 @@ template:
           - 80feb: false
           - '560e3': false
           - 6aed4: false
+    - _showSummaryRow: false
     - filterStack: null
+    - _expandedRows: null
     - changesetObject: null
     - _actionDisabled:
         ordered: []
@@ -218,6 +227,8 @@ template:
           - 80feb: ''
           - '560e3': ''
           - 6aed4: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
@@ -241,10 +252,14 @@ template:
     - selectedRowKeys:
         array: []
     - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered: []
     - searchTerm: ''
     - selectedRows:
         array: []
     - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
@@ -269,10 +284,17 @@ template:
           - '560e3': 208.265625
           - 6aed4: 100
     - _serverPaginationType: limitOffsetBased
+    - _columnSortMode:
+        ordered: []
+    - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:
         ordered: []
+    - _dynamicColumnSize:
+        ordered: []
     - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered: []
     - _defaultFilters:
         ordered: []
     - events:
@@ -311,9 +333,14 @@ template:
           - 80feb: ''
           - '560e3': ''
           - 6aed4: 'false'
+    - _rowBackgroundColor:
+        array: []
+    - emptyMessage: ''
     - pagination: null
     - selectedDataIndexes:
         array: []
+    - _columnGroupAggregationMode:
+        ordered: []
     - sortArray:
         array: []
     - _selectedCell: null

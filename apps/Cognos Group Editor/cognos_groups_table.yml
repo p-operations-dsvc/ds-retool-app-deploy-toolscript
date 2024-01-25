@@ -11,16 +11,22 @@ template:
           - 7fc32: ''
           - 6e57f: ''
           - cecfb: ''
+          - '9e025': ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
-    - heightType: fixed
+    - heightType: auto
+    - _columnTextColor:
+        ordered:
+          - '9e025': ''
     - disableEdits: false
+    - autoColumnWidth: false
     - _rowHeight: small
     - _columnIds:
         - 6e57f
         - cecfb
         - 0f999
         - 7fc32
+        - '9e025'
     - _isSaving: false
     - _actionIds:
         - 58b03
@@ -40,6 +46,8 @@ template:
               ordered:
                 - showStepper: true
           - cecfb:
+              ordered: []
+          - '9e025':
               ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns:
@@ -88,12 +96,16 @@ template:
               ordered: []
           - cecfb:
               ordered: []
+          - '9e025':
+              ordered: []
     - _columnValueOverride:
         ordered:
           - 0f999: ''
           - 7fc32: ''
           - 6e57f: ''
           - cecfb: ''
+          - '9e025': ''
+    - marginType: normal
     - _showBorder: true
     - _templatePageSize: '20'
     - _dynamicColumnProperties:
@@ -106,6 +118,7 @@ template:
           - 7fc32: domain_id
           - 6e57f: group_id
           - cecfb: group_full_name
+          - '9e025': error_text
     - hidden: false
     - _toolbarButtonIds:
         - 1a
@@ -125,12 +138,14 @@ template:
           - 7fc32: ''
           - 6e57f: ''
           - cecfb: ''
+          - '9e025': ''
     - _columnFormat:
         ordered:
           - 0f999: string
           - 7fc32: tag
           - 6e57f: decimal
           - cecfb: string
+          - '9e025': multilineString
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
@@ -142,6 +157,7 @@ template:
           - 7fc32: center
           - 6e57f: right
           - cecfb: left
+          - '9e025': left
     - _actionIcon:
         ordered:
           - 58b03: bold/interface-user-multiple
@@ -151,26 +167,35 @@ template:
           - 7fc32: ''
           - 6e57f: ''
           - cecfb: ''
+          - '9e025': ''
     - _columnIcon:
         ordered:
           - 0f999: ''
           - 7fc32: ''
           - 6e57f: ''
           - cecfb: ''
+          - '9e025': ''
+    - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
-        ordered: []
+        ordered:
+          - '9e025': ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
         array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
           - 0f999: false
           - 7fc32: false
           - 6e57f: false
           - cecfb: false
+          - '9e025': false
     - undefined: null
+    - _showSummaryRow: false
     - filterStack: null
+    - _expandedRows: null
     - changesetObject: null
     - _actionDisabled:
         ordered:
@@ -181,15 +206,19 @@ template:
           - 7fc32: ''
           - 6e57f: ''
           - cecfb: ''
+          - '9e025': ''
     - _dynamicColumnSource:
         array: []
-    - _rowSelection: multiple
+    - _rowSelection: single
     - _columnCaption:
         ordered:
           - 0f999: ''
           - 7fc32: ''
           - 6e57f: ''
           - cecfb: ''
+          - '9e025': ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
@@ -203,32 +232,60 @@ template:
                 - showSeparators: true
           - cecfb:
               ordered: []
+          - '9e025':
+              ordered: []
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
         array: []
     - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - '9e025': none
     - searchTerm: ''
     - selectedRows:
         array: []
     - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
-        ordered: []
+        ordered:
+          - '9e025':
+              ordered: []
     - _columnSize:
         ordered:
-          - cecfb: 537.78125
-          - 0f999: 547.03125
-          - 7fc32: 249.078125
           - 6e57f: 66.609375
+          - '9e025': 850
+          - cecfb: 406.78125
+          - 0f999: 547.03125
+          - 7fc32: 95.078125
     - _serverPaginationType: limitOffsetBased
+    - _columnSortMode:
+        ordered:
+          - '9e025': default
+    - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:
         ordered: []
+    - _dynamicColumnSize:
+        ordered: []
     - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered: []
     - _defaultFilters:
         ordered: []
     - events:
+        - ordered:
+            - event: clickCell
+            - type: widget
+            - method: open
+            - pluginId: adFetchErrorModal
+            - targetId: '9e025'
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
         - ordered:
             - event: clickAction
             - type: widget
@@ -324,9 +381,16 @@ template:
           - 7fc32: 'true'
           - 6e57f: false
           - cecfb: ''
+          - '9e025': ''
+    - _rowBackgroundColor:
+        array: []
+    - emptyMessage: ''
     - pagination: null
     - selectedDataIndexes:
         array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - '9e025': none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -345,6 +409,7 @@ template:
           - 7fc32: center
           - 6e57f: center
           - cecfb: center
+          - '9e025': center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
@@ -352,6 +417,7 @@ template:
           - 7fc32: Select option
           - 6e57f: Enter value
           - cecfb: Enter value
+          - '9e025': Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered:
@@ -368,12 +434,14 @@ template:
           - 7fc32: ''
           - 6e57f: 'false'
           - cecfb: ''
+          - '9e025': ''
     - _columnLabel:
         ordered:
           - 0f999: AD Name
           - 7fc32: Domain
           - 6e57f: Group ID
           - cecfb: Full Name
+          - '9e025': AD Fetch Error
     - _showToolbar: true
 style:
   ordered: []
@@ -381,7 +449,7 @@ position2:
   position2:
     container: tabbedContainer1
     subcontainer: 75d64
-    row: 1
-    height: 20
+    row: 2
+    height: 1
     width: 12
 createdAt: 2023-07-06T15:52:26.544Z

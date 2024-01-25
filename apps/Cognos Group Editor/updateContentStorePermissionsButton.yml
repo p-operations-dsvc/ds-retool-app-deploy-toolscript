@@ -7,6 +7,7 @@ template:
     - clickable: false
     - iconAfter: ''
     - submitTargetId: ''
+    - marginType: normal
     - hidden: false
     - text: Update Data
     - showInEditor: false

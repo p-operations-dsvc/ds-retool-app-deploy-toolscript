@@ -12,7 +12,10 @@ template:
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
+    - _columnTextColor:
+        ordered: []
     - disableEdits: false
+    - autoColumnWidth: false
     - _rowHeight: small
     - _columnIds:
         - aaea9
@@ -72,6 +75,7 @@ template:
         ordered:
           - aaea9: ''
           - '20057': ''
+    - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
     - _dynamicColumnProperties:
@@ -120,6 +124,7 @@ template:
         ordered:
           - aaea9: ''
           - '20057': ''
+    - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
           - aaea9: ''
@@ -128,12 +133,16 @@ template:
     - showInEditor: false
     - selectedSourceRows:
         array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
           - aaea9: false
           - '20057': false
     - undefined: null
+    - _showSummaryRow: false
     - filterStack: null
+    - _expandedRows: null
     - changesetObject: null
     - _actionDisabled:
         ordered: []
@@ -148,6 +157,8 @@ template:
         ordered:
           - aaea9: ''
           - '20057': ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
@@ -163,10 +174,14 @@ template:
     - selectedRowKeys:
         array: []
     - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered: []
     - searchTerm: ''
     - selectedRows:
         array: []
     - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
@@ -179,10 +194,17 @@ template:
           - '20057': 198.75
           - aaea9: 204.765625
     - _serverPaginationType: limitOffsetBased
+    - _columnSortMode:
+        ordered: []
+    - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:
         ordered: []
+    - _dynamicColumnSize:
+        ordered: []
     - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered: []
     - _defaultFilters:
         ordered: []
     - events:
@@ -226,9 +248,14 @@ template:
         ordered:
           - aaea9: false
           - '20057': 'true'
+    - _rowBackgroundColor:
+        array: []
+    - emptyMessage: ''
     - pagination: null
     - selectedDataIndexes:
         array: []
+    - _columnGroupAggregationMode:
+        ordered: []
     - sortArray:
         array: []
     - _selectedCell: null

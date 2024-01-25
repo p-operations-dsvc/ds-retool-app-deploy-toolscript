@@ -14,7 +14,10 @@ template:
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
+    - _columnTextColor:
+        ordered: []
     - disableEdits: false
+    - autoColumnWidth: false
     - _rowHeight: small
     - _columnIds:
         - dc5ac
@@ -95,6 +98,7 @@ template:
           - '77049': ''
           - dc5ac: ''
           - c4ed4: ''
+    - marginType: normal
     - _showBorder: true
     - _templatePageSize: '20'
     - _dynamicColumnProperties:
@@ -156,12 +160,15 @@ template:
           - '77049': ''
           - dc5ac: ''
           - c4ed4: ''
+    - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered: []
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
         array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
           - 064ae: false
@@ -169,7 +176,9 @@ template:
           - dc5ac: false
           - c4ed4: false
     - undefined: null
+    - _showSummaryRow: false
     - filterStack: null
+    - _expandedRows: null
     - changesetObject: null
     - _actionDisabled:
         ordered: []
@@ -188,6 +197,8 @@ template:
           - '77049': ''
           - dc5ac: ''
           - c4ed4: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
@@ -207,10 +218,14 @@ template:
     - selectedRowKeys:
         array: []
     - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered: []
     - searchTerm: ''
     - selectedRows:
         array: []
     - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered: []
@@ -221,10 +236,17 @@ template:
           - c4ed4: 539.609375
           - 064ae: 132.921875
     - _serverPaginationType: limitOffsetBased
+    - _columnSortMode:
+        ordered: []
+    - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:
         ordered: []
+    - _dynamicColumnSize:
+        ordered: []
     - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered: []
     - _defaultFilters:
         ordered: []
     - events:
@@ -280,9 +302,14 @@ template:
           - '77049': false
           - dc5ac: 'true'
           - c4ed4: 'true'
+    - _rowBackgroundColor:
+        array: []
+    - emptyMessage: ''
     - pagination: null
     - selectedDataIndexes:
         array: []
+    - _columnGroupAggregationMode:
+        ordered: []
     - sortArray:
         array: []
     - _selectedCell: null

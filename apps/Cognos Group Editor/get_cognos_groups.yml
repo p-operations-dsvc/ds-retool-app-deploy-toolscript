@@ -6,6 +6,8 @@ resourceDisplayName: cognos_retool_repo
 template:
   ordered:
     - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
     - records: ''
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
@@ -20,7 +22,7 @@ template:
     - runWhenModelUpdates: true
     - workflowRunId: null
     - showFailureToaster: true
-    - query: "SELECT group_id, group_ad_name, a.domain_id, b.domain_name||'\\'||a.group_ad_name as group_full_name\n\tFROM vmn_data.cognos_group a, vmn_data.cognos_domain b \n  where a.domain_id=b.domain_id "
+    - query: "SELECT group_id, group_ad_name, a.domain_id, b.domain_name||'\\'||a.group_ad_name as group_full_name, a.error_text\n\tFROM vmn_data.cognos_group a, vmn_data.cognos_domain b \n  where a.domain_id=b.domain_id "
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -63,6 +65,7 @@ template:
     - resourceTypeOverride: null
     - watchedParams: []
     - enableErrorTransformer: false
+    - databaseWarehouseOverride: ''
     - enableBulkUpdates: false
     - showLatestVersionUpdatedWarning: false
     - timestamp: 0
@@ -70,6 +73,7 @@ template:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
     - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
     - transformer: >-
@@ -90,6 +94,7 @@ template:
     - allowedGroups: []
     - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
+    - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
     - doNotThrowOnNoOp: false
     - offlineQueryType: None
