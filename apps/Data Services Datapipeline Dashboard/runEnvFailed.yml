@@ -27,7 +27,6 @@ template:
     - overlayMinWidth: null
     - allowDeselect: false
     - inputValue: ''
-    - marginType: normal
     - hidden: false
     - customValidation: ''
     - data:
@@ -99,7 +98,7 @@ template:
             - event: change
             - type: widget
             - method: refresh
-            - pluginId: recentlyFailedTableV2
+            - pluginId: recentlyFailedTable
             - targetId: null
             - params:
                 ordered: []

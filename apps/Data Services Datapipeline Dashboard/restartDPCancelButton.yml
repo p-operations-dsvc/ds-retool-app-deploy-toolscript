@@ -1,5 +1,4 @@
 id: restartDPCancelButton
-uuid: a681cdf6-4fb2-4a1b-9640-7aec186315ef
 type: widget
 subtype: ButtonWidget2
 template:
@@ -8,11 +7,12 @@ template:
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
-    - marginType: normal
     - hidden: false
     - text: Cancel
     - showInEditor: false
     - tooltipText: ''
+    - _disclosedFields:
+        array: []
     - styleVariant: solid
     - submit: false
     - iconBefore: ''
@@ -36,8 +36,8 @@ style:
 position2:
   position2:
     container: restartDPModal
-    row: 5.2
-    col: 2
+    row: 3.2
+    col: 1
     height: 1
-    width: 9
-createdAt: 2023-10-09T22:21:12.585Z
+    width: 10
+createdAt: 2023-02-28T21:17:30.242Z

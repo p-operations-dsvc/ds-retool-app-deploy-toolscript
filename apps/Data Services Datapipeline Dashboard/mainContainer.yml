@@ -11,37 +11,25 @@ template:
         - false
         - false
         - false
-        - false
-        - false
-        - false
     - heightType: auto
     - currentViewKey: '{{ self.viewKeys[0] }}'
     - iconByIndex:
         array: []
     - clickable: false
     - _iconByIndex:
-        - bold/travel-airport-plane-boarding-pass-alternate
-        - bold/interface-arrows-synchronize-warning
-        - bold/interface-search
-        - bold/interface-align-layers-2-alternate
-        - bold/interface-add-2
-        - bold/interface-edit-write-2
-        - bold/interface-add-circle-alternate
-        - bold/interface-bookmark-tag-alternate
-        - bold/interface-arrows-bend-down-right-2
-        - bold/money-graph-arrow-increase
-    - showFooterBorder: true
-    - marginType: normal
-    - enableFullBleed: false
-    - showBorder: true
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
     - hidden: false
     - showHeader: true
     - hoistFetching: true
-    - paddingType: normal
     - views:
         array: []
     - showInEditor: false
-    - footerPaddingType: normal
     - tooltipText: ''
     - hiddenByIndex:
         array: []
@@ -53,20 +41,13 @@ template:
         - false
         - false
         - false
-        - false
-        - false
-        - false
     - _disclosedFields:
         array: []
     - currentViewIndex: null
     - _hasMigratedNestedItems: true
     - transition: none
-    - showHeaderBorder: true
     - itemMode: static
     - _tooltipByIndex:
-        - ''
-        - ''
-        - ''
         - ''
         - ''
         - ''
@@ -85,10 +66,7 @@ template:
         - Datapipelines
         - Create a New Datapipeline
         - Update an Existing Datapipeline
-        - Manage IAM Roles
-        - Manage Tags
-        - Manage Dependencies
-        - Statistics
+        - Create IAM Role
     - events: []
     - _ids:
         - d9644
@@ -98,20 +76,14 @@ template:
         - 5fd5e
         - '54333'
         - '01622'
-        - dc084
-        - 2663a
-        - 3d309
     - viewKeys:
         array: []
     - iconPositionByIndex:
         array: []
     - _iconPositionByIndex:
-        - left
-        - left
-        - left
-        - left
-        - left
-        - left
+        - ''
+        - ''
+        - ''
         - left
         - left
         - left
@@ -128,10 +100,6 @@ template:
         - ''
         - ''
         - ''
-        - ''
-        - ''
-        - ''
-    - headerPaddingType: normal
     - disabledByIndex:
         array: []
     - maintainSpaceWhenHidden: false
@@ -142,7 +110,7 @@ style:
   ordered: []
 position2:
   position2:
-    row: 0.20000000000000046
+    row: 0.40000000000000036
     height: 2
     width: 12
 createdAt: 2023-02-10T23:13:19.441Z

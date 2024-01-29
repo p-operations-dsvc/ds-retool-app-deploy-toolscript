@@ -5,7 +5,6 @@ template:
   ordered:
     - heightType: auto
     - horizontalAlign: center
-    - marginType: normal
     - hidden: false
     - imageWidth: fit
     - showInEditor: false
@@ -13,7 +12,7 @@ template:
     - tooltipText: ''
     - value: >-
         Do you really want to stop datapipeline
-        {{runTableV2.selectedRow.datapipeline_name}}?
+        {{runTable.selectedRow.data.datapipeline_name}}?
     - _disclosedFields:
         array: []
     - disableMarkdown: false

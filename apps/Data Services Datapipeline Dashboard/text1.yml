@@ -1,18 +1,18 @@
 id: text1
-uuid: 3d44b743-8ec8-4481-ae0b-d8a67bb834c8
 type: widget
 subtype: TextWidget2
 template:
   ordered:
     - heightType: auto
-    - horizontalAlign: center
-    - marginType: normal
+    - horizontalAlign: left
     - hidden: false
     - imageWidth: fit
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: ' **Datapipeline "{{ dpAllTableV2.selectedRow.datapipeline_name }}" actions**'
+    - value: Are you sure that you want update datapipeline {{dpName2.value}}?
+    - _disclosedFields:
+        array: []
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false
@@ -20,8 +20,8 @@ style:
   ordered: []
 position2:
   position2:
-    container: dpSettingRowModal
-    col: 3
+    container: updateDPModal
+    col: 1
     height: 0.6
-    width: 6
-createdAt: 2023-10-17T21:55:34.100Z
+    width: 10
+createdAt: 2023-03-01T00:25:46.075Z

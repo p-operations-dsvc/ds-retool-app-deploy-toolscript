@@ -9,7 +9,6 @@ template:
     - dateFormat: |-
 
         yyyy-MM-dd
-    - marginType: normal
     - hidden: false
     - customValidation: ''
     - hideValidationMessage: false
@@ -49,7 +48,7 @@ template:
             - event: change
             - type: widget
             - method: refresh
-            - pluginId: recentlyFailedTableV2
+            - pluginId: recentlyFailedTable
             - targetId: null
             - params:
                 ordered: []
@@ -71,4 +70,5 @@ position2:
     row: -8.881784197001252e-16
     col: 4
     height: 1
+    width: 3
 createdAt: 2023-02-14T01:08:54.675Z

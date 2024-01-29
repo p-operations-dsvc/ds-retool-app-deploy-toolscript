@@ -1,12 +1,10 @@
 id: restartDPModal
-uuid: d2542026-1a81-46b9-a24f-9f06a3d1fbdb
 type: widget
 subtype: ModalWidget
 template:
   ordered:
     - opened: false
     - modalOverflowType: scroll
-    - hidden: '{{recentlyFailedTableV2.selectedRow.been_restarted==''Yes''}}'
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''
@@ -15,8 +13,8 @@ template:
     - modalWidth: ''
     - closeOnOutsideClick: true
     - loading: ''
-    - disabled: ''
-    - buttonText: Restart Data Pipeline
+    - disabled: '{{recentlyFailedTable.selectedRow.data.been_restarted===true}}'
+    - buttonText: Restart Datapipeline
 style:
   ordered: []
 position2:
@@ -25,5 +23,5 @@ position2:
     subcontainer: 70d66
     col: 9
     height: 1
-    width: 1
-createdAt: 2023-10-09T22:19:05.402Z
+    width: 3
+createdAt: 2023-02-28T21:17:15.373Z

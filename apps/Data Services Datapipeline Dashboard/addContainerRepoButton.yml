@@ -7,7 +7,6 @@ template:
     - clickable: false
     - iconAfter: ''
     - submitTargetId: addContainerRepoForm
-    - marginType: normal
     - hidden: false
     - text: Submit
     - showInEditor: false

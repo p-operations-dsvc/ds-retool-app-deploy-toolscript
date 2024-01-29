@@ -10,7 +10,17 @@ template:
     - tooltipText: ''
     - modalHeight: '220'
     - onModalOpen: ''
-    - events: []
+    - events:
+        - ordered:
+            - event: open
+            - type: widget
+            - method: null
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - modalWidth: ''
     - closeOnOutsideClick: true
     - loading: ''
@@ -22,8 +32,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: d9644
-    row: 0.2
     col: 9
     height: 1
-    width: 2
+    width: 3
 createdAt: 2023-02-28T00:49:21.557Z

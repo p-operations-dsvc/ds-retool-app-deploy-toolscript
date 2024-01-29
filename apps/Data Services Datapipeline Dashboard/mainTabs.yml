@@ -20,7 +20,6 @@ template:
         - ''
         - ''
         - ''
-    - marginType: normal
     - hidden: false
     - data:
         array: []

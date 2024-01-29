@@ -17,7 +17,6 @@ template:
     - overlayMinWidth: null
     - allowDeselect: false
     - inputValue: ''
-    - marginType: normal
     - hidden: false
     - customValidation: ''
     - data: '{{ get_dp_env_objects_containers.data }}'
@@ -37,7 +36,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: '{{self.values[0]}}'
+    - value: null
     - hiddenByIndex:
         array: []
     - labelCaption: ''

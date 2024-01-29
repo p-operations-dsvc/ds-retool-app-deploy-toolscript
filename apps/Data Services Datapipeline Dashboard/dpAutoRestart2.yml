@@ -16,7 +16,6 @@ template:
     - _iconByIndex:
         - ''
         - ''
-    - marginType: normal
     - hidden: false
     - customValidation: ''
     - data:

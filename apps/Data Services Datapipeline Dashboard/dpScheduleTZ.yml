@@ -20,7 +20,6 @@ template:
     - overlayMinWidth: null
     - allowDeselect: false
     - inputValue: ''
-    - marginType: normal
     - hidden: '{{dpCreateHideSchedFields.value===true}}'
     - customValidation: ''
     - data: |-
@@ -566,8 +565,7 @@ template:
         {"id": "US/Pacific-New"}, 
         {"id": "US/Samoa"}, 
         {"id": "W-SU"}, 
-        {"id": "WET"},
-        {"id": "UTC"}]
+        {"id": "WET"} ]
     - searchMode: fuzzy
     - hideValidationMessage: false
     - fallbackTextByIndex:

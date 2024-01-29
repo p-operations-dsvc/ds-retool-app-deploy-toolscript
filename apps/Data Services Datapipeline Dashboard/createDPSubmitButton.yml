@@ -7,7 +7,6 @@ template:
     - clickable: false
     - iconAfter: ''
     - submitTargetId: dpEntryForm
-    - marginType: normal
     - hidden: false
     - text: Confirm
     - showInEditor: false

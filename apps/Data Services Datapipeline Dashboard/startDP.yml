@@ -7,7 +7,6 @@ template:
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
-    - marginType: normal
     - hidden: false
     - text: Confirm
     - showInEditor: false
@@ -28,27 +27,6 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-        - ordered:
-            - event: click
-            - type: widget
-            - method: setValue
-            - pluginId: mainTabs
-            - targetId: null
-            - params:
-                ordered:
-                  - value: '"Currently In-flight"'
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: click
-            - type: widget
-            - method: close
-            - pluginId: dpSettingRowModal
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
     - loading: false
     - loaderPosition: auto
     - disabled: false
@@ -60,6 +38,6 @@ position2:
     container: startDPModal
     row: 1.4
     col: 1
-    height: 1
+    height: 0.8
     width: 10
 createdAt: 2023-02-25T23:23:58.698Z

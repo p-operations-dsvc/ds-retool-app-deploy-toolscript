@@ -11,22 +11,11 @@ template:
     - tooltipText: ''
     - modalHeight: ''
     - onModalOpen: ''
-    - events:
-        - ordered:
-            - event: open
-            - type: datasource
-            - method: trigger
-            - pluginId: get_dp_run_history
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
     - modalWidth: 80%
     - closeOnOutsideClick: true
     - loading: ''
     - disabled: ''
-    - buttonText: ''
+    - buttonText: hr
 style:
   ordered: []
 position2:

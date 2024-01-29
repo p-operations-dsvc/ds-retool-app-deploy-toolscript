@@ -17,7 +17,6 @@ template:
     - overlayMinWidth: null
     - allowDeselect: false
     - inputValue: ''
-    - marginType: normal
     - hidden: false
     - customValidation: ''
     - data: '{{ get_dp_any_dropdown.data }}'
@@ -71,9 +70,9 @@ template:
     - events:
         - ordered:
             - event: change
-            - type: datasource
-            - method: trigger
-            - pluginId: searchRunTableQuery
+            - type: widget
+            - method: refresh
+            - pluginId: searchResult
             - targetId: null
             - params:
                 ordered: []
@@ -101,6 +100,7 @@ position2:
   position2:
     container: mainContainer
     subcontainer: df36c
-    col: 6
+    col: 5
     height: 1
+    width: 4
 createdAt: 2023-02-14T00:30:06.841Z

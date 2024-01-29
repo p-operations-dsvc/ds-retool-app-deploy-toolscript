@@ -7,8 +7,6 @@ template:
   ordered:
     - queryRefreshTime: ''
     - paginationLimit: ''
-    - allowedGroupIds: []
-    - streamResponse: false
     - body: ''
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''
@@ -17,12 +15,10 @@ template:
     - successMessage: ''
     - queryDisabled: ''
     - playgroundQuerySaveId: latest
-    - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: false
+    - runWhenModelUpdates: true
     - paginationPaginationField: ''
     - headers: ''
-    - workflowRunId: null
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
@@ -30,19 +26,17 @@ template:
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
-    - workflowRunBodyType: raw
     - privateParams: []
     - runWhenPageLoadsDelay: ''
     - data: null
     - importedQueryInputs:
         ordered: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
     - cookies: ''
     - metadata: null
-    - workflowActionType: null
     - queryRunTime: null
     - changesetObject: ''
     - errorTransformer: >-
@@ -68,8 +62,6 @@ template:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
-    - version: 1
-    - overrideOrgCacheForUserCache: false
     - runWhenPageLoads: false
     - transformer: >-
         // type your code here
@@ -208,16 +200,15 @@ template:
             - waitType: debounce
             - waitMs: '0'
         - ordered:
+            - event: success
+            - type: widget
             - method: setValue
-            - enabled: ''
+            - pluginId: dpContainerName
+            - targetId: null
             - params:
                 ordered:
                   - value: '{{get_dp_objects_by_name_create_dp.data[0].container_arn}}'
-            - targetId: null
-            - pluginId: dpContainerName
             - waitType: debounce
-            - event: success
-            - type: widget
             - waitMs: '0'
         - ordered:
             - event: success
@@ -278,16 +269,15 @@ template:
             - waitType: debounce
             - waitMs: '0'
         - ordered:
+            - event: success
+            - type: widget
             - method: setValue
-            - enabled: '{{!get_dp_objects_by_name_create_dp.data[0].schedule_tz===null}}'
+            - pluginId: dpScheduleTZ
+            - targetId: null
             - params:
                 ordered:
                   - value: '{{get_dp_objects_by_name_create_dp.data[0].schedule_tz}}'
-            - targetId: null
-            - pluginId: dpScheduleTZ
             - waitType: debounce
-            - event: success
-            - type: widget
             - waitMs: '0'
         - ordered:
             - event: success
@@ -336,17 +326,16 @@ template:
             - waitType: debounce
             - waitMs: '0'
         - ordered:
+            - event: success
+            - type: widget
             - method: setValue
-            - enabled: ''
+            - pluginId: dpOverridesCommands
+            - targetId: null
             - params:
                 ordered:
                   - value: >-
-                      {{get_dp_objects_by_name_create_dp.data[0].override_commands_str}}
-            - targetId: null
-            - pluginId: dpOverridesCommands
+                      {{get_dp_objects_by_name_create_dp.data[0].override_commands}}
             - waitType: debounce
-            - event: success
-            - type: widget
             - waitMs: '0'
         - ordered:
             - event: success
@@ -359,15 +348,29 @@ template:
                   - value: http://fillmeout.org
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: failure
+            - type: util
+            - method: showNotification
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      ordered:
+                        - notificationType: error
+                        - title: Failed to get dp objects
+                        - description: '{{get_dp_objects_by_name_create_dp.error}}'
+                        - duration: '5'
+            - waitType: debounce
+            - waitMs: '0'
     - queryTimeout: '10000'
-    - workflowId: null
     - requireConfirmation: false
     - type: GET
     - queryFailureConditions: ''
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - workflowBlockPluginId: null
     - bodyType: none
     - offlineQueryType: None
     - queryThrottleTime: '750'

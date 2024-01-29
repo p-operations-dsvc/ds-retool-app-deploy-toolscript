@@ -4,16 +4,13 @@ subtype: TextWidget2
 template:
   ordered:
     - heightType: fixed
-    - horizontalAlign: right
-    - marginType: normal
+    - horizontalAlign: left
     - hidden: false
     - imageWidth: fit
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: >-
-        <b>Click on the Actions &#9872; below &darr; to manage datapipelines
-        </b> 
+    - value: <b>Click on a row below to manage the datapipeline</b>
     - _disclosedFields:
         array: []
     - disableMarkdown: false
@@ -25,7 +22,6 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 1b6db
-    row: -6.661338147750939e-16
-    col: 9
     height: 0.8
+    width: 3
 createdAt: 2023-03-13T21:44:47.628Z

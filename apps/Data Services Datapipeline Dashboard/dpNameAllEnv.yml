@@ -19,7 +19,6 @@ template:
         - ''
         - ''
         - ''
-    - marginType: normal
     - hidden: false
     - customValidation: ''
     - data:
@@ -57,17 +56,6 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-        - ordered:
-            - event: change
-            - type: widget
-            - method: setValue
-            - pluginId: runEnvInFlight
-            - targetId: null
-            - params:
-                ordered:
-                  - value: '{{dpNameAllEnv.value}}'
-            - waitType: debounce
-            - waitMs: '0'
     - _ids:
         - d7cdf
         - 70b2f
@@ -97,7 +85,6 @@ position2:
   position2:
     container: mainContainer
     subcontainer: 1b6db
-    row: -4.440892098500626e-16
     col: 4
     height: 0.8
     width: 4

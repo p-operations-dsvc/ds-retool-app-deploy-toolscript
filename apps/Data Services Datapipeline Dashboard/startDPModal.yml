@@ -8,7 +8,7 @@ template:
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''
-    - modalHeight: '250'
+    - modalHeight: '220'
     - onModalOpen: ''
     - modalWidth: ''
     - closeOnOutsideClick: true
@@ -20,8 +20,7 @@ style:
 position2:
   position2:
     container: dpSettingRowModal
-    row: 0.9999999999999998
-    col: 3
-    height: 1.5999999999999999
-    width: 6
+    row: 0.19999999999999996
+    height: 0.8
+    width: 3
 createdAt: 2023-02-28T21:08:13.794Z

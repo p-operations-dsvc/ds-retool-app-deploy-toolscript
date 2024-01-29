@@ -5,15 +5,12 @@ template:
   ordered:
     - heightType: auto
     - horizontalAlign: center
-    - marginType: normal
     - hidden: false
     - imageWidth: fit
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: |-
-        Data pipeline <b> {{searchRunTable.selectedRow.datapipeline_name}} </b>
-         execution id <b>{{get_dp_run_history.data[0].execution_id}} </b> steps:
+    - value: Execution Id {{get_dp_run_history.data[0].execution_id}} steps
     - _disclosedFields:
         array: []
     - disableMarkdown: false

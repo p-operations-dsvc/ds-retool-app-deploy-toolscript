@@ -7,7 +7,6 @@ template:
     - sticky: false
     - isHiddenOnDesktop: false
     - isHiddenOnMobile: false
-    - paddingType: normal
 style:
   ordered: []
 createdAt: 2023-02-10T23:04:41.212Z

@@ -27,7 +27,6 @@ template:
     - overlayMinWidth: null
     - allowDeselect: false
     - inputValue: ''
-    - marginType: normal
     - hidden: false
     - customValidation: ''
     - data:
@@ -55,7 +54,7 @@ template:
     - hiddenByIndex:
         array: []
     - labelCaption: ''
-    - labelWidth: '28'
+    - labelWidth: '18'
     - deprecatedLabels:
         array: []
     - _hiddenByIndex:
@@ -70,7 +69,7 @@ template:
     - _disclosedFields:
         array: []
     - itemAdornmentSize: auto
-    - label: Environment
+    - label: Env
     - _hasMigratedNestedItems: true
     - captionByIndex:
         array: []
@@ -99,7 +98,7 @@ template:
             - event: change
             - type: widget
             - method: refresh
-            - pluginId: runTableV2
+            - pluginId: runTable
             - targetId: null
             - params:
                 ordered: []
@@ -138,7 +137,7 @@ position2:
     container: mainContainer
     subcontainer: d9644
     row: -2.220446049250313e-16
-    col: 2
+    col: 1
     height: 1
     width: 2
 createdAt: 2023-02-25T02:01:12.788Z

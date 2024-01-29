@@ -5,25 +5,18 @@ template:
   ordered:
     - disableSubmit: false
     - heightType: auto
-    - showFooterBorder: true
     - resetAfterSubmit: true
     - submitting: false
-    - marginType: normal
-    - enableFullBleed: false
-    - showBorder: true
     - hidden: false
     - data:
         object: {}
     - showHeader: true
     - hoistFetching: true
-    - paddingType: normal
     - initialData: null
     - showInEditor: false
-    - footerPaddingType: normal
     - tooltipText: ''
     - _disclosedFields:
         array: []
-    - showHeaderBorder: true
     - invalid: false
     - showFooter: false
     - events:
@@ -40,7 +33,6 @@ template:
     - loading: false
     - overflowType: scroll
     - disabled: false
-    - headerPaddingType: normal
     - requireValidation: true
     - maintainSpaceWhenHidden: false
     - showBody: true

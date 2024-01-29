@@ -19,7 +19,6 @@ template:
         - ''
         - ''
         - ''
-    - marginType: normal
     - hidden: false
     - customValidation: ''
     - data:

@@ -8,7 +8,6 @@ template:
     - iconAfter: ''
     - showCharacterCount: false
     - autoComplete: false
-    - marginType: normal
     - maxLength: null
     - hidden: '{{dpCreateHideSchedFields.value===true}}'
     - customValidation: ''
@@ -23,7 +22,7 @@ template:
     - tooltipText: ''
     - labelAlign: left
     - formDataKey: '{{ self.id }}'
-    - value: ds_datapipelines_{{dpEnv.value}}
+    - value: default
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
@@ -41,7 +40,7 @@ template:
         ordered: []
     - autoCapitalize: none
     - loading: false
-    - disabled: 'true'
+    - disabled: false
     - labelPosition: left
     - labelWrap: false
     - maintainSpaceWhenHidden: false

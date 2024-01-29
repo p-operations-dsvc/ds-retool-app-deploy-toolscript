@@ -3,7 +3,6 @@ type: widget
 subtype: CheckboxWidget2
 template:
   ordered:
-    - marginType: normal
     - hidden: false
     - customValidation: ''
     - hideValidationMessage: false

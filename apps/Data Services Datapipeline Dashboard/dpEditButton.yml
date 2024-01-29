@@ -7,7 +7,6 @@ template:
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
-    - marginType: normal
     - hidden: false
     - text: Edit Datapipeline
     - showInEditor: false
@@ -37,7 +36,7 @@ template:
             - targetId: null
             - params:
                 ordered:
-                  - value: '{{dpAllTableV2.selectedRow.datapipeline_name}} '
+                  - value: '{{dpAllTable.selectedRow.data.datapipeline_name}} '
             - waitType: debounce
             - waitMs: '0'
         - ordered:
@@ -70,8 +69,8 @@ style:
 position2:
   position2:
     container: dpSettingRowModal
-    row: 5
-    col: 3
-    height: 1.6
-    width: 6
+    row: 0.2
+    col: 8
+    height: 0.8
+    width: 3
 createdAt: 2023-03-09T21:43:32.978Z
