@@ -17,7 +17,7 @@ template:
 
         let group_fil_out = (group_val===null)?"1=1":group_fil;
 
-        return "SELECT * from vmn_data.cognos_project_group where " +
+        return "SELECT * from main.cognos_project_group where " +
         project_fil_out + " and " + group_fil_out
     - value: ''
 createdAt: 2023-07-10T19:18:56.644Z

@@ -22,18 +22,20 @@ template:
     - runWhenModelUpdates: true
     - workflowRunId: null
     - showFailureToaster: true
-    - query: "\nSELECT  project_id, project_name, approvers\n\tFROM vmn_data.cognos_project"
+    - query: "\nSELECT  project_id, project_name, approvers\n\tFROM main.cognos_project"
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
+    - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
     - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: true
     - dataArray: []

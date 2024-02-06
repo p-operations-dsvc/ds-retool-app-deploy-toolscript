@@ -28,11 +28,13 @@ template:
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
+    - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: false
     - dataArray: []
@@ -103,7 +105,7 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-    - tableName: vmn_data.cognos_project_approver
+    - tableName: main.cognos_project_approver
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false

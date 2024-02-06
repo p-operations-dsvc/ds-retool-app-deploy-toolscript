@@ -27,7 +27,7 @@ template:
         b.sn as last_name, a.ad_group group_in, a.parent_ad_group
         parent_of_group
 
-        from vmn_data.cognos_group_membership a, vmn_data.cognos_ad_record b
+        from main.cognos_group_membership a, main.cognos_ad_record b
 
         where a.dn=b.dn and a.group_id={{group_members_select.value}}
     - playgroundQueryUuid: ''
@@ -35,12 +35,14 @@ template:
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
+    - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
     - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: true
     - dataArray: []

@@ -30,12 +30,14 @@ template:
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
+    - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
     - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: false
     - dataArray: []
@@ -108,7 +110,7 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-    - tableName: vmn_data.cognos_group
+    - tableName: main.cognos_group
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
