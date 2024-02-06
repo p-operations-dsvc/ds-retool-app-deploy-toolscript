@@ -5,5 +5,5 @@ appTemplate:
   experimentalFeatures:
     object:
       sourceControlTemplateDehydration: false
-  version: 3.22.8
+  version: 3.28.3
   experimentalDataTabEnabled: true

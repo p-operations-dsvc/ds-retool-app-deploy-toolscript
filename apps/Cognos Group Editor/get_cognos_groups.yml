@@ -22,18 +22,20 @@ template:
     - runWhenModelUpdates: true
     - workflowRunId: null
     - showFailureToaster: true
-    - query: "SELECT group_id, group_ad_name, a.domain_id, b.domain_name||'\\'||a.group_ad_name as group_full_name, a.error_text\n\tFROM vmn_data.cognos_group a, vmn_data.cognos_domain b \n  where a.domain_id=b.domain_id "
+    - query: "SELECT group_id, group_ad_name, a.domain_id, b.domain_name||'\\'||a.group_ad_name as group_full_name, a.error_text\n\tFROM main.cognos_group a, main.cognos_domain b \n  where a.domain_id=b.domain_id "
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
+    - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
     - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: true
     - dataArray: []

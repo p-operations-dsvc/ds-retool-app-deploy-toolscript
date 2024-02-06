@@ -22,20 +22,20 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >-
-        SELECT vmn_data.delete_groups ( {{selected_cognos_groups_to_dict.value}}
-        );
+    - query: SELECT main.delete_groups ( {{selected_cognos_groups_to_dict.value}} );
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
+    - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
     - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: false
     - dataArray: []

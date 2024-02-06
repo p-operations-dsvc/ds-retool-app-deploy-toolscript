@@ -23,7 +23,7 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        select * from vmn_data.exec({{get_project_group_query_value.value}}) 
+        select * from main.exec({{get_project_group_query_value.value}}) 
 
         as t(project_group_id integer, project_id integer, group_id integer,
         last_updated_ts timestamp)
@@ -32,12 +32,14 @@ template:
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
+    - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
     - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: true
     - dataArray: []
