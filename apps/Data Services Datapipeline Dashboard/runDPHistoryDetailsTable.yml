@@ -88,6 +88,7 @@ template:
         ordered: []
     - _showHeader: true
     - _currentPage: 0
+    - _actionsOverflowPosition: 0
     - _columnKey:
         ordered:
           - c4a55: execution_id

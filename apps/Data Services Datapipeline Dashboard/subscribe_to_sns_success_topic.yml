@@ -1,4 +1,4 @@
-id: get_dp_tags
+id: subscribe_to_sns_success_topic
 type: datasource
 subtype: RESTQuery
 resourceName: 5dce28aa-d15b-4da8-9a5b-cbc4b34e1cf0
@@ -9,7 +9,7 @@ template:
     - paginationLimit: ''
     - allowedGroupIds: []
     - streamResponse: false
-    - body: ''
+    - body: '[]'
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''
     - servedFromCache: false
@@ -26,8 +26,7 @@ template:
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        get_ds_pipeline_tags?datapipeline_name={{ manageTagsDPSelect.value
-        }}&env={{manageTagsEnv.value}}
+        create_ds_pipeline_subscription?sns_topic={{dpSNSSuccessTopicARN2.value}}&email={{current_user.email}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -83,40 +82,44 @@ template:
     - events:
         - ordered:
             - event: success
-            - type: state
-            - method: setValue
-            - pluginId: dpTagsVariable
+            - type: util
+            - method: confetti
+            - pluginId: ''
             - targetId: null
             - params:
-                ordered:
-                  - value: '{{get_dp_tags.data}}'
+                ordered: []
             - waitType: debounce
             - waitMs: '0'
         - ordered:
             - event: success
-            - type: script
-            - method: run
+            - type: util
+            - method: showNotification
             - pluginId: ''
             - targetId: null
             - params:
                 ordered:
-                  - src: >-
-                      tagsMultiselectListbox.setValue(tagsMultiselectListbox.values)
+                  - options:
+                      ordered:
+                        - notificationType: info
+                        - description: >-
+                            Please make sure to click on the confirmation link
+                            in the email.
+                        - title: Success!
             - waitType: debounce
             - waitMs: '0'
     - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
-    - type: GET
+    - type: POST
     - queryFailureConditions: ''
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
     - workflowBlockPluginId: null
-    - bodyType: none
+    - bodyType: json
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-10-17T17:17:45.677Z
+createdAt: 2024-02-07T22:07:48.108Z

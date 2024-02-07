@@ -1,0 +1,43 @@
+id: dpSNSFailureTopicAddButton
+uuid: 4bd84d2a-f7d1-4151-9f2b-d1b5d4ffb655
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: left
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - text: Subscribe
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: subscribe_to_sns_failure_topic
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: dpEntryForm2
+    row: 11.2
+    col: 4
+    height: 1
+    width: 1
+createdAt: 2024-02-07T22:06:24.748Z

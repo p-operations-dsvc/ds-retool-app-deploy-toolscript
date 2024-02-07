@@ -274,6 +274,7 @@ template:
         ordered: []
     - _showHeader: true
     - _currentPage: 0
+    - _actionsOverflowPosition: 0
     - _columnKey:
         ordered:
           - 4fdc1: container_memory

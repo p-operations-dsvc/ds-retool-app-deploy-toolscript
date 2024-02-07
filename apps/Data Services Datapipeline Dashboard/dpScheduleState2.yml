@@ -21,6 +21,7 @@ template:
     - customValidation: ''
     - data:
         array: []
+    - paddingType: dense
     - hideValidationMessage: false
     - selectedItem: null
     - validationMessage: ''
