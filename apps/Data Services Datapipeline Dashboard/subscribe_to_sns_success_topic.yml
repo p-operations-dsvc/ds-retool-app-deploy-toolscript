@@ -102,9 +102,9 @@ template:
                       ordered:
                         - notificationType: info
                         - description: >-
-                            Please make sure to click on the confirmation link
-                            in the email.
-                        - title: Success!
+                            Subscription created. Please make sure to click on
+                            the confirmation link in the email. 
+                        - title: Success
             - waitType: debounce
             - waitMs: '0'
     - isMultiplayerEdited: false
