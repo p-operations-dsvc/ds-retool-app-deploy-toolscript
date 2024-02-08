@@ -103,8 +103,8 @@ template:
                         - notificationType: info
                         - title: Success
                         - description: >-
-                            Please make sure to click on the confirmation link
-                            in the email.
+                            Subscription created. Please make sure to click on
+                            the confirmation link in the email.
             - waitType: debounce
             - waitMs: '0'
     - isMultiplayerEdited: false
