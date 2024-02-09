@@ -4,14 +4,14 @@ subtype: TextWidget2
 template:
   ordered:
     - heightType: auto
-    - horizontalAlign: left
+    - horizontalAlign: center
     - marginType: normal
     - hidden: false
     - imageWidth: fit
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: '#### Are you sure that you want to proceed?'
+    - value: '#### Are you sure that you want to proceed? '
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false

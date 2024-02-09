@@ -1,4 +1,4 @@
-id: new_project_approvers_transform
+id: add_new_project_approvers_transform
 type: function
 subtype: Function
 template:

@@ -1,11 +1,15 @@
-id: transform_selected_file
+id: transform_selected_report_file
 type: function
 subtype: Function
 template:
   ordered:
     - funcBody: |-
         var upload = {{selectContentStorePermissions.parsedValue}}; 
+
         let dict = {};
+        if (upload.length==0) {
+          return dict
+        }
                 for (let i=0; i< upload[0].length; i++ ) { 
                         dict[i.toString()] = upload[0][i];
                 }

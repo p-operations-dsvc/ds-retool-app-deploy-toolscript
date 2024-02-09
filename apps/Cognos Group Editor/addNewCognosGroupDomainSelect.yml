@@ -1,4 +1,4 @@
-id: newCognosGroupDomainSelect
+id: addNewCognosGroupDomainSelect
 type: widget
 subtype: SelectWidget2
 template:
@@ -45,7 +45,7 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select an option
+    - placeholder: Select a domain
     - _captionByIndex: []
     - itemAdornmentSize: auto
     - label: Domain Name

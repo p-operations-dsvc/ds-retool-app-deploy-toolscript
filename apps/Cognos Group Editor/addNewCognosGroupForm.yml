@@ -21,7 +21,7 @@ template:
     - hoistFetching: false
     - paddingType: normal
     - scroll: true
-    - initialData: '{{ cognos_groups_table.selectedRow }}'
+    - initialData: ''
     - showInEditor: false
     - footerPaddingType: normal
     - tooltipText: ''
@@ -33,7 +33,7 @@ template:
             - event: submit
             - type: datasource
             - method: trigger
-            - pluginId: add_new_cognos_groups
+            - pluginId: add_new_cognos_group
             - targetId: null
             - params:
                 ordered: []

@@ -1,4 +1,4 @@
-id: table1
+id: cognos_group_members_table
 type: widget
 subtype: TableWidget2
 template:
@@ -305,7 +305,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: table1
+            - pluginId: cognos_group_members_table
             - targetId: 3c
         - ordered:
             - type: widget
@@ -313,7 +313,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: table1
+            - pluginId: cognos_group_members_table
             - targetId: 4d
         - ordered:
             - event: clickCell

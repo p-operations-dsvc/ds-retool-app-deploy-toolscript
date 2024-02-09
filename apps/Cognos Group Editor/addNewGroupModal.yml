@@ -11,6 +11,17 @@ template:
     - tooltipText: ''
     - modalHeight: ''
     - onModalOpen: ''
+    - events:
+        - ordered:
+            - event: close
+            - type: widget
+            - method: clear
+            - pluginId: addNewCognosGroupForm
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
     - modalWidth: ''
     - closeOnOutsideClick: true
     - loading: ''

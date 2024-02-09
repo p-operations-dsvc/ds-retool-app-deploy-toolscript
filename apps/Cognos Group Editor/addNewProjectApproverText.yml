@@ -52,7 +52,7 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select options
+    - placeholder: Select approvers
     - _captionByIndex: []
     - itemAdornmentSize: auto
     - label: Approvers

@@ -27,8 +27,8 @@ template:
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
-    - label: 'Approver UPN:'
+    - placeholder: Enter email value
+    - label: 'Approver''s UPN:'
     - _validate: false
     - labelWidthUnit: '%'
     - invalid: false

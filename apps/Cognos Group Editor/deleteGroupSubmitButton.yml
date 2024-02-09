@@ -3,7 +3,7 @@ type: widget
 subtype: ButtonWidget2
 template:
   ordered:
-    - horizontalAlign: stretch
+    - horizontalAlign: center
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
@@ -20,7 +20,7 @@ template:
             - event: click
             - type: datasource
             - method: trigger
-            - pluginId: delete_cognos_groups
+            - pluginId: delete_cognos_group
             - targetId: null
             - params:
                 ordered: []
@@ -35,7 +35,7 @@ style:
 position2:
   position2:
     container: deleteGroupsModal
-    row: 1.4
+    row: 0.9999999999999999
     col: 1
     height: 1
     width: 10

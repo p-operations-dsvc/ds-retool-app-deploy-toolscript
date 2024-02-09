@@ -3,7 +3,7 @@ type: widget
 subtype: ButtonWidget2
 template:
   ordered:
-    - horizontalAlign: stretch
+    - horizontalAlign: center
     - clickable: false
     - iconAfter: ''
     - submitTargetId: addNewCognosGroupForm
@@ -27,7 +27,7 @@ position2:
   position2:
     container: addNewCognosGroupForm
     rowGroup: footer
-    col: 3
+    col: 4
     height: 1
     width: 4
 createdAt: 2023-07-06T21:18:55.988Z

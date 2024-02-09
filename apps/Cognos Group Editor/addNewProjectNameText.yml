@@ -27,7 +27,7 @@ template:
     - labelCaption: ''
     - labelWidth: '33'
     - autoFill: ''
-    - placeholder: Enter value
+    - placeholder: Enter project name
     - label: Project Name
     - _validate: false
     - labelWidthUnit: '%'
