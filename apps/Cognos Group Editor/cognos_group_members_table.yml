@@ -128,7 +128,7 @@ template:
         - 1a
         - 3c
         - 4d
-    - data: '{{ get_group_members.data }}'
+    - data: '{{ get_cognos_group_members.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null

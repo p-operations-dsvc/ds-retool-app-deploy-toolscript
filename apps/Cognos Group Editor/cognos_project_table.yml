@@ -80,7 +80,7 @@ template:
           - a16c9:
               ordered:
                 - mode: mapped
-                - mappedData: '{{ get_project_approvers.data }}'
+                - mappedData: '{{ get_cognos_project_approvers.data }}'
                 - valueByIndex: '{{ item.approver_id }}'
                 - labelByIndex: '{{ item.user_principal_name }}'
     - _columnValueOverride:

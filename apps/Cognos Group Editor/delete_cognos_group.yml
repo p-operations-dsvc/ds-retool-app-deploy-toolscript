@@ -22,7 +22,9 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: SELECT main.delete_groups ( {{selected_cognos_groups_to_dict.value}} );
+    - query: >-
+        SELECT main.delete_groups (
+        {{selected_cognos_groups_to_dict_transform.value}} );
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

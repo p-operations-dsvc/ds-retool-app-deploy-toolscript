@@ -1,4 +1,4 @@
-id: get_project_groups
+id: add_cognos_project
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -19,14 +19,10 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: true
+    - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: >-
-        select * from main.exec({{get_project_group_query_value.value}}) 
-
-        as t(project_group_id integer, project_id integer, group_id integer,
-        last_updated_ts timestamp)
+    - query: ''
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -34,14 +30,13 @@ template:
     - privateParams: []
     - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
-    - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
     - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: true
+    - showSuccessToaster: false
     - dataArray: []
     - cacheKeyTtl: ''
     - filterBy: ''
@@ -49,9 +44,9 @@ template:
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: sql
+    - editorMode: gui
     - queryRunTime: null
-    - actionType: ''
+    - actionType: INSERT
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -65,7 +60,8 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: ''
+    - changeset: >-
+        [{"key":"project_name","value":"{{addNewProjectNameText.value}}"},{"key":"approvers","value":"{{get_added_new_project_approvers_transform.value}}"}]
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
@@ -82,15 +78,32 @@ template:
     - overrideOrgCacheForUserCache: false
     - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
-    - transformer: >-
-        // type your code here
-
-        // example: return formatDataAsArray(data).filter(row => row.quantity >
-        20)
-
+    - transformer: |-
+        // Query results are available as the `data` variable
         return data
-    - events: []
-    - tableName: ''
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_cognos_projects
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: close
+            - pluginId: addNewProjectModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - isMultiplayerEdited: false
+    - tableName: main.cognos_project
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -98,7 +111,6 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
@@ -106,5 +118,5 @@ template:
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
-    - notificationDuration: ''
-createdAt: 2023-07-03T18:09:35.285Z
+    - notificationDuration: 4.5
+createdAt: 2024-02-09T22:58:42.100Z

@@ -1,4 +1,4 @@
-id: update_cognos_project_approvers
+id: delete_cognos_project
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -8,7 +8,7 @@ template:
     - queryRefreshTime: ''
     - allowedGroupIds: []
     - streamResponse: false
-    - records: '{{cognos_project_approvers_table.changesetArray}}'
+    - records: ''
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
     - queryDisabledMessage: ''
@@ -22,7 +22,9 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: ''
+    - query: >-
+        SELECT main.delete_projects (
+        {{selected_cognos_project_to_dict_transform.value}} );
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -30,13 +32,14 @@ template:
     - privateParams: []
     - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
+    - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
     - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - dataArray: []
     - cacheKeyTtl: ''
     - filterBy: ''
@@ -44,9 +47,9 @@ template:
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: gui
+    - editorMode: sql
     - queryRunTime: null
-    - actionType: BULK_UPDATE_BY_KEY
+    - actionType: ''
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -75,21 +78,17 @@ template:
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
     - overrideOrgCacheForUserCache: false
-    - bulkUpdatePrimaryKey: approver_id
+    - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
-    - transformer: >-
-        // type your code here
-
-        // example: return formatDataAsArray(data).filter(row => row.quantity >
-        20)
-
+    - transformer: |-
+        // Query results are available as the `data` variable
         return data
     - events:
         - ordered:
             - event: success
             - type: datasource
             - method: trigger
-            - pluginId: get_project_approvers
+            - pluginId: get_cognos_projects
             - targetId: null
             - params:
                 ordered: []
@@ -98,14 +97,14 @@ template:
         - ordered:
             - event: success
             - type: widget
-            - method: clearChangeset
-            - pluginId: cognos_project_approvers_table
+            - method: close
+            - pluginId: deleteProjectsModal
             - targetId: null
             - params:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-    - tableName: main.cognos_project_approver
+    - tableName: ''
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -113,7 +112,6 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
@@ -121,5 +119,5 @@ template:
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
-    - notificationDuration: ''
-createdAt: 2023-09-13T21:54:48.868Z
+    - notificationDuration: 4.5
+createdAt: 2024-02-09T23:29:24.640Z

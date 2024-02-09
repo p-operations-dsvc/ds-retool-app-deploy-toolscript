@@ -29,7 +29,7 @@ template:
             - event: submit
             - type: datasource
             - method: trigger
-            - pluginId: add_new_cognos_project_group
+            - pluginId: add_cognos_project_group
             - targetId: null
             - params:
                 ordered: []

@@ -25,7 +25,7 @@ template:
     - persistSearchTerm: false
     - hidden: false
     - customValidation: ''
-    - data: '{{ get_project_approvers.data }}'
+    - data: '{{ get_cognos_project_approvers.data }}'
     - maxCount: null
     - searchMode: fuzzy
     - hideValidationMessage: false

@@ -93,7 +93,7 @@ template:
         - 1a
         - 3c
         - 4d
-    - data: '{{ get_project_approvers.data }}'
+    - data: '{{ get_cognos_project_approvers.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
@@ -223,7 +223,7 @@ template:
             - event: save
             - type: datasource
             - method: trigger
-            - pluginId: update_cognos_project_approvers
+            - pluginId: update_cognos_project_approvers_bulk
             - targetId: null
             - params:
                 ordered: []

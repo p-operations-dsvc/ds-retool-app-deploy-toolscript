@@ -1,4 +1,4 @@
-id: add_new_cognos_project
+id: update_cognos_project_approvers_bulk
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -8,7 +8,7 @@ template:
     - queryRefreshTime: ''
     - allowedGroupIds: []
     - streamResponse: false
-    - records: ''
+    - records: '{{cognos_project_approvers_table.changesetArray}}'
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
     - queryDisabledMessage: ''
@@ -46,7 +46,7 @@ template:
     - workflowActionType: null
     - editorMode: gui
     - queryRunTime: null
-    - actionType: INSERT
+    - actionType: BULK_UPDATE_BY_KEY
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -60,8 +60,7 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: >-
-        [{"key":"project_name","value":"{{addNewProjectNameText.value}}"},{"key":"approvers","value":"{{add_new_project_approvers_transform.value}}"}]
+    - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
@@ -76,17 +75,21 @@ template:
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
     - overrideOrgCacheForUserCache: false
-    - bulkUpdatePrimaryKey: ''
+    - bulkUpdatePrimaryKey: approver_id
     - runWhenPageLoads: false
-    - transformer: |-
-        // Query results are available as the `data` variable
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
         return data
     - events:
         - ordered:
             - event: success
             - type: datasource
             - method: trigger
-            - pluginId: get_cognos_projects
+            - pluginId: get_cognos_project_approvers
             - targetId: null
             - params:
                 ordered: []
@@ -95,15 +98,14 @@ template:
         - ordered:
             - event: success
             - type: widget
-            - method: close
-            - pluginId: addNewProjectModal
+            - method: clearChangeset
+            - pluginId: cognos_project_approvers_table
             - targetId: null
             - params:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-    - isMultiplayerEdited: false
-    - tableName: main.cognos_project
+    - tableName: main.cognos_project_approver
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -111,6 +113,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
@@ -118,5 +121,5 @@ template:
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
-    - notificationDuration: 4.5
-createdAt: 2024-02-09T22:58:42.100Z
+    - notificationDuration: ''
+createdAt: 2023-09-13T21:54:48.868Z

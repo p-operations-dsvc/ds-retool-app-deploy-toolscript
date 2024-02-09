@@ -119,7 +119,7 @@ template:
         - 9f39d
         - e15c8
         - 3c
-    - data: '{{ get_project_groups.data }}'
+    - data: '{{ get_cognos_project_groups.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null

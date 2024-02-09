@@ -1,4 +1,4 @@
-id: add_new_cognos_project_group
+id: get_cognos_group_members
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -22,7 +22,14 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: ''
+    - query: >-
+        select b.dn, b.user_principal_name as email, b.given_name as first_name,
+        b.sn as last_name, a.ad_group group_in, a.parent_ad_group
+        parent_of_group
+
+        from main.cognos_group_membership a, main.cognos_ad_record b
+
+        where a.dn=b.dn and a.group_id={{group_members_select.value}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -30,6 +37,7 @@ template:
     - privateParams: []
     - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
+    - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
@@ -44,9 +52,9 @@ template:
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: gui
+    - editorMode: sql
     - queryRunTime: null
-    - actionType: INSERT
+    - actionType: ''
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -60,8 +68,7 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: >-
-        [{"key":"project_id","value":"{{addNewProjectGroupProjectSelect.value}}"},{"key":"group_id","value":"{{addNewProjectGroupGroupSelect.value}}"}]
+    - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
@@ -80,30 +87,9 @@ template:
     - runWhenPageLoads: false
     - transformer: |-
         // Query results are available as the `data` variable
-        return data
-    - events:
-        - ordered:
-            - event: success
-            - type: datasource
-            - method: trigger
-            - pluginId: get_project_groups
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: widget
-            - method: open
-            - pluginId: addNewProjectGroupModal
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-    - isMultiplayerEdited: false
-    - tableName: main.cognos_project_group
+        return formatDataAsArray(data)
+    - events: []
+    - tableName: ''
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -111,6 +97,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
@@ -118,5 +105,5 @@ template:
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
-    - notificationDuration: 4.5
-createdAt: 2024-02-09T22:41:31.322Z
+    - notificationDuration: ''
+createdAt: 2023-08-22T23:12:10.217Z

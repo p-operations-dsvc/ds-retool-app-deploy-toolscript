@@ -1,4 +1,4 @@
-id: add_new_cognos_group
+id: get_cognos_project_approvers
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -19,10 +19,10 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: false
+    - runWhenModelUpdates: true
     - workflowRunId: null
     - showFailureToaster: true
-    - query: ''
+    - query: "SELECT approver_id, user_principal_name \n\tFROM main.cognos_project_approver\nGO\n"
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -30,13 +30,14 @@ template:
     - privateParams: []
     - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
+    - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
     - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - dataArray: []
     - cacheKeyTtl: ''
     - filterBy: ''
@@ -44,9 +45,9 @@ template:
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: gui
+    - editorMode: sql
     - queryRunTime: null
-    - actionType: INSERT
+    - actionType: ''
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -60,8 +61,7 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: >-
-        [{"key":"domain_id","value":"{{addNewCognosGroupDomainSelect.value}}"},{"key":"group_ad_name","value":"{{addNewCognosGroupADNameText.value}}"}]
+    - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
@@ -80,30 +80,9 @@ template:
     - runWhenPageLoads: false
     - transformer: |-
         // Query results are available as the `data` variable
-        return data
-    - events:
-        - ordered:
-            - event: success
-            - type: datasource
-            - method: trigger
-            - pluginId: get_cognos_groups
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: widget
-            - method: close
-            - pluginId: addNewGroupModal
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-    - isMultiplayerEdited: false
-    - tableName: main.cognos_group
+        return formatDataAsArray(data)
+    - events: []
+    - tableName: ''
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -111,6 +90,7 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
+    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
@@ -118,5 +98,5 @@ template:
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
-    - notificationDuration: 4.5
-createdAt: 2024-02-09T22:35:02.375Z
+    - notificationDuration: ''
+createdAt: 2023-09-13T21:38:43.376Z

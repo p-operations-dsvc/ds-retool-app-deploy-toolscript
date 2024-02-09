@@ -89,7 +89,7 @@ template:
             - event: success
             - type: datasource
             - method: trigger
-            - pluginId: get_project_groups
+            - pluginId: get_cognos_project_groups
             - targetId: null
             - params:
                 ordered: []

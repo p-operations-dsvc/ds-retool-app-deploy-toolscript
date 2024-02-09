@@ -20,7 +20,7 @@ template:
             - event: click
             - type: datasource
             - method: trigger
-            - pluginId: add_new_cognos_project_approver
+            - pluginId: add_cognos_project_approver
             - targetId: null
             - params:
                 ordered: []
@@ -29,8 +29,8 @@ template:
     - loading: false
     - loaderPosition: auto
     - disabled: >-
-        {{get_project_approvers.data.user_principal_name.map(function(x){ return
-        x.toUpperCase(); }).indexOf
+        {{get_cognos_project_approvers.data.user_principal_name.map(function(x){
+        return x.toUpperCase(); }).indexOf
         (addNewApproverTextInput.value.toUpperCase())!==-1}}
     - maintainSpaceWhenHidden: false
 style:

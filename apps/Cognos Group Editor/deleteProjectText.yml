@@ -11,7 +11,9 @@ template:
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
-    - value: '##### Are you sure that you want to proceed?'
+    - value: >-
+        ##### Are you sure that you want to proceed? Project
+        {{cognos_project_table.selectedRow.project_name}} will be deleted!
     - disableMarkdown: false
     - overflowType: scroll
     - maintainSpaceWhenHidden: false

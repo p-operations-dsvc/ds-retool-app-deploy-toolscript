@@ -3,7 +3,7 @@ type: widget
 subtype: ButtonWidget2
 template:
   ordered:
-    - horizontalAlign: stretch
+    - horizontalAlign: center
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
@@ -20,7 +20,7 @@ template:
             - event: click
             - type: datasource
             - method: trigger
-            - pluginId: delete_cognos_projects
+            - pluginId: delete_cognos_project
             - targetId: null
             - params:
                 ordered: []
@@ -35,7 +35,7 @@ style:
 position2:
   position2:
     container: deleteProjectsModal
-    row: 1.6
+    row: 2.8
     col: 1
     height: 1
     width: 10

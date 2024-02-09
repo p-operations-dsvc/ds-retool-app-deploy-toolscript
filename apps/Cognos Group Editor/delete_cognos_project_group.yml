@@ -24,7 +24,7 @@ template:
     - showFailureToaster: true
     - query: >-
         SELECT main.delete_project_groups (
-        {{selected_cognos_project_groups_to_dict.value}} );
+        {{selected_cognos_project_groups_to_dict_transform.value}} );
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -88,7 +88,7 @@ template:
             - event: success
             - type: datasource
             - method: trigger
-            - pluginId: get_project_groups
+            - pluginId: get_cognos_project_groups
             - targetId: null
             - params:
                 ordered: []

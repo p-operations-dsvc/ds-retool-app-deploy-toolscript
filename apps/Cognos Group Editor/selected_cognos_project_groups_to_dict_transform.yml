@@ -1,4 +1,4 @@
-id: selected_cognos_project_groups_to_dict
+id: selected_cognos_project_groups_to_dict_transform
 type: function
 subtype: Function
 template:

@@ -1,4 +1,4 @@
-id: delete_cognos_projects
+id: get_cognos_project_groups
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -8,7 +8,7 @@ template:
     - queryRefreshTime: ''
     - allowedGroupIds: []
     - streamResponse: false
-    - records: '{{cognos_project_table.changeSet}}'
+    - records: ''
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
     - queryDisabledMessage: ''
@@ -19,12 +19,15 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: false
+    - runWhenModelUpdates: true
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        SELECT main.delete_projects ( {{selected_cognos_project_to_dict.value}}
-        );
+        select * from
+        main.exec({{get_project_group_query_value_transform.value}}) 
+
+        as t(project_group_id integer, project_id integer, group_id integer,
+        last_updated_ts timestamp)
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -39,18 +42,17 @@ template:
         ordered: []
     - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - dataArray: []
     - cacheKeyTtl: ''
-    - filterBy: >-
-        [{"key":"project_name","value":"{{cognos_project_table.selectedRow.data.project_name}}","operation":"="}]
+    - filterBy: ''
     - requestSentTimestamp: null
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
     - editorMode: sql
     - queryRunTime: null
-    - actionType: UPDATE_BY
+    - actionType: ''
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -64,7 +66,7 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: '[{"key":"project_name","value":"{{cognos_project_table.changeSet}}"}]'
+    - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
@@ -79,7 +81,7 @@ template:
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
     - overrideOrgCacheForUserCache: false
-    - bulkUpdatePrimaryKey: project_name
+    - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
     - transformer: >-
         // type your code here
@@ -88,38 +90,8 @@ template:
         20)
 
         return data
-    - events:
-        - ordered:
-            - event: success
-            - type: datasource
-            - method: trigger
-            - pluginId: get_cognos_projects
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: widget
-            - method: close
-            - pluginId: deleteProjectsModal
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: widget
-            - method: clearSelection
-            - pluginId: cognos_project_table
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-    - tableName: vmn_data.cognos_project
+    - events: []
+    - tableName: ''
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -131,9 +103,9 @@ template:
     - databaseUsernameOverride: ''
     - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
-    - doNotThrowOnNoOp: true
+    - doNotThrowOnNoOp: false
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-07-06T23:23:38.952Z
+createdAt: 2023-07-03T18:09:35.285Z

@@ -1,4 +1,4 @@
-id: newCognosGroupFullName
+id: get_added_cognos_group_full_name_transform
 type: function
 subtype: Function
 template:
