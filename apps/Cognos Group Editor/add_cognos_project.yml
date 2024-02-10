@@ -106,7 +106,7 @@ template:
             - event: success
             - type: widget
             - method: clearSelection
-            - pluginId: cognos_project_table
+            - pluginId: cognos_projects_table
             - targetId: null
             - params:
                 ordered: []

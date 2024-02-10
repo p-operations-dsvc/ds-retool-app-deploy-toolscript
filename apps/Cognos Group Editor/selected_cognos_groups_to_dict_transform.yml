@@ -4,9 +4,14 @@ subtype: Function
 template:
   ordered:
     - funcBody: |-
-        var selected_group = {{cognos_groups_table.selectedRow.group_id}}; 
         let dict = {};
-        dict[0] = {"group_id":selected_group} 
+
+        if ({{cognos_groups_table.selectedRow}}===null) {
+          return dict
+        }
+
+        dict[0] = {"group_id":{{cognos_groups_table.selectedRow.group_id}}
+                  }
         return dict
     - value: ''
 createdAt: 2023-07-05T20:53:43.490Z

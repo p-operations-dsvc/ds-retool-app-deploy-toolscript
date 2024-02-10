@@ -318,7 +318,7 @@ template:
     - selectedCell: null
     - _defaultSelectedRow:
         ordered:
-          - mode: index
+          - mode: none
           - indexType: display
           - index: 0
     - _hasNextPage: false

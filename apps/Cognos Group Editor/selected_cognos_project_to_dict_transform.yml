@@ -4,11 +4,14 @@ subtype: Function
 template:
   ordered:
     - funcBody: |-
-        var selected_projects = {{cognos_project_table.selectedDataIndexes}}; 
         let dict = {};
-                for (let i=0; i< selected_projects.length; i++ ) {
-                        dict[i.toString()] = {"project_id":{{ cognos_project_table.data}}[selected_projects[i]].project_id};
-                }
+
+        if ({{cognos_projects_table.selectedRow}}===null) {
+          return dict
+        }
+
+        dict[0] = {"project_id":{{cognos_projects_table.selectedRow.project_id}}
+                  }
         return dict
     - value: ''
 createdAt: 2023-07-06T23:06:52.569Z

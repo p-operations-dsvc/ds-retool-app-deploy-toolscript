@@ -8,6 +8,11 @@ template:
         {{cognos_project_group_table.selectedDataIndexes}}; 
 
         let dict = {};
+
+
+        if (selected_project_groups===null) {
+          return dict
+        }
                 for (let i=0; i< selected_project_groups.length; i++ ) {
                         dict[i.toString()] = {"project_group_id":{{ cognos_project_group_table.data}}[selected_project_groups[i]].project_group_id};
                 }

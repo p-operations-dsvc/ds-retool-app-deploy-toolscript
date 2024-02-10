@@ -1,4 +1,4 @@
-id: cognos_project_table
+id: cognos_projects_table
 type: widget
 subtype: TableWidget2
 template:
@@ -174,7 +174,7 @@ template:
           - a16c9: ''
     - _dynamicColumnSource:
         array: []
-    - _rowSelection: multiple
+    - _rowSelection: single
     - _columnCaption:
         ordered:
           - d6cef: ''
@@ -267,7 +267,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: cognos_project_table
+            - pluginId: cognos_projects_table
             - targetId: 3c
         - ordered:
             - type: widget
@@ -275,7 +275,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: cognos_project_table
+            - pluginId: cognos_projects_table
             - targetId: 4d
     - _columnEditable:
         ordered:
