@@ -90,7 +90,7 @@ position2:
   position2:
     container: tabbedContainer1
     subcontainer: 07dbe
-    col: 1
+    col: 4
     height: 1
     width: 4
 createdAt: 2023-08-22T23:07:16.886Z

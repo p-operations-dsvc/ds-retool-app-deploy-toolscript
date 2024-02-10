@@ -1,4 +1,4 @@
-id: update_cognos_project_approvers
+id: update_cognos_project_approvers_bulk
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -89,7 +89,7 @@ template:
             - event: success
             - type: datasource
             - method: trigger
-            - pluginId: get_project_approvers
+            - pluginId: get_cognos_project_approvers
             - targetId: null
             - params:
                 ordered: []

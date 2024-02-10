@@ -1,4 +1,4 @@
-id: add_new_cognos_project_group
+id: add_cognos_project
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -8,7 +8,7 @@ template:
     - queryRefreshTime: ''
     - allowedGroupIds: []
     - streamResponse: false
-    - records: '{{cognos_project_table.changeSet}}'
+    - records: ''
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
     - queryDisabledMessage: ''
@@ -39,8 +39,7 @@ template:
     - showSuccessToaster: false
     - dataArray: []
     - cacheKeyTtl: ''
-    - filterBy: >-
-        [{"key":"project_name","value":"{{cognos_project_table.selectedRow.data.project_name}}","operation":"="}]
+    - filterBy: ''
     - requestSentTimestamp: null
     - databaseHostOverride: ''
     - metadata: null
@@ -62,7 +61,7 @@ template:
     - confirmationMessage: null
     - isFetching: false
     - changeset: >-
-        [{"key":"project_id","value":"{{addNewProjectGroupProjectSelect.value}}"},{"key":"group_id","value":"{{addNewProjectGroupGroupSelect.value}}"}]
+        [{"key":"project_name","value":"{{addNewProjectNameText.value}}"},{"key":"approvers","value":"{{get_added_new_project_approvers_transform.value}}"}]
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
@@ -77,21 +76,17 @@ template:
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
     - overrideOrgCacheForUserCache: false
-    - bulkUpdatePrimaryKey: project_name
+    - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
-    - transformer: >-
-        // type your code here
-
-        // example: return formatDataAsArray(data).filter(row => row.quantity >
-        20)
-
+    - transformer: |-
+        // Query results are available as the `data` variable
         return data
     - events:
         - ordered:
             - event: success
             - type: datasource
             - method: trigger
-            - pluginId: get_project_groups
+            - pluginId: get_cognos_projects
             - targetId: null
             - params:
                 ordered: []
@@ -101,13 +96,24 @@ template:
             - event: success
             - type: widget
             - method: close
-            - pluginId: addNewProjectGroupModal
+            - pluginId: addNewProjectModal
             - targetId: null
             - params:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-    - tableName: main.cognos_project_group
+        - ordered:
+            - event: success
+            - type: widget
+            - method: clearSelection
+            - pluginId: cognos_projects_table
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - isMultiplayerEdited: false
+    - tableName: main.cognos_project
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -115,13 +121,12 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
-    - doNotThrowOnNoOp: true
+    - doNotThrowOnNoOp: false
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
-    - notificationDuration: ''
-createdAt: 2023-07-06T23:54:46.753Z
+    - notificationDuration: 4.5
+createdAt: 2024-02-09T22:58:42.100Z

@@ -24,7 +24,7 @@ template:
     - showFailureToaster: true
     - query: >-
         SELECT main.update_cognos_group_permissions2 (
-        {{transform_selected_file.value}} );
+        {{transform_selected_report_file.value}} );
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null

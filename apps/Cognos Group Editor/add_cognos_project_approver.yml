@@ -1,4 +1,4 @@
-id: get_project_approvers
+id: add_cognos_project_approver
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -19,10 +19,10 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: true
+    - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: "SELECT approver_id, user_principal_name \n\tFROM main.cognos_project_approver\nGO\n"
+    - query: ''
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -30,14 +30,13 @@ template:
     - privateParams: []
     - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
-    - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
     - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: true
+    - showSuccessToaster: false
     - dataArray: []
     - cacheKeyTtl: ''
     - filterBy: ''
@@ -45,9 +44,9 @@ template:
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: sql
+    - editorMode: gui
     - queryRunTime: null
-    - actionType: ''
+    - actionType: INSERT
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -61,7 +60,8 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: ''
+    - changeset: >-
+        [{"key":"user_principal_name","value":"{{addNewApproverTextInput.value}}"}]
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
@@ -80,9 +80,30 @@ template:
     - runWhenPageLoads: false
     - transformer: |-
         // Query results are available as the `data` variable
-        return formatDataAsArray(data)
-    - events: []
-    - tableName: ''
+        return data
+    - events:
+        - ordered:
+            - event: success
+            - type: datasource
+            - method: trigger
+            - pluginId: get_cognos_project_approvers
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: widget
+            - method: open
+            - pluginId: addNewApproverModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - isMultiplayerEdited: false
+    - tableName: main.cognos_project_approver
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -90,7 +111,6 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
@@ -98,5 +118,5 @@ template:
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
-    - notificationDuration: ''
-createdAt: 2023-09-13T21:38:43.376Z
+    - notificationDuration: 4.5
+createdAt: 2024-02-09T22:50:56.852Z

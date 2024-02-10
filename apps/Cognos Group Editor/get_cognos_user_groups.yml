@@ -1,4 +1,4 @@
-id: add_new_cognos_groups
+id: get_cognos_user_groups
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -8,7 +8,7 @@ template:
     - queryRefreshTime: ''
     - allowedGroupIds: []
     - streamResponse: false
-    - records: '{{cognos_project_table.changeSet}}'
+    - records: ''
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
     - queryDisabledMessage: ''
@@ -23,8 +23,14 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        select vmn_data.create_groups({{newCognosGroupDomainSelect.value}},
-        {{newCognosGroupADNameText.value}})
+        select b.domain_id, b.group_ad_name FROM
+
+        main.cognos_group_membership a
+
+        join main.cognos_group b on a.group_id=b.group_id
+          join main.cognos_ad_record c on a.dn=c.dn 
+        where
+        c.user_principal_name={{cognos_group_members_table.selectedRow.email}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -42,15 +48,14 @@ template:
     - showSuccessToaster: false
     - dataArray: []
     - cacheKeyTtl: ''
-    - filterBy: >-
-        [{"key":"project_name","value":"{{cognos_project_table.selectedRow.data.project_name}}","operation":"="}]
+    - filterBy: ''
     - requestSentTimestamp: null
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: gui
+    - editorMode: sql
     - queryRunTime: null
-    - actionType: INSERT
+    - actionType: ''
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -64,11 +69,10 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: >-
-        [{"key":"domain_id","value":"{{newCognosGroupDomainSelect.value}}"},{"key":"group_ad_name","value":"{{newCognosGroupADNameText.value}}"}]
+    - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
-    - resourceTypeOverride: null
+    - resourceTypeOverride: ''
     - watchedParams: []
     - enableErrorTransformer: false
     - databaseWarehouseOverride: ''
@@ -80,37 +84,13 @@ template:
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
     - overrideOrgCacheForUserCache: false
-    - bulkUpdatePrimaryKey: project_name
+    - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
-    - transformer: >-
-        // type your code here
-
-        // example: return formatDataAsArray(data).filter(row => row.quantity >
-        20)
-
+    - transformer: |-
+        // Query results are available as the `data` variable
         return data
-    - events:
-        - ordered:
-            - event: success
-            - type: datasource
-            - method: trigger
-            - pluginId: get_cognos_groups
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: widget
-            - method: close
-            - pluginId: addNewGroupModal
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-    - tableName: main.cognos_group
+    - events: []
+    - tableName: ''
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -118,13 +98,12 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
-    - doNotThrowOnNoOp: true
+    - doNotThrowOnNoOp: false
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
-    - notificationDuration: ''
-createdAt: 2023-07-05T20:20:02.678Z
+    - notificationDuration: 4.5
+createdAt: 2024-02-10T00:24:09.150Z

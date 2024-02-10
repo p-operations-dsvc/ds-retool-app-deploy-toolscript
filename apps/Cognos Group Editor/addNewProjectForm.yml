@@ -21,7 +21,7 @@ template:
     - hoistFetching: false
     - paddingType: normal
     - scroll: true
-    - initialData: '{{ cognos_project_table.selectedRow }}'
+    - initialData: ''
     - showInEditor: false
     - footerPaddingType: normal
     - tooltipText: ''
@@ -33,7 +33,7 @@ template:
             - event: submit
             - type: datasource
             - method: trigger
-            - pluginId: add_new_cognos_projects
+            - pluginId: add_cognos_project
             - targetId: null
             - params:
                 ordered: []

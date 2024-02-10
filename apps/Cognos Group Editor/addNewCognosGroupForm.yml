@@ -6,7 +6,7 @@ template:
     - disableSubmit: >-
         {{get_cognos_groups.data.group_full_name.map(function(x){ return
         x.toUpperCase(); }).indexOf
-        (newCognosGroupFullName.value.toUpperCase())!==-1}}
+        (get_added_cognos_group_full_name_transform.value.toUpperCase())!==-1}}
     - heightType: auto
     - showFooterBorder: true
     - resetAfterSubmit: true
@@ -21,7 +21,7 @@ template:
     - hoistFetching: false
     - paddingType: normal
     - scroll: true
-    - initialData: '{{ cognos_groups_table.selectedRow }}'
+    - initialData: ''
     - showInEditor: false
     - footerPaddingType: normal
     - tooltipText: ''
@@ -33,7 +33,7 @@ template:
             - event: submit
             - type: datasource
             - method: trigger
-            - pluginId: add_new_cognos_groups
+            - pluginId: add_cognos_group
             - targetId: null
             - params:
                 ordered: []

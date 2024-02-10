@@ -3,7 +3,7 @@ type: widget
 subtype: ButtonWidget2
 template:
   ordered:
-    - horizontalAlign: stretch
+    - horizontalAlign: center
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
@@ -35,7 +35,7 @@ style:
 position2:
   position2:
     container: deleteGroupsModal
-    row: 3.2
+    row: 4.4
     col: 1
     height: 1
     width: 10

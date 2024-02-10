@@ -25,7 +25,7 @@ template:
     - persistSearchTerm: false
     - hidden: false
     - customValidation: ''
-    - data: '{{ get_project_approvers.data }}'
+    - data: '{{ get_cognos_project_approvers.data }}'
     - maxCount: null
     - searchMode: fuzzy
     - hideValidationMessage: false
@@ -52,7 +52,7 @@ template:
     - deprecatedLabels:
         array: []
     - _hiddenByIndex: []
-    - placeholder: Select options
+    - placeholder: Select approvers
     - _captionByIndex: []
     - itemAdornmentSize: auto
     - label: Approvers

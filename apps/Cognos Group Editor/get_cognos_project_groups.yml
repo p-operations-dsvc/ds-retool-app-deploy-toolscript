@@ -1,4 +1,4 @@
-id: get_project_groups
+id: get_cognos_project_groups
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -23,7 +23,8 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        select * from main.exec({{get_project_group_query_value.value}}) 
+        select * from
+        main.exec({{get_project_group_query_value_transform.value}}) 
 
         as t(project_group_id integer, project_id integer, group_id integer,
         last_updated_ts timestamp)

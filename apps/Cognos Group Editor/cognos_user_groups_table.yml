@@ -1,4 +1,5 @@
-id: cognos_project_approvers_table
+id: cognos_user_groups_table
+uuid: 92bfdf82-2749-4b3b-a78c-3715bb1e586d
 type: widget
 subtype: TableWidget2
 template:
@@ -7,19 +8,21 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - aaea9: ''
-          - '20057': ''
+          - a8002: ''
+          - '47134': ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
     - _columnTextColor:
-        ordered: []
+        ordered:
+          - a8002: ''
+          - '47134': ''
     - disableEdits: false
     - autoColumnWidth: false
-    - _rowHeight: small
+    - _rowHeight: medium
     - _columnIds:
-        - aaea9
-        - '20057'
+        - a8002
+        - '47134'
     - _isSaving: false
     - _actionIds: []
     - _clearChangeset: false
@@ -30,10 +33,10 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - aaea9:
+          - a8002:
               ordered:
                 - showStepper: true
-          - '20057':
+          - '47134':
               ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns: []
@@ -42,7 +45,6 @@ template:
           - 1a: Filter
           - 3c: Download
           - 4d: Refresh
-          - c0153: Add
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
@@ -50,7 +52,6 @@ template:
           - 1a: bold/interface-text-formatting-filter-2
           - 3c: bold/interface-download-button-2
           - 4d: bold/interface-arrows-round-left
-          - c0153: bold/interface-add-1
     - changesetArray:
         array: []
     - _toolbarButtonType:
@@ -58,23 +59,20 @@ template:
           - 1a: filter
           - 3c: custom
           - 4d: custom
-          - c0153: custom
-    - _columnStatusIndicator:
-        ordered:
-          - aaea9:
-              ordered: []
-          - '20057':
-              ordered: []
     - _columnOptionList:
         ordered:
-          - aaea9:
-              ordered: []
-          - '20057':
+          - a8002:
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ get_cognos_domain.data }}'
+                - valueByIndex: '{{ item.domain_id }}'
+                - labelByIndex: '{{ item.domain_name }}'
+          - '47134':
               ordered: []
     - _columnValueOverride:
         ordered:
-          - aaea9: ''
-          - '20057': ''
+          - a8002: ''
+          - '47134': ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
@@ -85,51 +83,50 @@ template:
     - _actionsOverflowPosition: 0
     - _columnKey:
         ordered:
-          - aaea9: approver_id
-          - '20057': user_principal_name
+          - a8002: domain_id
+          - '47134': group_ad_name
     - hidden: false
     - _toolbarButtonIds:
-        - c0153
         - 1a
         - 3c
         - 4d
-    - data: '{{ get_cognos_project_approvers.data }}'
+    - data: '{{ get_cognos_user_groups.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - aaea9: ''
-          - '20057': ''
+          - a8002: ''
+          - '47134': ''
     - _columnFormat:
         ordered:
-          - aaea9: decimal
-          - '20057': string
+          - a8002: tag
+          - '47134': string
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: aaea9
+    - _primaryKeyColumnId: ''
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - aaea9: right
-          - '20057': left
+          - a8002: left
+          - '47134': center
     - _actionIcon:
         ordered: []
     - _columnTooltip:
         ordered:
-          - aaea9: ''
-          - '20057': ''
+          - a8002: ''
+          - '47134': ''
     - _columnIcon:
         ordered:
-          - aaea9: ''
-          - '20057': ''
+          - a8002: ''
+          - '47134': ''
     - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
-          - aaea9: ''
-          - '20057': ''
+          - a8002: ''
+          - '47134': ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -138,9 +135,8 @@ template:
     - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
-          - aaea9: false
-          - '20057': false
-    - undefined: null
+          - a8002: false
+          - '47134': false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -149,34 +145,34 @@ template:
         ordered: []
     - _columnReferenceId:
         ordered:
-          - aaea9: ''
-          - '20057': ''
+          - a8002: ''
+          - '47134': ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: single
     - _columnCaption:
         ordered:
-          - aaea9: ''
-          - '20057': ''
+          - a8002: ''
+          - '47134': ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - aaea9:
+          - a8002:
               ordered:
-                - showSeparators: true
-                - notation: standard
-          - '20057':
-              ordered:
-                - showUnderline: hover
+                - automaticColors: true
+          - '47134':
+              ordered: []
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
         array: []
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
-        ordered: []
+        ordered:
+          - a8002: none
+          - '47134': none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -186,17 +182,19 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - aaea9:
+          - a8002:
               ordered: []
-          - '20057':
+          - '47134':
               ordered: []
     - _columnSize:
         ordered:
-          - '20057': 198.75
-          - aaea9: 204.765625
+          - a8002: 100
+          - '47134': 100
     - _serverPaginationType: limitOffsetBased
     - _columnSortMode:
-        ordered: []
+        ordered:
+          - a8002: default
+          - '47134': default
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:
@@ -205,37 +203,20 @@ template:
         ordered: []
     - _virtualizeStartIndex: 0
     - _toolbarButtonHidden:
-        ordered: []
+        ordered:
+          - 1a: ''
+          - 3c: ''
+          - 4d: ''
     - _defaultFilters:
         ordered: []
     - events:
-        - ordered:
-            - event: clickToolbar
-            - type: widget
-            - method: open
-            - pluginId: addNewApproverModal
-            - targetId: c0153
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: save
-            - type: datasource
-            - method: trigger
-            - pluginId: update_cognos_project_approvers_bulk
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
         - ordered:
             - type: widget
             - waitMs: '0'
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: cognos_project_approvers_table
+            - pluginId: cognos_user_groups_table
             - targetId: 3c
         - ordered:
             - type: widget
@@ -243,20 +224,22 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: cognos_project_approvers_table
+            - pluginId: cognos_user_groups_table
             - targetId: 4d
     - _columnEditable:
         ordered:
-          - aaea9: false
-          - '20057': 'true'
+          - a8002: ''
+          - '47134': ''
     - _rowBackgroundColor:
         array: []
-    - emptyMessage: ''
+    - emptyMessage: No rows found
     - pagination: null
     - selectedDataIndexes:
         array: []
     - _columnGroupAggregationMode:
-        ordered: []
+        ordered:
+          - a8002: sum
+          - '47134': none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -271,13 +254,13 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - aaea9: center
-          - '20057': center
+          - a8002: center
+          - '47134': center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - aaea9: Enter value
-          - '20057': Enter value
+          - a8002: Select option
+          - '47134': Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -288,20 +271,20 @@ template:
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - aaea9: ''
-          - '20057': ''
+          - a8002: ''
+          - '47134': ''
     - _columnLabel:
         ordered:
-          - aaea9: Approver ID
-          - '20057': Approver Name
+          - a8002: Domain
+          - '47134': Group Name
     - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
-    container: tabbedContainer1
-    subcontainer: 7bc89
-    row: 1
-    height: 20
-    width: 12
-createdAt: 2023-09-13T20:52:01.461Z
+    container: getUserGroupsModal
+    row: 1.4
+    col: 1
+    height: 8
+    width: 11
+createdAt: 2024-02-10T00:36:03.260Z

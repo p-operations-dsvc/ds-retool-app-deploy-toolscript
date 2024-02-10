@@ -1,0 +1,13 @@
+id: get_added_cognos_group_full_name_transform
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: >-
+        let domain_name=
+        {{addNewCognosGroupDomainSelect.selectedItem.domain_name}}; 
+
+
+        return domain_name+"\\"+{{addNewCognosGroupADNameText.value}}
+    - value: ''
+createdAt: 2023-09-22T20:58:27.983Z

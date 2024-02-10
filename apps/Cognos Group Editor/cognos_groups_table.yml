@@ -278,16 +278,6 @@ template:
         ordered: []
     - events:
         - ordered:
-            - event: clickCell
-            - type: widget
-            - method: open
-            - pluginId: adFetchErrorModal
-            - targetId: '9e025'
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
             - event: clickAction
             - type: widget
             - method: setValue
@@ -307,6 +297,26 @@ template:
             - params:
                 ordered:
                   - value: Group Members
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickAction
+            - type: widget
+            - method: refresh
+            - pluginId: cognos_group_members_table
+            - targetId: 58b03
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
+            - event: clickCell
+            - type: widget
+            - method: open
+            - pluginId: adFetchErrorModal
+            - targetId: '9e025'
+            - params:
+                ordered: []
             - waitType: debounce
             - waitMs: '0'
         - ordered:

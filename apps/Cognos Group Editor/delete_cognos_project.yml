@@ -1,4 +1,4 @@
-id: delete_cognos_projects
+id: delete_cognos_project
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -8,7 +8,7 @@ template:
     - queryRefreshTime: ''
     - allowedGroupIds: []
     - streamResponse: false
-    - records: '{{cognos_project_table.changeSet}}'
+    - records: ''
     - lastReceivedFromResourceAt: null
     - databasePasswordOverride: ''
     - queryDisabledMessage: ''
@@ -23,8 +23,8 @@ template:
     - workflowRunId: null
     - showFailureToaster: true
     - query: >-
-        SELECT main.delete_projects ( {{selected_cognos_project_to_dict.value}}
-        );
+        SELECT main.delete_projects (
+        {{selected_cognos_project_to_dict_transform.value}} );
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -42,15 +42,14 @@ template:
     - showSuccessToaster: false
     - dataArray: []
     - cacheKeyTtl: ''
-    - filterBy: >-
-        [{"key":"project_name","value":"{{cognos_project_table.selectedRow.data.project_name}}","operation":"="}]
+    - filterBy: ''
     - requestSentTimestamp: null
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
     - editorMode: sql
     - queryRunTime: null
-    - actionType: UPDATE_BY
+    - actionType: ''
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -64,7 +63,7 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: '[{"key":"project_name","value":"{{cognos_project_table.changeSet}}"}]'
+    - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
     - resourceTypeOverride: null
@@ -79,14 +78,10 @@ template:
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
     - overrideOrgCacheForUserCache: false
-    - bulkUpdatePrimaryKey: project_name
+    - bulkUpdatePrimaryKey: ''
     - runWhenPageLoads: false
-    - transformer: >-
-        // type your code here
-
-        // example: return formatDataAsArray(data).filter(row => row.quantity >
-        20)
-
+    - transformer: |-
+        // Query results are available as the `data` variable
         return data
     - events:
         - ordered:
@@ -109,17 +104,7 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: widget
-            - method: clearSelection
-            - pluginId: cognos_project_table
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-    - tableName: vmn_data.cognos_project
+    - tableName: ''
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -127,13 +112,12 @@ template:
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
     - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
-    - doNotThrowOnNoOp: true
+    - doNotThrowOnNoOp: false
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
-    - notificationDuration: ''
-createdAt: 2023-07-06T23:23:38.952Z
+    - notificationDuration: 4.5
+createdAt: 2024-02-09T23:29:24.640Z

@@ -1,0 +1,17 @@
+id: selected_cognos_groups_to_dict_transform
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        let dict = {};
+
+        if ({{cognos_groups_table.selectedRow}}===null) {
+          return dict
+        }
+
+        dict[0] = {"group_id":{{cognos_groups_table.selectedRow.group_id}}
+                  }
+        return dict
+    - value: ''
+createdAt: 2023-07-05T20:53:43.490Z

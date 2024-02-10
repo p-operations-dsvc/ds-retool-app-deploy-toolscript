@@ -1,4 +1,4 @@
-id: cognos_project_table
+id: cognos_group_members_table
 type: widget
 subtype: TableWidget2
 template:
@@ -7,9 +7,12 @@ template:
     - _nextAfterCursor: ''
     - _columnBackgroundColor:
         ordered:
-          - d6cef: ''
-          - 79c74: ''
-          - a16c9: ''
+          - 3d334: ''
+          - d488a: ''
+          - 8e04f: ''
+          - 80feb: ''
+          - '560e3': ''
+          - 6aed4: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
@@ -19,9 +22,12 @@ template:
     - autoColumnWidth: false
     - _rowHeight: small
     - _columnIds:
-        - 79c74
-        - d6cef
-        - a16c9
+        - 3d334
+        - d488a
+        - 8e04f
+        - 80feb
+        - '560e3'
+        - 6aed4
     - _isSaving: false
     - _actionIds: []
     - _clearChangeset: false
@@ -32,12 +38,17 @@ template:
     - disableSave: false
     - _columnEditableOptions:
         ordered:
-          - d6cef:
+          - 3d334:
               ordered: []
-          - 79c74:
-              ordered:
-                - showStepper: true
-          - a16c9:
+          - d488a:
+              ordered: []
+          - 8e04f:
+              ordered: []
+          - 80feb:
+              ordered: []
+          - '560e3':
+              ordered: []
+          - 6aed4:
               ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns:
@@ -47,8 +58,6 @@ template:
           - 1a: Filter
           - 3c: Download
           - 4d: Refresh
-          - 2a8c1: Add
-          - 46a58: Delete
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
@@ -56,8 +65,6 @@ template:
           - 1a: bold/interface-text-formatting-filter-2
           - 3c: bold/interface-download-button-2
           - 4d: bold/interface-arrows-round-left
-          - 2a8c1: bold/interface-add-1
-          - 46a58: bold/interface-remove-2
     - changesetArray:
         array: []
     - _toolbarButtonType:
@@ -65,32 +72,45 @@ template:
           - 1a: filter
           - 3c: custom
           - 4d: custom
-          - 2a8c1: custom
-          - 46a58: custom
     - _columnStatusIndicator:
         ordered:
-          - a16c9:
+          - 3d334:
+              ordered: []
+          - d488a:
+              ordered: []
+          - 8e04f:
+              ordered: []
+          - 80feb:
+              ordered: []
+          - '560e3':
+              ordered: []
+          - 6aed4:
               ordered: []
     - _columnOptionList:
         ordered:
-          - d6cef:
+          - 3d334:
               ordered: []
-          - 79c74:
+          - d488a:
               ordered: []
-          - a16c9:
-              ordered:
-                - mode: mapped
-                - mappedData: '{{ get_project_approvers.data }}'
-                - valueByIndex: '{{ item.approver_id }}'
-                - labelByIndex: '{{ item.user_principal_name }}'
+          - 8e04f:
+              ordered: []
+          - 80feb:
+              ordered: []
+          - '560e3':
+              ordered: []
+          - 6aed4:
+              ordered: []
     - _columnValueOverride:
         ordered:
-          - d6cef: ''
-          - 79c74: ''
-          - a16c9: ''
+          - 3d334: ''
+          - d488a: ''
+          - 8e04f: ''
+          - 80feb: '{{ _.startCase(item) }}'
+          - '560e3': '{{ _.startCase(item) }}'
+          - 6aed4: ''
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: '20'
+    - _templatePageSize: '100'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true
@@ -98,57 +118,78 @@ template:
     - _actionsOverflowPosition: 0
     - _columnKey:
         ordered:
-          - d6cef: project_name
-          - 79c74: project_id
-          - a16c9: approvers
+          - 3d334: email
+          - d488a: first_name
+          - 8e04f: last_name
+          - 80feb: group_in
+          - '560e3': parent_of_group
+          - 6aed4: dn
     - hidden: false
     - _toolbarButtonIds:
         - 1a
-        - 4d
-        - 2a8c1
-        - 46a58
         - 3c
-    - data: '{{ get_cognos_projects.data }}'
+        - 4d
+    - data: '{{ get_cognos_group_members.data }}'
     - _cellSelection: none
     - _serverPaginated: false
     - _linkedFilterId: null
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - d6cef: ''
-          - 79c74: ''
-          - a16c9: ''
+          - 3d334: '{{ item }}'
+          - d488a: ''
+          - 8e04f: ''
+          - 80feb: ''
+          - '560e3': ''
+          - 6aed4: ''
     - _columnFormat:
         ordered:
-          - d6cef: string
-          - 79c74: decimal
-          - a16c9: tags
+          - 3d334: link
+          - d488a: string
+          - 8e04f: string
+          - 80feb: tag
+          - '560e3': tag
+          - 6aed4: string
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: 79c74
+    - _primaryKeyColumnId: 6aed4
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
-          - d6cef: center
-          - 79c74: right
-          - a16c9: left
+          - 3d334: left
+          - d488a: left
+          - 8e04f: left
+          - 80feb: left
+          - '560e3': left
+          - 6aed4: left
     - _actionIcon:
         ordered: []
     - _columnTooltip:
         ordered:
-          - d6cef: ''
-          - 79c74: ''
-          - a16c9: ''
+          - 3d334: ''
+          - d488a: ''
+          - 8e04f: ''
+          - 80feb: ''
+          - '560e3': ''
+          - 6aed4: ''
     - _columnIcon:
         ordered:
-          - d6cef: ''
-          - 79c74: ''
-          - a16c9: ''
+          - 3d334: ''
+          - d488a: ''
+          - 8e04f: ''
+          - 80feb: ''
+          - '560e3': ''
+          - 6aed4: ''
     - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
-          - a16c9: ''
+          - 3d334: ''
+          - d488a: ''
+          - 8e04f: ''
+          - 80feb: ''
+          - '560e3': ''
+          - 6aed4: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -157,10 +198,12 @@ template:
     - _selectMultipleRowsOnActionClick: 'no'
     - _columnSortDisabled:
         ordered:
-          - d6cef: false
-          - 79c74: false
-          - a16c9: false
-    - undefined: null
+          - 3d334: false
+          - d488a: false
+          - 8e04f: false
+          - 80feb: false
+          - '560e3': false
+          - 6aed4: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -169,30 +212,43 @@ template:
         ordered: []
     - _columnReferenceId:
         ordered:
-          - d6cef: ''
-          - 79c74: ''
-          - a16c9: ''
+          - 3d334: ''
+          - d488a: ''
+          - 8e04f: ''
+          - 80feb: ''
+          - '560e3': ''
+          - 6aed4: ''
     - _dynamicColumnSource:
         array: []
-    - _rowSelection: multiple
+    - _rowSelection: single
     - _columnCaption:
         ordered:
-          - d6cef: ''
-          - 79c74: ''
-          - a16c9: ''
+          - 3d334: ''
+          - d488a: ''
+          - 8e04f: ''
+          - 80feb: ''
+          - '560e3': ''
+          - 6aed4: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
     - _columnFormatOptions:
         ordered:
-          - d6cef:
-              ordered: []
-          - 79c74:
+          - 3d334:
               ordered:
-                - showSeparators: true
-          - a16c9:
+                - showUnderline: hover
+          - d488a:
+              ordered: []
+          - 8e04f:
+              ordered: []
+          - 80feb:
               ordered:
                 - automaticColors: true
+          - '560e3':
+              ordered:
+                - automaticColors: true
+          - 6aed4:
+              ordered: []
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
@@ -209,13 +265,26 @@ template:
     - _showColumnBorders: false
     - _columnStatusIndicatorOptions:
         ordered:
-          - a16c9:
+          - 3d334:
+              ordered: []
+          - d488a:
+              ordered: []
+          - 8e04f:
+              ordered: []
+          - 80feb:
+              ordered: []
+          - '560e3':
+              ordered: []
+          - 6aed4:
               ordered: []
     - _columnSize:
         ordered:
-          - 79c74: 72.203125
-          - d6cef: 483.75
-          - a16c9: 76.390625
+          - 3d334: 340.703125
+          - d488a: 227.046875
+          - 8e04f: 288.296875
+          - 80feb: 292.265625
+          - '560e3': 208.265625
+          - 6aed4: 100
     - _serverPaginationType: limitOffsetBased
     - _columnSortMode:
         ordered: []
@@ -232,31 +301,11 @@ template:
         ordered: []
     - events:
         - ordered:
-            - event: save
-            - type: datasource
-            - method: trigger
-            - pluginId: update_cognos_projects_bulk
+            - event: doubleClickRow
+            - type: widget
+            - method: open
+            - pluginId: getUserGroupsModal
             - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: clickToolbar
-            - type: widget
-            - method: open
-            - pluginId: deleteProjectsModal
-            - targetId: 46a58
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: clickToolbar
-            - type: widget
-            - method: open
-            - pluginId: addNewProjectModal
-            - targetId: 2a8c1
             - params:
                 ordered: []
             - waitType: debounce
@@ -267,7 +316,7 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: exportData
-            - pluginId: cognos_project_table
+            - pluginId: cognos_group_members_table
             - targetId: 3c
         - ordered:
             - type: widget
@@ -275,14 +324,16 @@ template:
             - waitType: debounce
             - event: clickToolbar
             - method: refresh
-            - pluginId: cognos_project_table
+            - pluginId: cognos_group_members_table
             - targetId: 4d
     - _columnEditable:
         ordered:
-          - d6cef: true
-          - '': false
-          - 79c74: false
-          - a16c9: 'true'
+          - 3d334: ''
+          - d488a: ''
+          - 8e04f: ''
+          - 80feb: ''
+          - '560e3': ''
+          - 6aed4: 'false'
     - _rowBackgroundColor:
         array: []
     - emptyMessage: ''
@@ -305,15 +356,21 @@ template:
     - _includeRowInChangesetArray: false
     - _columnPosition:
         ordered:
-          - d6cef: center
-          - 79c74: center
-          - a16c9: center
+          - 3d334: center
+          - d488a: center
+          - 8e04f: center
+          - 80feb: center
+          - '560e3': center
+          - 6aed4: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
-          - d6cef: Enter value
-          - 79c74: Enter value
-          - a16c9: Select options
+          - 3d334: ''
+          - d488a: Enter value
+          - 8e04f: Enter value
+          - 80feb: Select option
+          - '560e3': Select option
+          - 6aed4: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -324,22 +381,28 @@ template:
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:
-          - d6cef: ''
-          - 79c74: 'false'
-          - a16c9: ''
+          - 3d334: ''
+          - d488a: ''
+          - 8e04f: ''
+          - 80feb: ''
+          - '560e3': ''
+          - 6aed4: 'true'
     - _columnLabel:
         ordered:
-          - d6cef: Project Name
-          - 79c74: Project ID
-          - a16c9: Approvers
+          - 3d334: Email
+          - d488a: First name
+          - 8e04f: Last name
+          - 80feb: Group In
+          - '560e3': Parent Of Group In
+          - 6aed4: Dn
     - _showToolbar: true
 style:
   ordered: []
 position2:
   position2:
     container: tabbedContainer1
-    subcontainer: e1e1d
-    row: 0.9999999999999999
-    height: 18.4
+    subcontainer: 07dbe
+    row: 1
+    height: 20
     width: 12
-createdAt: 2023-07-06T21:58:49.804Z
+createdAt: 2023-08-22T23:06:47.302Z

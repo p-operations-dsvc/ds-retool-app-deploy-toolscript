@@ -1,0 +1,17 @@
+id: selected_cognos_project_to_dict_transform
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        let dict = {};
+
+        if ({{cognos_projects_table.selectedRow}}===null) {
+          return dict
+        }
+
+        dict[0] = {"project_id":{{cognos_projects_table.selectedRow.project_id}}
+                  }
+        return dict
+    - value: ''
+createdAt: 2023-07-06T23:06:52.569Z
