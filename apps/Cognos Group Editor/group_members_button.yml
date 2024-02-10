@@ -1,4 +1,5 @@
-id: deleteGroupSubmitButton
+id: group_members_button
+uuid: 2e4e6870-bc9c-4181-95bd-97844dec7341
 type: widget
 subtype: ButtonWidget2
 template:
@@ -6,10 +7,11 @@ template:
     - horizontalAlign: center
     - clickable: false
     - iconAfter: ''
-    - submitTargetId: null
+    - submitTargetId: ''
     - marginType: normal
     - hidden: false
-    - text: Submit
+    - text: |
+        Refresh
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -18,9 +20,9 @@ template:
     - events:
         - ordered:
             - event: click
-            - type: datasource
-            - method: trigger
-            - pluginId: delete_cognos_group
+            - type: widget
+            - method: refresh
+            - pluginId: cognos_group_members_table
             - targetId: null
             - params:
                 ordered: []
@@ -34,9 +36,9 @@ style:
   ordered: []
 position2:
   position2:
-    container: deleteGroupsModal
-    row: 2.8
-    col: 1
+    container: tabbedContainer1
+    subcontainer: 07dbe
+    col: 9
     height: 1
-    width: 10
-createdAt: 2023-07-06T21:50:45.304Z
+    width: 1
+createdAt: 2024-02-10T00:19:42.199Z

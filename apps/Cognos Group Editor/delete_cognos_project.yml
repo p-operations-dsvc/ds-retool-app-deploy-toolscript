@@ -39,7 +39,7 @@ template:
         ordered: []
     - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: true
+    - showSuccessToaster: false
     - dataArray: []
     - cacheKeyTtl: ''
     - filterBy: ''

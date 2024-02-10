@@ -1,11 +1,12 @@
-id: addNewProjectModal
+id: getUserGroupsModal
+uuid: 7757e737-ee77-4099-86a9-503d8fabf957
 type: widget
 subtype: ModalWidget
 template:
   ordered:
     - opened: false
     - modalOverflowType: scroll
-    - hidden: 'true'
+    - hidden: '{{ deleteGroupsText }}'
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''
@@ -13,27 +14,27 @@ template:
     - onModalOpen: ''
     - events:
         - ordered:
-            - event: close
-            - type: widget
-            - method: clear
-            - pluginId: addNewProjectForm
+            - event: open
+            - type: datasource
+            - method: trigger
+            - pluginId: get_cognos_user_groups
             - targetId: null
             - params:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
-    - modalWidth: ''
-    - closeOnOutsideClick: true
+    - modalWidth: 80%
+    - closeOnOutsideClick: false
     - loading: ''
     - disabled: ''
-    - buttonText: Add A New Project
+    - buttonText: Open Modal
 style:
   ordered: []
 position2:
   position2:
     container: tabbedContainer1
-    subcontainer: e1e1d
-    col: 3
+    subcontainer: 07dbe
+    col: 10
     height: 1
     width: 2
-createdAt: 2023-07-06T22:59:52.813Z
+createdAt: 2024-02-10T00:21:47.968Z

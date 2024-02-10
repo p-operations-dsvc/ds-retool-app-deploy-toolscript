@@ -51,7 +51,8 @@ template:
           - 6aed4:
               ordered: []
     - _toolbarPosition: bottom
-    - _groupByColumns: []
+    - _groupByColumns:
+        ordered: []
     - _toolbarButtonLabel:
         ordered:
           - 1a: Filter
@@ -109,7 +110,7 @@ template:
           - 6aed4: ''
     - marginType: normal
     - _showBorder: true
-    - _templatePageSize: null
+    - _templatePageSize: '100'
     - _dynamicColumnProperties:
         ordered: []
     - _showHeader: true
@@ -135,7 +136,7 @@ template:
     - searchMode: fuzzy
     - _columnCellTooltip:
         ordered:
-          - 3d334: ''
+          - 3d334: '{{ item }}'
           - d488a: ''
           - 8e04f: ''
           - 80feb: ''
@@ -300,6 +301,16 @@ template:
         ordered: []
     - events:
         - ordered:
+            - event: doubleClickRow
+            - type: widget
+            - method: open
+            - pluginId: getUserGroupsModal
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+        - ordered:
             - type: widget
             - waitMs: '0'
             - waitType: debounce
@@ -315,17 +326,6 @@ template:
             - method: refresh
             - pluginId: cognos_group_members_table
             - targetId: 4d
-        - ordered:
-            - event: clickCell
-            - type: util
-            - method: openUrl
-            - pluginId: ''
-            - targetId: 3d334
-            - params:
-                ordered:
-                  - url: mailto:{{ item }}
-            - waitType: debounce
-            - waitMs: '0'
     - _columnEditable:
         ordered:
           - 3d334: ''
@@ -345,7 +345,7 @@ template:
     - sortArray:
         array: []
     - _selectedCell: null
-    - overflowType: scroll
+    - overflowType: pagination
     - selectedCell: null
     - _defaultSelectedRow:
         ordered:

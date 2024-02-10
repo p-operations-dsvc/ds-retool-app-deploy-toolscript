@@ -1,0 +1,30 @@
+id: user_groups_text
+uuid: 63382c2d-7084-4bd0-9a69-42ef06eb9739
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: >-
+        User {{cognos_group_members_table.selectedRow.email}} is in the
+        following groups:
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: getUserGroupsModal
+    row: 0.4
+    col: 2
+    height: 0.6
+    width: 9
+createdAt: 2024-02-10T00:22:24.939Z

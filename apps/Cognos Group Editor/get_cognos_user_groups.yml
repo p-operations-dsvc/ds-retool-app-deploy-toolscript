@@ -1,4 +1,4 @@
-id: add_cognos_project
+id: get_cognos_user_groups
 type: datasource
 subtype: SqlQueryUnified
 resourceName: 6ccb6bf2-0a44-41c4-8e52-71490fe11167
@@ -22,7 +22,15 @@ template:
     - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: ''
+    - query: >-
+        select b.domain_id, b.group_ad_name FROM
+
+        main.cognos_group_membership a
+
+        join main.cognos_group b on a.group_id=b.group_id
+          join main.cognos_ad_record c on a.dn=c.dn 
+        where
+        c.user_principal_name={{cognos_group_members_table.selectedRow.email}}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -30,6 +38,7 @@ template:
     - privateParams: []
     - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
+    - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
@@ -44,9 +53,9 @@ template:
     - databaseHostOverride: ''
     - metadata: null
     - workflowActionType: null
-    - editorMode: gui
+    - editorMode: sql
     - queryRunTime: null
-    - actionType: INSERT
+    - actionType: ''
     - changesetObject: ''
     - shouldUseLegacySql: false
     - errorTransformer: >-
@@ -60,11 +69,10 @@ template:
     - databaseNameOverride: ''
     - confirmationMessage: null
     - isFetching: false
-    - changeset: >-
-        [{"key":"project_name","value":"{{addNewProjectNameText.value}}"},{"key":"approvers","value":"{{get_added_new_project_approvers_transform.value}}"}]
+    - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
-    - resourceTypeOverride: null
+    - resourceTypeOverride: ''
     - watchedParams: []
     - enableErrorTransformer: false
     - databaseWarehouseOverride: ''
@@ -81,39 +89,8 @@ template:
     - transformer: |-
         // Query results are available as the `data` variable
         return data
-    - events:
-        - ordered:
-            - event: success
-            - type: datasource
-            - method: trigger
-            - pluginId: get_cognos_projects
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: widget
-            - method: close
-            - pluginId: addNewProjectModal
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: widget
-            - method: clearSelection
-            - pluginId: cognos_project_table
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-    - isMultiplayerEdited: false
-    - tableName: main.cognos_project
+    - events: []
+    - tableName: ''
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -129,4 +106,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: 4.5
-createdAt: 2024-02-09T22:58:42.100Z
+createdAt: 2024-02-10T00:24:09.150Z

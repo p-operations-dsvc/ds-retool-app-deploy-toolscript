@@ -4,11 +4,9 @@ subtype: Function
 template:
   ordered:
     - funcBody: |-
-        var selected_groups = {{cognos_groups_table.selectedDataIndexes}}; 
+        var selected_group = {{cognos_groups_table.selectedRow.group_id}}; 
         let dict = {};
-                for (let i=0; i< selected_groups.length; i++ ) {
-                        dict[i.toString()] = {"group_id":{{ cognos_groups_table.data}}[selected_groups[i]].group_id};
-                }
+        dict[0] = {"group_id":selected_group} 
         return dict
     - value: ''
 createdAt: 2023-07-05T20:53:43.490Z
