@@ -1,15 +1,12 @@
-id: log_ds_datapipeline_operation
+id: query63
 type: datasource
-subtype: RESTQuery
-resourceName: 5dce28aa-d15b-4da8-9a5b-cbc4b34e1cf0
-resourceDisplayName: dp_api
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
 template:
   ordered:
     - queryRefreshTime: ''
-    - paginationLimit: ''
     - allowedGroupIds: []
     - streamResponse: false
-    - body: '[]'
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''
     - servedFromCache: false
@@ -20,13 +17,9 @@ template:
     - workflowParams: null
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
-    - paginationPaginationField: ''
-    - headers: ''
     - workflowRunId: null
     - showFailureToaster: true
-    - paginationEnabled: false
-    - query: >-
-        log_ds_datapipeline_operation?env={{env}}&username={{current_user.email}}&operation_type={{operation_type}}&payload={{payload}}&datapipeline_name={{datapipeline_name}}
+    - query: ''
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -37,11 +30,11 @@ template:
     - data: null
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
-    - showSuccessToaster: false
+    - showSuccessToaster: true
     - cacheKeyTtl: ''
     - requestSentTimestamp: null
-    - cookies: ''
     - metadata: null
     - workflowActionType: null
     - queryRunTime: null
@@ -59,40 +52,30 @@ template:
     - changeset: ''
     - rawData: null
     - queryTriggerDelay: '0'
-    - resourceTypeOverride: ''
+    - resourceTypeOverride: null
     - watchedParams: []
     - enableErrorTransformer: false
     - showLatestVersionUpdatedWarning: false
-    - paginationDataField: ''
     - timestamp: 0
     - importedQueryDefaults:
         ordered: []
     - enableTransformer: false
     - showUpdateSetValueDynamicallyToggle: true
-    - version: 1
     - overrideOrgCacheForUserCache: false
     - runWhenPageLoads: false
-    - transformer: >-
-        // type your code here
-
-        // example: return formatDataAsArray(data).filter(row => row.quantity >
-        20)
-
+    - transformer: |-
+        // Query results are available as the `data` variable
         return data
     - events: []
-    - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
-    - type: POST
     - queryFailureConditions: ''
     - changesetIsObject: false
     - enableCaching: false
     - allowedGroups: []
-    - workflowBlockPluginId: null
-    - bodyType: json
     - offlineQueryType: None
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
-    - notificationDuration: ''
-createdAt: 2024-02-21T23:33:42.063Z
+    - notificationDuration: 4.5
+createdAt: 2024-02-22T03:40:32.480Z

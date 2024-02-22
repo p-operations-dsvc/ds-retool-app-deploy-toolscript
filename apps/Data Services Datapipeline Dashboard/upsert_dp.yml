@@ -123,9 +123,9 @@ template:
 
 
                       if
-                      (dpTimeout2.value!=get_dp_objects_by_name.data[0].datapipeline_timeout_second) 
+                      (dpTimeout2.value!=get_dp_objects_by_name.data[0].datapipeline_timeout_seconds) 
                       {
-                        payload = payload+'new timeout: '+dpTimeout2.value
+                        payload = 'new timeout: '+dpTimeout2.value
                       }
 
 
@@ -196,6 +196,109 @@ template:
                       (dpCluster2.value!=get_dp_env_objects_update_dp.data[0].cluster_name) 
                       {
                         payload = payload+', new ecs cluster: '+dpCluster2.value
+                      }
+
+
+                      if
+                      (dpContainerName2.value!=get_dp_objects_by_name.data[0].container_name) 
+                      {
+                        payload = payload+', new container name: '+dpContainerName2.value
+                      }
+
+
+                      if
+                      (dpContainerARN2.value!=get_dp_objects_by_name.data[0].container_arn) 
+                      {
+                        payload = payload+', new container arn: '+dpContainerARN2.value
+                      }
+
+
+                      if
+                      (dpTaskName2.value!=get_dp_objects_by_name.data[0].task_name) 
+                      {
+                        payload = payload+', new task name: '+dpTaskName2.value
+                      }
+
+
+                      if
+                      (dpTaskDefinitionARN2.value!=get_dp_objects_by_name.data[0].task_definition_arn) 
+                      {
+                        payload = payload+', new task definition arn: '+dpTaskDefinitionARN2.value
+                      }
+
+
+                      if
+                      (dpTaskStorage2.value!=get_dp_objects_by_name.data[0].container_storage) 
+                      {
+                        payload = payload+', new container storage: '+dpTaskStorage2.value
+                      }
+
+
+                      if
+                      (dpTaskCPU2.value!=get_dp_objects_by_name.data[0].container_cpu) 
+                      {
+                        payload = payload+', new container cpu: '+dpTaskCPU2.value
+                      }
+
+
+                      if
+                      (dpTaskMemory2.value!=get_dp_objects_by_name.data[0].container_memory) 
+                      {
+                        payload = payload+', new container memory: '+dpTaskMemory2.value
+                      }
+
+
+                      if
+                      (dpRoleARN2.value!=get_dp_objects_by_name.data[0].task_role_arn) 
+                      {
+                        payload = payload+', new task role arn: '+dpRoleARN2.value
+                      }
+
+
+                      if
+                      (dpScheduleName2.value!=get_dp_objects_by_name.data[0].schedule_name) 
+                      {
+                        payload = payload+', new schedule name: '+dpScheduleName2.value
+                      }
+
+
+                      if
+                      (dpScheduleExpression2.value!=get_dp_objects_by_name.data[0].schedule_expression) 
+                      {
+                        payload = payload+', new schedule expression: '+dpScheduleExpression2.value
+                      }
+
+
+                      if
+                      (dpScheduleTZ2.value!=get_dp_objects_by_name.data[0].schedule_tz) 
+                      {
+                        payload = payload+', new schedule tz: '+dpScheduleTZ2.value
+                      }
+
+
+                      if
+                      (dpScheduleState2.value!=get_dp_objects_by_name.data[0].schedule_state) 
+                      {
+                        payload = payload+', new schedule state: '+dpScheduleState2.value
+                      }
+
+
+                      if
+                      (dpOverrides2.value!=get_dp_objects_by_name.data[0].overrides) 
+                      {
+                        payload = payload+', new overrides flag: '+dpOverrides2.value
+                      }
+
+
+                      if
+                      (dpOverridesCommands2.value!=get_dp_objects_by_name.data[0].override_commands_str) 
+                      {
+                        payload = payload+', new override commands: "'+dpOverridesCommands2.value+'"'
+                      }
+
+
+                      if (payload.startsWith (', ')) {
+                          payload = payload.slice(2)
                       }
 
 

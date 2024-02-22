@@ -20,7 +20,7 @@ style:
 position2:
   position2:
     container: dpSettingRowModal
-    row: 0.9999999999999998
+    row: 0.5999999999999998
     col: 3
     height: 1.5999999999999999
     width: 6

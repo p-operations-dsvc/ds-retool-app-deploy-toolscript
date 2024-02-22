@@ -118,19 +118,30 @@ template:
             - targetId: null
             - params:
                 ordered:
-                  - src: |2-
-                       log_ds_datapipeline_operation.trigger (
+                  - src: >-
+                      let change_type = '';
+
+
+                      if (dpAllTableV2.selectedRow.schedule_state == 'ENABLED')
+                      {
+                        change_type = 'disable schedule'}
+                      else {
+                        change_type = 'enable schedule'}
+
+                      log_ds_datapipeline_operation.trigger (
                         {
                         additionalScope: {
                          env: dpNameAllEnv.value,
-                        operation_type: 'toggle schedule',
-                          payload:  'schedule name:'+dpAllTableV2.selectedRow.schedule_name+', schedule group: '+dpAllTableV2.selectedRow.schedule_group,
+                        operation_type: change_type,
+                          payload:  'schedule name:'+dpAllTableV2.selectedRow.schedule_name+', schedule group: '+dpAllTableV2.selectedRow.schedule_group+', old schedule state: '+dpAllTableV2.selectedRow.schedule_state,
                           datapipeline_name: dpAllTableV2.selectedRow.datapipeline_name
                         }
                       }
+
                       )
             - waitType: debounce
             - waitMs: '0'
+    - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false

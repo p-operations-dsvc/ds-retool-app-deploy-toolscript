@@ -114,7 +114,7 @@ template:
                         additionalScope: {
                          env: manageDependenciesEnv.value,
                         operation_type: 'update datapipeline dependencies',
-                          payload:  'dependencies:'+manageDependenciesDPSelect.value,
+                          payload:  'dependencies:'+dependentDPMultiselectListbox.value,
                           datapipeline_name: manageDependenciesDPSelect.value
                         }
                       }
