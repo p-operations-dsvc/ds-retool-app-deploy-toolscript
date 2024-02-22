@@ -1,4 +1,4 @@
-id: stop_dp
+id: log_ds_datapipeline_operation
 type: datasource
 subtype: RESTQuery
 resourceName: 5dce28aa-d15b-4da8-9a5b-cbc4b34e1cf0
@@ -9,7 +9,7 @@ template:
     - paginationLimit: ''
     - allowedGroupIds: []
     - streamResponse: false
-    - body: ''
+    - body: '[]'
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''
     - servedFromCache: false
@@ -21,13 +21,12 @@ template:
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
     - paginationPaginationField: ''
-    - headers: '[{"key":"","value":""},{"key":"","value":""}]'
+    - headers: ''
     - workflowRunId: null
     - showFailureToaster: true
     - paginationEnabled: false
     - query: >-
-        stop_ds_datapipeline?execution_id={{runTableV2.selectedRow.execution_id_full}}&user_name={{current_user.firstName}}
-        {{current_user.lastName}}&env={{runEnvInFlight.value}}&cluster_arn=arn:aws:ecs:us-east-1:122060337775:cluster/{{runTableV2.selectedRow.cluster_name}}
+        log_ds_datapipeline_operation?env={{env}}&username={{current_user.email}}&operation_type={{operation_type}}&payload={{payload}}&datapipeline_name={{datapipeline_name}
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -80,48 +79,8 @@ template:
         20)
 
         return data
-    - events:
-        - ordered:
-            - event: success
-            - type: util
-            - method: confetti
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: widget
-            - method: close
-            - pluginId: startStopDatapipelineModal
-            - targetId: null
-            - params:
-                ordered: []
-            - waitType: debounce
-            - waitMs: '0'
-        - ordered:
-            - event: success
-            - type: script
-            - method: run
-            - pluginId: ''
-            - targetId: null
-            - params:
-                ordered:
-                  - src: |-
-                      log_ds_datapipeline_operation.trigger (
-                        {
-                        additionalScope: {
-                         env: runEnvInFlight.value,
-                        operation_type: 'stop datapipeline',
-                          payload:  'None',
-                          datapipeline_name: runTableV2.selectedRow.datapipeline_name
-                        }
-                      }
-                      )
-            - waitType: debounce
-            - waitMs: '0'
+    - events: []
+    - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
@@ -136,4 +95,4 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2023-02-26T01:03:22.132Z
+createdAt: 2024-02-21T23:33:42.063Z
