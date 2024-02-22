@@ -110,6 +110,28 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: |2-
+                       log_ds_datapipeline_operation.trigger (
+                        {
+                        additionalScope: {
+                         env: manageTagsEnv.value,
+                        operation_type: 'update datapipeline tags',
+                          payload:  'tags:'+tagsMultiselectListbox.value,
+                          datapipeline_name: manageTagsDPSelect.value
+                        }
+                      }
+                      )
+            - waitType: debounce
+            - waitMs: '0'
+    - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
