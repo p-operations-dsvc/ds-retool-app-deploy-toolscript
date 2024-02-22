@@ -123,8 +123,7 @@ template:
                         additionalScope: {
                          env: 'prd',
                         operation_type: 'create or replace role',
-                          payload:  
-                          createIAMRoleJSONPayload.value
+                          payload:  'role:'+createIAMRoleJSONPayload.value.role_name+', version: '+create_dp_role.data.Version+', policy: '+create_dp_role.data.Policy
                         }
                       }
                       )

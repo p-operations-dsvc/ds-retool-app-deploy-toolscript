@@ -6,7 +6,7 @@ template:
   ordered:
     - opened: false
     - modalOverflowType: scroll
-    - hidden: '{{recentlyFailedTableV2.selectedRow.been_restarted==''Yes''}}'
+    - hidden: ''
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''
