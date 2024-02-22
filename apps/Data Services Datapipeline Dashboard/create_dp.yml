@@ -100,6 +100,28 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: |-
+                      log_ds_datapipeline_operation.trigger (
+                        {
+                        additionalScope: {
+                         env: dpEnv.value,
+                        operation_type: 'create datapipeline',
+                          datapipeline_name:  
+                          dpObjName.value,
+                          payload: 'None'
+                        }
+                      }
+                      )
+            - waitType: debounce
+            - waitMs: '0'
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false

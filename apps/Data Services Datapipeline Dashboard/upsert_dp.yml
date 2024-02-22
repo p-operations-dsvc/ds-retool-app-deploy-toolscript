@@ -110,6 +110,213 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: >-
+                      let  payload =  '';
+
+
+                      if
+                      (dpTimeout2.value!=get_dp_objects_by_name.data[0].datapipeline_timeout_seconds) 
+                      {
+                        payload = 'new timeout: '+dpTimeout2.value
+                      }
+
+
+                      if
+                      (dpIncUrgency2.value!=get_dp_objects_by_name.data[0].snow_urgency) 
+                      {
+                        payload = payload+', new inc urgency: '+dpIncUrgency2.value
+                      }
+
+
+                      if
+                      (dpIncQueue2.value!=get_dp_objects_by_name.data[0].snow_assignment_group) 
+                      {
+                        payload = payload+', new inc queue: '+dpIncQueue2.value
+                      }
+
+
+                      if
+                      (dpIncCI2.value!=get_dp_objects_by_name.data[0].snow_ci) 
+                      {
+                        payload = payload+', new inc ci: '+dpIncCI2.value
+                      }
+
+
+                      if
+                      (dpIncCI2.value!=get_dp_objects_by_name.data[0].snow_ci) 
+                      {
+                        payload = payload+', new inc ci: '+dpIncCI2.value
+                      }
+
+
+                      if
+                      (dpAutoRestart2.value!=get_dp_objects_by_name.data[0].auto_restart_on_failure) 
+                      {
+                        payload = payload+', new auto restart value: '+dpAutoRestart2.value
+                      }
+
+
+                      if
+                      (dpMaxNumberofRestarts2.value!=get_dp_objects_by_name.data[0].max_number_of_restarts) 
+                      {
+                        payload = payload+', new max restart value: '+dpMaxNumberofRestarts2.value
+                      }
+
+
+                      if
+                      (dpMaxConcurrentInstances2.value!=get_dp_objects_by_name.data[0].max_concurrent_instances) 
+                      {
+                        payload = payload+', new max concurrent instance value: '+dpMaxConcurrentInstances2.value
+                      }
+
+
+                      if
+                      (dpSNSSuccessTopicARN2.value!=get_dp_objects_by_name.data[0].sns_success_topic_arn) 
+                      {
+                        payload = payload+', new sns success topic: '+dpSNSSuccessTopicARN2.value
+                      }
+
+
+                      if
+                      (dpSNSFailureTopicARN2.value!=get_dp_objects_by_name.data[0].sns_failure_topic_arn) 
+                      {
+                        payload = payload+', new sns failure topic: '+dpSNSFailureTopicARN2.value
+                      }
+
+
+                      if
+                      (dpCluster2.value!=get_dp_env_objects_update_dp.data[0].cluster_name) 
+                      {
+                        payload = payload+', new ecs cluster: '+dpCluster2.value
+                      }
+
+
+                      if
+                      (dpContainerName2.value!=get_dp_objects_by_name.data[0].container_name) 
+                      {
+                        payload = payload+', new container name: '+dpContainerName2.value
+                      }
+
+
+                      if
+                      (dpContainerARN2.value!=get_dp_objects_by_name.data[0].container_arn) 
+                      {
+                        payload = payload+', new container arn: '+dpContainerARN2.value
+                      }
+
+
+                      if
+                      (dpTaskName2.value!=get_dp_objects_by_name.data[0].task_name) 
+                      {
+                        payload = payload+', new task name: '+dpTaskName2.value
+                      }
+
+
+                      if
+                      (dpTaskDefinitionARN2.value!=get_dp_objects_by_name.data[0].task_definition_arn) 
+                      {
+                        payload = payload+', new task definition arn: '+dpTaskDefinitionARN2.value
+                      }
+
+
+                      if
+                      (dpTaskStorage2.value!=get_dp_objects_by_name.data[0].container_storage) 
+                      {
+                        payload = payload+', new container storage: '+dpTaskStorage2.value
+                      }
+
+
+                      if
+                      (dpTaskCPU2.value!=get_dp_objects_by_name.data[0].container_cpu) 
+                      {
+                        payload = payload+', new container cpu: '+dpTaskCPU2.value
+                      }
+
+
+                      if
+                      (dpTaskMemory2.value!=get_dp_objects_by_name.data[0].container_memory) 
+                      {
+                        payload = payload+', new container memory: '+dpTaskMemory2.value
+                      }
+
+
+                      if
+                      (dpRoleARN2.value!=get_dp_objects_by_name.data[0].task_role_arn) 
+                      {
+                        payload = payload+', new task role arn: '+dpRoleARN2.value
+                      }
+
+
+                      if
+                      (dpScheduleName2.value!=get_dp_objects_by_name.data[0].schedule_name) 
+                      {
+                        payload = payload+', new schedule name: '+dpScheduleName2.value
+                      }
+
+
+                      if
+                      (dpScheduleExpression2.value!=get_dp_objects_by_name.data[0].schedule_expression) 
+                      {
+                        payload = payload+', new schedule expression: '+dpScheduleExpression2.value
+                      }
+
+
+                      if
+                      (dpScheduleTZ2.value!=get_dp_objects_by_name.data[0].schedule_tz) 
+                      {
+                        payload = payload+', new schedule tz: '+dpScheduleTZ2.value
+                      }
+
+
+                      if
+                      (dpScheduleState2.value!=get_dp_objects_by_name.data[0].schedule_state) 
+                      {
+                        payload = payload+', new schedule state: '+dpScheduleState2.value
+                      }
+
+
+                      if
+                      (dpOverrides2.value!=get_dp_objects_by_name.data[0].overrides) 
+                      {
+                        payload = payload+', new overrides flag: '+dpOverrides2.value
+                      }
+
+
+                      if
+                      (dpOverridesCommands2.value!=get_dp_objects_by_name.data[0].override_commands_str) 
+                      {
+                        payload = payload+', new override commands: "'+dpOverridesCommands2.value+'"'
+                      }
+
+
+                      if (payload.startsWith (', ')) {
+                          payload = payload.slice(2)
+                      }
+
+
+
+                      log_ds_datapipeline_operation.trigger (
+                        {
+                        additionalScope: {
+                         env: dpEnv2.value,
+                        operation_type: 'update datapipeline',
+                          payload:  payload,
+                          datapipeline_name: dpName2.value
+                        }
+                      }
+
+                      )
+            - waitType: debounce
+            - waitMs: '0'
+    - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false

@@ -109,6 +109,26 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: |-
+                      log_ds_datapipeline_operation.trigger (
+                        {
+                        additionalScope: {
+                         env: 'prd',
+                        operation_type: 'create or replace role',
+                          payload:  'role:'+createIAMRoleJSONPayload.value.role_name+', version: '+create_dp_role.data.Version+', policy: '+create_dp_role.data.Policy
+                        }
+                      }
+                      )
+            - waitType: debounce
+            - waitMs: '0'
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false

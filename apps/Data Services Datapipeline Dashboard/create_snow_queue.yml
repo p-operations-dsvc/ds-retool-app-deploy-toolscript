@@ -110,6 +110,29 @@ template:
                 ordered: []
             - waitType: debounce
             - waitMs: '0'
+        - ordered:
+            - event: success
+            - type: script
+            - method: run
+            - pluginId: ''
+            - targetId: null
+            - params:
+                ordered:
+                  - src: |-
+                      log_ds_datapipeline_operation.trigger (
+                        {
+                        additionalScope: {
+                         env: dpEnv.value,
+                        operation_type: 'create snow queue',
+                          payload:  
+                          addSnowQueueName.value,
+                          datapipeline_name:'None'
+                        }
+                      }
+                      )
+            - waitType: debounce
+            - waitMs: '0'
+    - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
