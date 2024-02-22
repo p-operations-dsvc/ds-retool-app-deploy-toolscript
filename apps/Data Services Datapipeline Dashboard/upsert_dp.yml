@@ -136,6 +136,15 @@ template:
                       }
 
 
+
+                      if
+                      (dpIncImpact2.value!=get_dp_objects_by_name.data[0].snow_impact) 
+                      {
+                        payload = payload+', new inc impact: '+dpIncImpact2.value
+                      }
+
+
+
                       if
                       (dpIncQueue2.value!=get_dp_objects_by_name.data[0].snow_assignment_group) 
                       {
