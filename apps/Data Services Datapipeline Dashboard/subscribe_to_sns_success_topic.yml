@@ -120,6 +120,7 @@ template:
                         {
                         additionalScope: {
                          env: 'prd',
+                          datapipeline_name:'None',
                         operation_type: 'create sns success sub',
                           payload:  
                           dpSNSSuccessTopicARN2.value

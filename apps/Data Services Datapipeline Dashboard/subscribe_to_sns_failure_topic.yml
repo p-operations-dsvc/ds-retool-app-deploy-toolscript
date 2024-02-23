@@ -119,7 +119,8 @@ template:
                       log_ds_datapipeline_operation.trigger (
                         {
                         additionalScope: {
-                         env: 'prd',
+                         env: 'prd'
+                          datapipeline_name:'None',
                         operation_type: 'create sns failure sub',
                           payload:  
                           dpSNSFailureTopicARN2.value
