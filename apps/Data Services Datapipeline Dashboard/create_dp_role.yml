@@ -122,6 +122,7 @@ template:
                         {
                         additionalScope: {
                          env: 'prd',
+                          datapipeline_name:'None',
                         operation_type: 'create or replace role',
                           payload:  'role:'+createIAMRoleJSONPayload.value.role_name+', version: '+create_dp_role.data.Version+', policy: '+create_dp_role.data.Policy
                         }

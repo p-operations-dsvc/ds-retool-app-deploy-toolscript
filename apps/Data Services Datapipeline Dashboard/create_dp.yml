@@ -116,12 +116,13 @@ template:
                         operation_type: 'create datapipeline',
                           datapipeline_name:  
                           dpObjName.value,
-                          payload: 'None'
+                          payload: 'payload: '+ create_dp.data.body
                         }
                       }
                       )
             - waitType: debounce
             - waitMs: '0'
+    - isMultiplayerEdited: false
     - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
