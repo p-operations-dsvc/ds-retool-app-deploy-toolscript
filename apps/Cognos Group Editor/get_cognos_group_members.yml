@@ -25,8 +25,8 @@ template:
     - query: >-
         select b.dn, b.user_principal_name as email, b.given_name as first_name,
         b.sn as last_name, a.ad_group group_in, a.parent_ad_group
-        parent_of_group
-
+        parent_of_group,
+          b.manager_principal_name, b.manager_given_name, b.manager_sn
         from main.cognos_group_membership a, main.cognos_ad_record b
 
         where a.dn=b.dn and a.group_id={{group_members_select.value}}

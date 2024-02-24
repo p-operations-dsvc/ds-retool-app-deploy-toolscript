@@ -13,11 +13,17 @@ template:
           - 80feb: ''
           - '560e3': ''
           - 6aed4: ''
+          - '93072': ''
+          - be121: ''
+          - 2a3c7: ''
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
     - _columnTextColor:
-        ordered: []
+        ordered:
+          - '93072': ''
+          - be121: ''
+          - 2a3c7: ''
     - disableEdits: false
     - autoColumnWidth: false
     - _rowHeight: small
@@ -28,6 +34,9 @@ template:
         - 80feb
         - '560e3'
         - 6aed4
+        - '93072'
+        - be121
+        - 2a3c7
     - _isSaving: false
     - _actionIds: []
     - _clearChangeset: false
@@ -49,6 +58,12 @@ template:
           - '560e3':
               ordered: []
           - 6aed4:
+              ordered: []
+          - '93072':
+              ordered: []
+          - be121:
+              ordered: []
+          - 2a3c7:
               ordered: []
     - _toolbarPosition: bottom
     - _groupByColumns:
@@ -100,6 +115,12 @@ template:
               ordered: []
           - 6aed4:
               ordered: []
+          - '93072':
+              ordered: []
+          - be121:
+              ordered: []
+          - 2a3c7:
+              ordered: []
     - _columnValueOverride:
         ordered:
           - 3d334: ''
@@ -108,6 +129,9 @@ template:
           - 80feb: '{{ _.startCase(item) }}'
           - '560e3': '{{ _.startCase(item) }}'
           - 6aed4: ''
+          - '93072': ''
+          - be121: ''
+          - 2a3c7: ''
     - marginType: normal
     - _showBorder: true
     - _templatePageSize: '100'
@@ -124,6 +148,9 @@ template:
           - 80feb: group_in
           - '560e3': parent_of_group
           - 6aed4: dn
+          - '93072': manager_principal_name
+          - be121: manager_given_name
+          - 2a3c7: manager_sn
     - hidden: false
     - _toolbarButtonIds:
         - 1a
@@ -142,6 +169,9 @@ template:
           - 80feb: ''
           - '560e3': ''
           - 6aed4: ''
+          - '93072': ''
+          - be121: ''
+          - 2a3c7: ''
     - _columnFormat:
         ordered:
           - 3d334: link
@@ -150,10 +180,13 @@ template:
           - 80feb: tag
           - '560e3': tag
           - 6aed4: string
+          - '93072': link
+          - be121: string
+          - 2a3c7: string
     - _cursorCache:
         object: {}
     - _calculatedPageSize: null
-    - _primaryKeyColumnId: 6aed4
+    - _primaryKeyColumnId: 3d334
     - selectedDataIndex: null
     - _columnAlignment:
         ordered:
@@ -163,6 +196,9 @@ template:
           - 80feb: left
           - '560e3': left
           - 6aed4: left
+          - '93072': left
+          - be121: left
+          - 2a3c7: left
     - _actionIcon:
         ordered: []
     - _columnTooltip:
@@ -173,6 +209,9 @@ template:
           - 80feb: ''
           - '560e3': ''
           - 6aed4: ''
+          - '93072': ''
+          - be121: ''
+          - 2a3c7: ''
     - _columnIcon:
         ordered:
           - 3d334: ''
@@ -181,6 +220,9 @@ template:
           - 80feb: ''
           - '560e3': ''
           - 6aed4: ''
+          - '93072': ''
+          - be121: ''
+          - 2a3c7: ''
     - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
@@ -190,6 +232,9 @@ template:
           - 80feb: ''
           - '560e3': ''
           - 6aed4: ''
+          - '93072': ''
+          - be121: ''
+          - 2a3c7: ''
     - _pageSize: null
     - showInEditor: false
     - selectedSourceRows:
@@ -204,6 +249,9 @@ template:
           - 80feb: false
           - '560e3': false
           - 6aed4: false
+          - '93072': false
+          - be121: false
+          - 2a3c7: false
     - _showSummaryRow: false
     - filterStack: null
     - _expandedRows: null
@@ -218,6 +266,9 @@ template:
           - 80feb: ''
           - '560e3': ''
           - 6aed4: ''
+          - '93072': ''
+          - be121: ''
+          - 2a3c7: ''
     - _dynamicColumnSource:
         array: []
     - _rowSelection: single
@@ -229,6 +280,9 @@ template:
           - 80feb: ''
           - '560e3': ''
           - 6aed4: ''
+          - '93072': ''
+          - be121: ''
+          - 2a3c7: ''
     - _dynamicColumnFormatOptions:
         ordered: []
     - _dynamicRowHeights: false
@@ -249,13 +303,23 @@ template:
                 - automaticColors: true
           - 6aed4:
               ordered: []
+          - '93072':
+              ordered:
+                - showUnderline: hover
+          - be121:
+              ordered: []
+          - 2a3c7:
+              ordered: []
     - _changeset: null
     - _afterCursor: ''
     - selectedRowKeys:
         array: []
     - _beforeCursor: ''
     - _columnSummaryAggregationMode:
-        ordered: []
+        ordered:
+          - '93072': none
+          - be121: none
+          - 2a3c7: none
     - searchTerm: ''
     - selectedRows:
         array: []
@@ -277,17 +341,29 @@ template:
               ordered: []
           - 6aed4:
               ordered: []
+          - '93072':
+              ordered: []
+          - be121:
+              ordered: []
+          - 2a3c7:
+              ordered: []
     - _columnSize:
         ordered:
-          - 3d334: 340.703125
-          - d488a: 227.046875
-          - 8e04f: 288.296875
-          - 80feb: 292.265625
-          - '560e3': 208.265625
-          - 6aed4: 100
+          - 3d334: 225.328125
+          - 6aed4: 734.1875
+          - 80feb: 216.15625
+          - be121: 156
+          - '93072': 244
+          - d488a: 77.140625
+          - 8e04f: 93.578125
+          - 2a3c7: 100
+          - '560e3': 216.15625
     - _serverPaginationType: limitOffsetBased
     - _columnSortMode:
-        ordered: []
+        ordered:
+          - '93072': default
+          - be121: default
+          - 2a3c7: default
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:
@@ -326,14 +402,28 @@ template:
             - method: refresh
             - pluginId: cognos_group_members_table
             - targetId: 4d
+        - ordered:
+            - event: clickCell
+            - type: util
+            - method: openUrl
+            - pluginId: ''
+            - targetId: '93072'
+            - params:
+                ordered:
+                  - url: mailto:{{ item }}
+            - waitType: debounce
+            - waitMs: '0'
     - _columnEditable:
         ordered:
-          - 3d334: ''
+          - 3d334: false
           - d488a: ''
           - 8e04f: ''
           - 80feb: ''
           - '560e3': ''
           - 6aed4: 'false'
+          - '93072': ''
+          - be121: ''
+          - 2a3c7: ''
     - _rowBackgroundColor:
         array: []
     - emptyMessage: ''
@@ -341,7 +431,10 @@ template:
     - selectedDataIndexes:
         array: []
     - _columnGroupAggregationMode:
-        ordered: []
+        ordered:
+          - '93072': none
+          - be121: none
+          - 2a3c7: none
     - sortArray:
         array: []
     - _selectedCell: null
@@ -362,6 +455,9 @@ template:
           - 80feb: center
           - '560e3': center
           - 6aed4: center
+          - '93072': center
+          - be121: center
+          - 2a3c7: center
     - _enableSaveActions: true
     - _columnPlaceholder:
         ordered:
@@ -371,6 +467,9 @@ template:
           - 80feb: Select option
           - '560e3': Select option
           - 6aed4: Enter value
+          - '93072': ''
+          - be121: Enter value
+          - 2a3c7: Enter value
     - _defaultFilterOperator: and
     - _actionLabel:
         ordered: []
@@ -387,14 +486,20 @@ template:
           - 80feb: ''
           - '560e3': ''
           - 6aed4: 'true'
+          - '93072': ''
+          - be121: ''
+          - 2a3c7: ''
     - _columnLabel:
         ordered:
           - 3d334: Email
-          - d488a: First name
-          - 8e04f: Last name
+          - d488a: First Name
+          - 8e04f: Last Name
           - 80feb: Group In
           - '560e3': Parent Of Group In
           - 6aed4: Dn
+          - '93072': Manager's email
+          - be121: Manager's First Name
+          - 2a3c7: Manager's Last Name
     - _showToolbar: true
 style:
   ordered: []
