@@ -28,7 +28,6 @@ template:
           "access": addS3RowAccessTypeSelect.value,
           "delete": addS3RowDeleteCheckbox.value
         }
-        let i=s3_grants.length
 
         s3_grants.push( new_vals)
 
