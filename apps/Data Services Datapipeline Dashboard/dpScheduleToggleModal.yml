@@ -6,7 +6,7 @@ template:
   ordered:
     - opened: false
     - modalOverflowType: scroll
-    - hidden: '{{dpAllTableV2.selectedRow.schedule_state == null}}'
+    - hidden: '{{securityOperateCheckTransformer.value}}'
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''

@@ -63,7 +63,7 @@ template:
             - waitMs: '0'
     - loading: false
     - loaderPosition: auto
-    - disabled: false
+    - disabled: '{{securityWriteCheckTransformer.value}}'
     - maintainSpaceWhenHidden: false
 style:
   ordered: []

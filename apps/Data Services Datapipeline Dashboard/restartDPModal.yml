@@ -6,7 +6,7 @@ template:
   ordered:
     - opened: false
     - modalOverflowType: scroll
-    - hidden: '{{securityCheckTransformer.value}}'
+    - hidden: '{{securityOperateCheckTransformer.value}}'
     - onModalClose: ''
     - modalHeightType: fixed
     - tooltipText: ''

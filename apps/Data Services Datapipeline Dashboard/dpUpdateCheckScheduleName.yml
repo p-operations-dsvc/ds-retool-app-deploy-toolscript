@@ -37,8 +37,7 @@ template:
                 dpScheduleName2.focus();
                 return;
               } 
-          else if (dps[i].task_name == dpTaskName2.value
-                  && dps[i].datapipeline_name != dpName2.value
+          else if (dps[i].task_name == dpTaskName2.value && dps[i].datapipeline_name != dpName2.value
                   ) {
             utils.showNotification({ 
           title: "Validation Error", 

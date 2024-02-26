@@ -9,7 +9,7 @@ template:
     - iconAfter: ''
     - submitTargetId: null
     - marginType: normal
-    - hidden: false
+    - hidden: ''
     - text: Confirm
     - showInEditor: false
     - tooltipText: ''
@@ -39,7 +39,7 @@ template:
             - waitMs: '0'
     - loading: false
     - loaderPosition: auto
-    - disabled: false
+    - disabled: '{{dpAllTableV2.selectedRow.schedule_name==''na''}}'
     - maintainSpaceWhenHidden: false
 style:
   ordered: []

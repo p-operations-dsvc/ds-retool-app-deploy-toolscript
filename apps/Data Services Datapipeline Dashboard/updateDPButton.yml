@@ -9,7 +9,7 @@ template:
     - iconAfter: ''
     - submitTargetId: null
     - marginType: normal
-    - hidden: '{{securityCheckTransformer.value}}'
+    - hidden: '{{securityWriteCheckTransformer.value}}'
     - text: Update Datapipeline
     - showInEditor: false
     - tooltipText: ''
