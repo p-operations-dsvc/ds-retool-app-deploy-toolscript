@@ -9,7 +9,7 @@ template:
     - iconAfter: ''
     - submitTargetId: null
     - marginType: normal
-    - hidden: false
+    - hidden: '{{securityCheckTransformer.value}}'
     - text: Create Datapipeline
     - showInEditor: false
     - tooltipText: ''

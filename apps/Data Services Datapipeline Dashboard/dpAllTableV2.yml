@@ -1076,7 +1076,7 @@ template:
     - selectedRow: null
     - _actionHidden:
         ordered:
-          - 8c2f1: ''
+          - 8c2f1: '{{securityCheckTransformer.value}}'
     - maintainSpaceWhenHidden: false
     - _columnHidden:
         ordered:

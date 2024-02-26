@@ -1,0 +1,17 @@
+id: securityCheckTransformer
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        const groups = {{ current_user.groups}};
+        let i = 0;
+        while (i < groups.length) { 
+          if (groups[i].name == 'admin' || groups[i].name == 'DS Dashboard Editors') {
+            return false;
+          }
+          i++;
+        }
+        return true;
+    - value: ''
+createdAt: 2024-02-26T20:04:44.416Z
