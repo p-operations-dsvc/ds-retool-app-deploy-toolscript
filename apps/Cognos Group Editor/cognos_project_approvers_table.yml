@@ -43,6 +43,7 @@ template:
           - 3c: Download
           - 4d: Refresh
           - c0153: Add
+          - 9c53c: Delete
     - _nextBeforeCursor: ''
     - _persistRowSelection: false
     - _toolbarButtonIcon:
@@ -51,6 +52,7 @@ template:
           - 3c: bold/interface-download-button-2
           - 4d: bold/interface-arrows-round-left
           - c0153: bold/interface-add-1
+          - 9c53c: bold/interface-minus-1
     - changesetArray:
         array: []
     - _toolbarButtonType:
@@ -59,6 +61,7 @@ template:
           - 3c: custom
           - 4d: custom
           - c0153: custom
+          - 9c53c: custom
     - _columnStatusIndicator:
         ordered:
           - aaea9:
@@ -89,10 +92,11 @@ template:
           - '20057': user_principal_name
     - hidden: false
     - _toolbarButtonIds:
-        - c0153
         - 1a
-        - 3c
         - 4d
+        - c0153
+        - 9c53c
+        - 3c
     - data: '{{ get_cognos_project_approvers.data }}'
     - _cellSelection: none
     - _serverPaginated: false
@@ -205,10 +209,21 @@ template:
         ordered: []
     - _virtualizeStartIndex: 0
     - _toolbarButtonHidden:
-        ordered: []
+        ordered:
+          - 9c53c: ''
     - _defaultFilters:
         ordered: []
     - events:
+        - ordered:
+            - event: clickToolbar
+            - type: datasource
+            - method: trigger
+            - pluginId: delete_cognos_project_approver
+            - targetId: 9c53c
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
         - ordered:
             - event: clickToolbar
             - type: widget
