@@ -114,12 +114,20 @@ template:
             - waitMs: '0'
         - ordered:
             - event: success
-            - type: datasource
-            - method: trigger
-            - pluginId: get_other_title
+            - type: script
+            - method: run
+            - pluginId: ''
             - targetId: null
             - params:
-                ordered: []
+                ordered:
+                  - src: |-
+                      get_other_title.trigger (
+                        {
+                        additionalScope: {
+                         page_number:0
+                        }
+                      }
+                      )
             - waitType: debounce
             - waitMs: '0'
     - isMultiplayerEdited: false

@@ -44,7 +44,9 @@ template:
 
         process_uploaded_mapping_other_title.trigger ({
           additionalScope: {
-           input_array: arr
+           input_array: arr,
+            username: current_user.email
+            
            }
           }
          );

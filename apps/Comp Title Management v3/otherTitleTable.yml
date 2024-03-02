@@ -24,7 +24,8 @@ template:
     - _clearChangesetOnSave: true
     - heightType: fixed
     - _columnTextColor:
-        ordered: []
+        ordered:
+          - 5506b: ''
     - disableEdits: false
     - autoColumnWidth: false
     - _rowHeight: small
@@ -176,7 +177,7 @@ template:
           - '391e2': ''
           - a91cc: '{{ _.startCase(item) }}'
           - a1b8e: ''
-          - 5506b: '{{ _.startCase(item) }}'
+          - 5506b: '{{item}}'
           - 946d6: '{{ item }}'
           - 1c927: ''
     - marginType: normal
@@ -340,7 +341,7 @@ template:
     - _actionDisabled:
         ordered:
           - 1b4cf: '{{currentRow.GOLDEN_TITLE_NAME==''Unmatched''}}'
-          - 0f13c: '{{currentRow.LOCKED=="False"}}'
+          - 0f13c: '{{currentRow.LOCKED===false}}'
     - _columnReferenceId:
         ordered:
           - 751f9: ''
@@ -483,7 +484,8 @@ template:
           - a1b8e: 55.65625
     - _serverPaginationType: limitOffsetBased
     - _columnSortMode:
-        ordered: []
+        ordered:
+          - 5506b: default
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:

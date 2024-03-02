@@ -24,7 +24,7 @@ template:
     - showFailureToaster: true
     - query: >-
         call edwctm.map_other_title_bulk (array_construct({{input_array}}),
-        {{current_user.email}})
+        {{user}})
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
