@@ -5,6 +5,7 @@ resourceName: JavascriptQuery
 template:
   ordered:
     - queryRefreshTime: ''
+    - allowedGroupIds: []
     - streamResponse: false
     - lastReceivedFromResourceAt: null
     - queryDisabledMessage: ''
@@ -52,6 +53,7 @@ template:
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
+    - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
     - data: null
     - importedQueryInputs:

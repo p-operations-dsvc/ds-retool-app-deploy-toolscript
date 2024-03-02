@@ -6,6 +6,7 @@ resourceDisplayName: Snowflake CTMv3
 template:
   ordered:
     - queryRefreshTime: ''
+    - allowedGroupIds: []
     - streamResponse: false
     - records: ''
     - lastReceivedFromResourceAt: null
@@ -35,12 +36,14 @@ template:
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
+    - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
     - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: false
     - dataArray: []
@@ -72,6 +75,7 @@ template:
     - resourceTypeOverride: ''
     - watchedParams: []
     - enableErrorTransformer: false
+    - databaseWarehouseOverride: ''
     - enableBulkUpdates: false
     - showLatestVersionUpdatedWarning: false
     - timestamp: 0
@@ -96,6 +100,7 @@ template:
     - allowedGroups: []
     - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
+    - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
     - doNotThrowOnNoOp: false
     - offlineQueryType: None
