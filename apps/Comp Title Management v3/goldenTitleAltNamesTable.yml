@@ -12,7 +12,10 @@ template:
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
+    - _columnTextColor:
+        ordered: []
     - disableEdits: false
+    - autoColumnWidth: false
     - _rowHeight: medium
     - _columnIds:
         - dcd07
@@ -64,6 +67,7 @@ template:
         ordered: []
     - _showHeader: false
     - _currentPage: 0
+    - _actionsOverflowPosition: 0
     - _columnKey:
         ordered:
           - dcd07: ID
@@ -100,6 +104,7 @@ template:
     - _columnIcon:
         ordered:
           - dcd07: ''
+    - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
           - dcd07: ''
@@ -158,9 +163,13 @@ template:
         ordered:
           - dcd07: 193.328125
     - _serverPaginationType: limitOffsetBased
+    - _columnSortMode:
+        ordered: []
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: false
     - _groupedColumnConfig:
+        ordered: []
+    - _dynamicColumnSize:
         ordered: []
     - _virtualizeStartIndex: 0
     - _toolbarButtonHidden:
@@ -199,6 +208,7 @@ template:
           - dcd07: false
     - _rowBackgroundColor:
         array: []
+    - emptyMessage: ''
     - pagination: null
     - selectedDataIndexes:
         array: []

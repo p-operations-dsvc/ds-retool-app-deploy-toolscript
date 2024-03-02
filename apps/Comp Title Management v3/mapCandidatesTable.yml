@@ -21,7 +21,10 @@ template:
     - _defaultSort: null
     - _clearChangesetOnSave: true
     - heightType: fixed
+    - _columnTextColor:
+        ordered: []
     - disableEdits: false
+    - autoColumnWidth: false
     - _rowHeight: small
     - _columnIds:
         - e3c42
@@ -142,6 +145,7 @@ template:
         ordered: []
     - _showHeader: true
     - _currentPage: 0
+    - _actionsOverflowPosition: 0
     - _columnKey:
         ordered:
           - 90d28: GOLDEN_TITLE_NAME
@@ -233,6 +237,7 @@ template:
           - ee24f: ''
           - 368fc: ''
           - 85b7c: ''
+    - _alwaysShowRowSelectionCheckboxes: false
     - _columnCellTooltipMode:
         ordered:
           - 90d28: ''
@@ -385,9 +390,13 @@ template:
           - 8b56d: 50.421875
           - 7a4c7: 73.65625
     - _serverPaginationType: limitOffsetBased
+    - _columnSortMode:
+        ordered: []
     - _selectSingleRowsOnActionClick: replace
     - _showFooter: true
     - _groupedColumnConfig:
+        ordered: []
+    - _dynamicColumnSize:
         ordered: []
     - _virtualizeStartIndex: 0
     - _toolbarButtonHidden:
@@ -491,6 +500,7 @@ template:
           - 85b7c: ''
     - _rowBackgroundColor:
         array: []
+    - emptyMessage: ''
     - pagination: null
     - selectedDataIndexes:
         array: []

@@ -6,6 +6,7 @@ resourceDisplayName: Snowflake CTMv3
 template:
   ordered:
     - queryRefreshTime: ''
+    - allowedGroupIds: []
     - streamResponse: false
     - records: ''
     - lastReceivedFromResourceAt: null
@@ -26,19 +27,22 @@ template:
         set a.golden_title_id={{goldenTitleIdToMapTo.value}},
         a.MAPPED_STATE = TRUE,
         a.locked = TRUE,
-        a.UPDATE_DATETIME=CURRENT_TIMESTAMP
+        a.UPDATE_DATETIME=CURRENT_TIMESTAMP,
+        a.UPDATE_USERNAME = {{current_user.email}}
         where a.other_title_id={{titleToMapSelect.selectedItem.id}} 
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
     - workflowRunBodyType: raw
     - privateParams: []
+    - workflowBlockUuid: null
     - runWhenPageLoadsDelay: ''
     - warningCodes: []
     - data: null
     - recordId: ''
     - importedQueryInputs:
         ordered: []
+    - _additionalScope: []
     - isImported: false
     - showSuccessToaster: false
     - dataArray: []
@@ -70,6 +74,7 @@ template:
     - resourceTypeOverride: ''
     - watchedParams: []
     - enableErrorTransformer: false
+    - databaseWarehouseOverride: ''
     - enableBulkUpdates: false
     - showLatestVersionUpdatedWarning: false
     - timestamp: 0
@@ -130,6 +135,7 @@ template:
     - allowedGroups: []
     - workflowBlockPluginId: null
     - databaseUsernameOverride: ''
+    - databaseRoleOverride: ''
     - shouldEnableBatchQuerying: false
     - doNotThrowOnNoOp: false
     - offlineQueryType: None
